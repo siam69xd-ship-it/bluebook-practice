@@ -24,8 +24,12 @@ export function QuestionOption({
   onSelect,
   onEliminate,
 }: QuestionOptionProps) {
-  const showResult = isChecked && isSelected;
   const isCorrectAnswer = letter === correctAnswer;
+  const isWrongSelection = isSelected && !isCorrectAnswer;
+  
+  // Show wrong immediately on selection, but only show correct after Check
+  const showWrongImmediately = isWrongSelection;
+  const showCorrectAfterCheck = isChecked && isSelected && isCorrectAnswer;
   const showCorrectIndicator = isChecked && isCorrectAnswer && !isSelected;
 
   return (
@@ -33,11 +37,16 @@ export function QuestionOption({
       className={cn(
         'group relative flex items-start gap-3 p-4 rounded-lg border-2 transition-all duration-200 cursor-pointer',
         isEliminated && 'opacity-40',
-        !isChecked && !isEliminated && 'hover:border-primary/50 hover:bg-muted/30',
-        !isChecked && isSelected && 'border-primary bg-primary/5',
-        !isChecked && !isSelected && 'border-border bg-card',
-        showResult && isCorrect && 'border-success bg-success/10',
-        showResult && !isCorrect && 'border-destructive bg-destructive/10',
+        !isEliminated && !showWrongImmediately && !showCorrectAfterCheck && !showCorrectIndicator && 'hover:border-primary/50 hover:bg-muted/30',
+        // Normal selected state (correct answer selected but not checked yet)
+        isSelected && isCorrectAnswer && !isChecked && 'border-primary bg-primary/5',
+        // Wrong selection - show red immediately
+        showWrongImmediately && 'border-destructive bg-destructive/10',
+        // Correct selection - show green only after check
+        showCorrectAfterCheck && 'border-success bg-success/10',
+        // Not selected default
+        !isSelected && !showCorrectIndicator && 'border-border bg-card',
+        // Correct indicator (user selected wrong, show correct answer after check)
         showCorrectIndicator && 'border-success/50 bg-success/5'
       )}
       onClick={() => !isEliminated && onSelect()}
@@ -46,10 +55,15 @@ export function QuestionOption({
       <div
         className={cn(
           'flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-semibold text-sm transition-colors',
-          !isChecked && isSelected && 'bg-primary text-primary-foreground',
-          !isChecked && !isSelected && 'bg-muted text-muted-foreground',
-          showResult && isCorrect && 'bg-success text-success-foreground',
-          showResult && !isCorrect && 'bg-destructive text-destructive-foreground',
+          // Normal selected (correct but not checked)
+          isSelected && isCorrectAnswer && !isChecked && 'bg-primary text-primary-foreground',
+          // Wrong selection - red immediately
+          showWrongImmediately && 'bg-destructive text-destructive-foreground',
+          // Correct after check
+          showCorrectAfterCheck && 'bg-success text-success-foreground',
+          // Default unselected
+          !isSelected && !showCorrectIndicator && 'bg-muted text-muted-foreground',
+          // Correct indicator
           showCorrectIndicator && 'bg-success/20 text-success'
         )}
       >
@@ -61,8 +75,8 @@ export function QuestionOption({
         className={cn(
           'flex-1 text-sm leading-relaxed pt-1',
           isEliminated && 'line-through',
-          showResult && isCorrect && 'text-success font-medium',
-          showResult && !isCorrect && 'text-destructive',
+          showWrongImmediately && 'text-destructive',
+          showCorrectAfterCheck && 'text-success font-medium',
           showCorrectIndicator && 'text-success'
         )}
       >
