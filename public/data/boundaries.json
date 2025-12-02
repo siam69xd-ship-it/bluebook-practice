@@ -768,9 +768,33 @@
         },
         {
           "id": 126,
-          "question": "Despite the fact that what is now known as the Carmichael number was first posited by Václav Šimerka in 1885, the numbers are named after Robert Carmichael, who in 1910 found the smallest such number: 561.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) number,\nB) number;\nC) number\nD) number:",
+          "question": "In 1936, mathematician Alonzo Church published a paper introducing ______ a formal system for expressing computation. Lambda calculus has since become fundamental to computer science and programming language theory.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) lambda calculus;\nB) lambda calculus:\nC) lambda calculus,\nD) lambda calculus",
           "answer": "C",
-          "explanation": "No punctuation is needed here because the sentence continues smoothly without a break."
+          "explanation": "A comma is needed after 'lambda calculus' because what follows is an appositive phrase that provides additional information about lambda calculus."
+        },
+        {
+          "id": 127,
+          "question": "The aurora borealis, commonly known as the northern ______ occurs when charged particles from the sun interact with gases in Earth's atmosphere.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) lights:\nB) lights;\nC) lights,\nD) lights",
+          "answer": "C",
+          "explanation": "A comma is needed to set off the nonessential appositive 'commonly known as the northern lights' from the rest of the sentence."
+        },
+        {
+          "id": 128,
+          "question": "The Rosetta Stone, discovered in 1799, contains the same text written in three different ______ hieroglyphics, Demotic script, and ancient Greek.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) scripts;\nB) scripts:\nC) scripts,\nD) scripts",
+          "answer": "B",
+          "explanation": "A colon is used to introduce a list. The phrase 'hieroglyphics, Demotic script, and ancient Greek' is a list of the three scripts mentioned."
+        },
+        {
+          "id": 129,
+          "question": "Despite being one of the most visited museums in the ______ the Louvre in Paris houses over 380,000 objects and displays 35,000 works of art.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) world;\nB) world:\nC) world,\nD) world",
+          "answer": "C",
+          "explanation": "A comma is needed after 'world' because the introductory phrase 'Despite being one of the most visited museums in the world' needs to be separated from the main clause."
+        },
+        {
+          "id": 130,
+          "question": "The periodic table organizes chemical elements by their atomic ______ which determines their chemical properties and behavior.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) number;\nB) number:\nC) number,\nD) number",
+          "answer": "C",
+          "explanation": "A comma is needed before 'which' to introduce the nonrestrictive clause that provides additional information about atomic number."
         }
       ]
     }
