@@ -14,12 +14,14 @@ import {
 import { Button } from '@/components/ui/button';
 import { Timer } from '@/components/Timer';
 import { HighlightTool } from '@/components/HighlightTool';
+import { HighlightableText } from '@/components/HighlightableText';
 import { QuestionOption } from '@/components/QuestionOption';
 import { QuestionNavigator } from '@/components/QuestionNavigator';
 import { ExplanationPanel } from '@/components/ExplanationPanel';
 import { FilterSidebar } from '@/components/FilterSidebar';
 import {
   getAllQuestionsAsync,
+  clearQuestionCache,
   filterQuestions,
   saveProgress,
   loadProgress,
@@ -27,6 +29,7 @@ import {
   Question,
   QuestionState,
   FilterOption,
+  TextHighlight,
 } from '@/lib/questionUtils';
 import { cn } from '@/lib/utils';
 
@@ -47,6 +50,7 @@ export default function Quiz() {
   // Load questions and saved progress on mount
   useEffect(() => {
     const loadData = async () => {
+      clearQuestionCache(); // Clear cache to load fresh data
       const questions = await getAllQuestionsAsync();
       setAllQuestions(questions);
       
@@ -145,6 +149,24 @@ export default function Quiz() {
   const handleFilterChange = (filter: Partial<FilterOption>) => {
     setActiveFilter(filter);
     setShowFilterSidebar(false);
+  };
+
+  // Handler: Add highlight
+  const handleAddHighlight = (highlight: TextHighlight) => {
+    if (!currentQuestion) return;
+    const currentHighlights = currentState?.highlights || [];
+    updateQuestionState(currentQuestion.id, {
+      highlights: [...currentHighlights, highlight],
+    });
+  };
+
+  // Handler: Remove highlight
+  const handleRemoveHighlight = (index: number) => {
+    if (!currentQuestion) return;
+    const currentHighlights = currentState?.highlights || [];
+    updateQuestionState(currentQuestion.id, {
+      highlights: currentHighlights.filter((_, i) => i !== index),
+    });
   };
 
   if (!isLoaded) {
@@ -297,9 +319,14 @@ export default function Quiz() {
                   </p>
 
                   {/* Question Text */}
-                  <div className="quiz-passage text-foreground whitespace-pre-wrap">
-                    {currentQuestion.questionText}
-                  </div>
+                  <HighlightableText
+                    text={currentQuestion.questionText}
+                    highlights={currentState?.highlights || []}
+                    selectedColor={selectedHighlightColor}
+                    onAddHighlight={handleAddHighlight}
+                    onRemoveHighlight={handleRemoveHighlight}
+                    className="quiz-passage text-foreground whitespace-pre-wrap"
+                  />
                 </motion.div>
               </AnimatePresence>
             </div>
