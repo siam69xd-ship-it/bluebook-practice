@@ -10,6 +10,10 @@ import {
   Home,
   Check,
   Lightbulb,
+  Maximize,
+  Minimize,
+  LogOut,
+  User,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Timer } from '@/components/Timer';
@@ -32,9 +36,13 @@ import {
   TextHighlight,
 } from '@/lib/questionUtils';
 import { cn } from '@/lib/utils';
+import { useAuth } from '@/contexts/AuthContext';
+import { useFullscreen } from '@/hooks/useFullscreen';
 
 export default function Quiz() {
   const navigate = useNavigate();
+  const { user, signOut } = useAuth();
+  const { isFullscreen, toggleFullscreen } = useFullscreen();
   
   // State
   const [allQuestions, setAllQuestions] = useState<Question[]>([]);
@@ -253,6 +261,20 @@ export default function Quiz() {
             </div>
 
             <div className="flex items-center gap-2">
+              {/* Fullscreen Toggle */}
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={toggleFullscreen}
+                title={isFullscreen ? 'Exit Fullscreen' : 'Enter Fullscreen'}
+              >
+                {isFullscreen ? (
+                  <Minimize className="w-4 h-4" />
+                ) : (
+                  <Maximize className="w-4 h-4" />
+                )}
+              </Button>
+
               {/* Mark for Review */}
               <Button
                 variant={currentState?.markedForReview ? 'default' : 'outline'}
@@ -277,6 +299,28 @@ export default function Quiz() {
                 <Grid3X3 className="w-4 h-4" />
                 <span className="hidden sm:inline">Navigate</span>
               </Button>
+
+              {/* User/Auth */}
+              {user ? (
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => signOut()}
+                  title="Sign out"
+                >
+                  <LogOut className="w-4 h-4" />
+                  <span className="hidden sm:inline">Sign Out</span>
+                </Button>
+              ) : (
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => navigate('/auth')}
+                >
+                  <User className="w-4 h-4" />
+                  <span className="hidden sm:inline">Sign In</span>
+                </Button>
+              )}
             </div>
           </div>
 

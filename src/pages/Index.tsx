@@ -1,12 +1,14 @@
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, BookOpen, Clock, Target, Sparkles } from 'lucide-react';
+import { ArrowRight, BookOpen, Clock, Target, Sparkles, LogOut, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { loadProgress, getAllQuestionsAsync, getTopicCounts, Question } from '@/lib/questionUtils';
 import { useState, useEffect } from 'react';
+import { useAuth } from '@/contexts/AuthContext';
 
 export default function Index() {
   const navigate = useNavigate();
+  const { user, signOut } = useAuth();
   const [allQuestions, setAllQuestions] = useState<Question[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const savedProgress = loadProgress();
@@ -57,6 +59,24 @@ export default function Index() {
               <span className="text-primary-foreground font-bold text-lg">N</span>
             </div>
             <span className="text-xl font-bold text-foreground">NextPrep</span>
+          </div>
+          <div className="flex items-center gap-3">
+            {user ? (
+              <>
+                <span className="text-sm text-muted-foreground hidden sm:inline">
+                  {user.email}
+                </span>
+                <Button variant="outline" size="sm" onClick={() => signOut()}>
+                  <LogOut className="w-4 h-4 mr-1" />
+                  Sign Out
+                </Button>
+              </>
+            ) : (
+              <Button variant="outline" size="sm" onClick={() => navigate('/auth')}>
+                <User className="w-4 h-4 mr-1" />
+                Sign In
+              </Button>
+            )}
           </div>
         </nav>
       </header>
