@@ -139,18 +139,28 @@ export default function Quiz() {
 
   // Handler: Navigate
   const handleNavigate = (direction: 'prev' | 'next' | number) => {
-    // Reset current question's checked state when navigating away
-    if (currentQuestion && currentState?.checked) {
-      updateQuestionState(currentQuestion.id, { checked: false });
+    let targetIndex: number;
+    
+    if (typeof direction === 'number') {
+      targetIndex = direction;
+    } else if (direction === 'prev' && currentIndex > 0) {
+      targetIndex = currentIndex - 1;
+    } else if (direction === 'next' && currentIndex < filteredQuestions.length - 1) {
+      targetIndex = currentIndex + 1;
+    } else {
+      return; // No valid navigation
     }
 
-    if (typeof direction === 'number') {
-      setCurrentIndex(direction);
-    } else if (direction === 'prev' && currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-    } else if (direction === 'next' && currentIndex < filteredQuestions.length - 1) {
-      setCurrentIndex(currentIndex + 1);
+    // Reset the target question's answer state (fresh/unattempted on every visit)
+    const targetQuestion = filteredQuestions[targetIndex];
+    if (targetQuestion) {
+      updateQuestionState(targetQuestion.id, { 
+        userAnswer: null, 
+        checked: false 
+      });
     }
+
+    setCurrentIndex(targetIndex);
   };
 
   // Handler: Filter change
