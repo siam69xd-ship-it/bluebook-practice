@@ -766,8 +766,6 @@
           "answer": "B",
           "explanation": "A semicolon is needed to connect two closely related independent clauses. The first clause ends with 'attached to the scapula;' the second begins with 'this muscle plays...' Therefore, 'scapula;' is correct."
         },
-      ],
-      "Form, Structure, and Sense": {}
-    }
-  }
-}
+        {
+          "id": 126,
+          "question": "Despite the fact that what is now known as the Carmichael number was first posited by Václav Šimerka
