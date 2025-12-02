@@ -768,4 +768,11 @@
         },
         {
           "id": 126,
-          "question": "Despite the fact that what is now known as the Carmichael number was first posited by Václav Šimerka
+          "question": "Despite the fact that what is now known as the Carmichael number was first posited by Václav Šimerka in 1885, the numbers are named after Robert Carmichael, who in 1910 found the smallest such number: 561.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) number,\nB) number;\nC) number\nD) number:",
+          "answer": "C",
+          "explanation": "No punctuation is needed here because the sentence continues smoothly without a break."
+        }
+      ]
+    }
+  }
+}
