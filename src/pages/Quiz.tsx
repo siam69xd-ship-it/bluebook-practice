@@ -108,9 +108,22 @@ export default function Quiz() {
   // Handler: Select answer
   const handleSelectAnswer = (letter: string) => {
     if (!currentQuestion || currentState?.checked) return;
+    // Don't allow selection if this option was already individually checked
+    if (currentState?.checkedOptions?.includes(letter)) return;
     updateQuestionState(currentQuestion.id, {
       userAnswer: currentState?.userAnswer === letter ? null : letter,
     });
+  };
+
+  // Handler: Check individual option
+  const handleCheckOption = (letter: string) => {
+    if (!currentQuestion) return;
+    const checkedOptions = currentState?.checkedOptions || [];
+    if (!checkedOptions.includes(letter)) {
+      updateQuestionState(currentQuestion.id, {
+        checkedOptions: [...checkedOptions, letter],
+      });
+    }
   };
 
   // Handler: Toggle elimination
@@ -156,7 +169,8 @@ export default function Quiz() {
     if (targetQuestion) {
       updateQuestionState(targetQuestion.id, { 
         userAnswer: null, 
-        checked: false 
+        checked: false,
+        checkedOptions: [],
       });
     }
 
@@ -407,11 +421,12 @@ export default function Quiz() {
                       text={text}
                       isSelected={currentState?.userAnswer === letter}
                       isEliminated={currentState?.eliminatedOptions?.includes(letter) || false}
-                      isCorrect={isCorrect}
                       isChecked={currentState?.checked || false}
+                      isOptionChecked={currentState?.checkedOptions?.includes(letter) || false}
                       correctAnswer={currentQuestion.correctAnswer}
                       onSelect={() => handleSelectAnswer(letter)}
                       onEliminate={() => handleToggleElimination(letter)}
+                      onCheckOption={() => handleCheckOption(letter)}
                     />
                   ))}
 

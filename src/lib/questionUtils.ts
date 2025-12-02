@@ -22,6 +22,7 @@ export interface QuestionState {
   eliminatedOptions: string[];
   highlights: TextHighlight[];
   checked: boolean;
+  checkedOptions: string[]; // Individually checked options
 }
 
 export interface FilterOption {
@@ -329,5 +330,6 @@ export function getInitialQuestionState(): QuestionState {
     eliminatedOptions: [],
     highlights: [],
     checked: false,
+    checkedOptions: [],
   };
 }
