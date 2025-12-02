@@ -10,11 +10,17 @@ export interface Question {
   explanation: string;
 }
 
+export interface TextHighlight {
+  start: number;
+  end: number;
+  color: string;
+}
+
 export interface QuestionState {
   userAnswer: string | null;
   markedForReview: boolean;
   eliminatedOptions: string[];
-  highlights: { start: number; end: number; color: string }[];
+  highlights: TextHighlight[];
   checked: boolean;
 }
 
@@ -78,6 +84,11 @@ async function loadJsonFile(path: string): Promise<any> {
 }
 
 let cachedQuestions: Question[] | null = null;
+
+// Clear cache (useful for reloading questions)
+export function clearQuestionCache() {
+  cachedQuestions = null;
+}
 
 // Get all questions
 export async function getAllQuestionsAsync(): Promise<Question[]> {
