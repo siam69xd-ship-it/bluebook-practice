@@ -1,0 +1,363 @@
+{
+  "English Reading & Writing": {
+    "Craft and Structure": {
+      "Cross-Text Connections": [],
+      "Text Structure and Purpose": [],
+      "Words in Context": []
+    },
+    "Expression of Ideas": {
+      "Rhetorical Synthesis": [],
+      "Transitions": []
+    },
+    "Information and Ideas": {
+      "Central Ideas and Details": [],
+      "Command of Evidence": [],
+      "Inferences": []
+    },
+    "Standard English Conventions": {
+      "Boundaries": [],
+      "Form, Structure, and Sense": {
+        "Subject-Verb Agreement": [],
+        "Verb Tenses": [],
+        "Verb Forms": [],
+        "Pronouns": [],
+        "Modifiers": [
+          {
+            "id": 1,
+            "question": "Johannes Kepler (1571-1630) was a mathematician and physicist who not only observed but also sought to explain the celestial dance above. Observing that the planets move in elliptical paths around the sun, ________\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) Kepler’s first law (the law of ellipses) was formulated in 1609.\nB) 1609 was when Kepler formulated his first law (the law of ellipses).\nC) Kepler formulated his first law (the law of ellipses).\nD) a formulation came to Kepler that resulted in his first law (the law of ellipses).",
+            "answer": "C",
+            "explanation": "This is a dangling modifier question. The introductory phrase 'Observing that the planets move in elliptical paths around the sun' must logically modify the subject that follows, which should be Kepler. Only C correctly places 'Kepler' as the subject performing the observation. A and B incorrectly make the law or year the subject, and D makes 'a formulation' the subject, which doesn't make sense."
+          },
+          {
+            "id": 2,
+            "question": "________ , many American historians regard Christopher John Boye as one of the biggest traitors in history.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) Since they betrayed the country and sold secrets to the Soviet Union\nB) Since he betrayed his country and sold secrets to the Soviet Union,\nC) Betraying the country and selling secrets to the Soviet Union,\nD) Known for the famous betrayal,",
+            "answer": "B",
+            "explanation": "This tests modifier agreement and pronoun reference. The modifier needs to describe Christopher John Boye, who is singular ('he'), not plural ('they' in A). C lacks a clear subject connection, and D is vague. B correctly uses 'he' and includes the comma for the introductory clause."
+          },
+          {
+            "id": 3,
+            "question": "In 1920, the Innez laboratory was studying an animal that was not yet known to migrate: the monarch butterfly. ________ south for their winter migration, the researchers determined that the butterflies had an innate sense of direction.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) Flying\nB) When the butterflies flew\nC) When they flew\nD) By flying",
+            "answer": "B",
+            "explanation": "This is a modifier question where the blank needs to introduce a clause that logically modifies 'the researchers determined.' B provides a clear temporal clause with 'the butterflies' as the subject. A and D are participial phrases that dangle, and C uses 'they' ambiguously."
+          },
+          {
+            "id": 4,
+            "question": "The truck transporting animals to the Michigan Zoo was accidentally left unlocked, so all the animals escaped into the city and chaos ensued. The red-tailed monkeys climbed up the nearest tree, the tortoise almost got hit by a car, and the lemurs took off down the street. In hot pursuit on a bicycle, ________\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) the escaped lemurs were chased by animal control.\nB) the escaped lemurs were running away from animal control.\nC) animal control chased the escaped lemurs.\nD) chasing the lemurs was animal control.",
+            "answer": "C",
+            "explanation": "The introductory phrase 'In hot pursuit on a bicycle' must modify the subject that follows, which should be 'animal control' as the pursuer. A and B incorrectly make the lemurs the subject, and D is awkwardly structured."
+          },
+          {
+            "id": 5,
+            "question": "Mrs. Tamara James – the founder of the all-female fashion company Pretty Her that specializes in dresses for women over fifty – will make ________ if the request is made at least three weeks ahead of time.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) evening gowns for special customers with sequins\nB) evening gowns with sequins for special customers\nC) sequins with evening gowns for special customers\nD) special customers with sequins evening gowns",
+            "answer": "B",
+            "explanation": "This tests logical modifier placement. The phrase should logically describe what Mrs. James will make: 'evening gowns with sequins' for customers. A, C, and D misplace modifiers, making it seem like customers or sequins are the primary object."
+          },
+          {
+            "id": 6,
+            "question": "England’s transition from a monarchy to a Democratic Republic vastly shifted the power structure of the government. The ________ decisions for the nation.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) greatly decreased Queen and King had an amount of power in making\nB) Queen and King had a greatly decreased amount of power in making\nC) Queen and King had an amount of greatly decreased power in making\nD) Queen and King had an amount of power in making greatly decreased",
+            "answer": "B",
+            "explanation": "The modifier 'greatly decreased' should be placed before 'amount' for clarity and logic. A, C, and D misplace the adverb, leading to awkward or illogical phrasing."
+          },
+          {
+            "id": 7,
+            "question": "Since the old pipes of Mexico City were leaching heavy metals and contaminating the water supply, the city tasked its best engineers with designing a way to make the water potable. In designing a new water filtration system, ________ .\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) common strategies were combined with revolutionary, new ideas.\nB) revolutionary, new ideas were combined with common strategies.\nC) engineers’ borrowing of common strategies were combined with revolutionary, new ideas.\nD) engineers combined common strategies with new, revolutionary ideas.",
+            "answer": "D",
+            "explanation": "The introductory phrase 'In designing a new water filtration system' must modify 'engineers' as the subject. A, B, and C make strategies or ideas the subject, causing a dangling modifier."
+          },
+          {
+            "id": 8,
+            "question": "Alaskan Huskies are one of the most popular dog breeds for sled dogs thanks to their demeanor and physical abilities. Highly energetic and intelligent, ________ .\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) they are friendly to everyone\nB) Alaskan Huskies are friendly to everyone\nC) many owners know that Alaskan Huskies are friendly to everyone\nD) everyone is treated as a friend by Alaskan Huskies",
+            "answer": "B",
+            "explanation": "The introductory modifier 'Highly energetic and intelligent' must describe the subject 'Alaskan Huskies.' A uses a pronoun without a clear antecedent in context, C shifts to owners, and D is passive and illogical."
+          },
+          {
+            "id": 9,
+            "question": "When visiting Bermuda, Bub’s Burgers is a can’t miss lunch spot. Covered with license plates from around the world, ________ , and the ceiling is covered with bills in over sixty different currencies.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) the walls at Bub’s Burgers are always a popular photo op for tourists\nB) tourists love to take pictures of the walls at Bub’s Burgers.\nC) photos in front of the walls at Bub’s Burgers are very popular for tourists.\nD) Bub’s Burgers is a popular photo op for tourists.",
+            "answer": "A",
+            "explanation": "The modifier 'Covered with license plates from around the world' should describe 'the walls.' Only A correctly places 'the walls' as the subject. B, C, and D shift the focus incorrectly."
+          },
+          {
+            "id": 10,
+            "question": "Former professional surfer Enzo Rivas now lives a quiet life in a small town by the ocean. Working in his shop in Encinitas, ________ . On occasion, locals see Enzo surfing, but he is now more commonly seen on his road bike.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) surfboards are carefully handcrafted by shaper Enzo Rivas\nB) shaper Enzo Rivas carefully handcrafts surfboards\nC) there are surfboards being carefully handcrafted by shaper Enzo Rivas\nD) Enzo Riva’s surfboards are carefully handcrafted",
+            "answer": "B",
+            "explanation": "The introductory phrase 'Working in his shop in Encinitas' modifies Enzo Rivas, so the subject should be him as the shaper. A, C, and D make surfboards or 'there' the subject, dangling the modifier."
+          },
+          {
+            "id": 11,
+            "question": "Using a piping hot pan with oil glistening, ________ . This technique is a simple and effective way to prevent oil splatter.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) the steak must be carefully laid away from the cook to prevent getting burned\nB) the cook must carefully lay the steak away from himself to prevent getting burned\nC) the cook’s steak must carefully be laid away from the cook to prevent getting burned\nD) prevent getting burned by carefully laying the steak away",
+            "answer": "B",
+            "explanation": "The introductory phrase 'Using a piping hot pan with oil glistening' modifies 'the cook' as the actor. A and C misplace the subject, and D is a fragment."
+          },
+          {
+            "id": 12,
+            "question": "Different types of ants have defined roles that help the colony survive. ________ , the worker ants (mostly females) are responsible for building and maintaining the nest while the bigger queen ant is responsible for the future generations of the colony.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) Spending her entire life laying eggs,\nB) Carrying up to fifty times their body weights,\nC) Since it can carry up to fifty times its body weight,\nD) Monitoring how her nest functions on a day-to-day basis,",
+            "answer": "B",
+            "explanation": "The modifier 'Carrying up to fifty times their body weights' describes the worker ants, who are the subject of the clause. A would fit the queen, but the sentence focuses on workers first."
+          },
+          {
+            "id": 13,
+            "question": "The legend of Old Tom, the killer whale that helped sailors catch fish, is likely just that – a legend. The story says that in the 1920s, while swimming in the freezing cold waters off Australia, ________ ; however, with no proof of this beyond the stories of old sailors, it is impossible to determine if it ever really happened.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) Old Tom, the orca whale, successfully hunted large schools of fish with sailors\nB) sailors successfully hunted large schools of fish with Old Tom, the orca whale\nC) it was large schools of fish that were successfully hunted by Old Tom, the orca whale, and sailors\nD) sailors with the help of Old Tom, the orca whale, successfully hunted large schools of fish.",
+            "answer": "A",
+            "explanation": "The introductory phrase 'while swimming in the freezing cold waters off Australia' modifies 'Old Tom,' the whale. B, C, and D make sailors or fish the subject."
+          },
+          {
+            "id": 14,
+            "question": "The four members of the panel were each asked who they thought was the best men’s soccer play of all time. ________ (who was chosen as the athlete of the century by the International Olympic Committee in 1999).\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) The Brazilian soccer analyst decided that the best player of all time was Pele\nB) Pele was chosen by the Brazilian soccer analyst as the best player of all time\nC) Pele was named the best player of all time by the Brazilian soccer analyst\nD) The best player of all time was Pele, the Brazilian soccer analyst decided",
+            "answer": "A",
+            "explanation": "This tests logical subject placement. The parenthetical '(who was chosen...)' modifies Pele, so the sentence should end with 'Pele' as the object. Only A does this correctly without passive awkwardness."
+          },
+          {
+            "id": 15,
+            "question": "The first-generation Roomba, a mobile robot for vacuuming floors, was initially sold in 2002. Now in widespread use across many homes, and a top-10 selling infomercial product of the 2010s, ________ .\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) a 60 Minutes segment featured the Roomba\nB) the Roomba was featured on 60 Minutes.\nC) the Roomba’s segment was featured on 60 Minutes.\nD) 60 Minutes featured the Roomba.",
+            "answer": "B",
+            "explanation": "The modifier 'Now in widespread use...2010s' describes the Roomba, so it should be the subject. A and D make the segment or show the subject, and C is illogical."
+          },
+          {
+            "id": 16,
+            "question": "Graywolf Books, a publisher in Canada, focuses on bringing historical stories of the indigenous communities of the country to mainstream audiences. Commenting on Graywolf’s mission, _______ her publishing house was 'born with the intention of telling untold histories the Canadian people need to know.'\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) cofounder Eden Whitehead says\nB) cofounder Eden Whitehead says,\nC) which cofounder Eden Whitehead says,\nD) when cofounder Eden Whitehead says,",
+            "answer": "A",
+            "explanation": "The introductory phrase 'Commenting on Graywolf’s mission' modifies 'cofounder Eden Whitehead.' A correctly places her as the subject without unnecessary commas or relative pronouns."
+          }
+        ],
+        "Parallel Structure": [
+          {
+            "id": 1,
+            "question": "Studies have shown that the secrets to achieving true happiness are strengthening your closest relationship and ________ care of yourself mentally and physically.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) take\nB) if you take\nC) taking\nD) to take",
+            "answer": "C",
+            "explanation": "This tests parallel structure in a list. 'Strengthening' is a gerund, so the parallel form is 'taking' (gerund). A and B are verb forms, and D is an infinitive."
+          },
+          {
+            "id": 2,
+            "question": "At birth, baby birds get all of their nutrients by staying in the nest ________ directly from their parents’ mouths.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) and they eat\nB) which they eat\nC) and eating\nD) that eat",
+            "answer": "C",
+            "explanation": "Parallel structure with 'by staying...and eating.' Both are gerunds. A adds a subject-verb clause, B and D are relative clauses."
+          },
+          {
+            "id": 3,
+            "question": "Manny not only overcame his fear of standing in front of large crowds but ________ the best public speaker in his entire school.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) also became\nB) he also became\nC) he also had become\nD) also becoming",
+            "answer": "A",
+            "explanation": "'Not only...but also' requires parallel verbs: 'overcame...became.' B and C add unnecessary subjects, D is a gerund."
+          },
+          {
+            "id": 4,
+            "question": "During the field trip to the beach, my classmates ignore the warning signs, climbing over the dunes and ________ to the dangerous polluted water.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) exposing themselves\nB) the exposure to\nC) were exposing themselves\nD) expose themselves",
+            "answer": "A",
+            "explanation": "Parallel participial phrases: 'climbing...exposing.' B is a noun phrase, C changes tense, D is imperative."
+          },
+          {
+            "id": 5,
+            "question": "To predict the efficacy of an antibiotic using a computer model, scientists predicted the reduction of bacteria in a petri dish using two separate models: model X and model Y. After 3 days, the predictions based on model X were better ________ and continued to be significantly more accurate 5 days later.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) than model Y\nB) than those based on model Y\nC) than compared with model Y\nD) than model Y’s predictions",
+            "answer": "B",
+            "explanation": "Parallel comparison: 'predictions...those (predictions).' A and D compare to the model itself, C is redundant."
+          },
+          {
+            "id": 6,
+            "question": "The orchestra conductor can raise the volume by lifting his arms up higher and ________ the volume by moving his hands closer together.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) lowering\nB) lower\nC) lowered\nD) has lowered",
+            "answer": "B",
+            "explanation": "Parallel infinitives implied: 'raise...lower.' A is gerund, C and D are past tense."
+          },
+          {
+            "id": 7,
+            "question": "To enhance the survival rate of young salmon in hatcheries, fisheries expert David Park has proposed the introduction of controlled flow environments that mimic natural river conditions. This adaptation is strengthening the salmon's instinctual behaviors and better ________ them for their eventual release into the wild.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) preparing\nB) to prepare\nC) prepare\nD) prepared",
+            "answer": "A",
+            "explanation": "Parallel gerunds: 'strengthening...preparing.' B is infinitive, C is imperative, D is past participle."
+          },
+          {
+            "id": 8,
+            "question": "Ancient artifacts such as the Rosetta Stone should be in the hands of people who know how to ________ .\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) properly repair, care for, and permanently protect them\nB) properly repair, while caring for and permanently protecting them.\nC) properly repairing, care for, and permanently protect them.\nD) to properly repair care for, permanently protecting them.",
+            "answer": "A",
+            "explanation": "Parallel infinitives: 'to repair, care for, and protect.' B mixes with gerunds, C and D are inconsistent."
+          },
+          {
+            "id": 9,
+            "question": "The doctor was a specialist in cardiovascular surgery and ________ during his successful career in medicine.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) had invented the cardiac stint\nB) the cardiac stint inventor\nC) the inventor of the cardiac stint\nD) invented the cardiac stint",
+            "answer": "C",
+            "explanation": "Parallel nouns: 'a specialist...the inventor.' A and D are verbs, B is awkward."
+          },
+          {
+            "id": 10,
+            "question": "As sustainability becomes more essential, businesses across different sectors are acknowledging the importance of environmentally responsible practices. A 2019 study from Georgetown University found that the benefits of environmental initiatives were actually higher for companies in the business-to-business sector ________ companies in the business-to-consumer sector.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) than those of\nB) than for\nC) than the benefits of\nD) than",
+            "answer": "B",
+            "explanation": "Parallel prepositional phrases: 'higher for...than for.' A and C repeat 'benefits,' D is incomplete."
+          },
+          {
+            "id": 11,
+            "question": "According to most doctors, ________ is just as important as exercise for the mind.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) exercising the body\nB) giving the body exercise\nC) exercise for the body\nD) body exercise",
+            "answer": "C",
+            "explanation": "Parallel nouns: 'exercise for the mind...exercise for the body.' A and B are gerunds/phrases, D is compound noun."
+          },
+          {
+            "id": 12,
+            "question": "I often still find myself struggling to properly season beverages, as their flavor profile is much more nuanced ________\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) than cooked dishes.\nB) than these.\nC) then cooked dishes.\nD) than that of cooked dishes.",
+            "answer": "D",
+            "explanation": "Parallel comparison: 'flavor profile...that (flavor profile) of.' A compares to dishes, B is vague, C uses 'then.'"
+          },
+          {
+            "id": 13,
+            "question": "The relocation of the gray wolf to Yellowstone National Park in 1995 was a significant event for the species and the park itself. In Yellowstone, the wolves caused a trophic cascade of ecological change – rebalancing elk, deer, and beaver populations – and _______ tourism to the park.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) increasing\nB) increased\nC) to increase\nD) having increased",
+            "answer": "B",
+            "explanation": "Parallel verbs: 'caused...rebalancing...increased.' A is gerund, C infinitive, D participle."
+          },
+          {
+            "id": 14,
+            "question": "After traveling halfway around the world to Bali, Svetlana was disappointed that the swing at the rice fields was not ________ the pictures made it seem.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) as exciting a place to visit as\nB) an exciting place to visit\nC) a place to visit that was exciting\nD) excited to visit the place",
+            "answer": "A",
+            "explanation": "Parallel comparison: 'as...as.' B, C, D lack the structure."
+          },
+          {
+            "id": 15,
+            "question": "Lucky visitors to the arctic circle might see the aurora borealis in the sky, an arctic fox in the snow, or ________\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) a beluga whale.\nB) beluga whales.\nC) a beluga whale in the sea.\nD) a swimming beluga whale.",
+            "answer": "C",
+            "explanation": "Parallel prepositional phrases: 'in the sky...in the snow...in the sea.' A and B lack 'in,' D lacks parallelism."
+          },
+          {
+            "id": 16,
+            "question": "A recent study has identified a possible connection between the bioluminescent glow of jellyfish and the shimmering bioluminescence exhibited by fireflies. The study suggests the blue-green glow of a midwater jellyfish in the deep sea might indeed be a mating mechanism, just like ________ in terrestrial environments.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) the yellow-orange glow of a firefly\nB) those of fireflies\nC) fireflies\nD) that of fireflies",
+            "answer": "A",
+            "explanation": "Parallel nouns: 'the...glow...the...glow.' B uses 'those,' C compares to fireflies, D uses 'that.'"
+          },
+          {
+            "id": 17,
+            "question": "In his most recent public appearance, Dr. Rodriguez gave a speech about his autobiography, detailing his research in the field of cancer ________ his career achievements.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) immunotherapy and describing\nB) immunotherapy, and describes\nC) immunotherapy and described\nD) immunotherapy, after which he described",
+            "answer": "A",
+            "explanation": "Parallel participles: 'detailing...describing.' B and C mix tenses, D changes structure."
+          },
+          {
+            "id": 18,
+            "question": "David relied on his own experience ________ the meat thermometer to tell when the turkey was done.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) rather than on\nB) rather than\nC) other than\nD) rather then on",
+            "answer": "A",
+            "explanation": "Idiomatic parallel: 'relied on...rather than on.' B omits 'on,' C changes meaning, D misspells 'then.'"
+          },
+          {
+            "id": 19,
+            "question": "The hunting habits of killer whales, which hunt together in pods of up to ten whales, are even more advanced ________ white sharks.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) than great\nB) than the hunting habit’s of great\nC) then great\nD) than those of great",
+            "answer": "D",
+            "explanation": "Parallel comparison: 'hunting habits...those (hunting habits) of.' A lacks 'those,' B apostrophe error, C 'then.'"
+          },
+          {
+            "id": 20,
+            "question": "The table, which was built entirely out of redwood, provides a space for my father to complete his puzzle and ________ .\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) my hobby of building model airplanes\nB) me building model airplanes\nC) for me to build model airplanes\nD) to allow me to build model airplanes",
+            "answer": "C",
+            "explanation": "Parallel prepositional phrases: 'for my father to...for me to.' A and B lack 'for,' D repeats 'to.'"
+          },
+          {
+            "id": 21,
+            "question": "It has long been assumed that the domestic dog (Canis familiaris) has a better sense of smell than humans. A 2012 study from Auburn university has confirmed that the domestic dog has olfactory capabilities more acute than _______\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) the average human’s.\nB) the average human.\nC) those of the average humans.\nD) that of the average human.",
+            "answer": "A",
+            "explanation": "Parallel possession: 'olfactory capabilities...the average human’s (olfactory capabilities).' B lacks possession, C plural, D 'that' for singular."
+          },
+          {
+            "id": 22,
+            "question": "The goal of observing the dietary habits of the Galapagos tortoises was not only to identify the primary items the tortoises preferred to ________ if there is any correlation between food intake and behavior.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) eat but it was also to examine\nB) eat but also to examine\nC) eat, and to examine\nD) eat but also examining",
+            "answer": "B",
+            "explanation": "'Not only to...but also to' parallel infinitives. A adds 'it was,' C comma issue, D mixes gerund."
+          },
+          {
+            "id": 23,
+            "question": "Many of the skills required for hockey – hand-eye coordination, strength, and agility – are similar to ________ .\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) basketball and lacrosse\nB) basketball and lacrosse players\nC) the games of basketball and lacrosse\nD) those for basketball and lacrosse",
+            "answer": "D",
+            "explanation": "Parallel: 'skills...those (skills) for.' A compares to sports, B to players, C to games."
+          },
+          {
+            "id": 24,
+            "question": "By the end of the week, the team ________ ten new computers that came with two-year protection plans to cover any accidental damage and had ordered a new industrial printer capable of printing 10,000 pages per day.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) had purchased\nB) purchasing\nC) will purchase\nD) purchased",
+            "answer": "A",
+            "explanation": "Parallel past perfect: 'had purchased...had ordered.' B gerund, C future, D simple past."
+          },
+          {
+            "id": 25,
+            "question": "One way to increase the output of wind farms in the Anzo Borrego desert is to create new turbines that have longer rotor blades. In 2023, the rotor diameter of newly installed turbines in the Anzo Borrego desert reached 140 meters, several times ________ .\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) that of turbines installed in 2012\nB) turbines installed in 2012\nC) those of turbines installed in 2012\nD) the number of installed turbines in 2012",
+            "answer": "A",
+            "explanation": "Parallel singular: 'rotor diameter...that (rotor diameter) of.' B lacks 'that,' C plural 'those,' D changes to 'number.'"
+          }
+        ],
+        "Miscellaneous Topics": [
+          {
+            "id": 1,
+            "question": "Because he is very protective, Ralph stepped in to prevent his brother, who was only 8 years old, ________ fighting the older students.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) at\nB) to\nC) from\nD) with",
+            "answer": "C",
+            "explanation": "Idiomatic preposition: 'prevent...from.' A, B, D are incorrect idioms."
+          },
+          {
+            "id": 2,
+            "question": "After stepping onto the porch, the entire family was ________ seeing a bear in the backyard.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) startled with\nB) startled by\nC) surprised in\nD) surprised with",
+            "answer": "B",
+            "explanation": "Idiomatic: 'startled by.' 'Surprised by' could work, but options use 'startled,' and C/D are wrong."
+          },
+          {
+            "id": 3,
+            "question": "The treatment was administered and then patients were asked to return the next day since the ________ of the treatment, if there were any, do not appear for 24 hours.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) affects\nB) affect\nC) effect\nD) effects",
+            "answer": "D",
+            "explanation": "'Effects' (noun, plural) meaning results. A/B are verbs, C singular."
+          },
+          {
+            "id": 4,
+            "question": "Before the story about the financials became public, Aura System, an electric battery company, ________ gone public, but now there is no chance of that happening.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) would of\nB) could of\nC) might have\nD) possibly to have",
+            "answer": "C",
+            "explanation": "Correct modal: 'might have' for past possibility. A/B misuse 'of' for 'have,' D incorrect infinitive."
+          },
+          {
+            "id": 5,
+            "question": "Research performed on the hummingbird population indicated that more time spent searching for food ________ a longer lifespan.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) correlates with\nB) correlates to\nC) points for\nD) insists on",
+            "answer": "A",
+            "explanation": "Idiomatic: 'correlates with.' B 'to' wrong, C/D incorrect."
+          },
+          {
+            "id": 6,
+            "question": "The invention of barcodes made cashiers’ jobs so much easier, as it substantially ________ of minutes that it took to calculate the total price of a customer’s purchase.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) reduced the amount\nB) lowered the amount\nC) decreased the number\nD) deducted the number",
+            "answer": "C",
+            "explanation": "'Number of minutes' (countable). A/B use 'amount' for uncountable, D 'deducted' wrong verb."
+          },
+          {
+            "id": 7,
+            "question": "After turning in my paper, my teacher reminded me that I needed to ________ all of my sources.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) sight\nB) site\nC) cite\nD) recite",
+            "answer": "C",
+            "explanation": "'Cite' means reference sources. A 'sight' vision, B 'site' location, D 'recite' speak."
+          },
+          {
+            "id": 8,
+            "question": "For Donations Unlimited, donated clothes that are in fair to good condition are much easier to resell ________ used household items, such as pans, cutlery, or rice cookers.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) than\nB) then\nC) when compared on\nD) contrasted to",
+            "answer": "A",
+            "explanation": "Comparison: 'easier to...than.' B 'then' time, C/D redundant/wrong."
+          },
+          {
+            "id": 9,
+            "question": "Selecting the right marketing team and publishing strategy directly ________ the success – or failure – of the book launch.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) effects\nB) effect\nC) affect\nD) affects",
+            "answer": "D",
+            "explanation": "'Affects' (verb) meaning influences. A/B nouns, C singular verb but subject plural."
+          },
+          {
+            "id": 10,
+            "question": "Clear glass windows were installed in the house ________ letting in more natural light.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) as a means to\nB) as a means of\nC) as a virtue of\nD) as a virtue to",
+            "answer": "B",
+            "explanation": "Idiomatic: 'as a means of.' A/D wrong preposition, C 'virtue' wrong word."
+          },
+          {
+            "id": 11,
+            "question": "Before finalizing her decision to buy, Sarah did ________ research on the property values in the neighborhood to make sure that buying the house was a good financial decision.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) through\nB) thorough\nC) thru\nD) though",
+            "answer": "B",
+            "explanation": "'Thorough' means complete. A 'through' passage, C informal, D contrast."
+          },
+          {
+            "id": 12,
+            "question": "Some mycologists prefer studying fungi in a laboratory ________ others prefer to do field work and attempt to identify new species of mushrooms in the wild.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) setting while\nB) setting, while\nC) setting, meanwhile,\nD) setting so that",
+            "answer": "B",
+            "explanation": "'Setting, while' for contrast with comma. A no comma, C 'meanwhile' wrong, D 'so that' cause."
+          },
+          {
+            "id": 13,
+            "question": "The five-star hotel lived up to its promise of excellent service: the staff were amazingly efficient, provided fantastic recommendations for the best restaurants and attractions in the city, and assisted in booking all of our transportations to _______ that we enjoyed our stay.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) ensure\nB) assure\nC) insure\nD) make an assurance",
+            "answer": "A",
+            "explanation": "'Ensure' means make certain. B 'assure' convince, C 'insure' protect financially, D redundant."
+          },
+          {
+            "id": 14,
+            "question": "If I had a nickel for every time that I saw a dog ride a ________ broke long ago.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) bike, I would have been\nB) bike, I have been\nC) bike, I would of been\nD) bike, I was",
+            "answer": "A",
+            "explanation": "Conditional: 'would have been' (past perfect). B present, C 'of' error, D simple past."
+          }
+        ]
+      }
+    }
+  }
+}
