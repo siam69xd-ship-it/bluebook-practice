@@ -245,7 +245,7 @@
           },
           {
             "id": 38,
-            "question": "On February 1, 2018, a Florida—based research team—Martha A. Scholl, Maoya Bassiouni, and Angel J. Torres-Sánchez—compiled climate data from several sites in Puerto Rico’s Luquillo Mountains. At site CC1, the site with the highest elevation, the air temperature fluctuated slightly throughout the day, registering ______ and 16^\circ C at 5:00 p.m.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) 15.4^\circ C at 1:00 a.m., 18.6^\circ C at 11:30 a.m.\nB) 15.4^\circ C at 1:00 a.m.; 18.6^\circ C at 11:30 a.m.,\nC) 15.4^\circ C, at 1:00 a.m. 18.6^\circ C, at 11:30 a.m.\nD) 15.4^\circ C at 1:00 a.m., 18.6^\circ C at 11:30 a.m.,",
+            "question": "On February 1, 2018, a Florida—based research team—Martha A. Scholl, Maoya Bassiouni, and Angel J. Torres-Sánchez—compiled climate data from several sites in Puerto Rico’s Luquillo Mountains. At site CC1, the site with the highest elevation, the air temperature fluctuated slightly throughout the day, registering ______ and 16^° C at 5:00 p.m.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) 15.4^° C at 1:00 a.m., 18.6^° C at 11:30 a.m.\nB) 15.4^° C at 1:00 a.m.; 18.6^° C at 11:30 a.m.,\nC) 15.4^° C, at 1:00 a.m. 18.6^° C, at 11:30 a.m.\nD) 15.4^° C at 1:00 a.m., 18.6^° C at 11:30 a.m.,",
             "answer": "A",
             "explanation": "Two temperature-time pairs are listed in a series, separated by a comma. No extra punctuation is needed within each pair."
           },

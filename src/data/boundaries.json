@@ -765,7 +765,7 @@
           "question": "The human shoulder contains the infraspinatus,a skeletal muscle that is attached to the ______ this muscle plays a role in rotating the upper arm.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA)scapula,\nB)scapula;\nC)scapula\nD)scapula that",
           "answer": "B",
           "explanation": "A semicolon is needed to connect two closely related independent clauses. The first clause ends with 'attached to the scapula;' the second begins with 'this muscle plays...' Therefore, 'scapula;' is correct."
-        },
+        }
       ],
       "Form, Structure, and Sense": {}
     }

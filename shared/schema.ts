@@ -13,12 +13,22 @@ export const sessions = pgTable(
 
 export const users = pgTable("users", {
   id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
-  email: varchar("email").unique(),
+  email: varchar("email").unique().notNull(),
+  password: varchar("password"),
   firstName: varchar("first_name"),
   lastName: varchar("last_name"),
   profileImageUrl: varchar("profile_image_url"),
+  isEmailVerified: boolean("is_email_verified").default(false),
   createdAt: timestamp("created_at").defaultNow(),
   updatedAt: timestamp("updated_at").defaultNow(),
+});
+
+export const emailVerificationCodes = pgTable("email_verification_codes", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  email: varchar("email").notNull(),
+  code: varchar("code", { length: 6 }).notNull(),
+  expiresAt: timestamp("expires_at").notNull(),
+  createdAt: timestamp("created_at").defaultNow(),
 });
 
 export type UpsertUser = typeof users.$inferInsert;

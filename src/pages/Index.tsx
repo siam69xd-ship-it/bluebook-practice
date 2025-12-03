@@ -76,7 +76,10 @@ export default function Index() {
                       {user.firstName || user.email}
                     </span>
                   </div>
-                  <Button variant="outline" size="sm" onClick={() => window.location.href = '/api/logout'}>
+                  <Button variant="outline" size="sm" onClick={() => {
+                    fetch('/api/auth/logout', { method: 'POST', credentials: 'include' })
+                      .then(() => window.location.reload());
+                  }}>
                     <LogOut className="w-4 h-4 mr-1" />
                     Sign Out
                   </Button>

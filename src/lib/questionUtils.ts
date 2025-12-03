@@ -109,12 +109,13 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
   
   try {
     // Load all JSON files
-    const [boundariesData, verbsData, pronounData, modifiersData, centralIdeaData] = await Promise.all([
+    const [boundariesData, verbsData, pronounData, modifiersData, centralIdeaData, textStructureData] = await Promise.all([
       loadJsonFile('/data/boundaries.json'),
       loadJsonFile('/data/verbs.json'),
       loadJsonFile('/data/pronoun.json'),
       loadJsonFile('/data/modifiers.json'),
       loadJsonFile('/data/central_idea_and_details.json'),
+      loadJsonFile('/data/text_structure_and_purpose.json'),
     ]);
     
     // Process Boundaries
@@ -319,6 +320,54 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
           section: "English",
           subSection: "Information and Ideas",
           topic: "Inferences",
+          questionText: `${q.passage}\n\n${q.question}`,
+          options,
+          correctAnswer: q.answer,
+          explanation: q.explanation,
+        });
+      });
+    }
+    
+    // Process Text Structure and Purpose (81 questions)
+    const craftAndStructure = textStructureData?.["English Reading & Writing"]?.["Craft and Structure"];
+    if (craftAndStructure) {
+      // Text Structure and Purpose
+      (craftAndStructure["Text Structure and Purpose"] || []).forEach((q: CentralIdeaQuestion) => {
+        const options: { [key: string]: string } = {};
+        q.options.forEach((opt: string) => {
+          const match = opt.match(/^([A-D])\)\s*(.+)$/s);
+          if (match) {
+            options[match[1]] = match[2].trim();
+          }
+        });
+        
+        questions.push({
+          id: globalId++,
+          section: "English",
+          subSection: "Craft and Structure",
+          topic: "Text Structure and Purpose",
+          questionText: `${q.passage}\n\n${q.question}`,
+          options,
+          correctAnswer: q.answer,
+          explanation: q.explanation,
+        });
+      });
+      
+      // Cross-Text Connections
+      (craftAndStructure["Cross-Text Connections"] || []).forEach((q: CentralIdeaQuestion) => {
+        const options: { [key: string]: string } = {};
+        q.options.forEach((opt: string) => {
+          const match = opt.match(/^([A-D])\)\s*(.+)$/s);
+          if (match) {
+            options[match[1]] = match[2].trim();
+          }
+        });
+        
+        questions.push({
+          id: globalId++,
+          section: "English",
+          subSection: "Craft and Structure",
+          topic: "Cross-Text Connections",
           questionText: `${q.passage}\n\n${q.question}`,
           options,
           correctAnswer: q.answer,

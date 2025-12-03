@@ -1,4 +1,4 @@
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 
 interface User {
   id: string;
@@ -11,7 +11,9 @@ interface User {
 }
 
 export function useAuth() {
-  const { data: user, isLoading, error } = useQuery<User>({
+  const queryClient = useQueryClient();
+  
+  const { data: user, isLoading, error, refetch } = useQuery<User | null>({
     queryKey: ["/api/auth/user"],
     queryFn: async () => {
       const response = await fetch("/api/auth/user", {
@@ -29,10 +31,26 @@ export function useAuth() {
     staleTime: 5 * 60 * 1000,
   });
 
+  const logout = async () => {
+    try {
+      await fetch("/api/auth/logout", {
+        method: "POST",
+        credentials: "include",
+      });
+      queryClient.setQueryData(["/api/auth/user"], null);
+      queryClient.invalidateQueries({ queryKey: ["/api/auth/user"] });
+      window.location.href = "/";
+    } catch (error) {
+      console.error("Logout failed:", error);
+    }
+  };
+
   return {
     user: user ?? null,
     isLoading,
     isAuthenticated: !!user,
     error,
+    logout,
+    refetch,
   };
 }
