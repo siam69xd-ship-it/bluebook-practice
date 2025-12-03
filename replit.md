@@ -64,13 +64,13 @@ Preferred communication style: Simple, everyday language.
 
 ### Authentication & Authorization
 
-**Provider**: Supabase Authentication
-- Google OAuth integration for sign-in
-- Session management via Supabase client
-- Auth state persistence across page reloads
-- Protected routes with redirect logic based on authentication status
+**Status**: Guest Mode Only
+- Google OAuth has been removed during Supabase to Neon migration
+- Users can access all features in guest mode
+- Authentication context maintained for future implementation
+- No sign-in required for quiz functionality
 
-**Design Rationale**: OAuth provides a frictionless sign-in experience without requiring password management, reducing user friction and improving security.
+**Design Rationale**: The app is fully functional without authentication. Future auth implementation could use Replit Auth or another provider.
 
 ### UI/UX Features
 
@@ -117,10 +117,10 @@ Preferred communication style: Simple, everyday language.
 
 ### Third-Party Services
 
-**Supabase** (`@supabase/supabase-js`)
-- Backend-as-a-Service for authentication
-- Google OAuth provider integration
-- Session management and token refresh
+**Database**: Replit's Neon PostgreSQL
+- Database schema managed via Drizzle ORM
+- Server-side database access via @neondatabase/serverless
+- Tables: admin_users, donors, locations, reports, verification_codes
 
 ### Core Libraries
 
