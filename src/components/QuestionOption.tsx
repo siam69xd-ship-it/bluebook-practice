@@ -38,16 +38,17 @@ export function QuestionOption({
   return (
     <div
       className={cn(
-        'group relative flex items-start gap-3 p-4 rounded-lg border-2 transition-all duration-200 cursor-pointer',
+        'group relative flex items-center gap-4 px-5 py-4 rounded-2xl border-2 transition-all duration-300 cursor-pointer',
+        'shadow-sm hover:shadow-md',
         isEliminated && 'opacity-40',
         // Hover states (only when not checked)
-        !isEliminated && !showOptionWrong && !showOptionCorrect && !showCorrectIndicator && 'hover:border-primary/50 hover:bg-muted/30',
-        // Normal selected (not checked yet)
-        isSelected && !isOptionChecked && !isChecked && 'border-primary bg-primary/5',
-        // Individual option checked - wrong
-        showOptionWrong && 'border-destructive bg-destructive/10',
-        // Individual option checked - correct
-        showOptionCorrect && 'border-success bg-success/10',
+        !isEliminated && !showOptionWrong && !showOptionCorrect && !showCorrectIndicator && 'hover:border-primary/50 hover:bg-primary/5 hover:scale-[1.01]',
+        // Normal selected (blue border before checking)
+        isSelected && !isOptionChecked && !isChecked && 'border-primary bg-primary/5 shadow-primary/20',
+        // Individual option checked - wrong (red)
+        showOptionWrong && 'border-destructive bg-destructive/10 shadow-destructive/20',
+        // Individual option checked - correct (green)
+        showOptionCorrect && 'border-success bg-success/10 shadow-success/20',
         // Default unselected
         !isSelected && !isOptionChecked && !showCorrectIndicator && 'border-border bg-card',
         // Full check reveals correct answer
@@ -55,20 +56,21 @@ export function QuestionOption({
       )}
       onClick={() => !isEliminated && !isOptionChecked && onSelect()}
     >
-      {/* Letter badge */}
+      {/* Circle Letter Badge */}
       <div
         className={cn(
-          'flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-semibold text-sm transition-colors',
+          'flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-base transition-all duration-300',
+          'ring-2 ring-offset-2 ring-offset-background',
           // Normal selected
-          isSelected && !isOptionChecked && !isChecked && 'bg-primary text-primary-foreground',
+          isSelected && !isOptionChecked && !isChecked && 'bg-primary text-primary-foreground ring-primary',
           // Option wrong
-          showOptionWrong && 'bg-destructive text-destructive-foreground',
+          showOptionWrong && 'bg-destructive text-destructive-foreground ring-destructive',
           // Option correct
-          showOptionCorrect && 'bg-success text-success-foreground',
+          showOptionCorrect && 'bg-success text-success-foreground ring-success',
           // Default unselected
-          !isSelected && !isOptionChecked && !showCorrectIndicator && 'bg-muted text-muted-foreground',
+          !isSelected && !isOptionChecked && !showCorrectIndicator && 'bg-muted text-muted-foreground ring-muted',
           // Correct indicator
-          showCorrectIndicator && 'bg-success/20 text-success'
+          showCorrectIndicator && 'bg-success/20 text-success ring-success/50'
         )}
       >
         {letter}
@@ -77,7 +79,7 @@ export function QuestionOption({
       {/* Option text */}
       <span
         className={cn(
-          'flex-1 text-sm leading-relaxed pt-1',
+          'flex-1 text-sm leading-relaxed',
           isEliminated && 'line-through',
           showOptionWrong && 'text-destructive',
           showOptionCorrect && 'text-success font-medium',
@@ -88,7 +90,7 @@ export function QuestionOption({
       </span>
 
       {/* Action buttons */}
-      <div className="flex items-center gap-1">
+      <div className="flex items-center gap-2">
         {/* Individual Check button - only show if not already checked */}
         {!isOptionChecked && !isChecked && (
           <button
@@ -97,8 +99,8 @@ export function QuestionOption({
               onCheckOption();
             }}
             className={cn(
-              'flex-shrink-0 p-1.5 rounded-md transition-all duration-200',
-              'opacity-0 group-hover:opacity-100 bg-primary/10 text-primary hover:bg-primary/20'
+              'flex-shrink-0 p-2 rounded-full transition-all duration-200',
+              'opacity-0 group-hover:opacity-100 bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground'
             )}
             title="Check this option"
           >
@@ -113,7 +115,7 @@ export function QuestionOption({
             onEliminate();
           }}
           className={cn(
-            'flex-shrink-0 p-1.5 rounded-md transition-all duration-200',
+            'flex-shrink-0 p-2 rounded-full transition-all duration-200',
             isEliminated
               ? 'bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary'
               : 'opacity-0 group-hover:opacity-100 bg-muted/50 text-muted-foreground hover:bg-destructive/10 hover:text-destructive'
