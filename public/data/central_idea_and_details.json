@@ -1,0 +1,1318 @@
+{
+  "English Reading & Writing": {
+    "Craft and Structure": {
+      "Cross-Text Connections": [],
+      "Text Structure and Purpose": [],
+      "Words in Context": []
+    },
+    "Expression of Ideas": {
+      "Rhetorical Synthesis": [],
+      "Transitions": []
+    },
+    "Information and Ideas": {
+      "Central Ideas and Details": [
+        {
+          "id": 1,
+          "passage": "The following text is adapted from Daniel Defoe's 1704 nonfiction book The Storm. \"The sermon is a sound of words spoken to the ear, and prepared only for present meditation and extends no farther than the strength of memory can convey it; a book printed is a record, remaining in every man's possession, always ready to renew its acquaintance with his memory, and always ready to be produced as an authority or voucher to any reports he makes out of it, and conveys its contents for ages to come, to the eternity of mortal time, when the author is forgotten in his grave.\"",
+          "question": "Which choice best states the main idea of the text?",
+          "options": [
+            "A) People are less likely to forget a message when they hear it spoken aloud than they are when they read it in print.",
+            "B) Unless a spoken message is delivered by a confident orator, it may be ignored.",
+            "C) Most authors have little hope of being remembered well past their lifetimes.",
+            "D) Words committed to print have a greater permanence than messages that are merely spoken aloud."
+          ],
+          "answer": "D",
+          "explanation": "The text contrasts a fleeting spoken sermon with a permanent printed book, arguing that print endures and can be referenced long after."
+        },
+        {
+          "id": 2,
+          "passage": "The Far Side of the World, first published in 1984, is a novel in Patrick O'Brian's Aubrey/Maturin series, which includes twenty books plus an unfinished fragment of a twenty-first. Like the rest of the books in the series, The Far Side of the World has a rather abrupt ending, but the following book, The Reverse of the Medal, picks up neatly where The Far Side of the World leaves off. Thus, the sudden ending is only an issue if one considers the books as independent texts—the Aubrey/Maturin series is best thought of as a single incredibly long work, similar to other multivolume stories, such as John Galsworthy's The Forsyte Saga.",
+          "question": "Which choice best states the main idea of the text?",
+          "options": [
+            "A) It is unfair that the Aubrey/Maturin series does not have the critical reputation of The Forsyte Saga, which has a similar structure.",
+            "B) The Far Side of the World and The Reverse of the Medal are two of the most complex of Patrick O'Brian's novels of the Aubrey/Maturin series with unconventional structures.",
+            "C) The structure of each of the novels of the Aubrey/Maturin series suggests that the series should be considered a single continuous story.",
+            "D) Many readers find the Aubrey/Maturin novels to be remarkably entertaining despite flaws in novels' structures."
+          ],
+          "answer": "C",
+          "explanation": "The text argues that the abrupt endings aren't flaws if the series is viewed as one continuous narrative."
+        },
+        {
+          "id": 3,
+          "passage": "Master and Commander, first published in 1969, is a novel in Patrick O'Brian's Aubrey/Maturin series, which includes twenty completed books. Some critics have found fault with the abrupt endings of Master and Commander and other books in the series, saying that they do not finish conclusively but arbitrarily stop. Other critics, however, argue that the books should not be thought of as discrete texts with traditional beginnings and endings but as a single incredibly long work, similar to other multivolume stories, such as John Galsworthy's The story of Saga.",
+          "question": "Which choice best states the main idea of the text?",
+          "options": [
+            "A) The unusual structure that O'Brian uses for Master and Commander makes it one of his most intricate books.",
+            "B) Critics have differing views regarding the efficacy of the structures of the novels in the Aubrey/Maturin series.",
+            "C) Some critics think the Aubrey/Maturin series should have the literary form of The story of Saga, while others disagree.",
+            "D) Many critics judge the Aubrey/Maturin novels to be remarkably entertaining despite flaws in the novels' structures."
+          ],
+          "answer": "B",
+          "explanation": "The text presents two opposing critical views on the endings, showing a disagreement about their effectiveness."
+        },
+        {
+          "id": 4,
+          "passage": "Horses and barn owls can see in three dimensions (3D) which helps them perceive distance and depth. Octopuses and squid are thought to lack 3D vision. Many researchers once thought the same about cuttlefish, but Trevor Wardell and his team wanted to test whether this assumption was true. The team studied how cuttlefish wearing 3D glasses reacted to 3D images of shrimp (a favorite prey) projected on a tank wall. Cuttlefish changed their striking position to match the 3D images, suggesting that their vision is more like that of horses and barn owls than that of octopuses or squid.",
+          "question": "Which choice best states the main idea of the text?",
+          "options": [
+            "A) Researchers have long known that horses and barn owls can see in 3D.",
+            "B) Cuttlefish are surprisingly similar in structure to octopuses and squid.",
+            "C) Contrary to what many researchers had assumed, cuttlefish may be able to see in 3D.",
+            "D) The ability to see in 3D allows many animals to interact with one another."
+          ],
+          "answer": "C",
+          "explanation": "The text focuses on the discovery that cuttlefish likely have 3D vision, challenging prior assumptions."
+        },
+        {
+          "id": 5,
+          "passage": "Meredith E. Protas and colleagues have explored how convergent evolution—a phenomenon that occurs when the same trait evolves independently in two reproductively separate lineages—can result from a genetic mechanism shared by both lineages. Meanwhile, Bas J. Zwaan and colleagues have investigated how convergence occurs through different genetic mechanisms, but the relative prevalence of convergence through shared and different genetic processes is still poorly understood. This motivated biologist Delbert A. Green II and Cassandra G. Extavour to evaluate both types of convergence in a single study for their 2012 paper.",
+          "question": "Which choice best states the main idea of the text?",
+          "options": [
+            "A) Before Green and Extavour's study, convergence evolution was assumed to require a shared genetic mechanism between two lineages that shared the trait.",
+            "B) Green and Extavour's study was conducted using data from the studies by Protas and colleagues and Zwaan and colleagues.",
+            "C) Green and Extavour's study addresses convergent evolution more comprehensively than the studies by Protas and colleagues and Zwaan and colleagues do.",
+            "D) Both the study by Protas and colleagues and that by Green and Extavour compare convergence through shared genetic mechanism to convergence through different genetic mechanisms."
+          ],
+          "answer": "C",
+          "explanation": "The text explains that Green and Extavour's study aimed to be more comprehensive by evaluating both types of convergence in one project."
+        },
+        {
+          "id": 6,
+          "passage": "The following text is from Frances E. W. Harper's 1892 novel Jola Leroy. The text describes Robert Johnson, who has recently joined the US Army. \"He was daring, without being rash; prompt, but not thoughtless; firm without being harsh. Kind and devoted to the company he drilled, he soon won the respect of his superior officers and the love of his comrades.\"",
+          "question": "Which choice best states the main idea of the text?",
+          "options": [
+            "A) Robert is well suited to his role in the military.",
+            "B) Robert has put great effort into getting the attention of his comrades.",
+            "C) Robert mainly seeks to help his comrades even if his superiors don't appreciate it.",
+            "D) Robert has made some mistakes out some good qualities."
+          ],
+          "answer": "A",
+          "explanation": "The text describes Robert's balanced qualities and how they earn him respect, showing his suitability for military life."
+        },
+        {
+          "id": 7,
+          "passage": "Animals use many objects as tools to achieve goals more easily. Such goals include grooming, finding food, and protecting themselves. For a long time, people thought tool use was unique to primates. Octopuses and other animals, though, have busted the myth that tool use requires hands. Inventively, octopuses use two halves of a seashell to provide protection or a place to hide. Greater vasa parrots also get creative. They use date pits to grind seashells into calcium powder.",
+          "question": "Which choice best states the main idea of the text?",
+          "options": [
+            "A) Unlike primates, octopuses are exceptionally skillful at using different tools.",
+            "B) There are many myths about tool use that researchers are starting to challenge.",
+            "C) Animals find it difficult to use objects as tools.",
+            "D) Contrary to long-held beliefs, primates aren't the only animals to use tools."
+          ],
+          "answer": "D",
+          "explanation": "The central point is that tool use is not exclusive to primates, as shown by octopuses and parrots."
+        },
+        {
+          "id": 8,
+          "passage": "The following text is from Guy de Maupassant's 1884 short story 'A Recollection,' from the collection Guy de Maupassant Short Stories (translated by Albert M. C. McMaster et al. in 1903). The narrator is on a walk in the countryside outside of Paris, France. \"I walked slowly beneath the young leaves, drinking in the air, fragrant with the odor of young buds and sap. I sauntered along, forgetful of musty papers, of the offices, of my chief, my colleagues, my documents, and thinking of the good things that were sure to come to me, of all the veiled unknown contained in the future. A thousand recollections of childhood came over me, awakened by these country odors, and I walked along, permeated with the fragrant, living enchantment, the emotional enchantment of the woods warmed by the sun of June.\"",
+          "question": "Which choice best states the main idea of the text?",
+          "options": [
+            "A) Having decided to leave his current employment, the narrator is returning to his childhood home in the country.",
+            "B) The narrator's natural surroundings help him escape his work concerns by prompting hopes about the future and memories of youth.",
+            "C) The narrator is using the quiet of the countryside to help him think about how projects at work could be advantageous for his career.",
+            "D) The narrator forgets to address pressing work issues because the smells of the countryside distract him with thoughts of his youth."
+          ],
+          "answer": "B",
+          "explanation": "The narrator describes how the natural setting allows him to forget work and instead focus on future hopes and childhood memories."
+        },
+        {
+          "id": 9,
+          "passage": "Tanya Tagaq is a writer and musician and a member of the Inuit community of Cambridge Bay in northern Canada. Critics and fellow writers have praised her work for combining traditional Inuit stories with popular genres of literature, such as fantasy fiction. But Tagaq is not the only Indigenous writer to blend traditional stories with popular literature. In the 2020 novel The Only Good Indians, Stephen Graham Jones successfully blended the oral storytelling tradition of his tribe, the Blackfeet Nation, with horror fiction.",
+          "question": "Which choice best states the main idea of the text?",
+          "options": [
+            "A) Non-Indigenous authors should consider the expectations of Indigenous readers.",
+            "B) Several famous Indigenous writers increased their book sales when they began incorporating traditional stories.",
+            "C) Recent Indigenous fiction writers are mixing traditional stories with popular literary genres.",
+            "D) The success of Tanya Tagaq has influenced non-Indigenous authors who write in popular literary genres."
+          ],
+          "answer": "C",
+          "explanation": "The text presents Tagaq and Jones as examples of a trend where Indigenous writers blend traditional stories with popular genres."
+        },
+        {
+          "id": 10,
+          "passage": "Mexican textile artist Victoria Villasana weaves stories of triumph, using her unique method of applying colorful yarn to photographs of people. In some works, Villasana focuses on celebrating cultural icons who are people of color, as she does in her depiction of musician and composer Prince. However, in other works, Villasana honors ordinary people, as she does in her captivating portrayal of a young girl sitting on a sidewalk. Villasana sees both of these approaches as ways of depicting the power and interconnectedness of all people.",
+          "question": "Which choice best states the main idea of the text?",
+          "options": [
+            "A) Villasana's portrayal of a young girl sitting on a sidewalk focuses more on human connection than it does on human resilience.",
+            "B) Villasana began her artistic career by painting portraits of famous people and then transitioned to depicting everyday people instead.",
+            "C) Villasana's works focus on recognizing both famous and everyday examples of human strength and connection.",
+            "D) Villasana's depiction of Prince receives more attention from scholars than her depiction of a young girl sitting on a sidewalk does."
+          ],
+          "answer": "C",
+          "explanation": "The text explains that Villasana's art celebrates both famous icons and ordinary people to highlight human strength and connection."
+        },
+        {
+          "id": 11,
+          "passage": "Horizontal gene transfer involves the exchange of genetic material between organisms not in a parent-offspring relationship. It is common among prokaryotes (single-celled organisms such as the bacteria Brevibacillus borstelenis and Massilia timonae). The process can have the effect of increasing bacterial resistance to antibiotics; as such, an understanding of how to prevent horizontal gene transfer might result in the mitigation of dangerous pathogens (organisms that cause disease).",
+          "question": "Which choice best states the main idea of the text?",
+          "options": [
+            "A) A common perception of horizontal gene transfer is inaccurate.",
+            "B) Horizontal gene transfer is more common than was initially thought.",
+            "C) The results of new research into horizontal gene transfer cast doubt on earlier findings.",
+            "D) The study of horizontal gene transfer may yield findings with useful applications."
+          ],
+          "answer": "D",
+          "explanation": "The text concludes that understanding this process could help mitigate dangerous pathogens, indicating practical applications."
+        },
+        {
+          "id": 12,
+          "passage": "In 2013 Oona M. Lönnstedt and colleagues published a study concluding that ocean acidification has a strong effect on the behavior of Pomacentrus amboinensis, a species of fish. However, Lönnstedt and colleagues' study relied on a mean sample size of only about 28 fish. In a 2022 review of various scientists' conclusions about the impacts of ocean acidification on fish behavior, Jeff C. Clements and colleagues caution that relying on such a relatively small sample size can increase the potential for biased analysis. Such analysis, in turn, can contribute to reports of exaggerated effects.",
+          "question": "Which choice best states the main topic of the text?",
+          "options": [
+            "A) A possible shortcoming of a study involving Pomacentrus amboinensis.",
+            "B) A discovery regarding the evolution of Pomacentrus amboinensis.",
+            "C) A change in fish behavior first reported in 2022.",
+            "D) A newly identified cause of ocean acidification."
+          ],
+          "answer": "A",
+          "explanation": "The text focuses on a potential flaw (small sample size) in Lönnstedt et al.'s study, as noted by Clements et al."
+        },
+        {
+          "id": 13,
+          "passage": "In a large community science effort, biologist Abbigail Merrill and colleagues collaborated with hundreds of students and other amateur science enthusiasts for more than three years to study how butterfly color and time of day relate to butterfly behavior. They found that butterfly color might influence behavior more than butterfly size does, and that butterflies were observed to feed more often in the morning than at any other time of day.",
+          "question": "Which choice best states the main idea of the text?",
+          "options": [
+            "A) Time of day and butterfly color seem to have less influence on butterfly behavior than the location where the butterflies are studied does.",
+            "B) A recent study suggested that butterflies' coloring seems to be less relevant to their behavior than time of day.",
+            "C) Collaboration between professional scientists and members of the public is especially useful when studying the behavior of butterflies and other flying insects.",
+            "D) A large study suggested that butterfly color and time of day might influence the behavior of certain butterflies."
+          ],
+          "answer": "D",
+          "explanation": "The text summarizes the study's main findings about the possible influence of color and time of day on butterfly behavior."
+        },
+        {
+          "id": 14,
+          "passage": "President Richard Nixon is most famous for his participation in the 1970s Watergate political scandal, a convoluted tale of criminality and eroded ethics involving a constellation of associates such as political operative Jeb Stuart Magruder and Nixon's secretary Rose Mary Woods. But Nixon's legacy is complex: he has been praised for his role in affirming the sovereignty of tribal nations, and he once made an attempt at reforming United States health care policy that is arguably a precursor to the Affordable Care Act, which became law during the Barack Obama administration.",
+          "question": "Which choice best states the main idea of the text?",
+          "options": [
+            "A) Richard Nixon's reputation is primarily due to the actions of his associates.",
+            "B) Some of Richard Nixon's policies influenced the policies of later presidential administrations.",
+            "C) Jeb Stuart Magruder and Rose Mary Woods were significant figures in the presidency of Richard Nixon.",
+            "D) Richard Nixon is commonly linked with an infamous historical event, but this overshadows some of his notable achievements."
+          ],
+          "answer": "D",
+          "explanation": "The text contrasts Nixon's infamous association with Watergate with his lesser-known policy achievements."
+        },
+        {
+          "id": 15,
+          "passage": "Tomato is an example of a loanword—that is, a word that originated in one language and was later adopted by another. The word came to English indirectly from tomate, the Spanish word for the widely cultivated plant. Spanish had borrowed it from Nahuatl, an Indigenous language of Central Mexico, in which the word's original form is tomatl. 'Maize' also has an Indigenous origin and entered English through Spanish. But in this case, the original source was Tafno, a language of the Caribbean islands, in which the word for the corn plant is mahís.",
+          "question": "Which choice best states the main idea of the text?",
+          "options": [
+            "A) Many Spanish words with Indigenous origins first passed through English before entering Spanish.",
+            "B) When borrowing from Indigenous languages, Spanish adopted roughly as many words from Nahuatl as from Tafno.",
+            "C) When non-Indigenous languages borrowed from Indigenous languages, the words often underwent a significant change in meaning.",
+            "D) The English words 'tomato' and 'maize' are both examples of loanwords from Indigenous languages."
+          ],
+          "answer": "D",
+          "explanation": "The text uses 'tomato' and 'maize' as specific examples to illustrate the concept of loanwords from Indigenous languages."
+        },
+        {
+          "id": 16,
+          "passage": "Eighteenth-century economist Adam Smith is famed for his metaphor of the invisible hand, which he putatively used to illustrate a robust model of how individuals produce aggregate benefits by pursuing their own economic interests. Note 'putatively': as Gavin Kennedy has shown, Smith deploys this metaphor only once in his economic writings—to make a narrow point about the then-dominant economic theory of mercantilism—and it was largely ignored until some twentieth-century economists eager to secure an intellectual pedigree for their views elevated it to a fully-fledged paradigm.",
+          "question": "Which choice best states the main idea of the text?",
+          "options": [
+            "A) The reputation of Smith's metaphor of the invisible hand is not due to the importance of the metaphor in Smith's work but rather to the promotion of the metaphor by some later economists for their own ends.",
+            "B) Smith's metaphor of the invisible hand has been interpreted as a model of how individuals acting in their own interest produce aggregate benefits, but it was intended as a subtle critique of the economic theory of mercantilism.",
+            "C) Some twentieth-century economists gave Smith's metaphor of the invisible hand a significance it does not have in Smith's work, but it is nevertheless a useful model of how individuals produce aggregate benefits by pursuing their own economic interests.",
+            "D) Although Smith is famed for his metaphor of the invisible hand, the metaphor was largely ignored until economists in the twentieth century came to realize that the metaphor was a robust model that anticipated their own views."
+          ],
+          "answer": "A",
+          "explanation": "The text argues that the metaphor's fame stems from later economists promoting it, not from its centrality in Smith's own writings."
+        },
+        {
+          "id": 17,
+          "passage": "Roy McLendon's Moonlit St. Lucie, a riverscape featuring the silhouette of a single palm tree against the backdrop of shimmering water and a brilliant moonlit sky, is typical of paintings by the Florida Highwaymen, an informal collective of landscape artists mainly active in the 1950s and '60s. Remarkable for anticipating and amplifying cultural perceptions of Florida that became pervasive in the public consciousness, paintings by the Highwaymen are readily identifiable by the natural iconography—placid inland rivers, windswept palm trees—that McLendon and colleagues perpetually revisited.",
+          "question": "Which choice best states the main idea of the text?",
+          "options": [
+            "A) Although similar in its subject matter to many paintings by the Florida Highwaymen, Moonlit St. Lucie is now more highly regarded than other Florida Highwaymen paintings are.",
+            "B) Representative images found across many paintings by McLendon and other Florida Highwaymen came to be widely associated with Florida in part due to the Florida Highwaymen's influence.",
+            "C) Although paintings by the Florida Highwaymen were once celebrated for their depictions of Florida's natural environments, the popularity of these paintings waned after the 1960s.",
+            "D) The placid inland rivers and windswept palm trees that are typical of McLendon's works, which are otherwise indistinguishable from other Florida Highwaymen paintings, help to differentiate McLendon's paintings from those of his colleagues."
+          ],
+          "answer": "B",
+          "explanation": "The text explains that the Highwaymen's recurring imagery helped shape popular perceptions of Florida."
+        },
+        {
+          "id": 18,
+          "passage": "The following text is adapted from Jerome K. Jerome's 1889 novel Three Men in a Boat (To Say Nothing of the Dog). The narrator is traveling by boat with Harris and another friend. \"[Harris] told us anecdotes of how he had gone across the [English] Channel when it was so rough that the passengers had to be tied into their [beds], and he and the captain were the only two living souls on board who were not ill. Sometimes it was he and the second mate who were not ill; but it was generally he and one other man. If not he and another man, then it was he by himself.\"",
+          "question": "Which choice best states the main idea of the text?",
+          "options": [
+            "A) During a previous boat trip, Harris spent more time with the other passengers than with the captain.",
+            "B) Harris has a hard time remembering his first trip across the English Channel when his friends ask about it.",
+            "C) When Harris speaks of an earlier trip, he often changes the details but always brags about his own wellness.",
+            "D) Harris is worried that he and his friends will encounter rough waters during their boat trip."
+          ],
+          "answer": "C",
+          "explanation": "Harris's anecdotes consistently portray him as unaffected by seasickness, though the details vary, showing he brags about his own resilience."
+        },
+        {
+          "id": 19,
+          "passage": "Spanning the 1920s to the 1980s, Mexican architect Luis Barragan's prolific career evolved through distinct phases. After traveling to the United States and Europe in the early 1930s and immersing himself in an international architectural discourse, Barragan began incorporating principles derived from functionalism and modernism in his work, as seen in the El Arenal Parish Church, whose unadorned geometric forms contrast with the historically inspired architecture found in the houses for Emiliano Robles Leon, one of Barragan's early projects in Guadalajara.",
+          "question": "Which choice best states the main idea of the text?",
+          "options": [
+            "A) Barragan's designs of the El Arenal Parish Church and the houses for Emiliano Robles Leon are considered paragons of a functionalist and modernist aesthetic.",
+            "B) Barragan's design of the houses for Emiliano Robles Leon is considered more experimental than his design for the El Arenal Parish Church.",
+            "C) Barragan's early work shows an initial dedication to a modernist aesthetic that he later abandoned.",
+            "D) A notable shift in Barragan's design aesthetic reflects the influence of his time abroad."
+          ],
+          "answer": "D",
+          "explanation": "The text describes a shift in Barragán's style after his travels, from historically inspired designs to modernist principles."
+        },
+        {
+          "id": 20,
+          "passage": "Like many other bird species that live only on the Hawaiian archipelago, the Kaua'i 'amakihi has adapted to life in a well-defined habitat, resulting in highly specialized physical and behavioral characteristics that aid the species in survival. However, because the Kaua'i 'amakihi is highly specialized, it is especially vulnerable to environmental changes that can disrupt the delicately balanced ecosystem in which it lives.",
+          "question": "Which choice best states the main idea of the text?",
+          "options": [
+            "A) The Kaua'i 'amakihi is a species of bird that is related to many other Hawaiian birds but does not share a habitat with any of them.",
+            "B) The Kaua'i 'amakihi is an example of a highly specialized bird species found only on the Hawaiian archipelago and is related to several other highly specialized bird species found there.",
+            "C) The Kaua'i 'amakihi is an example of a species unique to the Hawaiian archipelago that is highly specialized and therefore particularly susceptible to habitat disturbance.",
+            "D) Hawaiian birds display a unique range of physical and behavioral characteristics and as a result can only live in habitats unique to the Hawaiian archipelago."
+          ],
+          "answer": "C",
+          "explanation": "The text emphasizes that the bird's high specialization makes it vulnerable to environmental changes."
+        },
+        {
+          "id": 21,
+          "passage": "The following text is from Jose Rizal's 1891 novel The Reign of Greed (translated by Charles Derbyshire in 1912). \"In his solitary retreat on the shore of the sea, whose mobile surface was visible through the open windows, extending outward until it mingled with the horizon, Padre Florentino was relieving the monotony by playing on his harmonium sad and melancholy tunes, to which the sonorous roar of the surf and the sighing of the treetops of the neighboring wood served as accompaniments. Notes long, full, mournful as a prayer, yet still vigorous, escaped from the old instrument. Padre Florentino, who was an accomplished musician, was improvising, and, as he was alone, gave free rein to the sadness in his heart.\"",
+          "question": "Which choice best states the main idea of the text?",
+          "options": [
+            "A) The residence of Padre Florentino is especially isolated.",
+            "B) Padre Florentino prefers to play music rather than listen to other musicians play.",
+            "C) Padre Florentino has dedicated himself to becoming a skilled musician.",
+            "D) The sadness of Padre Florentino's music reflects his own feelings."
+          ],
+          "answer": "D",
+          "explanation": "The text describes how the sad music Padre Florentino plays expresses the sadness he feels inside."
+        },
+        {
+          "id": 22,
+          "passage": "The following text is from Ralph Waldo Emerson's 1841 essay 'The Method of Nature.' \"The scholars are the priests of that thought which establishes the foundations of the earth. No matter what is their special work or profession, they stand for the spiritual interest of the world, and it is a common calamity if they neglect their post in a country where the material interest is so predominant as it is in America.\"",
+          "question": "Which choice best states the main idea of the text?",
+          "options": [
+            "A) Military experience encourages Americans to contemplate aspects of human life that they would not choose to otherwise.",
+            "B) It is unfortunate that so many intellectuals are concerned with material things rather than ideas.",
+            "C) Many descriptions of the role of scholars in society unfairly diminish their importance.",
+            "D) In a country whose citizens are largely preoccupied with tangible gains, it is crucial that some people work to foster and preserve ideas."
+          ],
+          "answer": "D",
+          "explanation": "The text stresses the importance of scholars in nurturing spiritual/intellectual interests, especially in a materialistic society like America."
+        },
+        {
+          "id": 23,
+          "passage": "At over a thousand pages across two volumes, The Fifty-Year Mission, compiled by Edward Gross and Mark A. Altman, is presented as the 'complete, uncensored, unauthorized oral history' as told by the people behind the media franchise Star Trek. The work aspires to be comprehensive by, for example, including accounts from cast and crew members of every Star Trek television series and film to date. But while The Fifty-Year Mission is clearly a unique and valuable resource, it has a shortcoming common among oral histories: it lacks a clear authorial point of view that could otherwise unite the various accounts into a cohesive whole.",
+          "question": "Which choice best states the main idea of the text?",
+          "options": [
+            "A) The Fifty-Year Mission includes more accounts from people involved with Star Trek television shows than it does from people involved with Star Trek films.",
+            "B) The compilers of The Fifty-Year Mission had lofty goals for their oral history of the Star Trek franchise, but the published work lacks information about many key events in the franchise's history.",
+            "C) The large amount of material compiled into The Fifty-Year Mission is surprising given that many of the people involved in the Star Trek franchise did not participate in the oral history project.",
+            "D) The Fifty-Year Mission represents a worthwhile attempt to thoroughly recount the history of the Star Trek franchise, but its approach has an important limitation."
+          ],
+          "answer": "D",
+          "explanation": "The text presents the book as a valuable but flawed resource due to its lack of a unifying narrative voice."
+        },
+        {
+          "id": 24,
+          "passage": "Why do black-footed cats purr but leopards roar? Researchers hypothesize that this difference between the two feline species may be partly due to a U-shaped bone in their throats called the hyoid. Black-footed cats, which are much smaller than leopards, have a rigid hyoid that rumbles when the cat's larynx vibrates, resulting in a purr. By contrast, leopards have a somewhat flexible hyoid, and the bone is attached to the skull with a stretchy ligament that black-footed cats lack. These traits allow leopards and most other species of big cats to produce powerful roars. The same traits may also prevent most big cats from purring.",
+          "question": "Which choice best states the main idea of the text?",
+          "options": [
+            "A) Both black-footed cats and leopards have U-shaped hyoid bones, but black-footed cats' hyoids are rigid whereas leopards' hyoids are flexible.",
+            "B) Leopards and most other species of big cats can roar because they have flexible hyoid bones that are attached by stretchy ligaments to their skulls.",
+            "C) Researchers are uncertain why relatively small cats, such black-footed cats, purr but relatively large cats, such as leopards, roar.",
+            "D) Differences related to the hyoid bone in black-footed cats and leopards may help explain why one species purrs and the other roars."
+          ],
+          "answer": "D",
+          "explanation": "The text focuses on how structural differences in the hyoid bone may explain the different vocalizations of the two cat species."
+        },
+        {
+          "id": 25,
+          "passage": "In their meta-analysis of research on advergames (video games developed to promote products or services), Zeph M.C. van Berlo et al, confirm that such games, though they can elicit player interest, may not facilitate subsequent recall of product and brand information. This phenomenon can be explained by the finite nature of cognitive capacity as it is articulated in Annie Lang's limited capacity model of motivated mediated message processing. In this case, players' cognitive resources are directed foremost toward the advergame's mechanics, leaving little or no capacity for encoding and storing the information the advertiser intends to be salient.",
+          "question": "Which choice best states the main idea of the text?",
+          "options": [
+            "A) The limited capacity model of motivated mediated message processing developed by Lang provides a means of explaining the finding by van Berlo et.al. that players may not readily recollect the brand and product information embedded in advergames.",
+            "B) The meta-analysis by van Berlo et al. reveals that higher engagement in advergame mechanics is linked to lower effectiveness in persuading players to purchase particular brands and products.",
+            "C) Although the limited capacity model of motivated mediated message processing developed by Lang suggests otherwise, advergames can succeed as marketing tools, provided that they achieve a balance between game mechanics and the promotion of a brand or product.",
+            "D) Research by van Berlo et al. corroborates Lang's conclusion that because people predominantly focus on game mechanics when playing video games, it is difficult for advergames to communicate brand and product information in ways that are highly memorable."
+          ],
+          "answer": "A",
+          "explanation": "The text uses Lang's model to explain van Berlo et al.'s finding about poor recall of brand info in advergames."
+        },
+        {
+          "id": 26,
+          "passage": "Like many other bird species that live only on the Hawaiian archipelago, the 'akeke'e has adapted to life in a well-defined habitat, resulting in highly specialized physical and behavioral characteristics that aid the species in survival. However, because the 'akeke'e is highly specialized, it is especially vulnerable to environmental changes that can disrupt the delicately balanced ecosystem in which it lives.",
+          "question": "Which choice best states the main idea of the text?",
+          "options": [
+            "A) Hawaiian birds display a unique range of physical and behavioral characteristics and as a result can only live in habitats unique to the Hawaiian archipelago.",
+            "B) The 'akeke'e is an example of a species unique to the Hawaiian archipelago that is highly specialized and therefore particularly susceptible to habitat disturbances.",
+            "C) The 'akeke'e is a species of bird that is related to many other Hawaiian birds but does not share a habitat with any of them.",
+            "D) The 'akeke'e is an example of a highly specialized bird species found only on the Hawaiian archipelago and is related to several other highly specialized bird species found there."
+          ],
+          "answer": "B",
+          "explanation": "Similar to question 20, this text explains that the 'akeke'e's specialization makes it vulnerable to environmental disruption."
+        },
+        {
+          "id": 27,
+          "passage": "Community science involves professional scientists collaborating with members of the public to study a topic. This approach to research can promote community engagement by offering insight into the daily life of a scientist. It's also very effective because it greatly increases the amount of data that can be collected, such as when biologist Grace Herzel and colleagues studied butterfly color and its relation to behavior and used findings reported by hundreds of students and community members in northwestern Arkansas.",
+          "question": "Which choice best states the main idea of the text?",
+          "options": [
+            "A) Abbigail Merrill and colleagues used a community science approach in their butterfly research and were surprised at the effect this had on public understanding of the nature of scientists' work.",
+            "B) A community science approach can increase public understanding of the nature of scientists' work and generate large amounts of data, benefiting both communities and researchers.",
+            "C) A community science approach can benefit communities by increasing public understanding of the nature of scientists' work, but it's less likely to help researchers obtain accurate data.",
+            "D) A community science approach allows researchers to collect significantly more data even though it's unlikely to have much of an effect on public understanding of the nature of scientists' work."
+          ],
+          "answer": "B",
+          "explanation": "The text outlines two main benefits of community science: public engagement and increased data collection."
+        },
+        {
+          "id": 28,
+          "passage": "Sometimes an animal will encounter another member of its own species that it doesn't have any connection with. (For example, African lions that aren't in the same pride might meet.) When that happens, the animals have to make decisions: Will they compete for a mate? Will they help in a fight with a predator? Will there be another outcome? In other words, the animals have to think carefully about possible risks and benefits.",
+          "question": "Which choice best states the main idea of the text?",
+          "options": [
+            "A) Animal species that do not have any predators",
+            "B) A kind of meeting between animals of the same species",
+            "C) Animal species that are close to becoming extinct",
+            "D) Different environments that some animal species live in"
+          ],
+          "answer": "B",
+          "explanation": "The text focuses on encounters between unrelated animals of the same species and the decisions involved."
+        },
+        {
+          "id": 29,
+          "passage": "In a study by Mika R. Moran, Daniel A. Rodriguez, and colleagues, residents of Quito, Ecuador, and Buenos Aires, Argentina, were surveyed about parks in their cities. Of the 618 respondents from Quito, 82.9% indicated that they use the city's parks, and of the 683 respondents from Buenos Aires, 69.9% indicated using city parks. Given that the percentage of Quito respondents who reported having access to other desired amenities near parks was much lower than that reported by Buenos Aires respondents, the difference in park use can't be explained by Quito residents having more access to desired nonpark amenities near parks.",
+          "question": "Which choice best states the main idea of the text?",
+          "options": [
+            "A) The study's finding that a greater proportion of residents use parks in Quito than in Buenos Aires is partly due to the greater prevalence of parks in Quito.",
+            "B) The study's findings suggest that an increase in the number of amenities near city parks would likely increase park use in Quito but not in Buenos Aires.",
+            "C) Although the study found that a greater proportion of residents use parks in Quito than in Buenos Aires, that difference isn't due to greater access to amenities near parks in Quito.",
+            "D) Even though the study found that parks in Buenos Aires are more likely to be close to other amenities than parks in Quito are, Quito has more amenities overall than Buenos Aires does."
+          ],
+          "answer": "C",
+          "explanation": "The text states that higher park use in Quito cannot be explained by better access to nearby amenities, since Quito actually has less such access."
+        },
+        {
+          "id": 30,
+          "passage": "The following text is from a translation of María Dueñas's 2009 novel The Time in Between. The narrator has just rented an apartment and is entering it for the first time. Over the years there have been many times when my destiny has delivered me unexpected moments, unforeseen twists and turns that I've had to handle on the fly as they appeared. Occasionally I was ready for them; very often I wasn't. Never, however, was I so aware of entering a new stage as I was that afternoon in October when I finally dared to cross the threshold and my steps sounded hollowly in the unfurnished apartment. Behind me was a complicated past, and in front of me, like an omen, I could see a space opening out, a great empty space that time would take care of filling up.",
+          "question": "Which choice best states the main idea of the text?",
+          "options": [
+            "A) The narrator feels optimistic about the future success of a new business.",
+            "B) The narrator recognizes that a particular moment marks a major shift in her life.",
+            "C) The narrator has always had a plan for how to handle big moments in her life.",
+            "D) The narrator wants to express her gratitude for the people who have helped her."
+          ],
+          "answer": "B",
+          "explanation": "The narrator describes a specific moment of crossing a threshold as a clear awareness of entering a new life stage."
+        },
+        {
+          "id": 31,
+          "passage": "When Kenyan writer Ngugi wa Thiong'o, who had previously published four novels in English, began writing in his native language, Gikuyu, in the 1970s, several fellow writers and critics cautioned that doing so might make his works inaccessible outside his own community. Some noted that Kiswahili–widely spoken in Kenya and elsewhere in Africa–would be a more practical choice. Rejecting their arguments, Ngugi went on to author dozens of acclaimed works in Gikuyu that have been translated into a total of more than thirty languages.",
+          "question": "Which choice best states the main idea of the text?",
+          "options": [
+            "A) Although Ngugi insisted on publishing his first works in Giküyü, they have since been translated into many other languages.",
+            "B) Although Ngugi's decision to write in Giküyü was met with some skepticism, it didn't prevent him from achieving literary success.",
+            "C) The reaction to Ngugi's rejection of English illustrates that some literary experts believe that fame is most easily gained by writing in a widely understood language, such as Giküyü.",
+            "D) In the 1970s, Ngugi became convinced that literature ought to be written in authors' native languages, and he proceeded to publish many works in Gikuyu."
+          ],
+          "answer": "B",
+          "explanation": "The text notes that despite skepticism about writing in Gikuyu, Ngugi achieved success with works that were widely translated."
+        },
+        {
+          "id": 32,
+          "passage": "The following text is adapted from Guy de Maupassant's 1884 short story 'A Recollection.' from the collection Guy de Maupassant Short Stories (translated by Albert M.C. McMaster et al. in 1903). The narrator is taking a boat down the Seine river from Paris, France, to the surrounding countryside. \"I took up a position in the bows [front of the boat], standing up and looking at the quays, the trees, the houses and the bridges disappearing behind us. And suddenly I perceived the great viaduct of Point du Jour which blocked the river. It was the end of Paris, the beginning of the country, and behind the double row of arches the Seine, suddenly spreading out as though it had regained space and liberty, became all at once the peaceful river which flows through the plains, alongside the wooded hills, amid the meadows, along the edge of the forests.\"",
+          "question": "Which choice best states the main idea of the text?",
+          "options": [
+            "A) The narrator is anxious for the trip to the countryside to be over as quickly as possible, and is frustrated that it is taking so long.",
+            "B) The narrator perceives a parallel between the shift from the urban environment to the countryside and the changes in the features of the river itself.",
+            "C) The narrator is surprised to see that the boat is taking him out of the city but is exhilarated by the opportunity to explore an unknown place.",
+            "D) The narrator contrasts his feelings of apprehension with the apparent tranquility of the river as the boat enters the countryside."
+          ],
+          "answer": "B",
+          "explanation": "The narrator connects the transition from city to country with the physical transformation of the Seine."
+        },
+        {
+          "id": 33,
+          "passage": "The following text is adapted from Guy de Maupassant's 1884 short story 'A Recollection,' from the collection Guy de Maupassant Short Stories (translated by Albert M.C. McMaster et al. in 1903). The narrator is taking a boat down the Seine river from Paris, France, to the surrounding countryside. \"I took up a position in the bows [front of the boat], standing up and looking at the quays, the trees, the houses, and the bridges disappearing behind us. And suddenly I perceived the great viaduct of Point du Jour which blocked the river. It was the end of Paris, the beginning of the country, and behind the double row of arches the Seine, suddenly spreading out as though it had regained space and liberty, became all at once the peaceful river which flows through the plains, alongside the wooded hills, amid the meadows, along the edge of the forests.\"",
+          "question": "Which choice best states the main idea of the text?",
+          "options": [
+            "A) Though the Seine is calm during most of the journey, the arches of the Point du Jour created a small area of heavy current.",
+            "B) The Seine is similar to Paris in that it is beautiful and slow to change.",
+            "C) As the journey progressed from Paris to the countryside, the waters of the Seine gradually cleared.",
+            "D) The waters of the Seine are more confined and rough in Paris than they are in the countryside."
+          ],
+          "answer": "D",
+          "explanation": "The text implies the Seine is constrained in Paris but becomes wide and peaceful in the countryside."
+        },
+        {
+          "id": 34,
+          "passage": "Although notorious for its strict formal requirements, the sonnet is nevertheless represented by such wide-ranging examples as Maggie Anderson's 'Sonnet for Her Labor' and Tyehimba Jess's 'Millie and Christine McCoy'–poems that differ remarkably in subject, rhythm, and structure. It may seem counterintuitive that the sonnet–ostensibly rigid and timeworn–could accommodate such variety, but poet Carl Phillips contends that the form invites experimentation: when a genre's conventions are as recognizable as those of the sonnet, the opportunity to subvert them is especially irresistible.",
+          "question": "Which choice best states the main idea of the text?",
+          "options": [
+            "A) Although Anderson's and Jess's sonnets are both widely celebrated for their striking originality, most modern examples of the form are generally regarded as conventional.",
+            "B) As a form, the sonnet encourages a surprising amount of variety, even though certain characteristics associated with it suggest this would be unlikely.",
+            "C) That the sonnet remains as popular as it is today is unexpected, given that many of the features associated with the form have long since seemed antiquated to readers.",
+            "D) Although the sonnet is now recognized for the way it facilitates experimentation, there was a long period in its history in which very little innovation occurred."
+          ],
+          "answer": "B",
+          "explanation": "The text argues that despite its reputation for rigidity, the sonnet form actually fosters experimentation and diversity."
+        },
+        {
+          "id": 35,
+          "passage": "Habitat navigation is a skill that helps animals reach food or safety. To test how navigation works in fish, Shachar Givon and colleagues taught goldfish to drive a vehicle–a motorized fish tank with wheels–on land. The vehicle was programmed to move in the same direction that the fish swam in within the tank. In the experiment, the fish were tasked with driving their tank to a pink board. They received a treat when they succeeded, and they often did. Because the fish could move their tank to the board, Givon concludes that their navigational skills aren't specific to an aquatic environment.",
+          "question": "Which choice best states the main idea of the text?",
+          "options": [
+            "A) Research shows that although they live in the water, fish can navigate on land with a little mechanical help.",
+            "B) Fish can navigate only within their natural aquatic environment in order to find food and safety.",
+            "C) Researchers can train animals to complete many different tasks when they offer the animals treats.",
+            "D) An animal's navigational skills directly depend on that animal's particular environment."
+          ],
+          "answer": "A",
+          "explanation": "The experiment demonstrates that goldfish can use their navigational skills in a terrestrial setting with the aid of a special vehicle."
+        },
+        {
+          "id": 36,
+          "passage": "Women like Dorothy T. Blum made important early contributions to the history of US cryptology, a field concerned with secure data communication and storage. Blum provided cryptological services for the US Army in the 1940s and then joined the National Security Agency (NSA). She was a pioneer in transitioning the NSA to using computers for cryptoanalysis. In this way, Blum and others like her helped make it possible for more women–such as Maureen Baginski, who currently works in intelligence and supports the FBI–to enter the field of cryptology.",
+          "question": "Which choice best states the main idea of the text?",
+          "options": [
+            "A) Cryptology is a field that focuses primarily on securely managing data.",
+            "B) Women such as Dorothy T. Blum and Maureen Baginski have contributed to the field of cryptology.",
+            "C) Dorothy T. Blum and Maureen Baginski worked together on an important project in the field of cryptology.",
+            "D) Cryptology should be taught more often in schools to encourage more women to enter the field."
+          ],
+          "answer": "B",
+          "explanation": "The text highlights the contributions of two women, Blum and Baginski, to the field of cryptology."
+        },
+        {
+          "id": 37,
+          "passage": "Mauricio Drelichman and Hans-Joachim Voth's research into the debt defaults of Philip II (who ruled an empire including Spain and much of Belgium from 1556 to 1598) relates to other work on European early modern state finance, including Hoffman and Norberg's research on the relationship between state finance and political development. But Drelichman and Voth's unique contribution to the field is their reconstruction of the earliest extant set of annual fiscal records for any sovereign state, demonstrating in turn that Philip's defaults were caused by short-term cash shortages, not long-term unsustainable debts.",
+          "question": "Which choice best states the main idea of the text?",
+          "options": [
+            "A) Analysis of the earliest available records of a sovereign state's finances can be found not in the work of Hoffman and Norberg but in that of Drelichman and Voth.",
+            "B) Drelichman and Voth advanced the field of research on European early modern state finance by assembling a novel collection of evidence that gave them insight into Philip II's debt defaults.",
+            "C) The research by Drelichman and Voth suggests that the logistics of ruling both Spain and much of Belgium led to short-term problems with cash that forced Philip II to default on his debts.",
+            "D) Drelichman and Voth's research on Philip II's debt defaults builds on earlier work by Hoffman and Norberg, adding nuance to the earlier work's findings."
+          ],
+          "answer": "B",
+          "explanation": "The text emphasizes that Drelichman and Voth's reconstruction of early fiscal records provided new insights into the causes of Philip II's defaults, advancing the field."
+        },
+        {
+          "id": 38,
+          "passage": "In a study by Mika R. Moran, Daniel A. Rodriguez, and colleagues, residents of Panama City, Panama, and Fortaleza, Brazil, were surveyed about parks in their cities. Of the 318 respondents from Panama City, 53.5% indicated that they use the city's parks, and of 938 respondents from Fortaleza, 35.7% indicated using city parks. Given that the percentage of Panama City respondents who reported living within a 10-minute walk of a park was much lower than that reported by Fortaleza respondents, greater proximity alone can't explain the difference in park use.",
+          "question": "The text makes which point about the difference between the proportions of Panama City residents and Fortaleza residents using parks?",
+          "options": [
+            "A) It was much larger than the researchers conducting the study expected.",
+            "B) It could be due to inaccuracies in the survey results.",
+            "C) It was calculated using sources that predate the survey.",
+            "D) It is caused by something other than the parks' proximity to the residents."
+          ],
+          "answer": "D",
+          "explanation": "The text states that the difference in park use cannot be explained by proximity alone, implying other factors are at play."
+        },
+        {
+          "id": 39,
+          "passage": "Like all species of baleen whales, the common minke whale feeds on tiny creatures known as Krill by filtering water through bristlelike keratin structures called baleen plates. In this way, baleen whales can eat up to 30% of their total mass per day. And while no one would call the common minke whale small-it can have a mass as high as 4000 kg-it is one of the smaller baleen whales and it is much smaller than the fin whale, which can weigh a whopping 80000 kg and consume as much as 24000 kg of krill per day.",
+          "question": "Based on the text, what can most reasonably be concluded about krill consumption among common minke and fin whales?",
+          "options": [
+            "A) Both of them can eat as much as 24000 kg of krill per day.",
+            "B) The quantities of krill consumed by fin whales has made it difficult for minke whales to find sufficient food.",
+            "C) The fin whale is able to eat more krill per day than the minke whale.",
+            "D) Most baleen whales include krill in their diets, but the minke whale is less likely than the fin whale to do so."
+          ],
+          "answer": "C",
+          "explanation": "The text compares the sizes and consumption rates, indicating that the larger fin whale can eat more krill."
+        },
+        {
+          "id": 40,
+          "passage": "The following text is adapted from Armando's short story 'The Love of Clotide,' originally published in Spanish in 1884. It was said that in Don's youth he once wrote a play which won him nothing but hisses and free entry for life behind the scenes of theaters. Whether resigned or not to the verdict of the public, he ceased to write plays and assumed instead the nobler role of a patron to unrecognized authors and artist and to ruined managers. Any youth from the province who arrived in Madrid with a drama in his pocket could take no surer road to seeing it produced than that which led to the home of Don. One and all, he received them with open arms, the good and the bad alike.",
+          "question": "According to the text, what change coincided with Don becoming a patron of the theater?",
+          "options": [
+            "A) He achieved public recognition for an essay he had written earlier.",
+            "B) He stopped writing plays.",
+            "C) He accepted a new job as a critic.",
+            "D) He moved to a town outside Madrid."
+          ],
+          "answer": "B",
+          "explanation": "The text states that after his play failed, Don ceased writing plays and became a patron."
+        },
+        {
+          "id": 41,
+          "passage": "Researchers Cesar, Elisa, and Andres created a computer model to predict the mix of movie theaters, gyms, and other businesses found in a given neighborhood. How we define a neighborhood and its boundaries is subjective, so the team used a clustering algorithm to locate dense groupings of amenities that represent human-identified neighborhoods like Boston's Harvard square. The predictive model, which incorporates this algorithm, is sure to be invaluable in determining the optimal mix of a city's amenities.",
+          "question": "According to the text, why did the team employ a clustering algorithm?",
+          "options": [
+            "A) It could be used to evaluate the reasons for a business closing.",
+            "B) It provided insights into how consumers are made aware of new movie theaters and gyms.",
+            "C) It could predict which types of businesses would be successful in a given neighborhood.",
+            "D) It gave them an objective way to identify neighborhood."
+          ],
+          "answer": "D",
+          "explanation": "The text explains that because neighborhood boundaries are subjective, the algorithm provided an objective method to identify them."
+        },
+        {
+          "id": 42,
+          "passage": "In O'odham, an Indigenous language from the Southwest region of what is now the United States, gogs means 'a dog' whereas gogogs is used to refer to several dogs. This phenomenon, in which an element of a root word is repeated, sometimes with modification, within another word that is related to the root word is called reduplication. In this case, the element 'go' in gogs gets repeated in gogogs. There are many examples of this type of reduplication in O'odham.",
+          "question": "The text makes which point about the O'odham word gogogs?",
+          "options": [
+            "A) It contains a repetition of the element 'go' in gogs.",
+            "B) It doesn't have a clear equivalent in English.",
+            "C) It is the only word in O'odham that uses reduplication.",
+            "D) It is identical in meaning to several other words in O'odham."
+          ],
+          "answer": "A",
+          "explanation": "The text directly states that gogogs contains a repetition of the element 'go' from gogs."
+        },
+        {
+          "id": 43,
+          "passage": "The following text is adapted from Adib Khorrams 2018 novel Darius the Great Is Not Okay. Darius, a teenager from the United States, is visiting his family members in Iran. I dozed and floated on the clouds of Farsi that blew my way from the front seat of Day (Uncle) Jamsheed's SUV. It reminded me of when I was little, and Mom chanted to me in Farsi every night before bedtime. It's hard to describe Farsi chanting the way Mom drew her voice out like the notes of a cello as she recited poems by Rumi or Hafez. I didn't know what they meant, but that didn't matter. It was quiet and soothing.",
+          "question": "Based on the text, what does the narrator mainly remember about the times when his mother chanted to him?",
+          "options": [
+            "A) That he liked the characters in the stories his mother made up while chanting.",
+            "B) That his mother had music playing in the background while she chanted.",
+            "C) That his mother didn't usually chant at night.",
+            "D) That he found the sound of his mother's chanting to be calming."
+          ],
+          "answer": "D",
+          "explanation": "The narrator describes the chanting as 'quiet and soothing,' indicating it was calming."
+        },
+        {
+          "id": 44,
+          "passage": "Researcher César A. Hidalgo, Elisa Castañer, and Andres Sevtsuk created a computer model to predict the mix of businesses and places of interest found in a given neighborhood. The team used data from the Google Places, API service to help identify furniture stores, florists, and other businesses and map their locations. This approach has some limits-data from Places API tend to be restricted to places that the customer facing-but the data set nonetheless provides an extremely reliable source to study colocation patterns of neighborhood amenities.",
+          "question": "According to the text, what is one potential drawback of Hidalgo and colleagues' method?",
+          "options": [
+            "A) It depends upon data that are likely to be outdated.",
+            "B) It is based on recent advancements from other fields that have yet to be applied outside of those contexts.",
+            "C) It is likely to contribute to inaccurate identifications of the boundaries of specific neighborhoods.",
+            "D) It may lead to conclusions that are not reflective of all the amenities in a given neighborhood."
+          ],
+          "answer": "D",
+          "explanation": "The text mentions that the data are restricted to customer-facing places, so it may not include all amenities."
+        },
+        {
+          "id": 45,
+          "passage": "The groundbreaking Negro Ensemble Company (NEC), founded in 1967, produced Paul Carter Harrison's award-winning play The Great MacDaddy in 1974. The company was cofounded by Robert Hooks, an actor, producer, and activist, and actor and playwright Douglas Turner Ward, who had met while performing in a 1960 touring production of Lorraine Hansberry's play A Raisin in the Sun. They shared a vision of a theater company that would nurture and showcase the work of Black theater professionals. Since its beginning, NEC has provided a forum for the voices of Harrison and other Black playwrights through workshops and performances.",
+          "question": "According to the text, how did Hooks and Ward initially meet?",
+          "options": [
+            "A) Hooks and Ward participated in the same workshop at NEC.",
+            "B) Harrison introduced Hooks to Ward at a performance of The Great MacDaddy.",
+            "C) Hooks and Ward attended the same performance of The Great MacDaddy.",
+            "D) Hooks and Ward were both actors in a production of A Raisin in the Sun."
+          ],
+          "answer": "D",
+          "explanation": "The text states they met while performing in a touring production of A Raisin in the Sun."
+        },
+        {
+          "id": 46,
+          "passage": "Like all species of baleen whales, the Antarctic minke whale feeds on tiny creatures known as krill by filtering water through bristlelike keratin structures called baleen plates. In this way, baleen whales can eat up to 30 percent of their total mass per day. And while no one would call the Antarctic minke whale small-it can have a mass as high as 10,000 kg-it is one of the smaller whales and is much smaller than the bowhead whale, which can weigh a whopping 66,000 kg and consume as much as 19,800 kg of krill per day.",
+          "question": "Based on the text, what can most reasonably be concluded about krill consumption among Antarctic minke and bowhead whale?",
+          "options": [
+            "A) The bowhead whale is able to eat more krill per day than the Antarctic minke whale is.",
+            "B) Both the Antarctic minke whale and the bowhead whale can eat as much as 19,800 kg of krill per day.",
+            "C) The quantities of krill consumed by bowhead whale has made it difficult for Antarctic minke whales to find sufficient food.",
+            "D) Most baleen whales included krill in their diary, but the Antarctic minke whale is less likely than the bowhead whale to do so."
+          ],
+          "answer": "A",
+          "explanation": "The text compares the sizes and consumption rates, showing the larger bowhead whale can eat more."
+        },
+        {
+          "id": 47,
+          "passage": "Researchers César A. Hidalgo, Elisa Castañer, and Andres Sevtsuk created a computer model to predict the mix of gyms, beauty salons, and other businesses found in a given neighborhood. How we define a neighborhood and its boundaries is subjective, so the team used a clustering algorithm to locate dense groupings of amenities that represent human-identified neighborhoods like Boston's Central Square. The predictive model, which incorporates this algorithm, is sure to be invaluable in determining the optimal mix of a city's amenities.",
+          "question": "According to the text, why did the team employ a clustering algorithm?",
+          "options": [
+            "A) The algorithm provided insight into how customers are made aware of new gyms and beauty salons.",
+            "B) The algorithm gave them an objective way to identify neighborhoods.",
+            "C) The algorithm could be used to evaluate the reasons for a business's closing.",
+            "D) The algorithm could predict which types of businesses would be successful in a given neighborhood."
+          ],
+          "answer": "B",
+          "explanation": "The text explains that the algorithm provided an objective method to identify neighborhoods, which are subjectively defined."
+        },
+        {
+          "id": 48,
+          "passage": "Know for the albums Quiet Nights and Milestones, jazz trumpeter Miles Davis collaborated several times with pianist Gil Evans. Their 1958 adaptation of George Gershwin's opera Porgy and Bess bears little resemblance to the 1935 original. Davis and Evans felt no desire to please listeners expecting an exact duplication of the opera. They omitted parts, such as the aria 'I Got Plenty of Nuthin',' and sometimes made only brief gestures toward Gershwin's melodies. But Davis and Evans's willingness to recompose Gershwin's work led to one of the most enduring albums in Davis's catalog.",
+          "question": "According to the text, what is true about the aria 'I Got Plenty of Nuthin''?",
+          "options": [
+            "A) It appears in the Gershwin opera Porgy and Bess and in an adaptation by Davis and Evans.",
+            "B) A brief quotation from it appears in Davis and Evans's adaptation of Porgy and Bess.",
+            "C) Listeners familiar with Gershwin's body of work generally disliked it.",
+            "D) It was adapted by Davis in a recording that appears on his album Milestones."
+          ],
+          "answer": "A",
+          "explanation": "The text states that the aria was omitted from the adaptation, meaning it appears in the original opera but not in Davis and Evans's version."
+        },
+        {
+          "id": 49,
+          "passage": "Baleen whales eat up to 30 percent of their total body mass in krill (tiny shrimplike creatures) per day. So, in one day, an Antarctic minke whale weighing 10,000 kg could eat 3,000 kg, while a southern right whale weighing 80,000 kg could ingest a whopping 24,000 kg. Over the last century, baleen whale populations have declined, and contrary to some scientists' expectations, so have krill populations. Matthew S. Savoca and colleagues resolve this apparent discrepancy by pointing out that baleen whales cycle iron in the ocean, helping support phytoplankton populations, which, in turn, sustain krill populations.",
+          "question": "Based on the text, what can most reasonably be concluded about Antarctic minke and southern right whales?",
+          "options": [
+            "A) Populations of both Antarctic minke and southern right whales have declined significantly over the last century due to decreasing levels of iron in the ocean.",
+            "B) As krill consumption by Antarctic minke whales has decreased, the krill consumption of southern right whales has increased.",
+            "C) The southern right whale is able to eat more krill per day than the Antarctic minke whale is.",
+            "D) Both Antarctic minke and southern right whales can eat krill, but of the two only the Antarctic minke whale can also subsist on phytoplankton."
+          ],
+          "answer": "C",
+          "explanation": "The text provides the daily consumption rates, showing the larger southern right whale eats more krill."
+        },
+        {
+          "id": 50,
+          "passage": "Cocoa is an example of a loanword-that is, a word that originated in one language and was later adopted by another. The word came to English indirectly from cacao, the Spanish word for the plant that chocolate is made from. Spanish had borrowed it from Nahuatl, an Indigenous language of Central Mexico, in which the word's original form is cacahuatl. 'Puma' is also Indigenous in origin and entered English through Spanish. But in this case, the original source was Quechua, a language of South America, in which the word for the mountain lion is also puma.",
+          "question": "The author makes which point about the Spanish language?",
+          "options": [
+            "A) It has served as a medium through which Indigenous languages have influenced English.",
+            "B) Its contribution to English vocabulary roughly equals the collective contribution by Indigenous languages.",
+            "C) It adopted Nahuatl and Quechua words in approximately equal numbers.",
+            "D) It has borrowed words from Indigenous languages and contributed words to them."
+          ],
+          "answer": "A",
+          "explanation": "The text shows Spanish borrowed words from Indigenous languages and then passed them to English."
+        },
+        {
+          "id": 51,
+          "passage": "In Bolivia, use of solid fuel (e.g., coal, wood) as a share of total household fuel use fell by more than half between 2000 and 2015; such shifts are typically explained by appeal to the energy ladder, a model holding that fuel choice is mediated mainly by household income (specifically, high-technology fuels displace solid fuels as incomes rise). Richard Hosier and Jeffrey Dowd's study of fuel use in Zimbabwe shows how reductive this model is, however: although income of course constrained fuel choice, several factors, including the difficulty of acquiring fuel sources, influenced decisions.",
+          "question": "Based on the text, the author would most likely agree with which statement about household income?",
+          "options": [
+            "A) It can explain some but not all of the differences in fuel choice across households.",
+            "B) It is often said to influence household fuel choice but actually does not.",
+            "C) It affects household fuel choice but not for the reasons assumed by the energy ladder model.",
+            "D) It constrains the amount of fuel households use but not the type of fuel they use."
+          ],
+          "answer": "A",
+          "explanation": "The text acknowledges income constrains fuel choice but says other factors also influence decisions."
+        },
+        {
+          "id": 52,
+          "passage": "To understand how temperature change affects microorganism-mediated cycling of soil nutrients in alpine ecosystems, Eva Kaštovská et al. collected plant-soil cores in the Tatra Mountains at elevations around 2,100 meters and transplanted them to elevations of 1,700-1,800 meters, where the mean air temperature was warmer by 2°C. Microorganism-mediated nutrient cycling was accelerated in the transplanted cores; crucially, microorganism community composition was unchanged, allowing Kaštovská et al. to attribute the acceleration to temperature-induced increases in microorganism activity.",
+          "question": "It can most reasonably be inferred from the text that the finding about the microorganism community composition was important for which reason?",
+          "options": [
+            "A) It provided preliminary evidence that microorganism-mediated nutrient cycling was accelerated in the transplanted cores.",
+            "B) It suggested that temperature-induced changes in microorganism activity may be occurring at increasingly high elevations.",
+            "C) It ruled out a potential alternative explanation for the acceleration in microorganism-mediated nutrient cycling.",
+            "D) It clarified that microorganism activity levels in the plant-soil cores varied depending on which microorganisms comprised the community."
+          ],
+          "answer": "C",
+          "explanation": "By showing the community composition didn't change, they ruled out that as a cause for the accelerated cycling."
+        },
+        {
+          "id": 53,
+          "passage": "Michael G. Campana and colleagues relied on historical DNA (hDNA)—genomic data incidentally preserved in specimens housed in natural history collections—to investigate the evolutionary origins of a fungal pathogen affecting bats. Although this approach offers unique benefits, such as access to genomic data from extirpated populations, it remains a relatively underutilized resource because hDNA is often to some extent degraded, a situation not easily remediable under current methodological paradigms and with extant DNA extraction and analysis technologies.",
+          "question": "Information in the text best supports which statement about hDNA?",
+          "options": [
+            "A) It may yield insights that other types of genomic data cannot.",
+            "B) It has thus far proved valuable mainly to researchers studying pathogens.",
+            "C) It may be underused because of its controversial status among scientists.",
+            "D) It tends to be much more degraded than other types of DNA of comparable age."
+          ],
+          "answer": "A",
+          "explanation": "The text mentions hDNA offers unique benefits like access to data from extirpated populations."
+        },
+        {
+          "id": 54,
+          "passage": "The ancient writing system used in the Maya kingdoms of southern Mexico and Central America had a symbol for the number zero. The earliest known example of the symbol dates to more than 2,000 years ago. At that time, almost none of the writing systems elsewhere in the world possessed a zero symbol. And the use of zero in Mexico and Central America may be even more ancient. Some historians suggest that Maya mathematicians inherited it from the Olmec civilization, which flourished in the region 2,400-3,600 years ago.",
+          "question": "According to the text, what do some historians suggest about Maya civilization?",
+          "options": [
+            "A) Maya civilization acquired the use of zero from the Olmec civilization.",
+            "B) Maya civilization respected its historians more than it respected its mathematicians.",
+            "C) Maya civilization was highly secretive about its intellectual achievements.",
+            "D) Maya civilization tried to introduce its writing system to other civilizations."
+          ],
+          "answer": "A",
+          "explanation": "The text states that some historians suggest the Maya inherited the zero symbol from the Olmec."
+        },
+        {
+          "id": 55,
+          "passage": "In Costa Rica, use of solid fuel (e.g., coal, wood) as a share of total household fuel use fell by approximately 60 percent between 2000 and 2019; such shifts are typically explained by appeal to the energy ladder, a model holding that fuel choice is mediated mainly by household income (specifically, high-technology fuels displace solid fuels as incomes rise). Rasmus Heltberg's study of fuel use in Guatemala shows how reductive this model is, however: household fuel use was heterogeneous, flexible, and influenced by several factors, including local price of different sources.",
+          "question": "Based on the text, which choice best explains why the author characterizes the energy ladder as 'reductive'?",
+          "options": [
+            "A) The energy ladder asserts that households only consider one aspect of fuel when making fuel choices, but Heltberg's study showed that households ignore that characteristic of fuel and evaluate several other factors instead.",
+            "B) The energy ladder holds that the adoption of one type of fuel means that another type of fuel must be displaced, but Heltberg's study showed that several different fuel types are typically used in equal proportion.",
+            "C) The energy ladder assumes that the same factor influences household fuel choice in all locations, but Heltberg's study showed that fuel choice in Guatemala is influenced by different factors than is fuel choice in Costa Rica.",
+            "D) The energy ladder attributes household fuel choice primarily to a single characteristic of households, but Heltberg's study showed that multiple circumstances can affect household fuel choice."
+          ],
+          "answer": "D",
+          "explanation": "The energy ladder focuses mainly on income, but Heltberg's study shows multiple factors influence fuel choice."
+        },
+        {
+          "id": 56,
+          "passage": "The groundbreaking Negro Ensemble Company (NEC), founded in 1967, produced Paul Cater Harrison's award-winning play The Great MacDaddy in 1974. The company was cofounded by Robert Hooks, an actor, producer, and activist, and actor and playwright Douglas Turner Ward, who had met while performing in a 1960 touring production of Lorraine Hansberry's play A Raisin in the Sun. They shared a vision of a theater company that would nurture and showcase the work of Black theater professionals. Since its beginning, NEC has provided a forum for the voices of Harrison and other Black playwrights through workshops and performances.",
+          "question": "According to the text, how did Hooks and Ward initially meet?",
+          "options": [
+            "A) Harrison introduced Hooks to Ward at a performance of The Great MacDaddy.",
+            "B) Hooks and Ward attended the same performance of The Great MacDaddy.",
+            "C) Hooks and Ward participated in the same workshop at NEC.",
+            "D) Hooks and Ward were both actors in a production of A Raisin in the Sun."
+          ],
+          "answer": "D",
+          "explanation": "The text states they met while performing in a touring production of A Raisin in the Sun."
+        },
+        {
+          "id": 57,
+          "passage": "Marrakech has high pedestrian traffic, but simply replicating a feature of Marrakech associated with walkability - e.g., its highly varied streetscape - may be insufficient to induce increased walking in other cities. As urbanist Mariela Alfonzo argues, our understanding of individuals' decision - making about whether to walk is insufficiently robust: some studies emphasize the role of demographic characteristics, others the role of public transit availability, and so on, but walking decisions are made in complex contexts in which multiple conditions and needs inform individuals' choices.",
+          "question": "Based on the text, Alfonzo would most likely agree with which statement about studies of decision-making about walking?",
+          "options": [
+            "A) They would be improved by efforts to identify the features that cities with high pedestrian traffic have in common.",
+            "B) They are unlikely to find convincing evidence that any single factor consistently predicts walking decisions.",
+            "C) They have overstated the extent to which people differ in their decision-making processes regarding walking.",
+            "D) They tend to be misleading because they ignore the most important factor influencing walking decisions."
+          ],
+          "answer": "B",
+          "explanation": "Alfonzo argues that walking decisions are complex and influenced by multiple factors, so no single factor consistently predicts them."
+        },
+        {
+          "id": 58,
+          "passage": "Researchers César A. Hidalgo, Elisa Castañer, and Andres Sevtsuk created a computer model to predict the mix of businesses and places of interest found in a given neighborhood. The team used data from the Google Places API service to help identify movie theaters, gyms, and other businesses and map their locations. This approach has some limits—data from Places API tend to be restricted to places that are customer facing—but the data set nonetheless provides an extremely reliable source to study colocation patterns of neighborhood amenities.",
+          "question": "According to the text, what is one potential drawback of Hidalgo and colleagues' method?",
+          "options": [
+            "A) It may lead to conclusions that are not reflective of all the amenities in a given neighborhood.",
+            "B) It is likely to contribute to inaccurate identifications of the boundaries of specific neighborhoods.",
+            "C) It is based on recent advancements from other fields that have yet to be applied outside of those contexts.",
+            "D) It depends upon data that are likely to be outdated."
+          ],
+          "answer": "A",
+          "explanation": "The data are limited to customer-facing places, so it may miss some amenities."
+        },
+        {
+          "id": 59,
+          "passage": "Vadamalai Elangovan and Ganapathi Marimuthu showed that high moonlight intensity inhibits the activity of the greater short-nosed fruit bat (Cynopterus sphinx), a finding explicable in terms of benefits and costs: greater lunar intensity may not enable the bats to increase foraging success enough to offset the higher chance of detection by predatory owls or hawks. Though many other nocturnal mammals respond to lunar intensity variations similarly to greater short-nosed fruit bats, mongoose lemurs (Eulemur mongoz) display the opposite pattern, as their heavy reliance on visual foraging results in a different balance of reward and risk.",
+          "question": "According to the text, what did Elangovan and Marimuthu find and why does that occur?",
+          "options": [
+            "A) Greater short-nosed fruit bats tend to be more active during periods of high lunar intensity than at other times because such conditions allow them to increase their foraging success without making them easier to detect.",
+            "B) Greater short-nosed fruit bats reduce their activity during periods of high lunar intensity because predators can more easily spot the bats in brighter conditions, and such conditions do not benefit the bats enough to justify that risk.",
+            "C) During periods of high lunar intensity, greater short-nosed fruit bats reduce their activity because it is easier for predators to detect the bats in relatively bright conditions than it is for predators to detect mongoose lemurs in such conditions.",
+            "D) During periods of high lunar intensity, mongoose lemurs show a different behavioral response than greater short-nosed fruit bats and many other nocturnal mammals do because the risks to mongoose lemurs under such conditions are greater."
+          ],
+          "answer": "B",
+          "explanation": "The text explains that high moonlight increases predation risk without enough foraging benefit, so bats reduce activity."
+        },
+        {
+          "id": 60,
+          "passage": "A number of artists associated with hyperpop, a movement in electronic music that emerged in the 2010s, aggressively manipulate their recorded voice. The duo 100 gecs, for example, shifts the pitch of lead singer Laura Les's vocals to be much higher than that of her natural range. And even the hyperpop artists who don't rely on pitch-shifting, such as Shygirl, often distort their vocals using digital tools. Rather than being an arbitrary stylistic choice, hyperpop's persistent modification of the voice functions as a commentary on how digital technology mediates human experience today.",
+          "question": "Based on the text, the author would be most likely to disagree with which statement about vocal manipulation in hyperpop?",
+          "options": [
+            "A) It is an aesthetic feature that has little or no social import.",
+            "B) It confirms hyperpop's ability to offset certain negative effects of digital technology.",
+            "C) It is a symbol of the influence that hyperpop exerts on listeners' sense of self.",
+            "D) It represents changes to human experience brought about by technology."
+          ],
+          "answer": "A",
+          "explanation": "The author argues that vocal manipulation is not arbitrary but serves as social commentary, so they would disagree that it has no social import."
+        },
+        {
+          "id": 61,
+          "passage": "The text makes which point about the difference between the proportions of Mexico City residents and La Paz residents using parks?",
+          "question": "Which choice best states the main idea?",
+          "options": [
+            "A) It could be due to inaccuracies in the survey results.",
+            "B) It was calculated using sources that predate the survey.",
+            "C) It was much larger than the researchers conducting the study expected.",
+            "D) It is caused by something other than the parks' proximity to city residents."
+          ],
+          "answer": "D",
+          "explanation": "The text suggests the difference is not due to proximity alone."
+        },
+        {
+          "id": 62,
+          "passage": "External shopping cues are a type of marketing that uses obvious messaging—a display featuring a new product, for example, or a 'buy one, get one free' offer to entice consumers to make spontaneous purchases. In a study, data scientist Sam K. Hui and colleagues found that this effect can also be achieved with a less obvious cue: rearranging a store's layout. The researchers explain that trying to find items in new locations causes shoppers to move through more of the store, exposing them to more products and increasing the likelihood that they'll buy an item they hadn't planned on purchasing.",
+          "question": "Which response from a survey given to shoppers who made a purchase at a retail store best supports the researchers' explanation?",
+          "options": [
+            "A) 'I needed to buy some cleaning supplies, but they weren't in their regular place. While I was looking for them, I saw this interesting notebook and decided to buy it, too.'",
+            "B) 'I didn't buy everything on my shopping list today. I couldn't find a couple of the items in the store, even though I looked all over for them.'",
+            "C) 'The store sent me a coupon for a new brand of soup, so I came here to find out what kinds of soup that brand offers. I decided to buy a few cans because I had the coupon.'",
+            "D) 'This store is larger than one that's closer to where I live, and it carries more products. I came here to buy some things that the other store doesn't always have.'"
+          ],
+          "answer": "A",
+          "explanation": "This response directly illustrates how rearranged layout led to an unplanned purchase."
+        },
+        {
+          "id": 63,
+          "passage": "Like all species of baleen whales, the sei whale feeds on tiny creatures known as krill by filtering water through bristlelike keratin structures called baleen plates. In this way, baleen whales can eat up to 30 percent of their total mass per day. And while no one would call the sei whale small—it can have a mass as high as 25,000 kg—it is one of the smaller baleen whales and is much smaller than the bowhead whale, which can weigh a whopping 66,000 kg and consume as much as 19,800 kg of krill per day.",
+          "question": "Based on the text, what can most reasonably be concluded about krill consumption among sei and bowhead whales?",
+          "options": [
+            "A) The quantities of krill consumed by bowhead whales has made it difficult for sei whales to find sufficient food.",
+            "B) Both the sei whale and the bowhead whale can eat as much as 19,800 kg of krill per day.",
+            "C) Most baleen whales include krill in their diets, but the sei whale is less likely than the bowhead whale to do so.",
+            "D) The bowhead whale is able to eat more krill per day than the sei whale is."
+          ],
+          "answer": "D",
+          "explanation": "The text provides the consumption rates, showing the larger bowhead whale eats more."
+        },
+        {
+          "id": 64,
+          "passage": "The food industry has long used thermal technologies to preserve food in large batches. Recent advancements in infrared heating were made through research in Mexico on the preservation of bean flour. Infrared heating is generally considered to be an improvement over more conventional thermal preservation methods: whereas conventional methods transfer energy from the surface of a food to its interior, infrared heating uses high-intensity infrared light to generate heat within the food itself, thus reducing industrial cooking times.",
+          "question": "Based on the text, what is one disadvantage of some conventional thermal methods?",
+          "options": [
+            "A) They are especially vulnerable to technological breakdowns.",
+            "B) They are only effective in heating foods that are lightweight and small in size.",
+            "C) Their cooking times are longer than those of other methods.",
+            "D) They require more energy than other methods do."
+          ],
+          "answer": "C",
+          "explanation": "The text states infrared heating reduces cooking times compared to conventional methods."
+        },
+        {
+          "id": 65,
+          "passage": "Cocoa is an example of a loanword—that is, a word that originated in one language and was later adopted by another. The word came to English indirectly from cacao, the Spanish word for the plant that chocolate is made from. Spanish had borrowed it from Nahuatl, an Indigenous language of Central Mexico, in which the word's original form is cacahuatl. 'Iguana' is also Indigenous in origin and entered English through Spanish. But in this case, the original source was Taino, a language of the Caribbean islands, in which the word for the group of related lizard species is iwana.",
+          "question": "The author makes which point about the Spanish language?",
+          "options": [
+            "A) It has served as a medium through which Indigenous languages have influenced English.",
+            "B) Its contribution to English vocabulary roughly equals the collective contribution by Indigenous languages.",
+            "C) It has borrowed words from Indigenous languages and contributed words to them.",
+            "D) It adopted Nahuatl and Taino words in approximately equal numbers."
+          ],
+          "answer": "A",
+          "explanation": "The text shows Spanish borrowed words from Indigenous languages and passed them to English."
+        },
+        {
+          "id": 66,
+          "passage": "Information in the text best supports which statement about hDNA?",
+          "question": "Which choice best states the main idea?",
+          "options": [
+            "A) It may yield insights that other types of genomic data cannot.",
+            "B) It may be underused because of its controversial status among scientists.",
+            "C) It has thus far proved valuable mainly to researchers studying flora.",
+            "D) It tends to be much more degraded than other types of DNA of comparable age."
+          ],
+          "answer": "A",
+          "explanation": "The text mentions hDNA offers unique benefits like access to data from extirpated populations."
+        },
+        {
+          "id": 67,
+          "passage": "In Armenia, use of solid fuel (e.g., coal, wood) as a share of total household fuel use fell by approximately 90 percent between 2000 and 2018; such shifts are typically explained by appeal to the energy ladder, a model holding that fuel choice is mediated mainly by household income (specifically, high-technology fuels displace solid fuels as incomes rise). Boulkary Ouedraogo's study of fuel use in Burkina Faso shows how reductive this model is, however: although income of course constrained fuel choice, several factors, including the frequency with which certain dishes are cooked, influenced decisions.",
+          "question": "Based on the text, the author would most likely agree with which statement about household income?",
+          "options": [
+            "A) It constrains the amount of fuel households use but not the type of fuel they use.",
+            "B) It affects household fuel choice but not for the reasons assumed by the energy ladder model.",
+            "C) It can explain some but not all of the differences in fuel choice across households.",
+            "D) It is often said to influence household fuel choice but actually does not."
+          ],
+          "answer": "C",
+          "explanation": "The text acknowledges income constrains fuel choice but says other factors also influence decisions."
+        },
+        {
+          "id": 68,
+          "passage": "The following text is from Yung Wing's 1909 memoir My Life in China and America. We landed in New York on the 12th of April, 1847, after a passage of ninety-eight days of unprecedented fair weather. The New York of 1847 was altogether a different city from the New York of 1909. It was a city of only 250,000 or 300,000 inhabitants; now it is a metropolis rivaling London in population, wealth and commerce. The whole of Manhattan Island is turned into a city of skyscrapers, churches and palatial residences.",
+          "question": "Based on the passage, how does Yung perceive New York to have changed between 1847 and 1909?",
+          "options": [
+            "A) The city has become more developed and populated.",
+            "B) The architecture of the city has become more practical and less appealing.",
+            "C) The city's residents have become more politically active.",
+            "D) The city's population has become much more diverse than London's."
+          ],
+          "answer": "A",
+          "explanation": "Yung describes growth in population, wealth, and buildings."
+        },
+        {
+          "id": 69,
+          "passage": "The following text is from Julia Alvarez's 2000 novel In the Name of Salomé. Salomé, a poet, is hosting guests in the front parlor of her family home, and Ramona is her sister. A salon is a social gathering for the exploration of intellectual ideas. It was evening when the two men got up to leave. Tia Ana had already come into the room several times to see if these guests had departed yet. The front parlor had always been her special province, as she used it for her little school. Now, every evening, it turned into Salomé's salon, as Ramona called it, and it was never in order for its transformation back to a classroom the following morning.",
+          "question": "Based on the text, what most likely motivates Tia Ana's behavior during Salomé's salon?",
+          "options": [
+            "A) She considers the guests to be uninteresting and is trying to convince them to leave.",
+            "B) She is anxious for the gathering to disperse so that she can ready the space for her own needs.",
+            "C) She is impatient to share her plans to start a new school with the guests and hopes they will support her.",
+            "D) She is frustrated because she needs assistance elsewhere in the house, but Salomé is unavailable while entertaining the guests."
+          ],
+          "answer": "B",
+          "explanation": "Tia Ana uses the room for her school and needs it ready for the next morning."
+        },
+        {
+          "id": 70,
+          "passage": "In her 1998 book Blues Legacies and Black Feminism, Angela Y. Davis bases her analysis in part on recordings of songs sung in the 1920s by Gertrude 'Ma' Rainey and Bessie Smith. Davis focuses on how Rainey and Smith improvised the lyrics—replacing the original lines with mischievous jokes and wordplay. Davis's work was particularly labor intensive because in order to transcribe, or write down, the lyrics as Rainey and Smith sang them, Davis had to listen repeatedly to the vinyl recordings, which weren't very clear.",
+          "question": "What does the text most strongly suggest about the songs sung by Rainey and Smith?",
+          "options": [
+            "A) The songs have grown in popularity since Rainey and Smith first sang them.",
+            "B) According to Davis, the songs sung by Rainey were more musically innovative than those sung by Smith typically were.",
+            "C) There were more recordings made of Rainey's songs than there were of Smith's.",
+            "D) There were few, if any, reliable transcriptions of Smith's and Rainey's improvised lyrics when Davis began her research."
+          ],
+          "answer": "D",
+          "explanation": "Davis had to transcribe the lyrics herself because the recordings weren't clear, suggesting no reliable transcriptions existed."
+        },
+        {
+          "id": 71,
+          "passage": "Historians point to the rule of the Piast dynasty as crucial to the formation of the Polish state. However, some differentiate between members of the dynasty like Władysław I Herman, who ruled as duke from 1079 to 1102 CE, and less well-documented figures like Lestek, who is said to have ruled in the 9th and 10th centuries but whose historical actuality is disputed. Lestek appears in the Gesta principum Polonorum, a chronicle of medieval Polish history written between 1112 and 1118. However, the chronicle's documentation of Lestek relies on oral tradition, unlike its records of later rulers.",
+          "question": "According to the text, what is a difference between how historians view Lestek and how they view Władysław I Herman?",
+          "options": [
+            "A) Historians believe that the Gesta principum Polonorum provides more evidence for Lestek's existence than it does for Władysław I Herman's existence.",
+            "B) Historians agree that Władysław I Herman existed, but disagree about whether Lestek existed.",
+            "C) Historians agree that Lestek ruled Poland much later than Władysław I Herman.",
+            "D) Historians find the orally transmitted stories affirming the existence of Władysław I Herman to be more convincing than similar stories about Lestek."
+          ],
+          "answer": "B",
+          "explanation": "The text states Lestek's historical actuality is disputed, while Władysław I Herman is accepted as historical."
+        },
+        {
+          "id": 72,
+          "passage": "The following text is adapted from Lady Gregory's 1904 play Spreading the News. Jack Smith and Bartley Fallon have encountered each other at the local fair.\n\nJACK: It isn't to the fair I came myself, but up to the Five Acre Meadow I'm going where I have a contract for the hay. We'll get a share of it into tramps [drying stacks] today.\nBARTLEY: You will not get it into tramps today. The rain will be down on it by evening, and on myself too. It's seldom I ever started on a journey but the rain would come down on me before I'd find any place of shelter.\nJACK: If it didn't itself, Bartley, it is my belief you would carry a leaky pail on your head in place of a hat, that way you'd not be without some cause of complaining.",
+          "question": "Based on the text, what does Jack most likely believe about Bartley?",
+          "options": [
+            "A) Bartley will be able to help Jack with cutting the hay.",
+            "B) Bartley is concerned that Jack hasn't prepared for the weather.",
+            "C) Bartley is a poor judge of the weather.",
+            "D) Bartley will find fault with any situation."
+          ],
+          "answer": "D",
+          "explanation": "Jack's comment suggests Bartley always finds something to complain about."
+        },
+        {
+          "id": 73,
+          "passage": "Fernand Braudel and other historians of capitalism rarely discuss domestic capitalism in Africa before the period of European colonization, implicitly presenting capitalism as external to and imposed on Africa. John Iliffe and other Africanist scholars have shown, however, that in parts of Africa, institutionally protected private land ownership, the existence of salaried labor, and other features of capitalism predated colonization. One reason for this discrepancy is that historians of capitalism tend to focus on longitudinal economic data drawn from archival records, which do not exist for much of precolonial Africa.",
+          "question": "Which statement about Iliffe and other Africanist scholars is best supported by information in the text?",
+          "options": [
+            "A) They likely make use of different types of evidence than historians of capitalism typically rely on.",
+            "B) They likely have a different view about which activities should be considered capitalist in nature than historians of capitalism do.",
+            "C) They likely differ from historians of capitalism in the methods they use to derive longitudinal economic data from archival records.",
+            "D) They likely view capitalism as having been more beneficial for Africa than historians of capitalism do."
+          ],
+          "answer": "A",
+          "explanation": "The text suggests Africanist scholars use evidence beyond archival records, which are lacking for precolonial Africa."
+        },
+        {
+          "id": 74,
+          "passage": "In 2016 Marta S. Pimentel and colleagues published a study concluding that ocean acidification has a strong effect on the behavior of Sparus aurata, a species of fish. However, Pimentel and colleagues' study relied on a mean sample size of only 12 fish. In a 2022 review of various scientists' conclusions about the impacts of ocean acidification on fish behavior, Timothy D. Clark and colleagues caution that relying on such a relatively small sample size can increase the potential for biased analysis. Such analysis, in turn, can contribute to reports of exaggerated effects.",
+          "question": "What does the text most directly suggest about Pimentel and colleagues' conclusion?",
+          "options": [
+            "A) It was based on the same mean sample size used in many earlier studies of fish species.",
+            "B) It likely has broad implications for other species of fish besides Sparus aurata.",
+            "C) None of the above",
+            "D) It has been largely invalidated by results obtained from similar studies."
+          ],
+          "answer": "C",
+          "explanation": "The text only notes the small sample size as a potential issue, but doesn't invalidate the conclusion or mention other studies."
+        },
+        {
+          "id": 75,
+          "passage": "Goujun He and colleagues studied a food-delivery phone app that is popular in China. The researchers found that having 'no cutlery' automatically selected influences whether customers request disposable plastic utensils with their food orders. Based on their results, the researchers concluded that this and other small changes to the app could reduce plastic waste in China by as much as 3.26 million metric tons per year.",
+          "question": "According to the text, which choice best describes a conclusion He and colleagues drew from their study?",
+          "options": [
+            "A) Production of plastic waste in China is likely to increase in the near future.",
+            "B) Food-delivery apps that prevent customers from requesting cutlery are becoming more popular.",
+            "C) Customers who understand how food-delivery apps work make more environmentally friendly choices.",
+            "D) Small changes to how a food-delivery app works can greatly lower plastic waste."
+          ],
+          "answer": "D",
+          "explanation": "The researchers concluded that small app changes could lead to significant reduction in plastic waste."
+        },
+        {
+          "id": 76,
+          "passage": "Can field mustard plants grow on Mars? Can pea plants? You might think the answer to these questions is obviously no, but researchers in the Netherlands recently showed that the seeds of many common plant species can germinate in soil designed to simulate Martian conditions, as long as water is supplied. In fact, some species actually did better in Martian soil than in Earth soil: 30 percent of field mustard seeds sprouted when planted in simulated Martian soil, compared with 4 percent that did when planted in soil from their home planet.",
+          "question": "According to the text, what percentage of field mustard seeds planted in Martian soil sprouted?",
+          "options": [
+            "A) 18 percent",
+            "B) 30 percent",
+            "C) 100 percent",
+            "D) 5 percent"
+          ],
+          "answer": "B",
+          "explanation": "The text directly states 30 percent sprouted in simulated Martian soil."
+        },
+        {
+          "id": 77,
+          "passage": "Superlubricity, the state of virtually no friction between materials, has desirable applications in many industries. For example, it can make aircraft engines more efficient. To produce a coating that achieves superlubricity, Chanaka Kumar and colleagues broke down carbon nanotubes into fragments of graphene to fully cover two surfaces that would rub together. Friction between pieces of graphene is generally extremely low, and when the researchers added a drop of oil as lubrication, that friction nearly vanished. This new coating may drastically lower friction-related energy costs.",
+          "question": "According to the text, what happened when the researchers added oil to the surfaces covered in graphene fragments?",
+          "options": [
+            "A) All the pieces of graphene collected on just one of the two surfaces.",
+            "B) The low amount of friction between the surfaces became even lower.",
+            "C) Carbon nanotubes on the surfaces fractured into smaller pieces.",
+            "D) Friction between the surfaces did not noticeably change right away."
+          ],
+          "answer": "B",
+          "explanation": "The text states that with oil, friction nearly vanished, meaning it became even lower."
+        },
+        {
+          "id": 78,
+          "passage": "Companies involved in petroleum extraction include drilling equipment among their assets. But petroleum extraction is a very carbon-intensive industry, so as social attitudes increasingly favor using less carbon intensive sources of energy, demand for petroleum falls and the drilling equipment will eventually, or even suddenly, become a liability as reduced petroleum prices make it more difficult to recover the expense of maintaining such equipment.",
+          "question": "What claim does the text make about the demand for petroleum?",
+          "options": [
+            "A) Companies involved in petroleum extraction are not affected by the demand for petroleum.",
+            "B) The societal preference for low-carbon energy sources is a factor in the demand for petroleum.",
+            "C) The demand for petroleum follows a predictable annual cycle.",
+            "D) Companies involved in petroleum extraction can benefit from a decline in the demand for petroleum."
+          ],
+          "answer": "B",
+          "explanation": "The text links social attitudes favoring low-carbon energy to falling demand for petroleum."
+        },
+        {
+          "id": 79,
+          "passage": "Why do flat-headed cats purr but jaguars roar? Researchers hypothesize that this difference between the two feline species may be partly due to a U-shaped bone in their throats called the hyoid. Flat-headed cats, which are much smaller than jaguars, have a rigid hyoid that rumbles when the cat's larynx vibrates, resulting in a purr. By contrast, jaguars have a somewhat flexible hyoid, and the bone is attached to the skull with a stretchy ligament that flat-headed cats lack. These traits allow jaguars and most other species of big cats to produce powerful roars. The same traits may also prevent most big cats from purring.",
+          "question": "According to the text, which trait do researchers think may contribute to a flat-headed cat's ability to purr?",
+          "options": [
+            "A) The shape of the flat-headed cat's larynx",
+            "B) The ligament attaching the hyoid bone to the flat-headed cat's skull",
+            "C) The flat-headed cat's rigid hyoid bone",
+            "D) The relative size of the flat-headed cat's body and throat"
+          ],
+          "answer": "C",
+          "explanation": "The text states the rigid hyoid rumbles to produce purring."
+        },
+        {
+          "id": 80,
+          "passage": "Biologist Grace Herzel and colleagues conducted a study of how butterfly color and weather conditions relate to butterfly behavior, which wouldn't have been possible without data gathered by students and other amateur science enthusiasts in the community. Considering over three years worth of data, the researchers found that white butterflies were observed on green flowers more often than any other butterflies were, and that butterflies were observed to feed more often on cloudy days than on other days.",
+          "question": "According to the text, which factors seemed to be linked to the behavior of butterflies in Grace Herzel and colleagues' study?",
+          "options": [
+            "A) Weather conditions but not butterfly color",
+            "B) Butterfly color but not weather conditions",
+            "C) Neither butterfly color nor weather conditions",
+            "D) Both butterfly color and weather conditions"
+          ],
+          "answer": "D",
+          "explanation": "The study found links for both color (white butterflies on green flowers) and weather (feeding on cloudy days)."
+        },
+        {
+          "id": 81,
+          "passage": "'Coyote' is an example of a loanword—that is, a word that originated in one language and was later adopted by another. The word came to English indirectly from coyote, the Spanish word for the wild canine species. Spanish had borrowed it from Nahuatl, an Indigenous language of Central Mexico, in which the word's original form is coyotl. 'Condor' is also Indigenous in origin and entered English through Spanish. But in this case, the original source was Quechua, a language of South America, in which the word for the large vulture species is kuntur.",
+          "question": "The author makes which point about the Spanish language?",
+          "options": [
+            "A) It has served as a medium through which Indigenous languages have influenced English.",
+            "B) Its contribution to English vocabulary roughly equals the collective contribution by Indigenous languages.",
+            "C) It has borrowed words from Indigenous languages and contributed words to them.",
+            "D) It adopted Nahuatl and Quechua words in approximately equal numbers."
+          ],
+          "answer": "A",
+          "explanation": "The text shows Spanish borrowed words from Indigenous languages and passed them to English."
+        },
+        {
+          "id": 82,
+          "passage": "Ke Bi and colleagues relied on historical DNA (hDNA)—genomic data incidentally preserved in specimens housed in natural history collections—to investigate the evolutionary trajectory of the alpine chipmunk (Tamias alpinus). Although this approach offers unique benefits, such as the ability to contrast historical genomic data with present-day data, it remains relatively underutilized because archival specimens are sometimes stored in ways that compromise DNA quality, a situation not easily remediable under current methodological paradigms and with extant DNA extraction and analysis technologies.",
+          "question": "What does the text most strongly suggest about specimens from natural history collections?",
+          "options": [
+            "A) While they may contain valuable genomic data, not all of them can yield usable hDNA.",
+            "B) They are primarily used as sources of genomic data by scientists studying organisms that have undergone major evolutionary change.",
+            "C) Because of their often deteriorated condition, they tend to yield genomic data that are time-consuming to extract and interpret.",
+            "D) While they were used in a study that made an important scientific discovery, they are generally of marginal value as sources of genomic data."
+          ],
+          "answer": "A",
+          "explanation": "The text states storage methods can compromise DNA quality, making some specimens unusable for hDNA."
+        },
+        {
+          "id": 83,
+          "passage": "In the 1960s, Gloria Richardson led a movement to promote racial equality. Her involvement in this effort was inspired by her daughter, Donna Richardson. In 1961, Donna joined protests organized by the Student Nonviolent Coordinating Committee in Cambridge, Maryland. Following her daughter, Gloria joined these protests too. Gloria soon became the cochair of the Cambridge Nonviolent Action Committee. She was also the leader of what became known as the Cambridge movement.",
+          "question": "According to the text, what did Gloria Richardson lead?",
+          "options": [
+            "A) A new business in Cambridge, Maryland",
+            "B) The Cambridge movement",
+            "C) Protests to support environmental protections",
+            "D) Her daughter Donna's high school"
+          ],
+          "answer": "B",
+          "explanation": "The text states she was the leader of the Cambridge movement."
+        },
+        {
+          "id": 84,
+          "passage": "Mexican textile artist Victoria Villasana weaves stories triumph, using her unique method of applying colorful yarn to photographs of people. In some works, Villasana focuses on celebrating cultural icons who are people of color, as she does in her depiction of artist Yayoi Kusama. However, in other works, Villasana honors ordinary people, as she does in her captivating portrayal of a woman making tortillas. Villasana sees both of these approaches as ways of depicting the power and interconnectedness of all people.",
+          "question": "According to the text, what kind of material does Villasana use in her artworks?",
+          "options": [
+            "A) Stone",
+            "B) Chalk",
+            "C) Paint",
+            "D) Yarn"
+          ],
+          "answer": "D",
+          "explanation": "The text states she uses colorful yarn."
+        },
+        {
+          "id": 85,
+          "passage": "Mauricio Drelichman and Hans-Joachim Voth's research on the fiscal vulnerability of Philip II (who ruled not only Spain but other regions including Milan from 1556 to 1598) builds on other studies of European early modern state finance, including Hoffman and Norberg's work on the relationship between state finance and political development. But Drelichman and Voth's unique contribution is their reconstruction of the earliest extant set of annual fiscal records for any sovereign state, which demonstrate that Philip's defaults were caused by short-term liquidity crises, not long-term unsustainable debts.",
+          "question": "What does the text most strongly suggest about the value of Drelichman and Voth's research to their discipline?",
+          "options": [
+            "A) Drelichman and Voth's research uses newly compiled evidence to eliminate one possible reason Philip II defaulted on his debts and to affirm another.",
+            "B) Drelichman and Voth's research revealed the role of Philip II's debt defaults in exacerbating short-term liquidity crises.",
+            "C) Drelichman and Voth's research builds on earlier work about a particular aspect of European early modern state finance By Hoffman and Norberg and corrects errors in that earlier work.",
+            "D) Drelichman and Voth's research presented a novel body of evidence supporting Hoffman and Norberg's hypothesis regarding why Philip II default on several loans."
+          ],
+          "answer": "A",
+          "explanation": "Their research used new evidence to show defaults were due to short-term crises, not long-term debt issues."
+        },
+        {
+          "id": 86,
+          "passage": "Google's introduction of the Chrome web browser in 2008 is a quintessential instance of brand extension the company leveraged its brand recognition as an internet search provider to enter a product category where it had not previously competed. An outstanding question is whether perceived category similarity predicts consumers likelihood of purchasing brand extensions. To answer this question, Alicia Grasby et al. identified 30 extended-brand pairs (e.g., the same brand of shoes and gloves) in 52 weeks of purchases by approximately 60,000 households and, for each pair, calculated the change in probability of a brand in one category being purchased if the same brand was purchased in the other category.",
+          "question": "Based on the text, which potential study design would most likely to produce evidence that would enable Grasby et al. to answer their research question?",
+          "options": [
+            "A) Have a representative sample of the households rate the similarity of the product categories in each extended-brand pair, then determine how, if at all, those ratings correlate with the change in probability that the team calculated for each pair.",
+            "B) Poll a representative sample of the households to determine the degree of brand recognition of each brand in the extended-brand pairs, then determine how, if at all, the degree of brand recognition correlates with the average cost of each product in the pairs.",
+            "C) Have a representative sample of the households rate the similarity of one product in each extended-brand pair to other products in the same category, then determine how, if at all, those ratings correlate with the change in probability that the team calculated for each pair.",
+            "D) Poll a representative sample of the households to determine the degree of brand recognition for each brand in the extended-brand pairs, then determine how, if at all, the degree of brand recognition correlates with the frequency with which a different group of households purchased at least once product of that brand."
+          ],
+          "answer": "A",
+          "explanation": "The research question is about perceived category similarity, so rating similarity would directly address it."
+        },
+        {
+          "id": 87,
+          "passage": "In Costa Rica, use of solid fuel (e.g. coal, wood) as a share of total household fuel use fell by approximately 60 percent between 2000 and 2019; such shifts are typically explained by appeal to the energy ladder, a model holding that fuel choice is mediated mainly by household income (specifically, high-technology fuels displace solid fuels as incomes rise). Rasmus Heltberg's study of fuel use in Guatemala shows how reductive this model is, however: household fuel use was heterogeneous, flexible, and influenced by several factors, including local price of different sources.",
+          "question": "Based on the text, which choice best explains why the author characterizes the energy ladder as 'reductive'?",
+          "options": [
+            "A) The energy ladder asserts that households only consider one aspect of fuel when making fuel choices, but Heltberg's study showed that households ignore that characteristic of fuel and evaluate several other factors instead.",
+            "B) The energy ladder holds that the adoption of one type of fuel means that another type of fuel must be displaced, but Heltberg's study showed that several different fuel types are typically used in equal proportion.",
+            "C) The energy ladder assumes that the same factor influences household fuel choice in all locations, but Heltberg's study showed that fuel choice in Guatemala is influenced by different factors than is fuel choice in Costa Rica.",
+            "D) The energy ladder attributes household fuel choice primarily to a single characteristic of households, but Heltberg's study showed that multiple circumstances can affect household fuel choice."
+          ],
+          "answer": "D",
+          "explanation": "The energy ladder focuses mainly on income, but Heltberg's study shows multiple factors influence fuel choice."
+        },
+        {
+          "id": 88,
+          "passage": "The groundbreaking Negro Ensemble Company (NEC), founded in 1967, produced Paul Cater Harrison's award-winning play The Great MacDaddy in 1974. The company was cofounded by Robert Hooks, an actor, producer, and activist, and actor and playwright Douglas Turner Ward, who had met while performing in a 1960 touring production of Lorraine Hansberry's play A Raisin in the Sun. They shared a vision of a theater company that would nurture and showcase the work of Black theater professionals. Since its beginning, NEC has provided a forum for the voices of Harrison and other Black playwrights through workshops and performances.",
+          "question": "According to the text, how did Hooks and Ward initially meet?",
+          "options": [
+            "A) Harrison introduced Hooks to Ward at a performance of The Great MacDaddy.",
+            "B) Hooks and Ward attended the same performance of The Great MacDaddy.",
+            "C) Hooks and Ward participated in the same workshop at NEC.",
+            "D) Hooks and Ward were both actors in a production of A Raisin in the Sun."
+          ],
+          "answer": "D",
+          "explanation": "The text states they met while performing in a touring production of A Raisin in the Sun."
+        },
+        {
+          "id": 89,
+          "passage": "The following text is from Julia Alvarez's 2000 novel In the Name of Salome. The narrator and her sister, daughters of a famous poet, are being tutored by Alejandro Román. Our tutor, Alejandro Román, brought his younger brother, Miguel, to class one day. By now I was eighteen and had learned everything Alejandro had to teach me, so I was glad for a new face. Miguel was an aspiring poet, and he had heard from his brother that the Ureña girls were none other than the daughters of Nicolás Ureña, and they were smart as clockwork. Miguel was hoping not only to meet us but to make the acquaintance of the poet himself at Mama's house.",
+          "question": "Based on the text, why does Miguel accompany his brother to the sisters' house one day?",
+          "options": [
+            "A) Miguel has learned all his brother can teach him and now desires to be tutored by the sisters.",
+            "B) Miguel has not received formal instruction in poetry and wants to ask the sisters' famous father to be his mentor.",
+            "C) Miguel wants to recite his poems to the sisters and inquire about their perspectives on his work.",
+            "D) Miguel anticipates having the opportunity to be introduced to both the sisters and their father."
+          ],
+          "answer": "D",
+          "explanation": "Miguel hopes to meet the sisters and their father, the poet."
+        },
+        {
+          "id": 90,
+          "passage": "In 2004, Andrew Rogers created Ancient Language. In this work, Rogers created an 80-meter-long geoglyph out of rocks in the Atacama Desert. Rogers's work is part of the land art movement, in which artists reject the confinement and commercialization of art galleries. These artists usually install large-scale pieces outdoors, often in surprising locations.",
+          "question": "Based on the text, what can be inferred about Ancient Language?",
+          "options": [
+            "A) Its location may be considered surprising.",
+            "B) It marked a shift in the popularity of the land art movement.",
+            "C) It may have had more commercial success in a different outdoor location.",
+            "D) It was created early in Rogers's career."
+          ],
+          "answer": "A",
+          "explanation": "Land art is often in surprising locations, and the Atacama Desert is such a location."
+        },
+        {
+          "id": 91,
+          "passage": "Optimal foraging theory (OFT) holds that animals' foraging behaviors reflect cost-benefit trade-offs that vary by species and with dynamic ecological circumstances. One such circumstance is lunar intensity, which Joel Brown and colleagues found to be negatively associated with foraging by Arizona pocket mice but Deborah J. Curtis and colleagues found to be positively associated with foraging by mongoose lemurs. This discrepancy is explicable in terms of OFT: the lemurs' greater reliance on vision means that higher lunar intensity benefits them more than it benefits the mice.",
+          "question": "Which choice best describes the finding made by Curtis and colleagues, as presented in the text?",
+          "options": [
+            "A) Increased lunar intensity is more beneficial for mongoose lemurs than it is for Arizona pocket mice.",
+            "B) As lunar intensity increases, mongoose lemurs increase their foraging activity.",
+            "C) During periods of high lunar intensity, mongoose lemurs increase their reliance on vision.",
+            "D) As lunar intensity increases, Arizona pocket mice reduce their foraging activity."
+          ],
+          "answer": "B",
+          "explanation": "Curtis and colleagues found a positive association between lunar intensity and foraging by mongoose lemurs."
+        },
+        {
+          "id": 92,
+          "passage": "The following text is from Thomas Mann's 1924 novel The Magic Mountain, translated by John E. Woods in 1995. The story of Hans Castorp that we intend to tell here—not for his sake (for the reader will come to know him as a perfectly ordinary, if engaging young man), but for the sake of the story itself, which seems to us to be very much worth telling (although in Hans Castorp's favor it should be noted that it is his story, and that not every story happens to everybody)—is a story that took place long ago, and is, so to speak, covered with the patina of history and must necessarily be told with verbs whose tense is that of the deepest past.",
+          "question": "What does the text most strongly suggest about the story of Hans Castorp?",
+          "options": [
+            "A) Though it is true that stories of even the most uninteresting people are themselves interesting because all people are unique, the reason this story is interesting is nonetheless difficult to understand because of the passage of time.",
+            "B) Even though it is a story of a person of no particular importance, its age and the manner in which it therefore must be told are both indicators that the story itself is important.",
+            "C) It is a remarkable story that happened to an unremarkable person, though one could plausibly argue that because the story is valuable, some of its value accrues to the person at its center.",
+            "D) Like all stories about the lives of inconsequential people, this story must necessarily be related in a particular way if the reason the story is consequential is to be made evident to the audience."
+          ],
+          "answer": "C",
+          "explanation": "The text says the story is worth telling despite the ordinary protagonist, and the story's value reflects on him."
+        },
+        {
+          "id": 93,
+          "passage": "The Lego Group's introduction of the Legoland theme park in 1968 is a quintessential instance of brand extension—the company leveraged its brand recognition as a toy manufacturer to enter a product category where it had not previously competed. An outstanding question is whether perceived category similarity predicts consumers' likelihood of purchasing brand extensions. To answer this question, Alicia Grasby et al. identified 30 extended-brand pairs (e.g., the same brand of wristwatch and necktie) in 52 weeks of purchases by approximately 60,000 households and, for each pair, calculated the change in probability of a brand in one category being purchased if the same brand was purchased in the other category.",
+          "question": "Based on the text, which potential study design would be most likely to produce evidence that would enable Grasby et al. to answer their research question?",
+          "options": [
+            "A) Have a representative sample of the households rate the similarity of the product categories in each extended-brand pair, then determine how, if at all, those ratings correlate with the change in probability that the team calculated for each pair.",
+            "B) Poll a representative sample of the households to determine the degree of brand recognition for each brand in the extended-brand pairs, then determine how, if at all, the degree of brand recognition correlates with the frequency with which a different group of households purchased at least one product of that brand.",
+            "C) Poll a representative sample of the households to determine the degree of brand recognition of each brand in the pairs, then determine how, if at all, the degree of brand recognition correlates with the average cost of each product in the pairs.",
+            "D) Have a representative sample of the households rate the similarity of one product in each extended-brand pair to other products in the same category, then determine how, if at all, those ratings correlate with the change in probability that the team calculated for each pair."
+          ],
+          "answer": "A",
+          "explanation": "The research question is about perceived category similarity, so rating similarity would directly address it."
+        },
+        {
+          "id": 94,
+          "passage": "Tracks is a 1988 novel by Ojibwe writer Louise Erdrich. It explores how historical events affect families on a reservation in rural North Dakota. Tracks is typical of Erdrich's work. Her writing usually focuses on portrayals of everyday life in Ojibwe communities. Yet some of her novels have fantastical plots and take place outside Ojibwe communities. For example, her 1991 novel The Crown of Columbus is essentially adventure fiction, and the thrilling events in its plot are set largely on a Caribbean island.",
+          "question": "According to the text, what is one way that The Crown of Columbus differs from most of Erdrich's work?",
+          "options": [
+            "A) It has been adapted into a movie.",
+            "B) It isn't set in a rural Ojibwe community.",
+            "C) It contains very little dialogue.",
+            "D) Its main characters are Ojibwe."
+          ],
+          "answer": "B",
+          "explanation": "Erdrich's work usually focuses on Ojibwe communities, but The Crown of Columbus is set on a Caribbean island."
+        },
+        {
+          "id": 95,
+          "passage": "The following text is adapted from Rupa Bajwa's 2004 novel The Sari Shop. Ramchand works as an assistant in a shop in Amritsar, India. Even at ten in the morning, the bazaar was throbbing with activity. The halwai [baker] was already installed in front of the Mishthaan Sweet Shop, pressing jalebi batter into squiggly shapes that floated and simmered in the oil in a big iron cauldron. All the shops had opened for the day and, Ramchand noted guiltily, all the shop assistants were already in place, trying to sell things with fixed, attentive smiles on their shiny, bathed faces.",
+          "question": "Based on the text, what can most reasonably be inferred about Ramchand?",
+          "options": [
+            "A) Ramchand is remorseful about arriving to work later than other shop assistants he sees.",
+            "B) Ramchand is mesmerized by frying jalebi batter while walking to work as a shop assistant.",
+            "C) Ramchand is overwhelmed by a bazaar after seeing the chaos of other shop assistants selling goods.",
+            "D) Ramchand is happy about being at work after seeing shop assistants who are satisfied with their jobs."
+          ],
+          "answer": "A",
+          "explanation": "Ramchand notes 'guiltily' that all other assistants are already in place, suggesting he is late."
+        },
+        {
+          "id": 96,
+          "passage": "Economist Gabriel Zucman finds that 8% of worldwide household wealth is held in tax havens (territories such as Singapore with low tax rates for investors who reside outside those territories). Zucman also finds that use of tax havens differs between countries—they are rarely used by investors living in Japan, while many investors who utilize tax havens reside in Saudi Arabia or Greece. Philosopher Ingrid Robeyns disapproves of the use of tax havens as a method of tax avoidance that, though legally permissible, nonetheless helps investors to sidestep payment toward government upkeep.",
+          "question": "Based on the text, what does Zucman's research suggest about investors residing in Japan?",
+          "options": [
+            "A) They are engaging in investment practices that Robeyns would acknowledge as beneficial because they are legally permissible.",
+            "B) They are less likely than investors residing in Saudi Arabia to store wealth in Singapore.",
+            "C) They are more likely than residents of Singapore to utilize investment strategies that might yield greater returns but that might also result in greater losses.",
+            "D) They are more likely than residents of Greece to engage in tax avoidance."
+          ],
+          "answer": "B",
+          "explanation": "Zucman finds tax havens are rarely used by Japanese investors, while many Saudi and Greek investors use them."
+        },
+        {
+          "id": 97,
+          "passage": "Radamés Cordero et al. have confirmed that twenty mushroom species (including Coprinellus micaceus and species from the genus Russula) maintain subambient temperatures in both their fruited bodies and their mycelium (the root-like hyphae from which the fruited bodies grow), though the benefits of this hypothermic behavior are unclear. Noting that relative coldness was more pronounced in fruiting than in nonfruiting sites of the mycelium—a difference that persisted even after fruited bodies were detached—the researchers speculate that thermoregulation in the mycelium may influence reproductive success.",
+          "question": "Which statement about the mycelium of the twenty mushroom species is best supported by the text?",
+          "options": [
+            "A) Variation in thermoregulation across the mycelium may occur independent of the presence or absence of fruited bodies.",
+            "B) The correlation between higher mycelium temperature and greater fruit productivity indicates that successful reproduction may be dependent on thermoregulation in the mycelium.",
+            "C) Temperatures in the fruiting areas of the mycelium are lower than in the nonfruiting areas due to differences in the depth and spread of the mycelium within soil or other organic matter.",
+            "D) The mycelium generally maintains temperatures lower than those of the fruited bodies even when considering temperature variations between fruiting and nonfruiting sites."
+          ],
+          "answer": "A",
+          "explanation": "The text says the temperature difference persisted even after fruited bodies were detached, indicating independence."
+        },
+        {
+          "id": 98,
+          "passage": "High-reward flowers that produce nectar with relatively high sugar concentrations are thought to be especially attractive to stripe-throated hermits and other hummingbird species. But when María A. Maglianesi and team monitored hummingbird visits to flowering plants, including Palicourea tomentosa, at Los Cusingos Bird Sanctuary and other sites in Costa Rica, they found that visit frequencies weren't influenced by nectar traits. Rather, physical compatibility of flower corollas (collections of petals) and hummingbird bills more strongly predicted hummingbird-plant interaction patterns.",
+          "question": "Which statement about hummingbird preferences is most strongly supported by the text?",
+          "options": [
+            "A) Hummingbirds consistently prefer plant species whose flowers have physical traits that are compatible with their bills but offer relatively low nectar rewards.",
+            "B) The floral traits that most strongly influence which plant species hummingbirds prefer may result in certain hummingbird species visiting flowers with relatively low nectar rewards over those with higher nectar rewards.",
+            "C) Hummingbirds' preferences are primarily driven by trait-matching between their bills and flower corollas, though nectar qualities are a secondary factor driving their preferences.",
+            "D) Physical compatibility between flower corollas and hummingbird bills becomes an important factor that influences hummingbird preferences when hummingbirds are uncertain about which plants produce highreward nectar."
+          ],
+          "answer": "B",
+          "explanation": "The study found that physical compatibility, not nectar traits, predicted visits, so hummingbirds might visit flowers with lower nectar rewards if they are physically compatible."
+        },
+        {
+          "id": 99,
+          "passage": "Researchers who examined data from radio-tagged southern sea otters (Enhydra lutris nereis) identified fitness benefits gained by otters that used tools. By using fixed stones as anvils, tool-using otters gained access to high-quality, hard-shelled prey (e.g., mussels and clams) that they could usually not access through biting alone. Non-tool-using otters foraged abundant, energy-poor, easily extractable prey instead (e.g., snails). Even when easily processed prey were depleted, tool-using otters that processed mussels and clams were thus able to obtain their needed energy resources and to do so without incurring tooth damage.",
+          "question": "What does the text most strongly suggest about southern sea otters in environments where snails, mussels, and clams are present?",
+          "options": [
+            "A) Those otters whose diet consists mainly of snails will likely exhibit less tooth damage than will those otters that use tools to consume mussels and clams.",
+            "B) Those otters that do not use tools will likely have more robust health than those otters that do use tools.",
+            "C) Those otters that do not use tools will likely need to process larger amounts of prey to meet their energy requirements than will those otters that use tools.",
+            "D) Those otters that consume mussels and clams without the use of tools will likely spend less time foraging than will those otters that use tools to access the same prey resources."
+          ],
+          "answer": "C",
+          "explanation": "Non-tool-using otters eat energy-poor prey (snails), so they need to eat more to meet energy needs compared to tool-using otters eating energy-rich prey."
+        }
+      ],
+      "Command of Evidence": [],
+      "Inferences": []
+    },
+    "Standard English Conventions": {
+      "Boundaries": [],
+      "Form, Structure, and Sense": {
+        "Subject-Verb Agreement": [],
+        "Pronoun Usage": [],
+        "Verb Tenses": [],
+        "Parallelism": [],
+        "Modifiers": [],
+        "Comparisons": [],
+        "Punctuation": []
+      }
+    }
+  }
+}
