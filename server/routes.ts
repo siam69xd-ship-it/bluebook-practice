@@ -3,7 +3,6 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import session from "express-session";
 import connectPg from "connect-pg-simple";
-import crypto from "crypto";
 
 declare module "express-session" {
   interface SessionData {
@@ -121,13 +120,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       const user = await storage.getUserByEmail(email);
       
-      if (!user) {
+      if (!user || !user.password) {
         return res.status(401).json({ message: "Invalid email or password" });
       }
 
-      const hashedPassword = crypto.createHash('sha256').update(password).digest('hex');
+      const isValidPassword = await storage.verifyPassword(password, user.password);
       
-      if (user.password !== hashedPassword) {
+      if (!isValidPassword) {
         return res.status(401).json({ message: "Invalid email or password" });
       }
 

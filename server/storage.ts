@@ -1,7 +1,9 @@
 import { users, questionAttempts, emailVerificationCodes, type User, type UpsertUser, type QuestionAttempt, type InsertQuestionAttempt } from "../shared/schema";
 import { db } from "./db";
 import { eq, and, desc, gt, lt } from "drizzle-orm";
-import crypto from "crypto";
+import bcrypt from "bcrypt";
+
+const SALT_ROUNDS = 12;
 
 export interface IStorage {
   getUser(id: string): Promise<User | undefined>;
@@ -9,6 +11,7 @@ export interface IStorage {
   createUser(email: string, password: string): Promise<User>;
   upsertUser(user: UpsertUser): Promise<User>;
   updateUserPassword(userId: string, password: string): Promise<void>;
+  verifyPassword(password: string, hashedPassword: string): Promise<boolean>;
   verifyUserEmail(email: string): Promise<void>;
   getQuestionAttempts(userId: string): Promise<QuestionAttempt[]>;
   saveQuestionAttempt(attempt: InsertQuestionAttempt): Promise<QuestionAttempt>;
@@ -29,7 +32,7 @@ export class DatabaseStorage implements IStorage {
   }
 
   async createUser(email: string, password: string): Promise<User> {
-    const hashedPassword = crypto.createHash('sha256').update(password).digest('hex');
+    const hashedPassword = await bcrypt.hash(password, SALT_ROUNDS);
     const [user] = await db
       .insert(users)
       .values({
@@ -57,8 +60,12 @@ export class DatabaseStorage implements IStorage {
   }
 
   async updateUserPassword(userId: string, password: string): Promise<void> {
-    const hashedPassword = crypto.createHash('sha256').update(password).digest('hex');
+    const hashedPassword = await bcrypt.hash(password, SALT_ROUNDS);
     await db.update(users).set({ password: hashedPassword, updatedAt: new Date() }).where(eq(users.id, userId));
+  }
+  
+  async verifyPassword(password: string, hashedPassword: string): Promise<boolean> {
+    return bcrypt.compare(password, hashedPassword);
   }
 
   async verifyUserEmail(email: string): Promise<void> {
