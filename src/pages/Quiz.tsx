@@ -11,7 +11,6 @@ import {
   Maximize,
   Minimize,
   Flag,
-  MessageCircle,
   Pencil,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -459,13 +458,6 @@ export default function Quiz() {
 
             {/* Center: Action Buttons */}
             <div className="flex items-center gap-2">
-              <button
-                className="flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-full text-sm font-medium hover:bg-purple-700 transition-colors"
-                data-testid="button-ask-prepy"
-              >
-                <MessageCircle className="w-4 h-4" />
-                Ask Prepy
-              </button>
               <button
                 onClick={() => setShowExplanation(true)}
                 className="flex items-center gap-2 px-4 py-2 bg-amber-500 text-white rounded-full text-sm font-medium hover:bg-amber-600 transition-colors"

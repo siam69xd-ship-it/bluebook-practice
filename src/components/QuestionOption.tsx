@@ -1,5 +1,4 @@
 import { cn } from '@/lib/utils';
-import { X, RotateCcw } from 'lucide-react';
 
 interface QuestionOptionProps {
   letter: string;
@@ -36,11 +35,11 @@ export function QuestionOption({
     <div
       className={cn(
         'group relative flex items-center gap-4 px-4 py-3 rounded-lg border transition-all duration-200 cursor-pointer',
-        isEliminated && 'opacity-40',
+        isEliminated && 'opacity-50',
         !isEliminated && !showOptionWrong && !showOptionCorrect && !showCorrectIndicator && !isSelected && 
-          'border-gray-200 bg-white hover:border-gray-300 hover:shadow-sm',
+          'border-gray-300 bg-white hover:border-gray-400',
         isSelected && !isOptionChecked && !isChecked && 
-          'border-bluebook-cyan-border bg-bluebook-cyan shadow-sm',
+          'border-gray-400 bg-gray-200',
         showOptionWrong && 'border-red-300 bg-red-50',
         showOptionCorrect && 'border-green-300 bg-green-50',
         showCorrectIndicator && 'border-green-200 bg-green-50/50'
@@ -51,9 +50,9 @@ export function QuestionOption({
       {/* Circle Letter Badge */}
       <div
         className={cn(
-          'flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm border-2 transition-all duration-200',
+          'flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-semibold text-sm border transition-all duration-200',
           !isSelected && !isOptionChecked && !showCorrectIndicator && 
-            'border-gray-300 bg-white text-gray-700',
+            'border-gray-400 bg-white text-gray-700',
           isSelected && !isOptionChecked && !isChecked && 
             'border-gray-800 bg-gray-800 text-white',
           showOptionWrong && 'border-red-500 bg-red-500 text-white',
@@ -67,8 +66,9 @@ export function QuestionOption({
       {/* Option text */}
       <span
         className={cn(
-          'flex-1 text-sm leading-relaxed text-gray-800',
-          isEliminated && 'line-through',
+          'flex-1 text-sm leading-relaxed',
+          isEliminated && 'line-through text-gray-500',
+          !isEliminated && !showOptionWrong && !showOptionCorrect && !showCorrectIndicator && 'text-gray-800',
           showOptionWrong && 'text-red-700',
           showOptionCorrect && 'text-green-700',
           showCorrectIndicator && 'text-green-700'
@@ -79,7 +79,7 @@ export function QuestionOption({
 
       {/* Action buttons */}
       <div className="flex items-center gap-2">
-        {/* Check button for selected option (before full check) - always visible when selected */}
+        {/* Check button for selected option (before full check) */}
         {isSelected && !isOptionChecked && !isChecked && (
           <button
             onClick={(e) => {
@@ -94,26 +94,29 @@ export function QuestionOption({
           </button>
         )}
 
-        {/* Eliminate/Restore button - circular with icon */}
+        {/* Elimination button - always visible, circle with crossed arrows */}
         <button
           onClick={(e) => {
             e.stopPropagation();
             onEliminate();
           }}
           className={cn(
-            'flex-shrink-0 w-8 h-8 rounded-full border-2 flex items-center justify-center transition-all duration-200',
+            'flex-shrink-0 w-8 h-8 rounded-full border flex items-center justify-center transition-all duration-200',
             isEliminated
-              ? 'border-gray-400 bg-gray-100 text-gray-600 hover:bg-gray-200'
-              : 'border-gray-200 bg-white text-gray-400 opacity-0 group-hover:opacity-100 hover:border-gray-300 hover:text-gray-600'
+              ? 'border-gray-400 bg-gray-200 text-gray-600 hover:bg-gray-300'
+              : 'border-gray-300 bg-white text-gray-400 hover:border-gray-400 hover:text-gray-600'
           )}
           title={isEliminated ? 'Restore option' : 'Eliminate option'}
           data-testid={`button-eliminate-${letter}`}
         >
-          {isEliminated ? (
-            <RotateCcw className="w-3.5 h-3.5" />
-          ) : (
-            <X className="w-3.5 h-3.5" />
-          )}
+          {/* Crossed arrows icon - strikethrough style */}
+          <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M5 12h14" />
+            <path d="M5 12l4 4" />
+            <path d="M5 12l4-4" />
+            <path d="M19 12l-4 4" />
+            <path d="M19 12l-4-4" />
+          </svg>
         </button>
       </div>
     </div>
