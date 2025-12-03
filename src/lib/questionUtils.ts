@@ -53,31 +53,36 @@ function parseQuestion(rawQuestion: string): { questionText: string; options: { 
   const options: { [key: string]: string } = {};
   let questionText = rawQuestion;
   
-  // Extract options A, B, C, D with different patterns
-  const patterns = [
-    /A\)\s*([^B]+?)(?=B\)|$)/s,
-    /B\)\s*([^C]+?)(?=C\)|$)/s,
-    /C\)\s*([^D]+?)(?=D\)|$)/s,
-    /D\)\s*(.+)$/s,
-  ];
-  
-  const letters = ['A', 'B', 'C', 'D'];
-  
-  letters.forEach((letter, index) => {
-    const match = rawQuestion.match(patterns[index]);
-    if (match) {
-      options[letter] = match[1].trim().replace(/\n/g, ' ');
+  // Find where options start - look for A) at the beginning of a line or after newline/space
+  const optionsStartMatch = rawQuestion.match(/(?:^|\n)\s*A\)\s*/);
+  if (optionsStartMatch && optionsStartMatch.index !== undefined) {
+    const optionsStartIndex = optionsStartMatch.index;
+    questionText = rawQuestion.substring(0, optionsStartIndex).trim();
+    const optionsText = rawQuestion.substring(optionsStartIndex);
+    
+    // Split options by looking for letter patterns at start of line or after newline
+    const optionMatches = optionsText.match(/([A-D])\)\s*([^\n]+?)(?=\n[A-D]\)|$)/gs);
+    
+    if (optionMatches) {
+      optionMatches.forEach(match => {
+        const letterMatch = match.match(/^([A-D])\)\s*(.+)$/s);
+        if (letterMatch) {
+          options[letterMatch[1]] = letterMatch[2].trim().replace(/\n/g, ' ');
+        }
+      });
     }
-  });
-  
-  // Remove options from question text
-  const firstOptionIndex = rawQuestion.search(/A\)/);
-  if (firstOptionIndex !== -1) {
-    questionText = rawQuestion.substring(0, firstOptionIndex).trim();
+    
+    // Fallback: try parsing with line-based approach if regex didn't capture all 4
+    if (Object.keys(options).length < 4) {
+      const lines = optionsText.split('\n');
+      lines.forEach(line => {
+        const lineMatch = line.match(/^\s*([A-D])\)\s*(.+)$/);
+        if (lineMatch && !options[lineMatch[1]]) {
+          options[lineMatch[1]] = lineMatch[2].trim();
+        }
+      });
+    }
   }
-  
-  // Remove "Which choice..." line
-  questionText = questionText.replace(/\n\nWhich choice completes the text so that it conforms to the conventions of Standard English\?$/i, '');
   
   return { questionText, options };
 }

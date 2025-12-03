@@ -462,8 +462,20 @@ export default function Quiz() {
                 </div>
 
                 {/* Question Text */}
-                <p className="text-gray-800 mb-6 text-base leading-relaxed" data-testid="text-question">
-                  Based on the text, select the best answer to the question.
+                <p className="text-gray-800 mb-6 text-base leading-relaxed whitespace-pre-wrap" data-testid="text-question">
+                  {(() => {
+                    const text = currentQuestion.questionText;
+                    // Check for "Which choice" pattern (common in SAT questions)
+                    const whichChoiceMatch = text.match(/Which choice[^?]+\?/i);
+                    if (whichChoiceMatch) {
+                      return whichChoiceMatch[0];
+                    }
+                    // Fallback: if there's a double newline, show the last paragraph
+                    if (text.includes('\n\n')) {
+                      return text.split('\n\n').pop();
+                    }
+                    return 'Based on the text, select the best answer to the question.';
+                  })()}
                 </p>
 
                 {/* Options */}
