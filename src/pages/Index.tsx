@@ -1,12 +1,14 @@
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, BookOpen, Clock, Target, Sparkles } from 'lucide-react';
+import { ArrowRight, BookOpen, Clock, Target, Sparkles, LogOut, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { loadProgress, getAllQuestionsAsync, getTopicCounts, Question } from '@/lib/questionUtils';
 import { useState, useEffect } from 'react';
+import { useAuth } from '@/hooks/useAuth';
 
 export default function Index() {
   const navigate = useNavigate();
+  const { user, isAuthenticated, isLoading: authLoading } = useAuth();
   const [allQuestions, setAllQuestions] = useState<Question[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const savedProgress = loadProgress();
@@ -51,12 +53,41 @@ export default function Index() {
     <div className="min-h-screen gradient-hero">
       {/* Header */}
       <header className="container mx-auto px-4 py-6">
-        <nav className="flex items-center justify-center">
+        <nav className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="w-10 h-10 rounded-xl gradient-bg flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-lg">N</span>
             </div>
             <span className="text-xl font-bold text-foreground">NextPrep</span>
+          </div>
+          <div className="flex items-center gap-3">
+            {!authLoading && (
+              isAuthenticated && user ? (
+                <>
+                  <div className="flex items-center gap-2">
+                    {user.profileImageUrl && (
+                      <img
+                        src={user.profileImageUrl}
+                        alt="Profile"
+                        className="w-8 h-8 rounded-full object-cover"
+                      />
+                    )}
+                    <span className="text-sm text-muted-foreground hidden sm:inline">
+                      {user.firstName || user.email}
+                    </span>
+                  </div>
+                  <Button variant="outline" size="sm" onClick={() => window.location.href = '/api/logout'}>
+                    <LogOut className="w-4 h-4 mr-1" />
+                    Sign Out
+                  </Button>
+                </>
+              ) : (
+                <Button variant="outline" size="sm" onClick={() => navigate('/auth')}>
+                  <User className="w-4 h-4 mr-1" />
+                  Sign In
+                </Button>
+              )
+            )}
           </div>
         </nav>
       </header>

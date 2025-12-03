@@ -34,13 +34,15 @@ import {
   TextHighlight,
 } from '@/lib/questionUtils';
 import { cn } from '@/lib/utils';
-import { useAuth } from '@/contexts/AuthContext';
+import { useAuth } from '@/hooks/useAuth';
 import { useFullscreen } from '@/hooks/useFullscreen';
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 
 export default function Quiz() {
   const navigate = useNavigate();
-  const { user, signOut } = useAuth();
+  const { user, isAuthenticated } = useAuth();
   const { isFullscreen, toggleFullscreen } = useFullscreen();
+  const queryClient = useQueryClient();
   
   // State
   const [allQuestions, setAllQuestions] = useState<Question[]>([]);
@@ -54,6 +56,38 @@ export default function Quiz() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [showHighlightTool, setShowHighlightTool] = useState(false);
   const [isTimerHidden, setIsTimerHidden] = useState(false);
+
+  // Fetch attempt counts for logged-in users
+  const { data: attemptCounts = {} } = useQuery<Record<string, number>>({
+    queryKey: ['/api/attempts'],
+    queryFn: async () => {
+      const response = await fetch('/api/attempts', { credentials: 'include' });
+      if (!response.ok) {
+        if (response.status === 401) return {};
+        throw new Error('Failed to fetch attempts');
+      }
+      return response.json();
+    },
+    enabled: isAuthenticated,
+    staleTime: 30 * 1000,
+  });
+
+  // Save attempt mutation
+  const saveAttemptMutation = useMutation({
+    mutationFn: async (data: { questionId: string; selectedAnswer: string; isCorrect: boolean; timeSpent: number }) => {
+      const response = await fetch('/api/attempts', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify(data),
+      });
+      if (!response.ok) throw new Error('Failed to save attempt');
+      return response.json();
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['/api/attempts'] });
+    },
+  });
 
   // Load questions and saved progress on mount
   useEffect(() => {
@@ -146,7 +180,19 @@ export default function Quiz() {
   // Handler: Check answer
   const handleCheckAnswer = () => {
     if (!currentQuestion || !currentState?.userAnswer) return;
+    
+    const isCorrectAnswer = currentState.userAnswer === currentQuestion.correctAnswer;
     updateQuestionState(currentQuestion.id, { checked: true });
+    
+    // Save attempt for logged-in users
+    if (isAuthenticated) {
+      saveAttemptMutation.mutate({
+        questionId: String(currentQuestion.id),
+        selectedAnswer: currentState.userAnswer,
+        isCorrect: isCorrectAnswer,
+        timeSpent: 0,
+      });
+    }
   };
 
   // Handler: Navigate
@@ -447,14 +493,21 @@ export default function Quiz() {
         <footer className="sticky bottom-0 bg-white border-t border-gray-200">
           <div className="flex items-center justify-between px-4 py-3">
             {/* Left: Question Count */}
-            <button 
-              onClick={() => setShowNavigator(true)}
-              className="flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
-              data-testid="button-question-navigator"
-            >
-              {currentIndex + 1} of {filteredQuestions.length}
-              <ChevronLeft className="w-4 h-4 rotate-[-90deg]" />
-            </button>
+            <div className="flex items-center gap-3">
+              <button 
+                onClick={() => setShowNavigator(true)}
+                className="flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
+                data-testid="button-question-navigator"
+              >
+                {currentIndex + 1} of {filteredQuestions.length}
+                <ChevronLeft className="w-4 h-4 rotate-[-90deg]" />
+              </button>
+              {isAuthenticated && currentQuestion && attemptCounts[String(currentQuestion.id)] && (
+                <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">
+                  Attempts: {attemptCounts[String(currentQuestion.id)]}
+                </span>
+              )}
+            </div>
 
             {/* Center: Action Buttons */}
             <div className="flex items-center gap-2">
