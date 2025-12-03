@@ -109,13 +109,14 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
   
   try {
     // Load all JSON files
-    const [boundariesData, verbsData, pronounData, modifiersData, centralIdeaData, textStructureData] = await Promise.all([
+    const [boundariesData, verbsData, pronounData, modifiersData, centralIdeaData, textStructureData, wordsInContextData] = await Promise.all([
       loadJsonFile('/data/boundaries.json'),
       loadJsonFile('/data/verbs.json'),
       loadJsonFile('/data/pronoun.json'),
       loadJsonFile('/data/modifiers.json'),
       loadJsonFile('/data/central_idea_and_details.json'),
       loadJsonFile('/data/text_structure_and_purpose.json'),
+      loadJsonFile('/data/words_in_context.json'),
     ]);
     
     // Process Boundaries
@@ -368,6 +369,31 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
           section: "English",
           subSection: "Craft and Structure",
           topic: "Cross-Text Connections",
+          questionText: `${q.passage}\n\n${q.question}`,
+          options,
+          correctAnswer: q.answer,
+          explanation: q.explanation,
+        });
+      });
+    }
+    
+    // Process Words in Context questions
+    const wordsInContextCraftStructure = wordsInContextData?.["English Reading & Writing"]?.["Craft and Structure"];
+    if (wordsInContextCraftStructure) {
+      (wordsInContextCraftStructure["Words in Context"] || []).forEach((q: CentralIdeaQuestion) => {
+        const options: { [key: string]: string } = {};
+        q.options.forEach((opt: string) => {
+          const match = opt.match(/^([A-D])\)\s*(.+)$/s);
+          if (match) {
+            options[match[1]] = match[2].trim();
+          }
+        });
+        
+        questions.push({
+          id: globalId++,
+          section: "English",
+          subSection: "Craft and Structure",
+          topic: "Words in Context",
           questionText: `${q.passage}\n\n${q.question}`,
           options,
           correctAnswer: q.answer,
