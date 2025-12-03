@@ -39,6 +39,15 @@ interface RawQuestion {
   explanation: string;
 }
 
+interface CentralIdeaQuestion {
+  id: number;
+  passage: string;
+  question: string;
+  options: string[];
+  answer: string;
+  explanation: string;
+}
+
 // Parse question text to extract options
 function parseQuestion(rawQuestion: string): { questionText: string; options: { [key: string]: string } } {
   const options: { [key: string]: string } = {};
@@ -100,11 +109,12 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
   
   try {
     // Load all JSON files
-    const [boundariesData, verbsData, pronounData, modifiersData] = await Promise.all([
+    const [boundariesData, verbsData, pronounData, modifiersData, centralIdeaData] = await Promise.all([
       loadJsonFile('/data/boundaries.json'),
       loadJsonFile('/data/verbs.json'),
       loadJsonFile('/data/pronoun.json'),
       loadJsonFile('/data/modifiers.json'),
+      loadJsonFile('/data/central_idea_and_details.json'),
     ]);
     
     // Process Boundaries
@@ -229,8 +239,8 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
         });
       });
       
-      // Other Topics
-      (modifiersFormStructure["Other Topics"] || []).forEach((q: RawQuestion) => {
+      // Miscellaneous Topics / Other Topics
+      (modifiersFormStructure["Miscellaneous Topics"] || modifiersFormStructure["Other Topics"] || []).forEach((q: RawQuestion) => {
         const { questionText, options } = parseQuestion(q.question);
         questions.push({
           id: globalId++,
@@ -239,6 +249,77 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
           topic: "Form, Structure, and Sense",
           subTopic: "Miscellaneous Topics",
           questionText,
+          options,
+          correctAnswer: q.answer,
+          explanation: q.explanation,
+        });
+      });
+    }
+    
+    // Process Central Ideas and Details (99 questions)
+    const informationAndIdeas = centralIdeaData?.["English Reading & Writing"]?.["Information and Ideas"];
+    if (informationAndIdeas) {
+      // Central Ideas and Details
+      (informationAndIdeas["Central Ideas and Details"] || []).forEach((q: CentralIdeaQuestion) => {
+        // Parse options from array format ["A) ...", "B) ...", etc.]
+        const options: { [key: string]: string } = {};
+        q.options.forEach((opt: string) => {
+          const match = opt.match(/^([A-D])\)\s*(.+)$/s);
+          if (match) {
+            options[match[1]] = match[2].trim();
+          }
+        });
+        
+        questions.push({
+          id: globalId++,
+          section: "English",
+          subSection: "Information and Ideas",
+          topic: "Central Ideas and Details",
+          questionText: `${q.passage}\n\n${q.question}`,
+          options,
+          correctAnswer: q.answer,
+          explanation: q.explanation,
+        });
+      });
+      
+      // Command of Evidence
+      (informationAndIdeas["Command of Evidence"] || []).forEach((q: CentralIdeaQuestion) => {
+        const options: { [key: string]: string } = {};
+        q.options.forEach((opt: string) => {
+          const match = opt.match(/^([A-D])\)\s*(.+)$/s);
+          if (match) {
+            options[match[1]] = match[2].trim();
+          }
+        });
+        
+        questions.push({
+          id: globalId++,
+          section: "English",
+          subSection: "Information and Ideas",
+          topic: "Command of Evidence",
+          questionText: `${q.passage}\n\n${q.question}`,
+          options,
+          correctAnswer: q.answer,
+          explanation: q.explanation,
+        });
+      });
+      
+      // Inferences
+      (informationAndIdeas["Inferences"] || []).forEach((q: CentralIdeaQuestion) => {
+        const options: { [key: string]: string } = {};
+        q.options.forEach((opt: string) => {
+          const match = opt.match(/^([A-D])\)\s*(.+)$/s);
+          if (match) {
+            options[match[1]] = match[2].trim();
+          }
+        });
+        
+        questions.push({
+          id: globalId++,
+          section: "English",
+          subSection: "Information and Ideas",
+          topic: "Inferences",
+          questionText: `${q.passage}\n\n${q.question}`,
           options,
           correctAnswer: q.answer,
           explanation: q.explanation,
