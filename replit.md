@@ -1,0 +1,154 @@
+# NextPrep - SAT Practice Platform
+
+## Overview
+
+NextPreep is a web-based SAT (Digital SAT/DSAT) practice platform that provides students with authentic past exam questions in a Bluebook-style interface. The application allows users to practice SAT questions with features like topic filtering, question navigation, timers, text highlighting, and detailed explanations. The platform focuses on delivering a smooth, fast, and organized practice experience that mimics the real SAT testing environment.
+
+## User Preferences
+
+Preferred communication style: Simple, everyday language.
+
+## System Architecture
+
+### Frontend Architecture
+
+**Framework & Build Tool**
+- React 18 with TypeScript for type-safe component development
+- Vite as the build tool and development server for fast hot module replacement
+- Single Page Application (SPA) architecture with client-side routing via React Router
+
+**UI Component System**
+- Shadcn UI component library built on Radix UI primitives
+- Tailwind CSS for utility-first styling with custom theme configuration
+- Framer Motion for animations and transitions
+- Component aliasing via TypeScript path mapping (`@/components`, `@/lib`, etc.)
+
+**State Management**
+- React Context API for authentication state (`AuthContext`)
+- TanStack Query (React Query) for server state management and caching
+- Local component state with React hooks
+- LocalStorage for persisting user progress and question states
+
+**Key Design Patterns**
+- Compound component pattern (accordion, dialog, dropdown components)
+- Custom hooks for reusable logic (`useFullscreen`, `useIsMobile`, `use-toast`)
+- Controlled components with form validation via React Hook Form
+- Progressive enhancement with feature detection for fullscreen API
+
+### Data Layer
+
+**Question Data Structure**
+- Questions organized hierarchically: Section → SubSection → Topic → SubTopic
+- JSON-based question storage in `/public/data/` directory
+- Async question loading with caching to improve performance
+- Question categories include:
+  - Standard English Conventions (Boundaries, Verbs, Pronouns, Modifiers)
+  - Information and Ideas (Central Ideas and Details)
+  - Craft and Structure
+  - Expression of Ideas
+
+**State Persistence**
+- User progress saved to LocalStorage with question states tracking:
+  - Selected answers
+  - Marked for review flags
+  - Eliminated options
+  - Text highlights with color and position
+  - Individual option check states
+
+### Routing Structure
+
+- `/` - Landing page with feature overview and stats
+- `/quiz` - Main quiz interface with question practice
+- `/auth` - Authentication page for Google OAuth
+- `/404` - Custom 404 error page for undefined routes
+
+### Authentication & Authorization
+
+**Provider**: Supabase Authentication
+- Google OAuth integration for sign-in
+- Session management via Supabase client
+- Auth state persistence across page reloads
+- Protected routes with redirect logic based on authentication status
+
+**Design Rationale**: OAuth provides a frictionless sign-in experience without requiring password management, reducing user friction and improving security.
+
+### UI/UX Features
+
+**Bluebook-Style Interface**
+- Two-column layout (passage on left, question on right)
+- Custom color scheme matching SAT Bluebook aesthetic
+- Question option states: unselected, selected, eliminated, correct, incorrect
+- Per-question timer with pause functionality
+- Text highlighting tool with multiple color options
+- Mark for review functionality
+
+**Navigation & Filtering**
+- Sidebar filter system with collapsible topic hierarchy
+- Question navigator modal showing progress across all questions
+- Previous/Next navigation with keyboard support
+- Fullscreen mode toggle for distraction-free practice
+
+**Feedback Mechanisms**
+- Explanation panel that slides in from the right
+- Individual option checking before revealing final answer
+- Visual indicators for correct/incorrect answers
+- Toast notifications for user actions
+
+### Styling Architecture
+
+**Tailwind Configuration**
+- Custom color system with CSS variables for theme consistency
+- Extended font families: Inter (sans), Playfair Display (display), Merriweather (serif)
+- Custom highlight colors for text annotation
+- Bluebook-specific theme colors defined as CSS custom properties
+- Dark mode support via class-based strategy
+
+**Rationale**: CSS variables allow runtime theme switching and maintain a single source of truth for colors, while Tailwind provides rapid UI development with consistent spacing and sizing.
+
+### Performance Optimizations
+
+- Async question loading to avoid blocking initial render
+- Question data caching to prevent redundant file fetches
+- Lazy loading of routes with React Router
+- Memoization of filtered question lists
+- Optimized re-renders with proper React key usage
+
+## External Dependencies
+
+### Third-Party Services
+
+**Supabase** (`@supabase/supabase-js`)
+- Backend-as-a-Service for authentication
+- Google OAuth provider integration
+- Session management and token refresh
+
+### Core Libraries
+
+**UI & Styling**
+- `@radix-ui/*` - Unstyled accessible component primitives
+- `tailwindcss` - Utility-first CSS framework
+- `framer-motion` - Animation library for smooth transitions
+- `lucide-react` - Icon library
+- `next-themes` - Theme switching support
+
+**State & Data Management**
+- `@tanstack/react-query` - Server state management and caching
+- `react-hook-form` - Form state management and validation
+- `@hookform/resolvers` - Form validation resolver integration
+
+**Utilities**
+- `clsx` & `class-variance-authority` - Conditional className utilities
+- `date-fns` - Date manipulation and formatting
+- `cmdk` - Command menu component
+
+**Development Tools**
+- `vite` - Build tool and dev server
+- `typescript` - Type checking
+- `eslint` - Code linting with React-specific rules
+- `@vitejs/plugin-react-swc` - Fast React refresh using SWC compiler
+
+### Data Sources
+
+- Static JSON files stored in `/public/data/` directory
+- Question content loaded asynchronously from local files
+- No external API dependencies for question data (fully offline-capable for practice)
