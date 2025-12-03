@@ -41,11 +41,11 @@ Preferred communication style: Simple, everyday language.
 - Questions organized hierarchically: Section → SubSection → Topic → SubTopic
 - JSON-based question storage in `/public/data/` directory
 - Async question loading with caching to improve performance
+- Total Questions: 945 across 11 topics
 - Question categories include:
   - Standard English Conventions (Boundaries, Verbs, Pronouns, Modifiers)
-  - Information and Ideas (Central Ideas and Details)
-  - Craft and Structure
-  - Expression of Ideas
+  - Information and Ideas (Central Ideas and Details, Command of Evidence, Inferences)
+  - Craft and Structure (Text Structure and Purpose, Cross-Text Connections, Words in Context)
 
 **State Persistence**
 - User progress saved to LocalStorage with question states tracking:
@@ -152,3 +152,10 @@ Preferred communication style: Simple, everyday language.
 - Static JSON files stored in `/public/data/` directory
 - Question content loaded asynchronously from local files
 - No external API dependencies for question data (fully offline-capable for practice)
+
+### Deployment Configuration
+
+**Vercel Deployment**
+- `vercel.json` configured with rewrites to handle SPA client-side routing
+- All routes are redirected to `/index.html` for proper React Router navigation
+- This ensures page refresh on deep links (e.g., `/quiz/21`) works correctly
