@@ -120,8 +120,8 @@
         },
         {
           "id": 18,
-          "question": "In 2020,internationally renowned Slovak photographer Mária Švarbová exhibited her work at the Contessa Gallery and the Art Angel Gallery in the United States and ______ utilizing vivid pastel colors, overexposed tones, and mirror like symmetry, Švarbová’s photographs evoke a Socialist-era aesthetic that she describes as 'minimalistic but also futuristic.'\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA)Japan, respectively;\nB)Japan, respectively;\nC)Japan; respectively\nD)Japan, respectively",
-          "answer": "B",
+          "question": "In 2020,internationally renowned Slovak photographer Mária Švarbová exhibited her work at the Contessa Gallery and the Art Angel Gallery in the United States and ______ utilizing vivid pastel colors, overexposed tones, and mirror like symmetry, Švarbová’s photographs evoke a Socialist-era aesthetic that she describes as 'minimalistic but also futuristic.'\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA)Japan, respectively;\nB)Japan, respectively,\nC)Japan; respectively\nD)Japan, respectively",
+          "answer": "D",
           "explanation": "The word 'respectively' indicates that the two galleries correspond to the two countries in the order listed. It is a non-essential element that should be set off by commas. The sentence structure requires a comma after 'Japan' to introduce the modifying adverb 'respectively,' which is then followed by a comma to separate it from the participle phrase that begins the next clause. Therefore, 'Japan, respectively,' is correct."
         },
         {
@@ -152,7 +152,7 @@
           "id": 23,
           "question": "In their 2019 study of butterfly diversity at Rupa Lake in Nepal,researcher Bandana Subedi and her colleagues counted 1,535 butterflies from 138 different species, including one specimen of the ______ Doleschallia bisaltide, a very rare butterfly known among lepidopterists as the autumn leaf.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA)species\nB)species;\nC)species:\nD)species,",
           "answer": "A",
-          "explanation": "No punctuation is needed. The noun 'species' is directly followed by the appositive, which is the specific species name 'Doleschallia bisaltide.' Essential appositives are not set off by punctuation."
+          "explanation": "No punctuation is needed. The noun 'species' is directly followed by the appositive, the specific species name 'Doleschallia bisaltide.' Essential appositives are not set off by punctuation."
         },
         {
           "id": 24,
@@ -349,7 +349,7 @@
         {
           "id": 56,
           "question": "Photographer Mária Svarbová has reached audiences well beyond her home country of Slovakia.In 2021, her work was featured at Galerie LeRoyer in ______ the exhibited photographs, with their vivid pastel colors, overexposed tones, and mirror-like symmetry, captivated audiences.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA)Canada, for example,\nB)Canada, for example\nC)Canada; for example,\nD)Canada, for example;",
-          "answer": "D",
+          "answer": "C",
           "explanation": "The phrase 'for example' is a parenthetical element that should be set off by commas. A semicolon is needed before it to connect the two independent clauses. Therefore, 'Canada; for example,' is correct."
         },
         {
@@ -766,7 +766,7 @@
           "answer": "B",
           "explanation": "A semicolon is needed to connect two closely related independent clauses. The first clause ends with 'attached to the scapula;' the second begins with 'this muscle plays...' Therefore, 'scapula;' is correct."
         },
-         {
+        {
           "id": 126,
           "question": "Despite the fact that what is now known as the Carmichael number was first posited by Václav Šimerka, the number is named after the twentieth-century American mathematician Robert Carmichael. One might assume cases like this, where a discovery or concept is not named after the first person who discovered it, to be ______ they are counted among a litany of examples of Stigler’s law.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) rare on the contrary,\nB) rare, on the contrary;\nC) rare, on the contrary,\nD) rare; on the contrary,",
           "answer": "D",
@@ -786,8 +786,8 @@
         },
         {
           "id": 129,
-          "question": "Recent analysis of 2010 BL4—an outer solar system object orbiting the Sun between Jupiter and Neptune—has determined its color to be gray, suggesting an icy composition. Such interpretations are ultimately ______ the object’s gray coloration may be an incidental effect of radiation, solar wind, or collisions with other objects rather than evidence of its physical makeup.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) speculative, though\nB) speculative, though,\nC) speculative; though\nD) speculative, though;",
-          "answer": "D",
+          "question": "Recent analysis of 2010 BL4—an outer solar system object orbiting the Sun between Jupiter and Neptune—has determined its color to be gray, suggesting an icy composition. Such interpretations are ultimately ______ the object’s gray coloration may be an incidental effect of radiation, solar wind, or collisions with other objects rather than evidence of its physical makeup.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) speculative, though\nB) speculative, though;\nC) speculative; though\nD) speculative, though,",
+          "answer": "B",
           "explanation": "The word 'though' is a conjunctive adverb showing contrast. When it joins two independent clauses, proper punctuation is a semicolon before and a comma after. The option 'speculative, though;' is the correct format, with the semicolon separating the two clauses."
         },
         {
@@ -798,7 +798,7 @@
         },
         {
           "id": 131,
-          "question": "Charline Effah is a novelist from Minvoul, Gabon, who has earned international acclaim in recent years. Writers of other literary forms, such as poetry and drama, are less likely to be recognized beyond their nations’ borders, but many are still well ______ Malika Ouattara, for example, is a celebrated slam poet from Burkina Faso.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) known\nB) known,\nC) known:\nD) known and",
+          "question": "Fatoumata Keïta is a novelist from Bamako, Mali, who has earned international acclaim in recent years. Writers of other literary forms, such as poetry and drama, are less likely to be recognized beyond their nations’ borders, but many are still well ______ Malika Ouattara, for example, is a celebrated slam poet from Burkina Faso.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) known\nB) known,\nC) known:\nD) known",
           "answer": "C",
           "explanation": "A colon is used to introduce an example or explanation. Here, the colon introduces the example of Malika Ouattara. Therefore, 'known:' is correct."
         },
@@ -915,6 +915,306 @@
           "question": "In his Naturalis historia, Pliny the Elder praised Hipparchus’s star catalog, a second-century BCE list of roughly 850 different stars’ celestial positions. For centuries, scholars dreamed about locating a copy of this legendary lost ______ fantasy (partially) became reality in 2022, when researchers uncovered the traces of the star catalog on a palimpsest, a reused parchment.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) work, that\nB) work and that\nC) work that\nD) work. That",
           "answer": "D",
           "explanation": "A period is needed to end the sentence. The next sentence begins with 'That fantasy (partially) became reality...' Therefore, 'work. That' is correct."
+        },
+        {
+          "id": 151,
+          "question": "The editors of Home Ground: A Guide to the American Landscape turned to the ______ to craft the entry about \"hueco,\" a term referring to a water-retaining depression in a rock face.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) novelist Stephen Graham Jones,\nB) novelist Stephen Graham Jones\nC) novelist, Stephen Graham Jones,\nD) novelist, Stephen Graham Jones",
+          "answer": "B",
+          "explanation": "No commas are needed because \"Stephen Graham Jones\" is essential information identifying which novelist."
+        },
+        {
+          "id": 152,
+          "question": "The Organisation for Economic Co-operation and Development (OECD) tracks comparative price list data for its thirty eight member countries. According to this data, in July 2021, a \"basket\" of goods and services priced at 100 US dollars (USD) in the United States would have cost 195 USD in fellow OECD member.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) nation—Finland.\nB) nation: Finland.\nC) nation, Finland.\nD) nation Finland.",
+          "answer": "D",
+          "explanation": "No punctuation is needed; \"Finland\" is in essential apposition to \"member.\""
+        },
+        {
+          "id": 153,
+          "question": "In Los Angeles County, California, bicycle paths like the Rio Hondo bicycle path—which is about 15.6 miles long—have become an increasingly popular means of travel for commuter and recreational trips alike. Moreover, Ernesto has identified bike travel as one possible way to alleviate vehicle congestion, citing the bike friendliness of the area’s temperate climate and mostly flat roads.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) Hernandez-Lopez a lawyer and cycling advocate\nB) Hernandez-Lopez, a lawyer and a cycling advocate,\nC) Hernandez-Lopez a lawyer and cycling advocate,\nD) Hernandez-Lopez, a lawyer and cycling advocate",
+          "answer": "B",
+          "explanation": "The appositive \"a lawyer and a cycling advocate\" is nonrestrictive and must be set off with commas."
+        },
+        {
+          "id": 154,
+          "question": "San Juan High School and Grand County High School are two of several Utah ______ enormous geoglyph of the letters SJ overlooks San Juan High, while a geoglyph of the letter G overlooks Grand County High.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) schools, that have their own hillside geoglyphs, and an\nB) schools that have their own hillside geoglyphs. An\nC) schools that have their own hillside geoglyphs, an\nD) schools, that have their own hillside geoglyphs, an",
+          "answer": "B",
+          "explanation": "Two independent clauses are best separated by a period. The restrictive clause \"that have their own hillside geoglyphs\" requires no comma before \"that.\""
+        },
+        {
+          "id": 155,
+          "question": "With one in Finland and another in Australia,\nthe observatory sites that form the Super Dual\nAuroral Radar Network—or SuperDARN, as\nspace physicists like Mark Lester call\nit—number nearly five across\nthe globe, the radars track ionospheric\nirregularities and other geospace phenomena.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) dozen. Located\nB) dozen, located\nC) dozen, which are located\nD) dozen located",
+          "answer": "A",
+          "explanation": "A period creates two complete sentences: \"There are a dozen.\" and \"Located…\""
+        },
+        {
+          "id": 156,
+          "question": "On March 6. 2002, Canadian astronomers detected a striking and unusual phenomenon occurring in the constellation Lepus, 160 million light-years from ______ explosion of a massive star, also known as a supernova, an extremely bright yet transient event that typically results from the collapse of a star’s core.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) Earth. The\nB) Earth, it was the\nC) Earth: the\nD) Earth; the",
+          "answer": "C",
+          "explanation": "A colon introduces the explanation of the phenomenon."
+        },
+        {
+          "id": 157,
+          "question": "Between December 28 and January 12 each year, particles shed by comet (196256) 2003 EH1 enter Earth’s atmosphere at a velocity of 41 kilometers per second. Relatively few of these particles are likely to reach Earth’s ______ since the meteoroids’ compression of the air surrounding them causes the vast majority to burn mesosphere, producing the Quadrantid meteor shower.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) surface; however,\nB) surface, however,\nC) surface. However,\nD) surface, however;",
+          "answer": "B",
+          "explanation": "\"However\" is a parenthetical interrupter and should be set off by commas."
+        },
+        {
+          "id": 158,
+          "question": "In a chemical reaction, the value known as molar mass helps convert between the mass of the reactants and the mass of the product. The gaseous ______ have molar masses of 150.21 and 16.04 g/mol, respectively.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) compounds, thymol and methane\nB) compounds, thymol and methane,\nC) compounds thymol and methane\nD) compounds thymol and methane,",
+          "answer": "C",
+          "explanation": "No commas are needed because \"thymol and methane\" is essential information specifying which compounds."
+        },
+        {
+          "id": 159,
+          "question": "The pedagogy of the Suzuki method is rooted in several central ______ by Japanese violinist Shinichi Suzuki, who sought to parallel the linguistic learning environment, the method emphasizes learning from skilled musicians who are also skilled teachers and teaches students as young as three to play simple classical pieces such as \"The Two Grenadiers\"\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) tenets developed\nB) tenets, developed\nC) tenets. Developed\nD) tenets that, developed",
+          "answer": "C",
+          "explanation": "A period separates two independent sentences: \"The pedagogy… central tenets.\" and \"Developed by…\""
+        },
+        {
+          "id": 160,
+          "question": "Researchers studying how agricultural fertilizers impact grassland arthropod populations have employed several collection methods. A team led by researcher L. Brian Patrick collected arthropods with ______ another research team, led by Kimberly J. La Pierre, gathered them with bug vacuums.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) pitfall traps for instance\nB) pitfall traps, for instance;\nC) pitfall traps; for instance,\nD) pitfall traps, for instance,",
+          "answer": "B",
+          "explanation": "\"For instance\" is parenthetical and set off by commas; a semicolon separates the two independent clauses."
+        },
+        {
+          "id": 161,
+          "question": "Most sand is beige because of deposits of gray- and tan-hued minerals, such as quartz and feldspar. The sand at Les Sables Roses Beach in French Polynesia is a strikingly different ______ sand gets its shade from deposits of gray- and tan-hued quartz and feldspar, deposits of crushed coral and other organic matter lend the sand at Les Sables Roses Beach a colorful pink tint.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) shade, though. Most\nB) shade, though most\nC) shade: though most\nD) shade, though, most",
+          "answer": "C",
+          "explanation": "A colon introduces the contrasting explanation that follows."
+        },
+        {
+          "id": 162,
+          "question": "For scientists to produce new iron nanoparticles of a specific size or strength, they must first be able to monitor reactions between oxygen and existing iron nanoparticles at a near-atomic level of detail. Fortunately, chemistry ______ and his colleagues at Temple University recently developed a new approach that does just that.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) could their use be better regulated?\nB) their use could be better regulated.\nC) their use could be better regulated?\nD) could their use be better regulated.",
+          "answer": "B",
+          "explanation": "This is an indirect question, so it ends with a period and uses statement word order (\"their use could be\")."
+        },
+        {
+          "id": 163,
+          "question": "While the greater adjutant can be found in places like Hakaluki Haor in Bangladesh and Northern Santuk in Cambodia, more than 80 percent of this endangered stork species is found in Assam, India. There, wildlife biologist Dr. Purnima Devi Barman is on the front lines of conservation efforts that—through community involvement and scientific ______ aim to bring adjutants back from near extinction.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) study—\nB) study,\nC) study:\nD) study",
+          "answer": "A",
+          "explanation": "An em dash closes the interrupting phrase that begins with an em dash earlier in the sentence."
+        },
+        {
+          "id": 164,
+          "question": "On March 23, 2021, a gust of wind wreaked havoc on global trade. Ever Given, an international shipping container vessel, became lodged in Egypt’s Suez Canal, a major shipping route between Europe and Asia. The vessel took six days to ______ it’s as heavy as two thousand blue whales when fully loaded.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) dislodge in part due to its sheer size,\nB) dislodge, in part due to its sheer size:\nC) dislodge, in part due to its sheer size,\nD) dislodge, in part, due to its sheer size",
+          "answer": "B",
+          "explanation": "A colon introduces the explanation for why it took six days; the comma after \"dislodge\" sets off the introductory phrase."
+        },
+        {
+          "id": 165,
+          "question": "On February 1, 2018, Florida-based researchers Martha A.Scholl, Maoya Bassiouni, and Angel J. Torres-Sánchez ______ climate data from several sites in Puerto Rico’s Luquillo Mountains. At 8:30 a.m, the air temperature was 16°C at site CCI, the site with the highest elevation, and it had shifted to 16.8° C by 11:00p.m.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) compiled,\nB) compiled\nC) compiled;\nD) compiled:",
+          "answer": "B",
+          "explanation": "No punctuation is needed after the verb \"compiled\"; it flows directly into the object \"climate data.\""
+        },
+        {
+          "id": 166,
+          "question": "The programming languages COBOL, developed by Grace Hopper in ______ developed by Rich Hickey in 2007, are all routinely translated into executable code by tools known as compilers.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) 1959, Java developed by James Gosling in 1995; and Clojure\nB) 1959, Java; developed by James Gosling in 1995; and Clojure,\nC) 1959; Java, developed by James Gosling in 1995, and Clojure,\nD) 1959; Java, developed by James Gosling in 1995; and Clojure,",
+          "answer": "D",
+          "explanation": "Semicolons separate items in a complex list where items contain internal commas."
+        },
+        {
+          "id": 167,
+          "question": "Most sand is beige because of deposits of gray- and tan-hued minerals, such as quartz and feldspar. The sand at Balos Beach in Greece is a more unusual ______ deposits of crushed coral and other organic matter lend the sand a unique pink hue.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) shade, though\nB) shade; though\nC) shade, though,\nD) shade, though;",
+          "answer": "D",
+          "explanation": "\"Though\" is used as a conjunctive adverb; a comma precedes it and a semicolon follows it to separate the two independent clauses."
+        },
+        {
+          "id": 168,
+          "question": "While the greater adjutant (Leptoptilos dubius) can be found in places like Dong Khanthung in Laos and Chitwan National Park in Nepal, more than 80 percent of this endangered stork species is found in Assam, India. There, wildlife ______ is on the front lines of conservation efforts to bring adjutants back from near extinction\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) biologist Dr. Purnima Devi Barman\nB) biologist: Dr. Purnima Devi Barman.\nC) biologist, Dr. Purnima Devi Barman,\nD) biologist, Dr. Purnima Devi Barman",
+          "answer": "A",
+          "explanation": "\"Dr. Purnima Devi Barman\" is essential information and should not be set off with commas."
+        },
+        {
+          "id": 169,
+          "question": "The giant sequoia (Sequoiadendron giganteum) known as D-23, located in the United States, was one of the oldest known trees in the world, at 3,075 years old. With over three millennia of climate data in its tree ______ single tree like this, claims dendrochronologist Valerie Trouet, can tell the history of the world.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) rings. A\nB) rings; a\nC) rings and a\nD) rings, a",
+          "answer": "D",
+          "explanation": "A comma is needed after \"rings\" to continue the sentence; the following phrase is not an independent clause."
+        },
+        {
+          "id": 170,
+          "question": "After finding information about Blanche Kelso Bruce, who represented Mississippi in the United States Senate, the student discovered biographical sketches of two other Black Americans who served in ______ Ralph Harold Metcalfe of Illinois and Alton R. Waldon Jr. of New York.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) Congress.\nB) Congress:\nC) Congress;\nD) Congress",
+          "answer": "B",
+          "explanation": "A colon introduces the list of names that follows."
+        },
+        {
+          "id": 171,
+          "question": "Mr. T. Rasta and Makhulu were special animals to big cat enthusiasts. Between 2006 and ______ lions prowled the Greater Kruger National Park game reserve in South Africa, forming part of a dominant coalition—the term for a group of male lions—known as the Mapogo.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) 2012 when these\nB) 2012. These\nC) 2012, because these\nD) 2012, these",
+          "answer": "D",
+          "explanation": "A comma after the introductory phrase \"Between 2006 and 2012\" is required before the main clause."
+        },
+        {
+          "id": 172,
+          "question": "The Balkan nation of Bosnia and Herzegovina does not have one president but ______ as members of the office of the presidency, one representing the nation’s Bosniaks, one its Serbs, and one its Croats, these elected officials take turns serving as the office’s chairperson.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) three who are known\nB) three, known\nC) three, who are known\nD) three. Known",
+          "answer": "D",
+          "explanation": "A period creates two sentences: \"does not have one president but three.\" and \"Known as members…\""
+        },
+        {
+          "id": 173,
+          "question": "Many mechanical calculators were powered by a notched cylinder mechanism called the Leibniz wheel. Leibniz wheel calculators were popular in the first half of the twentieth ______ these ingenious devices were eventually replaced by electronic calculators.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) century,\nB) century that\nC) century\nD) century, but",
+          "answer": "D",
+          "explanation": "A comma and the coordinating conjunction \"but\" join two independent clauses showing contrast."
+        },
+        {
+          "id": 174,
+          "question": "Nigerian American artist Toyin Ojih Odutola uses black-ink pens to create highly detailed drawings of human figures. Her portrait of novelist Zadie ______ is displayed in the National Portrait Gallery in London.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) Smith:\nB) Smith,\nC) Smith\nD) Smith—",
+          "answer": "C",
+          "explanation": "No punctuation is needed; \"Zadie Smith\" is the direct object."
+        },
+        {
+          "id": 175,
+          "question": "The term \"retroflex\" derives from Latin and means \"bent back,\" an apt descriptor for the branch of consonants—retroflex consonants—pronounced with the tongue curling up and back in the mouth. In many languages, including English, these consonants are ______ in some dialects of Mandarin, however, four such consonants (\"ch.\" \"sh,\" \"zh,\" and \"r\") are relatively common.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) rare,\nB) rare\nC) rare;\nD) rare, and",
+          "answer": "C",
+          "explanation": "A semicolon separates two independent clauses."
+        },
+        {
+          "id": 176,
+          "question": "Along with carbon dioxide concentration and temperature, light intensity affects the chemical reaction rate of ______ as light intensity increases, so does the rate at which the reactants (water and carbon dioxide) are converted into their products (glucose and oxygen).\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) photosynthesis\nB) photosynthesis:\nC) photosynthesis and\nD) photosynthesis,",
+          "answer": "B",
+          "explanation": "A colon introduces the explanation of how light intensity affects photosynthesis."
+        },
+        {
+          "id": 177,
+          "question": "Gretchen Legler's short essay on \"sound,\" a word referring to a large inlet or channel of a sea or ocean, is included in the collection Home Ground: A Guide to the American Landscape. The book wasn’t written solely by ______ other authors, such as Stephen Graham Jones and Barry Lopez, also contributed essays.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) Legler, however,\nB) Legler; however,\nC) Legler. However,\nD) Legler, however;",
+          "answer": "D",
+          "explanation": "\"However\" is a conjunctive adverb; a comma precedes it and a semicolon follows it to separate the two independent clauses."
+        },
+        {
+          "id": 178,
+          "question": "The Organisation for Economic Co-operation and Development (OECD) tracks comparative price list data for its thirty-eight member countries. According to this data, in July 2021, a \"basket\" of goods and services priced at 100 US dollars (USD) in the United States would have cost 66 USD in fellow OECD member.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) nation Latvia.\nB) nation: Latvia.\nC) nation, Latvia.\nD) nation—Latvia.",
+          "answer": "A",
+          "explanation": "No punctuation is needed; \"Latvia\" is in essential apposition to \"nation.\""
+        },
+        {
+          "id": 179,
+          "question": "The editors of Home Ground: A Guide to the American Landscape turned to Arturo Longoria, a nonfiction writer, to craft the entry for \"arroyo,\" a term referring to the bed of an intermittently dry stream or creek. For \"lek,\" however, the editors chose ______ the author of The Very Rich Hours.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) poet, Emily Hiestand,\nB) poet, Emily Hiestand\nC) poet Emily Hiestand\nD) poet Emily Hiestand,",
+          "answer": "D",
+          "explanation": "No comma after \"poet\" (restrictive), but a comma after \"Hiestand\" sets off the appositive \"the author…\""
+        },
+        {
+          "id": 180,
+          "question": "The Roman historian Suetonius's De vita caesarum, a biography of the Roman Empire's first leaders, is an extant work: it can still be read. By contrast, Suetonius's book on miscellaneous topics, Pratum, no copies of which ______ is a lost work: it can be accessed only indirectly, through references to it in extant works.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) having survived,\nB) to survive,\nC) survived,\nD) surviving,",
+          "answer": "C",
+          "explanation": "The past tense \"survived\" is correct in the restrictive relative clause; no comma is needed."
+        },
+        {
+          "id": 181,
+          "question": "Within Earth's biomes, there are four main types of desert: arid, semiarid, coastal, and cold. The Australian Desert in Australasia is an arid ______ with a total area of about 2,700,000  km^2 , it is one of the largest deserts of any type.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) desert,\nB) desert, and\nC) desert and\nD) desert",
+          "answer": "B",
+          "explanation": "A comma and \"and\" join two independent clauses."
+        },
+        {
+          "id": 182,
+          "question": "Most sand is beige because of deposits of gray and tan-hued minerals, such as quartz and feldspar. The sand at Talofofo Beach in Guam is an ______ sand gets its shade from deposits of gray- and tan-hued quartz and feldspar, deposits of crushed olivine crystal and other organic matter lend the sand at Talofofo Beach a colorful green tint.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) exception, though most\nB) exception: though most\nC) exception, though, most\nD) exception, though. Most",
+          "answer": "B",
+          "explanation": "A colon introduces the contrasting explanation."
+        },
+        {
+          "id": 183,
+          "question": "Museo del Autonomismo Puertorriqueño is a history museum in Ponce, Puerto Rico. It’s one of more than eighty museums in the US territory. Puerto Rico’s ______ showcase everything from the territory’s history to it’s architecture to its coffee.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) museums\nB) museums:\nC) museums,\nD) museums—",
+          "answer": "A",
+          "explanation": "No punctuation is needed; the sentence flows directly."
+        },
+        {
+          "id": 184,
+          "question": "In the 1980s, Latino filmmakers Luis Valdez. Gregory Nava, and Ramón Menéndez helped expand on-screen representation of Latino Americans with the films Zoot Suit ______ and Stand and Deliver (1988), respectively.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) (1981) El Norte (1983),\nB) (1981) El Norte (1983)\nC) (1981)—El Norte (1983)—\nD) (1981), El Norte (1983),",
+          "answer": "D",
+          "explanation": "Commas separate items in a list: \"Zoot Suit (1981), El Norte (1983), and Stand and Deliver (1988).\""
+        },
+        {
+          "id": 185,
+          "question": "Olga Tokarezuk of Poland won it; George Bernard Shaw of Ireland won it, too. These are just two examples of the wide range of writers to be granted what is arguably the most prestigious ______ the Nobel Prize in Literature.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) award: for a person of letters;\nB) award for a person of letters;\nC) award: for a person of letters\nD) award for a person of letters:",
+          "answer": "D",
+          "explanation": "A colon introduces the specific award that is being named."
+        },
+        {
+          "id": 186,
+          "question": "For scientists to produce new iron nanoparticles of a specific size or strength, they must first be able to monitor reactions between oxygen and existing iron nanoparticles at a near-atomic level of detail. Fortunately, chemistry ______ and his colleagues at Temple University recently developed a new approach that does just that.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) professor Yugang Sun\nB) professor Yugang Sun,\nC) professor, Yugang Sun\nD) professor, Yugang Sun",
+          "answer": "A",
+          "explanation": "No commas are needed; \"professor Yugang Sun\" is restrictive."
+        },
+        {
+          "id": 187,
+          "question": "In rural Minnesota, ecologist Leroy Walston conducted a study to determine whether seeding solar panel fields with wildflowers could bolster pollinator populations in nearby food crops. Walston’s findings indicate that—assuming solar panel installers’ ______ practice has the potential to increase the number of native bees in crops near solar fields throughout the Midwest by up to 20 percent.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) cooperation this\nB) cooperation: this\nC) cooperation—this\nD) cooperation, this",
+          "answer": "C",
+          "explanation": "An em dash closes the interrupting phrase that began with an em dash earlier in the sentence."
+        },
+        {
+          "id": 188,
+          "question": "The Balkan nation of Bosnia and Herzegovina does not have one president but ______ as members of the office of the presidency, one representing the nation’s Bosniaks, one its Serbs, and one its Croats, these elected officials take turns serving as the office’s chairperson.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) three who are known\nB) three, known\nC) three, who are known\nD) three. Known",
+          "answer": "D",
+          "explanation": "A period creates two sentences: \"does not have one president but three.\" and \"Known as members…\""
+        },
+        {
+          "id": 189,
+          "question": "George Saunders concludes his essay \"What Writers Really Do When They Write\" by comparing the work of fiction writing to the act of juggling. The author-as-juggler performs a ______ gathering of central themes and tensions, the tossing of these elements into a dynamic narrative, and the catching of the resolutions that emerge.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) routine; the\nB) routine, the\nC) routine. The\nD) routine: the",
+          "answer": "D",
+          "explanation": "A colon introduces the list of actions that describe the routine."
+        },
+        {
+          "id": 190,
+          "question": "In her work, Ponce artist Julie Buffalohead uses mythical animal imagery to create fairytale-esque drawings and paintings. Since 1989, Indianapolis’ s Eiteljorg Museum has celebrated the work of groundbreaking contemporary Native ______ in 2013, it awarded Buffalohead one of its prestigious artist fellowships.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) artists, thus\nB) artists,\nC) artists and\nD) artists;",
+          "answer": "D",
+          "explanation": "A semicolon separates two independent clauses."
+        },
+        {
+          "id": 191,
+          "question": "In 2012, Ken Liu’s hard work paid off. Before an audience ______ fantasy writers from around the world, Liu’s ‘The Paper Menagerie’ received the World Fantasy Award, one of the most prestigious honors in fantasy literature, for Best Short Fiction.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) of\nB) of:\nC) of,\nD) of;",
+          "answer": "A",
+          "explanation": "No punctuation is needed in the prepositional phrase \"Before an audience of fantasy writers.\""
+        },
+        {
+          "id": 192,
+          "question": "The giant sequoia (Sequoiadendron giganteum) known as D-23, located in the United States, was one of the oldest known trees in the world, at 3,075 years old. With over three millennia of climate data in its tree ______ single tree like this, claims dendrochronologist Valerie Trouet, can tell the history of the world.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) rings. A\nB) rings; a\nC) rings and a\nD) rings, a",
+          "answer": "D",
+          "explanation": "A comma is needed after \"rings\" to continue the sentence."
+        },
+        {
+          "id": 193,
+          "question": "After finding information about Blanche Kelso Bruce, who represented Mississippi in the United States Senate, the student discovered biographical sketches of two other Black Americans who served in ______ Ralph Harold Metcalfe of Illinois and Alton R. Waldon jr of New York.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) Congress.\nB) Congress:\nC) Congress;\nD) Congress",
+          "answer": "B",
+          "explanation": "A colon introduces the list of names that follows."
+        },
+        {
+          "id": 194,
+          "question": "The poem \"Naomi,\" which was published in 1960, contains three signature elements of Gwendolyn Brooks's poetic ______ compressed lines infused with bursts of vivid imagery; syncopated rhythms, largely inspired by the blues tradition; and a keen attention to everyday life in Brooks's South Side Chicago neighborhood.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) style. Terse\nB) style, terse,\nC) style: terse,\nD) style; terse,",
+          "answer": "C",
+          "explanation": "A colon introduces the list of elements."
+        },
+        {
+          "id": 195,
+          "question": "The human body has three types of muscle ______ cardiac, and skeletal. The ______ levaror angua oris is a skeletal muscle—of which the body contains more than six hundred—and it helps with raising the corners of the mouth.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) tissue and smooth\nB) tissue: smooth\nC) tissue smooth,\nD) tissue. Smooth",
+          "answer": "B",
+          "explanation": "A colon introduces the list of muscle types: smooth, cardiac, and skeletal."
+        },
+        {
+          "id": 196,
+          "question": "What makes the theremin a unique musical instrument? You play it without touching it. When you place your ______ the pitch will shift as your hands move through the air.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) hand’s between the two antenna’s,\nB) hands between the two antennas,\nC) hands’ between the two antennas’,\nD) hands’ between the two antennas,",
+          "answer": "B",
+          "explanation": "Plural \"hands\" and \"antennas\" (not possessive) are correct; a comma after \"antennas\" sets off the introductory clause."
+        },
+        {
+          "id": 197,
+          "question": "Most sand is beige because of deposits of gray and tan-hued minerals, such as quartz and feldspar. The sand at Balos Beach in Greece is a more unusual ______ deposits of crushed coral and other organic matter lend the sand a unique pink hue.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) shade, though\nB) shade; though\nC) shade, though,\nD) shade, though;",
+          "answer": "D",
+          "explanation": "\"Though\" is used as a conjunctive adverb; a comma precedes it and a semicolon follows it to separate the two independent clauses."
+        },
+        {
+          "id": 198,
+          "question": "San Juan High School and Grand County High School are two of several Utah ______ enormous geoglyph of the letters SJ overlooks San Juan High, while a geoglyph of the letter G overlooks Grand County High.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) schools that have their own hillside geoglyphs. An\nB) schools, that have their own hillside geoglyphs and an\nC) schools that have their own hillside geoglyphs, an\nD) schools, that have their own hillside geoglyphs, an",
+          "answer": "A",
+          "explanation": "Two independent clauses are best separated by a period. The restrictive clause \"that have their own hillside geoglyphs\" requires no comma before \"that.\""
+        },
+        {
+          "id": 199,
+          "question": "Deposits of crushed orange limestone and other organic matter lend the sand at Porto Festo Beach in Italy an unusual orange tint that dazzles ______ they take a bit of sand home, though, it disturbs the beach’s ecosystem by contributing to erosion.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) visitors, when\nB) visitors and when\nC) visitors when\nD) visitors. When",
+          "answer": "D",
+          "explanation": "A period creates two sentences: \"Deposits… dazzles visitors.\" and \"When they take… it disturbs…\""
+        },
+        {
+          "id": 200,
+          "question": "Consider the mechanics of the pinhole camera: light passes through a small hole, resulting in a focused projected image. A ray diagram reveals how this ______ the hole’s small size restricts light to a single ray, all light passing through the hole can only arrive at a single destination, eliminating diffraction and ensuring a clear image.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) works because\nB) works. Because\nC) works, it’s because\nD) works: it’s because",
+          "answer": "B",
+          "explanation": "Two independent clauses: \"A ray diagram reveals how this works.\" and \"Because the hole’s small size…\""
         },
         {
           "id": 201,
@@ -1212,11 +1512,11 @@
         },
         {
           "id": 250,
-          "question": "In a chemical equation, converting between the mass of the reactants and the mass of the product requires knowing each component’s molar mass, a quantification of the average mass of the atoms in a compound. The liquid has a molar mass of 170.33 g/mol.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) compound, dodecane (C_1 2H_2 6),\nB) compound, dodecane (C_1 2H_2 6)\nC) compound dodecane (C_1 2H_2 6),\nD) compound dodecane (C_1 2H_2 6)",
+          "question": "The liquid has a molar mass of 170.33 g/mol.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) compound, dodecane (C_1 2H_2 6),\nB) compound, dodecane (C_1 2H_2 6)\nC) compound dodecane (C_1 2H_2 6),\nD) compound dodecane (C_1 2H_2 6)",
           "answer": "D",
           "explanation": "No punctuation is needed. The phrase 'The liquid compound dodecane (C12H26)' flows directly, with 'dodecane' as an essential appositive. Therefore, 'compound dodecane (C12H26)' is correct."
         }
       ]
     }
   }
-}
+        }
