@@ -462,33 +462,46 @@ export default function Quiz() {
         </main>
 
         {/* Bottom Navigation */}
-        <footer className="sticky bottom-0 bg-card/95 backdrop-blur-sm border-t border-border">
-          <div className="flex items-center justify-between px-4 py-3">
-            <Button
-              variant="nav"
-              onClick={() => handleNavigate('prev')}
-              disabled={currentIndex === 0}
+        <footer className="sticky bottom-0 bg-card/95 backdrop-blur-sm border-t border-border shadow-lg">
+          <div className="flex items-center justify-between px-4 py-4">
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
             >
-              <ChevronLeft className="w-5 h-5" />
-              <span className="hidden sm:inline">Previous</span>
-            </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={() => handleNavigate('prev')}
+                disabled={currentIndex === 0}
+                className="gap-2 px-6 shadow-sm hover:shadow-md transition-shadow"
+              >
+                <ChevronLeft className="w-5 h-5" />
+                <span>Previous</span>
+              </Button>
+            </motion.div>
 
-            <div className="flex items-center gap-2">
-              <span className="text-sm text-muted-foreground">
-                <span className="font-semibold text-foreground">{currentIndex + 1}</span>
-                {' / '}
-                {filteredQuestions.length}
+            <div className="flex items-center gap-3 px-4 py-2 rounded-full bg-muted/50">
+              <span className="text-sm font-medium">
+                <span className="text-lg font-bold text-primary">{currentIndex + 1}</span>
+                <span className="text-muted-foreground"> / {filteredQuestions.length}</span>
               </span>
             </div>
 
-            <Button
-              variant="nav"
-              onClick={() => handleNavigate('next')}
-              disabled={currentIndex === filteredQuestions.length - 1}
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
             >
-              <span className="hidden sm:inline">Next</span>
-              <ChevronRight className="w-5 h-5" />
-            </Button>
+              <Button
+                variant="default"
+                size="lg"
+                onClick={() => handleNavigate('next')}
+                disabled={currentIndex === filteredQuestions.length - 1}
+                className="gap-2 px-6 shadow-md hover:shadow-lg transition-shadow"
+              >
+                <span>Next</span>
+                <ChevronRight className="w-5 h-5" />
+              </Button>
+            </motion.div>
           </div>
         </footer>
       </div>
