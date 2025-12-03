@@ -62,6 +62,12 @@ export default {
           pink: "hsl(var(--highlight-pink))",
           blue: "hsl(var(--highlight-blue))",
         },
+        bluebook: {
+          bg: "hsl(var(--bluebook-bg))",
+          panel: "hsl(var(--bluebook-panel))",
+          cyan: "hsl(var(--bluebook-cyan))",
+          "cyan-border": "hsl(var(--bluebook-cyan-border))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

@@ -4,16 +4,15 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {
   ChevronLeft,
   ChevronRight,
-  Flag,
-  Grid3X3,
+  Bookmark,
   Menu,
   Home,
-  Check,
   Lightbulb,
   Maximize,
   Minimize,
-  LogOut,
-  User,
+  Flag,
+  MessageCircle,
+  Pencil,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Timer } from '@/components/Timer';
@@ -54,11 +53,13 @@ export default function Quiz() {
   const [showExplanation, setShowExplanation] = useState(false);
   const [showFilterSidebar, setShowFilterSidebar] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [showHighlightTool, setShowHighlightTool] = useState(false);
+  const [isTimerHidden, setIsTimerHidden] = useState(false);
 
   // Load questions and saved progress on mount
   useEffect(() => {
     const loadData = async () => {
-      clearQuestionCache(); // Clear cache to load fresh data
+      clearQuestionCache();
       const questions = await getAllQuestionsAsync();
       setAllQuestions(questions);
       
@@ -108,7 +109,6 @@ export default function Quiz() {
   // Handler: Select answer
   const handleSelectAnswer = (letter: string) => {
     if (!currentQuestion || currentState?.checked) return;
-    // Don't allow selection if this option was already individually checked
     if (currentState?.checkedOptions?.includes(letter)) return;
     updateQuestionState(currentQuestion.id, {
       userAnswer: currentState?.userAnswer === letter ? null : letter,
@@ -161,10 +161,9 @@ export default function Quiz() {
     } else if (direction === 'next' && currentIndex < filteredQuestions.length - 1) {
       targetIndex = currentIndex + 1;
     } else {
-      return; // No valid navigation
+      return;
     }
 
-    // Reset the target question's answer state (fresh/unattempted on every visit)
     const targetQuestion = filteredQuestions[targetIndex];
     if (targetQuestion) {
       updateQuestionState(targetQuestion.id, { 
@@ -203,7 +202,7 @@ export default function Quiz() {
 
   if (!isLoaded) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-background">
+      <div className="min-h-screen flex items-center justify-center bg-bluebook-bg">
         <div className="text-center">
           <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-4" />
           <p className="text-muted-foreground">Loading questions...</p>
@@ -214,10 +213,10 @@ export default function Quiz() {
 
   if (filteredQuestions.length === 0) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-background">
+      <div className="min-h-screen flex items-center justify-center bg-bluebook-bg">
         <div className="text-center">
           <p className="text-xl font-medium text-foreground mb-4">No questions available</p>
-          <Button onClick={() => navigate('/')}>Return Home</Button>
+          <Button onClick={() => navigate('/')} data-testid="button-return-home">Return Home</Button>
         </div>
       </div>
     );
@@ -225,10 +224,10 @@ export default function Quiz() {
 
   if (!currentQuestion) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-background">
+      <div className="min-h-screen flex items-center justify-center bg-bluebook-bg">
         <div className="text-center">
           <p className="text-xl font-medium text-foreground mb-4">No questions found for this filter</p>
-          <Button onClick={() => setActiveFilter({})}>Clear Filters</Button>
+          <Button onClick={() => setActiveFilter({})} data-testid="button-clear-filters">Clear Filters</Button>
         </div>
       </div>
     );
@@ -237,7 +236,7 @@ export default function Quiz() {
   const isCorrect = currentState?.userAnswer === currentQuestion.correctAnswer;
 
   return (
-    <div className="min-h-screen bg-background flex">
+    <div className="min-h-screen bg-bluebook-bg flex">
       {/* Filter Sidebar */}
       <FilterSidebar
         questions={allQuestions}
@@ -249,171 +248,181 @@ export default function Quiz() {
 
       {/* Main Content */}
       <div className="flex-1 flex flex-col min-h-screen">
-        {/* Top Bar */}
-        <header className="sticky top-0 z-30 bg-card/95 backdrop-blur-sm border-b border-border">
-          <div className="flex items-center justify-between px-4 py-3">
-            <div className="flex items-center gap-3">
-              <Button
-                variant="ghost"
-                size="iconSm"
-                onClick={() => setShowFilterSidebar(true)}
-                className="lg:hidden"
+        {/* Top Bar - Bluebook Style */}
+        <header className="sticky top-0 z-30 bg-white border-b border-gray-200">
+          <div className="flex items-center justify-between px-4 h-14">
+            {/* Left: Back arrow, Home, Filter, Title */}
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => navigate('/')}
+                className="p-2 rounded-md hover:bg-gray-100 transition-colors"
+                data-testid="button-back-home"
               >
-                <Menu className="w-5 h-5" />
-              </Button>
+                <ChevronLeft className="w-5 h-5 text-gray-600" />
+              </button>
+              <button
+                onClick={() => navigate('/')}
+                className="p-2 rounded-md hover:bg-gray-100 transition-colors"
+                data-testid="button-home"
+              >
+                <Home className="w-5 h-5 text-gray-600" />
+              </button>
               <button
                 onClick={() => setShowFilterSidebar(!showFilterSidebar)}
-                className="hidden lg:flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className="p-2 rounded-md hover:bg-gray-100 transition-colors"
+                data-testid="button-filter-toggle"
               >
-                <Menu className="w-4 h-4" />
-                Filters
+                <Menu className="w-5 h-5 text-gray-600" />
               </button>
-              <div className="h-6 w-px bg-border hidden sm:block" />
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => navigate('/')}
-                className="hidden sm:flex"
+              <span className="text-base font-medium text-gray-900 ml-2">Real DSAT Question Bank</span>
+            </div>
+
+            {/* Center: Timer with Hide toggle */}
+            <div className="flex items-center gap-2">
+              <Timer 
+                questionId={currentQuestion.id} 
+                isHidden={isTimerHidden}
+              />
+              <button
+                onClick={() => setIsTimerHidden(!isTimerHidden)}
+                className="flex items-center gap-1.5 px-3 py-1.5 text-sm text-gray-600 hover:bg-gray-100 rounded-md transition-colors"
+                data-testid="button-hide-timer"
               >
-                <Home className="w-4 h-4 mr-1" />
-                Home
-              </Button>
+                <span className="flex gap-0.5">
+                  <span className="w-0.5 h-3 bg-gray-600"></span>
+                  <span className="w-0.5 h-3 bg-gray-600"></span>
+                </span>
+                {isTimerHidden ? 'Show' : 'Hide'}
+              </button>
             </div>
 
+            {/* Right: Highlight, Fullscreen */}
             <div className="flex items-center gap-2">
-              <Timer questionId={currentQuestion.id} />
-            </div>
-
-            <div className="flex items-center gap-2">
-              {/* Fullscreen Toggle */}
-              <Button
-                variant="outline"
-                size="sm"
+              <button
+                onClick={() => setShowHighlightTool(!showHighlightTool)}
+                className={cn(
+                  "flex flex-col items-center gap-0.5 px-3 py-1 rounded-md transition-colors",
+                  showHighlightTool ? "bg-gray-100" : "hover:bg-gray-100"
+                )}
+                data-testid="button-highlight-toggle"
+              >
+                <Pencil className="w-4 h-4 text-gray-600" />
+                <span className="text-xs text-gray-600">Highlight</span>
+              </button>
+              <button
                 onClick={toggleFullscreen}
-                title={isFullscreen ? 'Exit Fullscreen' : 'Enter Fullscreen'}
+                className="flex flex-col items-center gap-0.5 px-3 py-1 rounded-md hover:bg-gray-100 transition-colors"
+                data-testid="button-fullscreen"
               >
                 {isFullscreen ? (
-                  <Minimize className="w-4 h-4" />
+                  <Minimize className="w-4 h-4 text-gray-600" />
                 ) : (
-                  <Maximize className="w-4 h-4" />
+                  <Maximize className="w-4 h-4 text-gray-600" />
                 )}
-              </Button>
-
-              {/* Mark for Review */}
-              <Button
-                variant={currentState?.markedForReview ? 'default' : 'outline'}
-                size="sm"
-                onClick={handleToggleMark}
-                className={cn(
-                  currentState?.markedForReview && 'bg-accent text-accent-foreground'
-                )}
-              >
-                <Flag className="w-4 h-4" />
-                <span className="hidden sm:inline">
-                  {currentState?.markedForReview ? 'Marked' : 'Mark'}
-                </span>
-              </Button>
-
-              {/* Navigator */}
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() => setShowNavigator(true)}
-              >
-                <Grid3X3 className="w-4 h-4" />
-                <span className="hidden sm:inline">Navigate</span>
-              </Button>
-
-              {/* User/Auth */}
-              {user ? (
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={() => signOut()}
-                  title="Sign out"
-                >
-                  <LogOut className="w-4 h-4" />
-                  <span className="hidden sm:inline">Sign Out</span>
-                </Button>
-              ) : (
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={() => navigate('/auth')}
-                >
-                  <User className="w-4 h-4" />
-                  <span className="hidden sm:inline">Sign In</span>
-                </Button>
-              )}
+                <span className="text-xs text-gray-600">Fullscreen</span>
+              </button>
             </div>
           </div>
 
           {/* Highlight Tool Bar */}
-          <div className="px-4 py-2 border-t border-border bg-muted/30">
-            <HighlightTool
-              selectedColor={selectedHighlightColor}
-              onColorSelect={setSelectedHighlightColor}
-            />
-          </div>
+          {showHighlightTool && (
+            <div className="px-4 py-2 border-t border-gray-200 bg-gray-50">
+              <HighlightTool
+                selectedColor={selectedHighlightColor}
+                onColorSelect={setSelectedHighlightColor}
+              />
+            </div>
+          )}
         </header>
 
-        {/* Question Content */}
+        {/* Question Content - Two Panel Layout */}
         <main className="flex-1 flex flex-col lg:flex-row">
-          {/* Passage/Question Area */}
-          <div className="flex-1 flex flex-col lg:flex-row divide-y lg:divide-y-0 lg:divide-x divide-border">
-            {/* Left Panel - Question Text / Passage */}
-            <div className="flex-1 p-6 overflow-y-auto">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={currentQuestion.id}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  {/* Topic Badge */}
-                  <div className="flex flex-wrap items-center gap-2 mb-4">
-                    <span className="px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary">
-                      {currentQuestion.section}
+          {/* Left Panel - Passage */}
+          <div className="flex-1 p-6 overflow-y-auto border-r border-gray-200 bg-white">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentQuestion.id}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.2 }}
+              >
+                <HighlightableText
+                  text={currentQuestion.questionText}
+                  highlights={currentState?.highlights || []}
+                  selectedColor={selectedHighlightColor}
+                  onAddHighlight={handleAddHighlight}
+                  onRemoveHighlight={handleRemoveHighlight}
+                  className="quiz-passage text-gray-800 whitespace-pre-wrap leading-relaxed text-base"
+                />
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          {/* Right Panel - Question and Options */}
+          <div className="flex-1 p-6 overflow-y-auto bg-bluebook-panel">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentQuestion.id}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.2, delay: 0.1 }}
+              >
+                {/* Question Header */}
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-3">
+                    <span className="flex items-center justify-center w-8 h-8 bg-gray-900 text-white text-sm font-bold rounded" data-testid="text-question-number">
+                      {currentIndex + 1}
                     </span>
-                    <span className="px-3 py-1 rounded-full text-xs font-medium bg-muted text-muted-foreground">
-                      {currentQuestion.subTopic || currentQuestion.topic}
+                    <button
+                      onClick={handleToggleMark}
+                      className={cn(
+                        "flex items-center gap-2 px-3 py-1.5 rounded-md text-sm transition-colors",
+                        currentState?.markedForReview
+                          ? "bg-amber-50 text-amber-700 border border-amber-200"
+                          : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                      )}
+                      data-testid="button-mark-review"
+                    >
+                      <Bookmark className={cn(
+                        "w-4 h-4",
+                        currentState?.markedForReview && "fill-amber-500"
+                      )} />
+                      Mark for Review
+                    </button>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <button 
+                      className="flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700"
+                      data-testid="button-report"
+                    >
+                      <Flag className="w-4 h-4" />
+                      Report
+                    </button>
+                    <span className="w-8 h-8 flex items-center justify-center bg-purple-600 text-white rounded-full text-xs font-bold" data-testid="text-user-badge">
+                      S
                     </span>
                   </div>
+                </div>
 
-                  {/* Question Number */}
-                  <p className="text-sm text-muted-foreground mb-4">
-                    Question {currentIndex + 1} of {filteredQuestions.length}
-                  </p>
+                {/* Topic Badge */}
+                <div className="flex flex-wrap items-center gap-2 mb-4">
+                  <span className="px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary" data-testid="badge-section">
+                    {currentQuestion.section}
+                  </span>
+                  <span className="px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-600" data-testid="badge-topic">
+                    {currentQuestion.subTopic || currentQuestion.topic}
+                  </span>
+                </div>
 
-                  {/* Question Text */}
-                  <HighlightableText
-                    text={currentQuestion.questionText}
-                    highlights={currentState?.highlights || []}
-                    selectedColor={selectedHighlightColor}
-                    onAddHighlight={handleAddHighlight}
-                    onRemoveHighlight={handleRemoveHighlight}
-                    className="quiz-passage text-foreground whitespace-pre-wrap"
-                  />
-                </motion.div>
-              </AnimatePresence>
-            </div>
+                {/* Question Text */}
+                <p className="text-gray-800 mb-6 text-base leading-relaxed" data-testid="text-question">
+                  Based on the text, select the best answer to the question.
+                </p>
 
-            {/* Right Panel - Options */}
-            <div className="flex-1 p-6 overflow-y-auto bg-muted/10">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={currentQuestion.id}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.2, delay: 0.1 }}
-                  className="space-y-3"
-                >
-                  <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-4">
-                    Select your answer
-                  </h3>
-
+                {/* Options */}
+                <div className="space-y-3">
                   {Object.entries(currentQuestion.options).map(([letter, text]) => (
                     <QuestionOption
                       key={letter}
@@ -429,79 +438,97 @@ export default function Quiz() {
                       onCheckOption={() => handleCheckOption(letter)}
                     />
                   ))}
-
-                  {/* Check/Explanation Buttons */}
-                  <div className="flex gap-3 pt-6">
-                    {!currentState?.checked ? (
-                      <Button
-                        variant="check"
-                        size="lg"
-                        onClick={handleCheckAnswer}
-                        disabled={!currentState?.userAnswer}
-                        className="flex-1"
-                      >
-                        <Check className="w-5 h-5" />
-                        Check Answer
-                      </Button>
-                    ) : (
-                      <Button
-                        variant={isCorrect ? 'success' : 'destructive'}
-                        size="lg"
-                        onClick={() => setShowExplanation(true)}
-                        className="flex-1"
-                      >
-                        <Lightbulb className="w-5 h-5" />
-                        {isCorrect ? 'Correct!' : 'Incorrect'} — View Explanation
-                      </Button>
-                    )}
-                  </div>
-                </motion.div>
-              </AnimatePresence>
-            </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
           </div>
         </main>
 
-        {/* Bottom Navigation */}
-        <footer className="sticky bottom-0 bg-card/95 backdrop-blur-sm border-t border-border shadow-lg">
-          <div className="flex items-center justify-between px-4 py-4">
-            <motion.div
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+        {/* Bottom Navigation - Bluebook Style */}
+        <footer className="sticky bottom-0 bg-white border-t border-gray-200">
+          <div className="flex items-center justify-between px-4 py-3">
+            {/* Left: Question Count */}
+            <button 
+              onClick={() => setShowNavigator(true)}
+              className="flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
+              data-testid="button-question-navigator"
             >
-              <Button
-                variant="outline"
-                size="lg"
-                onClick={() => handleNavigate('prev')}
-                disabled={currentIndex === 0}
-                className="gap-2 px-6 shadow-sm hover:shadow-md transition-shadow"
-              >
-                <ChevronLeft className="w-5 h-5" />
-                <span>Previous</span>
-              </Button>
-            </motion.div>
+              {currentIndex + 1} of {filteredQuestions.length}
+              <ChevronLeft className="w-4 h-4 rotate-[-90deg]" />
+            </button>
 
-            <div className="flex items-center gap-3 px-4 py-2 rounded-full bg-muted/50">
-              <span className="text-sm font-medium">
-                <span className="text-lg font-bold text-primary">{currentIndex + 1}</span>
-                <span className="text-muted-foreground"> / {filteredQuestions.length}</span>
-              </span>
+            {/* Center: Action Buttons */}
+            <div className="flex items-center gap-2">
+              <button
+                className="flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-full text-sm font-medium hover:bg-purple-700 transition-colors"
+                data-testid="button-ask-prepy"
+              >
+                <MessageCircle className="w-4 h-4" />
+                Ask Prepy
+              </button>
+              <button
+                onClick={() => setShowExplanation(true)}
+                className="flex items-center gap-2 px-4 py-2 bg-amber-500 text-white rounded-full text-sm font-medium hover:bg-amber-600 transition-colors"
+                data-testid="button-explanation"
+              >
+                <Lightbulb className="w-4 h-4" />
+                Explanation
+              </button>
+              {!currentState?.checked ? (
+                <button
+                  onClick={handleCheckAnswer}
+                  disabled={!currentState?.userAnswer}
+                  className={cn(
+                    "flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-colors",
+                    currentState?.userAnswer
+                      ? "bg-green-500 text-white hover:bg-green-600"
+                      : "bg-gray-200 text-gray-400 cursor-not-allowed"
+                  )}
+                  data-testid="button-check-answer"
+                >
+                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Check
+                </button>
+              ) : (
+                <span className={cn(
+                  "flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium",
+                  isCorrect ? "bg-green-500 text-white" : "bg-red-500 text-white"
+                )} data-testid="text-result">
+                  {isCorrect ? "Correct!" : "Incorrect"}
+                </span>
+              )}
             </div>
 
-            <motion.div
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
+            {/* Right: Navigation */}
+            <div className="flex items-center gap-2">
               <Button
-                variant="default"
-                size="lg"
+                variant="outline"
+                size="sm"
+                onClick={() => handleNavigate('prev')}
+                disabled={currentIndex === 0}
+                className="gap-1 px-4 border-gray-300"
+                data-testid="button-previous"
+              >
+                Previous
+              </Button>
+              <Button
+                variant="outline"
+                size="sm"
                 onClick={() => handleNavigate('next')}
                 disabled={currentIndex === filteredQuestions.length - 1}
-                className="gap-2 px-6 shadow-md hover:shadow-lg transition-shadow"
+                className="gap-1 px-4 border-gray-300"
+                data-testid="button-next"
               >
-                <span>Next</span>
-                <ChevronRight className="w-5 h-5" />
+                Next
               </Button>
-            </motion.div>
+            </div>
+          </div>
+          
+          {/* SAT Disclaimer */}
+          <div className="text-center py-2 text-xs text-gray-400 border-t border-gray-100">
+            SAT is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this product.
           </div>
         </footer>
       </div>

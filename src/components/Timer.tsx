@@ -1,34 +1,38 @@
 import { useState, useEffect, useRef } from 'react';
-import { Clock } from 'lucide-react';
 
 interface TimerProps {
   questionId: number;
+  isPaused?: boolean;
+  isHidden?: boolean;
 }
 
-export function Timer({ questionId }: TimerProps) {
+export function Timer({ questionId, isPaused = false, isHidden = false }: TimerProps) {
   const [seconds, setSeconds] = useState(0);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const lastQuestionRef = useRef<number>(questionId);
 
   useEffect(() => {
-    // Reset timer whenever question changes
-    setSeconds(0);
-    
-    // Clear existing interval
-    if (intervalRef.current) {
-      clearInterval(intervalRef.current);
+    if (questionId !== lastQuestionRef.current) {
+      lastQuestionRef.current = questionId;
     }
     
-    // Start new timer
-    intervalRef.current = setInterval(() => {
-      setSeconds(prev => prev + 1);
-    }, 1000);
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+    
+    if (!isPaused) {
+      intervalRef.current = setInterval(() => {
+        setSeconds(prev => prev + 1);
+      }, 1000);
+    }
     
     return () => {
       if (intervalRef.current) {
         clearInterval(intervalRef.current);
       }
     };
-  }, [questionId]);
+  }, [isPaused, questionId]);
 
   const formatTime = (totalSeconds: number) => {
     const minutes = Math.floor(totalSeconds / 60);
@@ -36,12 +40,13 @@ export function Timer({ questionId }: TimerProps) {
     return `${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
   };
 
+  if (isHidden) {
+    return null;
+  }
+
   return (
-    <div className="flex items-center gap-2 px-4 py-2 bg-muted/50 rounded-lg border border-border">
-      <Clock className="w-4 h-4 text-muted-foreground" />
-      <span className="font-mono text-sm font-medium text-foreground">
-        {formatTime(seconds)}
-      </span>
-    </div>
+    <span className="font-mono text-2xl font-medium text-gray-900 tracking-wider" data-testid="text-timer">
+      {formatTime(seconds)}
+    </span>
   );
 }

@@ -1,0 +1,139 @@
+Use this prompt with the screenshot as the reference image and only edit the UI elements described. Keep all spacing and layout identical to the provided screenshot. DO NOT change the position or layout of passage column, question column, timer, or navigation controls. Make only visual/text replacements exactly as specified.
+
+Reference: the uploaded screenshot.
+
+Global: preserve original aspect ratio, shadows, and spacing. Match fonts and sizes closely (see specifics). Export final as a clean high-resolution PNG.
+
+Replacements (exact):
+
+1. Top-left header: Replace text “SAT® Suite Question Bank” with “Real DSAT Question Bank” (same position and weight). Keep trademark/case styling similar.
+
+
+2. Timer at top-center: keep as-is (00:33) and position unchanged.
+
+
+3. Left column (passage):
+
+Keep passage content and layout unchanged.
+
+Ensure passage font is serif (match existing) at same size/leading.
+
+
+
+4. Right column (question & options):
+
+Keep the question text and number layout the same.
+
+“Mark for Review” pill: preserve exact shape, position and left icon; keep same background (light gray) and black text.
+
+Replace the small round report icon and other icons only if necessary to match existing style; otherwise keep them.
+
+
+
+5. Option buttons (A–D):
+
+Default (unselected) state: white background, thin dark-gray border (1px), rounded rectangle corners, left circular option letter badge.
+
+Selected state (when clicked): light cyan / baby-blue fill (#E6FBFF or similar), 3px darker outer glow, keep a blue highlight outline inside the option. The selected letter badge remains circular and filled with darker blue.
+
+Disabled / correct-not-shown state: show a small black rounded “Check” button on the right of the selected option (as in screenshot). Do NOT reveal the correct/incorrect indicator—do not add green/red ticks. The “Check” button must be visible as a black oval with white text “Check”.
+
+When the user just hovers (not clicked), show subtle elevation shadow.
+
+
+
+6. Option letter badges: circular, bold letter inside, same size and vertical alignment as original.
+
+
+7. Answer choice that is currently selected in the screenshot (B): ensure it has the cyan selected fill and black “Check” button on its right (exactly like screenshot).
+
+
+8. Bottom controls:
+
+Keep Previous, Next, Explanation, Ask Prepy, Check buttons exactly in position and shape. Replace “Ask Prepy” with same button but label unchanged. Do not remove or reveal explanation content.
+
+Pagination (e.g., “2 of 37”): keep position/shape/black rounded box identical.
+
+
+
+9. Top-left passage title “Text 1 / Text 2”: keep as-is.
+
+
+10. Top area: preserve the small overlay box that says the site URL or fullscreen hint; do not alter.
+
+
+11. Branding change only: anywhere “SAT® Suite Question Bank” appears (top-left), replace with “Real DSAT Question Bank”. Do not change any other legal footer text.
+
+
+
+Typography specifics (match visually):
+
+Question text font: sans-serif similar to “Inter” or “System UI”, weight ~500, size ~16–18px, line-height 1.4.
+
+Passage font: serif similar to “Georgia”, size ~15px, line-height 1.6.
+
+Option text: same sans font as question, size ~15px.
+
+Option letter badge font: bold, size ~14px.
+
+
+Colors (approx hex):
+
+Selected option background: #E6FBFF
+
+Option border: #D6D6D6
+
+Option text: #222222
+
+Mark-for-review pill bg: #F0F0F0, text #111111
+
+Check button bg: #111111, text #FFFFFF
+
+Page background: keep same slightly off-white / #FFFFFF.
+
+
+UX states to illustrate in the edited image (important):
+
+Show one option (B) in selected/clicked state with cyan highlight and visible black “Check” button on its right (as in second screenshot).
+
+Do NOT show the correct answer or any green/red marking—leave the rest as neutral.
+
+If multiple option colors appear in other screenshots, keep them consistent with these rules.
+
+
+Output: single edited screenshot with the above visual changes. Filename: real-dsat-ui-edit.png.
+
+
+---
+
+B — Photoshop / Figma layer-by-layer edit instructions (if you or a designer will manually edit)
+
+1. Open screenshot in PSD/Figma; duplicate original layer.
+
+
+2. Use text tool to replace header text: select top-left header text layer → change to “Real DSAT Question Bank”; match font weight and kerning. If raster, carefully erase and paint-matching background then type new text.
+
+
+3. For selected option state:
+
+Create a rounded-rectangle layer exactly matching option B bounds. Fill #E6FBFF, set inner padding identical.
+
+Add 1px inner border #C8EAEE and subtle outer shadow (Y 2px, blur 6px, alpha 10%).
+
+Keep option letter badge; if needed, copy and paste existing circular badge and recolor badge fill to darker blue; keep letter white/bold.
+
+
+
+4. Create black “Check” oval on right of option B: width ~74px, height ~36px, radius 18px, fill #111111, text “Check” centered in white. Add small inset shadow to match original.
+
+
+5. Replace top header text (SAT → Real DSAT) as noted.
+
+
+6. Keep timer, mark-for-review pill, report icon, and all buttons in place — do not move. If text is raster, carefully clone surrounding pixels and replace with typed text using matching fonts.
+
+
+7. Ensure color profiles and anti-aliasing match; export PNG 2x resolution for clarity.
+
+
+8. Save final as real-dsat-ui-edit.png.
