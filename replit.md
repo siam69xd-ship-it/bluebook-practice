@@ -64,13 +64,29 @@ Preferred communication style: Simple, everyday language.
 
 ### Authentication & Authorization
 
-**Status**: Guest Mode Only
-- Google OAuth has been removed during Supabase to Neon migration
-- Users can access all features in guest mode
-- Authentication context maintained for future implementation
-- No sign-in required for quiz functionality
+**Status**: Server-Side Authentication with Session Management
+- Email/password authentication via Express backend
+- Session management using express-session with PostgreSQL store
+- Password hashing with bcrypt (12 rounds)
+- Email verification code system for account creation
+- HTTP-only secure cookies for production environments
+- Optional guest mode - users can access quiz without authentication
 
-**Design Rationale**: The app is fully functional without authentication. Future auth implementation could use Replit Auth or another provider.
+**Authentication Flow**:
+1. Sign-up: User provides email → receives verification code → submits code + password → account created
+2. Sign-in: User provides email + password → session established
+3. Session persistence: Session stored in PostgreSQL, auto-checked on page load
+
+**Backend API Endpoints**:
+- `POST /api/auth/send-code` - Sends email verification code
+- `POST /api/auth/verify-code` - Verifies code and creates user account
+- `POST /api/auth/login` - Authenticates user with email/password
+- `POST /api/auth/logout` - Destroys user session
+- `GET /api/auth/user` - Retrieves current authenticated user
+- `GET /api/attempts` - Fetches user's question attempt history
+- `POST /api/attempts` - Saves question attempt for authenticated user
+
+**Design Rationale**: Server-side authentication provides better security and allows for user progress tracking across devices. Guest mode remains available for users who want to practice without creating an account.
 
 ### UI/UX Features
 
