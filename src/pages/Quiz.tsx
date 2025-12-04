@@ -27,6 +27,7 @@ import {
   saveProgress,
   loadProgress,
   getInitialQuestionState,
+  clearQuestionCache,
   Question,
   QuestionState,
   FilterOption,
@@ -93,6 +94,7 @@ export default function Quiz() {
   const loadQuestions = useCallback(async () => {
     setLoadError(false);
     setIsLoaded(false);
+    clearQuestionCache(); // Clear cache to ensure fresh data
     
     let retryCount = 0;
     const maxRetries = 3;
