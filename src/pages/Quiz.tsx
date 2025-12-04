@@ -501,15 +501,6 @@ export default function Quiz() {
                   </div>
                 </div>
 
-                {/* Topic Badge */}
-                <div className="flex flex-wrap items-center gap-2 mb-4">
-                  <span className="px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary" data-testid="badge-section">
-                    {currentQuestion.section}
-                  </span>
-                  <span className="px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-600" data-testid="badge-topic">
-                    {currentQuestion.subTopic || currentQuestion.topic}
-                  </span>
-                </div>
 
                 {/* Question Text */}
                 <p className="text-gray-800 mb-6 text-base leading-relaxed whitespace-pre-wrap" data-testid="text-question">
