@@ -41,7 +41,7 @@ Preferred communication style: Simple, everyday language.
 - Questions organized hierarchically: Section → SubSection → Topic → SubTopic
 - JSON-based question storage in `/public/data/` directory
 - Async question loading with caching to improve performance
-- Total Questions: 945 across 11 topics
+- Total Questions: 1147 across 11 topics
 - Question categories include:
   - Standard English Conventions (Boundaries, Verbs, Pronouns, Modifiers)
   - Information and Ideas (Central Ideas and Details, Command of Evidence, Inferences)
@@ -58,9 +58,30 @@ Preferred communication style: Simple, everyday language.
 ### Routing Structure
 
 - `/` - Landing page with feature overview and stats
-- `/quiz` - Main quiz interface with question practice
+- `/quiz` - Main practice interface with question practice (free mode)
+- `/timed-quiz` - Timed quiz mode with topic selection and countdown timer
 - `/auth` - Authentication page for Google OAuth
 - `/404` - Custom 404 error page for undefined routes
+
+### Two Practice Modes
+
+**Practice Mode (`/quiz`)**
+- Free-form practice with all questions
+- Topic filtering via sidebar
+- Check Answer button to verify individual options
+- Explanation panel for learning
+- Per-question timer for self-pacing
+- Progress saved to LocalStorage
+
+**Timed Quiz Mode (`/timed-quiz`)**
+- Three phases: Setup → Active → Completed
+- Topic selection with multi-select support
+- Configurable question count (5-200 questions)
+- Dynamic timer calculation based on question types (SEC questions get less time)
+- Shuffled questions to avoid consecutive same-topic questions
+- No Check Answer button during active quiz (disabled for authentic testing)
+- Post-quiz summary with correct/incorrect/unanswered counts
+- Review mode with full explanations after submission
 
 ### Authentication & Authorization
 

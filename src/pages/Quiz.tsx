@@ -23,7 +23,6 @@ import { ExplanationPanel } from '@/components/ExplanationPanel';
 import { FilterSidebar } from '@/components/FilterSidebar';
 import {
   getAllQuestionsAsync,
-  clearQuestionCache,
   filterQuestions,
   saveProgress,
   loadProgress,
@@ -54,6 +53,7 @@ export default function Quiz() {
   const [showExplanation, setShowExplanation] = useState(false);
   const [showFilterSidebar, setShowFilterSidebar] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [loadError, setLoadError] = useState(false);
   const [showHighlightTool, setShowHighlightTool] = useState(false);
   const [isTimerHidden, setIsTimerHidden] = useState(false);
 
@@ -89,23 +89,43 @@ export default function Quiz() {
     },
   });
 
-  // Load questions and saved progress on mount
-  useEffect(() => {
-    const loadData = async () => {
-      clearQuestionCache();
+  // Load questions function (used for initial load and retry)
+  const loadQuestions = useCallback(async () => {
+    setLoadError(false);
+    setIsLoaded(false);
+    
+    let retryCount = 0;
+    const maxRetries = 3;
+    
+    const attemptLoad = async (): Promise<void> => {
       const questions = await getAllQuestionsAsync();
-      setAllQuestions(questions);
-      
-      const saved = loadProgress();
-      if (saved) {
-        setQuestionStates(saved.questionStates);
-        setActiveFilter(saved.filter);
-        setCurrentIndex(saved.currentIndex);
+      if (questions.length > 0) {
+        setAllQuestions(questions);
+        
+        const saved = loadProgress();
+        if (saved) {
+          setQuestionStates(saved.questionStates);
+          setActiveFilter(saved.filter);
+          setCurrentIndex(saved.currentIndex);
+        }
+        setIsLoaded(true);
+      } else if (retryCount < maxRetries) {
+        retryCount++;
+        await new Promise(resolve => setTimeout(resolve, 500));
+        return attemptLoad();
+      } else {
+        setLoadError(true);
+        setIsLoaded(true);
       }
-      setIsLoaded(true);
     };
-    loadData();
+    
+    attemptLoad();
   }, []);
+
+  // Load questions on mount
+  useEffect(() => {
+    loadQuestions();
+  }, [loadQuestions]);
 
   // Filtered questions
   const filteredQuestions = useMemo(
@@ -256,12 +276,27 @@ export default function Quiz() {
     );
   }
 
+  if (loadError || allQuestions.length === 0) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-bluebook-bg">
+        <div className="text-center">
+          <p className="text-xl font-medium text-foreground mb-2">Failed to load questions</p>
+          <p className="text-muted-foreground mb-4">Please check your connection and try again.</p>
+          <div className="flex gap-3 justify-center">
+            <Button onClick={loadQuestions} data-testid="button-retry">Try Again</Button>
+            <Button variant="outline" onClick={() => navigate('/')} data-testid="button-return-home">Return Home</Button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   if (filteredQuestions.length === 0) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-bluebook-bg">
         <div className="text-center">
-          <p className="text-xl font-medium text-foreground mb-4">No questions available</p>
-          <Button onClick={() => navigate('/')} data-testid="button-return-home">Return Home</Button>
+          <p className="text-xl font-medium text-foreground mb-4">No questions match this filter</p>
+          <Button onClick={() => setActiveFilter({})} data-testid="button-clear-filters">Clear Filters</Button>
         </div>
       </div>
     );

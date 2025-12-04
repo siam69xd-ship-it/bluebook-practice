@@ -23,7 +23,6 @@ import { QuestionOption } from '@/components/QuestionOption';
 import { QuestionNavigator } from '@/components/QuestionNavigator';
 import {
   getAllQuestionsAsync,
-  clearQuestionCache,
   Question,
   QuestionState,
   TextHighlight,
@@ -114,6 +113,7 @@ export default function TimedQuiz() {
   const [selectedHighlightColor, setSelectedHighlightColor] = useState<string | null>(null);
   const [showNavigator, setShowNavigator] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [loadError, setLoadError] = useState(false);
   const [showHighlightTool, setShowHighlightTool] = useState(false);
   
   const [quizPhase, setQuizPhase] = useState<QuizPhase>('setup');
@@ -122,15 +122,34 @@ export default function TimedQuiz() {
   const [questionCount, setQuestionCount] = useState(30);
   const [reviewingQuestion, setReviewingQuestion] = useState<number | null>(null);
   
-  useEffect(() => {
-    const loadData = async () => {
-      clearQuestionCache();
+  const loadQuestions = useCallback(async () => {
+    setLoadError(false);
+    setIsLoaded(false);
+    
+    let retryCount = 0;
+    const maxRetries = 3;
+    
+    const attemptLoad = async (): Promise<void> => {
       const questions = await getAllQuestionsAsync();
-      setAllQuestions(questions);
-      setIsLoaded(true);
+      if (questions.length > 0) {
+        setAllQuestions(questions);
+        setIsLoaded(true);
+      } else if (retryCount < maxRetries) {
+        retryCount++;
+        await new Promise(resolve => setTimeout(resolve, 500));
+        return attemptLoad();
+      } else {
+        setLoadError(true);
+        setIsLoaded(true);
+      }
     };
-    loadData();
+    
+    attemptLoad();
   }, []);
+
+  useEffect(() => {
+    loadQuestions();
+  }, [loadQuestions]);
   
   const topicGroups = useMemo(() => {
     const groups: { [subSection: string]: { [topic: string]: number } } = {};
@@ -316,6 +335,21 @@ export default function TimedQuiz() {
         <div className="text-center">
           <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-4" />
           <p className="text-muted-foreground">Loading questions...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (loadError || allQuestions.length === 0) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-bluebook-bg">
+        <div className="text-center">
+          <p className="text-xl font-medium text-foreground mb-2">Failed to load questions</p>
+          <p className="text-muted-foreground mb-4">Please check your connection and try again.</p>
+          <div className="flex gap-3 justify-center">
+            <Button onClick={loadQuestions}>Try Again</Button>
+            <Button variant="outline" onClick={() => navigate('/')}>Return Home</Button>
+          </div>
         </div>
       </div>
     );
@@ -884,6 +918,7 @@ export default function TimedQuiz() {
                     onSelect={() => handleSelectAnswer(letter)}
                     onEliminate={() => handleToggleElimination(letter)}
                     onCheckOption={() => {}}
+                    hideCheckButton={true}
                   />
                 ))}
               </div>

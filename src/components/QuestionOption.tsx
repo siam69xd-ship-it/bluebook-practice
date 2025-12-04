@@ -11,6 +11,7 @@ interface QuestionOptionProps {
   onSelect: () => void;
   onEliminate: () => void;
   onCheckOption: () => void;
+  hideCheckButton?: boolean;
 }
 
 export function QuestionOption({
@@ -24,6 +25,7 @@ export function QuestionOption({
   onSelect,
   onEliminate,
   onCheckOption,
+  hideCheckButton = false,
 }: QuestionOptionProps) {
   const isCorrectAnswer = letter === correctAnswer;
   
@@ -79,8 +81,8 @@ export function QuestionOption({
 
       {/* Action buttons */}
       <div className="flex items-center gap-2">
-        {/* Check button for selected option (before full check) */}
-        {isSelected && !isOptionChecked && !isChecked && (
+        {/* Check button for selected option (before full check) - hidden in timed quiz mode */}
+        {isSelected && !isOptionChecked && !isChecked && !hideCheckButton && (
           <button
             onClick={(e) => {
               e.stopPropagation();
