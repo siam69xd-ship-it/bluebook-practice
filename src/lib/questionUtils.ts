@@ -120,7 +120,7 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
   
   try {
     // Load all JSON files
-    const [boundariesData, verbsData, pronounData, modifiersData, centralIdeaData, textStructureData, wordsInContextData, transitionsData] = await Promise.all([
+    const [boundariesData, verbsData, pronounData, modifiersData, centralIdeaData, textStructureData, wordsInContextData, transitionsData, inferenceData] = await Promise.all([
       loadJsonFile('/data/boundaries.json'),
       loadJsonFile('/data/verbs.json'),
       loadJsonFile('/data/pronoun.json'),
@@ -129,6 +129,7 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
       loadJsonFile('/data/text_structure_and_purpose.json'),
       loadJsonFile('/data/words_in_context.json'),
       loadJsonFile('/data/transitions.json'),
+      loadJsonFile('/data/inference.json'),
     ]);
     
     // Process Boundaries
@@ -512,6 +513,59 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
         correctAnswer: q.answer,
         explanation: q.explanation,
       });
+    }
+    
+    // Process inference.json - contains Transitions and Inferences
+    if (inferenceData) {
+      // Transitions from inference.json
+      const inferenceExpressionOfIdeas = inferenceData?.["English Reading & Writing"]?.["Expression of Ideas"];
+      if (inferenceExpressionOfIdeas) {
+        (inferenceExpressionOfIdeas["Transitions"] || []).forEach((q: CentralIdeaQuestion) => {
+          const options: { [key: string]: string } = {};
+          q.options.forEach((opt: string) => {
+            const match = opt.match(/^([A-D])\)\s*(.+)$/s);
+            if (match) {
+              options[match[1]] = match[2].trim();
+            }
+          });
+          
+          questions.push({
+            id: globalId++,
+            section: "English",
+            subSection: "Expression of Ideas",
+            topic: "Transitions",
+            questionText: `${q.passage}\n\n${q.question}`,
+            options,
+            correctAnswer: q.answer,
+            explanation: q.explanation,
+          });
+        });
+      }
+      
+      // Inferences from inference.json
+      const inferenceInfoAndIdeas = inferenceData?.["English Reading & Writing"]?.["Information and Ideas"];
+      if (inferenceInfoAndIdeas) {
+        (inferenceInfoAndIdeas["Inferences"] || []).forEach((q: CentralIdeaQuestion) => {
+          const options: { [key: string]: string } = {};
+          q.options.forEach((opt: string) => {
+            const match = opt.match(/^([A-D])\)\s*(.+)$/s);
+            if (match) {
+              options[match[1]] = match[2].trim();
+            }
+          });
+          
+          questions.push({
+            id: globalId++,
+            section: "English",
+            subSection: "Information and Ideas",
+            topic: "Inferences",
+            questionText: `${q.passage}\n\n${q.question}`,
+            options,
+            correctAnswer: q.answer,
+            explanation: q.explanation,
+          });
+        });
+      }
     }
   } catch (error) {
     console.error('Error loading questions:', error);

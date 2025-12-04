@@ -11,11 +11,16 @@ export function Timer({ questionId, isPaused = false, isHidden = false }: TimerP
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const lastQuestionRef = useRef<number>(questionId);
 
+  // Reset timer when question changes
   useEffect(() => {
     if (questionId !== lastQuestionRef.current) {
       lastQuestionRef.current = questionId;
+      setSeconds(0); // Reset timer for new question
     }
-    
+  }, [questionId]);
+
+  // Handle timer interval
+  useEffect(() => {
     if (intervalRef.current) {
       clearInterval(intervalRef.current);
       intervalRef.current = null;
@@ -32,7 +37,7 @@ export function Timer({ questionId, isPaused = false, isHidden = false }: TimerP
         clearInterval(intervalRef.current);
       }
     };
-  }, [isPaused, questionId]);
+  }, [isPaused]);
 
   const formatTime = (totalSeconds: number) => {
     const minutes = Math.floor(totalSeconds / 60);
