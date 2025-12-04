@@ -18,22 +18,33 @@ export interface IStorage {
   createVerificationCode(email: string): Promise<string>;
   verifyCode(email: string, code: string): Promise<boolean>;
   deleteExpiredCodes(): Promise<void>;
+  getAttemptCounts(userId: string): Promise<Record<string, number>>;
 }
 
 export class DatabaseStorage implements IStorage {
+  private checkDb() {
+    if (!db) {
+      throw new Error("Database not connected");
+    }
+    return db;
+  }
+
   async getUser(id: string): Promise<User | undefined> {
-    const [user] = await db.select().from(users).where(eq(users.id, id));
+    const database = this.checkDb();
+    const [user] = await database.select().from(users).where(eq(users.id, id));
     return user;
   }
 
   async getUserByEmail(email: string): Promise<User | undefined> {
-    const [user] = await db.select().from(users).where(eq(users.email, email.toLowerCase()));
+    const database = this.checkDb();
+    const [user] = await database.select().from(users).where(eq(users.email, email.toLowerCase()));
     return user;
   }
 
   async createUser(email: string, password: string): Promise<User> {
+    const database = this.checkDb();
     const hashedPassword = await bcrypt.hash(password, SALT_ROUNDS);
-    const [user] = await db
+    const [user] = await database
       .insert(users)
       .values({
         email: email.toLowerCase(),
@@ -45,7 +56,8 @@ export class DatabaseStorage implements IStorage {
   }
 
   async upsertUser(userData: UpsertUser): Promise<User> {
-    const [user] = await db
+    const database = this.checkDb();
+    const [user] = await database
       .insert(users)
       .values(userData)
       .onConflictDoUpdate({
@@ -60,8 +72,9 @@ export class DatabaseStorage implements IStorage {
   }
 
   async updateUserPassword(userId: string, password: string): Promise<void> {
+    const database = this.checkDb();
     const hashedPassword = await bcrypt.hash(password, SALT_ROUNDS);
-    await db.update(users).set({ password: hashedPassword, updatedAt: new Date() }).where(eq(users.id, userId));
+    await database.update(users).set({ password: hashedPassword, updatedAt: new Date() }).where(eq(users.id, userId));
   }
   
   async verifyPassword(password: string, hashedPassword: string): Promise<boolean> {
@@ -69,11 +82,13 @@ export class DatabaseStorage implements IStorage {
   }
 
   async verifyUserEmail(email: string): Promise<void> {
-    await db.update(users).set({ isEmailVerified: true, updatedAt: new Date() }).where(eq(users.email, email.toLowerCase()));
+    const database = this.checkDb();
+    await database.update(users).set({ isEmailVerified: true, updatedAt: new Date() }).where(eq(users.email, email.toLowerCase()));
   }
 
   async getQuestionAttempts(userId: string): Promise<QuestionAttempt[]> {
-    return await db
+    const database = this.checkDb();
+    return await database
       .select()
       .from(questionAttempts)
       .where(eq(questionAttempts.userId, userId))
@@ -81,7 +96,8 @@ export class DatabaseStorage implements IStorage {
   }
 
   async saveQuestionAttempt(attempt: InsertQuestionAttempt): Promise<QuestionAttempt> {
-    const [saved] = await db
+    const database = this.checkDb();
+    const [saved] = await database
       .insert(questionAttempts)
       .values(attempt)
       .returning();
@@ -89,7 +105,8 @@ export class DatabaseStorage implements IStorage {
   }
 
   async getAttemptCounts(userId: string): Promise<Record<string, number>> {
-    const attempts = await db
+    const database = this.checkDb();
+    const attempts = await database
       .select()
       .from(questionAttempts)
       .where(eq(questionAttempts.userId, userId));
@@ -102,12 +119,13 @@ export class DatabaseStorage implements IStorage {
   }
 
   async createVerificationCode(email: string): Promise<string> {
-    await db.delete(emailVerificationCodes).where(eq(emailVerificationCodes.email, email.toLowerCase()));
+    const database = this.checkDb();
+    await database.delete(emailVerificationCodes).where(eq(emailVerificationCodes.email, email.toLowerCase()));
     
     const code = Math.floor(100000 + Math.random() * 900000).toString();
     const expiresAt = new Date(Date.now() + 10 * 60 * 1000);
     
-    await db.insert(emailVerificationCodes).values({
+    await database.insert(emailVerificationCodes).values({
       email: email.toLowerCase(),
       code,
       expiresAt,
@@ -117,7 +135,8 @@ export class DatabaseStorage implements IStorage {
   }
 
   async verifyCode(email: string, code: string): Promise<boolean> {
-    const [record] = await db
+    const database = this.checkDb();
+    const [record] = await database
       .select()
       .from(emailVerificationCodes)
       .where(
@@ -129,14 +148,15 @@ export class DatabaseStorage implements IStorage {
       );
     
     if (record) {
-      await db.delete(emailVerificationCodes).where(eq(emailVerificationCodes.id, record.id));
+      await database.delete(emailVerificationCodes).where(eq(emailVerificationCodes.id, record.id));
       return true;
     }
     return false;
   }
 
   async deleteExpiredCodes(): Promise<void> {
-    await db.delete(emailVerificationCodes).where(lt(emailVerificationCodes.expiresAt, new Date()));
+    const database = this.checkDb();
+    await database.delete(emailVerificationCodes).where(lt(emailVerificationCodes.expiresAt, new Date()));
   }
 }
 

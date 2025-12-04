@@ -2,7 +2,6 @@ import type { Express, Request, Response } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import session from "express-session";
-import connectPg from "connect-pg-simple";
 
 declare module "express-session" {
   interface SessionData {
@@ -12,21 +11,15 @@ declare module "express-session" {
 
 function getSession() {
   const sessionTtl = 7 * 24 * 60 * 60 * 1000;
-  const pgStore = connectPg(session);
-  const sessionStore = new pgStore({
-    conString: process.env.DATABASE_URL,
-    createTableIfMissing: true,
-    ttl: sessionTtl,
-    tableName: "sessions",
-  });
+  
+  // Use memory session store for simplicity
   return session({
     secret: process.env.SESSION_SECRET || "nextprep-secret-key-2024",
-    store: sessionStore,
     resave: false,
     saveUninitialized: false,
     cookie: {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
+      secure: false,
       maxAge: sessionTtl,
     },
   });
@@ -59,7 +52,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.json({ success: true, message: "Verification code sent to your email" });
     } catch (error) {
       console.error("Error sending verification code:", error);
-      res.status(500).json({ message: "Failed to send verification code" });
+      res.status(500).json({ message: "Auth features temporarily unavailable" });
     }
   });
 
