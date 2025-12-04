@@ -478,6 +478,29 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
         });
       });
     }
+    
+    // Handle single object format for transitions (not nested, not array)
+    if (transitionsData && transitionsData.id && transitionsData.passage && transitionsData.options) {
+      const q = transitionsData as CentralIdeaQuestion;
+      const options: { [key: string]: string } = {};
+      q.options.forEach((opt: string) => {
+        const match = opt.match(/^([A-D])\)\s*(.+)$/s);
+        if (match) {
+          options[match[1]] = match[2].trim();
+        }
+      });
+      
+      questions.push({
+        id: globalId++,
+        section: "English",
+        subSection: "Expression of Ideas",
+        topic: "Transitions",
+        questionText: `${q.passage}\n\n${q.question}`,
+        options,
+        correctAnswer: q.answer,
+        explanation: q.explanation,
+      });
+    }
   } catch (error) {
     console.error('Error loading questions:', error);
   }
