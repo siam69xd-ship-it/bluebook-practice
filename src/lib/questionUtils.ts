@@ -114,7 +114,7 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
   
   try {
     // Load all JSON files
-    const [boundariesData, verbsData, pronounData, modifiersData, centralIdeaData, textStructureData, wordsInContextData] = await Promise.all([
+    const [boundariesData, verbsData, pronounData, modifiersData, centralIdeaData, textStructureData, wordsInContextData, transitionsData] = await Promise.all([
       loadJsonFile('/data/boundaries.json'),
       loadJsonFile('/data/verbs.json'),
       loadJsonFile('/data/pronoun.json'),
@@ -122,6 +122,7 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
       loadJsonFile('/data/central_idea_and_details.json'),
       loadJsonFile('/data/text_structure_and_purpose.json'),
       loadJsonFile('/data/words_in_context.json'),
+      loadJsonFile('/data/transitions.json'),
     ]);
     
     // Process Boundaries
@@ -399,6 +400,77 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
           section: "English",
           subSection: "Craft and Structure",
           topic: "Words in Context",
+          questionText: `${q.passage}\n\n${q.question}`,
+          options,
+          correctAnswer: q.answer,
+          explanation: q.explanation,
+        });
+      });
+    }
+    
+    // Process Transitions questions
+    const expressionOfIdeas = transitionsData?.["English Reading & Writing"]?.["Expression of Ideas"];
+    if (expressionOfIdeas) {
+      (expressionOfIdeas["Transitions"] || []).forEach((q: CentralIdeaQuestion) => {
+        const options: { [key: string]: string } = {};
+        q.options.forEach((opt: string) => {
+          const match = opt.match(/^([A-D])\)\s*(.+)$/s);
+          if (match) {
+            options[match[1]] = match[2].trim();
+          }
+        });
+        
+        questions.push({
+          id: globalId++,
+          section: "English",
+          subSection: "Expression of Ideas",
+          topic: "Transitions",
+          questionText: `${q.passage}\n\n${q.question}`,
+          options,
+          correctAnswer: q.answer,
+          explanation: q.explanation,
+        });
+      });
+      
+      // Rhetorical Synthesis
+      (expressionOfIdeas["Rhetorical Synthesis"] || []).forEach((q: CentralIdeaQuestion) => {
+        const options: { [key: string]: string } = {};
+        q.options.forEach((opt: string) => {
+          const match = opt.match(/^([A-D])\)\s*(.+)$/s);
+          if (match) {
+            options[match[1]] = match[2].trim();
+          }
+        });
+        
+        questions.push({
+          id: globalId++,
+          section: "English",
+          subSection: "Expression of Ideas",
+          topic: "Rhetorical Synthesis",
+          questionText: `${q.passage}\n\n${q.question}`,
+          options,
+          correctAnswer: q.answer,
+          explanation: q.explanation,
+        });
+      });
+    }
+    
+    // Also check if transitions is just an array (simpler format)
+    if (Array.isArray(transitionsData)) {
+      transitionsData.forEach((q: CentralIdeaQuestion) => {
+        const options: { [key: string]: string } = {};
+        q.options.forEach((opt: string) => {
+          const match = opt.match(/^([A-D])\)\s*(.+)$/s);
+          if (match) {
+            options[match[1]] = match[2].trim();
+          }
+        });
+        
+        questions.push({
+          id: globalId++,
+          section: "English",
+          subSection: "Expression of Ideas",
+          topic: "Transitions",
           questionText: `${q.passage}\n\n${q.question}`,
           options,
           correctAnswer: q.answer,
