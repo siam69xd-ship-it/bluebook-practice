@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, BookOpen, Clock, Target, Sparkles, LogOut, User } from 'lucide-react';
+import { ArrowRight, BookOpen, Clock, Target, Sparkles, LogOut, User, Timer } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { loadProgress, getAllQuestionsAsync, getTopicCounts, Question } from '@/lib/questionUtils';
 import { useState, useEffect } from 'react';
@@ -129,6 +129,15 @@ export default function Index() {
             >
               Start Practice
               <ArrowRight className="w-5 h-5" />
+            </Button>
+            <Button
+              variant="outline"
+              size="xl"
+              onClick={() => navigate('/timed-quiz')}
+              className="w-full sm:w-auto border-2 border-primary/30 hover:border-primary/50"
+            >
+              <Timer className="w-5 h-5 mr-2" />
+              Take a Quiz
             </Button>
             {savedProgress && answeredCount > 0 && (
               <Button

@@ -1,0 +1,123 @@
+Add a dedicated Quiz feature to the existing SAT practice website. This is separate from “Practice Now”, but the layout is identical to “Practice Now” except for the functional changes described below.
+
+
+---
+
+1. Quiz Selection & Filtering
+
+Users can select questions by topic (single or multiple topics).
+
+Users can choose the number of questions, maximum 200. Default max shows 30–50.
+
+Multiple topics: questions are shuffled/remixed smoothly so the same topic does not repeat consecutively unnecessarily.
+
+One question per view.
+
+
+
+---
+
+2. Dynamic Timer
+
+Timer adjusts automatically based on number of questions:
+
+Example: 27 questions → 27 min, 32 questions → 32 min, etc.
+
+
+Special adjustment for Standard English Conventions :
+
+If a high proportion of selected questions are Standard English Conventions  , slightly reduce total time proportionally.
+
+
+Timer is continuous for full quiz, cannot be paused, counts down minutes:seconds.
+
+Timer updates in real-time as question count changes before quiz starts.
+
+
+
+---
+
+3. Quiz Interface & Navigation
+
+Exact layout as Practice Now:
+
+Fonts, colors, question numbering, navigator, fullscreen button remain unchanged.
+
+
+Buttons during quiz:
+
+Next, Previous, Question navigator, Fullscreen remain.
+
+Disabled/hidden during quiz:
+
+Filter options
+
+Check answer
+
+Explanation / Show Answer
+
+
+
+Once quiz starts, users cannot change filter/selection.
+
+
+
+---
+
+4. Post-Quiz Summary
+
+On submit, show:
+
+Number of correct, incorrect, not answered questions.
+
+
+After submission, users can view explanations for all questions:
+
+Shows selected option, correct answer, and detailed explanation.
+
+
+Explanations only visible after quiz submission.
+
+
+
+---
+
+5. Performance & UX
+
+Smooth question transitions.
+
+Smooth shuffle of multiple-topic questions.
+
+Supports up to 200 questions without lag.
+
+Layout remains clean, minimal, and identical to Practice Now, only functional changes as described.
+
+
+
+---
+
+6. Edge Cases
+
+Cannot start quiz with zero questions.
+
+If requested questions exceed available questions in selected topics, adjust automatically.
+
+Timer adjusts dynamically before quiz start; once quiz starts, timer is fixed.
+
+Quiz cannot be paused; timer continues until submission or timeout.
+
+Question navigator scrollable without affecting timer.
+
+
+
+---
+
+7. Deliverables
+
+Fully functional Quiz module with Practice Now layout intact.
+
+Handles selection, filtering, shuffling, dynamic timer, navigation, post-quiz summary, and Standard English Conventions based time adjustment.
+
+Must be efficient, responsive, for desktop and mobile.
+
+Styling consistent with existing SAT practice interface.
