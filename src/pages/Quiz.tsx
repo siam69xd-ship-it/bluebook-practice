@@ -393,7 +393,22 @@ export default function Quiz() {
                 transition={{ duration: 0.2 }}
               >
                 <HighlightableText
-                  text={currentQuestion.questionText}
+                  text={(() => {
+                    const text = currentQuestion.questionText;
+                    const questionPatterns = [
+                      /\n\n?Which choice[^?]+\?$/i,
+                      /\n\n?Which [^?]+\?$/i,
+                      /\n\n?What [^?]+\?$/i,
+                      /\n\n?Based on [^?]+\?$/i,
+                      /\n\n?According to [^?]+\?$/i,
+                      /\n\n?The [^?]+which of the following[^?]+\?$/i,
+                    ];
+                    let passageText = text;
+                    for (const pattern of questionPatterns) {
+                      passageText = passageText.replace(pattern, '');
+                    }
+                    return passageText.trim();
+                  })()}
                   highlights={currentState?.highlights || []}
                   selectedColor={selectedHighlightColor}
                   onAddHighlight={handleAddHighlight}
