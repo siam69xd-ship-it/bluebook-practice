@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, BookOpen, Clock, Target, Sparkles, LogOut, User, Timer } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { loadProgress, getAllQuestionsAsync, getTopicCounts, Question } from '@/lib/questionUtils';
+import { loadProgress, getAllQuestionsAsync, getTopicCounts, clearQuestionCache, Question } from '@/lib/questionUtils';
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 
@@ -14,6 +14,7 @@ export default function Index() {
   const savedProgress = loadProgress();
 
   useEffect(() => {
+    clearQuestionCache(); // Clear cache to load fresh data
     getAllQuestionsAsync().then(questions => {
       setAllQuestions(questions);
       setIsLoading(false);

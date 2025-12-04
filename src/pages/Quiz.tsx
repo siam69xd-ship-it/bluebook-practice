@@ -503,6 +503,12 @@ export default function Quiz() {
                   </div>
                 </div>
 
+                {/* Section Badge - Only English */}
+                <div className="flex items-center mb-4">
+                  <span className="px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary" data-testid="badge-section">
+                    {currentQuestion.section}
+                  </span>
+                </div>
 
                 {/* Question Text */}
                 <p className="text-gray-800 mb-6 text-base leading-relaxed whitespace-pre-wrap" data-testid="text-question">
