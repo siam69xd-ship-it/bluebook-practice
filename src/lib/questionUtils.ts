@@ -91,7 +91,13 @@ function parseQuestion(rawQuestion: string): { questionText: string; options: { 
 async function loadJsonFile(path: string): Promise<any> {
   try {
     const response = await fetch(path);
-    return await response.json();
+    if (!response.ok) {
+      console.error(`Failed to load ${path}: ${response.status} ${response.statusText}`);
+      return null;
+    }
+    const data = await response.json();
+    console.log(`Loaded ${path}:`, data ? 'success' : 'empty');
+    return data;
   } catch (error) {
     console.error(`Failed to load ${path}:`, error);
     return null;
@@ -409,9 +415,15 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
     }
     
     // Process Transitions questions
+    console.log('Transitions data:', transitionsData ? 'loaded' : 'null');
     const expressionOfIdeas = transitionsData?.["English Reading & Writing"]?.["Expression of Ideas"];
+    console.log('Expression of Ideas:', expressionOfIdeas ? 'found' : 'not found');
+    
     if (expressionOfIdeas) {
-      (expressionOfIdeas["Transitions"] || []).forEach((q: CentralIdeaQuestion) => {
+      const transitionsArray = expressionOfIdeas["Transitions"] || [];
+      console.log('Transitions array length:', transitionsArray.length);
+      
+      transitionsArray.forEach((q: CentralIdeaQuestion) => {
         const options: { [key: string]: string } = {};
         q.options.forEach((opt: string) => {
           const match = opt.match(/^([A-D])\)\s*(.+)$/s);
@@ -505,6 +517,7 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
     console.error('Error loading questions:', error);
   }
   
+  console.log('Total questions loaded:', questions.length);
   cachedQuestions = questions;
   return questions;
 }
