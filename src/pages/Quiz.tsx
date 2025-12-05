@@ -5,7 +5,6 @@ import {
   ChevronLeft,
   ChevronRight,
   Bookmark,
-  Menu,
   Home,
   Lightbulb,
   Maximize,
@@ -20,7 +19,6 @@ import { HighlightableText } from '@/components/HighlightableText';
 import { QuestionOption } from '@/components/QuestionOption';
 import { QuestionNavigator } from '@/components/QuestionNavigator';
 import { ExplanationPanel } from '@/components/ExplanationPanel';
-import { FilterSidebar } from '@/components/FilterSidebar';
 import {
   getAllQuestionsAsync,
   filterQuestions,
@@ -37,6 +35,7 @@ import { cn } from '@/lib/utils';
 import { useAuth } from '@/hooks/useAuth';
 import { useFullscreen } from '@/hooks/useFullscreen';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
+import { Difficulty } from '@/lib/difficultyData';
 
 export default function Quiz() {
   const navigate = useNavigate();
@@ -52,7 +51,6 @@ export default function Quiz() {
   const [selectedHighlightColor, setSelectedHighlightColor] = useState<string | null>(null);
   const [showNavigator, setShowNavigator] = useState(false);
   const [showExplanation, setShowExplanation] = useState(false);
-  const [showFilterSidebar, setShowFilterSidebar] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const [loadError, setLoadError] = useState(false);
   const [showHighlightTool, setShowHighlightTool] = useState(false);
@@ -102,10 +100,44 @@ export default function Quiz() {
     const attemptLoad = async (): Promise<void> => {
       const questions = await getAllQuestionsAsync();
       if (questions.length > 0) {
-        setAllQuestions(questions);
+        // Check for practice config from sessionStorage
+        const practiceConfigStr = sessionStorage.getItem('practiceConfig');
+        let filteredByDifficulty = questions;
+        
+        if (practiceConfigStr) {
+          try {
+            const practiceConfig = JSON.parse(practiceConfigStr);
+            const { filter, difficulties } = practiceConfig;
+            
+            // Apply difficulty filter
+            if (difficulties) {
+              const activeDifficulties = Object.entries(difficulties)
+                .filter(([_, selected]) => selected)
+                .map(([diff]) => diff as Difficulty);
+              
+              if (activeDifficulties.length > 0 && activeDifficulties.length < 3) {
+                filteredByDifficulty = questions.filter(q => 
+                  q.difficulty && activeDifficulties.includes(q.difficulty)
+                );
+              }
+            }
+            
+            // Apply topic filter
+            if (filter && Object.keys(filter).length > 0) {
+              setActiveFilter(filter);
+            }
+            
+            // Clear the practice config after use
+            sessionStorage.removeItem('practiceConfig');
+          } catch (e) {
+            console.error('Error parsing practice config:', e);
+          }
+        }
+        
+        setAllQuestions(filteredByDifficulty);
         
         const saved = loadProgress();
-        if (saved) {
+        if (saved && !practiceConfigStr) {
           setQuestionStates(saved.questionStates);
           setActiveFilter(saved.filter);
           setCurrentIndex(saved.currentIndex);
@@ -246,7 +278,6 @@ export default function Quiz() {
   // Handler: Filter change
   const handleFilterChange = (filter: Partial<FilterOption>) => {
     setActiveFilter(filter);
-    setShowFilterSidebar(false);
   };
 
   // Handler: Add highlight
@@ -319,21 +350,12 @@ export default function Quiz() {
 
   return (
     <div className="min-h-screen bg-bluebook-bg flex">
-      {/* Filter Sidebar */}
-      <FilterSidebar
-        questions={allQuestions}
-        activeFilter={activeFilter}
-        onFilterChange={handleFilterChange}
-        isOpen={showFilterSidebar}
-        onClose={() => setShowFilterSidebar(false)}
-      />
-
       {/* Main Content */}
       <div className="flex-1 flex flex-col min-h-screen">
         {/* Top Bar - Bluebook Style */}
         <header className="sticky top-0 z-30 bg-white border-b border-gray-200">
           <div className="flex items-center justify-between px-4 h-14">
-            {/* Left: Back arrow, Home, Filter, Title */}
+            {/* Left: Back arrow, Home, Title */}
             <div className="flex items-center gap-2">
               <button
                 onClick={() => navigate('/')}
@@ -348,13 +370,6 @@ export default function Quiz() {
                 data-testid="button-home"
               >
                 <Home className="w-5 h-5 text-gray-600" />
-              </button>
-              <button
-                onClick={() => setShowFilterSidebar(!showFilterSidebar)}
-                className="p-2 rounded-md hover:bg-gray-100 transition-colors"
-                data-testid="button-filter-toggle"
-              >
-                <Menu className="w-5 h-5 text-gray-600" />
               </button>
               <span className="text-base font-medium text-gray-900 ml-2">Real DSAT Question Bank</span>
             </div>

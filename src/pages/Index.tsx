@@ -5,12 +5,14 @@ import { Button } from '@/components/ui/button';
 import { loadProgress, getAllQuestionsAsync, getTopicCounts, clearQuestionCache, Question } from '@/lib/questionUtils';
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/hooks/useAuth';
+import { PracticeSelector } from '@/components/PracticeSelector';
 
 export default function Index() {
   const navigate = useNavigate();
   const { user, isAuthenticated, isLoading: authLoading } = useAuth();
   const [allQuestions, setAllQuestions] = useState<Question[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [showPracticeSelector, setShowPracticeSelector] = useState(false);
   const savedProgress = loadProgress();
 
   useEffect(() => {
@@ -125,7 +127,7 @@ export default function Index() {
             <Button
               variant="hero"
               size="xl"
-              onClick={() => navigate('/quiz')}
+              onClick={() => setShowPracticeSelector(true)}
               className="w-full sm:w-auto"
             >
               Start Practice
@@ -247,6 +249,13 @@ export default function Index() {
           </div>
         </div>
       </footer>
+
+      {/* Practice Selector Modal */}
+      <PracticeSelector
+        questions={allQuestions}
+        isOpen={showPracticeSelector}
+        onClose={() => setShowPracticeSelector(false)}
+      />
     </div>
   );
 }
