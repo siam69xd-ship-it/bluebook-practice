@@ -1,0 +1,51 @@
+Excellent. Based on the 149 inference questions you've provided, I can analyze and categorize them into *Easy, Medium, and Hard* difficulty levels. This classification is based on typical SAT Reading & Writing question design, focusing on:
+
+*   *Passage Length & Complexity:* Shorter, more direct passages are easier.
+*   *Vocabulary & Sentence Structure:* Use of common, straightforward language vs. academic, dense, or technical terms.
+*   *Reasoning Steps Required:* Simple, direct inferences (often 1 step) vs. multi-step logic or subtle contrasts.
+*   *Question Familiarity:* Patterns that appear frequently and have clear, predictable answers.
+*   *Trap Answers:* How obvious the correct answer is versus how tempting and close the incorrect ones are.
+
+Here is the filtered categorization for these 149 questions.
+
+---
+
+### *EASY (Typically 1-step, clear logic, short passages)*
+These questions ask for the most direct and obvious inference from the text. The correct answer is often a near-paraphrase of a stated premise. Trap answers are usually irrelevant or directly contradicted by the text.
+
+*Questions:* 2, 3, 4, 7, 9, 10, 13, 15, 16, 23, 27, 30, 33, 40, 45, 46, 48, 56, 59, 62, 65, 78, 82, 88, 93, 105, 106, 108, 109, 110, 113, 120, 126, 127, 140, 148, 149.
+
+*Characteristics:* Often contrast two things (longitudinal vs. snapshot study), give a cause and ask for the direct effect, or state a finding and ask for the most immediate application/explanation. The "autobiographical novel" questions (2, 27, 33, 48, 122, 126) are a classic, predictable SAT pattern.
+
+### *MEDIUM (Requires synthesis, connecting ideas, or careful reading of nuanced text)*
+These require you to combine two or more pieces of information from the passage or to understand a subtle relationship. The correct answer isn't directly stated but is the only logical conclusion. Trap answers are plausible but misrepresent a detail or take the logic one step too far.
+
+*Questions:* 1, 5, 8, 12, 14, 17, 19, 20, 22, 24, 25, 28, 29, 31, 32, 34, 38, 41, 44, 47, 49, 52, 53, 57, 58, 60, 61, 63, 66, 67, 69, 71, 73, 75, 77, 79, 83, 84, 85, 89, 90, 91, 92, 94, 95, 96, 97, 99, 100, 102, 104, 107, 111, 112, 114, 115, 117, 119, 121, 129, 130, 132, 134, 135, 136, 137, 139, 141, 142, 147.
+
+*Characteristics:* Includes questions about stock market liberalization (contrasting two studies), invasive species & climate change (future implications), and studies with conflicting results (e.g., mercury/DOC) where you must reconcile or explain the discrepancy. Also includes questions about translating patterns from one context (country of origin) to another (immigrant settlement).
+
+### *HARD (Dense language, complex or multi-layered reasoning, abstract concepts)*
+These passages are often longer and more technical. The inference requires holding several abstract ideas in mind and following a chain of logic. Trap answers are sophisticated and may be partially true but don't fully satisfy the logical completion required by the passage's argument.
+
+*Questions:* 6, 11, 18, 21, 26, 35, 36, 37, 39, 42, 43, 50, 51, 54, 55, 64, 68, 70, 72, 74, 76, 80, 81, 86, 87, 98, 101, 103, 116, 118, 123, 124, 125, 128, 131, 133, 138, 143, 144, 145, 146.
+
+*Characteristics:* Frequently involve detailed scientific studies with specific variables (e.g., parasite host counts, UVB irradiance, material science). Require distinguishing between methodology and conclusion. Also include complex literary or art criticism analyses where the argument is layered (e.g., Q64 on Chicano art, Q111 on Indigenous abstraction). Questions about Arthurian source material (21, 50, 54, 103) often fall here due to the need to track multiple sources and dates.
+
+---
+
+### *Strategic Notes for Your Study:*
+
+1.  *Pattern Recognition is Key:* The SAT reuses *question stems and logical structures*. Notice the clusters:
+    *   *Longitudinal vs. Constrained Study:* (Easy pattern: the constrained study doesn't need time-series data).
+    *   *Autobiographical Novel Downside:* (Easy pattern: it makes the work seem less creatively imaginative).
+    *   *Species Classification & Climate Change:* (Medium pattern: labels may need future reevaluation).
+    *   *Conflicting Study Results (A vs. B):* (Medium/Hard pattern: the difference is due to specific conditions, or one finding is more representative).
+
+2.  *Difficulty is Subjective:* A "Hard" question for one student might be "Medium" for another, depending on vocabulary familiarity and comfort with scientific reasoning. Use this list as a guide to identify your personal weak spots.
+
+3.  *Best Practice Approach:*
+    *   *Master the EASYs:* Ensure 100% accuracy. They are free points if you read carefully.
+    *   *Analyze the MEDIUMs:* This is where most scores are built. Why did you miss one? Was it a reading error, or did you fall for a plausible trap? This is your most valuable practice.
+    *   *Tackle the HARDs:* Don't avoid them. Work on breaking down dense sentences. Practice paraphrasing each sentence in your own words. Often, the core logic is simpler than the jargon makes it seem.
+
+Would you like me to provide a deeper analysis of the reasoning for any specific question or a cluster of questions (e.g., all the "dissolved organic carbon and mercury" ones) to illustrate the difficulty levels further?

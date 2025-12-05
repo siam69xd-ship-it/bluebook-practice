@@ -6,7 +6,7 @@ import * as schema from "@shared/schema";
 // Enable websocket for neon
 neonConfig.webSocketConstructor = ws;
 
-const connectionString = process.env.SUPABASE_DB_URL || process.env.DATABASE_URL;
+const connectionString = process.env.DATABASE_URL;
 
 let pool: Pool | null = null;
 let db: ReturnType<typeof drizzle> | null = null;
