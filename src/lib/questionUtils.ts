@@ -120,6 +120,56 @@ function parseNewFormatOptions(optionStrings: string[]): { [key: string]: string
 }
 
 // Load questions from JSON files dynamically
+function splitTopLevelJsonValues(raw: string): string[] {
+  const values: string[] = [];
+  const s = raw.trim();
+
+  let inString = false;
+  let escape = false;
+  let depth = 0;
+  let start = -1;
+
+  for (let i = 0; i < s.length; i++) {
+    const ch = s[i];
+
+    if (escape) {
+      escape = false;
+      continue;
+    }
+
+    if (ch === "\\" && inString) {
+      escape = true;
+      continue;
+    }
+
+    if (ch === '"') {
+      inString = !inString;
+      continue;
+    }
+
+    if (inString) continue;
+
+    if (start === -1) {
+      // look for start of next JSON value
+      if (ch === '{' || ch === '[') {
+        start = i;
+        depth = 1;
+      }
+      continue;
+    }
+
+    if (ch === '{' || ch === '[') depth++;
+    if (ch === '}' || ch === ']') depth--;
+
+    if (depth === 0 && start !== -1) {
+      values.push(s.slice(start, i + 1));
+      start = -1;
+    }
+  }
+
+  return values;
+}
+
 async function loadJsonFile(path: string): Promise<any> {
   try {
     const response = await fetch(path);
@@ -127,9 +177,60 @@ async function loadJsonFile(path: string): Promise<any> {
       console.error(`Failed to load ${path}: ${response.status} ${response.statusText}`);
       return null;
     }
-    const data = await response.json();
-    console.log(`Loaded ${path}:`, data ? 'success' : 'empty');
-    return data;
+
+    // Read as text first so we can recover from "concatenated JSON" files (e.g. `}{` between batches)
+    const raw = await response.text();
+
+    try {
+      const data = JSON.parse(raw);
+      console.log(`Loaded ${path}:`, data ? 'success' : 'empty');
+      return data;
+    } catch (parseErr) {
+      // Attempt to parse multiple top-level JSON values and merge their question arrays
+      const trimmed = raw.trim();
+      let chunks = splitTopLevelJsonValues(trimmed);
+
+      // Special-case: files wrapped in a broken array like: [ {..}, [ {..}, ... ] ]
+      if (chunks.length === 0 && trimmed.startsWith('[')) {
+        const inner = trimmed.replace(/^\[/, '').replace(/\]$/, '');
+        chunks = splitTopLevelJsonValues(inner);
+      }
+
+      const parsed: any[] = [];
+      for (const c of chunks) {
+        try {
+          parsed.push(JSON.parse(c));
+        } catch {
+          // ignore unparseable chunk
+        }
+      }
+
+      // Merge objects with { questions: [...] }
+      const objectsWithQuestions = parsed.filter((p) => p && typeof p === 'object' && Array.isArray(p.questions));
+      if (objectsWithQuestions.length > 0) {
+        const base = objectsWithQuestions[0];
+        const mergedQuestions = objectsWithQuestions.flatMap((o) => o.questions);
+        const recovered = { ...base, questions: mergedQuestions };
+        console.warn(`Recovered concatenated JSON for ${path}:`, mergedQuestions.length, 'questions');
+        return recovered;
+      }
+
+      // Merge: first object has {questions}, later chunk is an array of question objects
+      const baseObj = parsed.find((p) => p && typeof p === 'object' && Array.isArray(p.questions));
+      const extraArrays = parsed.filter((p) => Array.isArray(p));
+      if (baseObj && extraArrays.length > 0) {
+        const mergedQuestions = [
+          ...(baseObj.questions || []),
+          ...extraArrays.flat().filter((q) => q && typeof q === 'object' && q.id && q.content && q.solution),
+        ];
+        const recovered = { ...baseObj, questions: mergedQuestions };
+        console.warn(`Recovered mixed-array JSON for ${path}:`, mergedQuestions.length, 'questions');
+        return recovered;
+      }
+
+      console.error(`Failed to parse ${path} even after recovery:`, parseErr);
+      return null;
+    }
   } catch (error) {
     console.error(`Failed to load ${path}:`, error);
     return null;
