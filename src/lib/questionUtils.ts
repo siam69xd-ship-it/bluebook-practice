@@ -470,7 +470,7 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
       transitionsData, inferenceData,
       crossTextData, mainPurposeData, overallStructureData, underlinedPurposeData,
       gapFillingsData, synonymsData, supportData, weakenData, quotationData, graphsData,
-      mainIdeasData, detailedQuestionsData
+      mainIdeasData, detailedQuestionsData, rhetoricalSynthesisData
     ] = await Promise.all([
       loadJsonFile('/data/boundaries.json'),
       loadJsonFile('/data/verbs.json'),
@@ -490,6 +490,7 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
       loadJsonFile('/data/graphs.json'),
       loadJsonFile('/data/main_ideas.json'),
       loadJsonFile('/data/detailed_questions.json'),
+      loadJsonFile('/data/rhetorical_synthesis.json'),
     ]);
     
     // Process Boundaries
@@ -986,6 +987,27 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
           q.solution.answer,
           q.solution.explanation,
           (q.difficulty?.toLowerCase() as Difficulty) || getQuestionDifficulty("Central Ideas and Details", "Detail Questions", index),
+        ));
+      });
+    }
+    
+    // Process Rhetorical Synthesis (new format from rhetorical_synthesis.json)
+    if (rhetoricalSynthesisData?.questions) {
+      rhetoricalSynthesisData.questions.forEach((q: NewFormatQuestion, index: number) => {
+        const options = parseNewFormatOptions(q.content.options);
+        addQuestion(createQuestion(
+          globalId++,
+          q.id || `RS_${String(index + 1).padStart(3, '0')}`,
+          "English",
+          "Expression of Ideas",
+          "Rhetorical Synthesis",
+          undefined,
+          q.content.passage || '',
+          q.content.question,
+          options,
+          q.solution.answer,
+          q.solution.explanation,
+          (q.difficulty?.toLowerCase() as Difficulty) || getQuestionDifficulty("Rhetorical Synthesis", undefined, index),
         ));
       });
     }
