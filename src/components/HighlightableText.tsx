@@ -2,6 +2,12 @@ import { useCallback, useRef } from 'react';
 import { cn } from '@/lib/utils';
 import { getHighlightClass } from './HighlightTool';
 import { TextHighlight } from '@/lib/questionUtils';
+import { PassageRenderer } from './PassageRenderer';
+
+// Check if content contains HTML tags that need rendering
+function containsHtml(text: string): boolean {
+  return /<(table|u|b|i|em|strong|br|p|div|span|thead|tbody|tr|td|th)[^>]*>/i.test(text);
+}
 
 interface HighlightableTextProps {
   text: string;
@@ -105,6 +111,16 @@ export function HighlightableText({
       return <span key={idx}>{segment.text}</span>;
     });
   };
+
+  // If text contains HTML, render with PassageRenderer (highlighting disabled for HTML content)
+  if (containsHtml(text)) {
+    return (
+      <PassageRenderer 
+        content={text} 
+        className={className}
+      />
+    );
+  }
 
   return (
     <div
