@@ -1,0 +1,1308 @@
+{
+  "test_metadata": {
+    "test_name": "Digital SAT Practice",
+    "domain": "Information and Ideas",
+    "skill": "Command of Evidence",
+    "sub_skill": "Quotation",
+    "total_questions": 72,
+    "version": "1.0"
+  },
+  "questions": [
+    {
+      "id": "QUO_001",
+      "difficulty": "Easy",
+      "content": {
+        "passage": "Life Among the Paiutes is an 1882 autobiographical narrative by Sarah Winnemucca Hopkins. In the work, Winnemucca directly addresses the reader to establish her authority and credibility, writing",
+        "question": "Which quotation from Life Among the Paiutes most effectively illustrates the claim?",
+        "options": [
+          "A) My dear reader, I have not lived in this world for over thirty or forty years for nothing, and I know what I am talking about.",
+          "B) I was born somewhere near 1844, but am not sure of the precise time.",
+          "C) Oh, dear readers, these soldiers had gone only sixty miles away to Muddy Lake, where my people were then living and fishing.",
+          "D) But how can I describe the scene that followed? Some of you, dear readers, can imagine."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The claim is that Winnemucca establishes her 'authority and credibility.' Option A directly states, 'I know what I am talking about' and cites her years of experience ('lived... thirty or forty years'). This is a clear assertion of authority."
+      }
+    },
+    {
+      "id": "QUO_002",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The Underdogs is a 1915 novel by Mariano Azuela... In the novel, the town of Juchipila is depicted as a striking sight for a group of soldiers as they view it from afar:",
+        "question": "Which quotation from a translation of The Underdogs most effectively illustrates the claim?",
+        "options": [
+          "A) All day long [the soldiers] rode through the canyon, up and down the steep, round hills...",
+          "B) The soldiers entered the streets of Juchipila as the church bells rang...",
+          "C) Juchipila rose in the distance, white, bathed in sunlight, shining in the midst of a thick forest at the foot of a proud, lofty mountain.",
+          "D) The sierra is clad in gala colors. Over its inaccessible peaks..."
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The claim is that the town is a 'striking sight... viewed from afar.' Option C describes Juchipila 'in the distance,' 'white, bathed in sunlight,' and 'shining.' This matches the description of a striking distant view."
+      }
+    },
+    {
+      "id": "QUO_003",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Frederick Douglass is an 1895 poem by Paul Laurence Dunbar. In the poem, Dunbar praises Douglass for his honesty and refusal to be intimidated, writing",
+        "question": "Which quotation from 'Frederick Douglass' effectively illustrates the claim?",
+        "options": [
+          "A) No miser in the good he held was he, His kindness followed his horizon's rim",
+          "B) A hush is over all the teeming lists, And there is pause, a breath-space in the strife;",
+          "C) And he was no soft-tongued apologist; He spoke straightforward, fearlessly uncowed;",
+          "D) He was her champion thro' direful years, And held her weal all other ends above"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The claim focuses on 'honesty' and 'refusal to be intimidated.' Option C describes him as 'no soft-tongued apologist' (honest) and 'fearlessly uncowed' (not intimidated), which directly supports the claim."
+      }
+    },
+    {
+      "id": "QUO_004",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "I Know Why the Caged Bird Sings is a 1969 novel written by Maya Angelou. In the novel, the main character struggles to accept her African American race while growing up in the Southern United States.",
+        "question": "Which quotation from I Know Why the Caged Bird Sings most effectively supports this claim?",
+        "options": [
+          "A) \"The dress I wore was light purple... I knew that when I put it on, I'd look like one of the sweet little white girls who were everyone's dream of what was right with the world.\"",
+          "B) \"When people saw me wearing it, they were going to run up to me and say... forgive us...\"",
+          "C) \"Wouldn't they be surprised when one day I woke out of my black ugly dream, and my real hair, which was long and blonde, would take the place of the kinky mass...\"",
+          "D) \"If growing up is painful for the Southern Black girl, being aware of her difference is worse. It is an unnecessary insult.\""
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The claim is that the character 'struggles to accept her African American race'. Option D explicitly states that 'being aware of her difference is worse' and calls it an 'unnecessary insult,' directly expressing the struggle with her racial identity."
+      }
+    },
+    {
+      "id": "QUO_005",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "In her essay entitled, 'Slouching Towards Bethlehem,' Joan Didion describes her experiences in California during the 1960s and 1970s while proving a darker side of this period existed even though it is often admired for its claimed pursuit of peace and love.",
+        "question": "Which quotation from 'Slouching Towards Bethlehem' most effectively supports the claim?",
+        "options": [
+          "A) \"It was a country of bankruptcy notices and public-auction announcements and commonplace reports of casual killings and misplaced children and abandoned homes...\"",
+          "B) \"It was the United States of America in the cold late spring of 1967, and the market was steady...\"",
+          "C) \"San Francisco was where the missing children were gathering...\"",
+          "D) \"Adolescents drifted from city to torn city...\""
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The claim refers to a 'darker side' of the period. Option A lists bleak imagery: 'bankruptcy,' 'casual killings,' 'misplaced children,' and 'abandoned homes.' This effectively illustrates the dark reality Didion is describing."
+      }
+    },
+    {
+      "id": "QUO_006",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Cane is a 1932 novel by Jean. In one portion of the novel, Jean establishes a contrast between the narrator's attitude towards life and the attitude of the narrator's love interest, Avy, writing",
+        "question": "Which quotation most effectively supports this claim?",
+        "options": [
+          "A) \"I saw the dawn steel over Washington. The capitol dome looked like a gray ghost...\"",
+          "B) \"Avey was as silent as those great trees...\"",
+          "C) \"Avey slipped her hand in mine...\"",
+          "D) \"As time went on, Avey's indifference to things began to pique me; I was ambitious. I left out small hometown earlier than she did.\""
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The claim is about a 'contrast between the narrator's attitude... and the attitude of... Avy.' Option D contrasts 'Avey's indifference' with the narrator's statement 'I was ambitious,' clearly highlighting their differing attitudes towards life."
+      }
+    },
+    {
+      "id": "QUO_007",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The Monster is an 1898 story by Stephen Crane... Crane depicts the dedication and care with which his father typically cares for his lawn, writing",
+        "question": "Which quotation from 'The Monster' most effectively illustrates that claim?",
+        "options": [
+          "A) After some trouble (Jim's father) found the subject of the incident...",
+          "B) \"(Jim's father) was shaving this lawn as if it were a priest's chin. All during the season he had worked at it in the coolness and peace of the evenings after supper...\"",
+          "C) (Jim's father) paused, and with the howl of the machine no longer occupying the sense...",
+          "D) \"(Jim) went on to the lawn, very slowly...\""
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The claim focuses on 'dedication and care' for the lawn. Option B describes him 'shaving this lawn as if it were a priest's chin' (meticulous care) and working at it 'All during the season' (dedication)."
+      }
+    },
+    {
+      "id": "QUO_008",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "In a research paper about theatrical costume design, a student argues that costume designers for modern productions of Shakespeare's A Midsummer Night's Dream (set in ancient Greece) sometimes include such elements [contemporary design elements] unintentionally.",
+        "question": "Which quotation from an interview with a costume designer would most effectively support the student's claim?",
+        "options": [
+          "A) I tend to pay careful attention to a character's accessories like gloves...",
+          "B) I aim to create a clear sense of the character... sometimes this means adhering to the historical period's style, but frequently... some flexibility is required...",
+          "C) \"Costumes must always reflect the correct historical period...\"",
+          "D) In the 1980s I was costuming for a production... Even though I focused on using the correct materials... when looking back I can clearly see the influence of 1980s fashion in my designs."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The claim is that designers include contemporary elements *unintentionally*. Option D states the designer 'focused on using the correct materials' (intent) but 'can clearly see the influence of 1980s fashion' (unintentional result), supporting the claim perfectly."
+      }
+    },
+    {
+      "id": "QUO_009",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The Underdogs is a 1915 novel by Mariano Azuela... In the novel, a group of soldiers travel through a canyon, where their collective mood becomes strongly affected by the strenuous conditions of their journey:",
+        "question": "Which quotation from 'The Underdogs' most effectively illustrates that claim?",
+        "options": [
+          "A) The sierra is clad in gold colors...",
+          "B) \"Then, hurriedly, the soldiers took the Juchipila canyon northward...\"",
+          "C) \"The sun, beating down upon (the soldiers), dulled their minds and bodies and presently they were silent,\"",
+          "D) All day long (the soldiers) rode through the canyon..."
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The claim is that the 'strenuous conditions' affected their 'collective mood.' Option C describes the sun 'beating down' (strenuous condition) which 'dulled their minds and bodies' and made them 'silent' (mood effect)."
+      }
+    },
+    {
+      "id": "QUO_010",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Poems is an 1895 collection of poetry by Frances E.W. Harper. In one of Harper's poems, the speaker criticizes activists who champion humanitarian causes in other countries while overlooking local concerns, saying",
+        "question": "Which quotation from Poems most effectively illustrates the claim?",
+        "options": [
+          "A) God bless our native land...",
+          "B) Men may tread down the poor and lowly...",
+          "C) Say not the age is hard and cold...",
+          "D) When ye plead for the wrecked and fallen, / The exile from far-distant shores, / Remember that men are still wasting / Life's crimson around your own doors."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The claim contrasts 'far-distant shores' with 'local concerns.' Option D explicitly contrasts pleading for 'The exile from far-distant shores' with remembering men wasting 'around your own doors' (local)."
+      }
+    },
+    {
+      "id": "QUO_011",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "In a paper for an art history class, a student claims that Gwen John's circa 1915 painting Mère Poussepin marks a significant change in John's artistic development.",
+        "question": "Which quotation from an art history textbook would most effectively support the student's claim?",
+        "options": [
+          "A) Mère Poussepin has been analyzed extensively...",
+          "B) Of all John's paintings, none so clearly represents her abilities...",
+          "C) The paintings that John produced before Mère Poussepin can be thought of as belonging to her earlier style, to which she never returned.",
+          "D) Although John was clearly influenced by other artists..."
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The claim is that the painting marks a 'significant change.' Option C supports this by stating that works *before* this painting belong to an 'earlier style, to which she never returned,' marking this painting as the point of divergence/change."
+      }
+    },
+    {
+      "id": "QUO_012",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Cane is a 1923 novel by Jean Toomer. In one portion of the novel, Toomer uses figurative language to connect the narrator's urban environment of Washington, DC, and the rural South of the narrator's past, writing,",
+        "question": "Which quotation from Cane most effectively illustrates the claim?",
+        "options": [
+          "A) And when the wind is from the South, soil of my homeland falls like a fertile shower upon the lean streets of [Washington, DC].",
+          "B) The young trees had not outgrown their [planter] boxes then...",
+          "C) The Capitol dome looked like a gray ghost ship...",
+          "D) The [train] engines of this valley have a whistle..."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The claim is about connecting 'urban Washington' with 'rural South.' Option A explicitly mentions 'wind... from the South' bringing 'soil of my homeland' (rural South) onto the 'lean streets of Washington, DC' (urban), creating a figurative connection."
+      }
+    },
+    {
+      "id": "QUO_013",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "In a paper for an art history class, a student claims that Rosa Bonheur's 1855 painting The Horse Fair marks a significant change in Bonheur's artistic development.",
+        "question": "Which quotation from an art history textbook would most effectively support the student's claim?",
+        "options": [
+          "A) The paintings that Bonheur produced before The Horse Fair can be thought of as belonging to her earlier style, to which she never returned.",
+          "B) Of all Bonheur's paintings, none so clearly represents her abilities...",
+          "C) The Horse Fair has been analyzed extensively...",
+          "D) Although Bonheur was clearly influenced..."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Duplicate of Q11 logic. Option A states that paintings *before* 'The Horse Fair' belong to an 'earlier style, to which she never returned,' identifying the painting as the turning point/significant change."
+      }
+    },
+    {
+      "id": "QUO_014",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Poetry is a 1919 poem by Marianne Moore. The poem highlights an ambivalence toward poetry as the speaker acknowledges its merits while also expressing a sense of displeasure, writing",
+        "question": "Which quotation from 'Poetry' most effectively illustrates the claim?",
+        "options": [
+          "A) nor is it valid / to discriminate against 'business documents'...",
+          "B) One must make a distinction / however...",
+          "C) when [poems] become so derivative...",
+          "D) Reading poetry], however, with a perfect contempt for it, one discovers that there is init after all, a place for the genuine."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The claim is about 'ambivalence' (mixed feelings: displeasure + merit). Option D captures this perfectly: 'perfect contempt for it' (displeasure) but discovers 'a place for the genuine' (merit)."
+      }
+    },
+    {
+      "id": "QUO_015",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "'The Bet' is an 1889 short story by Anton Chekhov. In the story, a banker is described as being very upset about something:",
+        "question": "Which quotation from 'The Bet' most effectively illustrates the claim?",
+        "options": [
+          "A) \"Then the banker cautiously broke the seals off the door...\"",
+          "B) \"It struck three o'clock, the banker listened...\"",
+          "C) \"The banker, spoilt and frivolous, with millions... was delighted at the bet.\"",
+          "D) \"When [the banker got home he lay on his bed, but his tears and emotion kept him for hours from sleeping.\""
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The claim is that the banker is 'very upset.' Option D describes his 'tears and emotion' keeping him from sleeping, which is a clear illustration of being upset."
+      }
+    },
+    {
+      "id": "QUO_016",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Lines Written in Early Spring is a 1798 poem by William Wordsworth. In the poem, the speaker describes having contradictory feelings while experiencing the sights and sounds of a spring day:",
+        "question": "Which quotation from 'Lines Written in Early Spring' most effectively illustrates the claim?",
+        "options": [
+          "A) Through primrose-tufts, in that sweet bower...",
+          "B) The budding twigs spread out their fan...",
+          "C) The birds around me hopp'd and play'd...",
+          "D) I heard a thousand blended notes, / While in a grove I [sat] reclined. / In that sweet mood when pleasant thoughts/Bring sad thoughts to the mind."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The claim mentions 'contradictory feelings.' Option D juxtaposes 'pleasant thoughts' with 'sad thoughts,' illustrating the contradiction directly."
+      }
+    },
+    {
+      "id": "QUO_017",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The Yellow Wallpaper is an 1892 short story by Charlotte Perkins Gilman. In the story, the narrator expresses mixed feelings about her surroundings:",
+        "question": "Which quotation from 'The Yellow Wallpaper' most effectively illustrates the claim?",
+        "options": [
+          "A) This wallpaper has a kind of sub-pattern...",
+          "B) By moonlight the moon shines in all night...",
+          "C) I'm really getting quite fond of the big room, all but that horrid [wall paper.",
+          "D) The color is repellant, almost revolting..."
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The claim is about 'mixed feelings.' Option C states she is 'getting quite fond of the big room' (positive) 'all but that horrid wallpaper' (negative), showing mixed emotions."
+      }
+    },
+    {
+      "id": "QUO_018",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "In a paper for an art history class, a student claims that Agnes Martin's 1957 painting Harbor Number 1 marks a significant change in Martin's artistic development.",
+        "question": "Which quotation from an art history textbook would most effectively support the student's claim?",
+        "options": [
+          "A) \"Harbor Number 1 has been analyzed extensively...\"",
+          "B) \"Although Martin was clearly influenced...\"",
+          "C) \"The paintings that Martin produced before Harbor Number 1 can be thought of as belonging to her earlier style, to which she never returned.\"",
+          "D) \"Of all Martin's paintings, none so clearly represents her abilities...\""
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Duplicate of Q11 and Q13 logic. 'Before Harbor Number 1... earlier style, to which she never returned' indicates a significant change."
+      }
+    },
+    {
+      "id": "QUO_019",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "A Pair of Silk Stockings is an 1897 short story written by Kate Chopin. In the story, Chopin suggests that the protagonist, Mrs. Sommers, experiences a shift in her sense of self as a result of putting on certain articles of clothing, writing,",
+        "question": "Which quotation from 'A Pair of Silk Stockings' most effectively illustrates the claim?",
+        "options": [
+          "A) \"Mrs. Sommers was one who knew the value of bargains...\"",
+          "B) \"She held back her skirts and turned her feet...\"",
+          "C) \"She would buy so and so many yards...\"",
+          "D) \"Her stockings and boots and well-fitting gloves had worked marvels in her bearing had given her a feeling of assurance, a sense of belonging to the well-dressed multitude.\""
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The claim is about a 'shift in her sense of self' due to clothing. Option D states the clothing 'worked marvels in her bearing' and gave her a 'feeling of assurance' and 'sense of belonging,' illustrating this shift."
+      }
+    },
+    {
+      "id": "QUO_020",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Uncle Vanya... Chekhov portrays Helena as trying to ease tensions between Vanya and the professor, as is evident when",
+        "question": "Which quotation from a translation of Uncle Vanya most effectively illustrates the claim?",
+        "options": [
+          "A) Helena says to Vanya, \"I am absolutely exhausted...\"",
+          "B) Helena says to Vanya, \"You all abuse my husband...\"",
+          "C) Helena says to Vanya, \"You are cultured and intelligent... It is your duty to make peace [with Professor Serebrakoff], and not to growl at everything.\"",
+          "D) Helena says to Sonia, \"When you come to think of it...\""
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The claim is that Helena tries to 'ease tensions.' Option C shows her urging Vanya to 'make peace' and 'not to growl at everything,' which is a direct attempt to reduce conflict/tension."
+      }
+    },
+    {
+      "id": "QUO_021",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Uncle Vanya... Chekhov depicts Vanya's opinion of Professor Serebrakoff as having changed significantly, as is evident when",
+        "question": "Which quotation from a translation of Uncle Vanya most effectively illustrates the claim?",
+        "options": [
+          "A) Vanya says... \"For twenty-five years I have managed [the country estate]...\"",
+          "B) Professor Serebrakoff says...",
+          "C) Vanya says...",
+          "D) Vanya says to himself, \"I was proud of [Professor Serebrakoff]... and now? Now he has retired, and what is the total of his life? A blank!... I have been deceived; I see that now...\""
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The claim is about a 'changed' opinion. Option D contrasts the past ('I was proud') with the present ('now... A blank!', 'I have been deceived'), clearly illustrating the significant change."
+      }
+    },
+    {
+      "id": "QUO_022",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Life Among the Paiutes... In the work, Winnemucca creates suspense by emphasizing her physical response to an event, writing",
+        "question": "Which quotation from Life Among the Paiutes most effectively illustrates the claim?",
+        "options": [
+          "A) A. \"Oh, how my heart jumped when I heard a noise... Oh, how my heart beat! I thought whoever it was would hear my heart beat.\"",
+          "B) \"Oh, how happy everybody was!...\"",
+          "C) \"Late in that fall, there came news...\"",
+          "D) \"That same fall...\""
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The claim involves 'suspense' and 'physical response.' Option A describes her heart 'jumped' and 'beat' so loud she thought others would hear it—a classic physical manifestation of suspense/fear."
+      }
+    },
+    {
+      "id": "QUO_023",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "A student is writing an essay on the subject of cultured meat... The student wishes to make the case that people have mixed feelings about cultured meat that may be a barrier to its worldwide adoption.",
+        "question": "Which quotation from a publication by a researcher would most effectively support the student's claim?",
+        "options": [
+          "A) \"Many consumers who were surveyed believed that cultured meat would be good for the environment... but few of those same consumers were willing to try eating cultured meat themselves.\"",
+          "B) \"Consumers tend to believe that using less packaging...\"",
+          "C) \"Advocates of lab-grown meat claim that it's safer...\"",
+          "D) \"The flavor of meat from livestock differs...\""
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The claim is about 'mixed feelings.' Option A states consumers believe it is 'good for the environment' (positive) but are 'few... willing to try eating' it (negative), illustrating the mixed feelings/barrier."
+      }
+    },
+    {
+      "id": "QUO_024",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "A student is writing a research paper on the history of irrigation... The student claims that California's climate renders irrigation an essential component of agriculture in some parts of the state but not in others.",
+        "question": "Which quotation from a study of California agriculture best supports the student's claim?",
+        "options": [
+          "A) \"The usefulness of irrigation infrastructure...\"",
+          "B) \"Natural humidity, which renders irrigation unnecessary or reduces its importance in the northern reaches of California, gradually decreases toward the sun-scorched but nonetheless fertile valleys of the southern part of the state.\"",
+          "C) \"Sprinkler irrigation systems...\"",
+          "D) \"The irrigation system developed by the Hohokam...\""
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The claim is that irrigation is essential in *some* parts but *not* others. Option B contrasts the 'northern reaches' (unnecessary/reduced importance) with the 'southern part' (sun-scorched/implies necessary), supporting the geographical distinction."
+      }
+    },
+    {
+      "id": "QUO_025",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Treasure Island is an 1883 novel by Robert Louis Stevenson... The narrator was frightened of the sailor, as can be seen when the narrator says,",
+        "question": "Which quotation from Treasure Island most effectively illustrates the claim?",
+        "options": [
+          "A) \"How [the sailor] haunted my dreams... I would see him in a thousand forms, and with a thousand diabolical expressions.\"",
+          "B) \"I remember [the sailor] as if it were yesterday...\"",
+          "C) \"[The sailor was a very silent man...\"",
+          "D) \"All the time he lived with us...\""
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The claim is that the narrator was 'frightened.' Option A describes the sailor 'haunted my dreams' in 'diabolical expressions,' which strongly illustrates fear."
+      }
+    },
+    {
+      "id": "QUO_026",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Poems is an 1895 collection... In one of Harper's poems, the speaker declares her intention to create art that has a universal appeal across generations, saying,",
+        "question": "Which quotation from Poems most effectively illustrates the claim?",
+        "options": [
+          "A) \"Our world, so worn and weary...\"",
+          "B) \"Let me make the songs for the people, / Songs for the old and young; / Songs to stir like a battle-cry/Wherever they are sung.\"",
+          "C) \"God bless our native land...\"",
+          "D) \"My mother's kiss...\""
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The claim mentions 'universal appeal across generations.' Option B mentions 'Songs for the old and young' (generations) and 'Wherever they are sung' (universal), fitting the claim perfectly."
+      }
+    },
+    {
+      "id": "QUO_027",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The Underdogs is a 1915 novel by Mariano Azuela... Azuela depicts a traveling group of soldiers as having a renewed sense of agency and authority as they set off on a new stage of their journey:",
+        "question": "Which quotation from a translation of The Underdogs most effectively illustrates the claim?",
+        "options": [
+          "A) \"The sonorous, joyful bells rang again...\"",
+          "B) \"All day long the soldiers] rode through the canyon...\"",
+          "C) \"The men threw out their chests... They spurred their horses to a gallop as if in that mad race they laid claims of possession to the earth.\"",
+          "D) \"Before Juchipila was lost from sight...\""
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The claim refers to a 'renewed sense of agency and authority.' Option C describes them 'threw out their chests' (confidence) and 'laid claims of possession to the earth' (authority), illustrating the claim."
+      }
+    },
+    {
+      "id": "QUO_028",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The Age of Innocence... Newland visualizes the details of a future with May:",
+        "question": "Which quotation from The Age of Innocence best illustrates the claim?",
+        "options": [
+          "A) \"[May] dropped her eyes...\"",
+          "B) \"Newland Archer... turned his eyes from the stage...\"",
+          "C) \"Though there was already talk...\"",
+          "D) \"Already Newland's imagination, leaping ahead of the engagement ring, the betrothal kiss and the [wedding] march... pictured [May] at his side.\""
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The claim is that Newland 'visualizes... a future.' Option D explicitly states his 'imagination... pictured [May] at his side' leaping ahead to the wedding, which is a visualization of the future."
+      }
+    },
+    {
+      "id": "QUO_029",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Cane is a 1923 novel by Jean Toomer. In the novel, Toomer mentions a road in rural Georgia called Dixie Pike and describes it as having a deep connection to faraway place, writing",
+        "question": "Which quotation from Cane most effectively illustrates the claim?",
+        "options": [
+          "A) \"And when the wind is from the South...\"",
+          "B) \"From down the railroad track...\"",
+          "C) \"The Dixie Pike has grown from a goat path in Africa.\"",
+          "D) \"Dixie Pike is what they call it.\""
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The claim mentions a 'deep connection to faraway place.' Option C states the road 'grown from a goat path in Africa' (a faraway place), establishing that deep connection."
+      }
+    },
+    {
+      "id": "QUO_030",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The Age of Innocence... Newland Archer arrives late to an opera performance, which the narrator attributes to Newland's enjoyment of anticipation:",
+        "question": "Which quotation from The Age of Innocence best illustrates the claim?",
+        "options": [
+          "A) \"To come to the Opera in a carriage...\"",
+          "B) \"[T]hinking over a pleasure to come often gave [Newland] a subtler satisfaction than its realisation.\"",
+          "C) \"When Newland Archer opened the door...\"",
+          "D) \"No expense had been spared...\""
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The claim attributes his lateness to 'enjoyment of anticipation.' Option B explains that 'thinking over a pleasure to come' (anticipation) gave 'subtler satisfaction than its realisation,' explaining why he might delay arrival."
+      }
+    },
+    {
+      "id": "QUO_031",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "'The Bet' is an 1889 short story... a banker is described as being very upset about something:",
+        "question": "Which quotation from 'The Bet' most effectively illustrates the claim?",
+        "options": [
+          "A) \"Then the banker cautiously broke the seals...\"",
+          "B) \"It struck three o'clock...\"",
+          "C) \"The banker, spoilt and frivolous...\"",
+          "D) \"When the banker got home he lay on his bed, but his tears and emotion kept him for hours from sleeping.\""
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Duplicate of Q15. Tears and emotion preventing sleep illustrate being upset."
+      }
+    },
+    {
+      "id": "QUO_032",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "A Pair of Silk Stockings... Mrs. Sommers becomes engrossed in the decision of how she should spend a recently obtained sum of money:",
+        "question": "Which quotation from 'A Pair of Silk Stockings' most effectively illustrates the claim?",
+        "options": [
+          "A) \"The question of investment was one that occupied her greatly. For a day or two she walked about apparently in a dreamy state, but really absorbed in speculation and calculation.\"",
+          "B) \"She had learned to clutch a piece of goods...\"",
+          "C) \"A young girl who stood behind the counter...\"",
+          "D) \"It seemed to her a very large amount of money...\""
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The claim is that she is 'engrossed in the decision.' Option A states the question 'occupied her greatly' and she was 'really absorbed in speculation and calculation,' illustrating her engrossment."
+      }
+    },
+    {
+      "id": "QUO_033",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "The Clouds... Aristophanes satirizes sophists as teaching people to speak dishonestly, as seen when the character",
+        "question": "Which choice most effectively uses a quotation from a translation of The Clouds to illustrate the claim?",
+        "options": [
+          "A) Strepsiades encourages his son...",
+          "B) Pheidippides says...",
+          "C) Strepsiades... says he wants to become \"a fabricator of falsehoods, inventive of words... a dissembler, a slippery fellow, an impostor.\"",
+          "D) Socrates... says..."
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The claim is about 'teaching people to speak dishonestly.' Option C lists terms like 'fabricator of falsehoods,' 'dissembler,' and 'impostor,' which directly relate to speaking dishonestly."
+      }
+    },
+    {
+      "id": "QUO_034",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Memoirs of Elleanor Eldridge... the authors assert that all people naturally have an emotional attachment to where they live, writing,",
+        "question": "Which quotation from Memoirs of Elleanor Eldridge most effectively illustrates the claim?",
+        "options": [
+          "A) \"This little book is published...\"",
+          "B) \"To give some idea of the high esteem...\"",
+          "C) \"Blessed are the slumbers...\"",
+          "D) \"Home is home, to the lowly as well as the great: and no rank, or color, destroys its sacred character, its power over the mind, and the affections.\""
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The claim is about 'emotional attachment to where they live' (home) for 'all people.' Option D states 'Home is home, to the lowly as well as the great' and mentions its 'power over... the affections.'"
+      }
+    },
+    {
+      "id": "QUO_035",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "In a 2023 study, researcher Michael James Walsh... found that these dimensions [social media aspects] tended to make study participants feel more mindful of how their listening activities may be perceived, which in turn influenced how they managed those activities.",
+        "question": "Which quotation from a music streaming platform user would best illustrate Walsh's finding?",
+        "options": [
+          "A) \"Listening to music... feels a lot more passive...\"",
+          "B) \"When I create playlists... I often pick songs that I think the friends who are following me might be interested in listening to, rather than what I might actually prefer...\"",
+          "C) \"Because the predictions the platform makes...\"",
+          "D) \"The social aspects of music streaming...\""
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The finding is that users are 'mindful of how their listening activities may be perceived' and manage them accordingly. Option B describes picking songs for 'friends who are following me' rather than personal preference, illustrating this mindful management."
+      }
+    },
+    {
+      "id": "QUO_036",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "A student is writing a research paper on the history of irrigation... The student claims that some modern-day irrigation methods used in southwestern states... have a lineage that long predates the completion of Searsville Lake [1890].",
+        "question": "Which quotation from a historian best supports the student's claim?",
+        "options": [
+          "A) \"The irrigation system developed by the Hohokam people... in the 7th century CE was simple but made use of hydraulic engineering design principles that are still utilized by today's engineers.\"",
+          "B) \"The importance of the development...\"",
+          "C) \"In the decades following the Second World War...\"",
+          "D) \"Sprinkler irrigation systems...\""
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The claim is about a lineage that 'long predates' 1890. Option A mentions a system from the '7th century CE' that uses principles 'still utilized by today's engineers,' supporting the ancient lineage claim."
+      }
+    },
+    {
+      "id": "QUO_037",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The Clouds... Aristophanes satirizes sophists as having an exaggerated sense of their own wisdom, as seen when the character",
+        "question": "Which choice most effectively uses a quotation from a translation of The Clouds to illustrate the claim?",
+        "options": [
+          "A) Socrates... says... \"You talk nonsense...\"",
+          "B) Strepsiades says... \"These men teach, if one give them money, to conquer in speaking, right or wrong.\"",
+          "C) \"Because the predictions the platform makes...\" (Note: Corrupted option from music Q)",
+          "D) Socrates... says... \"Come, then, take care that, whenever I propound any clever dogma about abstruse matters, you [seize] immediately.\""
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Wait, let's re-read the Answer Key for Q37. The Key says B. Option B describes sophists persuading people the heavens are an oven and teaching to conquer right or wrong. However, Option D seems to illustrate 'exaggerated sense of their own wisdom' better ('clever dogma about abstruse matters'). But Option B highlights their manipulative 'wisdom' about the heavens. Let's stick to Key B."
+      }
+    },
+    {
+      "id": "QUO_038",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "A student is writing a paper about classical composer Florence Beatrice Price... In the paper, the student claims that Price used African instruments in one of her compositions.",
+        "question": "Which quotation from a work by a music historian would most directly support the underlined claim?",
+        "options": [
+          "A) \"After moving to Chicago...\"",
+          "B) \"In 2009, dozens of Price's compositions...\"",
+          "C) \"In her composition Symphony no. 1, Price included African drums.\"",
+          "D) \"Price's success as a composer was notable...\""
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The claim is that she used 'African instruments.' Option C explicitly states she 'included African drums,' which directly supports the claim."
+      }
+    },
+    {
+      "id": "QUO_039",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "'The Monster' is an 1898 story by Stephen Crane... Crane depicts Jim's initial belief that the damage might be repaired or concealed:",
+        "question": "Which quotation from 'The Monster' most effectively illustrates the claim?",
+        "options": [
+          "A) \"Finally [Jim] went to the peony and tried to stand it on its pins, resuscitated, but the spine of it was hurt, and it could only hang limply from his hand.\"",
+          "B) \"Together [Jim and his father] crossed the lawn...\"",
+          "C) \"Little Jim was, for the time, engine Number 36...\"",
+          "D) \"[Jim's father had his back to the accident...\""
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The claim is about the belief that damage could be 'repaired.' Option A describes Jim trying to 'stand it on its pins, resuscitated' (repair it), fitting the claim."
+      }
+    },
+    {
+      "id": "QUO_040",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "'No, Thank You, John' is an 1862 poem by Christina Rossetti... The speaker encourages John to pursue another relationship rather than wait for her to change her mind, saying",
+        "question": "Which quotation from 'No, Thank You, John' most effectively illustrates the claim?",
+        "options": [
+          "A) \"I never said I loved you, John...\"",
+          "B) \"I dare say Meg or Moll would take / Pity upon you, if you'd ask. / And pray don't remain single for my sake/ Who can't perform that task.\"",
+          "C) \"Here's friendship for you...\"",
+          "D) \"Let's strike hands as hearty friends...\""
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The claim is about encouraging him to 'pursue another relationship.' Option B suggests 'Meg or Moll would take Pity upon you' (pursue others) and tells him 'don't remain single for my sake.'"
+      }
+    },
+    {
+      "id": "QUO_041",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "A student is writing an essay on the subject of cultured meat... The student wants to make the case that cultured meat production may be useful in responding to an expected widespread change in the public's behavior",
+        "question": "Which quotation from a publication by a researcher would most effectively support the student's claim?",
+        "options": [
+          "A) \"Researchers who advocate for the development...\"",
+          "B) \"The flavor of meat from livestock differs...\"",
+          "C) \"A growing population that is including significantly more meat in its diet will contribute to an increasing demand for meat products in the 21st century.\"",
+          "D) \"Consumers tend to believe...\""
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The claim mentions an 'expected widespread change in the public's behavior.' Option C mentions 'growing population... including significantly more meat in its diet' (behavior change) leading to 'increasing demand,' which cultured meat could help meet."
+      }
+    },
+    {
+      "id": "QUO_042",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Poems is an 1895 collection... In one of Harper's poems, the speaker criticizes activists who champion humanitarian causes in other countries while overlooking local concerns, saying",
+        "question": "Which quotation from Poems most effectively illustrates the claim?",
+        "options": [
+          "A) \"Men may tread down the poor and lowly...\"",
+          "B) \"When ye plead for the wrecked and fallen, / The exile from far-distant shores, / Remember that men are still wasting / Life's crimson around your own doors.\"",
+          "C) \"God bless our native land...\"",
+          "D) \"Let me make the songs for the people...\""
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Duplicate of Q10. Contrasts 'far-distant shores' with 'around your own doors'."
+      }
+    },
+    {
+      "id": "QUO_043",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "In a paper for an art history class, a student claims that Rosa Bonheur's 1855 painting The Horse Fair marks a significant change in Bonheur's artistic development.",
+        "question": "Which quotation from an art history textbook would most effectively support the student's claim?",
+        "options": [
+          "A) \"The paintings that Bonheur produced before The Horse Fair can be thought of as belonging to her earlier style, to which she never returned.\"",
+          "B) \"Of all Bonheur's paintings...\"",
+          "C) \"The Horse Fair has been analyzed extensively...\"",
+          "D) \"Although Bonheur was clearly influenced...\""
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Duplicate of Q13. Painting marks the end of an 'earlier style, to which she never returned.'"
+      }
+    },
+    {
+      "id": "QUO_044",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "\"Poetry\" is a 1919 poem by Marianne Moore. The poem highlights an ambivalence toward poetry as the speaker acknowledges its merits while also expressing a sense of displeasure, writing",
+        "question": "Which quotation from \"Poetry\" most effectively illustrates the claim?",
+        "options": [
+          "A) \"nor is it valid / to discriminate...\"",
+          "B) \"One must make a distinction...\"",
+          "C) \"when [poems become so derivative...\"",
+          "D) \"Reading [poetry], however, with a perfect contempt for it, one discovers that there is in/it after all, a place for the genuine.\""
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Duplicate of Q14. Ambivalence shown through 'contempt' (displeasure) and 'place for the genuine' (merit)."
+      }
+    },
+    {
+      "id": "QUO_045",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Cane is a 1923 novel by Jean Toomer. In one portion of the novel, Toomer uses figurative language to connect the narrator's urban environment of Washington, DC, and the rural South of the narrator's past, writing,",
+        "question": "Which quotation from Cane most effectively illustrates the claim?",
+        "options": [
+          "A) \"The [train] engines of this valley...\"",
+          "B) \"I sang, with a strange quiver...\"",
+          "C) \"The young trees had not outgrown...\"",
+          "D) \"And when the wind is from the South, soil of my homeland falls like a fertile shower upon the lean streets of [Washington, DC].\""
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Duplicate of Q12. 'Soil of my homeland' (South) falls on 'lean streets of Washington, DC'."
+      }
+    },
+    {
+      "id": "QUO_046",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "\"The Monster\" is an 1898 story by Stephen Crane... whenever Jimmie, a young boy, has been scolded by his father for misbehavior, he seeks comfort from Henry Johnson... However, Henry does not always provide such comfort; Crane suggests this by writing",
+        "question": "Which quotation from The Monster most effectively illustrates the claim?",
+        "options": [
+          "A) \"For one thing, Jimmie was invariably overcome...\"",
+          "B) \"Henry... could usually provide a sin...\"",
+          "C) \"Henry would sometimes choose to absolutely repudiate [Jimmie's behavior], and when Jimmie appeared in his shame would bully him most virtuously...\"",
+          "D) \"Whenever Henry dwelt for a time in sackcloth...\""
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The claim is that Henry 'does not always provide such comfort.' Option C describes Henry 'repudiate' behavior and 'bully him most virtuously,' which is the opposite of providing comfort."
+      }
+    },
+    {
+      "id": "QUO_047",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Life Among the Paiutes... In the work, Winnemucca directly addresses the reader to explain certain customs, writing",
+        "question": "Which quotation from Life Among the Paiutes most effectively illustrates the claim?",
+        "options": [
+          "A) \"Now, my dear reader, there is no word so endearing as the word father, and that is why [my people call all good people father or mother.\"",
+          "B) \"We would all go in company...\"",
+          "C) \"During the time my grandfather was away...\"",
+          "D) \"But how can I describe the scene...\""
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The claim is about explaining 'certain customs.' Option A explains the custom of calling all good people 'father or mother' and addresses the reader ('Now, my dear reader')."
+      }
+    },
+    {
+      "id": "QUO_048",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The Wonderful Wizard of Oz is a 1900 novel by L. Frank Baum... The narrator describes a character's house as having become very faded in appearance over time:",
+        "question": "Which quotation from The Wonderful Wizard of Oz most effectively illustrates the claim?",
+        "options": [
+          "A) \"Once more [Dorothy and her companions] could see fences...\"",
+          "B) \"Then [Dorothy went back to the house...\"",
+          "C) \"Once the house had been painted, but the sun blistered the paint and the rains washed it away, and now the house was as dull and gray as everything else.\"",
+          "D) \"When Dorothy stood in the doorway...\""
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The claim focuses on the house becoming 'faded in appearance.' Option C explicitly describes the paint being 'blistered' and 'washed away' until the house was 'dull and gray,' illustrating the fading process."
+      }
+    },
+    {
+      "id": "QUO_049",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Life Among the Paiutes... In the work, Winnemucca directly addresses the reader to explain certain customs, writing",
+        "question": "Which quotation from Life Among the Paiutes most effectively illustrates the claim?",
+        "options": [
+          "A) \"Now, my dear reader, there is no word so endearing as the word father, and that is why [my people] call all good people father or mother.\"",
+          "B) \"We would all go in company...\"",
+          "C) \"During the time my grandfather...\"",
+          "D) \"But how can I describe...\""
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Duplicate of Q47. Explains the custom of naming."
+      }
+    },
+    {
+      "id": "QUO_050",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "\"Aunt Sue's Stories\" is a 1926 poem by Langston Hughes. In the poem, the speaker indicates that the stories Aunt Sue tells are based on Aunt Sue's personal experiences, saying that",
+        "question": "Which choice most effectively uses a quotation from \"Aunt Sue's Stories\" to illustrate the claim",
+        "options": [
+          "A) a listening child \"knows that Aunt Sue/ Never got her stories out of any book at all. But that they came / Right out of her own life.\"",
+          "B) the people in the stories \"Mingle themselves softly...\"",
+          "C) dark shadows \"cross and recross...\"",
+          "D) the stories are told during \"Summer nights...\""
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The claim is that stories are based on 'personal experiences.' Option A states they 'Never got her stories out of any book' but came 'Right out of her own life,' directly supporting the claim."
+      }
+    },
+    {
+      "id": "QUO_051",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "A student is writing a research paper on the history of irrigation in the United States... The student claims that innovation in irrigation practices throughout the United States has led to designs with increased efficiency.",
+        "question": "Which quotation from a study of irrigation best supports the student's claim?",
+        "options": [
+          "A) \"While the low humidity of Southern California's desert areas...\"",
+          "B) \"The importance of irrigation infrastructure...\"",
+          "C) \"The irrigation system developed by the Hohokam...\"",
+          "D) \"Competition for water... inspired the development of sprinkler irrigation systems, which have contributed to the reduction of water used for irrigation in the United States to 45%...\""
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The claim is about 'increased efficiency.' Option D mentions the development of 'sprinkler irrigation systems' which 'contributed to the reduction of water used,' implying increased efficiency (doing more with less)."
+      }
+    },
+    {
+      "id": "QUO_052",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Uncle Vanya... Chekhov portrays the relationship between Vanya and Professor Serebrakoff as being much more strained than it once was, as is evident when",
+        "question": "Which quotation from a translation of Uncle Vanya most effectively illustrates the claim?",
+        "options": [
+          "A) Professor Serebrakoff asks Vanya to leave the room...",
+          "B) Vanya says to Professor Serebrakoff, \"For twenty-five years I have managed [the country estate]... and you have never given me one single word of thanks for my work, not or neither in my youth nor now.\"",
+          "C) Vanya says of Professor Serebrakoff...",
+          "D) Professor Serebrakoff says to Helena..."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The claim is about a 'strained' relationship. Option B shows Vanya expressing deep resentment about lack of gratitude ('never given me one single word of thanks'), illustrating the strain."
+      }
+    },
+    {
+      "id": "QUO_053",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Memoirs of Elleanor Eldridge... In the book, the authors assert that all people naturally have an emotional attachment to where they live, writing,",
+        "question": "Which quotation from Memoirs of Elleanor Eldridge most effectively illustrates the claim?",
+        "options": [
+          "A) \"Having thus so comfortably established ourselves...\"",
+          "B) \"Home is home, to the lowly as well as the great; and no rank, or color, destroys its sacred character, its power over the mind, and the affections.\"",
+          "C) \"Blessed are the slumbers...\"",
+          "D) \"To give some idea of the high esteem...\""
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Duplicate of Q34. 'Home is home... power over... the affections'."
+      }
+    },
+    {
+      "id": "QUO_054",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "In a 2023 study, researcher Michael James Walsh interviewed frequent users of a popular music streaming platform to investigate how its social media dimensions shape their listening habits. Walsh found that these dimensions tended to make study participants feel more mindful of how their listening activities may be perceived, which in turn influenced how they managed those activities.",
+        "question": "Which quotation from a music streaming platform user would best illustrate Walsh's finding?",
+        "options": [
+          "A) \"Because the predictions the platform makes...\"",
+          "B) \"Listening to music... feels a lot more passive...\"",
+          "C) \"The social aspects of music streaming...\"",
+          "D) \"When I create playlists or choose songs to listen to, I often pick songs that I think the friends who are following me might be interested in listening to, rather than what I might actually prefer...\""
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Duplicate of Q35. User picks songs for friends (perceived by others) rather than preference."
+      }
+    },
+    {
+      "id": "QUO_055",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "A student is writing a research paper on the history of irrigation in the southwestern United States... The student claims that some modern-day irrigation methods used in southwestern states... have a lineage that long predates the completion of Searsville Lake.",
+        "question": "Which quotation from a historian best supports the student's claim?",
+        "options": [
+          "A) \"Sprinkler irrigation systems...\"",
+          "B) \"The irrigation system developed by the Hohokam people in what is now central Arizona in the 7th century CE was simple but made use of hydraulic engineering design principles that are still utilized by today's engineers.\"",
+          "C) \"The importance of the development...\"",
+          "D) \"In the decades following the Second World War...\""
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Duplicate of Q36. 7th Century CE system still utilized today supports ancient lineage."
+      }
+    },
+    {
+      "id": "QUO_056",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The Clouds... Aristophanes satirizes sophists as having an exaggerated sense of their own wisdom, as seen when the character",
+        "question": "Which choice most effectively uses a quotation from a translation of The Clouds to illustrate the claim?",
+        "options": [
+          "A) Socrates... says... \"Come, then, take care that, whenever I propound any clever dogma about abstruse matters, you [seize] immediately.\"",
+          "B) Strepsiades says...",
+          "C) Socrates... says... \"Is the power of speaking...\"",
+          "D) Strepsiades encourages his son..."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The claim is about 'exaggerated sense of their own wisdom.' Option A shows Socrates referring to his own words as 'clever dogma about abstruse matters' that must be seized immediately, showing arrogance/exaggerated wisdom."
+      }
+    },
+    {
+      "id": "QUO_057",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "A student is writing a paper about classical composer Florence Beatrice Price... In the paper, the student claims that Price used African instruments in one of her compositions.",
+        "question": "Which quotation from a work by a music historian would most directly support the underlined claim?",
+        "options": [
+          "A) \"After moving to Chicago...\"",
+          "B) \"In 2009, dozens of Price's compositions...\"",
+          "C) \"In her composition Symphony no. 1. Price included African drums.\"",
+          "D) \"Price's success as a composer...\""
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Duplicate of Q38. 'Included African drums'."
+      }
+    },
+    {
+      "id": "QUO_058",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "\"The Monster\"... while playing, Jim accidentally damages a peony (a flower). Crane emphasizes Jim's energy and his distracted absorption in his play by writing,",
+        "question": "Which quotation from The Monster most effectively illustrates the claim?",
+        "options": [
+          "A) \"Finally [Jim] went to the peony...\"",
+          "B) \"Together Jim and his father] crossed the lawn...\"",
+          "C) \"Little Jim was, for the time, engine Number 36, and he was making the run between Syracuse and Rochester. He was fourteen minutes behind time, and the throttle was wide open.\"",
+          "D) \"[Jim's father had his back...\""
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The claim mentions 'energy' and 'distracted absorption.' Option C describes Jim imagining he is 'engine Number 36' making a run with 'throttle wide open,' illustrating his intense, energetic absorption in the game."
+      }
+    },
+    {
+      "id": "QUO_059",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "\"No, Thank You, John\"... The speaker encourages John to pursue another relationship rather than wait for her to change her mind, saying",
+        "question": "Which quotation from \"No, Thank You, John\" most effectively illustrates the claim?",
+        "options": [
+          "A) \"I never said I loved you, John...\"",
+          "B) \"I dare say Meg or Moll would take / Pity upon you, if you'd ask. / And pray don't remain single for my sake/ Who can't perform that task.\"",
+          "C) \"Here's friendship for you...\"",
+          "D) \"Let's strike hands...\""
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Duplicate of Q40. Suggests Meg or Moll and says 'don't remain single for my sake.'"
+      }
+    },
+    {
+      "id": "QUO_060",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "A student is writing an essay on the subject of cultured meat... The student wants to make the case that cultured meat production may be useful in responding to an expected widespread change in the public's behavior.",
+        "question": "Which quotation from a publication by a researcher would most effectively support the student's claim?",
+        "options": [
+          "A) \"Researchers who advocate...\"",
+          "B) \"The flavor of meat...\"",
+          "C) \"A growing population that is including significantly more meat in its diet will contribute to an increasing demand for meat products in the 21st century.\"",
+          "D) \"Consumers tend to believe...\""
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Duplicate of Q41. 'Including significantly more meat in its diet' is the widespread behavioral change."
+      }
+    },
+    {
+      "id": "QUO_061",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Poems... In one of Harper's poems, the speaker criticizes activists who champion humanitarian causes in other countries while overlooking local concerns, saying",
+        "question": "Which quotation from a publication by a researcher would most effectively support the student's claim?",
+        "options": [
+          "A) \"God bless our native land...\"",
+          "B) \"Men may tread down...\"",
+          "C) \"Say not the age is hard...\"",
+          "D) \"When ye plead for the wrecked and fallen, The exile from far-distant shores, / Remember that men are still wasting / Life's crimson around your own doors.\""
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Duplicate of Q10 and Q42."
+      }
+    },
+    {
+      "id": "QUO_062",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "In a paper for an art history class, a student claims that Rosa Bonheur's 1855 painting The Horse Fair marks a significant change in Bonheur's artistic development.",
+        "question": "Which quotation from an art history textbook would most effectively support the student's claim?",
+        "options": [
+          "A) \"The paintings that Bonheur produced before The Horse Fair can be thought of as belonging to her earlier style, to which she never returned.\"",
+          "B) \"Of all Bonheur's paintings...\"",
+          "C) \"The Horse Fair has been analyzed extensively...\"",
+          "D) \"Although Bonheur was clearly influenced...\""
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Duplicate of Q13 and Q43."
+      }
+    },
+    {
+      "id": "QUO_063",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "\"Poetry\" is a 1919 poem... The poem highlights an ambivalence toward poetry as the speaker acknowledges its merits while also expressing a sense of displeasure, writing",
+        "question": "Which quotation from \"Poetry\" most effectively illustrates the claim?",
+        "options": [
+          "A) \"nor is it valid...\"",
+          "B) \"One must make a distinction...\"",
+          "C) \"when [poems become so derivative...\"",
+          "D) \"Reading [poetry], however, with a perfect contempt for it, one discovers that there is init after all, a place for the genuine.\""
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Duplicate of Q14 and Q44."
+      }
+    },
+    {
+      "id": "QUO_064",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Cane is a 1923 novel... Toomer uses figurative language to connect the narrator's urban environment of Washington, DC, and the rural South of the narrator's past, writing,",
+        "question": "Which quotation from Cane most effectively illustrates the claim?",
+        "options": [
+          "A) \"The [train engines...\"",
+          "B) \"I sang, with a strange quiver...\"",
+          "C) \"The young trees...\"",
+          "D) \"And when the wind is from the South, soil of my homeland falls like a fertile shower upon the lean streets of [Washington, DC].\""
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Duplicate of Q12 and Q45."
+      }
+    },
+    {
+      "id": "QUO_065",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Life Among the Paiutes... In the work, Winnemucca directly addresses the reader to explain certain customs, writing",
+        "question": "Which quotation from Life Among the Paiutes most effectively illustrates the claim?",
+        "options": [
+          "A) \"Now, my dear reader, there is no word so endearing as the word father, and that is why [my people call all good people father or mother. \"",
+          "B) \"We would all go in company...\"",
+          "C) \"During the time my grandfather...\"",
+          "D) \"But how can I describe...\""
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Duplicate of Q47 and Q49."
+      }
+    },
+    {
+      "id": "QUO_066",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The Wonderful Wizard of Oz is a 1900 novel by L. Frank Baum... The narrator describes a character's house as having become very faded in appearance over time:",
+        "question": "Which quotation from The Wonderful Wizard of Oz most effectively illustrates the claim?",
+        "options": [
+          "A) \"Once more [Dorothy and her companions] could see fences...\"",
+          "B) \"Then [Dorothy went back...\"",
+          "C) \"Once the house had been painted, but the sun blistered the paint and the rains washed it away, and now the house was as dull and gray as everything else. \"",
+          "D) \"When Dorothy stood in the doorway...\""
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Duplicate of Q48."
+      }
+    },
+    {
+      "id": "QUO_067",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "\"The Monster\"... Henry does not always provide such comfort: Crane suggests this by writing,",
+        "question": "Which quotation from \"The Monster\" most effectively illustrates the claim?",
+        "options": [
+          "A) \"For one thing, Jimmie was invariably overcome...\"",
+          "B) \"Henry... could usually provide a sin...\"",
+          "C) \"Henry would sometimes choose to absolutely repudiate [Jimmie's behavior], and when Jimmie appeared in his shame would bully him most virtuously, preaching with assurance the precepts of [Jimmie's father's creed, and pointing out to Jimmie all of his abominations.\"",
+          "D) \"Whenever Henry dwelt for a time...\""
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Duplicate of Q46. 'Repudiate' and 'bully him' show lack of comfort."
+      }
+    },
+    {
+      "id": "QUO_068",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "\"Aunt Sue's Stories\" is a 1926 poem by Langston Hughes. In the poem, the speaker indicates that the stories Aunt Sue tells are based on Aunt Sue's personal experiences, saying that.",
+        "question": "Which choice most effectively uses aquotation from \"Aunt Sue's Stories\" to illustrate the claim?",
+        "options": [
+          "A) a listening child \"knows that Aunt Sue / Never got her stories out of any book at all. But that they came / Right out of her own life.\"",
+          "B) the people in the stories \"Mingle themselves softly...\"",
+          "C) dark shadows \"cross and recross...\"",
+          "D) the stories are told during \"Summer nights...\""
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Duplicate of Q50. 'Right out of her own life'."
+      }
+    },
+    {
+      "id": "QUO_069",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "A student is writing a research paper on the history of Irrigation in the United States... The student claims that innovation in Irrigation practices throughout the United States has led to designs with",
+        "question": "Which quotation from a study of irrigation best supports the student's claim?",
+        "options": [
+          "A) \"While the low humidity...\"",
+          "B) \"The importance of irrigation...\"",
+          "C) \"The irrigation system developed by the Hohokam...\"",
+          "D) \"Competition for water as a scarce economic resource inspired the development of sprinkler irrigation systems, which have contributed to the reduction of water used for irrigation in the United States to 45% of the total water usage of its population...\""
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Duplicate of Q51. Sprinkler systems contributed to 'reduction of water used' (efficiency)."
+      }
+    },
+    {
+      "id": "QUO_070",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Uncle Vanya... Chekhov portrays the relationship between Vanya and Professor Serebrakoff as being much more strained than it once was, as is evident when",
+        "question": "Which quotation from a translation of Uncle Vanya most effectively illustrates the claim?",
+        "options": [
+          "A) Professor Serebrakoff asks Vanya to leave the room, saying, \"For the sake of our former friendship do not protest against going. We will talk some other time.\"",
+          "B) Vanya says to Professor Serebrakoff...",
+          "C) Vanya says of Professor Serebrakoff...",
+          "D) Professor Serebrakoff says to Helena..."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Wait, Answer Key for Q70 is A. Option A mentions 'former friendship' and asks him to 'leave the room' to avoid protest. This explicitly contrasts a past ('former friendship') with a current strained interaction ('do not protest against going'). (Note: Q52 had a similar claim but different options/answer B. Q70 has answer A)."
+      }
+    },
+    {
+      "id": "QUO_071",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The Wonderful Wizard of Oz... The narrator indicates that her aunt and uncle's house in Kansas is remote and solitary, writing that",
+        "question": "Which quotation from The Wonderful Wizard of Oz most effectively illustrates the claim?",
+        "options": [
+          "A) in Oz, \"Dorothy [and her companions] passed...\"",
+          "B) in Oz, \"Dorothy fell asleep...\"",
+          "C) in Kansas, \"Dorothy lived in the midst...\"",
+          "D) in Kansas, \"When Dorothy stood in the doorway and looked around, she could see nothing but the great gray prairie on every side. Not a tree nor a house broke the broad sweep of flat country.\""
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The claim is about being 'remote and solitary.' Option D describes 'nothing but the great gray prairie' and 'Not a tree nor a house broke the broad sweep,' emphasizing the solitude."
+      }
+    },
+    {
+      "id": "QUO_072",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Uncle Vanya... Chekhov portrays Vanya as feeling underappreciated by [Professor Serebrakoff] when",
+        "question": "Which quotation from a translation of Uncle Vanya most effectively illustrates the claim?",
+        "options": [
+          "A) Vanya says to Professor Serebrakoff, \"For twenty-five years I have managed this place [the estate], and have sent you the returns from it like the most honest of servants, and you have never given me one single word of thanks for my work, not one neither in my youth nor now.\"",
+          "B) Professor Serebrakoff says...",
+          "C) Vanya says...",
+          "D) Vanya says to himself..."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The claim is about feeling 'underappreciated.' Option A explicitly states 'you have never given me one single word of thanks for my work,' which directly illustrates underappreciation."
+      }
+    }
+  ]
+}

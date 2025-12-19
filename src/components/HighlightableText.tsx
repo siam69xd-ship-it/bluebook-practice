@@ -10,6 +10,7 @@ interface HighlightableTextProps {
   onAddHighlight: (highlight: TextHighlight) => void;
   onRemoveHighlight: (index: number) => void;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 export function HighlightableText({
@@ -19,6 +20,7 @@ export function HighlightableText({
   onAddHighlight,
   onRemoveHighlight,
   className,
+  style,
 }: HighlightableTextProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -113,6 +115,7 @@ export function HighlightableText({
         selectedColor && 'cursor-text',
         className
       )}
+      style={style}
     >
       {renderHighlightedText()}
     </div>

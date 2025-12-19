@@ -23,16 +23,31 @@ const FILTER_STRUCTURE = {
   'English Reading & Writing': {
     'Craft and Structure': {
       'Cross-Text Connections': null,
-      'Text Structure and Purpose': null,
-      'Words in Context': null,
+      'Text Structure and Purpose': {
+        'Main Purpose': null,
+        'Overall Structure': null,
+        'Underlined Purpose': null,
+      },
+      'Words in Context': {
+        'Gap Fillings': null,
+        'Synonyms': null,
+      },
     },
     'Expression of Ideas': {
       'Rhetorical Synthesis': null,
       'Transitions': null,
     },
     'Information and Ideas': {
-      'Central Ideas and Details': null,
-      'Command of Evidence': null,
+      'Central Ideas and Details': {
+        'Main Ideas': null,
+        'Detail Questions': null,
+      },
+      'Command of Evidence': {
+        'Support': null,
+        'Weaken': null,
+        'Quotation': null,
+        'Graphs': null,
+      },
       'Inferences': null,
     },
     'Standard English Conventions': {
