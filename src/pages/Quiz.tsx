@@ -11,6 +11,7 @@ import {
   Minimize,
   Flag,
   Pencil,
+  Undo2,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Timer } from '@/components/Timer';
@@ -58,6 +59,7 @@ export default function Quiz() {
   const [isTimerHidden, setIsTimerHidden] = useState(false);
   const [isPracticeMode, setIsPracticeMode] = useState(false);
   const [practiceTopicInfo, setPracticeTopicInfo] = useState<{topic?: string; subTopic?: string} | null>(null);
+  const [isEliminationMode, setIsEliminationMode] = useState(false);
 
   // Fetch attempt counts for logged-in users
   const { data: attemptCounts = {} } = useQuery<Record<string, number>>({
@@ -234,6 +236,14 @@ export default function Quiz() {
       : [...eliminated, letter];
     updateQuestionState(currentQuestion.id, { eliminatedOptions: newEliminated });
   };
+
+  // Handler: Undo all eliminations for current question
+  const handleUndoEliminations = () => {
+    if (!currentQuestion) return;
+    updateQuestionState(currentQuestion.id, { eliminatedOptions: [] });
+  };
+
+  const hasEliminations = (currentState?.eliminatedOptions?.length || 0) > 0;
 
   // Handler: Toggle mark for review
   const handleToggleMark = () => {
@@ -501,7 +511,7 @@ export default function Quiz() {
                       Mark for Review
                     </button>
                   </div>
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-3">
                     <button 
                       className="flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700"
                       data-testid="button-report"
@@ -509,9 +519,38 @@ export default function Quiz() {
                       <Flag className="w-4 h-4" />
                       Report
                     </button>
-                    <span className="w-8 h-8 flex items-center justify-center bg-purple-600 text-white rounded-full text-xs font-bold" data-testid="text-user-badge">
-                      S
-                    </span>
+                    {/* Elimination Tool Toggle */}
+                    <button
+                      onClick={() => setIsEliminationMode(!isEliminationMode)}
+                      className={cn(
+                        "flex items-center justify-center w-8 h-8 rounded transition-colors",
+                        isEliminationMode 
+                          ? "bg-gray-900 text-white" 
+                          : "text-gray-500 hover:bg-gray-100"
+                      )}
+                      title={isEliminationMode ? "Exit elimination mode" : "Enter elimination mode"}
+                      data-testid="button-elimination-toggle"
+                    >
+                      {/* Custom strikethrough S icon */}
+                      <span className="relative text-sm font-bold">
+                        S
+                        <span className="absolute inset-0 flex items-center justify-center">
+                          <span className="w-full h-[1.5px] bg-current rotate-[-20deg]" />
+                        </span>
+                      </span>
+                    </button>
+                    {/* Undo Eliminations - shows when there are eliminations */}
+                    {hasEliminations && (
+                      <button
+                        onClick={handleUndoEliminations}
+                        className="flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700"
+                        title="Undo all eliminations"
+                        data-testid="button-undo-eliminations"
+                      >
+                        <Undo2 className="w-4 h-4" />
+                        Undo
+                      </button>
+                    )}
                   </div>
                 </div>
 
@@ -553,6 +592,7 @@ export default function Quiz() {
                       onSelect={() => handleSelectAnswer(letter)}
                       onEliminate={() => handleToggleElimination(letter)}
                       onCheckOption={() => handleCheckOption(letter)}
+                      showEliminationButtons={isEliminationMode}
                     />
                   ))}
                 </div>

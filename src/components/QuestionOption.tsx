@@ -12,6 +12,7 @@ interface QuestionOptionProps {
   onEliminate: () => void;
   onCheckOption: () => void;
   hideCheckButton?: boolean;
+  showEliminationButtons?: boolean;
 }
 
 export function QuestionOption({
@@ -26,12 +27,16 @@ export function QuestionOption({
   onEliminate,
   onCheckOption,
   hideCheckButton = false,
+  showEliminationButtons = false,
 }: QuestionOptionProps) {
   const isCorrectAnswer = letter === correctAnswer;
   
   const showOptionWrong = isOptionChecked && !isCorrectAnswer;
   const showOptionCorrect = isOptionChecked && isCorrectAnswer;
   const showCorrectIndicator = isChecked && isCorrectAnswer && !isSelected && !isOptionChecked;
+
+  // Show elimination button when in elimination mode OR if already eliminated (to allow restore)
+  const shouldShowEliminationButton = showEliminationButtons || isEliminated;
 
   return (
     <div
@@ -97,31 +102,33 @@ export function QuestionOption({
         )}
 
         {/* Elimination button - SAT style circle with diagonal strikethrough */}
-        <button
-          onClick={(e) => {
-            e.stopPropagation();
-            onEliminate();
-          }}
-          className={cn(
-            'flex-shrink-0 w-7 h-7 rounded-full border flex items-center justify-center transition-all duration-200 relative',
-            isEliminated
-              ? 'border-gray-400 bg-transparent'
-              : 'border-gray-300 bg-transparent hover:border-gray-500'
-          )}
-          title={isEliminated ? 'Restore option' : 'Eliminate option'}
-          data-testid={`button-eliminate-${letter}`}
-        >
-          {/* Letter */}
-          <span className="text-xs font-medium text-gray-600">
-            {letter}
-          </span>
-          {/* Diagonal strikethrough line when eliminated */}
-          {isEliminated && (
-            <span className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <span className="w-[calc(100%+4px)] h-[1.5px] bg-gray-500 rotate-[-45deg] absolute" />
+        {shouldShowEliminationButton && (
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              onEliminate();
+            }}
+            className={cn(
+              'flex-shrink-0 w-7 h-7 rounded-full border flex items-center justify-center transition-all duration-200 relative',
+              isEliminated
+                ? 'border-gray-400 bg-transparent'
+                : 'border-gray-300 bg-transparent hover:border-gray-500'
+            )}
+            title={isEliminated ? 'Restore option' : 'Eliminate option'}
+            data-testid={`button-eliminate-${letter}`}
+          >
+            {/* Letter */}
+            <span className="text-xs font-medium text-gray-600">
+              {letter}
             </span>
-          )}
-        </button>
+            {/* Diagonal strikethrough line when eliminated */}
+            {isEliminated && (
+              <span className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <span className="w-[calc(100%+4px)] h-[1.5px] bg-gray-500 rotate-[-45deg] absolute" />
+              </span>
+            )}
+          </button>
+        )}
       </div>
     </div>
   );
