@@ -728,19 +728,7 @@
         "answer": "D",
         "explanation": "The text explains that 'new batteries can't be put in'. This means the old batteries cannot be 'replaced'."
       }
-    }
-  ]
-}{
-  "test_metadata": {
-    "test_name": "Digital SAT Practice",
-    "domain": "Craft and Structure",
-    "skill": "Words in Context",
-    "sub_skill": "Gap Filling",
-    "total_questions": 248,
-    "batch": "41-80",
-    "version": "1.0"
-  },
-  "questions": [
+    },
     {
       "id": "GAP_041",
       "difficulty": "Medium",
@@ -1459,17 +1447,8 @@
       "solution": {
         "answer": "B",
         "explanation": "The text states that factors driving the phenomenon vary ('knowledge spillovers' vs 'different reasons'). This variety means the mix of factors is 'heterogeneous' (diverse)."
-      }{
-  "test_metadata": {
-    "test_name": "Digital SAT Practice",
-    "domain": "Craft and Structure",
-    "skill": "Words in Context",
-    "sub_skill": "Gap Filling",
-    "total_questions": 248,
-    "batch": "81-120",
-    "version": "1.0"
-  },
-  "questions": [
+      }
+    },
     {
       "id": "GAP_081",
       "difficulty": "Medium",
@@ -4349,9 +4328,8 @@
         "answer": "D",
         "explanation": "Visitors viewing art in the museum can *add to* that experience by seeing street art. 'Supplement' means to add an extra element or amount to."
       }
-    }
-  ]
-}{
+    },
+    {
       "id": "GAP_241",
       "difficulty": "Medium",
       "content": {

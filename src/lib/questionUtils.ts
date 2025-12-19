@@ -190,6 +190,108 @@ function cleanMalformedJson(raw: string): string {
   return cleaned;
 }
 
+// Extract all question-like objects from raw JSON text using regex
+function extractQuestionsFromRaw(raw: string): any[] {
+  const questions: any[] = [];
+  
+  // Match question objects with id, content, and solution
+  const questionPattern = /\{\s*"id"\s*:\s*"([^"]+)"[^}]*"content"\s*:\s*\{[^}]*"passage"\s*:\s*"([^"]*(?:\\.[^"]*)*)"[^}]*"question"\s*:\s*"([^"]*(?:\\.[^"]*)*)"[^}]*"options"\s*:\s*\[([\s\S]*?)\][^}]*\}[^}]*"solution"\s*:\s*\{[^}]*"answer"\s*:\s*"([^"]+)"[^}]*"explanation"\s*:\s*"([^"]*(?:\\.[^"]*)*)"[^}]*\}/g;
+  
+  // Simpler approach: split by question id pattern and reconstruct
+  const idMatches = raw.matchAll(/"id"\s*:\s*"([A-Z]+_\d+)"/g);
+  const ids = Array.from(idMatches).map(m => m[1]);
+  
+  if (ids.length > 0) {
+    // Split raw text at each question boundary
+    for (let i = 0; i < ids.length; i++) {
+      const currentId = ids[i];
+      const nextId = ids[i + 1];
+      
+      // Find the start of this question
+      const startPattern = new RegExp(`\\{\\s*"id"\\s*:\\s*"${currentId}"`);
+      const startMatch = raw.match(startPattern);
+      if (!startMatch) continue;
+      
+      const startIndex = raw.indexOf(startMatch[0]);
+      let endIndex: number;
+      
+      if (nextId) {
+        const nextPattern = new RegExp(`\\{\\s*"id"\\s*:\\s*"${nextId}"`);
+        const nextMatch = raw.slice(startIndex + 1).match(nextPattern);
+        if (nextMatch) {
+          endIndex = startIndex + 1 + raw.slice(startIndex + 1).indexOf(nextMatch[0]);
+        } else {
+          endIndex = raw.length;
+        }
+      } else {
+        endIndex = raw.length;
+      }
+      
+      // Extract the question substring
+      let questionStr = raw.slice(startIndex, endIndex).trim();
+      
+      // Clean up trailing characters
+      questionStr = questionStr.replace(/,\s*$/, '').replace(/\}\s*\]\s*\}\s*$/, '}]}');
+      
+      // Ensure it ends with proper closing
+      const openBraces = (questionStr.match(/\{/g) || []).length;
+      const closeBraces = (questionStr.match(/\}/g) || []).length;
+      
+      // Add missing closing braces
+      if (openBraces > closeBraces) {
+        questionStr += '}'.repeat(openBraces - closeBraces);
+      }
+      
+      try {
+        const parsed = JSON.parse(questionStr);
+        if (parsed.id && parsed.content && parsed.solution) {
+          questions.push(parsed);
+        }
+      } catch {
+        // Try to extract fields manually
+        try {
+          const idMatch = questionStr.match(/"id"\s*:\s*"([^"]+)"/);
+          const passageMatch = questionStr.match(/"passage"\s*:\s*"((?:[^"\\]|\\.)*)"/);
+          const questionMatch = questionStr.match(/"question"\s*:\s*"((?:[^"\\]|\\.)*)"/);
+          const answerMatch = questionStr.match(/"answer"\s*:\s*"([^"]+)"/);
+          const explanationMatch = questionStr.match(/"explanation"\s*:\s*"((?:[^"\\]|\\.)*)"/);
+          const difficultyMatch = questionStr.match(/"difficulty"\s*:\s*"([^"]+)"/);
+          const optionsMatch = questionStr.match(/"options"\s*:\s*\[([\s\S]*?)\]/);
+          
+          if (idMatch && questionMatch && answerMatch) {
+            const options: string[] = [];
+            if (optionsMatch) {
+              const optionsStr = optionsMatch[1];
+              const optionMatches = optionsStr.matchAll(/"([^"]+)"/g);
+              for (const opt of optionMatches) {
+                options.push(opt[1]);
+              }
+            }
+            
+            questions.push({
+              id: idMatch[1],
+              difficulty: difficultyMatch?.[1] || 'Medium',
+              content: {
+                passage: passageMatch?.[1]?.replace(/\\"/g, '"').replace(/\\n/g, '\n') || '',
+                question: questionMatch[1].replace(/\\"/g, '"').replace(/\\n/g, '\n'),
+                options: options
+              },
+              solution: {
+                answer: answerMatch[1],
+                explanation: explanationMatch?.[1]?.replace(/\\"/g, '"').replace(/\\n/g, '\n') || ''
+              }
+            });
+          }
+        } catch {
+          // Skip unparseable question
+        }
+      }
+    }
+  }
+  
+  return questions;
+}
+
 async function loadJsonFile(path: string): Promise<any> {
   try {
     const response = await fetch(path);
@@ -267,6 +369,13 @@ async function loadJsonFile(path: string): Promise<any> {
       const recovered = { test_metadata: baseMetadata, questions: allQuestions };
       console.warn(`Recovered concatenated JSON for ${path}:`, allQuestions.length, 'questions');
       return recovered;
+    }
+    
+    // Last resort: extract questions using regex
+    const extractedQuestions = extractQuestionsFromRaw(raw);
+    if (extractedQuestions.length > 0) {
+      console.warn(`Extracted ${extractedQuestions.length} questions from malformed ${path} using regex`);
+      return { questions: extractedQuestions };
     }
 
     console.error(`Failed to parse ${path} even after recovery`);
