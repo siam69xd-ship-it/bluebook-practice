@@ -466,7 +466,6 @@ export default function Quiz() {
                   onAddHighlight={handleAddHighlight}
                   onRemoveHighlight={handleRemoveHighlight}
                   className="quiz-passage whitespace-pre-wrap"
-                  style={{ fontFamily: "'Noto Serif', serif", fontSize: '1.125rem', lineHeight: '1.6', color: '#000000' }}
                 />
               </motion.div>
             </AnimatePresence>
@@ -528,8 +527,7 @@ export default function Quiz() {
 
                 {/* Question Text */}
                 <p 
-                  className="mb-6 whitespace-pre-wrap" 
-                  style={{ fontFamily: "'Noto Serif', serif", fontSize: '1.125rem', lineHeight: '1.6', color: '#000000' }}
+                  className="quiz-question mb-6 whitespace-pre-wrap" 
                   data-testid="text-question"
                 >
                   {(() => {
