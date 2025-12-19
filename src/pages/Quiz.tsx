@@ -19,6 +19,7 @@ import { HighlightableText } from '@/components/HighlightableText';
 import { QuestionOption } from '@/components/QuestionOption';
 import { QuestionNavigator } from '@/components/QuestionNavigator';
 import { ExplanationPanel } from '@/components/ExplanationPanel';
+import { PassageRenderer } from '@/components/PassageRenderer';
 import {
   getAllQuestionsAsync,
   filterQuestions,
@@ -511,12 +512,10 @@ export default function Quiz() {
                 </div>
 
                 {/* Question Text */}
-                <p 
-                  className="quiz-question mb-6 whitespace-pre-wrap" 
-                  data-testid="text-question"
-                >
-                  {currentQuestion.questionPrompt || 'Based on the text, select the best answer to the question.'}
-                </p>
+                <PassageRenderer 
+                  content={currentQuestion.questionPrompt || 'Based on the text, select the best answer to the question.'}
+                  className="quiz-question mb-6"
+                />
 
                 {/* Options */}
                 <div className="space-y-3">

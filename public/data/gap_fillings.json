@@ -2189,22 +2189,7 @@
         "answer": "D",
         "explanation": "The team included 'both' types of experts working together for a comprehensive approach. This is 'collaboration between' them."
       }
-    }
-  ]
-}
-    }
-  ]
-}{
-  "test_metadata": {
-    "test_name": "Digital SAT Practice",
-    "domain": "Craft and Structure",
-    "skill": "Words in Context",
-    "sub_skill": "Gap Filling",
-    "total_questions": 248,
-    "batch": "121-160",
-    "version": "1.0"
-  },
-  "questions": [
+    },
     {
       "id": "GAP_121",
       "difficulty": "Hard",
@@ -2924,19 +2909,7 @@
         "answer": "A",
         "explanation": "The landscape is 'constantly evolving' and changing. 'Mutable' means liable to change."
       }
-    }
-  ]
-}{
-  "test_metadata": {
-    "test_name": "Digital SAT Practice",
-    "domain": "Craft and Structure",
-    "skill": "Words in Context",
-    "sub_skill": "Gap Filling",
-    "total_questions": 248,
-    "batch": "161-200",
-    "version": "1.0"
-  },
-  "questions": [
+    },
     {
       "id": "GAP_161",
       "difficulty": "Medium",
@@ -3656,19 +3629,7 @@
         "answer": "B",
         "explanation": "Critics influenced how the public *saw* or understood cinema. 'Perception of' means the way in which something is regarded, understood, or interpreted."
       }
-    }
-  ]
-}{
-  "test_metadata": {
-    "test_name": "Digital SAT Practice",
-    "domain": "Craft and Structure",
-    "skill": "Words in Context",
-    "sub_skill": "Gap Filling",
-    "total_questions": 248,
-    "batch": "201-248",
-    "version": "1.0"
-  },
-  "questions": [
+    },
     {
       "id": "GAP_201",
       "difficulty": "Medium",

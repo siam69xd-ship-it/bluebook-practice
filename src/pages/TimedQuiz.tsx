@@ -21,6 +21,7 @@ import { HighlightTool } from '@/components/HighlightTool';
 import { HighlightableText } from '@/components/HighlightableText';
 import { QuestionOption } from '@/components/QuestionOption';
 import { QuestionNavigator } from '@/components/QuestionNavigator';
+import { PassageRenderer } from '@/components/PassageRenderer';
 import {
   getAllQuestionsAsync,
   Question,
@@ -875,9 +876,10 @@ export default function TimedQuiz() {
                 </span>
               </div>
 
-              <p className="text-gray-800 mb-6 text-base leading-relaxed whitespace-pre-wrap">
-                {currentQuestion.questionPrompt || 'Based on the text, select the best answer to the question.'}
-              </p>
+              <PassageRenderer 
+                content={currentQuestion.questionPrompt || 'Based on the text, select the best answer to the question.'}
+                className="text-gray-800 mb-6 text-base leading-relaxed"
+              />
 
               <div className="space-y-3">
                 {Object.entries(currentQuestion.options).map(([letter, text]) => (
