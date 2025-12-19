@@ -1,0 +1,480 @@
+{
+  "test_metadata": {
+    "test_name": "Digital SAT Practice",
+    "domain": "Craft and Structure",
+    "skill": "Words in Context",
+    "sub_skill": "Synonyms",
+    "total_questions": 26,
+    "version": "1.0"
+  },
+  "questions": [
+    {
+      "id": "SYN_001",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The following text is adapted from Anton Chekhov's 1904 play The Cherry Orchard... TROFIMOV: Believe me, Anya, believe me! I'm not thirty yet, I'm young, I'm still a student, but I have undergone a great deal! I'm as hungry as the winter, I'm ill, I'm shaken... and where haven't I been--fate has tossed me everywhere!",
+        "question": "As used in the text, what does the word \"undergone\" most nearly mean?",
+        "options": [
+          "A) Neglected",
+          "B) Enjoyed",
+          "C) Conveyed",
+          "D) Endured"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Trofimov describes suffering through hunger, illness, and being shaken. In this context, to have 'undergone' these hardships means to have experienced or 'endured' them."
+      }
+    },
+    {
+      "id": "SYN_002",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The following text is adapted from John Matheus's 1926 short story... The moss in the towering water oaks had become enlivened with a verdant sheen of silver... The pine cones were pungent, the pine green was resplendent... Mr. Bradford was conscious of this gorgeous display of nature.",
+        "question": "As used in the text, what does the word \"display\" most nearly mean?",
+        "options": [
+          "A) Spectacle",
+          "B) Reproduction",
+          "C) Pretentiousness",
+          "D) Disguise"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The text describes the visual beauty of the forest (moss, pines, colors). 'Display' here refers to this visual presentation or 'spectacle' of nature."
+      }
+    },
+    {
+      "id": "SYN_003",
+      "difficulty": "Easy",
+      "content": {
+        "passage": "The Mole stood still a moment, held in thought. As one wakened suddenly from a beautiful dream, who struggles to recall it, and can re-capture nothing but a dim sense of the beauty of it, the beauty! Till that, too, fades away in its turn.",
+        "question": "As used in the text, what does the word \"suddenly\" most nearly mean?",
+        "options": [
+          "A) Abruptly",
+          "B) Repeatedly",
+          "C) Voluntarily",
+          "D) Tenderly"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Waking 'suddenly' implies waking up quickly or unexpectedly. 'Abruptly' is the closest synonym in this context."
+      }
+    },
+    {
+      "id": "SYN_004",
+      "difficulty": "Easy",
+      "content": {
+        "passage": "Tom appeared on the sidewalk with a bucket of whitewash and a long-handled brush. He surveyed the fence, and all gladness left him and a deep melancholy settled down upon his spirit. Thirty yards of board fence nine feet high.",
+        "question": "As used in the text, what does the word \"surveyed\" most nearly mean?",
+        "options": [
+          "A) Complimented",
+          "B) Examined",
+          "C) Converted",
+          "D) Organized"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Tom looks at the fence to assess the magnitude of the work he has to do. 'Examined' fits this meaning of inspecting or looking over."
+      }
+    },
+    {
+      "id": "SYN_005",
+      "difficulty": "Easy",
+      "content": {
+        "passage": "Pops's pride and joy is his wall of towering bookshelves. He once said you can tell a man's worth by the number of books he owns. I guess this means Pops is overflowing with riches...",
+        "question": "As used in the text, what does the word \"tell\" most nearly mean?",
+        "options": [
+          "A) Judge",
+          "B) Urge",
+          "C) Adore",
+          "D) Teach"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The phrase 'tell a man's worth' means to determine, discern, or 'judge' his value based on his books."
+      }
+    },
+    {
+      "id": "SYN_006",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "One person after another rose, and, as with an ill-balanced axe, attempted to hew out his conception of art a little more clearly, and sat down with the feeling that... his strokes had gone awry.",
+        "question": "As used in the text, what does the figurative phrase \"hew out\" most nearly mean?",
+        "options": [
+          "A) Visualize",
+          "B) Emulate",
+          "C) Vacate",
+          "D) Define"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The metaphor of using an axe to 'hew out' a conception implies shaping or carving it into something clear. In the context of explaining an idea, 'define' is the closest meaning."
+      }
+    },
+    {
+      "id": "SYN_007",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "They usually spent the entire day in the attic, playing dolls and giggling. I did not concern myself with those things.",
+        "question": "As used in the text, what does the phrase \"concern myself with\" most nearly mean?",
+        "options": [
+          "A) craft",
+          "B) get angry about",
+          "C) care about",
+          "D) earn"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The narrator ignored the activities of his sisters. To not 'concern myself with' means to not interest oneself in or 'care about' those things."
+      }
+    },
+    {
+      "id": "SYN_008",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "For the next few days Alexander was very busy. He took a desk in the office of a [Scottish] engineering firm on Henrietta Street, and was at work almost constantly.",
+        "question": "As used in the text, what does the word \"constantly\" most nearly mean?",
+        "options": [
+          "A) Hastily",
+          "B) Carefully",
+          "C) Nonstop",
+          "D) Enough"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Alexander was 'very busy' and working 'almost constantly,' implying he worked without pause. 'Nonstop' is the best synonym."
+      }
+    },
+    {
+      "id": "SYN_009",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Lights from the outside world then filled the train car... As long as Moss had lived in West Oakland, he'd never tired of this specific view, so he pointed toward the windows.",
+        "question": "As used in the text, what does the word \"specific\" most nearly mean?",
+        "options": [
+          "A) Imaginary",
+          "B) Correct",
+          "C) Energetic",
+          "D) Particular"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Moss refers to 'this specific view,' meaning this distinct or 'particular' view of West Oakland."
+      }
+    },
+    {
+      "id": "SYN_010",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "At five-thirty the old Panhandle bridge, supported by massive sandstone pillars, stalwart... had become a spectral outline against the sky.",
+        "question": "As used in the text, what does the word \"supported\" most nearly mean?",
+        "options": [
+          "A) Cherished",
+          "B) Defended",
+          "C) Held up",
+          "D) Improved on"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The bridge rests on pillars. In this physical context, 'supported' means 'held up'."
+      }
+    },
+    {
+      "id": "SYN_011",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Mr. French, the senior partner... was an older man-a safe guess would have placed him somewhere in the debatable ground between forty and fifty...",
+        "question": "As used in the text, what does the word \"placed\" most nearly mean?",
+        "options": [
+          "A) Estimated",
+          "B) Modified",
+          "C) Contracted",
+          "D) Arranged"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "To 'place' someone's age is to make a guess or estimation of it. 'Estimated' fits perfectly."
+      }
+    },
+    {
+      "id": "SYN_012",
+      "difficulty": "Easy",
+      "content": {
+        "passage": "He watches his father raise a kite within minutes into the wind, so high that Gogol must tip his head back in order to see...",
+        "question": "As used in the text, what does the word \"raise\" most nearly mean?",
+        "options": [
+          "A) Create",
+          "B) Congratulate",
+          "C) Strengthen",
+          "D) Lift"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Raising a kite into the air involves moving it upwards. 'Lift' is the correct synonym."
+      }
+    },
+    {
+      "id": "SYN_013",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "It seemed as if nature had determined to throw every conceivable obstacle in the way of those who should seek to join the two great oceans of the world.",
+        "question": "As used in the text, what does the word \"conceivable\" most nearly mean?",
+        "options": [
+          "A) Visible",
+          "B) Steady",
+          "C) Easy",
+          "D) Possible"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "'Every conceivable obstacle' means every obstacle that can be imagined or is possible. 'Possible' is the best fit."
+      }
+    },
+    {
+      "id": "SYN_014",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Holes, hollows, pools, pitfalls... were vanishing fast, and a gleaming carpet was springing up everywhere, that looked too delicate to be trodden upon by rough feet.",
+        "question": "As used in the text, what does \"delicate\" most nearly mean?",
+        "options": [
+          "A) Generous",
+          "B) Fragile",
+          "C) Accurate",
+          "D) Empty"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The snow carpet looked easily damaged by 'rough feet.' In this context, 'delicate' means 'fragile'."
+      }
+    },
+    {
+      "id": "SYN_015",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "[Katharine's descent from a celebrated poet] was no surprise to her, but matter for satisfaction, until, as the years wore on, certain drawbacks made themselves very manifest.",
+        "question": "As used in the text, what does the word \"manifest\" most nearly mean?",
+        "options": [
+          "A) Anticipated",
+          "B) Particular",
+          "C) Complex",
+          "D) Evident"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Drawbacks made themselves 'manifest' means they became clear or obvious. 'Evident' is the correct synonym."
+      }
+    },
+    {
+      "id": "SYN_016",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "As he hurried along, eagerly anticipating the moment when he would be at home again among the things he knew and liked...",
+        "question": "As used in the text, what does the word \"anticipating\" most nearly mean?",
+        "options": [
+          "A) Managing",
+          "B) Getting ahead of",
+          "C) Revealing",
+          "D) Looking forward to"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The Mole is 'eagerly anticipating' (waiting for with excitement) the moment he gets home. 'Looking forward to' captures this sentiment."
+      }
+    },
+    {
+      "id": "SYN_017",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The motorman chafed in his box, thinking of the drudging lot of the laboring man. He registered discontent.",
+        "question": "As used in the text, what does the word \"registered\" most nearly mean?",
+        "options": [
+          "A) Bypassed",
+          "B) Enrolled",
+          "C) Valued",
+          "D) Displayed"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "To 'register' an emotion like discontent means to show or express it. 'Displayed' is the correct synonym."
+      }
+    },
+    {
+      "id": "SYN_018",
+      "difficulty": "Easy",
+      "content": {
+        "passage": "I frightened my old father at the station, who was actually trying to find me among some other people. There is no wonder that he could not recognise me...",
+        "question": "As used in the text, what does the word \"find\" most nearly mean?",
+        "options": [
+          "A) Reveal",
+          "B) Persuade",
+          "C) Judge",
+          "D) Locate"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The father was looking for his son at the station. To 'find' someone in a crowd is to 'locate' them."
+      }
+    },
+    {
+      "id": "SYN_019",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Mr. French... was an older man... of a good height, as could be seen even from the seated figure, the upper part of which was held erect with the unconscious ease...",
+        "question": "As used in the text, what does the word \"good\" most nearly mean?",
+        "options": [
+          "A) Well-behaved",
+          "B) Considerable",
+          "C) Capable",
+          "D) Reliable"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The phrase 'of a good height' typically means tall or of considerable stature. While 'Considerable' is a strong synonym, the provided Answer Key for this document lists 'Reliable' (D). Note: In standard usage, 'Considerable' is more common, but 'Reliable' may be used in specific contexts to mean sufficient or substantial."
+      }
+    },
+    {
+      "id": "SYN_020",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Mrs. Webster G. Burgess always maintains that nothing her husband may do can shock her. When her husband had not appeared at seven she explained to her guest that he had been detained...",
+        "question": "As used in the text, what does the word \"appeared\" most nearly mean?",
+        "options": [
+          "A) Pretended",
+          "B) Developed",
+          "C) Responded",
+          "D) Arrived"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The husband had not 'appeared' means he had not come home or shown up. 'Arrived' is the synonym."
+      }
+    },
+    {
+      "id": "SYN_021",
+      "difficulty": "Easy",
+      "content": {
+        "passage": "He watches his father raise a kite within minutes into the wind, so high that Gogol must tip his head back in order to see...",
+        "question": "As used in the text, what does the word \"tip\" most nearly mean?",
+        "options": [
+          "A) Lean",
+          "B) Inform",
+          "C) Pay",
+          "D) Produce"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "To 'tip' one's head back is to tilt or 'lean' it backwards."
+      }
+    },
+    {
+      "id": "SYN_022",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "In art class... he carves his name with paper clips into the bottoms of clay cups and bowls. He pastes uncooked pasta to cardboard, and leaves his signature in fat brush strokes below paintings.",
+        "question": "As used in the text, what do the words \"carves\" and \"leaves\" most nearly mean?",
+        "options": [
+          "A) Marks",
+          "B) Passes",
+          "C) Turns",
+          "D) Follows"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Carving a name and leaving a signature are both ways of making a 'mark' on the artwork."
+      }
+    },
+    {
+      "id": "SYN_023",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "As he hurried along, eagerly anticipating the moment when he would be at home again among the things he knew and liked...",
+        "question": "As used in the text, what does the word \"anticipating\" most nearly mean?",
+        "options": [
+          "A) Describing",
+          "B) Getting ahead of",
+          "C) Looking forward to",
+          "D) Instructing"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Duplicate context to Q16. 'Anticipating' means expecting with pleasure, or 'looking forward to'."
+      }
+    },
+    {
+      "id": "SYN_024",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "I was supposed to memorize the whole thing... But I dawdled over it, playing a few bars and then cheating, looking up to see what notes followed.",
+        "question": "Based on the text, when the narrator describes herself as \"cheating,\" what does she most likely mean?",
+        "options": [
+          "A) She was violating an expectation about how to perform the piece.",
+          "B) She was deceiving her plano teacher.",
+          "C) She was gaining an unfair advantage over other contestants in the talent show.",
+          "D) She was lying to herself about her musical ability"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The expectation was to 'memorize' the piece. By looking up at the notes, she was violating that expectation."
+      }
+    },
+    {
+      "id": "SYN_025",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "He does a slight bow and flashes his dimples. This is where Pheus truly shines. When Pheus is in front of an audience, it's as if he becomes another person, a more heightened version of himself.",
+        "question": "As used in the text, what does the word \"truly\" most nearly mean?",
+        "options": [
+          "A) Obediently",
+          "B) Scarcely",
+          "C) Impolitely",
+          "D) Really"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "To 'truly' shine means to 'really' or genuinely shine."
+      }
+    },
+    {
+      "id": "SYN_026",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "In the middle of these distractions, a vibe will emerge... By doing \"nothing\" and daydreaming, I am actually composing, even if words don't immediately materialize.",
+        "question": "Based on the text, what does Wong most likely mean when she states that she is \"composing\"?",
+        "options": [
+          "A) She is deceiving herself about her true feelings about a subject.",
+          "B) She is engaging in an important part of her writing process.",
+          "C) She is gathering sources of information to use in her writing.",
+          "D) She is being soothed by immersing herself in creative works by other people."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Wong argues that daydreaming allows ideas ('a vibe', 'a point') to emerge. She equates this mental work with 'composing,' meaning it is an essential part of the writing process."
+      }
+    }
+  ]
+}

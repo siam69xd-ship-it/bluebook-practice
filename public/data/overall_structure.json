@@ -1,0 +1,385 @@
+{
+  "test_metadata": {
+    "test_name": "Digital SAT Mastery",
+    "domain": "Craft and Structure",
+    "skill": "Text Structure and Purpose",
+    "topic": "Overall Structure",
+    "total_questions": 38
+  },
+  "questions": [
+    {
+      "id": "OS_001",
+      "content": {
+        "passage": "Horizontal gene transfer involves the exchange of genetic material between organisms not in a parent-offspring relationship. It is common among prokaryotes (single-celled organisms, such as the bacteria Carnobacterium viridans and Lactococcus lactis). The process can have the effect of increasing bacterial resistance to antibiotics; as such, an understanding of how to prevent horizontal gene transfer might result in the mitigation of dangerous pathogens (organisms that cause disease).",
+        "question": "Which choice best describes the overall structure of the text?",
+        "options": [
+          "A) It provides a history of research into a biological process and suggests a direction for further investigation.",
+          "B) It explains why an organism poses a threat and then suggests how that threat might be avoided.",
+          "C) It depicts two organisms and presents their similarities and differences.",
+          "D) It describes a biological process and explains why researching it is important."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The text first defines the biological process of horizontal gene transfer[cite: 734]. It then explains that understanding this process is important for mitigating dangerous pathogens and antibiotic resistance[cite: 736, 737]."
+      }
+    },
+    {
+      "id": "OS_002",
+      "content": {
+        "passage": "In what is now Washington state, the Tulalip Tribes operate the Hibulb Cultural Center. Relying on traditional knowledge to guide the design of exhibits, this institution presents Tulalip history and culture to the tribes' citizens. The Turtle Mountain Band of Chippewa, a tribe in North Dakota, employs a similar strategy in its own cultural center. Both centers contrast with museums that aren't Indigenous-led; when displaying Indigenous artifacts, such museums tend to anticipate mainly non-Indigenous audiences and rely on Euro-centric strategies for designing exhibits.",
+        "question": "Which choice best describes the overall structure of the text?",
+        "options": [
+          "A) It describes how tribal cultural centers designed exhibits of a particular set of artifacts, then analyzes how non-Indigenous institutions designed exhibits of the same artifacts.",
+          "B) It examines how tribal citizens respond to exhibits at tribal cultural centers, then speculates how non-Indigenous audiences would respond to the same exhibits.",
+          "C) It discusses two cultural centers operated by tribes, then compares them with non-Indigenous institutions that present Indigenous exhibits.",
+          "D) It outlines an early strategy for exhibit design used by one tribal cultural center, then explains a newer strategy used by a different tribal cultural center."
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The passage discusses two tribal cultural centers (Tulalip and Turtle Mountain)[cite: 743, 745]. It then contrasts their design strategies with those of non-Indigenous-led museums[cite: 746]."
+      }
+    },
+    {
+      "id": "OS_003",
+      "content": {
+        "passage": "Why do rusty-spotted cats purr but jaguars roar? Researchers hypothesize that this difference between the two feline species may be partly due to a U-shaped bone in their throats called the hyoid. Rusty-spotted cats, which are much smaller than jaguars, have a rigid hyoid that rumbles when the cat's larynx vibrates, resulting in a purr. By contrast, jaguars have a somewhat flexible hyoid, and the bone is attached to the skull with a stretchy ligament that rusty-spotted cats lack. These traits allow jaguars and most other species of big cats to produce powerful roars. The same traits may also prevent most big cats from purring.",
+        "question": "Which choice best describes the overall structure of the text?",
+        "options": [
+          "A) The text compares the habitats of two species, then explains how those habitats are changing.",
+          "B) The text presents a theory about two species, then discusses facts that weaken it.",
+          "C) The text poses a question about two species, then presents a possible answer.",
+          "D) The text describes a behavior shared by two species, then discusses other behaviors shared by them."
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The text begins with a question about why two feline species have different vocalizations[cite: 752]. It then provides a scientific answer based on the hyoid bone structure[cite: 753, 754]."
+      }
+    },
+    {
+      "id": "OS_004",
+      "content": {
+        "passage": "Community science, which involves professional scientists collaborating with amateur science enthusiasts to study a topic, is often an effective and engaging way to conduct research. It can allow people to assist with conservation efforts, spark youth interest in science, and increase the amount of data researchers can collect. This approach was essential to the success of a study by biologist Abbigail Merrill and colleagues of how butterfly color relates to flower choice, which included findings from hundreds of students and community members in northwestern Arkansas.",
+        "question": "Which choice best describes the overall structure of the text?",
+        "options": [
+          "A) It introduces the topic of a scientific study, describes the study's importance, and then presents the study's results.",
+          "B) It identifies a particular approach to research, lists some benefits of that approach, and then mentions a study in which that approach was used.",
+          "C) It argues for a new approach to scientific research, comments on the public's opinion about the approach, and then describes how that approach was applied in a certain study.",
+          "D) It describes the development of a type of scientific collaboration, shows how that type of collaboration has been used in a particular field of study, and then suggests future collaborative projects."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The text defines community science [cite: 762], lists its benefits (data collection, youth interest) [cite: 763], and cites Abbigail Merrill’s study as a specific example[cite: 764]."
+      }
+    },
+    {
+      "id": "OS_005",
+      "content": {
+        "passage": "Joel Brown and colleagues showed that high moonlight intensity inhibits the activity of the Arizona pocket mouse (Perognathus amplus), a result explicable in terms of benefits and costs: greater lunar intensity may not enable the mice to increase foraging success enough to offset the higher chance of detection by predatory owls or hawks. Most other nocturnal mammals respond to lunar intensity variations similarly to Arizona pocket mice, but Azara's night monkeys (Aotus azarae) display the opposite pattern, as their heavy reliance on visual foraging results in a different balance of reward and risk.",
+        "question": "Which choice best describes the overall structure of the text?",
+        "options": [
+          "A) It introduces an observation of a behavioral pattern, presents an explanation for the pattern, and then describes an exception to the pattern that casts doubt on that explanation.",
+          "B) It describes and accounts for a finding, characterizes the finding as representative of a general pattern, and then describes and accounts for an exception to that pattern.",
+          "C) It discusses two different responses to the same natural phenomenon, explains why one of those responses occurs, and then suggests that the other response still needs to be explained.",
+          "D) It presents and explains a study result, indicates that the result is similar to the results of many other studies, and then attributes a conflicting study result to a difference in that study's methods."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The text describes the pocket mouse finding [cite: 771], identifies it as a general pattern among nocturnal mammals [cite: 772], and then explains the Azara's night monkey as a specific exception[cite: 772]."
+      }
+    },
+    {
+      "id": "OS_006",
+      "content": {
+        "passage": "Among the wild rice in the still lagoon, / In monotone the lizard shrills his tune. / The wild goose, homing, seeks a sheltering. / Where rushes grow, and oozing lichens cling. / Late cranes with heavy wing, and lazy flight, / Sail up the silence with the nearing night. / And like a spirit, swathed in some soft veil, / Steals twilight and its shadows o'er the swale. / Hushed lie the sedges, and the vapours creep, / Thick, grey and humid, while the marshes sleep.",
+        "question": "Which choice best describes the overall structure of the text?",
+        "options": [
+          "A) It identifies a location, then refers to a person living there.",
+          "B) It sketches a setting by presenting a series of images of nature.",
+          "C) It makes an extended comparison of nature to human emotions.",
+          "D) It names animal species found in a place, then names plant species there."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The poem creates a setting through various natural images: wild rice, lizards, geese, cranes, and twilight[cite: 779, 780, 781, 782]."
+      }
+    },
+    {
+      "id": "OS_007",
+      "content": {
+        "passage": "Founded in Denver in 1991, the Museo de Las Americas is dedicated to art from Latin America, including the art of Indigenous peoples. Since its founding, it has acquired more than 4,800 objects for its permanent collection. More recently founded US-based institutions devoted to Latino cultures include the Latino Cultural Center. Located in Dallas, it focuses on Latino cultures and art in the United States.",
+        "question": "Which choice best describes the overall structure of the text?",
+        "options": [
+          "A) It explains how one cultural institution was founded, then explains its plans to expand further.",
+          "B) It describes a trend among cultural institutions in the United States, then identifies an institution that rejects that trend.",
+          "C) It defines a certain type of cultural institution, then argues that this type of institution decisively influences society.",
+          "D) It discusses one cultural institution, then discusses a more recently founded cultural institution."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The text first details the Museo de Las Americas (founded 1991) [cite: 789] and then mentions the more recent Latino Cultural Center[cite: 791]."
+      }
+    },
+    {
+      "id": "OS_008",
+      "content": {
+        "passage": "With a shell that measured 1.7 meters, the extinct mollusk Parapuzosia seppenradensis is the largest ammonite in the fossil record. Ever since fossilized remains of this species were discovered in 1895, scientists have been perplexed by its size. After examining 154 ammonite fossils including some of P. seppenradensis from Montana and Parapuzosia leptophylla (a smaller ammonite species) from England, paleontologist Christina Ifrim, Andrew S. Gale, and colleagues concluded that P. seppenradensis may have evolved from P. leptophylla and gradually increased in size as larger ammonites were better able to escape being preyed on by mosasaurs.",
+        "question": "Which choice best describes the overall structure of the text?",
+        "options": [
+          "A) It states a long-standing scientific assumption and then shows how recent research has overturned that assumption.",
+          "B) It describes a scientific mystery and then discusses a research team's attempt to solve that mystery.",
+          "C) It compares fossils found in Montana and England and then points out which of those fossils provides more information.",
+          "D) It notes the discovery of a new ammonite species and then remarks on the importance of that discovery."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The 'mystery' is the perplexity scientists felt regarding the mollusk's size[cite: 799]. The text then details Ifrim and Gale's attempt to explain it through evolution and predator avoidance[cite: 800]."
+      }
+    },
+    {
+      "id": "OS_010",
+      "content": {
+        "passage": "In 2011 Brynn M. Devine and colleagues published a study concluding that ocean acidification has a strong effect on the behavior of Cheilodipterus quinquelineatus, a species of fish. However, Devine and colleagues' study relied on a mean sample size of only about 25 fish. In a 2022 review of various scientists' conclusions about the impacts of ocean acidification on fish behavior, Timothy D. Clark and colleagues caution that relying on such a relatively small sample size can increase the potential for biased analysis. Such analysis, in turn, can contribute to reports of exaggerated effects.",
+        "question": "Which choice best describes the overall structure of the text?",
+        "options": [
+          "A) It presents the result of a study, then raises a potential concern related to that result.",
+          "B) It describes a characteristic of a fish species, then explains why that characteristic is noteworthy.",
+          "C) It states a similarity between two scientific studies, then notes a difference between them.",
+          "D) It summarizes a problem that scientists are investigating, then provides a possible solution to that problem."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The text presents Devine’s study result [cite: 814] and then raises a concern about its small sample size as noted by Clark[cite: 815, 816]."
+      }
+    },
+    {
+      "id": "OS_012",
+      "content": {
+        "passage": "The Federalist Papers are a collection of 85 essays written by Alexander Hamilton, John Jay, and James Madison. They were published pseudonymously in the Independent Journal and other New York newspapers in 1787-88 and argue that New Yorkers should vote to ratify the proposed United States Constitution. Though the authorship of most of the individual essays is certain, that of a few is in question; for instance, while No. 15, \"The Insufficiency of the Present Confederation to Preserve the Union.\" was surely penned by Hamilton, No. 52, \"The House of Representatives,\" may have been written by either Hamilton or Madison.",
+        "question": "Which choice best describes the overall structure of the text?",
+        "options": [
+          "A) The text mentions a collection of essays and then points out something about these essays that is not completely known.",
+          "B) The text summarizes an argument made in a collection of essays and then suggests that the essays' authors didn't unanimously agree with the argument.",
+          "C) The text lists the authors of a collection of essays and then notes that some of the essays were written by one person, while others were written by two people.",
+          "D) The text describes why a collection of essays is notable and then details its publication history."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The text introduces the Federalist Papers collection [cite: 832] and then highlights the unknown authorship of certain essays[cite: 834, 836]."
+      }
+    },
+    {
+      "id": "OS_015",
+      "content": {
+        "passage": "President Richard Nixon is most famous for his participation in the 1970s Watergate political scandal, a convoluted tale of criminality and eroded ethics involving a constellation of associates such as political operative Jeb Stuart Magruder and Nixon's secretary Rose Mary Woods. But Nixon's legacy is complex: he has been praised for his role in affirming the sovereignty of tribal nations, and he once made an attempt at reforming United States health care policy that is arguably a precursor to the Affordable Care Act, which became law during the Barack Obama administration.",
+        "question": "Which choice best describes the overall structure of the text?",
+        "options": [
+          "A) An achievement of a historical figure is described, and then reasons why that achievement is often disregarded by historians are suggested.",
+          "B) Information supporting a particular perception of a historical figure is provided, and then additional facts are offered suggesting that this perception is an oversimplification.",
+          "C) A list of historical figures is presented, followed by reasons why one should be considered more significant than the others.",
+          "D) An assertion about a historical figure is made, and then evidence both for and against that assertion is presented."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The text provides information supporting the 'scandal' perception [cite: 857] and then offers additional facts about tribal sovereignty and health care to show his legacy is more complex[cite: 858]."
+      }
+    },
+    {
+      "id": "OS_018",
+      "content": {
+        "passage": "Mexican textile artist Victoria Villasana weaves stories of triumph, using her unique method of applying colorful yarn to photographs of people. In some works, Villasana focuses on celebrating cultural icons who are people of color, as she does in her depiction of musician and composer Prince. However, in other works. Villasana honors ordinary people, as she does in her captivating portrayal of a young girl sitting on a sidewalk. Villasana sees both of these approaches as ways of depicting the power and interconnectedness of all people.",
+        "question": "Which choice best describes the overall structure of the text?",
+        "options": [
+          "A) It introduces Villasana's cultural background, describes how this background influences her art, and then outlines some of her ideas for future projects.",
+          "B) It compares Villasana to other contemporary artists, indicates how two of her works are similar, and then emphasizes Villasana's enthusiasm for artistic collaboration.",
+          "C) It explains how yarn has historically been used in art, details how Villasana uses yarn in her artworks, and then comments on the popularity of her work.",
+          "D) It provides details about Villasana's artworks, discusses specific examples of her work, and relates them to one of her artistic goals."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The passage details Villasana's method [cite: 877], provides examples (Prince and a young girl) [cite: 878, 879], and relates them to her goal of depicting interconnectedness[cite: 880]."
+      }
+    },
+    {
+      "id": "OS_021",
+      "content": {
+        "passage": "In Ojibwe, an Indigenous language from the Great Lakes region of what are now the United States and Canada, wása means \"far,\" whereas wa-wasa means \"far apart.\" This phenomenon, in which an element of a root word is repeated, sometimes with modification, within another word that is related to the root word, is called reduplication. In this case, the element \"wa\" in wása gets repeated in wa-wasa. There are many examples of this type of reduplication in Ojibwe.",
+        "question": "Which choice best describes the overall structure of the text?",
+        "options": [
+          "A) It describes the relationship between Ojibwe and several other languages, raises a question about the nature of that relationship, and then answers that question.",
+          "B) It identifies the most frequently occurring words in Ojibwe, explains why it is difficult to translate those words into English, and then provides examples of languages other than English into which those words can be translated.",
+          "C) It presents some specific words in Ojibwe, describes the general linguistic phenomenon exemplified by those words, and then states that this phenomenon occurs frequently in Ojibwe.",
+          "D) It explains the phenomenon of reduplication, discusses why reduplication has been controversial among scholars, and then argues that an analysis of Ojibwe could help resolve that controversy."
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The text presents specific Ojibwe words [cite: 909], describes the phenomenon of reduplication [cite: 910], and notes its frequency in the language[cite: 912]."
+      }
+    },
+    {
+      "id": "OS_022",
+      "content": {
+        "passage": "By the laity of Milby and its neighbourhood [Mr. Ely] was regarded as a man of quite remarkable powers and learning, who must make a considerable sensation in London pulpits and drawing-rooms on his occasional visit to the metropolis; and by his brother clergy he was regarded as a discreet and agreeable fellow. Mr. Ely never got into a warm discussion; he suggested what might be thought, but rarely said what he thought himself; he never let either men or women see that he was laughing at them, and he never gave any one an opportunity of laughing at him.",
+        "question": "Which choice best describes the overall structure of the text?",
+        "options": [
+          "A) It relates how Mr. Ely had initially earned the respect of his colleagues and then recounts the circumstances under which their views of him began to change.",
+          "B) It implies that Mr. Ely's neighbors are more naïve in their estimation of him than people in London are and then explains why his neighbors have been so easily misled.",
+          "C) It presents the favorable opinion of Mr. Ely that other people hold and then describes the behaviors of Mr. Ely that enable him to maintain that favorable opinion.",
+          "D) It highlights the disparity between Mr. Ely's public and private behavior and then conveys why he labors to obscure his true self from other people."
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The text establishes the high regard people have for Mr. Ely [cite: 920, 921] and then explains the discreet behaviors he uses to keep it that way[cite: 922, 923]."
+      }
+    },
+    {
+      "id": "OS_023",
+      "content": {
+        "passage": "Mexican architect Luis Barragán's prolific career, which spanned the 1920s to the 1980s, evolved through distinct phases. After traveling to the United States and Europe in the early 1930s and immersing himself in a broader architectural discourse, Barragán shifted his style to incorporate principles of modernism, as seen in the Pizarro Suárez House. The project's unadorned geometric forms, typical of the modernist aesthetic, contrasted with the historically inspired architecture seen in his earlier projects in Guadalajara, such as the house in Calle Pedro Loza.",
+        "question": "Which choice best describes the overall structure of the text?",
+        "options": [
+          "A) It summarizes the career of a particular architect, states how a journey influenced that architect's career, and then emphasizes how influential that architect's career has been.",
+          "B) It presents a general claim about a particular architect's career, describes the early stages of the architect's career, and then explains a later shift in that career.",
+          "C) It explains the design aesthetic of a particular architect, acknowledges the sources of those design choices, and then contrasts that aesthetic with the designs of earlier architects.",
+          "D) It provides a general statement about the career of a particular architect, highlights a transition in that career, and then expounds on the ways that transition is evident in the architect's work."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The passage provides a general career summary [cite: 930], highlights the modernist transition [cite: 931], and then shows how it manifested in specific works like the Pizarro Suárez House[cite: 932]."
+      }
+    },
+    {
+      "id": "OS_026",
+      "content": {
+        "passage": "Paintings by the Florida Highwaymen—an informal collective of prolific landscape artists active in Florida during the 1950s and '60s—are recognizable by their reiteration of the same general compositional structures and subjects: breaking waves and backcountry pines, to name two. But there was room for individuation: Sam Newton's Tangerine Sky, for example, may resemble other Highwaymen paintings at first glance, but his works stand out for their more realistic and less impressionistic qualities.",
+        "question": "Which choice best describes the overall structure of the text?",
+        "options": [
+          "A) It describes an aesthetic framework shared by a particular group of artists and then makes and illustrates the claim that individuals introduced variations within that framework.",
+          "B) It describes the common perception that a particular group of artists' works are derivative and then provides a specific piece of evidence that reinforces that perception.",
+          "C) It offers historical context that accounts for a particular group of artists' shared style and then indicates the circumstances under which several members of that group began exploring more unconventional themes.",
+          "D) It explains how a particular group of artists began collaborating and then recounts how one member of that group became especially influential among them."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The text describes the group’s shared framework [cite: 957] and then uses Sam Newton as an example of individual variation within it[cite: 958]."
+      }
+    },
+    {
+      "id": "OS_028",
+      "content": {
+        "passage": "A team of researchers discovered that Matabele ants can identify an infected wound in a member of the colony and then treat the infection by covering the wound with antimicrobial secretions that the ants produce. The team found that the mortality rate for Matabele ants with infected injuries was reduced by 90% with this treatment, and they are hopeful that this discovery could aid in the development of new antibiotics for human use.",
+        "question": "Which choice best describes the overall structure of the text?",
+        "options": [
+          "A) It identifies an issue concerning Matabele ants and then proposes a solution to address the issue.",
+          "B) It describes unique properties of Matabele ants and then speculates on how those properties evolved.",
+          "C) It summarizes research findings on Matabele ants and then identifies an area for further research.",
+          "D) It introduces a study of Matabele ants and then explains the research methods used in the study."
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The text summarizes findings about ant secretions [cite: 974, 975] and then identifies human antibiotics as an area for further research[cite: 975]."
+      }
+    },
+    {
+      "id": "OS_033",
+      "content": {
+        "passage": "With its combination of country and pop influences, \"Here You Come Again\" is typical of Dolly Parton's recordings in the late 1970s and first half of the 1980s. Through songs bridging these two genres, she achieved her greatest commercial successes. A decade earlier, however, Dolly had first established herself as a songwriter steeped in the traditional folk music of the Blue Ridge Mountains, where she was born and raised. The influence of the ballads of this region can be heard in the word choice and subject matter of the lyrics to \"Jolene,\" one of her best songs from this period.",
+        "question": "Which choice best describes the overall structure of the text?",
+        "options": [
+          "A) It explores Dolly's lifelong interest in folk music, then debates whether pop music influenced \"Jolene.\"",
+          "B) It discusses a particular period in Dolly's recording career, then considers the music in an earlier period of her career.",
+          "C) It enthusiastically recommends Dolly's earliest recordings, then expresses disappointment with her later recordings.",
+          "D) It praises \"Here You Come Again,\" then notes how remarkably similar that song is to a song that Dolly recorded earlier in her career."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The text first discusses Parton's country-pop period [cite: 1017, 1018] and then reflects on her earlier folk period[cite: 1019, 1020]."
+      }
+    },
+    {
+      "id": "OS_034",
+      "content": {
+        "passage": "In a study by Mika R. Moran, Daniel A. Rodriguez, and colleagues, residents of Bogotá, Colombia, and Fortaleza, Brazil, were surveyed about parks in their cities. Of the 1,121 respondents from Bogotá, 71.9% indicated that they use the city's parks, and of the 938 respondents from Fortaleza, 35.7% indicated using city parks. Given that the percentage of Bogotá respondents who reported having access to desired nonpark amenities near parks was much lower than that reported by Fortaleza respondents, the difference in park use can't be explained by Bogotá residents having more access to desired nonpark amenities near parks.",
+        "question": "Which choice best describes the overall structure of the text?",
+        "options": [
+          "A) A study of park use in Bogotá is described, and then a similar study of park use in Fortaleza is analyzed to corroborate the findings of the Bogotá study.",
+          "B) A study involving surveys in Bogotá and Fortaleza is introduced, and then a possible explanation for some of the results is considered and rejected.",
+          "C) An unexpected finding is described, and then that finding is attributed to the method used to collect survey data in Bogotá and Fortaleza.",
+          "D) An unresolved question about park planning is described, and then examples from a study of Bogotá and Fortaleza are used to answer that question."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The text introduces the park survey [cite: 1024], presents the data [cite: 1025], and then considers and rejects 'amenity access' as an explanation for the results[cite: 1026]."
+      }
+    },
+    {
+      "id": "OS_035",
+      "content": {
+        "passage": "Some researchers posit that the species inhabiting the South Pacific island of Grande Terre belong to clades that predate the island's split from remnants of the former supercontinent Gondwana around 80 million years ago. A study conducted by Michael A. Sundue et al. found, however, that the crown age (the age of the most recent common ancestor of all living and extinct species in the clade) of the clade of Grammitis ferns on Grande Terre is 8.5 million years; Sundue et al. further found that the crown age of the clade of Grammitis ferns in the South Pacific generally is approximately 10.0 million years.",
+        "question": "Which choice best describes the overall structure of the text?",
+        "options": [
+          "A) It presents a possibility that some researchers have raised, then describes a study that clarifies their reasons for doing SO.",
+          "B) It explains a view some researchers have advanced, then discusses study results that led them to reconsider that view.",
+          "C) It identifies a discrepancy between a hypothesis some researchers have proposed and related research findings, then explains that discrepancy.",
+          "D) It describes an idea that some researchers have put forward, then presents study results that are incompatible with that idea."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The researchers' idea (Gondwana split 80m years ago) [cite: 1032] is presented and then followed by fern age data (8.5m and 10.0m years) that is incompatible with it[cite: 1033, 1034]."
+      }
+    },
+    {
+      "id": "OS_037",
+      "content": {
+        "passage": "The Reckoning and Resilience (2022) exhibition at Duke University's Nasher Museum of Art in Durham, North Carolina, was curated to feature the work of thirty North Carolina artists. The included artists represent a wide variety of artistic disciplines, from painters such as Juan Logan to the sculptor Stephen Hayes. In its inclusion of many borrowed works, the exhibition is atypical for the Nasher Museum, which tends to curate its exhibitions around the permanent collection of contemporary art that it owns.",
+        "question": "Which choice best describes the overall structure of the text?",
+        "options": [
+          "A) It explains how an art exhibition differs from many other exhibitions, then analyzes the significance of that difference.",
+          "B) It presents the unusual goals curators had for an art exhibition, then evaluates whether the curators achieved those goals.",
+          "C) It provides an overview of an art exhibition, then explains what makes the exhibition unusual for the institution that organized it.",
+          "D) It discusses the wide range of disciplines represented in an art exhibition, then explains why curators included works in those disciplines."
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The text provides an overview of the exhibition [cite: 1050, 1051] and then explains how it differs from the museum's usual permanent collection practice[cite: 1052]."
+      }
+    },
+    {
+      "id": "OS_038",
+      "content": {
+        "passage": "RICHARD: I do the wrong, and first begin to brawl. The secret mischiefs that I set [flowing] I lay unto the grievous charge of others. Clarence, whom I indeed have cast in darkness, I do beweep to many simple [gullible people], Namely, to Derby, Hastings, Buckingham; And tell them 'tis the Queen and her allies That stir the King against the Duke my brother. Now they believe it, and withal whet me To be revenged on Rivers, Dorset, Grey.",
+        "question": "Which choice best describes what happens in the text?",
+        "options": [
+          "A) Richard attributes Clarence's troubles to both his own secret plotting and the distrust of Clarence that the queen and her allies Derby, Hastings, and Buckingham have planted in the king's mind.",
+          "B) Richard describes having wept as he informed Derby, Hastings, and Buckingham that the queen and her allies convinced the king to act against Clarence, and says that the earnestness of his grief caused them to accept his version of events.",
+          "C) Richard acknowledges that his mischievous nature has spurred him to commit misdeeds in the past, including instigating enmity between the king and Clarence, but he reports that he has hitherto not lost the trust of the queen and her allies.",
+          "D) Richard indicates that he has pretended to be aggrieved about Clarence's situation and has proclaimed it to be the fault of the queen and her allies, but in reality, he has caused the hostility the king feels toward Clarence."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Richard admits to secret mischief [cite: 1063] and pretending to weep over Clarence [cite: 1064] while blaming the queen for the king's hostility [cite: 1065], even though he is actually responsible[cite: 1064]."
+      }
+    }
+  ]
+}

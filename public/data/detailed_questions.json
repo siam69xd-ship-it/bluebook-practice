@@ -1,0 +1,1128 @@
+{
+  "test_metadata": {
+    "test_name": "Digital SAT Practice",
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "sub_skill": "Detail Questions",
+    "total_questions": 62,
+    "version": "1.0"
+  },
+  "questions": [
+    {
+      "id": "DET_001",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "In a study by Mika R. Moran, Daniel A. Rodriguez, and colleagues, residents of Panama City, Panama, and Fortaleza, Brazil, were surveyed about parks in their cities. Of the 318 respondents from Panama City, 53.5% indicated that they use the city's parks, and of 938 respondents from Fortaleza, 35.7% indicated using city parks. Given that the percentage of Panama City respondents who reported living within a 10-minute walk of a park was much lower than that reported by Fortaleza respondents, greater proximity alone can't explain the difference in park use.",
+        "question": "The text makes which point about the difference between the proportions of Panama City residents and Fortaleza residents using parks?",
+        "options": [
+          "A) It was much larger than the researchers conducting the study expected.",
+          "B) It could be due to inaccuracies in the survey results.",
+          "C) It was calculated using sources that predate the survey.",
+          "D) It is caused by something other than the parks' proximity to the residents."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The text states that Panama City residents use parks more (53.5% vs 35.7%) despite having *lower* proximity (fewer live within a 10-minute walk). Therefore, proximity cannot explain the difference, meaning it must be caused by something else."
+      }
+    },
+    {
+      "id": "DET_002",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Like all species of baleen whales, the common minkle whale feeds on tiny creatures known as Krill... it is one of the smaller baleen whales and it is much smaller than the fin whale, which can weigh a whopping 80000 kg and consume as much as 24000 kg of krill per day.",
+        "question": "Based on the text, what can most reasonably be concluded about krill consumption among common minkle and fin whales?",
+        "options": [
+          "A) Both of them can eat as much as 24000 kg of krill per day.",
+          "B) The quantities of krill consumed by fin whales has made it difficult for minkle whales to find sufficient food.",
+          "C) The fin whale is able to eat more krill per day than the minkle whale.",
+          "D) Most baleen whales include krill in their diets, but the minkle whale is less likely than the fin whale to do so."
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The text states the fin whale is much larger and can consume 'as much as 24000 kg' of krill. Since the minkle whale is 'much smaller,' it logically follows that the fin whale can eat more."
+      }
+    },
+    {
+      "id": "DET_003",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "It was said that in {Don's} youth he once wrote a play which won him nothing but hisses... Whether resigned or not to the verdict of the public, he ceased to write plays and assumed instead the nobler role of a patron to unrecognized authors and artist...",
+        "question": "According to the text, what change coincided with Don becoming a patron of the theater?",
+        "options": [
+          "A) He achieved public recognition for an essay he had written earlier.",
+          "B) He stopped writing plays.",
+          "C) He accepted a new job as a critic.",
+          "D) He moved to a town outside Madrid."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The text explicitly says 'he ceased to write plays and assumed instead the nobler role of a patron.' Thus, stopping writing plays coincided with becoming a patron."
+      }
+    },
+    {
+      "id": "DET_004",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Researchers Ceasr, Elisa, and Andres created a computer model to predict the mix of movie theaters, gyms, and other businesses... How we define a neighborhood and its boundaries is subjective, so the team used a clustering algorithm to locate dense groupings of amenities that represent human-identified neighborhoods...",
+        "question": "According to the text, why did the team employ a clustering algorithm?",
+        "options": [
+          "A) It could be used to evaluate the reasons for a business closing.",
+          "B) It provided insights into how consumers are made aware of new movie theaters and gyms.",
+          "C) It could predict which types of businesses would be successful in a given neighborhood.",
+          "D) It gave them an objective way to identify neighborhood."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The text states that defining a neighborhood is 'subjective,' so the team used the algorithm to 'locate dense groupings' that represent neighborhoods. This implies the algorithm provided a way to identify neighborhoods (objectively via data)."
+      }
+    },
+    {
+      "id": "DET_005",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "In O'odham... gogs means 'a dog' whereas gogogs is used to refer to several dogs. This phenomenon... is called reduplication. In this case, the element 'go' in gogs gets repeated in gogogs.",
+        "question": "The text makes which point about the O'odham word gogogs?",
+        "options": [
+          "A) It contains a repetition of the element 'go' in gogs.",
+          "B) It doesn't have a clear equivalent in English.",
+          "C) It is the only word in O'odham that uses reduplication.",
+          "D) It is identical in meaning to several other words in O'odham."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The text explicitly states: 'In this case, the element \"go\" in gogs gets repeated in gogogs.'"
+      }
+    },
+    {
+      "id": "DET_006",
+      "difficulty": "Easy",
+      "content": {
+        "passage": "It reminded me of when I was little, and Mom chanted to me in Farsi every night before bedtime... I didn't know what they meant, but that didn't matter. It was quiet and soothing.",
+        "question": "Based on the text, what does the narrator mainly remember about the times when his mother chanted to him?",
+        "options": [
+          "A) That he liked the characters in the stories his mother made up while chanting.",
+          "B) That his mother had music playing in the background while she chanted.",
+          "C) That his mother didn't usually chant at night.",
+          "D) That he found the sound of his mother's chanting to be calming."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The narrator states, 'It was quiet and soothing.' 'Soothing' is a synonym for 'calming'."
+      }
+    },
+    {
+      "id": "DET_007",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The team used data from the Google Places API service... This approach has some limits-data from Places API tend to be restricted to places that the customer facing-but the data set nonetheless provides an extremely reliable source...",
+        "question": "According to the text, what is one potential drawback of Hidalgo and colleagues' method?",
+        "options": [
+          "A) It depends upon data that are likely to be outdated.",
+          "B) It is based on recent advancements from other fields that have yet to be applied outside of those contexts.",
+          "C) It is likely to contribute to inaccurate identifications of the boundaries of specific neighborhoods.",
+          "D) It may lead to conclusions that are not reflective of all the amenities in a given neighborhood."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The text mentions the data is 'restricted to places that the customer facing.' This implies businesses that are NOT customer-facing (e.g., warehouses, offices) might be missed, meaning the conclusions might not reflect *all* amenities."
+      }
+    },
+    {
+      "id": "DET_008",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The company was cofounded by Robert Hooks... and actor and playwright Douglas Turner Ward, who had met while performing in a 1960 touring production of Lorraine Hansberry's play A Raisin in the Sun.",
+        "question": "According to the text, how did Hooks and Ward initially meet?",
+        "options": [
+          "A) Hooks and Ward participated in the same workshop at NEC.",
+          "B) Harrison introduced Hooks to Ward at a performance of The Great MacDaddy.",
+          "C) Hooks and Ward attended the same performance of The Great MacDaddy.",
+          "D) Hooks and Ward were both actors in a production of A Raisin in the Sun."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The text states they 'met while performing in a 1960 touring production of... A Raisin in the Sun.'"
+      }
+    },
+    {
+      "id": "DET_009",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "And while no one would call the Antarctic minke whale small... it is one of the smaller whales and is much smaller than the bowhead whale, which can weigh a whopping 66,000 kg and consume as much as 19,800 kg of krill per day.",
+        "question": "Based on the text, what can most reasonably be concluded about krill consumption among Antarctic minke and bowhead whale?",
+        "options": [
+          "A) The bowhead whale is able to eat more krill per day than the Antarctic minke whale is.",
+          "B) Both the Antarctic minke whale and the bowhead whale can eat as much as 19,800 kg of krill per day.",
+          "C) The quantities of krill consumed by bowhead whale has made it difficult for Antarctic minke whales to find sufficient food.",
+          "D) Most baleen whales included krill in their diary, but the Antarctic minke whale is less likely than the bowhead whale to do so."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Similar to Q2. The text establishes the bowhead whale is much larger and consumes a massive amount (19,800 kg). The minke is 'much smaller,' implying it consumes less."
+      }
+    },
+    {
+      "id": "DET_010",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "How we define a neighborhood and its boundaries is subjective, so the team used a clustering algorithm to locate dense groupings of amenities that represent human-identified neighborhoods like Boston's Central Square.",
+        "question": "According to the text, why did the team employ a clustering algorithm?",
+        "options": [
+          "A) The algorithm provided insight into how customers are made aware of new gyms and beauty salons.",
+          "B) The algorithm gave them an objective way to identify neighborhoods.",
+          "C) The algorithm could be used to evaluate the reasons for a business's closing.",
+          "D) The algorithm could predict which types of businesses would be successful in a given neighborhood."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The text contrasts 'subjective' definitions with the algorithm's ability to 'locate dense groupings' that represent neighborhoods, implying it offers an objective method."
+      }
+    },
+    {
+      "id": "DET_011",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Davis and Evans felt no desire to please listeners expecting an exact duplication of the opera. They omitted parts, such as the aria 'I Got Plenty of Nuthin',' and sometimes made only brief gestures toward Gershwin's melodies.",
+        "question": "According to the text, what is true about the aria 'I Got Plenty of Nuthin''?",
+        "options": [
+          "A) It appears in the Gershwin opera Porgy and Bess an adaptation by Davis and Evans.",
+          "B) A brief quotation from it appears in Davis and Evans's adaptation of Porgy and Bess.",
+          "C) Listeners familiar with Gershwin's body of work generally disliked it.",
+          "D) It was adapted by Davis in a recording that appears on his album Milestones."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The text says they 'omitted parts, such as the aria \"I Got Plenty of Nuthin'.\"' This implies the aria *is* in the original Gershwin opera (since it was a candidate for omission), but was left out of the Davis/Evans version. Note: The option A phrasing is slightly tricky ('It appears in the Gershwin opera... [but not in] an adaptation'). The key A likely refers to it being part of the original opera mentioned."
+      }
+    },
+    {
+      "id": "DET_012",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "So, in one day, an Antarctic minke whale weighing 10,000 kg could eat 3,000 kg, while a southern right whale weighing 80,000 kg could ingest a whopping 24,000 kg.",
+        "question": "Based on the text, what can most reasonably be concluded about Antarctic minke and southern right whales?",
+        "options": [
+          "A) Populations of both Antarctic minke and southern right whales have declined significantly...",
+          "B) As krill consumption by Antarctic minke whales has decreased...",
+          "C) The southern right whale is able to eat more krill per day than the Antarctic minke whale is.",
+          "D) Both Antarctic minke and southern right whales can eat krill, but of the two only the Antarctic minke whale can also subsist on phytoplankton."
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The text provides specific numbers: Southern right whale (24,000 kg) vs Minke (3,000 kg). The Southern right whale clearly eats more."
+      }
+    },
+    {
+      "id": "DET_013",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The word came to English indirectly from cacao, the Spanish word for the plant... Spanish had borrowed it from Nahuatl... 'Puma' is also Indigenous in origin and entered English through Spanish. But in this case, the original source was Quechua...",
+        "question": "The author makes which point about the Spanish language?",
+        "options": [
+          "A) It has served as a medium through which Indigenous languages have influenced English.",
+          "B) Its contribution to English vocabulary roughly equals the collective contribution by Indigenous languages.",
+          "C) It adopted Nahuatl and Quechua words in approximately equal numbers.",
+          "D) It has borrowed words from Indigenous languages and contributed words to them."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The text shows Spanish borrowing from Indigenous languages (Nahuatl, Quechua) and then passing those words (loanwords) into English. Thus, Spanish served as a medium/conduit."
+      }
+    },
+    {
+      "id": "DET_014",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Richard Hosier and Jeffrey Dowd's study of fuel use in Zimbabwe shows how reductive this model [energy ladder] is, however: although income of course constrained fuel choice, several factors, including the difficulty of acquiring fuel sources, influenced decisions.",
+        "question": "Based on the text, the author would most likely agree with which statement about household income?",
+        "options": [
+          "A) It can explain some but not all of the differences in fuel choice across households.",
+          "B) It is often said to influence household fuel choice but actually does not.",
+          "C) It affects household fuel choice but not for the reasons assumed by the energy ladder model.",
+          "D) It constrains the amount of fuel households use but not the type of fuel they use."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The text says 'income of course constrained fuel choice' (so it is a factor), but 'several [other] factors... influenced decisions.' Therefore, income explains *some* but *not all* of the choices."
+      }
+    },
+    {
+      "id": "DET_015",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Microorganism-mediated nutrient cycling was accelerated in the transplanted cores; crucially, microorganism community composition was unchanged, allowing Kaštovská et al. to attribute the acceleration to temperature-induced increases in microorganism activity.",
+        "question": "It can most reasonably be inferred from the text that the finding about the microorganism community composition was important for which reason?",
+        "options": [
+          "A) It provided preliminary evidence that microorganism-mediated nutrient cycling was accelerated...",
+          "B) It suggested that temperature-induced changes in microorganism activity may be occurring...",
+          "C) It ruled out a potential alternative explanation for the acceleration in microorganism-mediated nutrient cycling.",
+          "D) It clarified that microorganism activity levels in the plant-soil cores varied depending on which microorganisms comprised the community."
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "If the composition *had* changed, the acceleration could have been due to different types of microbes. By confirming composition was *unchanged*, they ruled out that alternative explanation, proving it was the *activity* (due to temp) that caused the acceleration."
+      }
+    },
+    {
+      "id": "DET_016",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Although this approach offers unique benefits... it remains a relatively underutilized resource because hDNA is often to some extent degraded, a situation not easily remediable under current methodological paradigms and with extant DNA extraction and analysis technologies.",
+        "question": "Information in the text best supports which statement about hDNA?",
+        "options": [
+          "A) It may yield insights that other types of genomic data cannot.",
+          "B) It has thus far proved valuable mainly to researchers studying pathogens.",
+          "C) It may be underused because of its controversial status among scientists.",
+          "D) It tends to be much more degraded than other types of DNA of comparable age."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The text states the approach 'offers unique benefits, such as access to genomic data from extirpated populations.' Unique benefits implies it can yield insights others cannot."
+      }
+    },
+    {
+      "id": "DET_017",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "And the use of zero in Mexico and Central America may be even more ancient. Some historians suggest that Maya mathematicians inherited it from the Olmec civilization, which flourished in the region 2,400-3,600 years ago.",
+        "question": "According to the text, what do some historians suggest about Maya civilization?",
+        "options": [
+          "A) Maya civilization acquired the use of zero from the Olmec civilization.",
+          "B) Maya civilization respected its historians more than it respected its mathematicians.",
+          "C) Maya civilization was highly secretive about its intellectual achievements.",
+          "D) Maya civilization tried to introduce its writing system to other civilizations."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The text explicitly says: 'Some historians suggest that Maya mathematicians inherited it [use of zero] from the Olmec civilization.'"
+      }
+    },
+    {
+      "id": "DET_018",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Rasmus Heltberg's study of fuel use in Guatemala shows how reductive this model is, however: household fuel use was heterogeneous, flexible, and influenced by several factors, including local price of different sources.",
+        "question": "Based on the text, which choice best explains why the author characterizes the energy ladder as 'reductive'?",
+        "options": [
+          "A) The energy ladder asserts that households only consider one aspect of fuel when making fuel choices...",
+          "B) The energy ladder holds that the adoption of one type of fuel means that another type of fuel must be displaced...",
+          "C) The energy ladder assumes that the same factor influences household fuel choice in all locations...",
+          "D) The energy ladder attributes household fuel choice primarily to a single characteristic of households, but Heltberg's study showed that multiple circumstances can affect household fuel choice."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The text says the model holds fuel choice is mediated 'mainly by household income' (a single characteristic). The study showed it was influenced by 'several factors' (multiple circumstances). Thus, the model is reductive because it oversimplifies to one factor."
+      }
+    },
+    {
+      "id": "DET_019",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The company was cofounded by Robert Hooks... and actor and playwright Douglas Turner Ward, who had met while performing in a 1960 touring production of Lorraine Hansberry's play A Raisin in the Sun.",
+        "question": "According to the text, how did Hooks and Ward initially meet?",
+        "options": [
+          "A) Harrison introduced Hooks to Ward at a performance of The Great MacDaddy.",
+          "B) Hooks and Ward attended the same performance of The Great MacDaddy.",
+          "C) Hooks and Ward participated in the same workshop at NEC.",
+          "D) Hooks and Ward were both actors in a production of A Raisin in the Sun."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Duplicate of Q8. They met performing in *A Raisin in the Sun*."
+      }
+    },
+    {
+      "id": "DET_020",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "As urbanist Mariela Alfonzo argues, our understanding of individuals' decision making about whether to walk is insufficiently robust: some studies emphasize the role of demographic characteristics, others the role of public transit availability, and so on, but walking decisions are made in complex contexts...",
+        "question": "Based on the text, Alfonzo would most likely agree with which statement about studies of decision-making about walking?",
+        "options": [
+          "A) They would be improved by efforts to identify the features that cities with high pedestrian traffic have in common.",
+          "B) They are unlikely to find convincing evidence that any single factor consistently predicts walking decisions.",
+          "C) They have overstated the extent to which people differ in their decision-making processes regarding walking.",
+          "D) They tend to be misleading because they ignore the most important factor influencing walking decisions."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Alfonzo argues that existing studies are 'insufficiently robust' because they focus on isolated factors, while real decisions are made in 'complex contexts.' This implies no single factor can consistently predict the decision."
+      }
+    },
+    {
+      "id": "DET_021",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "This approach has some limits data from Places API tend to be restricted to places that are customer facing but the data set nonetheless provides an extremely reliable source...",
+        "question": "According to the text, what is one potential drawback of Hidalgo and colleagues method?",
+        "options": [
+          "A) It may lead to conclusions that are not reflective of all the amenities in a given neighborhood.",
+          "B) It is likely to contribute to inaccurate identifications of the boundaries of specific neighborhoods.",
+          "C) It is based on recent advancements from other fields that have yet to be applied outside of those contexts.",
+          "D) It depends upon data that are likely to be..."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Duplicate of Q7. Restricted data (customer facing only) leads to conclusions that might not reflect *all* amenities."
+      }
+    },
+    {
+      "id": "DET_022",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Vadamalai Elangovan and Ganapathi Marimuthu showed that high moonlight intensity inhibits the activity of the greater short-nosed fruit bat... finding explicable in terms of benefits and costs: greater lunar intensity may not enable the bats to increase foraging success enough to offset the higher chance of detection by predatory owls or hawks.",
+        "question": "According to the text, what did Elangovan and Marimuthu find and why does that occur?",
+        "options": [
+          "A) Greater short-nosed fruit bats tend to be more active during periods of high lunar intensity...",
+          "B) Greater short-nosed fruit bats reduce their activity during periods of high lunar intensity because predators can more easily spot the bats in brighter conditions, and such conditions do not benefit the bats enough to justify that risk.",
+          "C) During periods of high lunar intensity, greater short-nosed fruit bats reduce their activity because it is easier for predators to detect the bats...",
+          "D) During periods of high lunar intensity, mongoose lemurs show a different behavioral response..."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The text states the bats' activity is 'inhibited' (reduced) by high moonlight because the 'higher chance of detection' (predator risk) is not offset by foraging benefits. Option B accurately summarizes this."
+      }
+    },
+    {
+      "id": "DET_023",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Rather than being an arbitrary stylistic choice, hyperpop's persistent modification of the voice functions as a commentary on how digital technology mediates human experience today.",
+        "question": "Based on the text, the author would be most likely to disagree with which statement about vocal manipulation in hyperpop?",
+        "options": [
+          "A) It is an aesthetic feature that has little or no social import.",
+          "B) It confirms hyperpop's ability to offset certain negative effects of digital technology.",
+          "C) It is a symbol of the influence that hyperpop exerts on listeners' sense of self.",
+          "D) It represents changes to human experience brought about by technology."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The author explicitly states the manipulation 'functions as a commentary' on human experience (social import). Therefore, the author would *disagree* with the claim that it has 'little or no social import' (Option A)."
+      }
+    },
+    {
+      "id": "DET_024",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Given that the percentage of Mexico City respondents who reported living within a 10-minute walk of a park was much lower than that reported by La Paz respondents, greater proximity alone can't explain the difference in park use.",
+        "question": "The text makes which point about the difference between the proportions of Mexico City residents and La Paz residents using parks?",
+        "options": [
+          "A) It could be due to inaccuracies in the survey results.",
+          "B) It was calculated using sources that predate the survey.",
+          "C) It was much larger than the researchers conducting the study expected.",
+          "D) It is caused by something other than the parks' proximity to city residents."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Similar to Q1/Q30. Since proximity is lower but usage is higher, proximity *cannot* be the cause. It must be 'something other than the parks' proximity'."
+      }
+    },
+    {
+      "id": "DET_025",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "In a study, data scientist Sam K. Hui and colleagues found that this effect can also be achieved with a less obvious cue: rearranging a store's layout. The researchers explain that trying to find items in new locations causes shoppers to move through more of the store, exposing them to more products and increasing the likelihood that they'll buy an item they hadn't planned on purchasing.",
+        "question": "Which response from a survey given to shoppers who made a purchase at a retail store best supports the researchers' explanation?",
+        "options": [
+          "A) 'I needed to buy some cleaning supplies, but they weren't in their regular place. While I was looking for them, I saw this interesting notebook and decided to buy it, too.'",
+          "B) 'I didn't buy everything on my shopping list today...'",
+          "C) 'The store sent me a coupon...'",
+          "D) 'This store is larger than one that's closer to where I live...'"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The explanation involves: rearranged layout -> looking for items -> exposure to new products -> spontaneous purchase. Option A follows this exact sequence."
+      }
+    },
+    {
+      "id": "DET_026",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "And while no one would call the sei whale small... it is one of the smaller baleen whales and is much smaller than the bowhead whale, which can weigh a whopping 66,000 kg and consume as much as 19,800 kg of krill per day.",
+        "question": "Based on the text, what can most reasonably be concluded about krill consumption among sei and bowhead whales?",
+        "options": [
+          "A) The quantities of krill consumed by bowhead whales has made it difficult for sei whales to find sufficient food.",
+          "B) Both the sei whale and the bowhead whale can eat as much as 19,800 kg of krill per day.",
+          "C) Most baleen whales include krill in their diets, but the sei whale is less likely than the bowhead whale to do so.",
+          "D) The bowhead whale is able to eat more krill per day than the sei whale is."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Similar to Q2/Q9. The bowhead is much larger and eats a huge amount. The sei is smaller, so logically the bowhead eats more."
+      }
+    },
+    {
+      "id": "DET_027",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Infrared heating is generally considered to be an improvement over more conventional thermal preservation methods: whereas conventional methods transfer energy from the surface of a food to its interior, infrared heating uses high-intensity infrared light to generate heat within the food itself, thus reducing industrial cooking times.",
+        "question": "Based on the text, what is one disadvantage of some conventional thermal methods?",
+        "options": [
+          "A) They are especially vulnerable to technological breakdowns.",
+          "B) They are only effective in heating foods that are lightweight and small in size.",
+          "C) Their cooking times are longer than those of other methods.",
+          "D) They require more energy than other methods do."
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The text states infrared heating *reduces* cooking times compared to conventional methods. Therefore, conventional methods have *longer* cooking times (a disadvantage)."
+      }
+    },
+    {
+      "id": "DET_028",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The word came to English indirectly from cacao, the Spanish word... Spanish had borrowed it from Nahuatl... 'Iguana' is also Indigenous in origin and entered English through Spanish. But in this case, the original source was Taino...",
+        "question": "The author makes which point about the Spanish language?",
+        "options": [
+          "A) It has served as a medium through which Indigenous languages have influenced English.",
+          "B) Its contribution to English vocabulary roughly equals the collective contribution by Indigenous languages.",
+          "C) It has borrowed words from Indigenous languages and contributed words to them.",
+          "D) It adopted Nahuatl and Taino words in approximately equal numbers."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Duplicate of Q13. Spanish acted as a medium for Indigenous words to enter English."
+      }
+    },
+    {
+      "id": "DET_029",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Reyjane P. Oliveira and colleagues relied on historical DNA (hDNA)... Although this approach offers unique benefits, such as the ability to ascertain the biogeographical origins of organisms, it remains a relatively underutilized resource because hDNA is often to some extent degraded...",
+        "question": "Information in the text best supports which statement about hDNA?",
+        "options": [
+          "A) It may yield insights that other types of genomic data cannot.",
+          "B) It may be underused because of its controversial status among scientists.",
+          "C) It has thus far proved valuable mainly to researchers studying flora.",
+          "D) It tends to be much more degraded than other types of DNA of comparable age."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Duplicate of Q16. 'Offers unique benefits' supports the statement that it yields insights others cannot."
+      }
+    },
+    {
+      "id": "DET_030",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Boukary Ouedraogo's study of fuel use in Burkina Faso shows how reductive this model is, however: although income of course constrained fuel choice, several factors, including the frequency with which certain dishes are cooked, influenced decisions.",
+        "question": "Based on the text, the author would most likely agree with which statement about household income?",
+        "options": [
+          "A) It constrains the amount of fuel households use but not the type of fuel they use.",
+          "B) It affects household fuel choice but not for the reasons assumed by the energy ladder model.",
+          "C) It can explain some but not all of the differences in fuel choice across households.",
+          "D) It is often said to influence household fuel choice but actually does not."
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Duplicate of Q14. Income is a factor ('of course constrained'), but not the *only* factor, so it explains some but not all differences."
+      }
+    },
+    {
+      "id": "DET_031",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The New York of 1847 was altogether a different city from the New York of 1909. It was a city of only 250,000 or 300,000 inhabitants; now it is a metropolis rivaling London... The whole of Manhattan Island is turned into a city of skyscrapers, churches and palatial residences.",
+        "question": "Based on the passage, how does Yung perceive New York to have changed between 1847 and 1909?",
+        "options": [
+          "A) The city has become more developed and populated.",
+          "B) The architecture of the city has become more practical and less appealing.",
+          "C) The city's residents have become more politically active.",
+          "D) The city's population has become much more diverse than London's."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Yung describes the population growing from 300k to a metropolis and the physical development into a 'city of skyscrapers.' This matches 'more developed and populated'."
+      }
+    },
+    {
+      "id": "DET_032",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The front parlor had always been her special province, as she used it for her little school. Now, every evening, it turned into Salomé's salon... and it was never in order for its transformation back to a classroom the following morning.",
+        "question": "Based on the text, what most likely motivates Tia Ana's behavior during Salome's salon?",
+        "options": [
+          "A) She considers the guests to be uninteresting and is trying to convince them to leave.",
+          "B) She is anxious for the gathering to disperse so that she can ready the space for her own needs.",
+          "C) She is impatient to share her plans to start a new school with the guests and hopes they will support her.",
+          "D) She is frustrated because she needs assistance elsewhere in the house, but Salomé is unavailable while entertaining the guests."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The text explains Tia Ana uses the room for her school and it is 'never in order' for the morning. She checks if guests have departed likely because she wants to prep the room ('ready the space for her own needs')."
+      }
+    },
+    {
+      "id": "DET_033",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Davis's work was particularly labor intensive because in order to transcribe, or write down, the lyrics as Rainey and Smith sang them, Davis had to listen repeatedly to the vinyl recordings, which weren't very clear.",
+        "question": "What does the text most strongly suggest about the songs sung by Rainey and Smith?",
+        "options": [
+          "A) The songs have grown in popularity since Rainey and Smith first sang them.",
+          "B) According to Davis, the songs sung by Rainey were more musically innovative than those sung by Smith typically were.",
+          "C) There were more recordings made of Rainey's songs than there were of Smith's.",
+          "D) There were few, if any, reliable transcriptions of Smith's and Rainey's improvised lyrics when Davis began her work."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "If Davis had to laboriously transcribe them herself from unclear recordings, it implies that *no reliable transcriptions already existed*."
+      }
+    },
+    {
+      "id": "DET_034",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "However, some differentiate between members of the dynasty like Władysław I Herman... and less well-documented figures like Lestek... whose historical actuality is disputed. Lestek appears in the Gesta principum Polonorum... However, the chronicle's documentation of Lestek relies on oral tradition, unlike its records of later rulers.",
+        "question": "According to the text, what is a difference between how historians view Lestek and how they view Władysław I Herman?",
+        "options": [
+          "A) Historians believe that the Gesta principum Polonorum provides more evidence for Lestek's existence than it does for Władysław I Herman's existence.",
+          "B) Historians agree that Władysław I Herman existed, but disagree about whether Lestek existed.",
+          "C) Historians agree that Lestek ruled Poland much later than Władysław I Herman.",
+          "D) Historians find the orally transmitted stories affirming the existence of Władysław I Herman to be more convincing than similar stories about Lestek."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Władysław I Herman is a 'well-documented' figure, while Lestek's 'historical actuality is disputed' (disagreed upon)."
+      }
+    },
+    {
+      "id": "DET_035",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "JACK: If it didn't itself, Bartley, it is my belief you would carry a leaky pail on your head in place of a hat, that way you'd not be without some cause of complaining.",
+        "question": "Based on the text, what does Jack most likely believe about Bartley?",
+        "options": [
+          "A) Bartley will be able to help Jack with cutting the hay.",
+          "B) Bartley is concerned that Jack hasn't prepared for the weather.",
+          "C) Bartley is a poor judge of the weather.",
+          "D) Bartley will find fault with any situation."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Jack suggests Bartley would intentionally cause himself trouble (wear a leaky pail) just to have 'some cause of complaining.' This implies Bartley always seeks to find fault/complain."
+      }
+    },
+    {
+      "id": "DET_036",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "One reason for this discrepancy is that historians of capitalism tend to focus on longitudinal economic data drawn from archival records, which do not exist for much of precolonial Africa.",
+        "question": "Which statement about Iliffe and other Africanist scholars is best supported by information in the text?",
+        "options": [
+          "A) They likely make use of different types of evidence than historians of capitalism typically rely on.",
+          "B) They likely have a different view about which activities should be considered capitalist in nature than historians of capitalism do.",
+          "C) They likely differ from historians of capitalism in the methods they use to derive longitudinal economic data from archival records.",
+          "D) They likely view capitalism as having been more beneficial for Africa than historians of capitalism do."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Historians of capitalism rely on archival records which *don't exist* for precolonial Africa. Since Iliffe found evidence of capitalism there, he must have used *other* types of evidence."
+      }
+    },
+    {
+      "id": "DET_037",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "In a 2022 review of various scientists' conclusions... Timothy D. Clark and colleagues caution that relying on such a relatively small sample size can increase the potential for biased analysis. Such analysis, in turn, can contribute to reports of exaggerated effects.",
+        "question": "What does the text most directly suggest about Pimentel and colleagues' conclusion?",
+        "options": [
+          "A) It was based on the same mean sample size used in many earlier studies of fish species.",
+          "B) It likely has broad implications for other species of fish besides Sparus aurata.",
+          "C) None of the above",
+          "D) It has been largely invalidated by results obtained from similar studies."
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The text suggests the conclusion *might* be biased or exaggerated due to sample size, but it doesn't say it *is* invalidated (D), nor does it mention A or B. Thus, 'None of the above' is the logical choice among the options."
+      }
+    },
+    {
+      "id": "DET_038",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Based on their results, the researchers concluded that this and other small changes to the app could reduce plastic waste in China by as much as 3.26 million metric tons per year.",
+        "question": "According to the text, which choice best describes a conclusion He and colleagues drew from their study?",
+        "options": [
+          "A) Production of plastic waste in China is likely to increase in the near future.",
+          "B) Food-delivery apps that prevent customers from requesting cutlery are becoming more popular.",
+          "C) Customers who understand how food-delivery apps work make more environmentally friendly choices.",
+          "D) Small changes to how a food-delivery app works can greatly lower plastic waste."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The text states explicitly that 'this and other small changes to the app could reduce plastic waste... by as much as 3.26 million metric tons' (greatly lower)."
+      }
+    },
+    {
+      "id": "DET_039",
+      "difficulty": "Easy",
+      "content": {
+        "passage": "In fact, some species actually did better in Martian soil than in Earth soil: 30 percent of field mustard seeds sprouted when planted in simulated Martian soil, compared with 4 percent that did when planted in soil from their home planet.",
+        "question": "According to the text, what percentage of field mustard seeds planted in Martian soil sprouted?",
+        "options": [
+          "A) 18 percent",
+          "B) 30 percent",
+          "C) 100 percent",
+          "D) 5 percent"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The text clearly states: '30 percent of field mustard seeds sprouted'."
+      }
+    },
+    {
+      "id": "DET_040",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Friction between pieces of graphene is generally extremely low, and when the researchers added a drop of oil as lubrication, that friction nearly vanished.",
+        "question": "According to the text, what happened when the researchers added oil to the surfaces covered in graphene fragments?",
+        "options": [
+          "A) All the pieces of graphene collected on just one of the two surfaces.",
+          "B) The low amount of friction between the surfaces became even lower.",
+          "C) Carbon nanotubes on the surfaces fractured into smaller pieces.",
+          "D) Friction between the surfaces did not noticeably change right away."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The text says the friction 'nearly vanished' after adding oil to already low-friction graphene. Vanishing means becoming even lower."
+      }
+    },
+    {
+      "id": "DET_041",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "But petroleum extraction is a very carbon-intensive industry, so as social attitudes increasingly favor using less carbon intensive sources of energy, demand for petroleum falls...",
+        "question": "What claim does the text make about the demand for petroleum?",
+        "options": [
+          "A) Companies involved in petroleum extraction are not affected by the demand for petroleum.",
+          "B) The societal preference for low-carbon energy sources is a factor in the demand for petroleum.",
+          "C) The demand for petroleum follows a predictable annual cycle.",
+          "D) Companies involved in petroleum extraction can benefit from a decline in the demand for petroleum."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The text explicitly links the fall in demand to 'social attitudes increasingly favor[ing] using less carbon intensive sources'."
+      }
+    },
+    {
+      "id": "DET_042",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Researchers hypothesize that this difference between the two feline species may be partly due to a U-shaped bone in their throats called the hyoid. Flat-headed cats... have a rigid hyoid that rumbles when the cat's larynx vibrates, resulting in a purr.",
+        "question": "According to the text, which trait do researchers think may contribute to a flat-headed cat's ability to purr?",
+        "options": [
+          "A) The shape of the flat-headed cat's larynx",
+          "B) The ligament attaching the hyoid bone to the flat-headed cat's skull",
+          "C) The flat-headed cat's rigid hyoid bone",
+          "D) The relative size of the flat-headed cat's body and throat"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The text states the cat has a 'rigid hyoid' that rumbles, 'resulting in a purr.'"
+      }
+    },
+    {
+      "id": "DET_043",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Considering over three years worth of data, the researchers found that white butterflies were observed on green flowers more often than any other butterflies were, and that butterflies were observed to feed more often on cloudy days than on other days.",
+        "question": "According to the text, which factors seemed to be linked to the behavior of butterflies in Grace Herzel and colleagues' study?",
+        "options": [
+          "A) Weather conditions but not butterfly color",
+          "B) Butterfly color but not weather conditions",
+          "C) Neither butterfly color nor weather conditions",
+          "D) Both butterfly color and weather conditions"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The findings mention 'white butterflies' (color) on specific flowers and feeding on 'cloudy days' (weather). Thus, both factors are linked."
+      }
+    },
+    {
+      "id": "DET_044",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "'Coyote' is an example of a loanword... Spanish had borrowed it from Nahuatl... 'Condor' is also Indigenous in origin and entered English through Spanish. But in this case, the original source was Quechua...",
+        "question": "The author makes which point about the Spanish language?",
+        "options": [
+          "A) It has served as a medium through which Indigenous languages have influenced English.",
+          "B) Its contribution to English vocabulary roughly equals the collective contribution by Indigenous languages.",
+          "C) It has borrowed words from Indigenous languages and contributed words to them.",
+          "D) It adopted Nahuatl and Quechua words in approximately equal numbers."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Duplicate of Q13/Q28. Spanish acted as the medium/pathway."
+      }
+    },
+    {
+      "id": "DET_045",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Although this approach offers unique benefits, such as the ability to contrast historical genomic data with present-day data, it remains relatively underutilized because archival specimens are sometimes stored in ways that compromise DNA quality...",
+        "question": "What does the text most strongly suggest about specimens from natural history collections?",
+        "options": [
+          "A) While they may contain valuable genomic data, not all of them can yield usable hDNA.",
+          "B) They are primarily used as sources of genomic data by scientists studying organisms that have undergone major evolutionary change.",
+          "C) Because of their often deteriorated condition, they tend to yield genomic data that are time-consuming to extract and interpret.",
+          "D) While they were used in a study that made an important scientific discovery, they are generally of marginal value as sources of genomic data."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "They offer 'unique benefits' (valuable data) but are 'sometimes stored in ways that compromise DNA quality' (not always usable). Thus, they *may* contain value, but not *all* yield usable DNA."
+      }
+    },
+    {
+      "id": "DET_046",
+      "difficulty": "Easy",
+      "content": {
+        "passage": "Gloria soon became the cochair of the Cambridge Nonviolent Action Committee. She was also the leader of what became known as the Cambridge movement.",
+        "question": "According to the text, what did Gloria Richardson lead?",
+        "options": [
+          "A) A new business in Cambridge, Maryland",
+          "B) The Cambridge movement",
+          "C) Protests to support environmental protections",
+          "D) Her daughter Donna's high school"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The text states explicitly: 'She was also the leader of what became known as the Cambridge movement.'"
+      }
+    },
+    {
+      "id": "DET_047",
+      "difficulty": "Easy",
+      "content": {
+        "passage": "Mexican textile artist Victoria Villasana weaves stories of triumph, using her unique method of applying colorful yarn to photographs of people.",
+        "question": "According to the text, what kind of material does Villasana use in her artworks?",
+        "options": [
+          "A) Stone",
+          "B) Chalk",
+          "C) Paint",
+          "D) Yarn"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The text states she uses 'colorful yarn'."
+      }
+    },
+    {
+      "id": "DET_048",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "But Drelichman and Voth's unique contribution is their reconstruction of the earliest extant set of annual fiscal records for any sovereign state, which demonstrate that Philip's defaults were caused by short-term liquidity crises, not long-term unsustainable debts.",
+        "question": "What does the text most strongly suggest about the value of Drelichman and Voth's research to their discipline?",
+        "options": [
+          "A) Drelichman and Voth's research uses newly compiled evidence to eliminate one possible reason Philip II defaulted on his debts and to affirm another.",
+          "B) Drelichman and Voth's research revealed the role of Philip II's debt defaults in exacerbating short-term liquidity crises.",
+          "C) Drelichman and Voth's research builds on earlier work about a particular aspect of European early modern state finance By Hoffman and Norberg and corrects errors in that earlier work.",
+          "D) Drelichman and Voth's research presented a novel body of evidence supporting Hoffman and Norberg's hypothesis regarding why Philip II default on several loans."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The 'reconstruction of records' (new evidence) demonstrated defaults were 'short-term... not long-term'. This eliminates the 'long-term' reason and affirms the 'short-term' one."
+      }
+    },
+    {
+      "id": "DET_049",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "An outstanding question is whether perceived category similarity predicts consumers' likelihood of purchasing brand extensions. To answer this question, Alicia Grasby et al. identified 30 extended-brand pairs... and calculated the change in probability of a brand in one category being purchased if the same brand was purchased in the other category.",
+        "question": "Based on the text, which potential study design would be most likely to produce evidence that would enable Grasby et al. to answer their research question?",
+        "options": [
+          "A) Have a representative sample of the households rate the similarity of the product categories in each extended-brand pair, then determine how, if at all, those ratings correlate with the change in probability that the team calculated for each pair.",
+          "B) Poll a representative sample of the households to determine the degree of brand recognition...",
+          "C) Have a representative sample of the households rate the similarity of one product in each extended-brand pair...",
+          "D) Poll a representative sample of the households to determine the degree of brand recognition..."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The research question is about 'perceived category similarity'. To answer it, they need to measure that similarity (e.g., by having households rate it) and correlate it with the purchase data they already have."
+      }
+    },
+    {
+      "id": "DET_050",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Rasmus Heltberg's study of fuel use in Guatemala shows how reductive this model [energy ladder] is, however: household fuel use was heterogeneous, flexible, and influenced by several factors, including local price of different sources.",
+        "question": "Based on the text, which choice best explains why the author characterizes the energy ladder as 'reductive'?",
+        "options": [
+          "A) The energy ladder asserts that households only consider one aspect of fuel...",
+          "B) The energy ladder holds that the adoption of one type of fuel means that another type of fuel must be displaced...",
+          "C) The energy ladder assumes that the same factor influences household fuel choice...",
+          "D) The energy ladder attributes household fuel choice primarily to a single characteristic of households, but Heltberg's study showed that multiple circumstances can affect household fuel choice."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Duplicate of Q18. The model is reductive because it focuses on a single factor (income) while reality involves multiple factors."
+      }
+    },
+    {
+      "id": "DET_051",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The company was cofounded by Robert Hooks... and actor and playwright Douglas Turner Ward, who had met while performing in a 1960 touring production of Lorraine Hansberry's play A Raisin in the Sun.",
+        "question": "According to the text, how did Hooks and Ward initially meet?",
+        "options": [
+          "A) Harrison introduced Hooks to Ward at a performance of The Great MacDaddy.",
+          "B) Hooks and Ward attended the same performance of The Great MacDaddy.",
+          "C) Hooks and Ward participated in the same workshop at NEC.",
+          "D) Hooks and Ward were both actors in a production of A Raisin in the Sun."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Duplicate of Q8/Q19."
+      }
+    },
+    {
+      "id": "DET_052",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Our tutor, Alejandro Román, brought his younger brother, Miguel, to class one day... Miguel was an aspiring poet... Miguel was hoping not only to meet us but to make the acquaintance of the poet himself at Mama's house.",
+        "question": "Based on the text, why does Miguel accompany his brother to the sisters' house one day?",
+        "options": [
+          "A) Miguel has learned all his brother can teach him...",
+          "B) Miguel has not received formal instruction in poetry...",
+          "C) Miguel wants to recite his poems...",
+          "D) Miguel anticipates having the opportunity to be introduced to both the sisters and their father."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The text says Miguel hoped 'to meet us [the sisters]' AND 'make the acquaintance of the poet himself [their father]'. Option D covers both."
+      }
+    },
+    {
+      "id": "DET_053",
+      "difficulty": "Easy",
+      "content": {
+        "passage": "Rogers's work is part of the land art movement, in which artists reject the confinement and commercialization of art galleries. These artists usually install large-scale pieces outdoors, often in surprising locations.",
+        "question": "Based on the text, what can be inferred about Ancient Language?",
+        "options": [
+          "A) Its location may be considered surprising.",
+          "B) It marked a shift in the popularity of the land art movement.",
+          "C) It may have had more commercial success in a different outdoor location.",
+          "D) It was created early in Rogers's career."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The text states land artists install pieces 'often in surprising locations.' As a land art piece, 'Ancient Language' fits this description."
+      }
+    },
+    {
+      "id": "DET_054",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "One such circumstance is lunar intensity, which... Deborah J. Curtis and colleagues found to be positively associated with foraging by mongoose lemurs. This discrepancy is explicable in terms of OFT: the lemurs' greater reliance on vision means that higher lunar intensity benefits them more than it benefits the mice.",
+        "question": "Which choice best describes the finding made by Curtis and colleagues, as presented in the text?",
+        "options": [
+          "A) Increased lunar intensity is more beneficial for mongoose lemurs than it is for Arizona pocket mice.",
+          "B) As lunar intensity increases, mongoose lemurs increase their foraging activity.",
+          "C) During periods of high lunar intensity, mongoose lemurs increase their reliance on vision.",
+          "D) As lunar intensity increases, Arizona pocket mice reduce their foraging activity."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Curtis found a 'positive association' between lunar intensity and foraging. Positive association means as one goes up, the other goes up. Thus, as intensity increases, foraging increases."
+      }
+    },
+    {
+      "id": "DET_055",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "The story of Hans Castorp... is a story that took place long ago, and is, so to speak, covered with the patina of history and must necessarily be told with verbs whose tense is that of the deepest past.",
+        "question": "What does the text most strongly suggest about the story of Hans Catrop?",
+        "options": [
+          "A) Though it is true that stories of even the most uninteresting people...",
+          "B) Even though it is a story of a person of no particular importance, its age and the manner in which it therefore must be told are both indicators that the story itself is important.",
+          "C) It is a remarkable story that happened to an unremarkable person...",
+          "D) Like all stories about the lives of inconsequential people, this story must necessarily be related in a particular way if the reason the story is consequential is to be made evident to the audience."
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The text states Hans is 'perfectly ordinary' (unremarkable) but the story is 'very much worth telling' (valuable/remarkable). Option C captures this contrast."
+      }
+    },
+    {
+      "id": "DET_056",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "An outstanding question is whether perceived category similarity predicts consumers' likelihood of purchasing brand extensions... Alicia Grasby et al. identified 30 extended-brand pairs... and calculated the change in probability...",
+        "question": "Based on the text, which potential study design would be most likely to produce evidence that would enable Grasby et al. to answer their research question?",
+        "options": [
+          "A) Have a representative sample of the households rate the similarity of the product categories in each extended-brand pair...",
+          "B) Poll a representative sample of the households to determine the degree of brand recognition...",
+          "C) Poll a representative sample of the households to determine the degree of brand recognition...",
+          "D) Have a representative sample of the households rate the similarity of one product..."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Duplicate of Q49. They need to measure 'perceived category similarity' to correlate it with the purchase data."
+      }
+    },
+    {
+      "id": "DET_057",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Tracks is typical of Erdrich's work. Her writing usually focuses on portrayals of everyday life in Ojibwe communities. Yet some of her novels have fantastical plots and take place outside Ojibwe communities. For example, her 1991 novel The Crown of Columbus is essentially adventure fiction, and the thrilling events in its plot are set largely on a Caribbean island.",
+        "question": "According to the text, what is one way that The Crown of Columbus differs from most of Erdrich's work?",
+        "options": [
+          "A) It has been adapted into a movie.",
+          "B) It isn't set in a rural Ojibwe community.",
+          "C) It contains very little dialogue.",
+          "D) Its main characters are Ojibwe."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Typical work: Ojibwe communities. Crown of Columbus: 'set largely on a Caribbean island' (outside Ojibwe community)."
+      }
+    },
+    {
+      "id": "DET_058",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "All the shops had opened for the day and, Ramchand noted guiltily, all the shop assistants were already in place, trying to sell things with fixed, attentive smiles on their shiny, bathed faces.",
+        "question": "Based on the text, what can most reasonably be inferred about Ramchand?",
+        "options": [
+          "A) Ramchand is remorseful about arriving to work later than other shop assistants he sees.",
+          "B) Ramchand is mesmerized by frying jalebi batter...",
+          "C) Ramchand is overwhelmed by a bazaar...",
+          "D) Ramchand is happy about being at work..."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "He noted 'guiltily' that others were 'already in place,' implying he was late or behind, causing the guilt/remorse."
+      }
+    },
+    {
+      "id": "DET_059",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Zucman also finds that use of tax havens differs between countries they are rarely used by investors living in Japan, while many investors who utilize tax havens reside in Saudi Arabia or Greece.",
+        "question": "Based on the text, what does Zucman's research suggest about investors residing in Japan?",
+        "options": [
+          "A) They are engaging in investment practices that Robeyns would acknowledge as beneficial...",
+          "B) They are less likely than investors residing in Saudi Arabia to store wealth in Singapore.",
+          "C) They are more likely than residents of Singapore to utilize investment strategies...",
+          "D) They are more likely than residents of Greece to engage in tax avoidance."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Tax havens are 'rarely used' by Japan but 'many' Saudi Arabia investors use them. Singapore is cited as an example of a tax haven. Therefore, Japan investors are *less likely* than Saudi investors to use tax havens like Singapore."
+      }
+    },
+    {
+      "id": "DET_060",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Noting that relative coldness was more pronounced in fruiting than in nonfruiting sites of the mycelium-a difference that persisted even after fruited bodies were detached the researchers speculate that thermoregulation in the mycelium may influence reproductive success.",
+        "question": "Which statement about the mycelium of the twenty mushroom species is best supported by the text?",
+        "options": [
+          "A) Variation in thermoregulation across the mycelium may occur independent of the presence or absence of fruited bodies.",
+          "B) The correlation between higher mycelium temperature...",
+          "C) Temperatures in the fruiting areas...",
+          "D) The mycelium generally maintains temperatures..."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The text states the temperature difference 'persisted even after fruited bodies were detached,' meaning the variation exists independently of the bodies' presence."
+      }
+    },
+    {
+      "id": "DET_061",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "But when María A. Maglianesi and team monitored hummingbird visits... they found that visit frequencies weren't influenced by nectar traits. Rather, physical compatibility of flower corollas (collections of petals) and hummingbird bills more strongly predicted hummingbird-plant interaction patterns.",
+        "question": "Which statement about hummingbird preferences is most strongly supported by the text?",
+        "options": [
+          "A) Hummingbirds consistently prefer plant species whose flowers have physical traits that are compatible with their bills but offer relatively low nectar rewards.",
+          "B) The floral traits that most strongly influence which plant species hummingbirds prefer may result in certain hummingbird species visiting flowers with relatively low nectar rewards over those with higher nectar rewards.",
+          "C) Hummingbirds' preferences are primarily driven by trait-matching...",
+          "D) Physical compatibility between flower corollas and hummingbird bills becomes an important factor..."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Since physical compatibility is the *stronger* predictor (trumping nectar traits), hummingbirds might choose a compatible flower even if it has 'low nectar rewards' over an incompatible one with high rewards. This aligns with B. (Note: Key says B)."
+      }
+    },
+    {
+      "id": "DET_062",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Non-tool-using otters foraged abundant, energy-poor, easily extractable prey instead (e.g., snails). Even when easily processed prey were depleted, tool-using otters that processed mussels and clams were thus able to obtain their needed energy resources and to do so without incurring tooth damage.",
+        "question": "What does the text most strongly suggest about southern sea otters in environments where snails, mussels, and clams are present?",
+        "options": [
+          "A) Those otters whose diet consists mainly of snails will likely exhibit less tooth damage than will those otters that use tools to consume mussels and clams.",
+          "B) Those otters that do not use tools will likely have more robust health than those otters that do use tools.",
+          "C) Those otters that do not use tools will likely need to process larger amounts of prey to meet their energy requirements than will those otters that use tools.",
+          "D) Those otters that consume mussels and clams without the use of tools will likely spend less time foraging..."
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Non-tool users eat 'energy-poor' prey (snails). Tool users eat 'high-quality' (energy-rich) prey. To get the same energy, the non-tool users would need to eat *larger amounts* of the energy-poor food."
+      }
+    }
+  ]
+}
