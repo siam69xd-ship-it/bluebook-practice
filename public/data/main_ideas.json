@@ -1,0 +1,696 @@
+{
+  "test_metadata": {
+    "test_name": "Digital SAT Practice",
+    "domain": "Information and Ideas",
+    "skill": "Central Ideas and Details",
+    "sub_skill": "Main Ideas",
+    "total_questions": 38,
+    "version": "1.0"
+  },
+  "questions": [
+    {
+      "id": "MI_001",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The sermon is a sound of words spoken to the ear, and prepared only for present meditation and extends no farther than the strength of memory can convey it; a book printed is a record, remaining in every man's possession, always ready to renew its acquaintance with his memory, and always ready to be produced as an authority or voucher to any reports he makes out of it, and conveys its contents for ages to come, to the eternity of mortal time, when the author is forgotten in his grave.",
+        "question": "Which choice best states the main idea of the text?",
+        "options": [
+          "A) People are less likely to forget a message when they hear it spoken aloud than they are when they read it in print.",
+          "B) Unless a spoken message is delivered by a confident orator, it may be ignored.",
+          "C) Most authors have little hope of being remembered well past their lifetimes.",
+          "D) Words committed to print have a greater permeance than messages that are merely spoken aloud."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The text contrasts the fleeting nature of spoken sermons, which depend on memory, with the enduring nature of printed books, which serve as permanent records that can convey contents for ages. This supports the idea that printed words have greater permanence."
+      }
+    },
+    {
+      "id": "MI_002",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The Far Side of the World, first published in 1984, is a novel in Patrick O'Brain's Aubrey/Maturin series... Like the rest of the books in the series, The Far Side of the World has a rather abrupt ending, but the following book, The Reverse of the Medal, picks up neatly where The Far Side of the World leaves off. Thus, the sudden ending is only an issue if one considers the books as independent texts-the Aubrey/Maturin series is best thought of as a single incredibly long work, similar to other multivolume stories, such as John Galsworthy's The Forsyte Saga.",
+        "question": "Which choice best states the main idea of the text?",
+        "options": [
+          "A) It is unfair that the Aubrey/Maturin series does not have the critical reputation of The Forsyte Saga, which has a similar structure.",
+          "B) The Far Side of the World and The Reverse of the Medal are two of the most complex of Patrick O'Brian's novels of the Aubrey/Maturin series with unconventional structures.",
+          "C) The structure of each of the novels of the Aubrey/Maturin series suggests that the series should be considered a single continuous story.",
+          "D) Many readers find the Aubrey/Maturin novels to be remarkably entertaining despite flaws in novels' structures."
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The text argues that the abrupt endings of individual books are not problematic if the series is viewed as a 'single incredibly long work' rather than independent texts. This aligns with the idea that the series should be considered a single continuous story."
+      }
+    },
+    {
+      "id": "MI_003",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Master and Commander... is a novel in Patrick O'Brian's Aubrey/Maturin series... Some critics have found fault with the abrupt endings of Master and Commander and other books in the series, saying that they do not finish conclusively but arbitrarily stop. Other critics, however, argue that the books should not be thought of as discrete texts with traditional beginnings and endings but as a single incredibly long work, similar to other multivolume stories...",
+        "question": "Which choice best states the main idea of the text?",
+        "options": [
+          "A) The unusual structure that O'Brian uses for Master and Commander makes it one of his most intricate books.",
+          "B) Critics have differing views regarding the efficacy of the structures of the novels in the Aubrey/Maturin series.",
+          "C) Some critics think the Aubrey/Maturin series should have the literary form of The story of Saga, while others disagree.",
+          "D) Many critics judge the Aubrey/Maturin novels to be remarkably entertaining despite flaws in the novels' structures."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The passage presents two opposing viewpoints: some critics find fault with the endings, while others argue the structure is justified when viewing the series as a whole. This illustrates that critics have differing views on the novels' structure."
+      }
+    },
+    {
+      "id": "MI_004",
+      "difficulty": "Easy",
+      "content": {
+        "passage": "Horses and barn owls can see in three dimensions (3D) which helps them perceive distance and depth. Octopuses and squid are thought to lack 3D vision. Many researchers once thought the same about cuttlefish, but Trevor Wardell and his team wanted to test whether this assumption was true. The team studied how cuttlefish wearing 3D glasses reacted to 3D images of shrimp... Cuttlefish changed their striking position to match the 3D images, suggesting that their vision is more like that of horses and barn owls than that of octopuses or squid.",
+        "question": "Which choice best states the main idea of the text?",
+        "options": [
+          "A) Researchers have long known that horses and barn owls can see in 3D.",
+          "B) Cuttlefish are surprisingly similar in structure to octopuses and squid.",
+          "C) Contrary to what many researchers had assumed, cuttlefish may be able to see in 3D.",
+          "D) The ability to see in 3D allows many animals to interact with one another."
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The text describes an experiment that challenged the previous assumption that cuttlefish lack 3D vision. The results suggested they actually do possess 3D vision, supporting the idea that the assumption was incorrect."
+      }
+    },
+    {
+      "id": "MI_005",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Meredith E. Protas and colleagues have explored how convergent evolution... can result from a genetic mechanism shared by both lineages. Meanwhile, Bas J. Zwaan and colleagues have investigated how convergence occurs through different genetic mechanisms, but the relative prevalence of convergence through shared and different genetic processes is still poorly understood. This motivated biologist Delbert A. Green II and Cassandra G. Extavour to evaluate both types of convergence in a single study for their 2012 paper.",
+        "question": "Which choice best states the main idea of the text?",
+        "options": [
+          "A) Before Green and Extavour's study, convergence evolution was assumed to require a shared genetic mechanism between two lineages that shared the trait.",
+          "B) Green and Extavour's study was conducted using data from the studies by Protas and colleagues and Zwaan and colleagues.",
+          "C) Green and Extavour's study addresses convergent evolution more comprehensively than the studies by Protas and colleagues and Zwaan and colleagues do.",
+          "D) Both the study by Protas and colleagues and that by Green and Extavour compare convergence through shared genetic mechanism to convergence through different genetic mechanisms."
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The text notes that previous studies focused on specific mechanisms (shared or different) in isolation, leaving the 'relative prevalence' understood. Green and Extavour's study evaluated 'both types' in a single study, implying a more comprehensive approach to the topic."
+      }
+    },
+    {
+      "id": "MI_006",
+      "difficulty": "Easy",
+      "content": {
+        "passage": "The text describes Robert Johnson, who has recently joined the US Army. He was daring, without being rash; prompt, but not thoughtless; firm without being harsh. Kind and devoted to the company he drilled, he soon won the respect of his superior officers and the love of his comrades.",
+        "question": "Which choice best states the main idea of the text?",
+        "options": [
+          "A) Robert is well suited to his role in the military.",
+          "B) Robert has put great effort into getting the attention of his comrades.",
+          "C) Robert mainly seeks to help his comrades even if his superiors don't appreciate it.",
+          "D) Robert has made some mistakes out some good qualities."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The passage lists positive attributes relevant to a soldier (daring, prompt, firm) and states he won the respect of officers and love of comrades. These details collectively support the idea that he is well suited to his military role."
+      }
+    },
+    {
+      "id": "MI_007",
+      "difficulty": "Easy",
+      "content": {
+        "passage": "Animals use many objects as tools to achieve goals more easily... For a long time, people thought tool use was unique to primates. Octopuses and other animals, though, have busted the myth that tool use requires hands. Inventively, octopuses use two halves of a seashell to provide protection... Greater vasa parrots also get creative.",
+        "question": "Which choice best states the main idea of the text?",
+        "options": [
+          "A) Unlike primates, octopuses are exceptionally skillful at using different tools.",
+          "B) There are many myths about tool use that researchers are starting to challenge.",
+          "C) Animals find it difficult to use objects as tools.",
+          "D) Contrary to long-held beliefs, primates aren't the only animals to use tools."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The text explicitly states that octopuses and other animals have 'busted the myth' that tool use is unique to primates, providing examples of non-primates using tools."
+      }
+    },
+    {
+      "id": "MI_008",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "I walked slowly beneath the young leaves, drinking in the air... I sauntered along, forgetful of musty papers, of the offices, of my chief, my colleagues... and thinking of the good things that were sure to come to me... A thousand recollections of childhood came over me, awakened by these country odors...",
+        "question": "Which choice best states the main idea of the text?",
+        "options": [
+          "A) Having decided to leave his current employment, the narrator is returning to his childhood home in the country.",
+          "B) The narrator's natural surroundings help him escape his work concerns by prompting hopes about the future and memories of youth.",
+          "C) The narrator is using the quiet of the countryside to help him think about how projects at work could be advantageous for his career.",
+          "D) The narrator forgets to address pressing work issues because the smells of the countryside distract him with thoughts of his youth."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The narrator describes being 'forgetful' of office stress and instead thinking of 'good things' (future hopes) and 'recollections of childhood,' all triggered by the 'country odors' and surroundings."
+      }
+    },
+    {
+      "id": "MI_009",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Tanya Tagaq is a writer and musician... praised her work for combining traditional Inuit stories with popular genres of literature... But Tagaq is not the only Indigenous writer to blend traditional stories with popular literature. In the 2020 novel The Only Good Indians, Stephen Graham Jones successfully blended the oral storytelling tradition of his tribe, the Blackfeet Nation, with horror fiction.",
+        "question": "Which choice best states the main idea of the text?",
+        "options": [
+          "A) Non-Indigenous authors should consider the expectations of Indigenous readers.",
+          "B) Several famous Indigenous writers increased their book sales when they began incorporating traditional stories.",
+          "C) Recent Indigenous fiction writers are mixing traditional stories with popular literary genres.",
+          "D) The success of Tanya Tagaq has influenced non-Indigenous authors who write in popular literary genres."
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The text highlights a trend among Indigenous writers, citing Tanya Tagaq and Stephen Graham Jones as examples of authors who blend traditional stories with popular literary genres like fantasy and horror."
+      }
+    },
+    {
+      "id": "MI_010",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Mexican textile artist Victoria Villasana weaves stories of triumph, using her unique method of applying colorful yarn to photographs of people. In some works, Villasana focuses on celebrating cultural icons... However, in other works, Villasana honors ordinary people... Villasana sees both of these approaches as ways of depicting the power and interconnectedness of all people.",
+        "question": "Which choice best states the main idea of the text?",
+        "options": [
+          "A) Villasana's portrayal of a young girl sitting on a sidewalk focuses more on human connection than it does on human resilience.",
+          "B) Villasana began her artistic career by painting portraits of famous people and then transitioned to depicting everyday people instead.",
+          "C) Villasana's works focus on recognizing both famous and everyday examples of human strength and connection.",
+          "D) Villasana's depiction of Prince receives more attention from scholars than her depiction of a young girl sitting on a sidewalk does."
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The text explains that Villasana portrays both 'cultural icons' and 'ordinary people,' viewing both as examples of 'power and interconnectedness.' Option C accurately summarizes this dual focus."
+      }
+    },
+    {
+      "id": "MI_011",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Horizontal gene transfer involves the exchange of genetic material between organisms not in a parent-offspring relationship. It is common among prokaryotes... The process can have the effect of increasing bacterial resistance to antibiotics; as such, an understanding of how to prevent horizontal gene transfer might result in the mitigation of dangerous pathogens (organisms that cause disease).",
+        "question": "Which choice best states the main idea of the text?",
+        "options": [
+          "A) A common perception of horizontal gene transfer is inaccurate.",
+          "B) Horizontal gene transfer is more common than was initially thought.",
+          "C) The results of new research into horizontal gene transfer cast doubt on earlier findings.",
+          "D) The study of horizontal gene transfer may yield findings with useful applications."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The text explains the negative effects of horizontal gene transfer (antibiotic resistance) and suggests that understanding (studying) it could lead to 'mitigation of dangerous pathogens,' which is a useful application."
+      }
+    },
+    {
+      "id": "MI_012",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "In 2013 Oona M. Lönnstedt and colleagues published a study concluding that ocean acidification has a strong effect on the behavior of Pomacentrus amboinensis... However, Lönnstedt and colleagues' study relied on a mean sample size of only about 28 fish. In a 2022 review... Jeff C. Clements and colleagues caution that relying on such a relatively small sample size can increase the potential for biased analysis.",
+        "question": "Which choice best states the main topic of the text?",
+        "options": [
+          "A) A possible shortcoming of a study involving Pomacentrus amboinensis.",
+          "B) A discovery regarding the evolution of Pomacentrus amboinensis.",
+          "C) A change in fish behavior first reported in 2022.",
+          "D) A newly identified cause of ocean acidification."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The text focuses on a specific study about *Pomacentrus amboinensis* and highlights a critique regarding its small sample size, which is a potential shortcoming of the research."
+      }
+    },
+    {
+      "id": "MI_013",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "In a large community science effort, biologist Abbigail Merrill and colleagues collaborated with hundreds of students... to study how butterfly color and time of day relate to butterfly behavior. They found that butterfly color might influence behavior more than butterfly size does, and that butterflies were observed to feed more often in the morning than at any other time of day.",
+        "question": "Which choice best states the main idea of the text?",
+        "options": [
+          "A) Time of day and butterfly color seem to have less influence on butterfly behavior than the location where the butterflies are studied does.",
+          "B) A recent study suggested that butterflies' coloring seems to be less relevant to their behavior than time of day.",
+          "C) Collaboration between professional scientists and members of the public is especially useful when studying the behavior of butterflies and other flying insects.",
+          "D) A large study suggested that butterfly color and time of day might influence the behavior of certain butterflies."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The text describes the study's findings: that 'butterfly color might influence behavior' and that 'time of day' (feeding in the morning) is also a factor. Option D summarizes these specific findings."
+      }
+    },
+    {
+      "id": "MI_014",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "President Richard Nixon is most famous for his participation in the 1970s Watergate political scandal... But Nixon's legacy is complex: he has been praised for his role in affirming the sovereignty of tribal nations, and he once made an attempt at reforming United States health care policy...",
+        "question": "Which choice best states the main idea of the text?",
+        "options": [
+          "A) Richard Nixon's reputation is primarily due to the actions of his associates.",
+          "B) Some of Richard Nixon's policies influenced the policies of later presidential administrations.",
+          "C) Jeb Stuart Magruder and Rose Mary Woods were significant figures in the presidency of Richard Nixon.",
+          "D) Richard Nixon is commonly linked with an infamous historical event, but this overshadows some of his notable achievements."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The text contrasts Nixon's fame from the Watergate scandal (infamous event) with his 'complex' legacy involving praise for tribal sovereignty and health care reform (notable achievements), arguing for a more nuanced view."
+      }
+    },
+    {
+      "id": "MI_015",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Tomato is an example of a loanword... The word came to English indirectly from tomate, the Spanish word... Spanish had borrowed it from Nahuatl, an Indigenous language... 'Maize' also has an Indigenous origin and entered English through Spanish... from Taíno...",
+        "question": "Which choice best states the main idea of the text?",
+        "options": [
+          "A) Many Spanish words with Indigenous origins first passed through English before entering Spanish.",
+          "B) When borrowing from Indigenous languages, Spanish adopted roughly as many words from Nahuatl as from Taíno.",
+          "C) When non-Indigenous languages borrowed from Indigenous languages, the words often underwent a significant change in meaning.",
+          "D) The English words 'tomato' and 'maize' are both examples of loanwords from Indigenous languages."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The text provides the etymological histories of 'tomato' and 'maize,' showing that both originated in Indigenous languages (Nahuatl and Taíno) before entering English via Spanish."
+      }
+    },
+    {
+      "id": "MI_016",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Eighteenth-century economist Adam Smith is famed for his metaphor of the invisible hand... Smith deploys this metaphor only once in his economic writings to make a narrow point... and it was largely ignored until some twentieth-century economists eager to secure an intellectual pedigree for their views elevated it to a fully-fledged paradigm.",
+        "question": "Which choice best states the main idea of the text?",
+        "options": [
+          "A) The reputation of Smith's metaphor of the invisible hand is not due to the importance of the metaphor in Smith's work but rather to the promotion of the metaphor by some later economists for their own ends.",
+          "B) Smith's metaphor of the invisible hand has been interpreted as a model of how individuals acting in their own interest produce aggregate benefits, but it was intended as a subtle critique of the economic theory of mercantilism.",
+          "C) Some twentieth-century economists gave Smith's metaphor of the invisible hand a significance it does not have in Smith's work, but it is nevertheless a useful model of how individuals produce aggregate benefits by pursuing their own economic interests.",
+          "D) Although Smith is famed for his metaphor of the invisible hand, the metaphor was largely ignored until economists in the twentieth century came to realize that the metaphor was a robust model that anticipated their own views."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The text argues that the 'invisible hand' was a minor point for Smith and was only 'elevated' to fame by 20th-century economists wanting an 'intellectual pedigree.' This supports the idea that its reputation is due to later promotion rather than original importance."
+      }
+    },
+    {
+      "id": "MI_017",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Roy McLendon's Moonlit St. Lucie... is typical of paintings by the Florida Highwaymen... Remarkable for anticipating and amplifying cultural perceptions of Florida that became pervasive in the public consciousness, paintings by the Highwaymen are readily identifiable by the natural iconography...",
+        "question": "Which choice best states the main idea of the text?",
+        "options": [
+          "A) Although similar in its subject matter to many paintings by the Florida Highwaymen, Moonlit St. Lucie is now more highly regarded than other Florida Highwaymen paintings are.",
+          "B) Representative images found across many paintings by McLendon and other Florida Highwaymen came to be widely associated with Florida in part due to the Florida Highwaymen's influence.",
+          "C) Although paintings by the Florida Highwaymen were once celebrated for their depictions of Florida's natural environments, the popularity of these paintings waned after the 1960s.",
+          "D) The placid inland rivers and windswept palm trees that are typical of McLendon's works, which are otherwise indistinguishable from other Florida Highwaymen paintings, help to differentiate McLendon's paintings from those of his colleagues."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The text states the paintings 'anticipated and amplified cultural perceptions of Florida' and became 'pervasive in the public consciousness,' meaning the images became widely associated with Florida due to the Highwaymen's influence."
+      }
+    },
+    {
+      "id": "MI_018",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "[Harris] told us anecdotes of how he had gone across the [English] Channel when it was so rough... and he and the captain were the only two living souls on board who were not ill. Sometimes it was he and the second mate who were not ill; but it was generally he and one other man. If not he and another man, then it was he by himself.",
+        "question": "Which choice best states the main idea of the text?",
+        "options": [
+          "A) During a previous boat trip, Harris spent more time with the other passengers than with the captain.",
+          "B) Harris has a hard time remembering his first trip across the English Channel when his friends ask about it.",
+          "C) When Harris speaks of an earlier trip, he often changes the details but always brags about his own wellness.",
+          "D) Harris is worried that he and his friends will encounter rough waters during their boat trip."
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The text lists various versions of Harris's story where the companion changes (captain, second mate, no one), but the constant detail is that Harris himself was 'not ill.' This suggests he changes details but consistently boasts about his own wellness."
+      }
+    },
+    {
+      "id": "MI_019",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Mexican architect Luis Barragan's prolific career evolved through distinct phases. After traveling to the United States and Europe in the early 1930s and immersing himself in an international architectural discourse, Barragan began incorporating principles derived from functionalism and modernism in his work...",
+        "question": "Which choice best states the main idea of the text?",
+        "options": [
+          "A) Barragan's designs of the El Arenal Parish Church and the houses for Emiliano Robles Leon are considered paragons of a functionalist and modernist aesthetic.",
+          "B) Barragan's design of the houses for Emiliano Robles Leon is considered more experimental than his design for the El Arenal Parish Church.",
+          "C) Barragan's early work shows an initial dedication to a modernist aesthetic that he later abandoned.",
+          "D) A notable shift in Barragan's design aesthetic reflects the influence of his time abroad."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The text describes a shift in his work (to functionalism/modernism) occurring 'After traveling to the United States and Europe.' This directly links the aesthetic shift to the influence of his time abroad."
+      }
+    },
+    {
+      "id": "MI_020",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Like many other bird species that live only on the Hawaiian archipelago, the Kaua'i 'amakihi has adapted to life in a well-defined habitat, resulting in highly specialized physical and behavioral characteristics... However, because the Kaua'i 'amakihi is highly specialized, it is especially vulnerable to environmental changes...",
+        "question": "Which choice best states the main idea of the text?",
+        "options": [
+          "A) The Kaua'i 'amakihi is a species of bird that is related to many other Hawaiian birds but does not share a habitat with any of them.",
+          "B) The Kaua'i 'amakihi is an example of a highly specialized bird species found only on the Hawaiian archipelago and is related to several other highly specialized bird species found there.",
+          "C) The Kaua'i 'amakihi is an example of a species unique to the Hawaiian archipelago that is highly specialized and therefore particularly susceptible to habitat disturbance.",
+          "D) Hawaiian birds display a unique range of physical and behavioral characteristics and as a result can only live in habitats unique to the Hawaiian archipelago."
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The text uses the Kaua'i 'amakihi to illustrate the point that high specialization leads to being 'especially vulnerable to environmental changes' (susceptible to habitat disturbance)."
+      }
+    },
+    {
+      "id": "MI_021",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "In his solitary retreat on the shore of the sea... Padre Florentino was relieving the monotony by playing on his harmonium sad and melancholy tunes... Notes long, full, mournful as a prayer... Padre Florentino, who was an accomplished musician, was improvising, and, as he was alone, gave free rein to the sadness in his heart.",
+        "question": "Which choice best states the main idea of the text?",
+        "options": [
+          "A) The residence of Padre Florentino is especially isolated.",
+          "B) Padre Florentino prefers to play music rather than listen to other musicians play.",
+          "C) Padre Florentino has dedicated himself to becoming a skilled musician.",
+          "D) The sadness of Padre Florentino's music reflects his own feelings."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The text focuses on the emotional quality of the music ('sad and melancholy tunes', 'mournful') and explicitly connects it to the musician's internal state ('gave free rein to the sadness in his heart')."
+      }
+    },
+    {
+      "id": "MI_022",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "The scholars are the priests of that thought which establishes the foundations of the earth... they stand for the spiritual interest of the world, and it is a common calamity if they neglect their post in a country where the material interest is so predominant as it is in America.",
+        "question": "Which choice best states the main idea of the text?",
+        "options": [
+          "A) Military experience encourages Americans to contemplate aspects of human life that they would not choose to otherwise.",
+          "B) It is unfortunate that so many intellectuals are concerned with material things rather than ideas.",
+          "C) Many descriptions of the role of scholars in society unfairly diminish their importance.",
+          "D) In a country whose citizens are largely preoccupied with tangible gains, it is crucial that some people work to foster and preserve ideas."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Emerson argues that scholars uphold 'spiritual interest' (ideas) and that their role is critical ('common calamity if they neglect their post') specifically because the country is otherwise dominated by 'material interest' (tangible gains)."
+      }
+    },
+    {
+      "id": "MI_023",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The Fifty-Year Mission... is presented as the 'complete, uncensored, unauthorized oral history'... The work aspires to be comprehensive... But while The Fifty-Year Mission is clearly a unique and valuable resource, it has a shortcoming common among oral histories: it lacks a clear authorial point of view that could otherwise unite the various accounts into a cohesive whole.",
+        "question": "Which choice best states the main idea of the text?",
+        "options": [
+          "A) The Fifty-Year Mission includes more accounts from people involved with Star Trek television shows than it does from people involved with Star Trek films.",
+          "B) The compilers of The Fifty-Year Mission had lofty goals for their oral history of the Star Trek franchise, but the published work lacks information about many key events in the franchise's history.",
+          "C) The large amount of material compiled into The Fifty-Year Mission is surprising given that many of the people involved in the Star Trek franchise did not participate in the oral history project.",
+          "D) The Fifty-Year Mission represents a worthwhile attempt to thoroughly recount the history of the Star Trek franchise, but its approach has an important limitation."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The text acknowledges the book's value ('worthwhile attempt') and comprehensiveness but identifies a specific flaw ('limitation')—the lack of an authorial point of view."
+      }
+    },
+    {
+      "id": "MI_024",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Why do black-footed cats purr but leopards roar? Researchers hypothesize that this difference... may be partly due to a U-shaped bone in their throats called the hyoid. Black-footed cats... have a rigid hyoid... By contrast, leopards have a somewhat flexible hyoid... These traits allow leopards... to produce powerful roars.",
+        "question": "Which choice best states the main idea of the text?",
+        "options": [
+          "A) Both black-footed cats and leopards have U-shaped hyoid bones, but black-footed cats' hyoids are rigid whereas leopards' hyoids are flexible.",
+          "B) Leopards and most other species of big cats can roar because they have flexible hyoid bones that are attached by stretchy ligaments to their skulls.",
+          "C) Researchers are uncertain why relatively small cats, such black-footed cats, purr but relatively large cats, such as leopards, roar.",
+          "D) Differences related to the hyoid bone in black-footed cats and leopards may help explain why one species purrs and the other roars."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The passage discusses the hypothesis that anatomical differences in the hyoid bone are the reason why different cat species have different vocalizations (purring vs roaring)."
+      }
+    },
+    {
+      "id": "MI_025",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "In their meta-analysis of research on advergames... van Berlo et al. confirm that such games... may not facilitate subsequent recall of product and brand information. This phenomenon can be explained by the finite nature of cognitive capacity as it is articulated in Annie Lang's limited capacity model... players' cognitive resources are directed foremost toward the advergame's mechanics, leaving little or no capacity for encoding and storing the information...",
+        "question": "Which choice best states the main idea of the text?",
+        "options": [
+          "A) The limited capacity model of motivated mediated message processing developed by Lang provides a means of explaining the finding by van Berlo et.al. that players may not readily recollect the brand and product information embedded in advergames.",
+          "B) The meta-analysis by van Berlo et al. reveals that higher engagement in advergame mechanics is linked to lower effectiveness in persuading players to purchase particular brands and products.",
+          "C) Although the limited capacity model of motivated mediated message processing developed by Lang suggests otherwise, advergames can succeed as marketing tools...",
+          "D) Research by van Berlo et al. corroborates Lang's conclusion that because people predominantly focus on game mechanics when playing video games..."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The text links van Berlo's finding (poor recall in advergames) to Lang's model (limited cognitive capacity) to provide an explanation for the phenomenon."
+      }
+    },
+    {
+      "id": "MI_026",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Like many other bird species that live only on the Hawaiian archipelago, the 'akeke'e has adapted to life in a well-defined habitat... However, because the 'akeke'e is highly specialized, it is especially vulnerable to environmental changes that can disrupt the delicately balanced ecosystem in which it lives.",
+        "question": "Which choice best states the main idea of the text?",
+        "options": [
+          "A) Hawaiian birds display a unique range of physical and behavioral characteristics and as a result can only live in habitats unique to the Hawaiian archipelago.",
+          "B) The 'akeke'e is an example of a species unique to the Hawaiian archipelago that is highly specialized and therefore particularly susceptible to habitat disturbances.",
+          "C) The 'akeke'e is a species of bird that is related to many other Hawaiian birds but does not share a habitat with any of them.",
+          "D) The 'akeke'e is an example of a highly specialized bird species found only on the Hawaiian archipelago and is related to several other highly specialized bird species found there."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Similar to Question 20. The text uses the 'akeke'e to illustrate that high specialization makes a species 'especially vulnerable' (susceptible) to environmental changes/disturbances."
+      }
+    },
+    {
+      "id": "MI_027",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Community science involves professional scientists collaborating with members of the public... This approach... can promote community engagement... It's also very effective because it greatly increases the amount of data that can be collected, such as when biologist Grace Herzel and colleagues studied butterfly color... and used findings reported by hundreds of students...",
+        "question": "Which choice best states the main idea of the text?",
+        "options": [
+          "A) Abbigail Merrill and colleagues used a community science approach in their butterfly research and were surprised at the effect this had on public understanding of the nature of scientists' work.",
+          "B) A community science approach can increase public understanding of the nature of scientists' work and generate large amounts of data, benefiting both communities and researchers.",
+          "C) A community science approach can benefit communities by increasing public understanding of the nature of scientists' work, but it's less likely to help researchers obtain accurate data.",
+          "D) A community science approach allows researchers to collect significantly more data even though it's unlikely to have much of an effect on public understanding of the nature of scientists' work."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The text highlights two benefits: 'promote community engagement' (public understanding) and 'greatly increases the amount of data.' Option B captures both benefits."
+      }
+    },
+    {
+      "id": "MI_028",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Sometimes an animal will encounter another member of its own species that it doesn't have any connection with... When that happens, the animals have to make decisions: Will they compete for a mate? Will they help in a fight with a predator?... In other words, the animals have to think carefully about possible risks and benefits.",
+        "question": "Which choice best states the main idea of the text?",
+        "options": [
+          "A) Animal species that do not have any predators",
+          "B) A kind of meeting between animals of the same species",
+          "C) Animal species that are close to becoming extinct",
+          "D) Different environments that some animal species live in"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The entire text is about what happens when an animal encounters 'another member of its own species' (conspecifics) with whom it has no connection."
+      }
+    },
+    {
+      "id": "MI_029",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The sermon is a sound of words spoken to the ear... extends no farther than the strength of memory can convey it; a book printed is a record... conveys its contents for ages to come...",
+        "question": "Which choice best states the main idea of the text?",
+        "options": [
+          "A) Words committed to print have a greater permanence than messages that are merely spoken aloud.",
+          "B) People are less likely to forget a message when they hear it spoken aloud than they are when they read it in print.",
+          "C) Unless a spoken message is delivered by an expert, it can be safely ignored.",
+          "D) Most authors have little hope of being remembered well past their lifetimes."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The text contrasts the temporary nature of spoken sermons with the permanence of printed books, arguing that print endures for ages."
+      }
+    },
+    {
+      "id": "MI_030",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "In a study by Mika R. Moran... residents of Quito... and Buenos Aires... were surveyed... 82.9% [in Quito] indicated that they use the city's parks... compared to 69.9% [in Buenos Aires]... Given that the percentage of Quito respondents who reported having access to other desired amenities near parks was much lower... the difference in park use can't be explained by Quito residents having more access to desired nonpark amenities near parks.",
+        "question": "Which choice best states the main idea of the text?",
+        "options": [
+          "A) The study's finding that a greater proportion of residents use parks in Quito than in Buenos Aires is partly due to the greater prevalence of parks in Quito.",
+          "B) The study's findings suggest that an increase in the number of amenities near city parks would likely increase park use in Quito but not in Buenos Aires.",
+          "C) Although the study found that a greater proportion of residents use parks in Quito than in Buenos Aires, that difference isn't due to greater access to amenities near parks in Quito.",
+          "D) Even though the study found that parks in Buenos Aires are more likely to be close to other amenities than parks in Quito are, Quito has more amenities overall than Buenos Aires does."
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The text presents the finding (Quito uses parks more) and explicitly rules out a specific explanation (amenities), since Quito actually has fewer amenities. Option C captures this logic."
+      }
+    },
+    {
+      "id": "MI_031",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The narrator has just rented an apartment... Never, however, was I so aware of entering a new stage as I was that afternoon... when I finally dared to cross the threshold... Behind me was a complicated past, and in front of me, like an omen, I could see a space opening out, a great empty space that time would take care of filling up.",
+        "question": "Which choice best states the main idea of the text?",
+        "options": [
+          "A) The narrator feels optimistic about the future success of a new business.",
+          "B) The narrator recognizes that a particular moment marks a major shift in her life.",
+          "C) The narrator has always had a plan for how to handle big moments in her life.",
+          "D) The narrator wants to express her gratitude for the people who have helped her."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The narrator explicitly states she was aware of 'entering a new stage' and seeing a 'space opening out' between her past and future, recognizing the moment as a major shift."
+      }
+    },
+    {
+      "id": "MI_032",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "When Kenyan writer Ngugi wa Thiong'o... began writing in his native language, Gikuyu... critics cautioned that doing so might make his works inaccessible... Rejecting their arguments, Ngugi went on to author dozens of acclaimed works in Gikuyu that have been translated into a total of more than thirty languages.",
+        "question": "Which choice best states the main idea of the text?",
+        "options": [
+          "A) Although Ngugi insisted on publishing his first works in Gîküyü, they have since been translated into many other languages.",
+          "B) Although Ngugi's decision to write in Gîküyü was met with some skepticism, it didn't prevent him from achieving literary success.",
+          "C) The reaction to Ngugi's rejection of English illustrates that some literary experts believe that fame is most easily gained by writing in a widely understood language, such as Gîküyü.",
+          "D) In the 1970s, Ngugi became convinced that literature ought to be written in authors' native languages, and he proceeded to publish many works in Gikuyu."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The text contrasts the initial skepticism/caution from critics with Ngugi's subsequent success ('acclaimed works... translated into... thirty languages')."
+      }
+    },
+    {
+      "id": "MI_033",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "I took up a position in the bows... looking at the quays, the trees, the houses and the bridges disappearing behind us. And suddenly I perceived the great viaduct of Point du Jour... It was the end of Paris, the beginning of the country, and behind the double row of arches the Seine, suddenly spreading out as though it had regained space and liberty, became all at once the peaceful river which flows through the plains...",
+        "question": "Which choice best states the main idea of the text?",
+        "options": [
+          "A) The narrator is anxious for the trip to the countryside to be over as quickly as possible, and is frustrated that it is taking so long.",
+          "B) The narrator perceives a parallel between the shift from the urban environment to the countryside and the changes in the features of the river itself.",
+          "C) The narrator is surprised to see that the boat is taking him out of the city but is exhilarated by the opportunity to explore an unknown place.",
+          "D) The narrator contrasts his feelings of apprehension with the apparent tranquility of the river as the boat enters the countryside."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The narrator notes that at the exact boundary where the city ends and the country begins, the river also changes character ('regained space and liberty... became... peaceful'), drawing a parallel between the environment and the river."
+      }
+    },
+    {
+      "id": "MI_034",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "It was the end of Paris, the beginning of the country, and behind the double row of arches the Seine, suddenly spreading out as though it had regained space and liberty, became all at once the peaceful river which flows through the plains...",
+        "question": "Which choice best states the main idea of the text?",
+        "options": [
+          "A) Though the Seine is calm during most of the journey, the arches of the Point du Jour created a small area of heavy current.",
+          "B) The Seine is similar to Paris in that it is beautiful and slow to change",
+          "C) As the journey progressed from Paris to the countryside, the waters of the Seine gradually cleared.",
+          "D) The waters of the Seine are more confined and rough in Paris than they are in the countryside."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The text states the river 'regained space and liberty' and 'became... peaceful' after leaving Paris. This implies that *in* Paris, it was less free (confined) and less peaceful (rough)."
+      }
+    },
+    {
+      "id": "MI_035",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Although notorious for its strict formal requirements, the sonnet is nevertheless represented by such wide-ranging examples... It may seem counterintuitive that the sonnet-ostensibly rigid and timeworn-could accommodate such variety, but poet Carl Phillips contends that the form invites experimentation: when a genre's conventions are as recognizable as those of the sonnet, the opportunity to subvert them is especially irresistible.",
+        "question": "Which choice best states the main idea of the text?",
+        "options": [
+          "A) Although Anderson's and Jess's sonnets are both widely celebrated for their striking originality, most modern examples of the form are generally regarded as conventional.",
+          "B) As a form, the sonnet encourages a surprising amount of variety, even though certain characteristics associated with it suggest this would be unlikely.",
+          "C) That the sonnet remains as popular as it is today is unexpected, given that many of the features associated with the form have long since seemed antiquated to readers.",
+          "D) Although the sonnet is now recognized for the way it facilitates experimentation, there was a long period in its history in which very little innovation occurred."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The text argues that despite appearing 'rigid' (unlikely to have variety), the sonnet actually 'invites experimentation' and accommodates 'wide-ranging examples' (variety)."
+      }
+    },
+    {
+      "id": "MI_036",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Habitat navigation is a skill... To test how navigation works in fish, Shachar Givon and colleagues taught goldfish to drive a vehicle... on land... In the experiment, the fish were tasked with driving their tank to a pink board. They received a treat when they succeeded, and they often did. Because the fish could move their tank to the board, Givon concludes that their navigational skills aren't specific to an aquatic environment.",
+        "question": "Which choice best states the main idea of the text?",
+        "options": [
+          "A) Research shows that although they live in the water, fish can navigate on land with a little mechanical help.",
+          "B) Fish can navigate only within their natural aquatic environment in order to find food and safety.",
+          "C) Researchers can train animals to complete many different tasks when they offer the animals treats.",
+          "D) An animal's navigational skills directly depend on that animal's particular environment."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The text describes an experiment where fish successfully navigated 'on land' using a vehicle, leading to the conclusion that their skills aren't limited to water."
+      }
+    },
+    {
+      "id": "MI_037",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Women like Dorothy T. Blum made important early contributions to the history of US cryptology... Blum provided cryptological services for the US Army... She was a pioneer in transitioning the NSA to using computers... In this way, Blum and others like her helped make it possible for more women-such as Maureen Baginski... to enter the field of cryptology.",
+        "question": "Which choice best states the main idea of the text?",
+        "options": [
+          "A) Cryptology is a field that focuses primarily on securely managing data.",
+          "B) Women such as Dorothy T. Blum and Maureen Baginski have contributed to the field of cryptology.",
+          "C) Dorothy T. Blum and Maureen Baginski worked together on an important project in the field of cryptology.",
+          "D) Cryptology should be taught more often in schools to encourage more women to enter the field."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The text highlights the contributions of women to the field, explicitly naming Dorothy T. Blum and Maureen Baginski."
+      }
+    },
+    {
+      "id": "MI_038",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Mauricio Drelichman and Hans-Joachim Voth's research into the debt defaults of Philip II... But Drelichman and Voth's unique contribution to the field is their reconstruction of the earliest extant set of annual fiscal records for any sovereign state, demonstrating in turn that Philip's defaults were caused by short-term cash shortages, not long-term unsustainable debts.",
+        "question": "Which choice best states the main idea of the text?",
+        "options": [
+          "A) Analysis of the earliest available records of a sovereign state's finances can be found not in the work of Hoffman and Norberg but in that of Drelichman and Voth.",
+          "B) Drelichman and Voth advanced the field of research on European early modern state finance by assembling a novel collection of evidence that gave them insight into Philip II's debt defaults.",
+          "C) The research by Drelichman and Voth suggests that the logistics of ruling both Spain and much of Belgium led to short-term problems with cash that forced Philip II to default on his debts.",
+          "D) Drelichman and Voth's research on Philip II's debt defaults builds on earlier work by Hoffman and Norberg, adding nuance to the earlier work's findings."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The text emphasizes Drelichman and Voth's 'unique contribution': assembling the 'earliest extant set of annual fiscal records' (novel evidence) which provided new insight into the defaults."
+      }
+    }
+  ]
+}

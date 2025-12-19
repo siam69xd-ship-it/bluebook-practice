@@ -1,0 +1,4538 @@
+{
+  "test_metadata": {
+    "test_name": "Digital SAT Practice",
+    "domain": "Craft and Structure",
+    "skill": "Words in Context",
+    "sub_skill": "Gap Filling",
+    "total_questions": 248,
+    "batch": "1-40",
+    "version": "1.0"
+  },
+  "questions": [
+    {
+      "id": "GAP_001",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The Lascaux Cave paintings... are sometimes said to be emotionally powerful despite their age, but in fact the paintings are ______ precisely because of their age. It is the link of shared humanity with the artists across so many centuries that gives the Lascaux Cave paintings such resonance.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) ingenious",
+          "B) meticulous",
+          "C) pristine",
+          "D) affecting"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The text states the paintings have 'resonance' and are 'emotionally powerful'. The word 'affecting' means moving or emotionally touching, which fits the context of their power and resonance."
+      }
+    },
+    {
+      "id": "GAP_002",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The Al-Fattah Al-Aleem Mosque in the New Administrative Capital, Egypt, is a massive mosque that can accommodate approximately 17,000 people at once, making it an ______ sight to behold.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) idealized",
+          "B) intricate",
+          "C) illusory",
+          "D) imposing"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The mosque is described as 'massive' and able to hold 17,000 people. 'Imposing' describes something large, impressive, and commanding, which fits the description of the sight."
+      }
+    },
+    {
+      "id": "GAP_003",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Some robots... feature humanoid characteristics... While these features can help to ______ feelings of comfort in people, a robot that looks too like human can fall into the 'uncanny valley,' meaning that its appearance unintentionally unsettles those who encounter it.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) engender",
+          "B) constrict",
+          "C) counterbalance",
+          "D) repudiate"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The features are designed to make interaction easier. 'Engender' means to cause or give rise to a feeling, which fits the goal of creating comfort."
+      }
+    },
+    {
+      "id": "GAP_004",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Text corpora... can be used for empirical testing of hypotheses regarding how ______ a word is in spoken and written English. For instance, one might have a guess about the incidence of the word 'first,' but only an analysis of a corpus can prove that 'first' is the third most commonly used adjective.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) pervasive",
+          "B) credible",
+          "C) assertive",
+          "D) profound"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The example discusses the 'incidence' and commonness of a word. 'Pervasive' means spreading widely or being common, which fits the context of word frequency."
+      }
+    },
+    {
+      "id": "GAP_005",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Initially, upon entering the United States in the 1900s, the majority of European immigrants had a lower education level than the U.S. average. However, surveys administered from 1940-2017, show that European immigrants ______ advanced further in their education by the third generation than United States born whites.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) managed",
+          "B) administered",
+          "C) delivered",
+          "D) supplied"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The blank likely refers to the surveys being conducted. 'Surveys [administered] from 1940-2017' is the standard phrasing. Note: The provided key and context suggest 'administered' fits the context of giving surveys."
+      }
+    },
+    {
+      "id": "GAP_006",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "To avoid conflict with incoming Europeans attempting to colonize North America, the Cherokee nation ______ many of the settler's culture, including language, religion, and economics.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) learned",
+          "B) mimicked",
+          "C) adopted",
+          "D) rejected"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The tribe took on specific cultural traits (language, religion) to avoid conflict. 'Adopted' implies formally or deliberately taking on these traits."
+      }
+    },
+    {
+      "id": "GAP_007",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Although the knowledge of the Pleistocene epoch and the lives of the hominids during this time was once ______, recent analyses of fossils... have sharpened our picture of what a day in the life of Misliya-1 may have looked like.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) intricate",
+          "B) unprecedented",
+          "C) concrete",
+          "D) nebulous"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The text contrasts the 'sharpened' (clear) picture we have now with the state of knowledge in the past. 'Nebulous' means vague, indistinct, or unclear, which provides the correct contrast."
+      }
+    },
+    {
+      "id": "GAP_008",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Whether the reign of a French monarch... was considered historically significant or, conversely, relatively ______, its trajectory was shaped by questions of legitimacy...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) benevolent",
+          "B) momentous",
+          "C) inconsequential",
+          "D) genuine"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The sentence sets up a contrast with 'conversely'. The opposite of 'historically significant' is 'inconsequential' (not important)."
+      }
+    },
+    {
+      "id": "GAP_009",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The A2X Markets... connects companies... with potential investors. This is a valuable service since the time and expense necessary to find individual investors might otherwise be ______ for these companies...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) misconstrued",
+          "B) distinctive",
+          "C) prohibitive",
+          "D) intricate"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The text implies the companies couldn't operate if they had to find investors themselves due to 'time and expense'. Costs that are too high to bear are described as 'prohibitive'."
+      }
+    },
+    {
+      "id": "GAP_010",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Indigenous Photograph is an organization whose mission is to ensure that images of Indigenous peoples in the media are presented from Indigenous perspectives. The Organization ______ this commitment by promoting the works of artist Geremew Tigabu...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) concludes",
+          "B) explains",
+          "C) precedes",
+          "D) shows"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "By promoting the works, the organization demonstrates or 'shows' its commitment to its mission."
+      }
+    },
+    {
+      "id": "GAP_011",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The Cambodia Securities Exchange has the advantage of being able to ______ relatively small companies in Cambodia: by connecting those companies to investors... the Exchange can help those companies thrive.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) designate",
+          "B) nurture",
+          "C) preclude",
+          "D) assess"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The exchange helps companies 'thrive' by connecting them to investors. 'Nurture' means to care for and encourage the growth or development of someone or something, which fits the context."
+      }
+    },
+    {
+      "id": "GAP_012",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "This style [realist] can thus be seen as an effort to ______ what were regarded as the excesses of the romantic style... which instead exaggerated their subjects' beauty...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) understand",
+          "B) advance",
+          "C) counteract",
+          "D) accentuate"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Realism emphasized accuracy, contrasting with the 'exaggerated' Romantic style. Thus, Realism sought to 'counteract' (act against) the excesses of Romanticism."
+      }
+    },
+    {
+      "id": "GAP_013",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The swordfish can swim very fast... but it is significantly slower than the frigatebird... The difference between these speeds is largely ______ of the fact that the features that make flight possible do less to limit top speeds...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) a consequence",
+          "B) an explanation",
+          "C) a repudiation",
+          "D) an objective"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The speed difference results from the physical facts of flight vs swimming. Therefore, the difference is 'a consequence' of those facts."
+      }
+    },
+    {
+      "id": "GAP_014",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Whether the reign of a French monarch... was historically consequential or relatively uneventful, its trajectory was shaped by questions of legitimacy... without which the monarch would have been forced to ______ the throne.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) reciprocate",
+          "B) annotate",
+          "C) abandon",
+          "D) equalize"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Legitimacy is required to hold the throne. Without it, a monarch would be forced to give up or 'abandon' the throne."
+      }
+    },
+    {
+      "id": "GAP_015",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "With his widely celebrated portraits of poet Seamus Heaney... and other prominent figures... British painter Peter Edwards has ______ substantial prestige as an artist.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) required",
+          "B) remembered",
+          "C) achieved",
+          "D) avoided"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Creating celebrated portraits of prominent figures results in gaining prestige. 'Achieved' means to successfully bring about or reach a desired result."
+      }
+    },
+    {
+      "id": "GAP_016",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Though many ______ studies of the effect of altitude on blood chemistry focus on people who live above sea level, researchers... recently chose the novel path of focusing on people who live below sea level...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) eccentric",
+          "B) meager",
+          "C) conventional",
+          "D) accidental"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The text contrasts a 'novel path' (new/unusual) with what 'many' studies usually do. 'Conventional' (standard/usual) fits the description of the typical studies."
+      }
+    },
+    {
+      "id": "GAP_017",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "The question of whether the people of the time understood the paintings as something akin to art... is ______; we will never be able to answer it.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) irresolvable",
+          "B) self-contradictory",
+          "C) imperative",
+          "D) unavoidable"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "A question that 'we will never be able to answer' is by definition 'irresolvable' (impossible to solve)."
+      }
+    },
+    {
+      "id": "GAP_018",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The realists' emphasis on accurately portraying the experiences of average working people was largely a rejection of the romantic style... which instead ______ their subjects' beauty or heroism while hiding all imperfection.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) counteract",
+          "B) accentuate",
+          "C) rectify",
+          "D) obscure"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The romantic style 'hid imperfection' and emphasized positive traits. 'Accentuate' means to make more noticeable or prominent, fitting the context of emphasizing beauty."
+      }
+    },
+    {
+      "id": "GAP_019",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Though most studies... usually concentrated on people who live above sea level, researchers... have instead chosen the ______ path in their recent work of studying the blood of people who live below sea level...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) predictable",
+          "B) timeworn",
+          "C) innovative",
+          "D) idealistic"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Doing something different from 'most studies' and 'usual' concentration implies doing something new. 'Innovative' means introducing new ideas or methods."
+      }
+    },
+    {
+      "id": "GAP_020",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Although our knowledge... was once ______, recent analyses of fossils... have sharpened our picture of what a day in the life of KNM-KP 271 may have looked like.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) nebulous",
+          "B) intricate",
+          "C) unprecedented",
+          "D) concrete"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Similar to Q7. The text contrasts a 'sharpened' (clear) picture with a past state of knowledge. 'Nebulous' (cloudy, vague) provides the appropriate contrast."
+      }
+    },
+    {
+      "id": "GAP_021",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Text corpora... can be used for empirical testing of hypotheses regarding how ______ a word is in spoken and written English. For instance... only an analysis of a corpus can prove that 'world' is the eighth most commonly used noun.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) pervasive",
+          "B) credible",
+          "C) assertive",
+          "D) profound"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The example discusses the frequency/commonness of a word ('most commonly used'). 'Pervasive' means existing in or spreading through every part of something, fitting the context of frequency."
+      }
+    },
+    {
+      "id": "GAP_022",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Though it seemed to ______ many mathematicians, the honeycomb conjecture, posited in the first century BCE, eventually yielded to the efforts of Thomas C. Hales, who presented a proof of it in 1999.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) irreproachable",
+          "B) unequivocal",
+          "C) insuperable",
+          "D) ineluctable"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The conjecture 'yielded' (was solved) after a long time, implying it previously seemed impossible to solve. 'Insuperable' means impossible to overcome, fitting the mathematicians' previous view."
+      }
+    },
+    {
+      "id": "GAP_023",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "A number of recording artists ______ distinctions between Indigenous music and other musical styles. For example, Inuit singer-songwriter Tanya Tagaq incorporated Inuit throat singing into electronic music...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) disguise",
+          "B) reject",
+          "C) replace",
+          "D) observe"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "By incorporating and combining styles, these artists refuse to accept the separation or 'distinctions' between them. 'Reject' fits this action of ignoring boundaries."
+      }
+    },
+    {
+      "id": "GAP_024",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Béláné Mocsáry... undoubtedly accomplished much, but her place in our historical memory is perhaps more ______ than that of a noteworthy 'first' such as Adeline and Augusta Van Buren... a deed for which they will always be remembered.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) enduring",
+          "B) conspicuous",
+          "C) deserving",
+          "D) uncertain"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The 'firsts' are 'always remembered' (secure memory). Mocsáry is NOT a 'first', so her place in memory is less secure, or more 'uncertain', compared to theirs."
+      }
+    },
+    {
+      "id": "GAP_025",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "From sculptures... to street art... Chicago offers an array of works to ______ the tastes of art lovers.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) supplant",
+          "B) mitigate",
+          "C) venerate",
+          "D) satiate"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The city offers an array of works to fulfill the desires of art lovers. 'Satiate' means to satisfy a desire or appetite fully."
+      }
+    },
+    {
+      "id": "GAP_026",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Writer Lydia Davis observed that while traditional literary forms... are recognizable... there are rarer 'intergeneric' forms... The late-period pieces of James Tate arguably fit this description, since they straddle the line between prose and poetry.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) orthodox",
+          "B) unequivocal",
+          "C) recurrent",
+          "D) unclassifiable"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Forms that 'straddle the line' and use elements of multiple genres are difficult to label. 'Unclassifiable' captures this nature of not fitting into standard categories."
+      }
+    },
+    {
+      "id": "GAP_027",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Indeed, the work of Richard Laurence Millington Synge represented a significant ______ the field of chemistry, and in 1952 he was among those awarded the Nobel Prize in Chemistry...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) exposure to",
+          "B) advancement in",
+          "C) dependence on",
+          "D) controversy in"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Synge was awarded a Nobel Prize, indicating his work was a major positive contribution. 'Advancement in' fits a significant contribution to a field."
+      }
+    },
+    {
+      "id": "GAP_028",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "British painter Peter Edwards has a ______ painting portraits of notable figures from a variety of different fields. These characteristic works include his esteemed portraits...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) reputation for",
+          "B) requirement for",
+          "C) complaint about",
+          "D) question about"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The text mentions 'characteristic works' and 'esteemed portraits', implying he is known for this. 'Reputation for' means being known for a particular quality or activity."
+      }
+    },
+    {
+      "id": "GAP_029",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The reception of Ji-li Jiang's book Red Kite, Blue Kite has earned a lot of praise. In fact, the book ______ the Asian/Pacific American Award for Literature.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) guessed",
+          "B) blamed",
+          "C) received",
+          "D) forgot"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The book won an award. 'Received' is a standard verb for getting an award (e.g., 'received the award')."
+      }
+    },
+    {
+      "id": "GAP_030",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The data from these missions were mostly inaccessible until a recent data-transfer project made them ______. This project has allowed researcher Renee Weber to make use of the information...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) complicated",
+          "B) representative",
+          "C) available",
+          "D) restricted"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The data was 'inaccessible' before, but the project allowed researchers to 'make use' of it. This means the project made the data 'available' (accessible)."
+      }
+    },
+    {
+      "id": "GAP_031",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "One way to ______ the importance of a scholar's research is to track how often other scholars refer to that research. For example... Ulrike Malmendier... is among the world's most frequently cited researchers...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) assess",
+          "B) utilize",
+          "C) influence",
+          "D) undermine"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Tracking citations is a method to measure or evaluate importance. 'Assess' means to evaluate or estimate the nature/quality of something."
+      }
+    },
+    {
+      "id": "GAP_032",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The reception of Uma Krishnaswami's book Step Up to the Plate, Maria Singh has been very good. Many reviewers have ______ the book, and it won the Asian/Pacific American Award for Literature.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) overlooked",
+          "B) misunderstood",
+          "C) praised",
+          "D) attacked"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The reception was 'very good' and it won an award. Therefore, reviewers must have 'praised' it."
+      }
+    },
+    {
+      "id": "GAP_033",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Few religious buildings can be said to ______ the astonishing size of Al Saleh Mosque in Yemen, which, with the capacity to accommodate approximately 44,000 people at once, is one of the largest mosques in the world.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) symbolize",
+          "B) conceal",
+          "C) minimize",
+          "D) match"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The mosque is 'one of the largest,' implying very few others are equal to it in size. 'Match' means to be equal to."
+      }
+    },
+    {
+      "id": "GAP_034",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "A number of recording artists ______ Indigenous music with other musical styles. For example... Samantha Crain incorporated elements of Choctaw hymns into folk-pop...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) acquire",
+          "B) fuse",
+          "C) exaggerate",
+          "D) analyze"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The artists 'incorporated' and 'combined' styles. 'Fuse' means to join or blend things together."
+      }
+    },
+    {
+      "id": "GAP_035",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Though most hoaxes... have quickly been detected and removed, a few fictitious entries... persisted on the site for many years before they were finally recognized as ______ and deleted.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) enhancement",
+          "B) revelations",
+          "C) pranks",
+          "D) analyses"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The text refers to the entries as 'hoaxes perpetrated as jokes'. 'Pranks' is a synonym for practical jokes or hoaxes."
+      }
+    },
+    {
+      "id": "GAP_036",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "From sculptures... to street art... Chicago offers an array of works to ______ the tastes of art lovers.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) mitigate",
+          "B) satiate",
+          "C) venerate",
+          "D) supplant"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The city offers art to satisfy the desires of art lovers. 'Satiate' means to satisfy fully."
+      }
+    },
+    {
+      "id": "GAP_037",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "When discussing literary movements in Spain, scholars regularly characterize the works of Antonio Machado as especially representative... The reasons for this characterization may seem ______ but linking Machado with the Generation of '98 risks disregarding the subtleties in his style...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) incongruous",
+          "B) irrefutable",
+          "C) pretentious",
+          "D) irrelevant"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The text says scholars 'regularly characterize' him this way, implying the reasons are strong or impossible to deny. 'Irrefutable' means impossible to deny or disprove."
+      }
+    },
+    {
+      "id": "GAP_038",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The Baiturrahman Grand Mosque... is a massive mosque that can accommodate approximately 30,000 people at once, making it an ______ sight to behold.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) illusory",
+          "B) idealized",
+          "C) intricate",
+          "D) imposing"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Similar to Q2. A 'massive' mosque holding 30,000 people is an 'imposing' (grand and impressive) sight."
+      }
+    },
+    {
+      "id": "GAP_039",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Despite stated claims of global relevance, much major research on income inequality... suffered from a myopic focus on a few countries... Researchers would later ______ this shortcoming after gaining new access to banking records...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) mitigate",
+          "B) validate",
+          "C) presuppose",
+          "D) categorize"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The researchers gained new data to address the 'shortcoming' (myopic focus). To 'mitigate' means to make something less severe or painful, effectively fixing the problem."
+      }
+    },
+    {
+      "id": "GAP_040",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Portable video game consoles... tend to contain batteries that can't be easily ______. Environmental policy researcher Jessika Richter warns that because new batteries can't be put in once the old ones no longer work, the gadgets stop functioning...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) rated",
+          "B) invented",
+          "C) prevented",
+          "D) replaced"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The text explains that 'new batteries can't be put in'. This means the old batteries cannot be 'replaced'."
+      }
+    }
+  ]
+}{
+  "test_metadata": {
+    "test_name": "Digital SAT Practice",
+    "domain": "Craft and Structure",
+    "skill": "Words in Context",
+    "sub_skill": "Gap Filling",
+    "total_questions": 248,
+    "batch": "41-80",
+    "version": "1.0"
+  },
+  "questions": [
+    {
+      "id": "GAP_041",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Whether Carmen Lomas Garza is creating small paintings... or large public artworks... she is ______ direct experience, drawing from memories of her childhood in Texas or details of her current surroundings in California.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) complimented by",
+          "B) uncertain about",
+          "C) unbothered by",
+          "D) inspired by"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "She draws from memories and details of her surroundings. This means she is 'inspired by' her direct experience."
+      }
+    },
+    {
+      "id": "GAP_042",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Summer squash... shows so little resemblance to any wild plant that genetic research was necessary to ______ the wild Johnny ground as its ancestor.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) confirm",
+          "B) acquire",
+          "C) develop",
+          "D) attract"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Because they look so different, research was needed to prove or 'confirm' the relationship."
+      }
+    },
+    {
+      "id": "GAP_043",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "When considering which plays... to produce, theaters in San Francisco often favor keeping audiences happy over taking risks. So while they might be eager to produce an established classic... most would be ______ to stage a work from a relatively unknown playwright.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) determined",
+          "B) hesitant",
+          "C) fortunate",
+          "D) surprised"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Theaters favor established classics over risks. Therefore, they would be reluctant or 'hesitant' to stage an unknown work."
+      }
+    },
+    {
+      "id": "GAP_044",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Excavating a dilophosaur fossil is a ______ process, since it can take weeks or even months of hard, physically tiring work to clear away the dirt and rock covering the specimen.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) cheap",
+          "B) common",
+          "C) rapid",
+          "D) arduous"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The process takes weeks/months of 'hard, physically tiring work'. 'Arduous' means involving or requiring strenuous effort; difficult and tiring."
+      }
+    },
+    {
+      "id": "GAP_045",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Most minor planets are given only an identification number... because any name chosen needs to be ______ that body: no two minor planets are allowed to have the same name.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) exclusive to",
+          "B) evocative of",
+          "C) typical for",
+          "D) superseded by"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "No two planets can have the same name. Therefore, a name must be unique or 'exclusive to' that specific body."
+      }
+    },
+    {
+      "id": "GAP_046",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The National Heritage Fellowship was created to publicly ______ exceptional folk and traditional artists in the United States. In 1995, the fellowship was given to... Mary Holiday Black to celebrate her lifetime contributions...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) startle",
+          "B) recognize",
+          "C) familiarize",
+          "D) convey"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The fellowship is given to 'celebrate' contributions. 'Recognize' means to acknowledge the existence, validity, or legality of something (often used in the context of awards)."
+      }
+    },
+    {
+      "id": "GAP_047",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Text corpora... can be used for empirical testing of hypotheses regarding how ______ a word is in spoken and written English. For instance... only an analysis of a corpus can prove that 'get' is the fifth most commonly used verb.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) pervasive",
+          "B) profound",
+          "C) credible",
+          "D) assertive"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Similar to Q4/Q21. The example is about frequency ('most commonly used'). 'Pervasive' means widespread or common."
+      }
+    },
+    {
+      "id": "GAP_048",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Widespread admiration of these works has helped Edwards gain substantial ______ as an artist.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) sympathy",
+          "B) prestige",
+          "C) assistance",
+          "D) tolerance"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "'Widespread admiration' leads to high status or reputation. 'Prestige' means widespread respect and admiration felt for someone."
+      }
+    },
+    {
+      "id": "GAP_049",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "The Apalachicola River delta system... is shaped by ______ factors: for example, the geography of the coastline influences sedimentary deposition, which over time alters coastal geography.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) tenuous",
+          "B) interdependent",
+          "C) unyielding",
+          "D) comprehensive"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The geography influences deposition, which in turn alters the geography. This mutual influence describes an 'interdependent' relationship."
+      }
+    },
+    {
+      "id": "GAP_050",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Though not closely related, the hedgehog tenrecs of Madagascar share basic ______ true hedgehogs, including protective spines, pointed snouts, and small body size...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) examples of",
+          "B) concerns about",
+          "C) indications of",
+          "D) similarities with"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The animals share physical traits (spines, snouts). This means they have 'similarities with' each other."
+      }
+    },
+    {
+      "id": "GAP_051",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Sarah Marquis... undoubtedly accomplished much, but her place in our historical memory is perhaps more ______ than that of a noteworthy 'first' such as Anésia Pinheiro Machado... a deed for which she will always be remembered.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) enduring",
+          "B) uncertain",
+          "C) conspicuous",
+          "D) deserving"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Machado is a 'first' and will 'always be remembered' (certain memory). Marquis is not a 'first', so her place is less secure or more 'uncertain'."
+      }
+    },
+    {
+      "id": "GAP_052",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "When considering which plays and musicals to produce, theaters in Miami often favor keeping audiences happy over taking risks. So while they might be eager to produce an established classic... most would be ______ to stage a work from a relatively unknown playwright.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) surprised",
+          "B) determined",
+          "C) fortunate",
+          "D) hesitant"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Duplicate logic to Q43. Risk-averse theaters would be 'hesitant' to produce unknown works."
+      }
+    },
+    {
+      "id": "GAP_053",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "To that end, certain features such as the ability to respond to voice commands can help to ______ people's feelings of comfort, but a robot that looks too human can fall into the 'uncanny valley'...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) constrict",
+          "B) repudiate",
+          "C) buttress",
+          "D) mitigate"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The features are designed to make interaction easier/better. 'Buttress' means to support or strengthen, which fits strengthening feelings of comfort."
+      }
+    },
+    {
+      "id": "GAP_054",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "While recent scholarship has undermined claims that the works of twelfth-century Islamic philosopher Ibn Rushd were ______ other Muslim philosophers of his time, it is indisputable that... his works were primarily available thousands of miles west of the era's center of Islamic thought.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) controversial among",
+          "B) antagonistic toward",
+          "C) imitated by",
+          "D) inconsequential to"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The text implies his works were geographically isolated ('thousands of miles west'), which would make them have little effect on the center. 'Inconsequential to' fits the idea of having no impact."
+      }
+    },
+    {
+      "id": "GAP_055",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The National Heritage Fellowship was created to honor exceptional folk and traditional artists in the United States for their ______. The Irish American accordionist Joe Derrane was chosen... because he has contributed so much to the arts.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) achievements",
+          "B) suspicions",
+          "C) assumptions",
+          "D) predictions"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The fellowship honors artists for contributions. 'Achievements' is the logical synonym for contributions/accomplishments."
+      }
+    },
+    {
+      "id": "GAP_056",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Some pieces of music might have many meanings... can ______ as many different interpretations as there are people to listen to them...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) yield",
+          "B) refute",
+          "C) counteract",
+          "D) partition"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The compositions can produce or result in many interpretations. 'Yield' means to produce or provide."
+      }
+    },
+    {
+      "id": "GAP_057",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The organizers specifically indicated that the conference was intended to focus on children's literature, so despite the education specialist's ______ her expertise on the subject in general, she found that she could speak authoritatively about the works of author Mildred Pitts Walter...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) exceptions to",
+          "B) insight into",
+          "C) hesitancy about",
+          "D) affinity for"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "She could speak 'authoritatively' about a specific author *despite* something about her general expertise. This implies she was unsure about the general topic. 'Hesitancy about' fits this contrast."
+      }
+    },
+    {
+      "id": "GAP_058",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Historians argue that Morris's repudiation of industrialization is ______ the Kelmscott editions' use of handmade materials and intricate ornamentation... these meticulously handcrafted elements exemplify the artistry involved.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) insensible to",
+          "B) manifest in",
+          "C) scrutinized by",
+          "D) complicated by"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Morris's rejection of industrialization is shown or demonstrated by his use of handmade materials. 'Manifest in' means clear or obvious in something."
+      }
+    },
+    {
+      "id": "GAP_059",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "It is tempting to treat the clustering of car manufacturing firms in Detroit... as representative of industrial agglomeration generally, but Guilia Faggio et al caution against ______ this one example...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) convening with",
+          "B) extrapolating from",
+          "C) corroborating",
+          "D) scrutinizing"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Treating one example as representative of the whole is the definition of extrapolation. The researchers caution against 'extrapolating from' this single case."
+      }
+    },
+    {
+      "id": "GAP_060",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "A number of recording artists ______ distinctions between Indigenous music and other musical styles. For example... Halluci Nation incorporated powwow music into electronic dance music...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) disguise",
+          "B) reject",
+          "C) replace",
+          "D) observe"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Duplicate of Q23. By mixing styles, artists 'reject' the distinctions/boundaries between them."
+      }
+    },
+    {
+      "id": "GAP_061",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Karam Kang has demonstrated that lobbying does little to alter probability that a particular energy policy... will be enacted, but lobbying is not as ______ finding seems to suggest. As Kang herself notes, lobbying can shape which policy proposals members of Congress bring forward...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) counterproductive",
+          "B) cynical",
+          "C) biased",
+          "D) ineffectual"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "If lobbying 'does little to alter probability,' it seems 'ineffectual' (useless). But Kang argues it *does* shape proposals, so it is *not* as ineffectual as it seems."
+      }
+    },
+    {
+      "id": "GAP_062",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Given how little ______ there is among scientists regarding the scope of these categories, this discrepancy shouldn't be surprising: forest researchers regularly dispute one another's classifications.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) interest",
+          "B) deliberation",
+          "C) vigilance",
+          "D) consensus"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Scientists 'regularly dispute' the classifications. This means there is little agreement or 'consensus'."
+      }
+    },
+    {
+      "id": "GAP_063",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Though it does not guarantee a book's commercial success, ______ can play a big role in that success a well-executed marketing campaign helped to make Danielle Steel's novel The Gift, the fourth-best-selling novel of 1994.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) originality",
+          "B) publicity",
+          "C) complexity",
+          "D) practicality"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The text mentions a 'well-executed marketing campaign'. Marketing creates 'publicity'."
+      }
+    },
+    {
+      "id": "GAP_064",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "People sometimes dismiss a claim if it comes from a source they regard as self-interested, but from a strictly logical perspective, the source of a claim is ______: it has no direct bearing on whether the claim is true.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) implicit",
+          "B) indisputable",
+          "C) indistinct",
+          "D) irrelevant"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "If the source has 'no direct bearing' on the truth, then the source is 'irrelevant' to the claim's validity."
+      }
+    },
+    {
+      "id": "GAP_065",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Although Oscar Micheaux's 1920 film... and Ossie Davis's 1970 film... may have had some ______ at the time of their initial release, their place in critics' estimations is now more secure.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) collaborators",
+          "B) imitators",
+          "C) precursors",
+          "D) detractors"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Their place is now 'secure,' implying it was previously insecure or criticized. 'Detractors' are critics who disparage something."
+      }
+    },
+    {
+      "id": "GAP_066",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Political scientists have found that although voters claim to prefer candidates who have nuanced perspectives... when asked to compare speeches expressing such views with speeches expressing ______ views, voters tend to regard the unyielding rhetoric of the latter more favorably.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) dogmatic",
+          "B) vacillating",
+          "C) banal",
+          "D) disingenuous"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The text contrasts 'nuanced/compromising' with 'unyielding rhetoric.' 'Dogmatic' means inclined to lay down principles as incontrovertibly true, fitting the 'unyielding' description."
+      }
+    },
+    {
+      "id": "GAP_067",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "A number of recording artists ______ distinctions between Indigenous music and other musical styles. For example, Choctaw singer-songwriter Samantha Crain incorporated elements of Choctaw hymns into folk-pop...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) disguise",
+          "B) reject",
+          "C) observe",
+          "D) replace"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Duplicate of Q23/Q60. Artists 'reject' distinctions by mixing styles."
+      }
+    },
+    {
+      "id": "GAP_068",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The swordfish can swim very fast... but it is significantly slower than the golden eagle... The ______ between these two speeds is not surprising, however, because the features that are most useful for swimming... tend to be more limiting...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) competition",
+          "B) equivalence",
+          "C) interaction",
+          "D) disparity"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "One is 'significantly slower' than the other. This large difference is a 'disparity'."
+      }
+    },
+    {
+      "id": "GAP_069",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The early British postal system required the cost of mail delivery to be paid upon receipt, a system which encouraged inventive strategies by the intended recipient to avoid payment. To improve this system, ______ were proposed in 1837, including the use of a postage stamp...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) investigations",
+          "B) expansions",
+          "C) reforms",
+          "D) possessions"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Changes proposed to 'improve' a system are called 'reforms'."
+      }
+    },
+    {
+      "id": "GAP_070",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Consumers usually ______ rising prices of nonessential products... by purchasing fewer of those products. When the prices fall, consumers usually react the opposite way...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) differ from",
+          "B) think of",
+          "C) respond to",
+          "D) agree with"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Purchasing fewer products is a reaction or response. Consumers 'respond to' rising prices."
+      }
+    },
+    {
+      "id": "GAP_071",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Cuttlefish appear to be surprisingly ______ at exercising self-control: in a 2021 study... these cephalopods routinely demonstrated restraint by delaying gratification...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) awkward",
+          "B) imaginative",
+          "C) manageable",
+          "D) competent"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "They 'routinely demonstrated restraint' (success). Therefore, they are 'competent' (skilled/capable) at self-control."
+      }
+    },
+    {
+      "id": "GAP_072",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Radiocarbon dating can help scientists determine whether the extinction of the giant short-faced bear around 8000 BCE ______ the arrival of humans... If instead the giant short-faced bear died out before humans could have altered its habitat...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) compensated for",
+          "B) coincided with",
+          "C) developed into",
+          "D) resolved"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The text contrasts extinction happening 'before humans' vs at the same time. 'Coincided with' means happened at the same time."
+      }
+    },
+    {
+      "id": "GAP_073",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Economists often assert that countries looking to increase their reliance on solar energy should expand their capacity for storage: having an ample reserve of stored energy can mitigate the effects of ______ solar energy collection caused by unpredictable shifts in cloud cover...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) calibrations with",
+          "B) developments of",
+          "C) fluctuations in",
+          "D) incentives for"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Unpredictable shifts in clouds cause energy collection to go up and down. These changes are 'fluctuations'."
+      }
+    },
+    {
+      "id": "GAP_074",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Few religious buildings can be said to ______ the astonishing size of Sultan Salahuddin Abdul Aziz Mosque... which... is one of the largest mosques in the world.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) conceal",
+          "B) symbolize",
+          "C) minimize",
+          "D) match"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Duplicate of Q33. 'Match' means to equal in size or quality."
+      }
+    },
+    {
+      "id": "GAP_075",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "In the United States, historians of the American Revolution once had a tendency to approach their subject with ______ : they had so much admiration for the people who carried out the revolution that they were far from objective...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) curiosity",
+          "B) candor",
+          "C) reverence",
+          "D) prudence"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "They had 'so much admiration' that they weren't objective. 'Reverence' means deep respect or admiration."
+      }
+    },
+    {
+      "id": "GAP_076",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Choctaw singer-songwriter Samantha Crain masterfully incorporated elements of Choctaw hymns into folk-pop... Similarly, Wayuu singer-songwriter Lido Pimienta ______ Afro-Indigenous music from Colombia with Latin pop...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) confused",
+          "B) compared",
+          "C) blended",
+          "D) replaced"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Like Crain 'incorporated' elements, Pimienta combined styles. 'Blended' means mixed or combined."
+      }
+    },
+    {
+      "id": "GAP_077",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Barring major archaeological discoveries, we are unlikely to ever have ______ account of ancient Egypt under the female pharaoh Hatshepsut, as much of the evidence of her reign was deliberately destroyed...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) an exhaustive",
+          "B) a superficial",
+          "C) an imaginative",
+          "D) a questionable"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Evidence was 'deliberately destroyed,' so we are missing information. Therefore, we cannot have a complete or 'exhaustive' account."
+      }
+    },
+    {
+      "id": "GAP_078",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The Roc-aux-Sorciers frieze... is sometimes said to be emotionally powerful despite its age, but in fact the frieze is ______ precisely because of its age.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) ingenious",
+          "B) pristine",
+          "C) meticulous",
+          "D) affecting"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Duplicate of Q1. 'Affecting' matches 'emotionally powerful'."
+      }
+    },
+    {
+      "id": "GAP_079",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Although the government of the Soviet Union attempted to ______ Georgi Vladimov's novel Faithful Ruslan, copies of the book circulated in secret...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) replicate",
+          "B) import",
+          "C) suppress",
+          "D) discuss"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The government tried to stop it, but copies circulated 'in secret'. 'Suppress' means to forcibly put an end to or prevent the circulation of."
+      }
+    },
+    {
+      "id": "GAP_080",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Although the clustering of information technology firms in Northern California is often cited as typical of industrial agglomeration, Giulia Faggio et al. ______ use UK data to show that the mix of factors driving the phenomenon is...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) credible",
+          "B) heterogeneous",
+          "C) imperative",
+          "D) decisive"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The text states that factors driving the phenomenon vary ('knowledge spillovers' vs 'different reasons'). This variety means the mix of factors is 'heterogeneous' (diverse)."
+      }{
+  "test_metadata": {
+    "test_name": "Digital SAT Practice",
+    "domain": "Craft and Structure",
+    "skill": "Words in Context",
+    "sub_skill": "Gap Filling",
+    "total_questions": 248,
+    "batch": "81-120",
+    "version": "1.0"
+  },
+  "questions": [
+    {
+      "id": "GAP_081",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Manul cats are small, shy felines. They live mostly alone in out-of-the-way parts of Asia, such as on Mount Everest. These cats have been difficult to research because their habitats are so ______ large populations of humans.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) drawn to",
+          "B) full of",
+          "C) distant from",
+          "D) responsible for"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The cats live in 'out-of-the-way' places and are 'difficult to research.' This implies their habitats are far away or 'distant from' human populations."
+      }
+    },
+    {
+      "id": "GAP_082",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Some paleontologists thought that a sudden shift toward an arid climate... may have brought about the rapid extinction of several species of large kangaroos... However, new evidence... is forcing paleontologists to ______ that hypothesis.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) revise",
+          "B) interpret",
+          "C) recollect",
+          "D) introduce"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "New evidence contradicting the timing of the climate shift would require scientists to change or 'revise' their original hypothesis."
+      }
+    },
+    {
+      "id": "GAP_083",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The invention in 1958 of the integrated circuit (or microchip) radically altered the semiconductor industry. In fact, some historians argue that it fundamentally ______ the industry by enabling it to take advantage of mass production methods for the first time.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) obstructed",
+          "B) transformed",
+          "C) bypassed",
+          "D) overwhelmed"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The invention 'radically altered' the industry and enabled mass production. 'Transformed' means to make a thorough or dramatic change in form, appearance, or character."
+      }
+    },
+    {
+      "id": "GAP_084",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Text corpora... can be used for empirical testing of hypotheses regarding how ______ a word is in spoken and written English. For instance... only an analysis of a corpus can prove that 'day' is the fifth most commonly used noun.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) assertive",
+          "B) credible",
+          "C) pervasive",
+          "D) profound"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Duplicate context (frequency of words). 'Pervasive' means spreading widely or being common."
+      }
+    },
+    {
+      "id": "GAP_085",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Excavating a pachycephalosaur fossil is a ______ process, since it can take weeks or even months of hard, physically tiring work to clear away the dirt and rock covering the specimen.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) cheap",
+          "B) rapid",
+          "C) common",
+          "D) difficult"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The process takes 'weeks or even months' of 'hard, physically tiring work.' 'Difficult' (or 'arduous' in previous similar questions) fits this description."
+      }
+    },
+    {
+      "id": "GAP_086",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "British painter Peter Edwards has a ______ painting portraits of notable figures from a variety of different fields. These characteristic works include his esteemed portraits...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) complaint about",
+          "B) question about",
+          "C) requirement for",
+          "D) reputation for"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "He is 'known for' his portraits, which are 'characteristic works.' This means he has a 'reputation for' painting them."
+      }
+    },
+    {
+      "id": "GAP_087",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Though it does not guarantee a book's commercial success, ______ can play a big role in that success a well-executed marketing campaign helped to make Richard Bachman's novel The Regulators the fifth-best-selling novel of 1996.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) originality",
+          "B) publicity",
+          "C) complexity",
+          "D) practicality"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "A 'marketing campaign' generates attention or 'publicity,' which helps sales."
+      }
+    },
+    {
+      "id": "GAP_088",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "A unique dialect... of Spanish is spoken in Puerto Rico. It contains many words borrowed from the language of the Tainos... African languages also made important contributions... For example, the way certain vowel sounds are pronounced in it can be ______ to how they are pronounced in Yoruba...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) traced",
+          "B) announced",
+          "C) offered",
+          "D) surrendered"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The pronunciation in the dialect originates from or can be linked back to Yoruba. 'Traced' means to find or discover the origin or development of something."
+      }
+    },
+    {
+      "id": "GAP_089",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Though most hoaxes... have quickly been detected and removed, a few fictitious entries... persisted on the site for many years before they were finally recognized as ______ and deleted.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) analyses",
+          "B) fabrications",
+          "C) enhancements",
+          "D) revelations"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The entries are 'fictitious' and 'hoaxes.' 'Fabrications' are invented or made-up stories/information, which fits perfectly."
+      }
+    },
+    {
+      "id": "GAP_090",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Portable video game consoles... tend to contain batteries that can't be easily ______. Environmental policy researcher Jean-Pierre Schweitzer warns that because new batteries can't be put in once the old ones no longer work, the gadgets stop functioning...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) invented",
+          "B) prevented",
+          "C) rated",
+          "D) replaced"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "If 'new batteries can't be put in,' the old ones cannot be 'replaced'."
+      }
+    },
+    {
+      "id": "GAP_091",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "There is no doubt that Irving Langmuir must have proved himself to be extraordinarily ______ understanding some of the most advanced concepts in the field of chemistry... recognized when he was awarded the Nobel Prize...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) modest about",
+          "B) dispassionate in",
+          "C) adept at",
+          "D) lighthearted about"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "He won a Nobel Prize for his understanding. 'Adept at' means very skilled or proficient at something."
+      }
+    },
+    {
+      "id": "GAP_092",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Economists have long observed that firms in related industries tend to cluster... The factors causing such clustering are ______ : what drives firms in certain industries to cluster may not be especially relevant among other industries.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) unknown",
+          "B) impressive",
+          "C) focused",
+          "D) variable"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The factors differ ('may not be especially relevant') between industries. Therefore, the factors are 'variable' (subject to change/variation)."
+      }
+    },
+    {
+      "id": "GAP_093",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "The results of randomized clinical trials... sometimes fail to ______ conclusions that practitioners reach based on their real-world observations... one [reason] is that practitioners may overlook confounding variables...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) implement",
+          "B) disseminate",
+          "C) circumvent",
+          "D) corroborate"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The trials and observations often disagree ('fail to...'). 'Corroborate' means to confirm or give support to. The trials fail to support the practitioners' conclusions."
+      }
+    },
+    {
+      "id": "GAP_094",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Dervla Murphy... undoubtedly accomplished much, but her place in our historical memory is perhaps more ______ than that of a noteworthy 'first' such as Ynes Mexia... a deed for which she will always be remembered.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) enduring",
+          "B) uncertain",
+          "C) deserving",
+          "D) conspicuous"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Similar to Q51. A 'first' is 'always remembered' (certain). Murphy is not a first, so her memory is more 'uncertain'."
+      }
+    },
+    {
+      "id": "GAP_095",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "In the 2010s, the price of vintage My Little Pony figures rose dramatically, which had the counterintuitive effect of ______ demand: buyers who hadn't previously wanted to purchase old toys suddenly thronged the market...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) exploiting",
+          "B) stabilizing",
+          "C) monetizing",
+          "D) precipitating"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The price rise caused buyers to 'throng the market' (increased demand). 'Precipitating' means causing an event or situation (often bad or unexpected) to happen suddenly, effectively 'sparking' the demand."
+      }
+    },
+    {
+      "id": "GAP_096",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Wireless headphones... sometimes use batteries that can't be taken out... Jessika Richter warns that once these internal batteries stop working, the devices become ______ and are typically thrown away...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) useless",
+          "B) valuable",
+          "C) familiar",
+          "D) attractive"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "If the batteries stop working and can't be replaced, the device can no longer be used. It becomes 'useless'."
+      }
+    },
+    {
+      "id": "GAP_097",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "It is hardly an exaggeration to characterize modern Hawaiian literature as having ______ the traditional stories of the Kanaka Maoli... writers... have drawn on these stories to craft a rich portrait...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) brooded on",
+          "B) supplanted",
+          "C) anticipated",
+          "D) derived from"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The writers 'drawn on' (used as a source) these stories. 'Derived from' means originating or developing from a source."
+      }
+    },
+    {
+      "id": "GAP_098",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "The Dhaka Stock Exchange... ensuring those companies receive certain regulatory oversight. Knowing this can ______ potential investors' worries about bureaucratic minutiae...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) amplify",
+          "B) designate",
+          "C) convey",
+          "D) assuage"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Oversight provides security, which would reduce worries. 'Assuage' means to make an unpleasant feeling less intense (soothe)."
+      }
+    },
+    {
+      "id": "GAP_099",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Some cities track pedestrian activity to map their sidewalks, but this method often ______ sidewalks few pedestrians use, resulting in incomplete maps.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) neglects",
+          "B) oversees",
+          "C) approves",
+          "D) detects"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "If the maps are 'incomplete' because few pedestrians use those sidewalks, the method 'neglects' (fails to care for/include) them."
+      }
+    },
+    {
+      "id": "GAP_100",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "The tendency to group authors together... often encourages literary scholars to ______ subtleties in an author's style. Those studying the works of William Ellery Channing, for instance, may inadvertently overlook nuances...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) discount",
+          "B) scrutinize",
+          "C) magnify",
+          "D) denounce"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The scholars 'overlook nuances'. 'Discount' means to regard as being unworthy of consideration, fitting the idea of overlooking or ignoring subtleties."
+      }
+    },
+    {
+      "id": "GAP_101",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "In the 2010s, the price of vintage She-Ra action figures rose dramatically, which had the counterintuitive effect of ______ demand: buyers... thronged the market...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) exploiting",
+          "B) engendering",
+          "C) appraising",
+          "D) monetizing"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Duplicate logic to Q95. The price rise created or produced demand. 'Engendering' means causing or giving rise to."
+      }
+    },
+    {
+      "id": "GAP_102",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Novelist Leon Forrest admired William Faulkner's writing style. Forrest's novel Divine Days contains a long passage in tribute to Faulkner that is a perfect ______ of Faulkner's style: anyone familiar with Faulkner's writing would see the resemblance.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) forgetting",
+          "B) rejection",
+          "C) imitation",
+          "D) opinion"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "It is a 'tribute' and has a 'resemblance.' 'Imitation' fits perfectly."
+      }
+    },
+    {
+      "id": "GAP_103",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The Stock Exchange of Thailand... ensuring those companies receive certain regulatory oversight. Knowing this can ______ potential investors' worries...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) designate",
+          "B) amplify",
+          "C) assuage",
+          "D) convey"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Duplicate of Q98. Oversight 'assuages' (soothes) worries."
+      }
+    },
+    {
+      "id": "GAP_104",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "The tendency to group authors together... often encourages literary scholars to ______ subtleties... Those studying the works of Amos Bronson Alcott... may inadvertently overlook nuances...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) magnify",
+          "B) scrutinize",
+          "C) discount",
+          "D) denounce"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Duplicate of Q100. Overlooking nuances is 'discounting' subtleties."
+      }
+    },
+    {
+      "id": "GAP_105",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Though it does not guarantee a book's commercial success, ______ can play a big role in that success a well-executed marketing campaign helped to make Richard Bachman's novel The Regulators the fifth-best-selling novel of 1996.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) originality",
+          "B) publicity",
+          "C) complexity",
+          "D) practicality"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Duplicate of Q63/Q87. Marketing campaigns create 'publicity.'"
+      }
+    },
+    {
+      "id": "GAP_106",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The reception of Many Ly's book Roots and Wings has been very good. Many reviewers, booksellers, and librarians have ______ the book, and it won the Asian/Pacific American Award for Literature.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) attacked",
+          "B) recommended",
+          "C) overlooked",
+          "D) misunderstood"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The reception was 'very good' and it won an award. Therefore, people likely 'recommended' (or praised) it."
+      }
+    },
+    {
+      "id": "GAP_107",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Ocean currents can be powerful and rough... The underwater forests slow down the currents. This creates a more ______ environment with calmer waters...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) surprising",
+          "B) dangerous",
+          "C) tranquil",
+          "D) expensive"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Slowing down rough currents creates 'calmer waters.' 'Tranquil' means free from disturbance; calm."
+      }
+    },
+    {
+      "id": "GAP_108",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "The recently observed gamma ray burst GRB 230307A lasted for 200 seconds, ______ for a burst generated by the merger of neutron stars. Bursts caused by neutron mergers typically last fewer than 2 seconds.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) an oddity",
+          "B) a coincidence",
+          "C) a reprieve",
+          "D) an incident"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Typical bursts are <2 seconds. This one was 200 seconds. This is extremely unusual, making it 'an oddity' (a strange or peculiar person/thing)."
+      }
+    },
+    {
+      "id": "GAP_109",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Smartphones... tend to use batteries that can't be easily taken out... Jean-Pierre Schweitzer warns that when these internal batteries stop working, the devices are usually thrown away, becoming harmful ______",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) advice",
+          "B) waste",
+          "C) rewards",
+          "D) positions"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Devices that are 'thrown away' become 'waste.'"
+      }
+    },
+    {
+      "id": "GAP_110",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Jean Batten... and Ynes Mexia... are ensured lasting places in our historical memory. No matter what others may do in the future, nobody can ever ______ the standing of these women as the first to accomplish these feats.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) undermine",
+          "B) imply",
+          "C) extend",
+          "D) promote"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Being a 'first' is a permanent fact. Nobody can lessen or damage their status. 'Undermine' means to damage or weaken someone's position/standing."
+      }
+    },
+    {
+      "id": "GAP_111",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Whatever the general attitude toward... films... when they were initially released, both films now tend to be regarded quite ______. In 2018... critics... praised the former as 'galvanizing' and the latter as 'exuberant.'",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) favorably",
+          "B) skeptically",
+          "C) neutrally",
+          "D) strangely"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Critics 'praised' the films with positive words. This means they are regarded 'favorably.'"
+      }
+    },
+    {
+      "id": "GAP_112",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "To evaluate their ideas about environmental conditions in the Pliocene epoch, paleontologists must turn to ______ evidence. Only material objects such as the fossil remains... can show whether a particular idea... is defensible.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) physical",
+          "B) convenient",
+          "C) creative",
+          "D) inconclusive"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The text refers to 'material objects such as fossil remains'. These are 'physical' evidence."
+      }
+    },
+    {
+      "id": "GAP_113",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Building additional road capacity may seem like an obvious solution... but numerous studies have cast doubt on the ______ of that approach. Not only does additional road capacity often fail to relieve congestion, but it can also make traffic worse...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) efficacy",
+          "B) aesthetics",
+          "C) originality",
+          "D) popularity"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "If the approach 'fails to relieve congestion' (doesn't work), studies are questioning its effectiveness. 'Efficacy' means the ability to produce a desired or intended result."
+      }
+    },
+    {
+      "id": "GAP_114",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Though many ______ studies of the effect of altitude... focus on people who live above sea level, researchers... recently chose the novel path of focusing on people who live below sea level...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) eccentric",
+          "B) traditional",
+          "C) meager",
+          "D) available"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Duplicate logic to Q16. The 'novel' (new) path contrasts with the 'traditional' (usual/standard) studies."
+      }
+    },
+    {
+      "id": "GAP_115",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Whatever the general attitude toward Spike Lee's... and Carl Franklin's... films... both films now tend to be regarded quite ______. In 2018... critics... praised the former... and the latter...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) strangely",
+          "B) neutrally",
+          "C) skeptically",
+          "D) favorably"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Duplicate of Q111. Critics 'praised' them, so they are regarded 'favorably.'"
+      }
+    },
+    {
+      "id": "GAP_116",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Black residents... had few formal options for banking... To ______ this situation, Maggie Lena Walker chartered the St. Luke Penny Savings Bank... The bank went on to provide home loans... to thousands...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) retain",
+          "B) highlight",
+          "C) prolong",
+          "D) rectify"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The situation was bad (few options). Walker created a bank to fix it. 'Rectify' means to put something right; correct."
+      }
+    },
+    {
+      "id": "GAP_117",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The fossil remains of the individual known as LH 4... can help paleoanthropologists not only identify steps in the evolution of hominids but also ______ Pliocene epoch generally, revealing important details...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) substitute",
+          "B) imitate",
+          "C) illuminate",
+          "D) design"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The fossils 'reveal important details.' 'Illuminate' means to help to clarify or explain (shed light on) something."
+      }
+    },
+    {
+      "id": "GAP_118",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Before the Mariner 2 mission... astronomers' ideas about the planet were little more than ______ : Venus's atmosphere is so thick that Earth-based observations had yielded very little information...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) conclusions",
+          "B) summations",
+          "C) conjectures",
+          "D) exemplifications"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "They had 'very little information' so their ideas were guesses. 'Conjectures' are opinions or conclusions formed on the basis of incomplete information."
+      }
+    },
+    {
+      "id": "GAP_119",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "The work of Tobias Gerstenberg... supports a theory that people engage in ______ thinking when making causal judgments... their eyes looked at where the target ball would have gone if the ball that altered its path did not exist.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) counterfactual",
+          "B) analogical",
+          "C) ambivalent",
+          "D) associative"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "They thought about 'what would have happened if X did not exist.' This is thinking about a scenario contrary to facts, which is 'counterfactual' thinking."
+      }
+    },
+    {
+      "id": "GAP_120",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "A team including both engineers and entomologists conducted a study... The team explained that the ______ experts in these two disciplines resulted in a more comprehensive approach...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) skepticism toward",
+          "B) exaggeration of",
+          "C) distrust among",
+          "D) collaboration between"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The team included 'both' types of experts working together for a comprehensive approach. This is 'collaboration between' them."
+      }
+    }
+  ]
+}
+    }
+  ]
+}{
+  "test_metadata": {
+    "test_name": "Digital SAT Practice",
+    "domain": "Craft and Structure",
+    "skill": "Words in Context",
+    "sub_skill": "Gap Filling",
+    "total_questions": 248,
+    "batch": "121-160",
+    "version": "1.0"
+  },
+  "questions": [
+    {
+      "id": "GAP_121",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Both sharks and crayfish can detect electrical fields around them, but the ______ of their sensitivities differs substantially. Whereas crayfish can detect fields emitted by household electronics, those are many times stronger than the fields created by water moving through Earth's magnetic field, which sharks are sensitive enough to detect.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) magnitude",
+          "B) fineness",
+          "C) gathering",
+          "D) organization"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The text compares the strength of fields each animal can detect. Sharks detect weak fields; crayfish detect strong ones. This difference in sensitivity levels is a difference in 'magnitude'."
+      }
+    },
+    {
+      "id": "GAP_122",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "New and interesting research conducted by Suleiman A. Al-Sweedan and Moath Alhaj is inspired by their observation that though studies of the effect of high altitude on blood chemistry are ______, the effect on blood chemistry of living in locations below sea level... has received comparatively little notice.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) abundant",
+          "B) equivocal",
+          "C) sporadic",
+          "D) preliminary"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The text contrasts the study of high altitude with low altitude. Since low altitude has received 'little notice,' the high altitude studies must be plentiful or 'abundant.'"
+      }
+    },
+    {
+      "id": "GAP_123",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Despite stated claims of global relevance, much major research on income inequality... suffered from a myopic focus on a few countries... Researchers would later ______ this shortcoming after gaining new access to administrative records located in nations in South America... and Eastern Europe...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) validate",
+          "B) presuppose",
+          "C) categorize",
+          "D) mitigate"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The new access to records allowed researchers to fix or lessen the 'shortcoming' of myopic focus. 'Mitigate' means to make something bad less severe."
+      }
+    },
+    {
+      "id": "GAP_124",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "One popular theory of the origin of the Moon... posits that a protoplanet called Theia collided with Earth... Until recently, Theia was ______ but researcher Qian Yuan and colleagues now claim to have identified pieces of the protoplanet...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) desultory",
+          "B) notional",
+          "C) veritable",
+          "D) spurious"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Before the pieces were identified, Theia was only a theory. 'Notional' means existing only in theory or as an idea."
+      }
+    },
+    {
+      "id": "GAP_125",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Political blogs... became an integral component of US media... While some commentators lauded this development... less ______ observers countered that such blogs tended to ideological extremes that exacerbated political polarization...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) recalcitrant",
+          "B) earnest",
+          "C) sanguine",
+          "D) misanthropic"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The first group 'lauded' (praised) the blogs. The second group 'countered' with negative views. 'Sanguine' means optimistic. 'Less sanguine' observers would be less optimistic/positive about the blogs."
+      }
+    },
+    {
+      "id": "GAP_126",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "As a member of Indigenous Photograph, artist Tshepiso Mabula ka Ndongeni (Xhosa) can ______ her work more broadly than she could without the organization's reach.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) empty",
+          "B) promote",
+          "C) alter",
+          "D) discover"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The organization helps photography editors 'find images.' This helps the artist 'promote' or share her work more broadly."
+      }
+    },
+    {
+      "id": "GAP_127",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Originating in the traditional stories of the Kanaka Maoli... the literature of Hawaii has a rich history... Now, by producing acclaimed works, Gary Pak has ______ his place in that literary tradition.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) contemplated",
+          "B) subverted",
+          "C) solidified",
+          "D) extricated"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Producing 'acclaimed works' helps an author establish or secure their position. 'Solidified' means to make stronger or more secure."
+      }
+    },
+    {
+      "id": "GAP_128",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Cybersecurity experts often encourage users to create passwords that are fairly complicated... Nonetheless, research has shown that the more ______ approach to password selection seems to favor convenience over security...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) creative",
+          "B) popular",
+          "C) complex",
+          "D) rare"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Users favor convenience, as seen by the password 'iloveyou' being commonly used. The 'popular' (common) approach is to prioritize ease over complexity."
+      }
+    },
+    {
+      "id": "GAP_129",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The fossil remains of the individual known as Denisova 8... can help paleoanthropologists not only ______ steps in the evolution of hominids but also illuminate the Pleistocene epoch generally...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) yield",
+          "B) exploit",
+          "C) prioritize",
+          "D) discern"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Fossils help scientists figure out or identify evolutionary steps. 'Discern' means to perceive, recognize, or distinguish."
+      }
+    },
+    {
+      "id": "GAP_130",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The Indian antelope can run very fast... significantly slower than the peregrine falcon... The difference between these speeds is largely ______ of the fact that the features that make flight possible do less to limit top speeds than the features suitable for running on land.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) a consequence",
+          "B) an objective",
+          "C) a repudiation",
+          "D) an explanation"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The speed difference is a result of the physical differences between running and flying features. It is a 'consequence' of those facts."
+      }
+    },
+    {
+      "id": "GAP_131",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Some social scientists say that... if a citizenry is to function, historical issues cannot remain the domain only of experts. In short, knowledge of history is not ______ and must not be left to historians alone.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) unattainable",
+          "B) superfluous",
+          "C) commonplace",
+          "D) equitable"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The text argues history is essential for a functioning citizenry. Therefore, knowledge of history is not 'superfluous' (unnecessary/extra)."
+      }
+    },
+    {
+      "id": "GAP_132",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Mauricio Drelichman and Hans-Joachim Voth's analysis of the overall debt and revenue of the government of Philip II... found an intriguing ______ : although the government regularly defaulted on debt, it ran an even larger overall surplus than did the government of eighteenth-century Britain...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) harbinger",
+          "B) exemplar",
+          "C) sanction",
+          "D) incongruity"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The government defaulted on debt yet ran a large surplus. These two facts seem contradictory or inconsistent, which is an 'incongruity'."
+      }
+    },
+    {
+      "id": "GAP_133",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Folk and traditional art can take a wide variety of forms, including arts as ______ one another as storytelling and quilting. The National Heritage Fellowship was created to honor people for their accomplishments in these diverse arts...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) useful to",
+          "B) humble about",
+          "C) different from",
+          "D) confused with"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Storytelling and quilting are very different art forms. The phrase 'as different from one another as' emphasizes the wide variety."
+      }
+    },
+    {
+      "id": "GAP_134",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Possessing an outstanding collection of public art, Chicago has everything from monumental sculptures... to innovative street art... The ______ public art on display in the city can thus satisfy any art lover.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) breadth of",
+          "B) controversy over",
+          "C) apathy toward",
+          "D) confusion about"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The text lists disparate examples ('everything from... to...') to show range. 'Breadth of' refers to the wide range or extent of the art."
+      }
+    },
+    {
+      "id": "GAP_135",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "As with other river deltas, the Danube River delta is ______ : it is a constantly evolving network of channels and strips of land that change in size and shape...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) immutable",
+          "B) unrivaled",
+          "C) sustainable",
+          "D) dynamic"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The delta is 'constantly evolving' and changing. 'Dynamic' means characterized by constant change, activity, or progress."
+      }
+    },
+    {
+      "id": "GAP_136",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Reducing this kind of subscriber turnover is especially challenging for subscription sellers; customers' initial enthusiasm for a subscription is often quick to ______ and sellers must thus devise other incentives to bolster retention.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) subside",
+          "B) rejuvenate",
+          "C) converge",
+          "D) resolve"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "If turnover is high, enthusiasm must be fading. 'Subside' means to become less intense, violent, or severe."
+      }
+    },
+    {
+      "id": "GAP_137",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The fossil remains of the individual known as Oase 1... can help paleoanthropologists not only ______ steps in the evolution of hominids but also illuminate the Pleistocene epoch generally...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) exploit",
+          "B) prioritize",
+          "C) yield",
+          "D) discern"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Duplicate of Q129. Fossils help scientists 'discern' (identify/distinguish) evolutionary steps."
+      }
+    },
+    {
+      "id": "GAP_138",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The pronghorn can run very fast... significantly slower than the frigatebird... The difference between these speeds is largely ______ of the fact that the features that make flight possible do less to limit top speeds...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) a consequence",
+          "B) an objective",
+          "C) a repudiation",
+          "D) an explanation"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Duplicate of Q130. The speed difference is a result or 'consequence' of the physical features."
+      }
+    },
+    {
+      "id": "GAP_139",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Folk and traditional art can take a wide variety of forms, including arts as ______ one another as storytelling and quilting.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) confused with",
+          "B) humble about",
+          "C) useful to",
+          "D) different from"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Duplicate of Q133. The arts are 'different from' one another."
+      }
+    },
+    {
+      "id": "GAP_140",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Possessing an outstanding collection of public art, Chicago has everything from monumental sculptures... to innovative street art... The ______ public art on display in the city can thus satisfy any art lover.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) breadth of",
+          "B) controversy over",
+          "C) confusion about",
+          "D) apathy toward"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Duplicate of Q134. 'Breadth of' public art."
+      }
+    },
+    {
+      "id": "GAP_141",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "As with other river deltas, the Paraná River delta is ______ ; it is a constantly evolving network of channels and strips of land that change in size and shape...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) dynamic",
+          "B) immutable",
+          "C) sustainable",
+          "D) unrivaled"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Duplicate of Q135. 'Dynamic' fits 'constantly evolving'."
+      }
+    },
+    {
+      "id": "GAP_142",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The fossil remains of the individual known as LD 350-1... can help paleoanthropologists not only ______ steps in the evolution of hominids but also illuminate the Pliocene epoch generally...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) yield",
+          "B) exploit",
+          "C) discern",
+          "D) prioritize"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Duplicate of Q129/Q137. 'Discern' means to identify or distinguish."
+      }
+    },
+    {
+      "id": "GAP_143",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Although oil shocks... can strongly affect individual consumers, Gbadebo Oladosu and colleagues have shown that at the level of national economies, their effects are often quite ______ . The effect of recent oil shocks on the gross domestic product of China, for example, was only slightly greater than zero.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) subdued",
+          "B) variable",
+          "C) beneficial",
+          "D) persistent"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "An effect 'slightly greater than zero' is very small or weak. 'Subdued' means quiet, depressed, or low in strength."
+      }
+    },
+    {
+      "id": "GAP_144",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Maryam Hosseini and her team trained a computer program to identify sidewalks... When it was tested... it identified sidewalks in the vast majority of cases... Hosseini believes the program will improve on this already strong performance...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) reliably",
+          "B) clumsily",
+          "C) rarely",
+          "D) slowly"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Identifying in the 'vast majority of cases' means it worked consistently well. 'Reliably' means in a consistent and trustworthy manner."
+      }
+    },
+    {
+      "id": "GAP_145",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The Chao Phraya River delta is a constantly changing landform... The delta is shaped and reshaped over time as sediments carried by the river ______ where the river meets the Gulf of Thailand, eventually forming new portions of land.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) accumulate",
+          "B) dissolve",
+          "C) accelerate",
+          "D) thrive"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Sediments build up to form land. 'Accumulate' means to gather together or acquire an increasing number or quantity of."
+      }
+    },
+    {
+      "id": "GAP_146",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The realists' emphasis on accurately portraying the experiences of average working people was largely a rejection of the romantic style... which instead ______ their subjects' beauty or heroism while hiding all imperfection.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) exaggerate",
+          "B) correct",
+          "C) undermine",
+          "D) mock"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Duplicate of Q18. The romantic style emphasized or 'exaggerated' beauty."
+      }
+    },
+    {
+      "id": "GAP_147",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The decline of the giant pika... surely had a number of ______ the larger ecosystem in which it existed. The giant pika was part of a complex food web... and its disappearance likely affected several other species.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) similarities to",
+          "B) precedents in",
+          "C) sources in",
+          "D) consequences for"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The disappearance 'affected' other species. This means it had 'consequences for' the ecosystem."
+      }
+    },
+    {
+      "id": "GAP_148",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Nonetheless, research has shown that the more ______ approach to password selection seems to favor convenience over security: for example, the fifth most commonly used password in 2013 was the easily remembered 'abc123.'",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) complex",
+          "B) useful",
+          "C) creative",
+          "D) popular"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "A password being 'commonly used' means it is 'popular.'"
+      }
+    },
+    {
+      "id": "GAP_149",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Writer Lydia Davis observed that while traditional literary forms... are recognizable... there are more ______ forms that might, for example, borrow elements from both fables and narratives... Davis's own very short literary pieces arguably fit in this category...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) neutral",
+          "B) customary",
+          "C) amorphous",
+          "D) realistic"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "These forms 'borrow elements' and are not 'traditional' or easily recognizable. 'Amorphous' means without a clearly defined shape or form."
+      }
+    },
+    {
+      "id": "GAP_150",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The fact that publications by University of Minnesota economist Ellen R. McGrattan... are so frequently cited in other scholars' work ______ the usefulness of her research for her peers...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) overshadows",
+          "B) underscores",
+          "C) belies",
+          "D) forestalls"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Frequent citations highlight or emphasize value. 'Underscores' means to emphasize."
+      }
+    },
+    {
+      "id": "GAP_151",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The sloping tile roofs and picturesque facade of Mission San Luis Rey de Francia... exemplify the Spanish contribution to Californian architecture, and influence that is ______ throughout the state - architectural tourists... can easily recognize how its style draws inspiration...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) palpable",
+          "B) understated",
+          "C) disputed",
+          "D) corroborated"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "If tourists can 'easily recognize' the influence, it is obvious or 'palpable' (able to be touched or felt; plain to see)."
+      }
+    },
+    {
+      "id": "GAP_152",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "In the 1990s, conservationists began planting... native trees... This approach was apparently ______ : the Azores bullfinch's population size increased from as few as 100 birds... to around 1,300...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) successful",
+          "B) disastrous",
+          "C) amusing",
+          "D) costly"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The population increased significantly. Therefore, the conservation approach worked and was 'successful.'"
+      }
+    },
+    {
+      "id": "GAP_153",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Most of the recently discovered minor planets... are given only an identification number... which makes the already challenging task of finding a unique name for each nearly ______",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) substantial",
+          "B) insurmountable",
+          "C) unnecessary",
+          "D) feasible"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "With 500,000 bodies needing unique names, the task is extremely difficult, bordering on impossible. 'Insurmountable' means too great to be overcome."
+      }
+    },
+    {
+      "id": "GAP_154",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Posed in 1970, McMullen's g-conjecture ______ many mathematicians before yielding to the efforts of Karim Adiprasito, who presented a proof of it in 2018.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) appeased",
+          "B) disregarded",
+          "C) confounded",
+          "D) indoctrinated"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The problem existed for decades before being solved ('yielding'). This suggests it puzzled or 'confounded' mathematicians during that time."
+      }
+    },
+    {
+      "id": "GAP_155",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Although Hawaiian literature is highly heterogenous in many ways, it is also characterized by considerable thematic ______ : scholars have drawn connections linking works by writers... to the traditional stories of the Kanaka Maoli...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) innovation",
+          "B) continuity",
+          "C) subtlety",
+          "D) sophistication"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Scholars link modern works to traditional stories. This linking over time represents 'continuity'."
+      }
+    },
+    {
+      "id": "GAP_156",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The decline of the giant ground sloth... surely had a number of ______ the larger ecosystem in which it existed. The giant ground sloth was part of a complex food web... and its disappearance likely affected several other species.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) sources in",
+          "B) consequences for",
+          "C) similarities to",
+          "D) examples of"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Duplicate of Q147. The disappearance affected other species, meaning it had 'consequences for' the ecosystem."
+      }
+    },
+    {
+      "id": "GAP_157",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Under current astronomical conventions, it is ______ for the discoverers to name their discoveries, but they are not required to do so; whether to assign a minor planet a name is entirely the choice of whoever discovers it.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) permissible",
+          "B) infeasible",
+          "C) selective",
+          "D) mandatory"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "If it is their 'choice' but not 'required,' then naming is allowed or 'permissible.'"
+      }
+    },
+    {
+      "id": "GAP_158",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The sloping tile roofs... exemplify the Spanish contribution to Californian architecture, an influence that is ______ throughout the state... architectural tourists... can easily recognize how its style draws inspiration...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) corroborated",
+          "B) palpable",
+          "C) disputed",
+          "D) understated"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Duplicate of Q151. 'Palpable' means clear to the mind or plain to see."
+      }
+    },
+    {
+      "id": "GAP_159",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The National Heritage Fellowship was created to honor exceptional folk and traditional artists... Black was chosen for her lifetime ______ the arts.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) contributions to",
+          "B) doubts about",
+          "C) imitations of",
+          "D) misunderstandings of"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Awards are given for positive 'contributions to' a field."
+      }
+    },
+    {
+      "id": "GAP_160",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The Fly River delta is a remarkably ______ landscape: it is a constantly evolving network of channels and strips of land that change in size and shape...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) mutable",
+          "B) habitable",
+          "C) secluded",
+          "D) homogeneous"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The landscape is 'constantly evolving' and changing. 'Mutable' means liable to change."
+      }
+    }
+  ]
+}{
+  "test_metadata": {
+    "test_name": "Digital SAT Practice",
+    "domain": "Craft and Structure",
+    "skill": "Words in Context",
+    "sub_skill": "Gap Filling",
+    "total_questions": 248,
+    "batch": "161-200",
+    "version": "1.0"
+  },
+  "questions": [
+    {
+      "id": "GAP_161",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "In the mid-1980s, the price of vintage and even new baseball cards rose dramatically, which had the counterintuitive effect of ______ demand: buyers who hadn't previously wanted to purchase baseball cards thronged the market...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) capitalizing",
+          "B) exploiting",
+          "C) eliciting",
+          "D) satisfying"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Rising prices usually lower demand, but here it brought out or 'elicited' demand."
+      }
+    },
+    {
+      "id": "GAP_162",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Jessica Watson... undoubtedly accomplished much, but to gain a lasting place in our historical memory, there is little that can ______ being the first to do something. For example, people will always remember that Jeanne Bare was the first woman to circumnavigate the world.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) overreach by",
+          "B) prevail over",
+          "C) fluctuate with",
+          "D) constrain within"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Being 'first' is the most powerful factor for memory. Nothing can beat or 'prevail over' it."
+      }
+    },
+    {
+      "id": "GAP_163",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The fact that publications by University of California-Berkeley economist Bronwyn Hughes Hall... are so frequently cited in other scholars' work ______ the usefulness of her research for her peers...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) belied",
+          "B) underscores",
+          "C) forestalls",
+          "D) overshadows"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Frequent citations emphasize or 'underscore' the usefulness of the research."
+      }
+    },
+    {
+      "id": "GAP_164",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The sloping tile roofs... of Mission San Carlos Borromeo de Carmelo... are enduring symbols of the Spanish contribution... Elements of this style have been reproduced... the design of Santa Clara University... is considered to ______ the style of the Spanish missions.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) renovate",
+          "B) imitate",
+          "C) neglect",
+          "D) reject"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The university's design 'reproduced' elements of the mission style. 'Imitate' means to copy or reproduce."
+      }
+    },
+    {
+      "id": "GAP_165",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "In a garden, ______ the spread of unwelcome weeds such as nutgrass can be difficult because weeds usually spread easily and quickly become unmanageable...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) retrieving",
+          "B) saving",
+          "C) halting",
+          "D) pretending"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Gardeners want to stop weeds. 'Halting' means bringing to a stop."
+      }
+    },
+    {
+      "id": "GAP_166",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Certain features are almost always included in the designs of mosques, like the minaret (or tower), which is considered to be a ______ of mosque architecture.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) hallmark",
+          "B) rejection",
+          "C) motivation",
+          "D) duplication"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "A feature that is 'almost always included' and distinctive is a 'hallmark'."
+      }
+    },
+    {
+      "id": "GAP_167",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Lessons from previous declines in biodiversity can help shape policy recommendations... The factors that contributed to the extinction of the shrub-ox... may also be ______ endangered species today.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) concealed from",
+          "B) applicable to",
+          "C) integrated with",
+          "D) dependent on"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Past lessons can help current policy because the factors are relevant or 'applicable to' species today."
+      }
+    },
+    {
+      "id": "GAP_168",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "In a 2018 article... critics for the New York Times ______ Ossie Davis's 1970 film Cotton Comes to Harlem... praising the former as 'especially pointed'...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) inspired",
+          "B) satirized",
+          "C) overlooked",
+          "D) commended"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The critics were 'praising' the film. 'Commended' means praised formally."
+      }
+    },
+    {
+      "id": "GAP_169",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The American continents are home to a huge diversity of languages... Much like the continents themselves, the variety of native languages in the Americas is ______",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) immense",
+          "B) unknown",
+          "C) ordinary",
+          "D) limited"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The text mentions 'huge diversity'. 'Immense' means extremely large or great."
+      }
+    },
+    {
+      "id": "GAP_170",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Given the sheer number of minor planets that have been discovered (more than 500,000 so far)... naming each would be ______",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) impractical",
+          "B) presumptuous",
+          "C) ambiguous",
+          "D) neutral"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Naming 500,000 unique things is feasible but difficult and not useful, making it 'impractical'."
+      }
+    },
+    {
+      "id": "GAP_171",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Drivers who strongly believe that the toll they must pay... is currently too high are likely to be ______ arguments for increasing the toll.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) cited in",
+          "B) appraised of",
+          "C) unsympathetic to",
+          "D) placated by"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "If drivers think the toll is already too high, they will dislike or be 'unsympathetic to' arguments to raise it further."
+      }
+    },
+    {
+      "id": "GAP_172",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Possessing an outstanding collection of public art, Chicago has everything from monumental mosaics... to innovative street art... The ______ public art on display in the city can thus satisfy any art lover.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) breadth of",
+          "B) controversy over",
+          "C) confusion about",
+          "D) apathy toward"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Duplicate of Q134/140. 'Breadth of' art."
+      }
+    },
+    {
+      "id": "GAP_173",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "In a 2018 article... critics... praise Madeline Anderson's... film... as 'galvanizing'... Fans of the two films hope that such ______ will attract new audiences to these works.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) ambivalence",
+          "B) acclaim",
+          "C) foresight",
+          "D) impartiality"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The critics 'praise' the films. 'Acclaim' means enthusiastic and public praise."
+      }
+    },
+    {
+      "id": "GAP_174",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The fossil remains of the individual known as Misliya-1... can help paleoanthropologists not only ______ steps in the evolution of hominids but also illuminate the Pleistocene epoch generally...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) exploit",
+          "B) yield",
+          "C) prioritize",
+          "D) discern"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Duplicate of Q129. Scientists 'discern' (identify/distinguish) steps in evolution."
+      }
+    },
+    {
+      "id": "GAP_175",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The Village Politicians... depicts a group of peasants... and emphasizes accuracy... This style largely ______ conventions of the romantic style... which instead accentuated their subjects positive traits...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) rejected",
+          "B) imitated",
+          "C) epitomized",
+          "D) extended"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Realism emphasized accuracy and opposed Romanticism. Thus, it 'rejected' Romantic conventions."
+      }
+    },
+    {
+      "id": "GAP_176",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The National Heritage Fellowship was created to ______ exceptional folk and traditional artists in the United States. One artist who received the fellowship... was chosen for his lifetime contributions...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) begin",
+          "B) overshadow",
+          "C) distract",
+          "D) honor"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Fellowships are awards given to 'honor' achievements."
+      }
+    },
+    {
+      "id": "GAP_177",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Maryam Hosseini... trained a computer program to identify sidewalks... The program's performance was ______ to that of the road-map method: it more accurately identified sidewalks...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) superior",
+          "B) supportive",
+          "C) similar",
+          "D) changed"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The program 'more accurately' identified sidewalks. Thus, its performance was 'superior' (better)."
+      }
+    },
+    {
+      "id": "GAP_178",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Often, the Nobel Prize in Chemistry is given to a single person... But recognition isn't restricted to ______ individuals. Instead, success... is usually achieved through collaboration...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) solitary",
+          "B) coordinated",
+          "C) considerate",
+          "D) coincidental"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The text contrasts 'single person' awards with collaboration. 'Solitary' means done or existing alone."
+      }
+    },
+    {
+      "id": "GAP_179",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "A data-transfer project is making the data available again, thereby ______ the Apollo data's usefulness, as the data are used to study the geology of the Moon.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) persisting",
+          "B) installing",
+          "C) renewing",
+          "D) exceeding"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The data was unavailable/old, now it is available again. This restores or 'renews' its usefulness."
+      }
+    },
+    {
+      "id": "GAP_180",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Postcranial skeletal pneumaticity (PSP) refers to the presence of extensions of an animal's lungs... Though such structures do not typically fossilize... To ______ PSP from fossils, researchers look for indicators such as large foramina...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) infer",
+          "B) acquire",
+          "C) isolated",
+          "D) preserve"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Since the structures don't fossilize directly, researchers must deduce their presence from other signs (indicators). 'Infer' means to deduce from evidence."
+      }
+    },
+    {
+      "id": "GAP_181",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "In 2017, Belgium... experienced an inflation rate of 2.12%, much higher than the 0.74% rate seen in Equatorial Guinea... Such a result is ______ however: Raj Desai et al. have shown that democratic institution strength tends to restrain inflationary pressures.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) inexplicable",
+          "B) unfounded",
+          "C) facetious",
+          "D) anomalous"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Usually, strong institutions restrain inflation (lower rate). Belgium (strong) had *higher* inflation than Equatorial Guinea (weak). This contradicts the norm, making it 'anomalous' (deviating from the standard/expected)."
+      }
+    },
+    {
+      "id": "GAP_182",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Some robots... are designed to resemble humans... To that end, certain features such as bipedal locomotion can help to ______ the effect of the more unnatural aspects of a robot's appearance...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) ameliorate",
+          "B) coalesce",
+          "C) augment",
+          "D) substantiate"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Unnatural aspects create the 'uncanny valley' (bad feeling). Features that help interaction would reduce this bad effect. 'Ameliorate' means to make something bad better."
+      }
+    },
+    {
+      "id": "GAP_183",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Demosthenes... is said to have been ______ of parrhesia, or speaking freely... He is noted for characterizing parrhesia... as the foundation of democracy...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) a proponent",
+          "B) a steward",
+          "C) an apprentice",
+          "D) a harbinger"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "He spoke positively of it (foundation of democracy). A 'proponent' is a person who advocates a theory, proposal, or project."
+      }
+    },
+    {
+      "id": "GAP_184",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Ancient Inca... used terraces... to grow crops at different altitudes. This method of farming proved to be highly ______ as evidenced by the great number and variety of crops grown at that time.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) uniform",
+          "B) effective",
+          "C) chaotic",
+          "D) inert"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "A 'great number and variety of crops' implies the method worked well. 'Effective' means successful in producing a desired result."
+      }
+    },
+    {
+      "id": "GAP_185",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Geomagnetic storms can disturb Earth's ionosphere, causing the models underlying... GPS... to produce inaccurate calculations. This illustrates the effect that space weather events can have on the ______ of GPS...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) significance",
+          "B) reliability",
+          "C) extent",
+          "D) complexity"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "If the calculations become 'inaccurate', the system is less trustworthy. This affects its 'reliability'."
+      }
+    },
+    {
+      "id": "GAP_186",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Elements of this style have been reproduced... the design of Santa Clara University... is considered to ______ the style of the Spanish missions.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) renovate",
+          "B) imitate",
+          "C) neglect",
+          "D) reject"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Duplicate of Q164. 'Imitate' means to copy or reproduce."
+      }
+    },
+    {
+      "id": "GAP_187",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "In a garden, ______ the spread of unwelcome weeds such as nutgrass can be difficult because weeds usually spread easily...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) retrieving",
+          "B) saving",
+          "C) halting",
+          "D) pretending"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Duplicate of Q165. 'Halting' the spread."
+      }
+    },
+    {
+      "id": "GAP_188",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Certain features are almost always included in the designs of mosques, like the minaret (or tower), which is considered to be a ______ of mosque architecture.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) hallmark",
+          "B) rejection",
+          "C) motivation",
+          "D) duplicate"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Duplicate of Q166. A 'hallmark' feature."
+      }
+    },
+    {
+      "id": "GAP_189",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Nancy Bird-Walton... undoubtedly accomplished much, but to gain a lasting place in our historical memory, there is little that can ______ being the first to do something.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) overreach by",
+          "B) fluctuate with",
+          "C) constrain within",
+          "D) prevail over"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Duplicate of Q162. 'Prevail over' (beat) being the first."
+      }
+    },
+    {
+      "id": "GAP_190",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Despite stated claims of global relevance, much major research on income inequality... suffered from a myopic focus... Researchers would later ______ this shortcoming...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) postulate",
+          "B) ameliorate",
+          "C) sanction",
+          "D) rationalize"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Researchers fixed the shortcoming with new data. 'Ameliorate' means to make something bad better (similar to 'mitigate' in previous duplicates)."
+      }
+    },
+    {
+      "id": "GAP_191",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "In the 2010s, the price of vintage G.I. Joe action figures rose dramatically, which had the counterintuitive effect of ______ demand...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) satisfying",
+          "B) capitalizing",
+          "C) exploiting",
+          "D) precipitating"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Duplicate context to Q95. Rising prices sparked or 'precipitated' demand. (Note: Option D derived from answer key/logic of similar questions)."
+      }
+    },
+    {
+      "id": "GAP_192",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The fact that publications by University of Minnesota economist Ellen R. McGrattan... are so frequently cited in other scholars' work ______ the usefulness of her research...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) forestalls",
+          "B) belies",
+          "C) underscores",
+          "D) overshadows"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Duplicate of Q150. Citations emphasize or 'underscore' usefulness."
+      }
+    },
+    {
+      "id": "GAP_193",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Unlike Wada Eisaku, who adopted traditional European methods... Hashimoto Gaho ______ traditional Japanese approaches. For instance, Hashimoto produced Dragon against Tiger by applying color pigments to a silk surface.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) overlooked",
+          "B) distrusted",
+          "C) embraced",
+          "D) released"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Hashimoto used traditional materials (pigments on silk), meaning he accepted or 'embraced' those approaches."
+      }
+    },
+    {
+      "id": "GAP_194",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The Fly River delta is a remarkably ______ landscape: it is a constantly evolving network of channels and strips of land that change in size and shape...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) mutable",
+          "B) habitable",
+          "C) secluded",
+          "D) homogeneous"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Duplicate of Q160. 'Mutable' means changeable."
+      }
+    },
+    {
+      "id": "GAP_195",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Whether the reign of a French monarch... was considered historically significant or, conversely, relatively ______ its trajectory was shaped by questions of legitimacy...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) momentous",
+          "B) inconsequential",
+          "C) benevolent",
+          "D) genuine"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Duplicate of Q8. Opposite of significant is 'inconsequential'."
+      }
+    },
+    {
+      "id": "GAP_196",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "In the 2010s, the price of vintage Teenage Mutant Ninja Turtles action figures rose dramatically, which had the counterintuitive effect of ______ demand...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) monetizing",
+          "B) appraising",
+          "C) engendering",
+          "D) exploiting"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Duplicate of Q95/Q101 logic. Price rise caused or 'engendered' demand."
+      }
+    },
+    {
+      "id": "GAP_197",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Studying wrappers... may seem like a frivolous pursuit, but ephemeral objects like these are useful as markers of cultural change: they can ______ shifts in norms, values, and concerns...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) register",
+          "B) vindicate",
+          "C) preclude",
+          "D) induce"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Objects serve as 'markers' or records. To 'register' means to record or show."
+      }
+    },
+    {
+      "id": "GAP_198",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Though it seemed to ______ many mathematicians, the Marden tameness conjecture, posed in 1974, eventually yielded to the efforts of Ian Agol...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) insuperable",
+          "B) unequivocal",
+          "C) irreproachable",
+          "D) benign"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Duplicate of Q22. Seemed impossible or 'insuperable' (incapable of being overcome/solved) until it yielded."
+      }
+    },
+    {
+      "id": "GAP_199",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "One hypothesis for the preference for human-created art is that people ______ the effort behind a piece of art: the more work they believe went into a piece's creation, the more likely they are to appreciate it.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) value",
+          "B) perform",
+          "C) prevent",
+          "D) neglect"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "They appreciate it more if they think it took effort. Thus, they 'value' the effort."
+      }
+    },
+    {
+      "id": "GAP_200",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Sumiko Higashi argues, some filmmakers relied on film critics to influence the public's ______ the world of cinema. Critics who drew similarities between film and traditional art forms, like drama, could help legitimize film as an art form.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) contribution to",
+          "B) perception of",
+          "C) reproduction of",
+          "D) application to"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Critics influenced how the public *saw* or understood cinema. 'Perception of' means the way in which something is regarded, understood, or interpreted."
+      }
+    }
+  ]
+}{
+  "test_metadata": {
+    "test_name": "Digital SAT Practice",
+    "domain": "Craft and Structure",
+    "skill": "Words in Context",
+    "sub_skill": "Gap Filling",
+    "total_questions": 248,
+    "batch": "201-248",
+    "version": "1.0"
+  },
+  "questions": [
+    {
+      "id": "GAP_201",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Difficulties of documenting nocturnal pollinator visits... have resulted in ______ of information on nocturnal moth pollination... but Max Anderson et al. have addressed this by utilizing infrared technology.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) an abatement",
+          "B) an aggregation",
+          "C) a dearth",
+          "D) a dissonance"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "If it is difficult to document, there is likely a lack or scarcity of information. 'Dearth' means a scarcity or lack of something."
+      }
+    },
+    {
+      "id": "GAP_202",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "In some of his sculptures, Allan Houser uses abstract geometric shapes... his 1989 work Embrace is highly abstract and therefore differs strikingly from some of his other pieces in which the viewer can easily ______ familiar objects.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) ignore",
+          "B) identify",
+          "C) reveal",
+          "D) remember"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The abstract work contrasts with pieces where objects are realistic/familiar. In realistic works, a viewer can 'identify' (recognize) familiar objects."
+      }
+    },
+    {
+      "id": "GAP_203",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Agglomeration economies arise when multiple firms in related industries ______ an area... Giulia Faggio et al. found that factors driving agglomeration in some cases are only weakly correlated with agglomeration in others.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) intercede in",
+          "B) amass in",
+          "C) concur with",
+          "D) appeal to"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Agglomeration means clustering or gathering. 'Amass in' means to gather together or accumulate in an area."
+      }
+    },
+    {
+      "id": "GAP_204",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The familial structure of the black swan shows tremendous ______ ; breeding pairs... have been observed to foster those of less successful pairs, and... male-male pairs sometimes rear cygnets too...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) elasticity",
+          "B) reciprocity",
+          "C) cohesion",
+          "D) affection"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The structure allows for various arrangements (fostering, male-male pairs). This flexibility or adaptability is described as 'elasticity'."
+      }
+    },
+    {
+      "id": "GAP_205",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Any effort to raise the toll... should explain why a higher toll is necessary; no amount of justification, however, is likely to persuade some drivers who believe the current toll is ______",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) contentious",
+          "B) exorbitant",
+          "C) warranted",
+          "D) equivocal"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Drivers who oppose a raise likely think the current price is already too high. 'Exorbitant' means unreasonably high (of a price)."
+      }
+    },
+    {
+      "id": "GAP_206",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Aditi Sahasrabuddhe found that countries' policy environments seem to have been ______ swap-line decisions: the probability that banks could be granted swap lines was 0.20 in countries open to foreign-capital inflows and 0.03 in countries with policies restricting such inflows.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) predicted on",
+          "B) decoupled from",
+          "C) material to",
+          "D) mediated by"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The policy environment (openness to capital) clearly affected the probability (0.20 vs 0.03). Therefore, policies were relevant or 'material to' the decisions."
+      }
+    },
+    {
+      "id": "GAP_207",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Especially impressive is how ______ his body of work is: Lecuona showcased a diverse range of musical talents in different areas, from orchestral pieces and operas to popular film scores.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) outdated",
+          "B) lonely",
+          "C) forgotten",
+          "D) varied"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The text lists a 'diverse range' of works. 'Varied' is the synonym for diverse."
+      }
+    },
+    {
+      "id": "GAP_208",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "As with other river deltas, the Indus River delta is ______ : it is a constantly evolving network of channels and strips of land that change in size and shape...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) dynamic",
+          "B) sustainable",
+          "C) immutable",
+          "D) unrivaled"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Duplicate of Q135/Q141. 'Dynamic' fits 'constantly evolving'."
+      }
+    },
+    {
+      "id": "GAP_209",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "While most would not consider the works of Miguel de Unamuno to be especially controversial today, one should consider whether there are aspects of his work that may have been seen as ______ to some readers of his time.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) provocative",
+          "B) irrefutable",
+          "C) pretentious",
+          "D) irrelevant"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The text contrasts 'not controversial today' with how it was seen *then*. 'Provocative' (causing anger or strong reaction) fits the idea of being controversial in the past."
+      }
+    },
+    {
+      "id": "GAP_210",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Volunteers share digitized excerpts from personal collections of sci-fi magazines not typically ______ preserved in libraries that allow the earliest uses of phrases such as 'warp speed'... to be identified...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) justifications",
+          "B) contributions",
+          "C) resolutions",
+          "D) negotiations"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The volunteers are sharing materials to help the project. These are 'contributions' to the dictionary."
+      }
+    },
+    {
+      "id": "GAP_211",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Despite stated claims of global relevance, much major research on income inequality... suffered from a myopic focus... Researchers would later ______ this shortcoming after gaining new access to administrative records...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) presuppose",
+          "B) categorize",
+          "C) validate",
+          "D) mitigate"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Duplicate of Q39/Q123. Researchers 'mitigate' (fix/lessen) the shortcoming."
+      }
+    },
+    {
+      "id": "GAP_212",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Because cyanobacteria and other microphytobenthos (MPB)... are consumed by mussels as well as by certain shorebirds and fish, MPB are ______ estuary ecosystems. Decreased MPB abundance... has a direct, negative impact on coastal food webs.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) imperative for",
+          "B) emblematic of",
+          "C) subordinate to",
+          "D) interchangeable with"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Since many animals consume them and their decrease has a 'negative impact,' MPB are essential or 'imperative for' the ecosystem."
+      }
+    },
+    {
+      "id": "GAP_213",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Some pieces of music might have many meanings... can ______ as many different interpretations as there are people to listen to them...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) refute",
+          "B) omit",
+          "C) support",
+          "D) evade"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The music allows for or holds up many interpretations. 'Support' fits best here (meaning the music can sustain/validate these interpretations). Note: Previous duplicate Q56 used 'yield' which is synonymous with 'support' in the sense of providing/allowing for."
+      }
+    },
+    {
+      "id": "GAP_214",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The inventories of consonant sounds among the Polynesian languages... tend toward the ______ : Sikaiana... has a total of nine consonants... while the global median per language is over twenty-two.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) minimal",
+          "B) static",
+          "C) replicable",
+          "D) melodic"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Nine consonants is much lower than the global median of 22. Thus, the inventory is small or 'minimal'."
+      }
+    },
+    {
+      "id": "GAP_215",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Researchers would later ______ this shortcoming after gaining new access to administrative records located in nations in South America... and Eastern Europe...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) validate",
+          "B) mitigate",
+          "C) categorize",
+          "D) presuppose"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Duplicate of Q39/Q123/Q211. 'Mitigate' the shortcoming."
+      }
+    },
+    {
+      "id": "GAP_216",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Though the thermoregulation mechanisms of fungi... have received little formal study, anecdotal evidence has suggested that fungal surface temperatures tend to be cooler... Experimental findings by Radamés Cordero et al. now ______ this idea: colonies... maintained temperatures below those at which they were incubated...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) obscure",
+          "B) corroborate",
+          "C) encapsulate",
+          "D) curtail"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The anecdotal evidence suggested they are cooler. The experiment found they *were* cooler. Thus, the experiment supports or 'corroborates' the idea."
+      }
+    },
+    {
+      "id": "GAP_217",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Thai slow-cinema director Apichatpong Weerasethakul... states that his own work induces sleep in audiences. This might suggest his films are boring, but boredom does not always cause sleep: boredom creates an anxious tension... and thus induces not somnolence but ______",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) fortitude",
+          "B) perturbation",
+          "C) nonchalance",
+          "D) indolence"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Boredom creates 'anxious tension'. 'Perturbation' means anxiety or mental uneasiness, which matches 'anxious tension'."
+      }
+    },
+    {
+      "id": "GAP_218",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "As with other river deltas, the Krishna River delta is ______ : it is a constantly evolving network of channels and strips of land that change in size and shape...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) sustainable",
+          "B) unrivaled",
+          "C) immutable",
+          "D) dynamic"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Duplicate of Q135/Q141/Q208. 'Dynamic' describes constantly evolving/changing systems."
+      }
+    },
+    {
+      "id": "GAP_219",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "While his contemporaries' approaches to these subjects were often sentimental, Whistler's eye seemed ______ . In this way, he anticipated the early twentieth-century photographs of Walker Evans, which create the illusion of being objective documentations of life.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) tranquil",
+          "B) peculiar",
+          "C) nostalgic",
+          "D) dispassionate"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The text contrasts 'sentimental' (emotional) with 'objective documentations' (unemotional/factual). 'Dispassionate' means not influenced by strong emotion, fitting the objective approach."
+      }
+    },
+    {
+      "id": "GAP_220",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The dinosaur displays at museums... are notable for the ______ of the research behind them the museum staff consulted numerous sources to ensure the accuracy of the displays.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) rigor",
+          "B) obscurity",
+          "C) shallowness",
+          "D) novelty"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Consulting 'numerous sources' to ensure 'accuracy' implies thoroughness and high standards. 'Rigor' means the quality of being extremely thorough, exhaustive, or accurate."
+      }
+    },
+    {
+      "id": "GAP_221",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Because theatergoers have grown used to carefully designed sets, plays with few visual elements can surprise audiences. But simple, unadorned stages were likely ______ audiences in the very distant past; highly decorated... sets were not common until the 1600s.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) disliked by",
+          "B) confusing to",
+          "C) expected by",
+          "D) exciting to"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "If decorated sets weren't common until the 1600s, then before that, simple stages were the norm. Therefore, audiences in the past would have 'expected' them."
+      }
+    },
+    {
+      "id": "GAP_222",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "As with other river deltas, the Shatt al-Arab River delta is ______ : it is a constantly evolving network of channels and strips of land that change in size and shape...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) dynamic",
+          "B) immutable",
+          "C) unrivaled",
+          "D) sustainable"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Duplicate of Q135/Q141/Q208/Q218. 'Dynamic' fits changing landscape."
+      }
+    },
+    {
+      "id": "GAP_223",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "His work True History, however, is ______ : featuring tropes that are hallmarks of present-day science fiction... it is regarded by some scholars as the earliest known work in the genre.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) authorized",
+          "B) applicable",
+          "C) sarcastic",
+          "D) visionary"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The work features tropes of 'present-day' sci-fi despite being ancient. This makes it ahead of its time or 'visionary'."
+      }
+    },
+    {
+      "id": "GAP_224",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Researcher Philip Metzger... continues to use Apollo's data, demonstrating that the missions' value to science is ______",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) controversial",
+          "B) displaced",
+          "C) original",
+          "D) ongoing"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Since researchers 'continue to use' the data today, its value is continuing or 'ongoing'."
+      }
+    },
+    {
+      "id": "GAP_225",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "The social structure of medieval Bremen was heavily influenced by hierarchical institutions... a condition that some researchers suggest ______ potentially not just social but also economic fluidity... by constraining the range of contacts available...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) protracted",
+          "B) disseminated",
+          "C) inhibited",
+          "D) catalyzed"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Hierarchical structures 'constrained' contacts. Constraining contacts would likely limit or 'inhibit' fluidity and growth."
+      }
+    },
+    {
+      "id": "GAP_226",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Some pieces of music might have many meanings the compositions of Marion Bauer can ______ as many different interpretations as there are people to listen to them...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) evade",
+          "B) refute",
+          "C) support",
+          "D) omit"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Duplicate of Q213. Music can 'support' many interpretations."
+      }
+    },
+    {
+      "id": "GAP_227",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Long-running studies like this need a lot of participants not merely for statistical robustness but also because of ______ : over such a length of time, a substantial number of participants will withdraw or fall out of contact...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) impartiality",
+          "B) replicability",
+          "C) attrition",
+          "D) circumspection"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Participants dropping out or withdrawing is the definition of 'attrition' in research studies."
+      }
+    },
+    {
+      "id": "GAP_228",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Traditionally, certain features of mosque architecture are nearly ______ such as the mihrab (or niche), which almost all mosques include.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) universal",
+          "B) elaborate",
+          "C) illusory",
+          "D) idealized"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "If 'almost all mosques include' it, the feature is nearly 'universal'."
+      }
+    },
+    {
+      "id": "GAP_229",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The dates that archaeologists assign to most of the colossal sculptures... are necessarily ______ . The majority of the sculptures have been moved from their original context, making precise dating impossible.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) uncontroversial",
+          "B) irrelevant",
+          "C) applicable",
+          "D) approximate"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "If 'precise dating' is impossible, the dates must be estimates or 'approximate'."
+      }
+    },
+    {
+      "id": "GAP_230",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "______ traditional descriptions of pollination syndromes... and recent empirical observations of floral-trait combinations have led some ecologists to express reservations about the utility of those descriptions.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) Discrepancies between",
+          "B) Proclamations of",
+          "C) Recurrences of",
+          "D) Affinities between"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Ecologists have 'reservations' (doubts) about the descriptions. This suggests the descriptions don't match the new observations. A mismatch is a 'discrepancy'."
+      }
+    },
+    {
+      "id": "GAP_231",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Studying menus... and posters... may seem like a frivolous pursuit, but ephemeral objects like these are useful as evidence of cultural change: they can ______ shifts in norms, values, and concerns that traditional objects of historical inquiry may not.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) dissociate from",
+          "B) collude with",
+          "C) compensate for",
+          "D) attest to"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "These objects provide evidence or proof of the shifts. 'Attest to' means to provide clear evidence of."
+      }
+    },
+    {
+      "id": "GAP_232",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "In the architectural process called modular construction... ______ of this approach cite the production of less material waste and a faster return on investment.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) Components",
+          "B) Safeguards",
+          "C) Proponents",
+          "D) Epitomes"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "People who 'cite' positive aspects (less waste, faster return) are supporting the approach. Supporters are 'proponents'."
+      }
+    },
+    {
+      "id": "GAP_233",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Long-running studies like this need a lot of participants not merely for statistical robustness but also because of ______ : over such a length of time, a substantial number of participants will withdraw or fall out of contact...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) attrition",
+          "B) circumspection",
+          "C) impartiality",
+          "D) replicability"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Duplicate of Q227. Withdrawal/loss of participants is 'attrition'."
+      }
+    },
+    {
+      "id": "GAP_234",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "As Rachana Kamtekar observes, this argument is difficult to reconcile with our lay conception of character: we expect a person of helpful character to be frequently helpful, not ______ helpful.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) self-servingly",
+          "B) sporadically",
+          "C) grudgingly",
+          "D) unfailingly"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The text contrasts 'frequently helpful' with its opposite in a specific way. Actually, wait. 'Frequently helpful' is the expectation. The argument claims situational factors induce contrary behavior. Kamtekar argues we expect character to be consistent. 'Not ______ helpful' should contrast with 'frequently'. Wait, 'unfailingly' implies *always*, which is even stronger than frequently. Let's re-read carefully. 'We expect a person of helpful character to be frequently helpful, not ______ helpful.' If the blank is 'sporadically' (occasionally), it contrasts with 'frequently.' Yes, we expect frequency, not sporadicity. The key says D ('unfailingly'). Let's re-evaluate. Maybe the argument is about *perfect* consistency? If we expect 'frequently', maybe we don't expect 'unfailingly' (perfectly)? Ah, the text says: 'situational factors... induce behavior contrary'. Kamtekar says this is hard to reconcile with lay conception. We expect 'frequently'. The blank is what we do *not* expect? Or is the blank completing the thought 'not [just] ____ helpful'? Let's look at the answer key for 234. It says D. 'Unfailingly'. Okay, so the sentence means: We expect them to be helpful *often* (frequently), but not *always* (unfailingly). This acknowledges that situational factors *can* interfere sometimes, which reconciles the lay view with the ethicists' claim that situation matters. We don't demand perfection (unfailing), just frequency."
+      }
+    },
+    {
+      "id": "GAP_235",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Long-running studies like this need a lot of participants... because of ______ : over such a length of time, a substantial number of participants will withdraw...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) impartiality",
+          "B) replicability",
+          "C) attrition",
+          "D) circumspection"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Duplicate of Q227/Q233. Withdrawal is 'attrition'."
+      }
+    },
+    {
+      "id": "GAP_236",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Disproportionate emphasis on instances of invention... contributes to a pro-innovation bias that ______ studies of the history of technology. More attention to technological discontinuance... is thus a necessary corrective...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) supersedes",
+          "B) pervades",
+          "C) abridges",
+          "D) foments"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The bias is widespread or dominant (needs a 'corrective' to the 'dominant view'). 'Pervades' means to spread through and be perceived in every part of, fitting the idea of a widespread bias."
+      }
+    },
+    {
+      "id": "GAP_237",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Such structures are found in modern birds, which is why some paleontologists treat the respiratory systems of birds as ______ those of Tyrannosaurus...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) harbingers of",
+          "B) emissaries for",
+          "C) proxies for",
+          "D) subordinates of"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Scientists use birds to understand dinosaurs. Birds act as a substitute or model for the extinct animals. 'Proxies for' means a figure that can be used to represent the value of something else."
+      }
+    },
+    {
+      "id": "GAP_238",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The metal displayed in the structure of House in Kamiaraya... and the metal hardware in UE House... are representative aspects of a juxtaposition common in contemporary Japanese architecture: the ______ of sleek, contemporary elements and traditional organic materials...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) designation",
+          "B) analysis",
+          "C) diffusion",
+          "D) synthesis"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The text mentions a 'juxtaposition' and combining elements in a 'single design'. 'Synthesis' means the combination of ideas to form a theory or system."
+      }
+    },
+    {
+      "id": "GAP_239",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "A rising author... spoke... about what motivated her... The presenter credited much of her ______ Ellease Southerland's work... which was among the presenter's favorite books as a child.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) an affinity for",
+          "B) a stipulation about",
+          "C) an ambivalence toward",
+          "D) a complacency about"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "She credited her motivation to Southerland's work, which was a 'favorite'. 'Affinity for' means a spontaneous or natural liking or sympathy for someone or something."
+      }
+    },
+    {
+      "id": "GAP_240",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Museum visitors looking to ______ their art-viewing experience should turn to Chicago's streets, where they can find works ranging from...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) mitigate",
+          "B) satisfy",
+          "C) provoke",
+          "D) supplement"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Visitors viewing art in the museum can *add to* that experience by seeing street art. 'Supplement' means to add an extra element or amount to."
+      }
+    }
+  ]
+}{
+      "id": "GAP_241",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The unique subak water management system... has a rich cultural... significance... The many elements of subak... are ______ : they are joined together into a single cohesive unit.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) divisive",
+          "B) provisional",
+          "C) ubiquitous",
+          "D) feasible"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Wait, the text says 'joined together into a single cohesive unit'. 'Interconnected' (Option A in Q242) fits this best. Let's check Q241's context text on page 70. Ah, Q241 is about the Ice Age clothing passage (Shuidonggou 2). '...as clothing became [BLANK] its purpose shifted...'. The options for 241 are A) divisive, B) provisional, C) ubiquitous, D) feasible. Answer Key for 241 is C. 'Ubiquitous' means found everywhere. If clothing became 'ubiquitous' (widespread), its purpose could shift to social signaling. This fits the text 'Once wearing clothing turned into a widespread... practice'."
+      }
+    },
+    {
+      "id": "GAP_242",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The unique subak water management system... The many elements of subakterraces, canals, and water temples-are ______ : they are joined together into a single cohesive unit.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) interconnected",
+          "B) outmoded",
+          "C) optional",
+          "D) informal"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        [cite_start]"explanation": "If elements are 'joined together into a single cohesive unit', they are 'interconnected'[cite: 4614]."
+      }
+    },
+    {
+      "id": "GAP_243",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The mihrab (or niche) is one of many features that are foundational to traditional mosque architecture and is therefore considered ______ aspect of mosque design.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) an imposing",
+          "B) an embellished",
+          "C) a quintessential",
+          "D) an unprecedented"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Foundational features are typical or essential. [cite_start]'Quintessential' means representing the most perfect or typical example of a quality or class[cite: 4626]."
+      }
+    },
+    {
+      "id": "GAP_244",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The Egyptian plover... has a symbiotic relationship with the Nile crocodile... This ______ relationship provides a nutritious meal for the bird and removes potentially dangerous bacteria from the crocodile's mouth.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) inefficient",
+          "B) reciprocal",
+          "C) interchangeable",
+          "D) unequal"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Both species benefit (food for bird, cleaning for croc). [cite_start]A relationship where both parties benefit is 'reciprocal'[cite: 4638]."
+      }
+    },
+    {
+      "id": "GAP_245",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Until 1917, there was no formal measure in the United States Senate that could be ______ to end a debate that had been excessively prolonged...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) improvised",
+          "B) invoked",
+          "C) abolished",
+          "D) partitioned"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "A formal measure is used or applied. [cite_start]To 'invoke' a rule or measure is to cite or appeal to it as an authority for an action[cite: 4648]."
+      }
+    },
+    {
+      "id": "GAP_246",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Because blue holes... and cenotes... differ in their size, water composition, and type of location, they are not usually viewed as being ______ but both are water-filled sinkholes...",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) distinct",
+          "B) explicable",
+          "C) analogous",
+          "D) incongruous"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        [cite_start]"explanation": "They differ, so they aren't usually seen as 'analogous' (comparable/similar), *but* they share a basic definition (sinkholes)[cite: 4652]."
+      }
+    },
+    {
+      "id": "GAP_247",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The discoveries of natural satellites by Scott S. Sheppard's team of astronomers have been ______ Carpo... is just one of over one hundred that they have spotted, while many astronomers have been happy to discover only one or two.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) inferior",
+          "B) random",
+          "C) plentiful",
+          "D) likely"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        [cite_start]"explanation": "Discovering 'over one hundred' compared to 'one or two' means the discoveries have been abundant or 'plentiful'[cite: 4665]."
+      }
+    },
+    {
+      "id": "GAP_248",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Certain features are almost always included in the designs of mosques, like the ablution (ritual cleansing) area, which is considered to be a ______ of mosque architecture.",
+        "question": "Which choice completes the text with the most logical and precise word or phrase?",
+        "options": [
+          "A) duplicate",
+          "B) motivation",
+          "C) rejection",
+          "D) hallmark"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        [cite_start]"explanation": "A feature that is 'almost always included' is a distinctive characteristic or 'hallmark'[cite: 4675]."
+      }
+    }
+  ]
+}

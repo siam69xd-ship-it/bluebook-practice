@@ -1,0 +1,714 @@
+{
+  "test_metadata": {
+    "test_name": "Digital SAT Reading & Writing",
+    "domain": "Craft and Structure",
+    "skill": "Cross-Text Connections",
+    "total_questions": 37,
+    "version": "1.0"
+  },
+  "questions": [
+    {
+      "id": "CTC_001",
+      "difficulty": "Medium",
+      "content": {
+        "passage_1": "Odaham farmers in Sonoran desert... plant different species in the same plot... For example, while organ pipe cacti can tolerate extended periods of low moisture in the upper soil, Chia flowers cannot. So, planting both species helps ensure that even in growing seasons too dry for Chia flowers, a farmer might still be able to harvest a pipe organ fruit.",
+        "passage_2": "Chia flowers are well adapted to growing in the desert but are highly dependent on having sufficient moisture in the upper soil. Inspired by Odaham farmers... Gray and colleagues planted Chia flowers in the shade of solar panels... and found that the chia flowers grew well.",
+        "question": "Based on the texts, the author of text 1 and the author of text 2 most likely agree on what point?",
+        "options": [
+          "A) Gray's team's method could be refined to prevent soil moisture more actively from evaporating.",
+          "B) Organ pipe and solar panels both provide adequate shade to help protect the moisture in the upper soil.",
+          "C) The Odaham approach has an advantage over Gray's team's approach in that is capable of producing chia seeds.",
+          "D) Chia flowers require more moisture in the upper soil than organ pipe cacti do."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Text 1 states organ pipe cacti tolerate low moisture while Chia flowers cannot. Text 2 states Chia flowers are 'highly dependent' on sufficient moisture. Both authors agree Chia flowers need more moisture than the cacti."
+      }
+    },
+    {
+      "id": "CTC_002",
+      "difficulty": "Hard",
+      "content": {
+        "passage_1": "For decades, ornithologists assumed that if they saw a singing Bell's vireo... they must be observing a male. That's because birdsong has long been considered a male trait; researchers have argued that males to attract mates and claim territory.",
+        "passage_2": "Recent evidence shows that a female Bell's vireo is as capable of song as a male is... They claim that the historical mischaracterization of birdsong as a male trait is largely the result of bias: much of the research ornithologists have carried out has been near universities in the temperate northern hemisphere...",
+        "question": "Based on the text, how would Odom and colleagues (Text 2) most likely respond to the view of birdsong presented in Text 1?",
+        "options": [
+          "A) They would suggest that it reflects a tendency to study male birds rather than female birds.",
+          "B) They would claim that other factors than mate attraction and territorial defense have driven that evolution of singing in male birds.",
+          "C) They would underscore that male songbirds in temperature zones are likely using their songs for different purposes than are male songbirds in the tropics.",
+          "D) They would argue that it was influenced by the kinds of study sites researchers tended to select."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Text 2 explicitly attributes the view in Text 1 to 'bias' resulting from research being conducted 'near universities in the temperate northern hemisphere.' Thus, the location/study sites influenced the view."
+      }
+    },
+    {
+      "id": "CTC_003",
+      "difficulty": "Medium",
+      "content": {
+        "passage_1": "According to a study... the northern pike... will have significantly worse outcomes over the next 50 years... By contrast, the white-tailed deer... should be able to withstand the highest predicted warming without much harm...",
+        "passage_2": "US government agencies... are unfortunately not able to address every possible threat... They must use the best information available to decide which species are most threatened and therefore most in need of conservation efforts.",
+        "question": "Based on the texts, both authors would most likely agree with which statement?",
+        "options": [
+          "A) A collaborative approach is necessary to keep temperatures in the Great Lakes region from increasing...",
+          "B) Agencies involved in natural-resource management in the Great Lakes region should focus their conservation efforts more on the northern pike than on the white-tailed deer.",
+          "C) Conservation efforts focused on the northern pike are more likely to be successful if they incorporate state and federal agency resources...",
+          "D) State, federal, and tribal groups... should immediately begin conservation programs for both..."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Text 1 identifies the northern pike as threatened and the deer as safe. Text 2 states agencies must prioritize species that are 'most threatened.' Combined, they would agree efforts should focus on the pike."
+      }
+    },
+    {
+      "id": "CTC_004",
+      "difficulty": "Hard",
+      "content": {
+        "passage_1": "Simply by selecting Arequipa, UNESCO has helped bring awareness to local recipes... and has provided a significant boost to the city's tourism industry.",
+        "passage_2": "However, as researcher Eerang Park and colleagues argue, cities must still create effective marketing strategies to benefit fully... Without the intentional effort... visitors... would not even be aware...",
+        "question": "Which choice best describes a difference in how the authors of the texts view the benefits of being named a City of Gastronomy?",
+        "options": [
+          "A) The author of Text 1 considers the effects... to be less permanent...",
+          "B) The author of Text 1 states that the benefits are automatic, while the author of Text 2 states that effort is required to fully achieve the benefits.",
+          "C) The author of Text 1 views Arequipa's status... as having been beneficial... but the author of Text 2 questions whether there's been a benefit.",
+          "D) The author of Text 1 assumes that a city's restaurant owners and chefs are most likely to benefit..."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Text 1 suggests the benefits happened 'Simply by selecting' (automatic). Text 2 argues that 'intentional effort' and 'marketing strategies' are required to benefit fully."
+      }
+    },
+    {
+      "id": "CTC_005",
+      "difficulty": "Hard",
+      "content": {
+        "passage_1": "Scholarship today overrepresents formal experimentation... Meanwhile, the work of Countee Cullen, who relied on conventional poetic forms... attracts woefully little attention...",
+        "passage_2": "For too long, scholars have focused on experimental versus conventional poetic forms, inhibiting inquiry into other points of stylistic correspondence...",
+        "question": "Based on the texts, how would the author of Text 2 most likely regard the emphasis that Text 1 places on poetic form...?",
+        "options": [
+          "A) As having the effect of forestalling consideration of the full stylistic dimensions of poetry written in the period.",
+          "B) As overestimating the impact that poetic form... has on the reading experience.",
+          "C) As being founded on a misconception about modernist poetry that has been called into question by distant reading.",
+          "D) As complementing the study of other stylistic features that distinguish the modernist period."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Text 2 argues that focusing on the divide between 'experimental versus conventional' (which is exactly what Text 1 does) inhibits inquiry into other stylistic correspondences. Thus, Text 2 would see Text 1's emphasis as limiting or forestalling full consideration."
+      }
+    },
+    {
+      "id": "CTC_006",
+      "difficulty": "Medium",
+      "content": {
+        "passage_1": "It is also unclear whether categorizing music by genre is useful, since genre categories are ambiguous, subjective, and simplistic.",
+        "passage_2": "Yandre Costa and colleagues solved that problem by converting sound to images... Their approach could improve genre classification, which could have many benefits for users.",
+        "question": "Based on the texts, how would the author of Text 1 most likely respond to the claim about the potential benefits of Costa and colleagues' research in Text 2?",
+        "options": [
+          "A) By suggesting that future research may provide substantial advancements...",
+          "B) By asserting that genre classifications may not be the most helpful way to think about music.",
+          "C) By arguing that some genres are more easily recognized by classification systems than others.",
+          "D) By emphasizing that humans do not necessarily enjoy every recording in a genre..."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Text 1 explicitly states that categorizing by genre might not be 'useful' because the categories are 'ambiguous.' Therefore, Text 1 would respond to Text 2's improved classification by arguing that the category of 'genre' itself isn't a helpful way to think about music."
+      }
+    },
+    {
+      "id": "CTC_007",
+      "difficulty": "Medium",
+      "content": {
+        "passage_1": "Sula is much richer and more complicated than the mere re-creation of the past suggested by the term 'historical fiction.'",
+        "passage_2": "Some literary critics dismiss historical fiction as a shallow genre... But historical fiction can be used to explore profound themes and complex characters.",
+        "question": "Based on the texts, how would the author of Text 2 most likely respond to the claim about Sula advanced by the author of Text 1?",
+        "options": [
+          "A) By arguing that Morrison displays a thorough knowledge of historical details in Sula.",
+          "B) By asserting that dissatisfaction with describing Sula as historical fiction reflects a misunderstanding of the genre.",
+          "C) By conceding that the genre of historical fiction contains many works that are less sophisticated than Sula is.",
+          "D) By claiming that the author of Text 1 has underestimated the richness and complexity of Sula"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Text 1 implies 'historical fiction' is a label for 'mere re-creation' and is insufficient for *Sula*. Text 2 defends historical fiction as capable of 'profound themes.' Text 2 would argue that Text 1's dissatisfaction comes from a misunderstanding of what the genre is capable of."
+      }
+    },
+    {
+      "id": "CTC_008",
+      "difficulty": "Medium",
+      "content": {
+        "passage_1": "structures in southern and central Georgia are typically not built to resist [expansive soil effects].",
+        "passage_2": "But they note that this damage can be mitigated: building vapor barriers between structural foundations and the soil can significantly reduce the effects...",
+        "question": "Based on the texts, how would Rubayet Bin Mostafiz and colleagues (Text 2) most likely respond to the information presented in Text 1?",
+        "options": [
+          "A) They would encourage engineers in southern and central Georgia to insert vapor barriers between new structures' foundations and the surrounding soil.",
+          "B) They would argue that engineers... have misjudged the effectiveness of the techniques...",
+          "C) They would suggest that engineers... consider the cost of reinforcing the vapor barriers...",
+          "D) They would recommend that engineers... measure the moisture level..."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Text 1 states Georgia structures aren't built to resist the soil. Text 2 offers a solution: 'building vapor barriers.' Therefore, the author of Text 2 would recommend using this solution."
+      }
+    },
+    {
+      "id": "CTC_009",
+      "difficulty": "Hard",
+      "content": {
+        "passage_1": "his characters are flat and discuss ideas rather than emotions.",
+        "passage_2": "Asimov wanted to convey the vast sweep of human history... one of his points is that at such a timescale, individuals don't matter. Thus his lack of characterization is central to his thematic aims.",
+        "question": "Based on the texts, how would the author of Text 2 most likely respond to the description of Asimov's characters in the underlined portion of Text 1?",
+        "options": [
+          "A) The flatness of Asimov's characters is a feature of Robots and Empire... but not of Foundation.",
+          "B) Asimov's characterizations would have been more believable if his writing had discussed fewer ideas.",
+          "C) Asimov's characterizations would have been richer if he had possessed a deeper understanding of history.",
+          "D) The flatness of Asimov's characters should not necessarily be considered a flaw in his writing."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Text 1 frames the flatness as a negative ('despite his mediocre writing'). Text 2 argues this flatness is 'central to his thematic aims.' Therefore, Text 2 sees it not as a flaw, but as an intentional and necessary feature."
+      }
+    },
+    {
+      "id": "CTC_010",
+      "difficulty": "Medium",
+      "content": {
+        "passage_1": "structures in northern and western Nebraska are typically not built to resist [expansive soil].",
+        "passage_2": "But they note that this damage can be mitigated: building structures on pile supports can significantly reduce the effects...",
+        "question": "Based on the texts, how would Rubayet Bin Mostafiz and colleagues (Text 2) most likely respond to the information presented in Text 1?",
+        "options": [
+          "A) They would recommend that engineers... measure the moisture level...",
+          "B) They would argue that engineers... have misjudged the effectiveness...",
+          "C) They would encourage engineers in northern and western Nebraska to use pile supports when building new structures.",
+          "D) They would suggest that engineers... consider the cost of replacing the pile supports..."
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Similar to Q8, Text 1 identifies a lack of resistance in structures. Text 2 identifies 'pile supports' as a mitigation technique. Thus, Text 2 would recommend using pile supports."
+      }
+    },
+    {
+      "id": "CTC_011",
+      "difficulty": "Easy",
+      "content": {
+        "passage_1": "This collaborative approach has helped build trust... which will likely improve the quality of any joint conservation projects.",
+        "passage_2": "This approach [incorporating traditional ecological knowledge]... tends to lead to better conservation outcomes.",
+        "question": "Based on the texts, both authors would most likely agree with which statement?",
+        "options": [
+          "A) Natural resources conservation projects are likely to benefit from collaboration between tribal and government groups.",
+          "B) A collaborative approach... is likely to help reduce the predicted temperature increases...",
+          "C) In the Great Lakes region, it is more important to focus conservation efforts on the firefly...",
+          "D) In the Great Lakes region, conservation efforts focused on the firefly are likely to be more effective..."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Text 1 says collaboration improves 'quality.' Text 2 says it leads to 'better conservation outcomes.' Both agree that collaboration benefits the projects."
+      }
+    },
+    {
+      "id": "CTC_012",
+      "difficulty": "Hard",
+      "content": {
+        "passage_1": "spectators... leaped from their seats and fled the room. This moment marks a major cultural shift...",
+        "passage_2": "The fact that there is no contemporary evidence that the first audience... was alarmed has not stopped the story from becoming canonical... Our belief that the coming of film was transformative is so strong that we invented and keep retelling a founding myth...",
+        "question": "Based on the texts, the author of Text 2 would most likely agree with which statement about the description of the first showing of Arrival of the Train in Text 1?",
+        "options": [
+          "A) It is not based on evidence and reflects film historians' belief that they are more sophisticated...",
+          "B) It expresses a view about the transformative nature of film that film historians tend to regard as naïve.",
+          "C) It is more motivated by a perception of the significance of the invention of film than by facts.",
+          "D) It reflects a misconception that is widely believed because it captures early film audiences' sense..."
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Text 2 argues the story in Text 1 is a 'myth' invented because of a strong 'belief that the coming of film was transformative.' Thus, the description in Text 1 is motivated by this perception of significance rather than factual evidence."
+      }
+    },
+    {
+      "id": "CTC_013",
+      "difficulty": "Medium",
+      "content": {
+        "passage_1": "lake trout... will have significantly worse outcomes... By contrast, the bald eagle... should be able to withstand the highest predicted warming...",
+        "passage_2": "They must use the best information available to decide which species are most threatened and therefore most in need of conservation efforts.",
+        "question": "Based on the texts, both authors would most likely agree with which statement?",
+        "options": [
+          "A) A collaborative approach is necessary...",
+          "B) Agencies involved in natural-resource management in the Great Lakes region should focus their conservation efforts more on the lake trout than on the bald eagle.",
+          "C) State, federal, and tribal groups... should immediately begin conservation programs for both...",
+          "D) Conservation efforts focused on the lake trout are more likely to be successful..."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Text 1 states the lake trout is threatened while the eagle is not. Text 2 states agencies must prioritize 'most threatened' species. Combined, they agree efforts should focus on the lake trout."
+      }
+    },
+    {
+      "id": "CTC_014",
+      "difficulty": "Hard",
+      "content": {
+        "passage_1": "Meding and Zasoski excluded all pathways other than the CMN by using barriers... a crucial step He and colleagues' study did not take.",
+        "passage_2": "Thus, the researchers' experimental design cannot ensure that any nutrient transfer observed can be attributed to a CMN and not to some other pathway.",
+        "question": "Based on the texts, which choice best describes a point on which the author of Text 1 and the author of Text 2 would most likely agree?",
+        "options": [
+          "A) Meding and Zasoski's study effectively excluded any explanation for nutrient transfer other than via a CMN.",
+          "B) Excluding root-to-root transfer of nutrients between plants is sufficient to ensure that any observed nutrient transfer must involve a CMN.",
+          "C) He and colleagues' study was not designed in a way that would allow it to produce compelling evidence that nutrient transfer occurred via a CMN.",
+          "D) A barrier that is impervious to both roots and fungal strands is necessary to evaluate nutrient transfer via a CMN."
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Text 1 criticizes 'He and colleagues' for not taking the 'crucial step' of using barriers. Text 2 argues that without proper exclusion, one 'cannot ensure' the cause is CMN. Both agree the design of 'He and colleagues' (lacking barriers) was insufficient to prove CMN transfer."
+      }
+    },
+    {
+      "id": "CTC_015",
+      "difficulty": "Medium",
+      "content": {
+        "passage_1": "This finding illustrates a foundational ecological principle: predators control prey population numbers.",
+        "passage_2": "William D. Gulsby and colleagues found that excluding coyotes... had no significant effect on white-tailed deer abundance... those studies often focus on small, rapidly reproducing prey... rather than large, slowly reproducing prey...",
+        "question": "Based on the texts, the author of Text 2 would most likely agree with which statement about the 'principle' mentioned in Text 1?",
+        "options": [
+          "A) It is plausible, but many of the studies that support it have methodological flaws.",
+          "B) It has been challenged by some studies, but the findings of those studies have not been widely accepted.",
+          "C) It may be true for some predators but only because those predators share certain physical characteristics.",
+          "D) It has some evidential support, but it should not be regarded as universally applicable."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Text 1 calls it a 'foundational principle.' Text 2 provides a counter-example (coyotes/deer) where the principle didn't hold true, suggesting it works for small prey but not large prey. Thus, the principle is not 'universally applicable.'"
+      }
+    },
+    {
+      "id": "CTC_016",
+      "difficulty": "Medium",
+      "content": {
+        "passage_1": "feral cat is a major predator of the ash-grey mouse... when this predation pressure... was temporarily reduced, their numbers significantly increased.",
+        "passage_2": "excluding wolves... had no significant effect on moose abundance... those studies often focus on small... prey... rather than large... prey, like moose, which could account for the difference...",
+        "question": "Based on the texts, the author of Text 2 would most likely agree with which statement about Risbey and colleagues' findings (Text 1)?",
+        "options": [
+          "A) They may be partially attributable to physical characteristics of ash-grey mice that are not shared by moose.",
+          "B) They may have been different if the ratio of the body size...",
+          "C) They may be partially explained by the fact that feral cats are smaller...",
+          "D) They may reflect a response that does not tend to be observed in prey species other than ash-grey mice."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Text 2 attributes the difference in results to the type of prey: 'small, rapidly reproducing' (like mice in Text 1) vs 'large, slowly reproducing' (like moose). Thus, the Text 1 findings are attributable to the characteristics of the mice."
+      }
+    },
+    {
+      "id": "CTC_017",
+      "difficulty": "Medium",
+      "content": {
+        "passage_1": "predation pressure on arctic ground squirrels was temporarily reduced, their numbers significantly increased.",
+        "passage_2": "excluding coyotes... had no significant effect on mule deer abundance... those studies often focus on small... prey... rather than large... prey like mule deer...",
+        "question": "Based on the texts, the author of Text 2 would most likely agree with which statement about Byrom and colleagues' findings (Text 1)?",
+        "options": [
+          "A) They may be partially explained by the fact that lynxes are smaller...",
+          "B) They may have been different if the ratio of the body size...",
+          "C) They may reflect a response that does not tend to be observed in prey species other than arctic ground squirrels.",
+          "D) They may be partially attributable to physical characteristics of arctic ground squirrels that are not shared by mule deer."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Identical logic to Q16. Text 2 attributes the difference to prey characteristics (size/reproduction rate). Squirrels (Text 1) are small; Deer (Text 2) are large."
+      }
+    },
+    {
+      "id": "CTC_018",
+      "difficulty": "Medium",
+      "content": {
+        "passage_1": "planting these species together so that the elderberry bushes provide shade for chia flowers... helps protect chia flowers...",
+        "passage_2": "Inspired by O'odham farmers, who often strategically plant chia flowers in the shade of sun-hardy species like elderberry bushes...",
+        "question": "Based on the texts, the author of Text 1 and the author of Text 2 would most likely agree on which point?",
+        "options": [
+          "A) Elderberry bushes can provide shade that protects chia flowers from high-intensity heat and light.",
+          "B) Nabhan's team's method could be refined...",
+          "C) Compared with Nabhan's approach, the O'odham approach has the advantage...",
+          "D) Elderberry bushes grow best when planted in shaded areas..."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Text 1 states elderberry bushes provide shade/protection. Text 2 acknowledges this technique ('Inspired by O'odham farmers... shade... for protection'). Both agree elderberry shade is protective."
+      }
+    },
+    {
+      "id": "CTC_019",
+      "difficulty": "Hard",
+      "content": {
+        "passage_1": "poets can write... 'between shifts'... So poets can practice their art even if they must earn their living in another way.",
+        "passage_2": "many people who do so have professional training... and extensive practice... which requires time not often available to those who must also work full-time jobs. Thus, financial security indirectly affects which people become poets.",
+        "question": "Based on the texts, Lorde (Text 1) and the author of Text 2 would most likely disagree about the answer to which of the following questions?",
+        "options": [
+          "A) Do other art forms than poetry require substantial investments of time and money?",
+          "B) Should poets try to gain experience working in nonartistic fields...?",
+          "C) Does professional training in poetry affect the quality of poet's work?",
+          "D) Is working a full-time job a major impediment to practicing the art of poetry?"
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Text 1 argues poets *can* practice even with other jobs/limited time. Text 2 argues that full-time jobs take away the time needed for the 'extensive practice' required for success. They disagree on whether a job is a major impediment."
+      }
+    },
+    {
+      "id": "CTC_020",
+      "difficulty": "Medium",
+      "content": {
+        "passage_1": "This variation [in definitions] makes it difficult for researchers to compare aspects of urbanization in different countries.",
+        "passage_2": "Recently, a group... developed a new measure called the 'degree of urbanization.' This new measure establishes global criteria...",
+        "question": "Based on the text, how would the author of Text 2 most likely respond to the problem presented in Text 1?",
+        "options": [
+          "A) By suggesting that researchers focus on topics besides urbanization.",
+          "B) By noting that a possible solution to the problem is available.",
+          "C) By recommending that a specific institution should further investigate the problem.",
+          "D) By supplying additional ways in which urbanization research is difficult."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Text 1 presents a problem (inconsistent definitions). Text 2 presents a 'new measure' that establishes 'global criteria.' Thus, Text 2 offers a solution to Text 1's problem."
+      }
+    },
+    {
+      "id": "CTC_021",
+      "difficulty": "Hard",
+      "content": {
+        "passage_1": "some researchers suggest that its current biota includes species from clades predating the split [80 million years ago]...",
+        "passage_2": "Nearly all of Grande Terre's living species belong to clades that originated much more recently: for example, the crown age of the island's clade of Goodeniaceae plants is 2.0 million years.",
+        "question": "Based on the texts, the author of Text 2 would most likely agree with which statement about the 'Gondwanan species' discussed in Text 1?",
+        "options": [
+          "A) Most of them began recolonizing Grande Terre from nearby islands around 2.0 million years ago.",
+          "B) Clades to which they belong originated no earlier than 41.1 million years ago.",
+          "C) Few if any of them were members of a clade that includes species currently inhabiting Grande Terre.",
+          "D) Although most of them have living descendants on Grande Terre, the stick insects and Goodeniaceae plants do not."
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Text 1 suggests current species might be old Gondwanan ones. Text 2 states 'Nearly all' living species are recent (younger than the split). Therefore, Text 2 believes few/none of the current species are the old Gondwanan ones."
+      }
+    },
+    {
+      "id": "CTC_022",
+      "difficulty": "Medium",
+      "content": {
+        "passage_1": "northern wild rice... will have significantly worse outcomes... By contrast, the white-tailed deer... should be able to withstand...",
+        "passage_2": "They must use the best information available to decide which species are most threatened and therefore most in need of conservation efforts.",
+        "question": "Based on the texts, both authors would most likely agree with which statement?",
+        "options": [
+          "A) State, federal, and tribal groups... should immediately begin conservation programs for both...",
+          "B) Agencies involved in natural-resource management in the Great Lakes region should focus their conservation efforts more on the northern wild rice than on the white-tailed deer.",
+          "C) A collaborative approach is necessary...",
+          "D) Conservation efforts focused on the northern wild rice are more likely to be successful..."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Same logic as Q3 and Q13. Text 1 identifies Wild Rice as threatened. Text 2 prioritizes threatened species. Combined: Focus on Wild Rice."
+      }
+    },
+    {
+      "id": "CTC_023",
+      "difficulty": "Hard",
+      "content": {
+        "passage_1": "Uisdean Nicholson and his team have discovered evidence... consistent with a 400-meter wide asteroid striking the seafloor... exhibits all the telltale signs of a high-velocity impact crater...",
+        "passage_2": "Both carbonate dissolution and subsurface salt withdrawal can cause craterlike depressions... However, carbonate dissolution is very unlikely... although subsurface salt withdrawal could have plausibly occurred... it would not exhibit the area of central uplift...",
+        "question": "Which choice best describes a difference between the approach of Text 1 and the approach of Text 2?",
+        "options": [
+          "A) Text 1 dispassionately describes... whereas Text 2 attempts to convey...",
+          "B) Text 1 focuses on features Nadir lacks, whereas Text 2 indicates features...",
+          "C) Text 1 discusses a single plausible cause of Nadir, whereas Text 2 evaluates two possible causes.",
+          "D) Text 1 emphasizes the evidence supporting an asteroid impact... whereas Text 2 argues against that explanation."
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Text 1 focuses exclusively on the asteroid impact theory. Text 2 evaluates 'carbonate dissolution' and 'subsurface salt withdrawal' as potential causes (before dismissing them). Thus, Text 2 evaluates two possible causes."
+      }
+    },
+    {
+      "id": "CTC_024",
+      "difficulty": "Medium",
+      "content": {
+        "passage_1": "It's obvious that the selection of Rasht by UNESCO has brought awareness... and has provided a boost to the city's tourism industry.",
+        "passage_2": "Without an intentional effort to promote the city's food scene, many current and potential visitors... may not even be aware...",
+        "question": "Based on the texts, both authors would most likely agree with which statement?",
+        "options": [
+          "A) The benefits of Rasht having been named a City of Gastronomy extend well beyond increased tourism.",
+          "B) Increased tourism isn't guaranteed after a city has been named a City of Gastronomy.",
+          "C) A city's food scene can benefit from the city being named a City of Gastronomy.",
+          "D) A significant number of visitors to Rasht may not know that it was named a City of Gastronomy."
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Text 1 claims the food scene *did* benefit ('brought awareness'). Text 2 claims it *can* benefit if marketing is done ('to benefit fully'). Both agree that the potential for benefit exists."
+      }
+    },
+    {
+      "id": "CTC_025",
+      "difficulty": "Hard",
+      "content": {
+        "passage_1": "Meding and Zasoski excluded all pathways other than the CMN by using barriers to keep the plants' root systems separate...",
+        "passage_2": "Meding and Zasoski took the necessary precaution of separating the plants' root systems (thereby excluding root-to-root transmission).",
+        "question": "Based on the texts, the author of Text 1 and the author of Text 2 would most likely agree with which statement?",
+        "options": [
+          "A) The barriers used in Meding and Zasoski's study effectively excluded root-to-root transmission of nutrients.",
+          "B) A barrier that is impervious to both roots and fungal strands is necessary...",
+          "C) Excluding root-to-root transfer... is sufficient to ensure...",
+          "D) He and colleagues' study did not find convincing evidence..."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Text 1 says the barriers kept root systems separate. Text 2 acknowledges they 'took the necessary precaution' and effectively excluded 'root-to-root transmission.' They agree the barriers worked for roots (even if Text 2 worries about fluids)."
+      }
+    },
+    {
+      "id": "CTC_026",
+      "difficulty": "Medium",
+      "content": {
+        "passage_1": "Degas insisted that his paintings be kept in their original frames... Impressionist painters likely chose these colorful frames to distinguish themselves...",
+        "passage_2": "those Impressionists who placed their works in painted frames... did so for aesthetic reasons: a frame's color was likely chosen because it would harmonize...",
+        "question": "Based on the texts, both authors would most likely agree with which statement?",
+        "options": [
+          "A) Many Impressionist painters were intentional about the frames they selected for their works.",
+          "B) Degas's preferred framing style was different from that of most Impressionist painters.",
+          "C) The colors in an Impressionist painting were often chosen to complement the colors of the frame...",
+          "D) Gold frames were considered especially desirable..."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Text 1 says Degas 'insisted' and others 'chose' frames. Text 2 says they 'did so for aesthetic reasons.' Both describe the framing as an intentional choice."
+      }
+    },
+    {
+      "id": "CTC_027",
+      "difficulty": "Medium",
+      "content": {
+        "passage_1": "It's obvious that the selection... has provided a boost to the city's tourism industry.",
+        "passage_2": "Without an intentional effort... many current and potential visitors... may not even be aware...",
+        "question": "Based on the texts, what would the author of Text 2 most likely say in response to the underlined claim in Text 1?",
+        "options": [
+          "A) Many people worked together...",
+          "B) Belo Horizonte may have benefited from being selected by UNESCO, but tourism can likely be further increased by making more potential visitors aware...",
+          "C) The naming of Belo Horizonte as a City of Gastronomy was long overdue...",
+          "D) The benefits of being named a City of Gastronomy extend well beyond tourism."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Text 1 claims a boost occurred. Text 2 argues that without marketing, many visitors aren't aware. Text 2 would acknowledge the status but argue that tourism could be *further* increased with the 'intentional effort' they recommend."
+      }
+    },
+    {
+      "id": "CTC_028",
+      "difficulty": "Hard",
+      "content": {
+        "passage_1": "Uisdean Nicholson and his team have discovered evidence... consistent with a 400 meter wide asteroid...",
+        "passage_2": "Both carbonate dissolution and subsurface salt withdrawal can cause craterlike depressions... However...",
+        "question": "Which choice best describes a difference between the approach of Text 1 and the approach of Text 2?",
+        "options": [
+          "A) Text 1 dispassionately describes...",
+          "B) Text 1 focuses on features Nadir lacks...",
+          "C) Text 1 discusses a single plausible cause of Nadir, whereas Text 2 evaluates two possible causes.",
+          "D) Text 1 emphasizes the evidence supporting an asteroid impact..."
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Duplicate of Q23. Text 1 discusses one cause (asteroid). Text 2 evaluates two (carbonate, salt)."
+      }
+    },
+    {
+      "id": "CTC_029",
+      "difficulty": "Hard",
+      "content": {
+        "passage_1": "found a transient but significant increase in molybdenum (Mo)... Anbar et al. therefore concluded that atmospheric oxygen briefly increased 2.5 Ga...",
+        "passage_2": "Slotznick et al. reexamined... revealed volcanic debris... The researchers assert that fluid could have reached the debris... and initiated oxidative weathering long after debris deposition.",
+        "question": "Based on the texts, Anbar et al. (Text 1) and Slotznick et al. (Text 2) would most likely disagree about the answer to which question...?",
+        "options": [
+          "A) Is the increase in Mo in that portion attributable to oxidative weathering of the material found in that portion?",
+          "B) Is the increase in Mo in that portion indicative of an increase in atmospheric oxygen dating to the same time?",
+          "C) Did chemically analyzing bulk samples lead to a false impression...",
+          "D) Is the increase in Mo in that portion suggest that atmospheric oxygen levels were not negligible..."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Text 1 concludes the Mo increase proves atmospheric oxygen increased at that time (2.5 Ga). Text 2 argues the Mo came from later fluid weathering volcanic debris. They disagree on whether the Mo indicates atmospheric oxygen *at that time*."
+      }
+    },
+    {
+      "id": "CTC_030",
+      "difficulty": "Hard",
+      "content": {
+        "passage_1": "hycean planets... habitable zone (HZ)... begins at about 1 astronomical unit (AU). In 2021, Nikku Madhusudhan et al. identified K2-18b as a hycean candidate, noting that the planet is located right on the inner edge of the HZ.",
+        "passage_2": "Tsai et al.'s calculations therefore placed the inner edge for these planets' HZ as far out as 3.85 AU.",
+        "question": "Based on the texts, how would Tsai et al. (Text 2) most likely respond to Madhusudhan et al.'s research, as presented in Text 1?",
+        "options": [
+          "A) By arguing that K2-18 b and other hycean candidates are unlikely to support life...",
+          "B) By stating that the chemical composition... suggests that this planet's surface is unlikely to harbor liquid water.",
+          "C) By maintaining that Madhusudhan et al. relied on a model whose estimates...",
+          "D) By observing that unlike the hycean candidate..."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Text 1 places K2-18b at the inner edge (1 AU), meaning it has liquid water. Text 2 calculates the edge is much further out (3.85 AU). If K2-18b is at 1 AU, Text 2 would classify it as too hot for liquid water."
+      }
+    },
+    {
+      "id": "CTC_031",
+      "difficulty": "Hard",
+      "content": {
+        "passage_1": "psychologist Selin Salman-Engin and colleagues have demonstrated the benefit of making connections with strangers.",
+        "passage_2": "Social relations research commonly draws on a model that centers an individual within three concentric circles... innermost... close... weak ties (those more distant but important enough to be counted...).",
+        "question": "Based on the texts, what would Salman-Engin and colleagues (Text 1) most likely say about the discussion of the model in Text 2?",
+        "options": [
+          "A) It underscores that most research on social interactions fails to capture a category of connection that has the capacity to contribute positively...",
+          "B) It reflects an overemphasis on relationship longevity...",
+          "C) It explains researchers' observations...",
+          "D) It emphasizes distinctions among types..."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Text 1 shows benefits from 'strangers.' Text 2's model includes 'weak ties' but defines them as 'important enough to be counted.' Strangers (one-off interactions) likely don't fit into the 'social network' model of Text 2. Thus, the model fails to capture this beneficial category."
+      }
+    },
+    {
+      "id": "CTC_032",
+      "difficulty": "Medium",
+      "content": {
+        "passage_1": "Daniel Kahneman and Amos Tversky... Finding that participants' responses indicated that losses have a greater psychological impact than equivalent gains do...",
+        "passage_2": "Dana Zeif and Eldad Yechiam... concluded that only the latter contexts [high stakes] were associated with loss aversion.",
+        "question": "Based on the texts, how would Zeif and Yechiam (Text 2) most likely respond to Kahneman and Tversky's finding (Text 1)?",
+        "options": [
+          "A) By contending that the attitude toward financial losses that Kahneman and Tversky observed is contingent on the magnitude of outcomes",
+          "B) By agreeing that experimental results...",
+          "C) By observing that ability to assess feelings...",
+          "D) By disputing Kahneman and Tversky's claim..."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Text 1 proposes general loss aversion. Text 2 found loss aversion *only* in high-stakes contexts. Thus, Text 2 would argue the finding depends on the 'magnitude of outcomes' (stakes)."
+      }
+    },
+    {
+      "id": "CTC_033",
+      "difficulty": "Easy",
+      "content": {
+        "passage_1": "But scientists still have a lot to learn about them. ... The sloths' inaccessibility has made it hard for scientists to study them.",
+        "passage_2": "By using a hat-like monitor, biologist Bryson Voirin and colleagues can at last discover the previously hidden activities of sloths.",
+        "question": "The author of Text 1 and the author of Text 2 both discuss which topic?",
+        "options": [
+          "A) How extinct sloths compare with living sloths",
+          "B) Scientists' efforts to understand sloths",
+          "C) The benefits of putting monitoring devices on sloths",
+          "D) Changes in sloths' habitats"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Text 1 discusses the difficulty of studying sloths. Text 2 discusses a new method for studying them. Both are about the scientific effort to understand the animals."
+      }
+    },
+    {
+      "id": "CTC_034",
+      "difficulty": "Hard",
+      "content": {
+        "passage_1": "Meding and Zasoski... using barriers... a crucial step He and colleagues' study did not take.",
+        "passage_2": "any barrier used must allow... liquids through. Thus, the researchers' [Meding and Zasoski] experimental design cannot ensure...",
+        "question": "Based on the texts, which choice best describes a similarity in the points of view presented in Text 1 and Text 2?",
+        "options": [
+          "A) Each text attempts to dispel a common misunderstanding...",
+          "B) Each text assumes that most nutrient transfer...",
+          "C) Each text analyzes methods for studying CMN nutrient transfer in order to propose an alternative method of study.",
+          "D) Each text critiques the methodology of a study about nutrient transfer via a CMN."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Text 1 critiques He's methodology (lack of barriers). Text 2 critiques Meding's methodology (permeable barriers). Both are critiques of study methodologies."
+      }
+    },
+    {
+      "id": "CTC_035",
+      "difficulty": "Medium",
+      "content": {
+        "passage_1": "white-eyed vireo... birdsong has long been considered a male trait; researchers have argued that singing enables males to attract mates...",
+        "passage_2": "They claim that the historical mischaracterization... is largely the result of bias: much of the research... has been near universities in the temperate northern hemisphere...",
+        "question": "Based on the texts, how would Odom and colleagues (Text 2) most likely respond to the view of birdsong presented in Text 1?",
+        "options": [
+          "A) They would claim that other factors...",
+          "B) They would underscore that male songbirds...",
+          "C) They would argue that it was influenced by the kinds of study sites researchers tended to select.",
+          "D) They would suggest that it reflects a tendency..."
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Duplicate logic to Q2. Text 2 attributes the bias to the location of research (near universities in the north). Thus, the view was influenced by the selected study sites."
+      }
+    },
+    {
+      "id": "CTC_036",
+      "difficulty": "Hard",
+      "content": {
+        "passage_1": "Grande Terre island split... approximately 80 million years ago... Some researchers posit that the island's current biota includes members of Gondwanan clades (i.e., clades predating the split)...",
+        "passage_2": "crown age... is 48.9 million years for Grande Terre's clade of harvest spiders... crown age of Grande Terre's clade of cockroaches is 2.7 million years...",
+        "question": "Taken together, Text 1 and Text 2 best support which statement about the clades of harvest spiders and cockroaches on Grande Terre?",
+        "options": [
+          "A) The clade of harvest spiders must have originated on Gondwana, but the clade of cockroaches may or may not have.",
+          "B) Both the clade of harvest spiders and the clade of cockroaches originated elsewhere and colonized Grande Terre.",
+          "C) Neither the clade of harvest spiders nor the clade of cockroaches originated on Gondwana.",
+          "D) The clade of harvest spiders originated before Grande Terre split..."
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Text 1 says the split was 80 million years ago. Gondwanan clades must predate this. Text 2 says Spiders are 48.9m years old and Cockroaches are 2.7m years old. Both are younger than 80m. Therefore, neither originated on Gondwana before the split."
+      }
+    },
+    {
+      "id": "CTC_037",
+      "difficulty": "Medium",
+      "content": {
+        "passage_1": "Hangs the moon. What seemed so far away Is but a child's balloon, forgotten after play.",
+        "passage_2": "Little horned, happy moon, Can you hear me up so high? Will you come down soon?",
+        "question": "Which choice best describes a notable difference in how the speaker of Text 1 and the speaker of Text 2 portray the moon?",
+        "options": [
+          "A) While both speakers characterize the moon as an entrapped figure...",
+          "B) While both speakers present the moon as a tangible object...",
+          "C) While the speaker of Text 1 presents the moon as an object of play...",
+          "D) While the speaker of Text 1 presents the moon as seeming to be very close, the speaker of Text 2 emphasizes the moon's distance from the speaker."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Text 1 says the moon 'Is but a child's balloon' (implying it looks small/close/tangible). Text 2 asks 'Can you hear me up so high?' emphasizing the distance."
+      }
+    }
+  ]
+}

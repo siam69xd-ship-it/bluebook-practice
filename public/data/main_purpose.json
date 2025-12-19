@@ -1,0 +1,786 @@
+{
+  "test_metadata": {
+    "test_name": "Digital SAT Reading & Writing",
+    "domain": "Craft and Structure",
+    "skill": "Text Structure and Purpose",
+    "topic": "Main Purpose",
+    "total_questions": 43,
+    "version": "1.0"
+  },
+  "questions": [
+    {
+      "id": "MP_001",
+      "difficulty": "Easy",
+      "content": {
+        "passage": "When people think of dinosaurs with feathers, they typically think of winged dinosaurs, such as the bat-like Ambopteryx. However, many dinosaurs that didn't have wings also had feathers on their bodies. For instance, research indicates that the wingless large Yutyrannus likely had feathers.",
+        "question": "Which choice best states the main purpose of the text?",
+        "options": [
+          "A) To discuss the presence of feathers on certain types of dinosaurs.",
+          "B) To point out the differences between dinosaur feathers and bird feathers.",
+          "C) To explain why feathered dinosaurs went extinct.",
+          "D) To argue that only one species of dinosaur had feathers."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The text contrasts winged dinosaurs with wingless ones, noting that many wingless dinosaurs (like Yutyrannus) also had feathers. The main point is to highlight that feathers were present on these specific types of dinosaurs, not just winged ones."
+      }
+    },
+    {
+      "id": "MP_002",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Smartwatches and fitness trackers currently available to the public claim to be able to provide data on VO2 max... However, whether or not these measurements are accurate is still unproven. Meanwhile, Cambridge developed a model that can provide more accurate tracking of one's heart rate and can also monitor fitness changes leading to better indications of health risks.",
+        "question": "Which choice best states the main purpose of the text?",
+        "options": [
+          "A) To prove that currently available smartwatches are not an accurate indicator of overall health.",
+          "B) To introduce a new fitness tracker model that may provide more accurate data on health than current products.",
+          "C) To argue that individuals should not rely on fitness trackers or smartwatches to monitor their health.",
+          "D) To summarize the findings of a new fitness tracker model that will be available to the public soon."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The text critiques current trackers as 'unproven' and then introduces a Cambridge model that provides 'more accurate tracking.' The purpose is to introduce this improved alternative."
+      }
+    },
+    {
+      "id": "MP_003",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Researchers have found what they believe to be a cause behind mice being motivated to exercise: gut microbes... It has been postulated that if this bacteria could be given to people in pill form, they too could experience the same motivation to exercise.",
+        "question": "Which choice best states the main purpose of the text?",
+        "options": [
+          "A) To understand better what makes mice motivated to move.",
+          "B) To suggest that the findings in mice could be used to increase human activity.",
+          "C) To explain research in mice that will be used to support people.",
+          "D) To imply that a lack of motivation to work out is not controllable."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The text discusses findings in mice but concludes with the postulation that these findings (bacteria in pill form) could help 'people... experience the same motivation.' The purpose is to suggest this human application."
+      }
+    },
+    {
+      "id": "MP_004",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Eden Robinson is a novelist... praised her work for combining traditional Haisia stories with popular genres... But Robinson is not the only Indigenous writer to blend traditional stories with popular literature. In the 2019 novel Empire of Wild, Cherie Dimaline successfully blended the oral storytelling tradition of her people... with horror fiction.",
+        "question": "Which choice best states the main purpose of the text?",
+        "options": [
+          "A) To discuss two writers who blend traditional indigenous stories with popular genres.",
+          "B) To urge younger Indigenous authors to avoid writing in popular genres.",
+          "C) To argue that traditional Indigenous stories are more memorable than most novels are.",
+          "D) To explain why one indigenous author has achieved more success than another has."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The text introduces Eden Robinson and then explicitly links her to Cherie Dimaline, stating Robinson is 'not the only' one to do this. It then describes Dimaline's similar work. The purpose is to discuss both writers and their shared technique."
+      }
+    },
+    {
+      "id": "MP_005",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Luang Prabang has high pedestrian traffic, but simply replicating a feature... may be insufficient to induce increased walking in other cities. As urbanist Mariela Alfonzo argues, our understanding of individuals' decision-making... is insufficiently robust... walking decisions are made in complex context in which multiple conditions and needs inform individuals' choices.",
+        "question": "Which choice best states the main purpose of the text?",
+        "options": [
+          "A) To describe the effect of human-scaled architecture on any given city's walkability.",
+          "B) To explain why it is challenging to compare the amount of pedestrian traffic in different cities.",
+          "C) To present a claim about how individuals' decision-making about walking can be improved.",
+          "D) To discuss the difficulty of identifying a reliable way to increase walking in any given city."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The text states that simply copying features is 'insufficient' and that understanding walking decisions is 'complex' and 'insufficiently robust.' This highlights the difficulty in finding a reliable method to increase walking."
+      }
+    },
+    {
+      "id": "MP_006",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Researchers have long hypothesized that woolly mammoths were hunted to extinction... using spears with grooved tips known as Clovis points. One anthropologist set out to test this hypothesis... The projectiles generally penetrated only a few inches into the clay... This led the anthropologist to conclude that hunters using spears with Clovis points likely weren't the principal drivers of the extinction.",
+        "question": "Which choice best states the main purpose of the text?",
+        "options": [
+          "A) To argue for the significance of new findings amid an ongoing debate among researchers.",
+          "B) To discuss the advantages and disadvantages of the method used in an experiment.",
+          "C) To summarize two competing hypotheses and a major finding associated with each one.",
+          "D) To describe an experiment whose results cast doubt on an established hypothesis."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The text describes an established hypothesis (Clovis points killed mammoths), details an experiment testing it, and states the conclusion that casts doubt on that hypothesis (hunters likely weren't the drivers)."
+      }
+    },
+    {
+      "id": "MP_007",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Scholarly interest in literary juvenilia... tends to focus on unpublished works by authors who became famous as adults... But some scholars also argue that recovering juvenilia by lesser-known writers is essential to understanding literary history: Daisy Ashford's novels... were widely read by contemporaries and are therefore deserving of closer attention.",
+        "question": "Which choice best states the main purpose of the text?",
+        "options": [
+          "A) To describe the challenges famous writers encountered when seeking to publish works written in their childhood.",
+          "B) To present reasons why literary scholars consider juvenilia to be valuable resources.",
+          "C) To compare the accomplishments of young writers with those of their adult contemporaries.",
+          "D) To argue that Ashford's novels have more literary merit than Dickens's juvenilia do."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The text explains two reasons scholars value juvenilia: insights into famous authors' development (Dickens) and understanding literary history through lesser-known writers (Ashford). Thus, it presents reasons why these resources are valuable."
+      }
+    },
+    {
+      "id": "MP_008",
+      "difficulty": "Easy",
+      "content": {
+        "passage": "The following text is adapted from Jean Webster's 1912 novel Daddy-Long-Legs... (The college is) organizing the Freshman basketball team and there's just a chance that I shall make it. I'm little of course, but terribly quick and wiry and tough. While the others are hopping about in the air, I can dodge under their feet and grab the ball.",
+        "question": "Which choice best states the main purpose of the text?",
+        "options": [
+          "A) To compare basketball with other sports.",
+          "B) To provide details of how to play basketball.",
+          "C) To state how players will be chosen for the basketball team.",
+          "D) To explain why the narrator thinks she might make the basketball team."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The narrator states there is a 'chance that I shall make it' and then lists her physical attributes (quick, wiry, tough) that give her an advantage. She is explaining why she has a shot at the team."
+      }
+    },
+    {
+      "id": "MP_009",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "In the late 1800s, Spanish-language newspapers flourished in cities across Texas... But El Paso surpassed all other cities in the state... El Paso is located on the border with Mexico and has always had a large population of Spanish speakers. Thus, it is unsurprising that this city became such a rich site for Spanish-language journalism.",
+        "question": "Which choice best states the main purpose of the text?",
+        "options": [
+          "A) To compare Spanish-language newspapers published in Texas today with ones published there during the late 1800s.",
+          "B) To explain that Spanish-language newspapers thrived in Texas and especially in El Paso during the late 1800s.",
+          "C) To argue that Spanish-language newspapers published in El Paso influenced the ones published in San Antonio during the late 1800s.",
+          "D) To explain why Spanish-language newspapers published in Texas were so popular in Mexico during the late 1800s."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The text establishes that these newspapers flourished in Texas generally, highlights El Paso specifically as the leader, and explains why. Option B covers both the general thriving in Texas and the specific focus on El Paso."
+      }
+    },
+    {
+      "id": "MP_010",
+      "difficulty": "Easy",
+      "content": {
+        "passage": "Francie thought that all the books in the world were in that library and she had a plan about reading all the books in the world. She was reading a book a day in alphabetical order... She had been reading a book a day for a long time now and she was still in the B's... For all her enthusiasm, she had to admit that some of the B's had been hard going. But Francie was a reader.",
+        "question": "Which choice best states the main purpose of the text?",
+        "options": [
+          "A) To illustrate Francie's enjoyment of an unusual topic.",
+          "B) To explain why Francie prefers reading over other activities.",
+          "C) To portray Francie's determination to meet a goal.",
+          "D) To describe a book that Francie greatly admires."
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The text details Francie's specific plan (reading every book alphabetically), her persistence ('still in the B's'), and her resolve despite difficulty ('hard going... But Francie was a reader'). This portrays her determination."
+      }
+    },
+    {
+      "id": "MP_011",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Gus Edwards's atmospheric play Black Body Blues was produced... by the groundbreaking Negro Ensemble Company (NEC). NEC cofounder Douglas Turner Ward... had met actor... Robert Hooks... Together, they envisioned a theater company that would nurture and showcase the work of Black theater professionals. Since NEC's founding... its workshops and performances have given Black playwrights... a forum...",
+        "question": "Which choice best states the main purpose of the text?",
+        "options": [
+          "A) To show how the play A Raisin in the Sun influenced Ward and Hooks.",
+          "B) To bring attention to a work by Gus Edwards.",
+          "C) To describe how Ward and Hooks's creative partnership changed over time.",
+          "D) To discuss the origin and importance of the NEC."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "While the text mentions Gus Edwards, the majority of the passage focuses on how Ward and Hooks met, founded the NEC, and the company's mission/impact. Thus, the main purpose is discussing the NEC's origin and importance."
+      }
+    },
+    {
+      "id": "MP_012",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Today composer Scott Joplin is mainly celebrated for his catchy ragtime pieces... However, by overlooking his less famous works, listeners will miss the full range of Joplin's creativity. For instance, his waltz 'Pleasant Moments' and his opera 'Treemonisha'... These masterpieces deserve as much fame as Joplin's biggest hits.",
+        "question": "Which choice best states the main purpose of the text?",
+        "options": [
+          "A) To argue that more attention should be given to Joplin's lesser-known works.",
+          "B) To describe the similarities and differences between ragtime music and opera.",
+          "C) To explain how Joplin learned to compose and perform ragtime music.",
+          "D) To encourage music lovers to listen to music by many different composers."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The text explicitly states that listeners overlook his less famous works and argues that pieces like his waltz and opera 'deserve as much fame.' The purpose is to advocate for these works."
+      }
+    },
+    {
+      "id": "MP_013",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Some critics have found fault with the abrupt endings of Desolation Island and other books in the series... But other critics argue that the books should not be thought of as discrete texts... but as a single incredibly long work...",
+        "question": "Which choice best states the main purpose of the text?",
+        "options": [
+          "A) To explain why many critics find the Aubrey/Maturin novels to be remarkably entertaining despite flaws in the novels' structures.",
+          "B) To describe a characteristic of the Aubrey/Maturin novels and offer two differing viewpoints on this characteristic.",
+          "C) To argue that the Aubrey/Maturin series should have the literary renown of The Forsyte Saga.",
+          "D) To present a reason the unusual structure that O'Brian uses for Desolation Island makes it one of his most complex books."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The text describes a characteristic (abrupt endings) and then presents two views: one finding fault with it, and another arguing it makes sense if viewed as one long work. Option B captures this perfectly."
+      }
+    },
+    {
+      "id": "MP_014",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "President Richard Nixon is most famous for his participation in the... Watergate political scandal... But Nixon's legacy is complex: he has been praised for his role in opening relations between the United States and China, and he once made an attempt at reforming United States health care policy...",
+        "question": "Which choice best states the main purpose of the text?",
+        "options": [
+          "A) It catalogs the most notable achievements of a historical figure.",
+          "B) It argues that the seeming prominence of a historical figure is largely due to the actions of others.",
+          "C) It assesses a historical figure's significance by considering both his achievements and failings.",
+          "D) It explains how a historical figure's reputation has improved significantly with the passage of time."
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The text acknowledges Nixon's failing (Watergate) but counters with his achievements (China, health care), presenting a 'complex' legacy. This is an assessment considering both sides."
+      }
+    },
+    {
+      "id": "MP_015",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Recent advancements in ohmic heating were made through research in Chile... Ohmic heating is generally considered to be an improvement over more conventional thermal preservation methods: whereas conventional methods transfer energy from the surface... ohmic heating passes electric current through food products to generate heat within the food itself.",
+        "question": "Which choice best states the main purpose of the text?",
+        "options": [
+          "A) It provides an overview of the research into ohmic heating both globally and in a specific country.",
+          "B) It introduces ohmic heating as a food preservation technology and identifies one of its advantages.",
+          "C) It explains why conventional heating methods are popular in commercial applications and proposes a shift away from these methods.",
+          "D) It suggests that there are possible flaws in ohmic heating technologies that have not yet been well researched."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The text introduces the technology (ohmic heating) and explains its advantage (generating heat within the food) over conventional methods."
+      }
+    },
+    {
+      "id": "MP_016",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "In 2020, rap artist and professor A.D. Carson published the first peer-reviewed rap album... Typically in peer review, experts evaluate scholarly articles... For Carson's album... peer review involved both scholars and rap artists... Carson's album helped redefine how scholarship is created and shared.",
+        "question": "Which choice best states the main purpose of the text?",
+        "options": [
+          "A) To compare the relative public impact of scholarly articles and albums.",
+          "B) To describe how each step of the peer review process unfolds.",
+          "C) To capture one scholar's opinion of a new rap album.",
+          "D) To explain why a certain rap album is particularly innovative."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The text explains that the album was peer-reviewed (unusual for rap) and involved a unique mix of reviewers, ultimately 'redefining' scholarship. This explains why the album is innovative."
+      }
+    },
+    {
+      "id": "MP_017",
+      "difficulty": "Easy",
+      "content": {
+        "passage": "I felt like a tourist. But Babou fussed with my cap... He looked me in the eye... and thought maybe just maybe I had it in me after all... 'I am glad you are here to see this, Darioush-jan.' Maybe I wasn't such a tourist.",
+        "question": "Which choice best states the main purpose of the text?",
+        "options": [
+          "A) To demonstrate that Babou and Darius aren't very interested in going to new places.",
+          "B) To emphasize that Darius has been looking forward to an event.",
+          "C) To suggest that Babou is planning to visit Darius in the United States soon.",
+          "D) To show that Babou affects the way Darius thinks of himself."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Darius starts by feeling like a tourist. After Babou's warm actions and words, Darius thinks 'Maybe I wasn't such a tourist.' Babou's behavior directly changes Darius's self-perception."
+      }
+    },
+    {
+      "id": "MP_018",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "In 2011 Brynn M. Devine and colleagues published a study concluding that ocean acidification has a strong effect... However, Devine and colleagues' study relied on a mean sample size of only about 25 fish... Timothy D. Clark and colleagues caution that relying on such a relatively small sample size can increase the potential for biased analysis.",
+        "question": "Which choice best states the main purpose of the text?",
+        "options": [
+          "A) To note a potential concern about the findings of a scientific study.",
+          "B) To discuss an aspect of ocean acidification that is frequently overlooked.",
+          "C) To present a debate between two research teams about a cause of ocean acidification.",
+          "D) To explain how the behavior of a fish species has changed over time."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The text brings up a study and then immediately cites a concern regarding its small sample size, which could lead to 'biased analysis.' The purpose is to note this concern."
+      }
+    },
+    {
+      "id": "MP_019",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "San Francisco has high pedestrian traffic, but simply replicating a feature... may be insufficient to induce increased walking... As urbanist Mariela Alfonzo argues, our understanding of individuals' decision-making... is insufficiently robust... walking decisions are made in complex contexts...",
+        "question": "Which choice best states the main purpose of the text?",
+        "options": [
+          "A) To discuss the difficulty of identifying a reliable way to increase walking in any given city.",
+          "B) To explain why it is challenging to compare the amount of pedestrian traffic in different cities.",
+          "C) To describe the effect of a high density of storefronts on any given city's walkability.",
+          "D) To present a claim about how individual's decision-making about walking can be improved."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Identical logic to Question 5. The text argues that simple replication fails because the decision-making is complex and not fully understood, highlighting the difficulty in reliably increasing walking."
+      }
+    },
+    {
+      "id": "MP_020",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Can field mustard plants grow on Mars? ... researchers in the Netherlands recently showed that the seeds of many common plant species can germinate in soil designed to simulate Martian conditions... In fact, some species actually did better in Martian soil than in Earth soil...",
+        "question": "Which choice best states the main purpose of the text?",
+        "options": [
+          "A) To answer long-standing questions about how Martian soil conditions can be simulated on Earth.",
+          "B) To present a surprising finding about plants grown in soil intended to be similar to Martian soil.",
+          "C) To discuss an unexpected result about the role of water in plants grown in simulated Martian soil.",
+          "D) To explain an important study of differences in the composition of Martian soil and the composition of Earth soil."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The text presents the finding that plants *can* grow in simulated Martian soil, and surprisingly, some grew *better* than in Earth soil. This is the central, surprising finding."
+      }
+    },
+    {
+      "id": "MP_021",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "During Rome's republican period... libraries were predominantly owned by wealthy individuals... The first public library... commissioned by Emperor Augustus. As modern scholar Fabio Fernandes notes, however, these two traditions aren't as distinct as they seem, as both the emperor and the private library owners viewed their libraries as extensions of their personal patronage...",
+        "question": "Which choice best states the main purpose of the text?",
+        "options": [
+          "A) To call into question the notion that private Roman libraries disappeared during the first century BCE.",
+          "B) To contend that early imperial leaders in Rome wielded too much influence over libraries.",
+          "C) To give a brief overview of public access to libraries throughout Rome's republican period.",
+          "D) To assert that private and early public libraries in ancient Rome had an essential similarity."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The text contrasts private and public libraries but concludes with Fernandes's point that they 'aren't as distinct as they seem' because both were forms of 'personal patronage.' This asserts a similarity."
+      }
+    },
+    {
+      "id": "MP_022",
+      "difficulty": "Easy",
+      "content": {
+        "passage": "My spirit swoons, and all my senses cry For Ocean's breast... Rock me to sleep, ye waves... Just let me drift far out from toil and care... To make my soothing slumberous lullaby.",
+        "question": "Which choice best states the main purpose of the text?",
+        "options": [
+          "A) To justify the speaker's qualms about being transported by the ocean to a quiet destination.",
+          "B) To contrast the demands of the speaker's everyday life with the serenity of being rocked to sleep by the ocean.",
+          "C) To illustrate the increasing intensity of the speaker's desire to escape ongoing hardship by gliding on the ocean.",
+          "D) To convey the speaker's longing for the ocean to impart a sense of inner tranquility."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The speaker explicitly asks the ocean to 'Rock me to sleep' and let him drift from 'toil and care,' seeking a 'soothing slumberous lullaby.' This expresses a deep longing for tranquility from the ocean."
+      }
+    },
+    {
+      "id": "MP_023",
+      "difficulty": "Easy",
+      "content": {
+        "passage": "Archaeologists studying the ancient city of Pompeii... discovered a well-preserved food shop known as a thermopolium... These items give researchers a better understanding of what daily life in Pompeii may have been like. For example, the archaeologists found a ceramic jar...",
+        "question": "Which choice best states the main purpose of the text?",
+        "options": [
+          "A) To discuss the political system of Italy",
+          "B) To present a recent archaeological discovery",
+          "C) To describe a region's climate",
+          "D) To compare ancient artworks with modern ones"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The text focuses entirely on the discovery of the thermopolium in Pompeii and what it contained. It is a straightforward presentation of this find."
+      }
+    },
+    {
+      "id": "MP_024",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "The sermon is a sound of words spoken to the ear... and extends no farther than the strength of memory can convey it; a book printed is a record, remaining in every man's possession... and conveys its contents for ages to come...",
+        "question": "Which choice best states the main purpose of the text?",
+        "options": [
+          "A) It recounts why the works of some artists are still discussed by critics after the artists' deaths while others are not.",
+          "B) It analyzes the contributions to society of two different groups of scholars.",
+          "C) It demonstrates that one form of communication is more commonly used than another.",
+          "D) It describes differences in the characteristics of two kinds of communication."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The text contrasts 'The sermon' (spoken, temporary) with 'a book printed' (recorded, permanent). It describes the different characteristics of these two forms of communication."
+      }
+    },
+    {
+      "id": "MP_025",
+      "difficulty": "Easy",
+      "content": {
+        "passage": "In the village where Max lives, there is an old fortress called La Reina. Children in the village say that the fortress is haunted. For as long as he could remember, Max had begged Papa (his father) to take him to see La Reina... He'd be a hero among his friends... Maybe this summer Papa would finally take him.",
+        "question": "Which choice best describes the overall purpose of the text?",
+        "options": [
+          "A) To show how much Max wants to visit La Reina.",
+          "B) To portray how proud Max's father is of Max.",
+          "C) To criticize Max for disliking summer.",
+          "D) To explain why Max doesn't want to grow up yet."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The text revolves around Max begging his father to go, wanting to be a hero for going, and hoping 'this summer' is the time. It centers on his desire to visit the fortress."
+      }
+    },
+    {
+      "id": "MP_026",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Argyroxiphium sandwicense is a species in a family of plants known collectively as the silversword alliance... Members of this alliance exhibit an extraordinary range of phenotypes... All species in the alliance descended from a single ancestral tarweed plant... The tarweed's descendants diversified into distinct species...",
+        "question": "Which choice best states the main purpose of the text?",
+        "options": [
+          "A) To advance the claim that all plants on the Hawaiian Islands are part of the silversword alliance and list possible ancestors of the plants that make up the alliance.",
+          "B) To indicate the specific tarweed ancestor of all plants that grow on the Hawaiian Islands and explain why the plants have such varied physical characteristics.",
+          "C) To describe the silversword alliance and explain how the plant family became so varied.",
+          "D) To describe the specific habitat where Argyroxiphium sandwicense are found and identify other plants that share a common ancestor with them."
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The text introduces the 'silversword alliance,' notes its 'extraordinary range of phenotypes' (variation), and explains the cause: descent from a single ancestor and diversification into different habitats."
+      }
+    },
+    {
+      "id": "MP_027",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "In 1879... botanist William Beal buried 20 glass bottles filled with sand and seeds... Since then, some of the bottles have been retrieved in the periodic checks... After 60 years had elapsed... Verbascum seeds have remained viable, including those from a bottle dug up in 2021...",
+        "question": "Which choice best states the main purpose of the text?",
+        "options": [
+          "A) To discuss an ongoing experiment.",
+          "B) To explain how to get rid of certain plants.",
+          "C) To compare two experiments addressing the same questions.",
+          "D) To describe challenges associated with preserving seeds."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The text describes an experiment started in 1879 that is still yielding results (bottles dug up in 2021). It discusses the history and current status of this single, long-term experiment."
+      }
+    },
+    {
+      "id": "MP_028",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Karl Polanyi... rarely discuss domestic capitalism in Africa before the period of European colonization... Mariana Candido and other Africanist scholars have shown, however, that... features of capitalism predated colonization. One reason for this discrepancy is that historians of capitalism tend to focus on longitudinal economic data... which do not exist for much of precolonial Africa.",
+        "question": "Which choice best describes the main purpose of the text?",
+        "options": [
+          "A) To explain why historians of capitalism and Africanist scholars disagree about which activities are features of capitalism",
+          "B) To present and account for a potentially misleading characteristic of the work of historians of capitalism",
+          "C) To describe and evaluate a method used by Africanist scholars that distinguishes their work from that of historians of capitalism",
+          "D) To summarize a debate between historians of capitalism and Africanist scholars about how to interpret longitudinal economic data from archival records"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The text notes a flaw in 'historians of capitalism' (they ignore precolonial African capitalism) and accounts for it (they rely on data that doesn't exist). Thus, it presents a misleading characteristic and explains the reason for it."
+      }
+    },
+    {
+      "id": "MP_029",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Roy McLendon's Moonlit St. Lucie... is typical of paintings by the Florida Highwaymen... Some art historians suggest that Highwaymen paintings played a role in shaping popular perceptions of the state that persist today: the natural iconography that McLendon and colleagues constantly revisited... is now seen as classically Floridian.",
+        "question": "Which choice best states the main purpose of the text?",
+        "options": [
+          "A) To describe the historical circumstances in which paintings by the Florida Highwaymen experienced a resurgence in popularity.",
+          "B) To explain that a particular painting by Roy McLendon has had greater influence on the broader culture of the state of Florida than is generally acknowledged.",
+          "C) To contrast the public's reaction during the 1950s and '60s to a particular painting by Roy McLendon with more recent reactions to it.",
+          "D) To present the argument that paintings by the Florida Highwaymen likely helped to create a particular widespread impression of Florida."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The text states that art historians suggest these paintings 'played a role in shaping popular perceptions of the state.' This aligns perfectly with Option D."
+      }
+    },
+    {
+      "id": "MP_030",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "shifts are often explained by appeal to the energy ladder, a model holding that fuel choice is mediated mainly by household income... Alemu Mekonnen and Gunnar Köhlin study of fuel use in Ethiopia shows this model to be reductive, however: household fuel use was heterogeneous... and influenced by several factors...",
+        "question": "Which choice best describes the main purpose of the text?",
+        "options": [
+          "A) To contrast patterns in household fuel use in two countries.",
+          "B) To account for the effect of fuel use on household income.",
+          "C) To critique a frequently used model of changes in household fuel prices.",
+          "D) To challenge a common explanation for households' fuel choices."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The text introduces the 'energy ladder' model (a common explanation) and then cites a study that shows this model to be 'reductive' (too simple). Thus, the text challenges that common explanation."
+      }
+    },
+    {
+      "id": "MP_031",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "the sonnet sequence... remains a prevalent poetic genre. Although the sonnet's intricate, rule-bound structure makes writing even one sonnet... intrinsically challenging, more recent poets from Gwendolyn Brooks to Marilyn Nelson have undertaken sonnet sequences, likely in part because of the opportunity the genre presents for showcasing a poet's virtuosity and ingenuity.",
+        "question": "Which choice best states the main purpose of the text?",
+        "options": [
+          "A) To describe some of the innovations Brooks and Nelson have introduced to the sonnet sequence.",
+          "B) To contrast the more creative sonnet sequences of Brooks and Nelson with the more conventional ones of Shakespeare and Spenser.",
+          "C) To enumerate the structural features of sonnet sequences that make them challenging to compose.",
+          "D) To suggest a reason for the enduring appeal of the sonnet sequence among poets despite its challenging form."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The text notes the genre is 'challenging' but still 'prevalent' (enduring appeal). It then suggests a reason: the opportunity to showcase 'virtuosity and ingenuity.'"
+      }
+    },
+    {
+      "id": "MP_032",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "Scholarly interest in literary juvenilia... tends to focus on unpublished works by authors who became famous as adults... But some scholars also argue that recovering juvenilia by lesser-known writers is essential to understanding literary history: Daisy Ashford's novels... were widely read by contemporaries and are therefore deserving of closer attention.",
+        "question": "Which choice best states the main purpose of the text?",
+        "options": [
+          "A) To describe the challenges famous writers encountered when seeking to publish works written in their childhood",
+          "B) To present reasons why literary scholars consider juvenilia to be valuable resources",
+          "C) To compare the accomplishments of young writers with those of their adult contemporaries",
+          "D) To argue that Ashford's novels have more literary merit than Dickens's juvenilia do"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Duplicate of Question 7. It explains why juvenilia is valuable: either for studying famous authors' development or for understanding literary history (lesser-known writers)."
+      }
+    },
+    {
+      "id": "MP_033",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Founded in New York City in 1969, El Museo del Barrio is dedicated to the visual arts and cultures of Latin America... More recently founded US-based institutions devoted to Latino cultures include the Emma S. Barrientos Mexican American Cultural Center. Located in Austin, Texas, it focuses on Mexican American art and culture.",
+        "question": "Which choice best states the main purpose of the text?",
+        "options": [
+          "A) To trace the founding of two institutions, including how they acquired funding to purchase artworks",
+          "B) To trace a historical development that encouraged the founding of two institutions",
+          "C) To present information about two institutions, including each institution's area of focus",
+          "D) To draw a contrast between the collection sizes of two institutions"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "While it looks like a simple presentation of info, the structure 'Founded in 1969... More recently founded...' sets up a timeline. The DSAT key identifies this as tracing a development. *Note: Key indicates B, though text is subtle. The progression from older to newer institutions implies a historical development.*"
+      }
+    },
+    {
+      "id": "MP_034",
+      "difficulty": "Easy",
+      "content": {
+        "passage": "The following text is from Bram Stoker's 1911 novel The Lair of the White Worm... Adam, seeing that the old man was interested in the novelty of the ship, suggested that he should stay the night on board... This affectionate willingness to fall in with his own plans quite won the old man's heart. He warmly accepted the invitation...",
+        "question": "Which choice best states the main purpose of the text?",
+        "options": [
+          "A) It showcases how Adam's flexibility and consideration strengthen his relationship with his great-uncle Richard.",
+          "B) It states the reasons why Adam and his great-uncle Richard decide to sleep on the ship rather than finding lodging on land.",
+          "C) It describes why Adam and his great-uncle Richard are excited for their upcoming journey on the ship.",
+          "D) It contrasts great-uncle Richard's wary first impressions of Adam with his ultimate affection toward him."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The text describes Adam's suggestion as 'affectionate willingness' that 'won the old man's heart,' leading to them becoming 'almost like old friends.' This highlights how Adam's behavior strengthened the bond."
+      }
+    },
+    {
+      "id": "MP_035",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "John Crowley... influential figures have championed his work... In his afterword to Crowley's book Little, Big, Bloom praises the novel's adroit blend of what playwright Friedrich Schiller termed the naive and sentimental modes... Little, Big demonstrates that a work can be both.",
+        "question": "Which choice best states the main purpose of the text?",
+        "options": [
+          "A) To explain what inspired an author to write a particular work.",
+          "B) To present a reason why a literary critic is impressed by a certain novel.",
+          "C) To compare the work of a writer with the work of a poet who admired him.",
+          "D) To argue that all writing must be classified as belonging to one of two categories."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The text focuses on Harold Bloom's praise for Crowley's novel. It explains *why* Bloom praises it: because it blends the naive and sentimental modes. Thus, it presents a reason for the critic's impression."
+      }
+    },
+    {
+      "id": "MP_036",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "The Times... urges that the English ideal is that every one should be free to do and to look just as he likes. But culture indefatigably tries... to draw ever nearer to a sense of what is indeed beautiful, graceful, and becoming, and to get the raw person to like that.",
+        "question": "Which choice best states the main purpose of the text?",
+        "options": [
+          "A) It makes a claim about one of the principal effects of culture.",
+          "B) It asserts that what is beautiful is a matter of objective truth rather than subjective perception.",
+          "C) It implies that opinions regarding culture evolve over time.",
+          "D) It explains differences in matters of taste between the English and others."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The text contrasts 'what each raw person may like' (subjective) with culture's attempt to find 'what is indeed beautiful' (objective). The author argues culture tries to find this true beauty, implying beauty is objective truth, not just personal preference."
+      }
+    },
+    {
+      "id": "MP_037",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Founded in Long Beach, California, in 1996, the Museum of Latin American Art is dedicated to modern and contemporary art... More recently founded US-based institutions devoted to Latino cultures include the National Hispanic Cultural Center... focuses on the literature, art, and cultures...",
+        "question": "Which choice best states the main purpose of the text?",
+        "options": [
+          "A) To trace the founding of two institutions, including how they acquired funding to purchase artworks.",
+          "B) To draw a contrast between the collection sizes of two institutions.",
+          "C) To present information about two institutions, including each institution's area of focus.",
+          "D) To trace a historical development that encouraged the founding of two institutions."
+        ]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Similar to Q33. The text lists an older institution and a 'More recently founded' one, implying a historical trend or development in the dedication to Latino cultures."
+      }
+    },
+    {
+      "id": "MP_038",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "And while outside the tempest is raving o'er the ocean... Thy warm and land-locked waters swell with an easy motion, And gently glides the light pirogue [canoe] at dipping of the oar.",
+        "question": "Which choice best states the main purpose of the text?",
+        "options": [
+          "A) It describes the speaker's attitude towards the day-to-day life in Puerto Cabello.",
+          "B) It contrasts the tranquility of the waters near Puerto Cabello with the roughness of waters elsewhere.",
+          "C) It emphasizes the severity of a storm that is expected to arrive soon in Puerto Cabello.",
+          "D) It compares the appearance of two types of boats."
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The text contrasts the 'tempest raving' outside with the 'easy motion' and gentle gliding of the waters inside the land-locked harbor of Puerto Cabello."
+      }
+    },
+    {
+      "id": "MP_039",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Some critics have found fault with the abrupt endings of The Hundred Days and other books in the series... But other critics argue that the books should not be thought of as discrete texts... but as a single incredibly long work...",
+        "question": "Which choice best states the main purpose of the text?",
+        "options": [
+          "A) To present a reason the unusual structure that O'Brian uses for The Hundred Days makes it one of his most complex books",
+          "B) To argue that the Aubrey/Maturin series should have the literary renown of In Search of Lost Time",
+          "C) To describe a characteristic of the Aubrey/Maturin novels and offer two differing viewpoints on this characteristic",
+          "D) To explain why many critics find the Aubrey/Maturin novels to be remarkably entertaining despite flaws in the novels' structures"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Duplicate of Question 13. Describes a characteristic (endings) and offers two viewpoints (fault vs single long work)."
+      }
+    },
+    {
+      "id": "MP_040",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "Founded in New York City in 1904, the Hispanic Society of America is dedicated to the arts... More recently founded US-based institutions devoted to Latino cultures include the Latino Cultural Center. Located in Dallas, it focuses on Latino cultures and art in the United States.",
+        "question": "Which choice best states the main purpose of the text?",
+        "options": [
+          "A) To trace the founding of two institutions, including how they acquired funding to purchase artworks",
+          "B) To present information about two institutions, including each institution's area of focus",
+          "C) To trace a historical development that encouraged the founding of two institutions",
+          "D) To draw a contrast between the collection sizes of two institutions"
+        ]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Similar to Q33 and Q37. Traces the development from a 1904 institution to 'More recently founded' ones."
+      }
+    },
+    {
+      "id": "MP_041",
+      "difficulty": "Hard",
+      "content": {
+        "passage": "The Times... urges that the English ideal is that every one should be free to do and to look just as he likes. But culture indefatigably tries... to draw ever nearer to a sense of what is indeed beautiful, graceful, and becoming, and to get the raw person to like that.",
+        "question": "Which choice best states the main purpose of the text?",
+        "options": [
+          "A) It argues that what is beautiful is a matter of fact rather than opinion.",
+          "B) It analyzes the unique sense of taste of the English.",
+          "C) It indicates that opinion regarding culture shift over time.",
+          "D) It makes a claim about one of the principal effects of culture."
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Duplicate of Question 36. The text argues that 'culture' seeks what is 'indeed beautiful' (fact/objective) versus what a person just 'likes' (opinion)."
+      }
+    },
+    {
+      "id": "MP_042",
+      "difficulty": "Medium",
+      "content": {
+        "passage": "In 2011 Ingrid L. Cripps and colleagues published a study concluding that ocean acidification has a strong effect... However, Cripps and colleagues' study relied on a mean sample size of only about 9 fish... Josefin Sundin and colleagues caution that relying on such a relatively small sample size can increase the potential for biased analysis.",
+        "question": "Which choice best states the main purpose of the text?",
+        "options": [
+          "A) To explain how the behavior of a fish species has changed over time",
+          "B) To note a potential concern about the findings of a scientific study",
+          "C) To present a debate between two research teams about a cause of ocean acidification",
+          "D) To discuss an aspect of ocean acidification that is frequently overlooked"
+        ]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Duplicate of Question 18. Points out a 'concern' (small sample size) about the findings of a specific study."
+      }
+    },
+    {
+      "id": "MP_043",
+      "difficulty": "Easy",
+      "content": {
+        "passage": "Dot and I had a mental connection... I understood things about the baby that her mother could not accept. For instance, she was never meant to be a baby... She tried at once to grow out of it... Only Celestine was saddened by her daughter's fierce progress... In her shopping-cart stroller she exercised to exhaustion...",
+        "question": "Which choice best states the main purpose of the text?",
+        "options": [
+          "A) To present the narrator's belief that she understands Dot better than Celestine does",
+          "B) To speculate that when Dot is older, her personality will be like Celestine's",
+          "C) To discuss what the narrator and Celestine do to amuse Dot",
+          "D) To compare the narrator's physical appearance to the physical appearance of Celestine"
+        ]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The narrator states explicitly: 'I understood things about the baby that her mother could not accept.' She contrasts her own understanding of Dot's nature (impatient to grow) with Celestine's sadness at it. This highlights her belief that she understands Dot better."
+      }
+    }
+  ]
+}

@@ -2,7 +2,6 @@ import { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, ChevronRight, Play, X, Check } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { Question, FilterOption } from '@/lib/questionUtils';
 import { Difficulty } from '@/lib/difficultyData';
@@ -13,21 +12,36 @@ interface PracticeSelectorProps {
   onClose: () => void;
 }
 
-// Filter structure matching the topic hierarchy
+// Filter structure matching the topic hierarchy with subtopics
 const FILTER_STRUCTURE = {
   'English Reading & Writing': {
     'Craft and Structure': {
       'Cross-Text Connections': null,
-      'Text Structure and Purpose': null,
-      'Words in Context': null,
+      'Text Structure and Purpose': {
+        'Main Purpose': null,
+        'Overall Structure': null,
+        'Underlined Purpose': null,
+      },
+      'Words in Context': {
+        'Gap Fillings': null,
+        'Synonyms': null,
+      },
     },
     'Expression of Ideas': {
       'Rhetorical Synthesis': null,
       'Transitions': null,
     },
     'Information and Ideas': {
-      'Central Ideas and Details': null,
-      'Command of Evidence': null,
+      'Central Ideas and Details': {
+        'Main Ideas': null,
+        'Detail Questions': null,
+      },
+      'Command of Evidence': {
+        'Support': null,
+        'Weaken': null,
+        'Quotation': null,
+        'Graphs': null,
+      },
       'Inferences': null,
     },
     'Standard English Conventions': {

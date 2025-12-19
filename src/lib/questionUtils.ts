@@ -51,6 +51,23 @@ interface CentralIdeaQuestion {
   explanation: string;
 }
 
+// New format question structure
+interface NewFormatQuestion {
+  id: string;
+  difficulty?: string;
+  content: {
+    passage?: string;
+    passage_1?: string;
+    passage_2?: string;
+    question: string;
+    options: string[];
+  };
+  solution: {
+    answer: string;
+    explanation: string;
+  };
+}
+
 // Parse question text to extract options
 function parseQuestion(rawQuestion: string): { questionText: string; options: { [key: string]: string } } {
   const options: { [key: string]: string } = {};
@@ -90,6 +107,18 @@ function parseQuestion(rawQuestion: string): { questionText: string; options: { 
   return { questionText, options };
 }
 
+// Parse new format options
+function parseNewFormatOptions(optionStrings: string[]): { [key: string]: string } {
+  const options: { [key: string]: string } = {};
+  optionStrings.forEach((opt: string) => {
+    const match = opt.match(/^([A-D])\)\s*(.+)$/s);
+    if (match) {
+      options[match[1]] = match[2].trim();
+    }
+  });
+  return options;
+}
+
 // Load questions from JSON files dynamically
 async function loadJsonFile(path: string): Promise<any> {
   try {
@@ -123,7 +152,12 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
   
   try {
     // Load all JSON files
-    const [boundariesData, verbsData, pronounData, modifiersData, centralIdeaData, textStructureData, wordsInContextData, transitionsData, inferenceData] = await Promise.all([
+    const [
+      boundariesData, verbsData, pronounData, modifiersData, centralIdeaData, 
+      textStructureData, wordsInContextData, transitionsData, inferenceData,
+      crossTextData, mainPurposeData, overallStructureData, underlinedPurposeData,
+      gapFillingsData, synonymsData, supportData, weakenData, mainIdeasData, detailedQuestionsData
+    ] = await Promise.all([
       loadJsonFile('/data/boundaries.json'),
       loadJsonFile('/data/verbs.json'),
       loadJsonFile('/data/pronoun.json'),
@@ -133,6 +167,16 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
       loadJsonFile('/data/words_in_context.json'),
       loadJsonFile('/data/transitions.json'),
       loadJsonFile('/data/inference.json'),
+      loadJsonFile('/data/cross_text_connections.json'),
+      loadJsonFile('/data/main_purpose.json'),
+      loadJsonFile('/data/overall_structure.json'),
+      loadJsonFile('/data/underlined_purpose.json'),
+      loadJsonFile('/data/gap_fillings.json'),
+      loadJsonFile('/data/synonyms.json'),
+      loadJsonFile('/data/support.json'),
+      loadJsonFile('/data/weaken.json'),
+      loadJsonFile('/data/main_ideas.json'),
+      loadJsonFile('/data/detailed_questions.json'),
     ]);
     
     // Process Boundaries
@@ -282,18 +326,12 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
       });
     }
     
-    // Process Central Ideas and Details (99 questions)
+    // Process Central Ideas and Details (old format)
     const informationAndIdeas = centralIdeaData?.["English Reading & Writing"]?.["Information and Ideas"];
     if (informationAndIdeas) {
       // Central Ideas and Details
       (informationAndIdeas["Central Ideas and Details"] || []).forEach((q: CentralIdeaQuestion, index: number) => {
-        const options: { [key: string]: string } = {};
-        q.options.forEach((opt: string) => {
-          const match = opt.match(/^([A-D])\)\s*(.+)$/s);
-          if (match) {
-            options[match[1]] = match[2].trim();
-          }
-        });
+        const options = parseNewFormatOptions(q.options);
         
         questions.push({
           id: globalId++,
@@ -310,13 +348,7 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
       
       // Command of Evidence
       (informationAndIdeas["Command of Evidence"] || []).forEach((q: CentralIdeaQuestion, index: number) => {
-        const options: { [key: string]: string } = {};
-        q.options.forEach((opt: string) => {
-          const match = opt.match(/^([A-D])\)\s*(.+)$/s);
-          if (match) {
-            options[match[1]] = match[2].trim();
-          }
-        });
+        const options = parseNewFormatOptions(q.options);
         
         questions.push({
           id: globalId++,
@@ -333,13 +365,7 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
       
       // Inferences
       (informationAndIdeas["Inferences"] || []).forEach((q: CentralIdeaQuestion, index: number) => {
-        const options: { [key: string]: string } = {};
-        q.options.forEach((opt: string) => {
-          const match = opt.match(/^([A-D])\)\s*(.+)$/s);
-          if (match) {
-            options[match[1]] = match[2].trim();
-          }
-        });
+        const options = parseNewFormatOptions(q.options);
         
         questions.push({
           id: globalId++,
@@ -355,18 +381,12 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
       });
     }
     
-    // Process Text Structure and Purpose (81 questions)
+    // Process Text Structure and Purpose (old format)
     const craftAndStructure = textStructureData?.["English Reading & Writing"]?.["Craft and Structure"];
     if (craftAndStructure) {
       // Text Structure and Purpose
       (craftAndStructure["Text Structure and Purpose"] || []).forEach((q: CentralIdeaQuestion, index: number) => {
-        const options: { [key: string]: string } = {};
-        q.options.forEach((opt: string) => {
-          const match = opt.match(/^([A-D])\)\s*(.+)$/s);
-          if (match) {
-            options[match[1]] = match[2].trim();
-          }
-        });
+        const options = parseNewFormatOptions(q.options);
         
         questions.push({
           id: globalId++,
@@ -381,15 +401,9 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
         });
       });
       
-      // Cross-Text Connections
+      // Cross-Text Connections (old format)
       (craftAndStructure["Cross-Text Connections"] || []).forEach((q: CentralIdeaQuestion, index: number) => {
-        const options: { [key: string]: string } = {};
-        q.options.forEach((opt: string) => {
-          const match = opt.match(/^([A-D])\)\s*(.+)$/s);
-          if (match) {
-            options[match[1]] = match[2].trim();
-          }
-        });
+        const options = parseNewFormatOptions(q.options);
         
         questions.push({
           id: globalId++,
@@ -405,17 +419,11 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
       });
     }
     
-    // Process Words in Context questions
+    // Process Words in Context (old format)
     const wordsInContextCraftStructure = wordsInContextData?.["English Reading & Writing"]?.["Craft and Structure"];
     if (wordsInContextCraftStructure) {
       (wordsInContextCraftStructure["Words in Context"] || []).forEach((q: CentralIdeaQuestion, index: number) => {
-        const options: { [key: string]: string } = {};
-        q.options.forEach((opt: string) => {
-          const match = opt.match(/^([A-D])\)\s*(.+)$/s);
-          if (match) {
-            options[match[1]] = match[2].trim();
-          }
-        });
+        const options = parseNewFormatOptions(q.options);
         
         questions.push({
           id: globalId++,
@@ -431,28 +439,19 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
       });
     }
     
-    // Track transitions index across multiple sources
+    // Track indices for difficulty assignment
     let transitionsIndex = 0;
     let inferencesIndex = 0;
     let rhetoricalSynthesisIndex = 0;
     
     // Process Transitions questions
-    console.log('Transitions data:', transitionsData ? 'loaded' : 'null');
     const expressionOfIdeas = transitionsData?.["English Reading & Writing"]?.["Expression of Ideas"];
-    console.log('Expression of Ideas:', expressionOfIdeas ? 'found' : 'not found');
     
     if (expressionOfIdeas) {
       const transitionsArray = expressionOfIdeas["Transitions"] || [];
-      console.log('Transitions array length:', transitionsArray.length);
       
       transitionsArray.forEach((q: CentralIdeaQuestion) => {
-        const options: { [key: string]: string } = {};
-        q.options.forEach((opt: string) => {
-          const match = opt.match(/^([A-D])\)\s*(.+)$/s);
-          if (match) {
-            options[match[1]] = match[2].trim();
-          }
-        });
+        const options = parseNewFormatOptions(q.options);
         
         questions.push({
           id: globalId++,
@@ -469,13 +468,7 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
       
       // Rhetorical Synthesis
       (expressionOfIdeas["Rhetorical Synthesis"] || []).forEach((q: CentralIdeaQuestion) => {
-        const options: { [key: string]: string } = {};
-        q.options.forEach((opt: string) => {
-          const match = opt.match(/^([A-D])\)\s*(.+)$/s);
-          if (match) {
-            options[match[1]] = match[2].trim();
-          }
-        });
+        const options = parseNewFormatOptions(q.options);
         
         questions.push({
           id: globalId++,
@@ -491,68 +484,13 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
       });
     }
     
-    // Also check if transitions is just an array (simpler format)
-    if (Array.isArray(transitionsData)) {
-      transitionsData.forEach((q: CentralIdeaQuestion) => {
-        const options: { [key: string]: string } = {};
-        q.options.forEach((opt: string) => {
-          const match = opt.match(/^([A-D])\)\s*(.+)$/s);
-          if (match) {
-            options[match[1]] = match[2].trim();
-          }
-        });
-        
-        questions.push({
-          id: globalId++,
-          section: "English",
-          subSection: "Expression of Ideas",
-          topic: "Transitions",
-          questionText: `${q.passage}\n\n${q.question}`,
-          options,
-          correctAnswer: q.answer,
-          explanation: q.explanation,
-          difficulty: getQuestionDifficulty("Transitions", undefined, transitionsIndex++),
-        });
-      });
-    }
-    
-    // Handle single object format for transitions (not nested, not array)
-    if (transitionsData && transitionsData.id && transitionsData.passage && transitionsData.options) {
-      const q = transitionsData as CentralIdeaQuestion;
-      const options: { [key: string]: string } = {};
-      q.options.forEach((opt: string) => {
-        const match = opt.match(/^([A-D])\)\s*(.+)$/s);
-        if (match) {
-          options[match[1]] = match[2].trim();
-        }
-      });
-      
-      questions.push({
-        id: globalId++,
-        section: "English",
-        subSection: "Expression of Ideas",
-        topic: "Transitions",
-        questionText: `${q.passage}\n\n${q.question}`,
-        options,
-        correctAnswer: q.answer,
-        explanation: q.explanation,
-        difficulty: getQuestionDifficulty("Transitions", undefined, transitionsIndex++),
-      });
-    }
-    
     // Process inference.json - contains Transitions and Inferences
     if (inferenceData) {
       // Transitions from inference.json
       const inferenceExpressionOfIdeas = inferenceData?.["English Reading & Writing"]?.["Expression of Ideas"];
       if (inferenceExpressionOfIdeas) {
         (inferenceExpressionOfIdeas["Transitions"] || []).forEach((q: CentralIdeaQuestion) => {
-          const options: { [key: string]: string } = {};
-          q.options.forEach((opt: string) => {
-            const match = opt.match(/^([A-D])\)\s*(.+)$/s);
-            if (match) {
-              options[match[1]] = match[2].trim();
-            }
-          });
+          const options = parseNewFormatOptions(q.options);
           
           questions.push({
             id: globalId++,
@@ -572,13 +510,7 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
       const inferenceInfoAndIdeas = inferenceData?.["English Reading & Writing"]?.["Information and Ideas"];
       if (inferenceInfoAndIdeas) {
         (inferenceInfoAndIdeas["Inferences"] || []).forEach((q: CentralIdeaQuestion) => {
-          const options: { [key: string]: string } = {};
-          q.options.forEach((opt: string) => {
-            const match = opt.match(/^([A-D])\)\s*(.+)$/s);
-            if (match) {
-              options[match[1]] = match[2].trim();
-            }
-          });
+          const options = parseNewFormatOptions(q.options);
           
           questions.push({
             id: globalId++,
@@ -594,6 +526,214 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
         });
       }
     }
+    
+    // ==================== NEW JSON FILES ====================
+    
+    // Process Cross-Text Connections (new format)
+    if (crossTextData?.questions) {
+      crossTextData.questions.forEach((q: NewFormatQuestion, index: number) => {
+        const passage = q.content.passage_1 && q.content.passage_2 
+          ? `Text 1:\n${q.content.passage_1}\n\nText 2:\n${q.content.passage_2}`
+          : q.content.passage || '';
+        const options = parseNewFormatOptions(q.content.options);
+        
+        questions.push({
+          id: globalId++,
+          section: "English",
+          subSection: "Craft and Structure",
+          topic: "Cross-Text Connections",
+          questionText: `${passage}\n\n${q.content.question}`,
+          options,
+          correctAnswer: q.solution.answer,
+          explanation: q.solution.explanation,
+          difficulty: (q.difficulty?.toLowerCase() as Difficulty) || getQuestionDifficulty("Cross-Text Connections", undefined, index),
+        });
+      });
+    }
+    
+    // Process Main Purpose (new format with subtopic)
+    if (mainPurposeData?.questions) {
+      mainPurposeData.questions.forEach((q: NewFormatQuestion, index: number) => {
+        const options = parseNewFormatOptions(q.content.options);
+        
+        questions.push({
+          id: globalId++,
+          section: "English",
+          subSection: "Craft and Structure",
+          topic: "Text Structure and Purpose",
+          subTopic: "Main Purpose",
+          questionText: `${q.content.passage || ''}\n\n${q.content.question}`,
+          options,
+          correctAnswer: q.solution.answer,
+          explanation: q.solution.explanation,
+          difficulty: (q.difficulty?.toLowerCase() as Difficulty) || getQuestionDifficulty("Text Structure and Purpose", "Main Purpose", index),
+        });
+      });
+    }
+    
+    // Process Overall Structure (new format with subtopic)
+    if (overallStructureData?.questions) {
+      overallStructureData.questions.forEach((q: NewFormatQuestion, index: number) => {
+        const options = parseNewFormatOptions(q.content.options);
+        
+        questions.push({
+          id: globalId++,
+          section: "English",
+          subSection: "Craft and Structure",
+          topic: "Text Structure and Purpose",
+          subTopic: "Overall Structure",
+          questionText: `${q.content.passage || ''}\n\n${q.content.question}`,
+          options,
+          correctAnswer: q.solution.answer,
+          explanation: q.solution.explanation,
+          difficulty: (q.difficulty?.toLowerCase() as Difficulty) || getQuestionDifficulty("Text Structure and Purpose", "Overall Structure", index),
+        });
+      });
+    }
+    
+    // Process Underlined Purpose (new format with subtopic)
+    // Handle array format (starts with [)
+    const underlinedQuestions = Array.isArray(underlinedPurposeData) 
+      ? underlinedPurposeData[0]?.questions || []
+      : underlinedPurposeData?.questions || [];
+    
+    underlinedQuestions.forEach((q: NewFormatQuestion, index: number) => {
+      const options = parseNewFormatOptions(q.content.options);
+      
+      questions.push({
+        id: globalId++,
+        section: "English",
+        subSection: "Craft and Structure",
+        topic: "Text Structure and Purpose",
+        subTopic: "Underlined Purpose",
+        questionText: `${q.content.passage || ''}\n\n${q.content.question}`,
+        options,
+        correctAnswer: q.solution.answer,
+        explanation: q.solution.explanation,
+        difficulty: (q.difficulty?.toLowerCase() as Difficulty) || getQuestionDifficulty("Text Structure and Purpose", "Underlined Purpose", index),
+      });
+    });
+    
+    // Process Gap Fillings (new format with subtopic)
+    if (gapFillingsData?.questions) {
+      gapFillingsData.questions.forEach((q: NewFormatQuestion, index: number) => {
+        const options = parseNewFormatOptions(q.content.options);
+        
+        questions.push({
+          id: globalId++,
+          section: "English",
+          subSection: "Craft and Structure",
+          topic: "Words in Context",
+          subTopic: "Gap Fillings",
+          questionText: `${q.content.passage || ''}\n\n${q.content.question}`,
+          options,
+          correctAnswer: q.solution.answer,
+          explanation: q.solution.explanation,
+          difficulty: (q.difficulty?.toLowerCase() as Difficulty) || getQuestionDifficulty("Words in Context", "Gap Fillings", index),
+        });
+      });
+    }
+    
+    // Process Synonyms (new format with subtopic)
+    if (synonymsData?.questions) {
+      synonymsData.questions.forEach((q: NewFormatQuestion, index: number) => {
+        const options = parseNewFormatOptions(q.content.options);
+        
+        questions.push({
+          id: globalId++,
+          section: "English",
+          subSection: "Craft and Structure",
+          topic: "Words in Context",
+          subTopic: "Synonyms",
+          questionText: `${q.content.passage || ''}\n\n${q.content.question}`,
+          options,
+          correctAnswer: q.solution.answer,
+          explanation: q.solution.explanation,
+          difficulty: (q.difficulty?.toLowerCase() as Difficulty) || getQuestionDifficulty("Words in Context", "Synonyms", index),
+        });
+      });
+    }
+    
+    // Process Support (new format with subtopic)
+    if (supportData?.questions) {
+      supportData.questions.forEach((q: NewFormatQuestion, index: number) => {
+        const options = parseNewFormatOptions(q.content.options);
+        
+        questions.push({
+          id: globalId++,
+          section: "English",
+          subSection: "Information and Ideas",
+          topic: "Command of Evidence",
+          subTopic: "Support",
+          questionText: `${q.content.passage || ''}\n\n${q.content.question}`,
+          options,
+          correctAnswer: q.solution.answer,
+          explanation: q.solution.explanation,
+          difficulty: (q.difficulty?.toLowerCase() as Difficulty) || getQuestionDifficulty("Command of Evidence", "Support", index),
+        });
+      });
+    }
+    
+    // Process Weaken (new format with subtopic)
+    if (weakenData?.questions) {
+      weakenData.questions.forEach((q: NewFormatQuestion, index: number) => {
+        const options = parseNewFormatOptions(q.content.options);
+        
+        questions.push({
+          id: globalId++,
+          section: "English",
+          subSection: "Information and Ideas",
+          topic: "Command of Evidence",
+          subTopic: "Weaken",
+          questionText: `${q.content.passage || ''}\n\n${q.content.question}`,
+          options,
+          correctAnswer: q.solution.answer,
+          explanation: q.solution.explanation,
+          difficulty: (q.difficulty?.toLowerCase() as Difficulty) || getQuestionDifficulty("Command of Evidence", "Weaken", index),
+        });
+      });
+    }
+    
+    // Process Main Ideas (new format with subtopic)
+    if (mainIdeasData?.questions) {
+      mainIdeasData.questions.forEach((q: NewFormatQuestion, index: number) => {
+        const options = parseNewFormatOptions(q.content.options);
+        
+        questions.push({
+          id: globalId++,
+          section: "English",
+          subSection: "Information and Ideas",
+          topic: "Central Ideas and Details",
+          subTopic: "Main Ideas",
+          questionText: `${q.content.passage || ''}\n\n${q.content.question}`,
+          options,
+          correctAnswer: q.solution.answer,
+          explanation: q.solution.explanation,
+          difficulty: (q.difficulty?.toLowerCase() as Difficulty) || getQuestionDifficulty("Central Ideas and Details", "Main Ideas", index),
+        });
+      });
+    }
+    
+    // Process Detailed Questions (new format with subtopic)
+    if (detailedQuestionsData?.questions) {
+      detailedQuestionsData.questions.forEach((q: NewFormatQuestion, index: number) => {
+        const options = parseNewFormatOptions(q.content.options);
+        
+        questions.push({
+          id: globalId++,
+          section: "English",
+          subSection: "Information and Ideas",
+          topic: "Central Ideas and Details",
+          subTopic: "Detail Questions",
+          questionText: `${q.content.passage || ''}\n\n${q.content.question}`,
+          options,
+          correctAnswer: q.solution.answer,
+          explanation: q.solution.explanation,
+          difficulty: (q.difficulty?.toLowerCase() as Difficulty) || getQuestionDifficulty("Central Ideas and Details", "Detail Questions", index),
+        });
+      });
+    }
+    
   } catch (error) {
     console.error('Error loading questions:', error);
   }
