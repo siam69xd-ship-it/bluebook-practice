@@ -153,18 +153,16 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
   try {
     // Load all JSON files
     const [
-      boundariesData, verbsData, pronounData, modifiersData, centralIdeaData, 
-      textStructureData, wordsInContextData, transitionsData, inferenceData,
+      boundariesData, verbsData, pronounData, modifiersData,
+      transitionsData, inferenceData,
       crossTextData, mainPurposeData, overallStructureData, underlinedPurposeData,
-      gapFillingsData, synonymsData, supportData, weakenData, mainIdeasData, detailedQuestionsData
+      gapFillingsData, synonymsData, supportData, weakenData, quotationData, graphsData,
+      mainIdeasData, detailedQuestionsData
     ] = await Promise.all([
       loadJsonFile('/data/boundaries.json'),
       loadJsonFile('/data/verbs.json'),
       loadJsonFile('/data/pronoun.json'),
       loadJsonFile('/data/modifiers.json'),
-      loadJsonFile('/data/central_idea_and_details.json'),
-      loadJsonFile('/data/text_structure_and_purpose.json'),
-      loadJsonFile('/data/words_in_context.json'),
       loadJsonFile('/data/transitions.json'),
       loadJsonFile('/data/inference.json'),
       loadJsonFile('/data/cross_text_connections.json'),
@@ -175,6 +173,8 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
       loadJsonFile('/data/synonyms.json'),
       loadJsonFile('/data/support.json'),
       loadJsonFile('/data/weaken.json'),
+      loadJsonFile('/data/quotation.json'),
+      loadJsonFile('/data/graphs.json'),
       loadJsonFile('/data/main_ideas.json'),
       loadJsonFile('/data/detailed_questions.json'),
     ]);
@@ -322,119 +322,6 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
           correctAnswer: q.answer,
           explanation: q.explanation,
           difficulty: getQuestionDifficulty("Form, Structure, and Sense", "Miscellaneous Topics", index),
-        });
-      });
-    }
-    
-    // Process Central Ideas and Details (old format)
-    const informationAndIdeas = centralIdeaData?.["English Reading & Writing"]?.["Information and Ideas"];
-    if (informationAndIdeas) {
-      // Central Ideas and Details
-      (informationAndIdeas["Central Ideas and Details"] || []).forEach((q: CentralIdeaQuestion, index: number) => {
-        const options = parseNewFormatOptions(q.options);
-        
-        questions.push({
-          id: globalId++,
-          section: "English",
-          subSection: "Information and Ideas",
-          topic: "Central Ideas and Details",
-          questionText: `${q.passage}\n\n${q.question}`,
-          options,
-          correctAnswer: q.answer,
-          explanation: q.explanation,
-          difficulty: getQuestionDifficulty("Central Ideas and Details", undefined, index),
-        });
-      });
-      
-      // Command of Evidence
-      (informationAndIdeas["Command of Evidence"] || []).forEach((q: CentralIdeaQuestion, index: number) => {
-        const options = parseNewFormatOptions(q.options);
-        
-        questions.push({
-          id: globalId++,
-          section: "English",
-          subSection: "Information and Ideas",
-          topic: "Command of Evidence",
-          questionText: `${q.passage}\n\n${q.question}`,
-          options,
-          correctAnswer: q.answer,
-          explanation: q.explanation,
-          difficulty: getQuestionDifficulty("Command of Evidence", undefined, index),
-        });
-      });
-      
-      // Inferences
-      (informationAndIdeas["Inferences"] || []).forEach((q: CentralIdeaQuestion, index: number) => {
-        const options = parseNewFormatOptions(q.options);
-        
-        questions.push({
-          id: globalId++,
-          section: "English",
-          subSection: "Information and Ideas",
-          topic: "Inferences",
-          questionText: `${q.passage}\n\n${q.question}`,
-          options,
-          correctAnswer: q.answer,
-          explanation: q.explanation,
-          difficulty: getQuestionDifficulty("Inferences", undefined, index),
-        });
-      });
-    }
-    
-    // Process Text Structure and Purpose (old format)
-    const craftAndStructure = textStructureData?.["English Reading & Writing"]?.["Craft and Structure"];
-    if (craftAndStructure) {
-      // Text Structure and Purpose
-      (craftAndStructure["Text Structure and Purpose"] || []).forEach((q: CentralIdeaQuestion, index: number) => {
-        const options = parseNewFormatOptions(q.options);
-        
-        questions.push({
-          id: globalId++,
-          section: "English",
-          subSection: "Craft and Structure",
-          topic: "Text Structure and Purpose",
-          questionText: `${q.passage}\n\n${q.question}`,
-          options,
-          correctAnswer: q.answer,
-          explanation: q.explanation,
-          difficulty: getQuestionDifficulty("Text Structure and Purpose", undefined, index),
-        });
-      });
-      
-      // Cross-Text Connections (old format)
-      (craftAndStructure["Cross-Text Connections"] || []).forEach((q: CentralIdeaQuestion, index: number) => {
-        const options = parseNewFormatOptions(q.options);
-        
-        questions.push({
-          id: globalId++,
-          section: "English",
-          subSection: "Craft and Structure",
-          topic: "Cross-Text Connections",
-          questionText: `${q.passage}\n\n${q.question}`,
-          options,
-          correctAnswer: q.answer,
-          explanation: q.explanation,
-          difficulty: getQuestionDifficulty("Cross-Text Connections", undefined, index),
-        });
-      });
-    }
-    
-    // Process Words in Context (old format)
-    const wordsInContextCraftStructure = wordsInContextData?.["English Reading & Writing"]?.["Craft and Structure"];
-    if (wordsInContextCraftStructure) {
-      (wordsInContextCraftStructure["Words in Context"] || []).forEach((q: CentralIdeaQuestion, index: number) => {
-        const options = parseNewFormatOptions(q.options);
-        
-        questions.push({
-          id: globalId++,
-          section: "English",
-          subSection: "Craft and Structure",
-          topic: "Words in Context",
-          questionText: `${q.passage}\n\n${q.question}`,
-          options,
-          correctAnswer: q.answer,
-          explanation: q.explanation,
-          difficulty: getQuestionDifficulty("Words in Context", undefined, index),
         });
       });
     }
@@ -730,6 +617,46 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
           correctAnswer: q.solution.answer,
           explanation: q.solution.explanation,
           difficulty: (q.difficulty?.toLowerCase() as Difficulty) || getQuestionDifficulty("Central Ideas and Details", "Detail Questions", index),
+        });
+      });
+    }
+    
+    // Process Quotation (new format with subtopic)
+    if (quotationData?.questions) {
+      quotationData.questions.forEach((q: NewFormatQuestion, index: number) => {
+        const options = parseNewFormatOptions(q.content.options);
+        
+        questions.push({
+          id: globalId++,
+          section: "English",
+          subSection: "Information and Ideas",
+          topic: "Command of Evidence",
+          subTopic: "Quotation",
+          questionText: `${q.content.passage || ''}\n\n${q.content.question}`,
+          options,
+          correctAnswer: q.solution.answer,
+          explanation: q.solution.explanation,
+          difficulty: (q.difficulty?.toLowerCase() as Difficulty) || getQuestionDifficulty("Command of Evidence", "Quotation", index),
+        });
+      });
+    }
+    
+    // Process Graphs (new format with subtopic)
+    if (graphsData?.questions) {
+      graphsData.questions.forEach((q: NewFormatQuestion, index: number) => {
+        const options = parseNewFormatOptions(q.content.options);
+        
+        questions.push({
+          id: globalId++,
+          section: "English",
+          subSection: "Information and Ideas",
+          topic: "Command of Evidence",
+          subTopic: "Graphs",
+          questionText: `${q.content.passage || ''}\n\n${q.content.question}`,
+          options,
+          correctAnswer: q.solution.answer,
+          explanation: q.solution.explanation,
+          difficulty: (q.difficulty?.toLowerCase() as Difficulty) || getQuestionDifficulty("Command of Evidence", "Graphs", index),
         });
       });
     }

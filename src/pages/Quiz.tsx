@@ -465,7 +465,8 @@ export default function Quiz() {
                   selectedColor={selectedHighlightColor}
                   onAddHighlight={handleAddHighlight}
                   onRemoveHighlight={handleRemoveHighlight}
-                  className="quiz-passage text-gray-800 whitespace-pre-wrap leading-relaxed text-base"
+                  className="quiz-passage text-gray-800 whitespace-pre-wrap leading-loose text-lg"
+                  style={{ fontFamily: "'Merriweather', 'Georgia', serif" }}
                 />
               </motion.div>
             </AnimatePresence>
@@ -526,7 +527,11 @@ export default function Quiz() {
                 </div>
 
                 {/* Question Text */}
-                <p className="text-gray-800 mb-6 text-base leading-relaxed whitespace-pre-wrap" data-testid="text-question">
+                <p 
+                  className="text-gray-800 mb-6 text-lg leading-relaxed whitespace-pre-wrap" 
+                  style={{ fontFamily: "'Merriweather', 'Georgia', serif" }}
+                  data-testid="text-question"
+                >
                   {(() => {
                     const text = currentQuestion.questionText;
                     // Check for "Which choice" pattern (common in SAT questions)
