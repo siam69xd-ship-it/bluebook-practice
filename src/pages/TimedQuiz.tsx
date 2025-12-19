@@ -569,14 +569,6 @@ export default function TimedQuiz() {
                     </span>
                   )}
                 </div>
-                <div className="flex flex-wrap items-center gap-2 mb-4">
-                  <span className="px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary">
-                    {reviewQuestion.section}
-                  </span>
-                  <span className="px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-600">
-                    {reviewQuestion.subTopic || reviewQuestion.topic}
-                  </span>
-                </div>
               </div>
               
               <p className="text-gray-800 mb-6 text-base leading-relaxed whitespace-pre-wrap">
@@ -867,14 +859,6 @@ export default function TimedQuiz() {
                 </div>
               </div>
 
-              <div className="flex flex-wrap items-center gap-2 mb-4">
-                <span className="px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary">
-                  {currentQuestion.section}
-                </span>
-                <span className="px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-600">
-                  {currentQuestion.subTopic || currentQuestion.topic}
-                </span>
-              </div>
 
               <PassageRenderer 
                 content={currentQuestion.questionPrompt || 'Based on the text, select the best answer to the question.'}
