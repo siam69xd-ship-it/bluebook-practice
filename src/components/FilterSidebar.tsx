@@ -17,16 +17,31 @@ const FILTER_STRUCTURE = {
   'English Reading & Writing': {
     'Craft and Structure': {
       'Cross-Text Connections': null,
-      'Text Structure and Purpose': null,
-      'Words in Context': null,
+      'Text Structure and Purpose': {
+        'Main Purpose': null,
+        'Overall Structure': null,
+        'Underlined Purpose': null,
+      },
+      'Words in Context': {
+        'Gap Fillings': null,
+        'Synonyms': null,
+      },
     },
     'Expression of Ideas': {
       'Rhetorical Synthesis': null,
       'Transitions': null,
     },
     'Information and Ideas': {
-      'Central Ideas and Details': null,
-      'Command of Evidence': null,
+      'Central Ideas and Details': {
+        'Main Ideas': null,
+        'Detail Questions': null,
+      },
+      'Command of Evidence': {
+        'Support': null,
+        'Weaken': null,
+        'Quotation': null,
+        'Graphs': null,
+      },
       'Inferences': null,
     },
     'Standard English Conventions': {
@@ -42,7 +57,7 @@ const FILTER_STRUCTURE = {
       },
     },
   },
-};
+} as const;
 
 export function FilterSidebar({
   questions,
@@ -60,9 +75,9 @@ export function FilterSidebar({
   // Count questions for each category
   const getCount = (subSection?: string, topic?: string, subTopic?: string): number => {
     return questions.filter(q => {
-      if (subTopic) return q.subTopic === subTopic;
-      if (topic) return q.topic === topic;
-      if (subSection) return q.subSection === subSection;
+      if (subSection && q.subSection !== subSection) return false;
+      if (topic && q.topic !== topic) return false;
+      if (subTopic && q.subTopic !== subTopic) return false;
       return true;
     }).length;
   };
@@ -76,50 +91,68 @@ export function FilterSidebar({
   };
 
   const handleFilterClick = (subSection?: string, topic?: string, subTopic?: string) => {
-    if (subTopic) {
-      onFilterChange({
-        section: 'English',
-        subSection: subSection || 'Standard English Conventions',
-        topic: topic || 'Form, Structure, and Sense',
-        subTopic,
-      });
-    } else if (topic) {
-      onFilterChange({
-        section: 'English',
-        subSection: subSection || 'Standard English Conventions',
-        topic,
-      });
-    } else if (subSection) {
+    if (!subSection) {
+      onFilterChange({});
+      return;
+    }
+
+    if (subTopic && topic) {
       onFilterChange({
         section: 'English',
         subSection,
+        topic,
+        subTopic,
       });
-    } else {
-      onFilterChange({});
+      return;
     }
+
+    if (topic) {
+      onFilterChange({
+        section: 'English',
+        subSection,
+        topic,
+      });
+      return;
+    }
+
+    onFilterChange({
+      section: 'English',
+      subSection,
+    });
   };
 
   const isActive = (subSection?: string, topic?: string, subTopic?: string) => {
-    if (subTopic) return activeFilter.subTopic === subTopic;
-    if (topic) return activeFilter.topic === topic && !activeFilter.subTopic;
-    if (subSection) return activeFilter.subSection === subSection && !activeFilter.topic;
-    return Object.keys(activeFilter).length === 0;
+    if (!subSection) return Object.keys(activeFilter).length === 0;
+
+    if (subTopic) {
+      return (
+        activeFilter.subSection === subSection &&
+        activeFilter.topic === topic &&
+        activeFilter.subTopic === subTopic
+      );
+    }
+
+    if (topic) {
+      return activeFilter.subSection === subSection && activeFilter.topic === topic && !activeFilter.subTopic;
+    }
+
+    return activeFilter.subSection === subSection && !activeFilter.topic;
   };
 
   const clearFilter = () => {
     onFilterChange({});
   };
 
-  const renderSubTopics = (parentTopic: string, subTopics: Record<string, null>) => {
+  const renderSubTopics = (subSection: string, parentTopic: string, subTopics: Record<string, null>) => {
     return Object.keys(subTopics).map(subTopic => {
-      const count = getCount('Standard English Conventions', parentTopic, subTopic);
+      const count = getCount(subSection, parentTopic, subTopic);
       return (
         <button
           key={subTopic}
-          onClick={() => handleFilterClick('Standard English Conventions', parentTopic, subTopic)}
+          onClick={() => handleFilterClick(subSection, parentTopic, subTopic)}
           className={cn(
             'w-full text-left px-3 py-2 rounded-xl text-sm transition-all duration-200',
-            isActive('Standard English Conventions', parentTopic, subTopic)
+            isActive(subSection, parentTopic, subTopic)
               ? 'bg-primary/10 text-primary font-medium'
               : 'hover:bg-muted text-muted-foreground hover:text-foreground'
           )}
@@ -154,7 +187,7 @@ export function FilterSidebar({
 
             {expandedSections.includes(topic) && (
               <div className="ml-4 mt-1 space-y-0.5">
-                {renderSubTopics(topic, subTopics)}
+                {renderSubTopics(subSection, topic, subTopics)}
               </div>
             )}
           </div>
