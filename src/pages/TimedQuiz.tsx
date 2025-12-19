@@ -817,22 +817,7 @@ export default function TimedQuiz() {
               transition={{ duration: 0.2 }}
             >
               <HighlightableText
-                text={(() => {
-                  const text = currentQuestion.questionText;
-                  const questionPatterns = [
-                    /\n\n?Which choice[^?]+\?$/i,
-                    /\n\n?Which [^?]+\?$/i,
-                    /\n\n?What [^?]+\?$/i,
-                    /\n\n?Based on [^?]+\?$/i,
-                    /\n\n?According to [^?]+\?$/i,
-                    /\n\n?The [^?]+which of the following[^?]+\?$/i,
-                  ];
-                  let passageText = text;
-                  for (const pattern of questionPatterns) {
-                    passageText = passageText.replace(pattern, '');
-                  }
-                  return passageText.trim();
-                })()}
+                text={currentQuestion.passage || ''}
                 highlights={currentState?.highlights || []}
                 selectedColor={selectedHighlightColor}
                 onAddHighlight={handleAddHighlight}
@@ -891,17 +876,7 @@ export default function TimedQuiz() {
               </div>
 
               <p className="text-gray-800 mb-6 text-base leading-relaxed whitespace-pre-wrap">
-                {(() => {
-                  const text = currentQuestion.questionText;
-                  const whichChoiceMatch = text.match(/Which choice[^?]+\?/i);
-                  if (whichChoiceMatch) {
-                    return whichChoiceMatch[0];
-                  }
-                  if (text.includes('\n\n')) {
-                    return text.split('\n\n').pop();
-                  }
-                  return 'Based on the text, select the best answer to the question.';
-                })()}
+                {currentQuestion.questionPrompt || 'Based on the text, select the best answer to the question.'}
               </p>
 
               <div className="space-y-3">

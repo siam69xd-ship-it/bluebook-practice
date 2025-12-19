@@ -445,22 +445,7 @@ export default function Quiz() {
                 transition={{ duration: 0.2 }}
               >
                 <HighlightableText
-                  text={(() => {
-                    const text = currentQuestion.questionText;
-                    const questionPatterns = [
-                      /\n\n?Which choice[^?]+\?$/i,
-                      /\n\n?Which [^?]+\?$/i,
-                      /\n\n?What [^?]+\?$/i,
-                      /\n\n?Based on [^?]+\?$/i,
-                      /\n\n?According to [^?]+\?$/i,
-                      /\n\n?The [^?]+which of the following[^?]+\?$/i,
-                    ];
-                    let passageText = text;
-                    for (const pattern of questionPatterns) {
-                      passageText = passageText.replace(pattern, '');
-                    }
-                    return passageText.trim();
-                  })()}
+                  text={currentQuestion.passage || ''}
                   highlights={currentState?.highlights || []}
                   selectedColor={selectedHighlightColor}
                   onAddHighlight={handleAddHighlight}
@@ -530,19 +515,7 @@ export default function Quiz() {
                   className="quiz-question mb-6 whitespace-pre-wrap" 
                   data-testid="text-question"
                 >
-                  {(() => {
-                    const text = currentQuestion.questionText;
-                    // Check for "Which choice" pattern (common in SAT questions)
-                    const whichChoiceMatch = text.match(/Which choice[^?]+\?/i);
-                    if (whichChoiceMatch) {
-                      return whichChoiceMatch[0];
-                    }
-                    // Fallback: if there's a double newline, show the last paragraph
-                    if (text.includes('\n\n')) {
-                      return text.split('\n\n').pop();
-                    }
-                    return 'Based on the text, select the best answer to the question.';
-                  })()}
+                  {currentQuestion.questionPrompt || 'Based on the text, select the best answer to the question.'}
                 </p>
 
                 {/* Options */}
