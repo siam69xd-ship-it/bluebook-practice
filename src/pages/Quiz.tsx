@@ -465,8 +465,8 @@ export default function Quiz() {
                   selectedColor={selectedHighlightColor}
                   onAddHighlight={handleAddHighlight}
                   onRemoveHighlight={handleRemoveHighlight}
-                  className="quiz-passage text-gray-800 whitespace-pre-wrap leading-loose text-lg"
-                  style={{ fontFamily: "'Merriweather', 'Georgia', serif" }}
+                  className="quiz-passage whitespace-pre-wrap"
+                  style={{ fontFamily: "'Noto Serif', serif", fontSize: '1.125rem', lineHeight: '1.6', color: '#000000' }}
                 />
               </motion.div>
             </AnimatePresence>
@@ -528,8 +528,8 @@ export default function Quiz() {
 
                 {/* Question Text */}
                 <p 
-                  className="text-gray-800 mb-6 text-lg leading-relaxed whitespace-pre-wrap" 
-                  style={{ fontFamily: "'Merriweather', 'Georgia', serif" }}
+                  className="mb-6 whitespace-pre-wrap" 
+                  style={{ fontFamily: "'Noto Serif', serif", fontSize: '1.125rem', lineHeight: '1.6', color: '#000000' }}
                   data-testid="text-question"
                 >
                   {(() => {
