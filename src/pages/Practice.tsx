@@ -288,14 +288,18 @@ export default function Practice() {
     onClick: () => void,
     depth: number = 0
   ) => {
-    if (count === 0) return null;
-    
+    const disabled = count === 0;
+
     return (
       <motion.button
-        whileHover={{ x: 4 }}
-        onClick={onClick}
+        whileHover={disabled ? undefined : { x: 4 }}
+        onClick={disabled ? undefined : onClick}
         style={{ paddingLeft: `${(depth + 1) * 16}px` }}
-        className="w-full flex items-center justify-between pr-4 py-3 rounded-xl transition-all duration-200 group hover:bg-primary/5"
+        className={cn(
+          "w-full flex items-center justify-between pr-4 py-3 rounded-xl transition-all duration-200 group",
+          disabled ? "opacity-50 cursor-not-allowed" : "hover:bg-primary/5"
+        )}
+        disabled={disabled}
       >
         <span className="text-sm text-foreground">{label}</span>
         <div className="flex items-center gap-3">

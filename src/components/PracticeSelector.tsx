@@ -166,14 +166,18 @@ export function PracticeSelector({ questions, isOpen, onClose }: PracticeSelecto
     onClick: () => void,
     isSubTopic: boolean = false
   ) => {
-    if (count === 0) return null;
-    
+    const disabled = count === 0;
+
     return (
       <button
-        onClick={onClick}
+        onClick={disabled ? undefined : onClick}
+        disabled={disabled}
         className={cn(
           'w-full flex items-center justify-between px-4 py-3 rounded-xl transition-all duration-200 group',
-          'hover:bg-primary/5 hover:border-primary/20 border border-transparent',
+          'border border-transparent',
+          disabled
+            ? 'opacity-50 cursor-not-allowed'
+            : 'hover:bg-primary/5 hover:border-primary/20',
           isSubTopic ? 'ml-4' : ''
         )}
       >
