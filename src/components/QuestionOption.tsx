@@ -96,28 +96,31 @@ export function QuestionOption({
           </button>
         )}
 
-        {/* Elimination button - SAT style circle with crossout */}
+        {/* Elimination button - SAT style circle with diagonal strikethrough */}
         <button
           onClick={(e) => {
             e.stopPropagation();
             onEliminate();
           }}
           className={cn(
-            'flex-shrink-0 w-8 h-8 rounded-full border flex items-center justify-center transition-all duration-200',
+            'flex-shrink-0 w-7 h-7 rounded-full border flex items-center justify-center transition-all duration-200 relative',
             isEliminated
-              ? 'border-foreground/50 bg-muted text-foreground'
-              : 'border-border bg-card text-muted-foreground hover:border-muted-foreground hover:text-foreground'
+              ? 'border-gray-400 bg-transparent'
+              : 'border-gray-300 bg-transparent hover:border-gray-500'
           )}
           title={isEliminated ? 'Restore option' : 'Eliminate option'}
           data-testid={`button-eliminate-${letter}`}
         >
-          {/* Letter with strikethrough for elimination indicator */}
-          <span className={cn(
-            'text-xs font-medium relative',
-            isEliminated && 'line-through'
-          )}>
+          {/* Letter */}
+          <span className="text-xs font-medium text-gray-600">
             {letter}
           </span>
+          {/* Diagonal strikethrough line when eliminated */}
+          {isEliminated && (
+            <span className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <span className="w-[calc(100%+4px)] h-[1.5px] bg-gray-500 rotate-[-45deg] absolute" />
+            </span>
+          )}
         </button>
       </div>
     </div>
