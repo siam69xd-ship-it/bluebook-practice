@@ -2,11 +2,14 @@ import { Difficulty, getQuestionDifficulty } from './difficultyData';
 
 export interface Question {
   id: number;
+  sourceId: string; // Original ID from JSON (e.g., GAP_001, UP_001, GRA_001)
   section: string;
   subSection: string;
   topic: string;
   subTopic?: string;
-  questionText: string;
+  passage: string; // Passage text only
+  questionPrompt: string; // Question text only
+  questionText: string; // Combined for backward compatibility
   options: { [key: string]: string };
   correctAnswer: string;
   explanation: string;
@@ -170,6 +173,23 @@ function splitTopLevelJsonValues(raw: string): string[] {
   return values;
 }
 
+// Clean malformed JSON by fixing common issues before parsing
+function cleanMalformedJson(raw: string): string {
+  let cleaned = raw.trim();
+  
+  // Fix }{ -> },{  (concatenated objects without comma)
+  cleaned = cleaned.replace(/\}\s*\{/g, '},{');
+  
+  // Fix ][ -> ],[  (concatenated arrays without comma)
+  cleaned = cleaned.replace(/\]\s*\[/g, '],[');
+  
+  // Fix trailing garbage like }    }   ] after a proper object
+  // Remove duplicate closing braces/brackets that break parsing
+  cleaned = cleaned.replace(/\}\s*\}\s*\]/g, '}]');
+  
+  return cleaned;
+}
+
 async function loadJsonFile(path: string): Promise<any> {
   try {
     const response = await fetch(path);
@@ -178,59 +198,79 @@ async function loadJsonFile(path: string): Promise<any> {
       return null;
     }
 
-    // Read as text first so we can recover from "concatenated JSON" files (e.g. `}{` between batches)
     const raw = await response.text();
-
+    
+    // First, try direct parse
     try {
       const data = JSON.parse(raw);
       console.log(`Loaded ${path}:`, data ? 'success' : 'empty');
       return data;
-    } catch (parseErr) {
-      // Attempt to parse multiple top-level JSON values and merge their question arrays
-      const trimmed = raw.trim();
-      let chunks = splitTopLevelJsonValues(trimmed);
+    } catch {
+      // Try with cleaned JSON
+    }
+    
+    // Clean and retry
+    const cleaned = cleanMalformedJson(raw);
+    try {
+      const data = JSON.parse(cleaned);
+      console.warn(`Loaded ${path} after cleaning:`, data ? 'success' : 'empty');
+      return data;
+    } catch {
+      // Continue to chunked recovery
+    }
 
-      // Special-case: files wrapped in a broken array like: [ {..}, [ {..}, ... ] ]
-      if (chunks.length === 0 && trimmed.startsWith('[')) {
-        const inner = trimmed.replace(/^\[/, '').replace(/\]$/, '');
-        chunks = splitTopLevelJsonValues(inner);
-      }
+    // Attempt to parse multiple top-level JSON values and merge their question arrays
+    const trimmed = raw.trim();
+    let chunks = splitTopLevelJsonValues(trimmed);
 
-      const parsed: any[] = [];
-      for (const c of chunks) {
+    // Special-case: files wrapped in a broken array like: [ {..}, [ {..}, ... ] ]
+    if (chunks.length === 0 && trimmed.startsWith('[')) {
+      const inner = trimmed.slice(1, -1).trim(); // Remove outer [ and ]
+      chunks = splitTopLevelJsonValues(inner);
+    }
+
+    const parsed: any[] = [];
+    for (const c of chunks) {
+      try {
+        parsed.push(JSON.parse(c));
+      } catch {
+        // Try cleaning individual chunk
         try {
-          parsed.push(JSON.parse(c));
+          const cleanedChunk = cleanMalformedJson(c);
+          parsed.push(JSON.parse(cleanedChunk));
         } catch {
-          // ignore unparseable chunk
+          // Skip unparseable chunk
         }
       }
-
-      // Merge objects with { questions: [...] }
-      const objectsWithQuestions = parsed.filter((p) => p && typeof p === 'object' && Array.isArray(p.questions));
-      if (objectsWithQuestions.length > 0) {
-        const base = objectsWithQuestions[0];
-        const mergedQuestions = objectsWithQuestions.flatMap((o) => o.questions);
-        const recovered = { ...base, questions: mergedQuestions };
-        console.warn(`Recovered concatenated JSON for ${path}:`, mergedQuestions.length, 'questions');
-        return recovered;
-      }
-
-      // Merge: first object has {questions}, later chunk is an array of question objects
-      const baseObj = parsed.find((p) => p && typeof p === 'object' && Array.isArray(p.questions));
-      const extraArrays = parsed.filter((p) => Array.isArray(p));
-      if (baseObj && extraArrays.length > 0) {
-        const mergedQuestions = [
-          ...(baseObj.questions || []),
-          ...extraArrays.flat().filter((q) => q && typeof q === 'object' && q.id && q.content && q.solution),
-        ];
-        const recovered = { ...baseObj, questions: mergedQuestions };
-        console.warn(`Recovered mixed-array JSON for ${path}:`, mergedQuestions.length, 'questions');
-        return recovered;
-      }
-
-      console.error(`Failed to parse ${path} even after recovery:`, parseErr);
-      return null;
     }
+
+    // Collect all questions from all chunks
+    const allQuestions: any[] = [];
+    let baseMetadata: any = null;
+    
+    for (const p of parsed) {
+      if (p && typeof p === 'object' && !Array.isArray(p)) {
+        if (Array.isArray(p.questions)) {
+          allQuestions.push(...p.questions);
+          if (!baseMetadata && p.test_metadata) {
+            baseMetadata = p.test_metadata;
+          }
+        }
+      } else if (Array.isArray(p)) {
+        // It's an array of question objects
+        const validQuestions = p.filter((q: any) => q && typeof q === 'object' && q.id && q.content && q.solution);
+        allQuestions.push(...validQuestions);
+      }
+    }
+
+    if (allQuestions.length > 0) {
+      const recovered = { test_metadata: baseMetadata, questions: allQuestions };
+      console.warn(`Recovered concatenated JSON for ${path}:`, allQuestions.length, 'questions');
+      return recovered;
+    }
+
+    console.error(`Failed to parse ${path} even after recovery`);
+    return null;
   } catch (error) {
     console.error(`Failed to load ${path}:`, error);
     return null;
@@ -244,12 +284,75 @@ export function clearQuestionCache() {
   cachedQuestions = null;
 }
 
+// Helper to create question with all required fields
+function createQuestion(
+  globalId: number,
+  sourceId: string,
+  section: string,
+  subSection: string,
+  topic: string,
+  subTopic: string | undefined,
+  passage: string,
+  questionPrompt: string,
+  options: { [key: string]: string },
+  correctAnswer: string,
+  explanation: string,
+  difficulty: Difficulty
+): Question {
+  return {
+    id: globalId,
+    sourceId,
+    section,
+    subSection,
+    topic,
+    subTopic,
+    passage,
+    questionPrompt,
+    questionText: passage ? `${passage}\n\n${questionPrompt}` : questionPrompt,
+    options,
+    correctAnswer,
+    explanation,
+    difficulty,
+  };
+}
+
+// Extract question prompt from combined text
+function extractQuestionPrompt(text: string): string {
+  const patterns = [
+    /Which choice[^?]+\?/i,
+    /Which [^?]+\?/i,
+    /What [^?]+\?/i,
+    /Based on [^?]+\?/i,
+    /According to [^?]+\?/i,
+  ];
+  for (const pattern of patterns) {
+    const match = text.match(pattern);
+    if (match) return match[0];
+  }
+  if (text.includes('\n\n')) {
+    return text.split('\n\n').pop() || text;
+  }
+  return text;
+}
+
 // Get all questions
 export async function getAllQuestionsAsync(): Promise<Question[]> {
   if (cachedQuestions) return cachedQuestions;
   
   const questions: Question[] = [];
+  const seenSourceIds = new Set<string>();
   let globalId = 1;
+  
+  // Helper to add question with deduplication
+  const addQuestion = (q: Question) => {
+    if (q.sourceId && seenSourceIds.has(q.sourceId)) {
+      return; // Skip duplicate
+    }
+    if (q.sourceId) {
+      seenSourceIds.add(q.sourceId);
+    }
+    questions.push(q);
+  };
   
   try {
     // Load all JSON files
@@ -284,17 +387,22 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
     const boundariesQuestions = boundariesData?.["English Reading & Writing"]?.["Standard English Conventions"]?.["Boundaries"] || [];
     boundariesQuestions.forEach((q: RawQuestion, index: number) => {
       const { questionText, options } = parseQuestion(q.question);
-      questions.push({
-        id: globalId++,
-        section: "English",
-        subSection: "Standard English Conventions",
-        topic: "Boundaries",
-        questionText,
+      const prompt = extractQuestionPrompt(questionText);
+      const passage = questionText.replace(prompt, '').trim();
+      addQuestion(createQuestion(
+        globalId++,
+        `BND_${String(index + 1).padStart(3, '0')}`,
+        "English",
+        "Standard English Conventions",
+        "Boundaries",
+        undefined,
+        passage,
+        prompt,
         options,
-        correctAnswer: q.answer,
-        explanation: q.explanation,
-        difficulty: getQuestionDifficulty("Boundaries", undefined, index),
-      });
+        q.answer,
+        q.explanation,
+        getQuestionDifficulty("Boundaries", undefined, index),
+      ));
     });
     
     // Process Verbs
@@ -303,52 +411,64 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
       // Subject-Verb Agreement
       (verbsFormStructure["Subject-Verb Agreement"] || []).forEach((q: RawQuestion, index: number) => {
         const { questionText, options } = parseQuestion(q.question);
-        questions.push({
-          id: globalId++,
-          section: "English",
-          subSection: "Standard English Conventions",
-          topic: "Form, Structure, and Sense",
-          subTopic: "Subject-Verb Agreement",
-          questionText,
+        const prompt = extractQuestionPrompt(questionText);
+        const passage = questionText.replace(prompt, '').trim();
+        addQuestion(createQuestion(
+          globalId++,
+          `SVA_${String(index + 1).padStart(3, '0')}`,
+          "English",
+          "Standard English Conventions",
+          "Form, Structure, and Sense",
+          "Subject-Verb Agreement",
+          passage,
+          prompt,
           options,
-          correctAnswer: q.answer,
-          explanation: q.explanation,
-          difficulty: getQuestionDifficulty("Form, Structure, and Sense", "Subject-Verb Agreement", index),
-        });
+          q.answer,
+          q.explanation,
+          getQuestionDifficulty("Form, Structure, and Sense", "Subject-Verb Agreement", index),
+        ));
       });
       
       // Verb Tenses
       (verbsFormStructure["Verb Tenses"] || []).forEach((q: RawQuestion, index: number) => {
         const { questionText, options } = parseQuestion(q.question);
-        questions.push({
-          id: globalId++,
-          section: "English",
-          subSection: "Standard English Conventions",
-          topic: "Form, Structure, and Sense",
-          subTopic: "Verb Tenses",
-          questionText,
+        const prompt = extractQuestionPrompt(questionText);
+        const passage = questionText.replace(prompt, '').trim();
+        addQuestion(createQuestion(
+          globalId++,
+          `VT_${String(index + 1).padStart(3, '0')}`,
+          "English",
+          "Standard English Conventions",
+          "Form, Structure, and Sense",
+          "Verb Tenses",
+          passage,
+          prompt,
           options,
-          correctAnswer: q.answer,
-          explanation: q.explanation,
-          difficulty: getQuestionDifficulty("Form, Structure, and Sense", "Verb Tenses", index),
-        });
+          q.answer,
+          q.explanation,
+          getQuestionDifficulty("Form, Structure, and Sense", "Verb Tenses", index),
+        ));
       });
       
       // Verb Forms
       (verbsFormStructure["Verb Forms"] || []).forEach((q: RawQuestion, index: number) => {
         const { questionText, options } = parseQuestion(q.question);
-        questions.push({
-          id: globalId++,
-          section: "English",
-          subSection: "Standard English Conventions",
-          topic: "Form, Structure, and Sense",
-          subTopic: "Verb Forms",
-          questionText,
+        const prompt = extractQuestionPrompt(questionText);
+        const passage = questionText.replace(prompt, '').trim();
+        addQuestion(createQuestion(
+          globalId++,
+          `VF_${String(index + 1).padStart(3, '0')}`,
+          "English",
+          "Standard English Conventions",
+          "Form, Structure, and Sense",
+          "Verb Forms",
+          passage,
+          prompt,
           options,
-          correctAnswer: q.answer,
-          explanation: q.explanation,
-          difficulty: getQuestionDifficulty("Form, Structure, and Sense", "Verb Forms", index),
-        });
+          q.answer,
+          q.explanation,
+          getQuestionDifficulty("Form, Structure, and Sense", "Verb Forms", index),
+        ));
       });
     }
     
@@ -357,18 +477,22 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
     if (pronounFormStructure) {
       (pronounFormStructure["Pronouns"] || []).forEach((q: RawQuestion, index: number) => {
         const { questionText, options } = parseQuestion(q.question);
-        questions.push({
-          id: globalId++,
-          section: "English",
-          subSection: "Standard English Conventions",
-          topic: "Form, Structure, and Sense",
-          subTopic: "Pronouns",
-          questionText,
+        const prompt = extractQuestionPrompt(questionText);
+        const passage = questionText.replace(prompt, '').trim();
+        addQuestion(createQuestion(
+          globalId++,
+          `PRO_${String(index + 1).padStart(3, '0')}`,
+          "English",
+          "Standard English Conventions",
+          "Form, Structure, and Sense",
+          "Pronouns",
+          passage,
+          prompt,
           options,
-          correctAnswer: q.answer,
-          explanation: q.explanation,
-          difficulty: getQuestionDifficulty("Form, Structure, and Sense", "Pronouns", index),
-        });
+          q.answer,
+          q.explanation,
+          getQuestionDifficulty("Form, Structure, and Sense", "Pronouns", index),
+        ));
       });
     }
     
@@ -378,52 +502,64 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
       // Modifiers
       (modifiersFormStructure["Modifiers"] || []).forEach((q: RawQuestion, index: number) => {
         const { questionText, options } = parseQuestion(q.question);
-        questions.push({
-          id: globalId++,
-          section: "English",
-          subSection: "Standard English Conventions",
-          topic: "Form, Structure, and Sense",
-          subTopic: "Modifiers",
-          questionText,
+        const prompt = extractQuestionPrompt(questionText);
+        const passage = questionText.replace(prompt, '').trim();
+        addQuestion(createQuestion(
+          globalId++,
+          `MOD_${String(index + 1).padStart(3, '0')}`,
+          "English",
+          "Standard English Conventions",
+          "Form, Structure, and Sense",
+          "Modifiers",
+          passage,
+          prompt,
           options,
-          correctAnswer: q.answer,
-          explanation: q.explanation,
-          difficulty: getQuestionDifficulty("Form, Structure, and Sense", "Modifiers", index),
-        });
+          q.answer,
+          q.explanation,
+          getQuestionDifficulty("Form, Structure, and Sense", "Modifiers", index),
+        ));
       });
       
       // Parallel Structure
       (modifiersFormStructure["Parallel Structure"] || []).forEach((q: RawQuestion, index: number) => {
         const { questionText, options } = parseQuestion(q.question);
-        questions.push({
-          id: globalId++,
-          section: "English",
-          subSection: "Standard English Conventions",
-          topic: "Form, Structure, and Sense",
-          subTopic: "Parallel Structure",
-          questionText,
+        const prompt = extractQuestionPrompt(questionText);
+        const passage = questionText.replace(prompt, '').trim();
+        addQuestion(createQuestion(
+          globalId++,
+          `PS_${String(index + 1).padStart(3, '0')}`,
+          "English",
+          "Standard English Conventions",
+          "Form, Structure, and Sense",
+          "Parallel Structure",
+          passage,
+          prompt,
           options,
-          correctAnswer: q.answer,
-          explanation: q.explanation,
-          difficulty: getQuestionDifficulty("Form, Structure, and Sense", "Parallel Structure", index),
-        });
+          q.answer,
+          q.explanation,
+          getQuestionDifficulty("Form, Structure, and Sense", "Parallel Structure", index),
+        ));
       });
       
       // Miscellaneous Topics / Other Topics
       (modifiersFormStructure["Miscellaneous Topics"] || modifiersFormStructure["Other Topics"] || []).forEach((q: RawQuestion, index: number) => {
         const { questionText, options } = parseQuestion(q.question);
-        questions.push({
-          id: globalId++,
-          section: "English",
-          subSection: "Standard English Conventions",
-          topic: "Form, Structure, and Sense",
-          subTopic: "Miscellaneous Topics",
-          questionText,
+        const prompt = extractQuestionPrompt(questionText);
+        const passage = questionText.replace(prompt, '').trim();
+        addQuestion(createQuestion(
+          globalId++,
+          `MISC_${String(index + 1).padStart(3, '0')}`,
+          "English",
+          "Standard English Conventions",
+          "Form, Structure, and Sense",
+          "Miscellaneous Topics",
+          passage,
+          prompt,
           options,
-          correctAnswer: q.answer,
-          explanation: q.explanation,
-          difficulty: getQuestionDifficulty("Form, Structure, and Sense", "Miscellaneous Topics", index),
-        });
+          q.answer,
+          q.explanation,
+          getQuestionDifficulty("Form, Structure, and Sense", "Miscellaneous Topics", index),
+        ));
       });
     }
     
@@ -440,35 +576,39 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
       
       transitionsArray.forEach((q: CentralIdeaQuestion) => {
         const options = parseNewFormatOptions(q.options);
-        
-        questions.push({
-          id: globalId++,
-          section: "English",
-          subSection: "Expression of Ideas",
-          topic: "Transitions",
-          questionText: `${q.passage}\n\n${q.question}`,
+        addQuestion(createQuestion(
+          globalId++,
+          `TRN_${String(transitionsIndex + 1).padStart(3, '0')}`,
+          "English",
+          "Expression of Ideas",
+          "Transitions",
+          undefined,
+          q.passage || '',
+          q.question,
           options,
-          correctAnswer: q.answer,
-          explanation: q.explanation,
-          difficulty: getQuestionDifficulty("Transitions", undefined, transitionsIndex++),
-        });
+          q.answer,
+          q.explanation,
+          getQuestionDifficulty("Transitions", undefined, transitionsIndex++),
+        ));
       });
       
       // Rhetorical Synthesis
       (expressionOfIdeas["Rhetorical Synthesis"] || []).forEach((q: CentralIdeaQuestion) => {
         const options = parseNewFormatOptions(q.options);
-        
-        questions.push({
-          id: globalId++,
-          section: "English",
-          subSection: "Expression of Ideas",
-          topic: "Rhetorical Synthesis",
-          questionText: `${q.passage}\n\n${q.question}`,
+        addQuestion(createQuestion(
+          globalId++,
+          `RS_${String(rhetoricalSynthesisIndex + 1).padStart(3, '0')}`,
+          "English",
+          "Expression of Ideas",
+          "Rhetorical Synthesis",
+          undefined,
+          q.passage || '',
+          q.question,
           options,
-          correctAnswer: q.answer,
-          explanation: q.explanation,
-          difficulty: getQuestionDifficulty("Rhetorical Synthesis", undefined, rhetoricalSynthesisIndex++),
-        });
+          q.answer,
+          q.explanation,
+          getQuestionDifficulty("Rhetorical Synthesis", undefined, rhetoricalSynthesisIndex++),
+        ));
       });
     }
     
@@ -479,18 +619,20 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
       if (inferenceExpressionOfIdeas) {
         (inferenceExpressionOfIdeas["Transitions"] || []).forEach((q: CentralIdeaQuestion) => {
           const options = parseNewFormatOptions(q.options);
-          
-          questions.push({
-            id: globalId++,
-            section: "English",
-            subSection: "Expression of Ideas",
-            topic: "Transitions",
-            questionText: `${q.passage}\n\n${q.question}`,
+          addQuestion(createQuestion(
+            globalId++,
+            `TRNI_${String(transitionsIndex + 1).padStart(3, '0')}`,
+            "English",
+            "Expression of Ideas",
+            "Transitions",
+            undefined,
+            q.passage || '',
+            q.question,
             options,
-            correctAnswer: q.answer,
-            explanation: q.explanation,
-            difficulty: getQuestionDifficulty("Transitions", undefined, transitionsIndex++),
-          });
+            q.answer,
+            q.explanation,
+            getQuestionDifficulty("Transitions", undefined, transitionsIndex++),
+          ));
         });
       }
       
@@ -499,18 +641,20 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
       if (inferenceInfoAndIdeas) {
         (inferenceInfoAndIdeas["Inferences"] || []).forEach((q: CentralIdeaQuestion) => {
           const options = parseNewFormatOptions(q.options);
-          
-          questions.push({
-            id: globalId++,
-            section: "English",
-            subSection: "Information and Ideas",
-            topic: "Inferences",
-            questionText: `${q.passage}\n\n${q.question}`,
+          addQuestion(createQuestion(
+            globalId++,
+            `INF_${String(inferencesIndex + 1).padStart(3, '0')}`,
+            "English",
+            "Information and Ideas",
+            "Inferences",
+            undefined,
+            q.passage || '',
+            q.question,
             options,
-            correctAnswer: q.answer,
-            explanation: q.explanation,
-            difficulty: getQuestionDifficulty("Inferences", undefined, inferencesIndex++),
-          });
+            q.answer,
+            q.explanation,
+            getQuestionDifficulty("Inferences", undefined, inferencesIndex++),
+          ));
         });
       }
     }
@@ -524,18 +668,20 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
           ? `Text 1:\n${q.content.passage_1}\n\nText 2:\n${q.content.passage_2}`
           : q.content.passage || '';
         const options = parseNewFormatOptions(q.content.options);
-        
-        questions.push({
-          id: globalId++,
-          section: "English",
-          subSection: "Craft and Structure",
-          topic: "Cross-Text Connections",
-          questionText: `${passage}\n\n${q.content.question}`,
+        addQuestion(createQuestion(
+          globalId++,
+          q.id || `CTC_${String(index + 1).padStart(3, '0')}`,
+          "English",
+          "Craft and Structure",
+          "Cross-Text Connections",
+          undefined,
+          passage,
+          q.content.question,
           options,
-          correctAnswer: q.solution.answer,
-          explanation: q.solution.explanation,
-          difficulty: (q.difficulty?.toLowerCase() as Difficulty) || getQuestionDifficulty("Cross-Text Connections", undefined, index),
-        });
+          q.solution.answer,
+          q.solution.explanation,
+          (q.difficulty?.toLowerCase() as Difficulty) || getQuestionDifficulty("Cross-Text Connections", undefined, index),
+        ));
       });
     }
     
@@ -543,19 +689,20 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
     if (mainPurposeData?.questions) {
       mainPurposeData.questions.forEach((q: NewFormatQuestion, index: number) => {
         const options = parseNewFormatOptions(q.content.options);
-        
-        questions.push({
-          id: globalId++,
-          section: "English",
-          subSection: "Craft and Structure",
-          topic: "Text Structure and Purpose",
-          subTopic: "Main Purpose",
-          questionText: `${q.content.passage || ''}\n\n${q.content.question}`,
+        addQuestion(createQuestion(
+          globalId++,
+          q.id || `MP_${String(index + 1).padStart(3, '0')}`,
+          "English",
+          "Craft and Structure",
+          "Text Structure and Purpose",
+          "Main Purpose",
+          q.content.passage || '',
+          q.content.question,
           options,
-          correctAnswer: q.solution.answer,
-          explanation: q.solution.explanation,
-          difficulty: (q.difficulty?.toLowerCase() as Difficulty) || getQuestionDifficulty("Text Structure and Purpose", "Main Purpose", index),
-        });
+          q.solution.answer,
+          q.solution.explanation,
+          (q.difficulty?.toLowerCase() as Difficulty) || getQuestionDifficulty("Text Structure and Purpose", "Main Purpose", index),
+        ));
       });
     }
     
@@ -563,62 +710,69 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
     if (overallStructureData?.questions) {
       overallStructureData.questions.forEach((q: NewFormatQuestion, index: number) => {
         const options = parseNewFormatOptions(q.content.options);
-        
-        questions.push({
-          id: globalId++,
-          section: "English",
-          subSection: "Craft and Structure",
-          topic: "Text Structure and Purpose",
-          subTopic: "Overall Structure",
-          questionText: `${q.content.passage || ''}\n\n${q.content.question}`,
+        addQuestion(createQuestion(
+          globalId++,
+          q.id || `OS_${String(index + 1).padStart(3, '0')}`,
+          "English",
+          "Craft and Structure",
+          "Text Structure and Purpose",
+          "Overall Structure",
+          q.content.passage || '',
+          q.content.question,
           options,
-          correctAnswer: q.solution.answer,
-          explanation: q.solution.explanation,
-          difficulty: (q.difficulty?.toLowerCase() as Difficulty) || getQuestionDifficulty("Text Structure and Purpose", "Overall Structure", index),
-        });
+          q.solution.answer,
+          q.solution.explanation,
+          (q.difficulty?.toLowerCase() as Difficulty) || getQuestionDifficulty("Text Structure and Purpose", "Overall Structure", index),
+        ));
       });
     }
     
     // Process Underlined Purpose (new format with subtopic)
-    // Handle array format (starts with [)
-    const underlinedQuestions = Array.isArray(underlinedPurposeData) 
-      ? underlinedPurposeData[0]?.questions || []
-      : underlinedPurposeData?.questions || [];
+    // Handle array format (starts with [) - merge ALL chunks, not just first
+    let underlinedQuestions: NewFormatQuestion[] = [];
+    if (Array.isArray(underlinedPurposeData)) {
+      // Merge questions from all array elements
+      underlinedQuestions = underlinedPurposeData.flatMap((item: any) => item?.questions || []);
+    } else if (underlinedPurposeData?.questions) {
+      underlinedQuestions = underlinedPurposeData.questions;
+    }
     
     underlinedQuestions.forEach((q: NewFormatQuestion, index: number) => {
       const options = parseNewFormatOptions(q.content.options);
-      
-      questions.push({
-        id: globalId++,
-        section: "English",
-        subSection: "Craft and Structure",
-        topic: "Text Structure and Purpose",
-        subTopic: "Underlined Purpose",
-        questionText: `${q.content.passage || ''}\n\n${q.content.question}`,
+      addQuestion(createQuestion(
+        globalId++,
+        q.id || `UP_${String(index + 1).padStart(3, '0')}`,
+        "English",
+        "Craft and Structure",
+        "Text Structure and Purpose",
+        "Underlined Purpose",
+        q.content.passage || '',
+        q.content.question,
         options,
-        correctAnswer: q.solution.answer,
-        explanation: q.solution.explanation,
-        difficulty: (q.difficulty?.toLowerCase() as Difficulty) || getQuestionDifficulty("Text Structure and Purpose", "Underlined Purpose", index),
-      });
+        q.solution.answer,
+        q.solution.explanation,
+        (q.difficulty?.toLowerCase() as Difficulty) || getQuestionDifficulty("Text Structure and Purpose", "Underlined Purpose", index),
+      ));
     });
     
     // Process Gap Fillings (new format with subtopic)
     if (gapFillingsData?.questions) {
       gapFillingsData.questions.forEach((q: NewFormatQuestion, index: number) => {
         const options = parseNewFormatOptions(q.content.options);
-        
-        questions.push({
-          id: globalId++,
-          section: "English",
-          subSection: "Craft and Structure",
-          topic: "Words in Context",
-          subTopic: "Gap Fillings",
-          questionText: `${q.content.passage || ''}\n\n${q.content.question}`,
+        addQuestion(createQuestion(
+          globalId++,
+          q.id || `GAP_${String(index + 1).padStart(3, '0')}`,
+          "English",
+          "Craft and Structure",
+          "Words in Context",
+          "Gap Fillings",
+          q.content.passage || '',
+          q.content.question,
           options,
-          correctAnswer: q.solution.answer,
-          explanation: q.solution.explanation,
-          difficulty: (q.difficulty?.toLowerCase() as Difficulty) || getQuestionDifficulty("Words in Context", "Gap Fillings", index),
-        });
+          q.solution.answer,
+          q.solution.explanation,
+          (q.difficulty?.toLowerCase() as Difficulty) || getQuestionDifficulty("Words in Context", "Gap Fillings", index),
+        ));
       });
     }
     
@@ -626,19 +780,20 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
     if (synonymsData?.questions) {
       synonymsData.questions.forEach((q: NewFormatQuestion, index: number) => {
         const options = parseNewFormatOptions(q.content.options);
-        
-        questions.push({
-          id: globalId++,
-          section: "English",
-          subSection: "Craft and Structure",
-          topic: "Words in Context",
-          subTopic: "Synonyms",
-          questionText: `${q.content.passage || ''}\n\n${q.content.question}`,
+        addQuestion(createQuestion(
+          globalId++,
+          q.id || `SYN_${String(index + 1).padStart(3, '0')}`,
+          "English",
+          "Craft and Structure",
+          "Words in Context",
+          "Synonyms",
+          q.content.passage || '',
+          q.content.question,
           options,
-          correctAnswer: q.solution.answer,
-          explanation: q.solution.explanation,
-          difficulty: (q.difficulty?.toLowerCase() as Difficulty) || getQuestionDifficulty("Words in Context", "Synonyms", index),
-        });
+          q.solution.answer,
+          q.solution.explanation,
+          (q.difficulty?.toLowerCase() as Difficulty) || getQuestionDifficulty("Words in Context", "Synonyms", index),
+        ));
       });
     }
     
@@ -646,19 +801,20 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
     if (supportData?.questions) {
       supportData.questions.forEach((q: NewFormatQuestion, index: number) => {
         const options = parseNewFormatOptions(q.content.options);
-        
-        questions.push({
-          id: globalId++,
-          section: "English",
-          subSection: "Information and Ideas",
-          topic: "Command of Evidence",
-          subTopic: "Support",
-          questionText: `${q.content.passage || ''}\n\n${q.content.question}`,
+        addQuestion(createQuestion(
+          globalId++,
+          q.id || `SUP_${String(index + 1).padStart(3, '0')}`,
+          "English",
+          "Information and Ideas",
+          "Command of Evidence",
+          "Support",
+          q.content.passage || '',
+          q.content.question,
           options,
-          correctAnswer: q.solution.answer,
-          explanation: q.solution.explanation,
-          difficulty: (q.difficulty?.toLowerCase() as Difficulty) || getQuestionDifficulty("Command of Evidence", "Support", index),
-        });
+          q.solution.answer,
+          q.solution.explanation,
+          (q.difficulty?.toLowerCase() as Difficulty) || getQuestionDifficulty("Command of Evidence", "Support", index),
+        ));
       });
     }
     
@@ -666,19 +822,20 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
     if (weakenData?.questions) {
       weakenData.questions.forEach((q: NewFormatQuestion, index: number) => {
         const options = parseNewFormatOptions(q.content.options);
-        
-        questions.push({
-          id: globalId++,
-          section: "English",
-          subSection: "Information and Ideas",
-          topic: "Command of Evidence",
-          subTopic: "Weaken",
-          questionText: `${q.content.passage || ''}\n\n${q.content.question}`,
+        addQuestion(createQuestion(
+          globalId++,
+          q.id || `WKN_${String(index + 1).padStart(3, '0')}`,
+          "English",
+          "Information and Ideas",
+          "Command of Evidence",
+          "Weaken",
+          q.content.passage || '',
+          q.content.question,
           options,
-          correctAnswer: q.solution.answer,
-          explanation: q.solution.explanation,
-          difficulty: (q.difficulty?.toLowerCase() as Difficulty) || getQuestionDifficulty("Command of Evidence", "Weaken", index),
-        });
+          q.solution.answer,
+          q.solution.explanation,
+          (q.difficulty?.toLowerCase() as Difficulty) || getQuestionDifficulty("Command of Evidence", "Weaken", index),
+        ));
       });
     }
     
@@ -686,19 +843,20 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
     if (mainIdeasData?.questions) {
       mainIdeasData.questions.forEach((q: NewFormatQuestion, index: number) => {
         const options = parseNewFormatOptions(q.content.options);
-        
-        questions.push({
-          id: globalId++,
-          section: "English",
-          subSection: "Information and Ideas",
-          topic: "Central Ideas and Details",
-          subTopic: "Main Ideas",
-          questionText: `${q.content.passage || ''}\n\n${q.content.question}`,
+        addQuestion(createQuestion(
+          globalId++,
+          q.id || `MI_${String(index + 1).padStart(3, '0')}`,
+          "English",
+          "Information and Ideas",
+          "Central Ideas and Details",
+          "Main Ideas",
+          q.content.passage || '',
+          q.content.question,
           options,
-          correctAnswer: q.solution.answer,
-          explanation: q.solution.explanation,
-          difficulty: (q.difficulty?.toLowerCase() as Difficulty) || getQuestionDifficulty("Central Ideas and Details", "Main Ideas", index),
-        });
+          q.solution.answer,
+          q.solution.explanation,
+          (q.difficulty?.toLowerCase() as Difficulty) || getQuestionDifficulty("Central Ideas and Details", "Main Ideas", index),
+        ));
       });
     }
     
@@ -706,19 +864,20 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
     if (detailedQuestionsData?.questions) {
       detailedQuestionsData.questions.forEach((q: NewFormatQuestion, index: number) => {
         const options = parseNewFormatOptions(q.content.options);
-        
-        questions.push({
-          id: globalId++,
-          section: "English",
-          subSection: "Information and Ideas",
-          topic: "Central Ideas and Details",
-          subTopic: "Detail Questions",
-          questionText: `${q.content.passage || ''}\n\n${q.content.question}`,
+        addQuestion(createQuestion(
+          globalId++,
+          q.id || `DQ_${String(index + 1).padStart(3, '0')}`,
+          "English",
+          "Information and Ideas",
+          "Central Ideas and Details",
+          "Detail Questions",
+          q.content.passage || '',
+          q.content.question,
           options,
-          correctAnswer: q.solution.answer,
-          explanation: q.solution.explanation,
-          difficulty: (q.difficulty?.toLowerCase() as Difficulty) || getQuestionDifficulty("Central Ideas and Details", "Detail Questions", index),
-        });
+          q.solution.answer,
+          q.solution.explanation,
+          (q.difficulty?.toLowerCase() as Difficulty) || getQuestionDifficulty("Central Ideas and Details", "Detail Questions", index),
+        ));
       });
     }
     
@@ -726,19 +885,20 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
     if (quotationData?.questions) {
       quotationData.questions.forEach((q: NewFormatQuestion, index: number) => {
         const options = parseNewFormatOptions(q.content.options);
-        
-        questions.push({
-          id: globalId++,
-          section: "English",
-          subSection: "Information and Ideas",
-          topic: "Command of Evidence",
-          subTopic: "Quotation",
-          questionText: `${q.content.passage || ''}\n\n${q.content.question}`,
+        addQuestion(createQuestion(
+          globalId++,
+          q.id || `QUO_${String(index + 1).padStart(3, '0')}`,
+          "English",
+          "Information and Ideas",
+          "Command of Evidence",
+          "Quotation",
+          q.content.passage || '',
+          q.content.question,
           options,
-          correctAnswer: q.solution.answer,
-          explanation: q.solution.explanation,
-          difficulty: (q.difficulty?.toLowerCase() as Difficulty) || getQuestionDifficulty("Command of Evidence", "Quotation", index),
-        });
+          q.solution.answer,
+          q.solution.explanation,
+          (q.difficulty?.toLowerCase() as Difficulty) || getQuestionDifficulty("Command of Evidence", "Quotation", index),
+        ));
       });
     }
     
@@ -746,19 +906,20 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
     if (graphsData?.questions) {
       graphsData.questions.forEach((q: NewFormatQuestion, index: number) => {
         const options = parseNewFormatOptions(q.content.options);
-        
-        questions.push({
-          id: globalId++,
-          section: "English",
-          subSection: "Information and Ideas",
-          topic: "Command of Evidence",
-          subTopic: "Graphs",
-          questionText: `${q.content.passage || ''}\n\n${q.content.question}`,
+        addQuestion(createQuestion(
+          globalId++,
+          q.id || `GRA_${String(index + 1).padStart(3, '0')}`,
+          "English",
+          "Information and Ideas",
+          "Command of Evidence",
+          "Graphs",
+          q.content.passage || '',
+          q.content.question,
           options,
-          correctAnswer: q.solution.answer,
-          explanation: q.solution.explanation,
-          difficulty: (q.difficulty?.toLowerCase() as Difficulty) || getQuestionDifficulty("Command of Evidence", "Graphs", index),
-        });
+          q.solution.answer,
+          q.solution.explanation,
+          (q.difficulty?.toLowerCase() as Difficulty) || getQuestionDifficulty("Command of Evidence", "Graphs", index),
+        ));
       });
     }
     
