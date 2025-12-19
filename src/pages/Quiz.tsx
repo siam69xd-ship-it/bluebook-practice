@@ -56,6 +56,8 @@ export default function Quiz() {
   const [loadError, setLoadError] = useState(false);
   const [showHighlightTool, setShowHighlightTool] = useState(false);
   const [isTimerHidden, setIsTimerHidden] = useState(false);
+  const [isPracticeMode, setIsPracticeMode] = useState(false);
+  const [practiceTopicInfo, setPracticeTopicInfo] = useState<{topic?: string; subTopic?: string} | null>(null);
 
   // Fetch attempt counts for logged-in users
   const { data: attemptCounts = {} } = useQuery<Record<string, number>>({
@@ -109,6 +111,15 @@ export default function Quiz() {
           try {
             const practiceConfig = JSON.parse(practiceConfigStr);
             const { filter, difficulties } = practiceConfig;
+            
+            // Set practice mode flag and topic info
+            setIsPracticeMode(true);
+            if (filter) {
+              setPracticeTopicInfo({
+                topic: filter.topic,
+                subTopic: filter.subTopic,
+              });
+            }
             
             // Apply difficulty filter
             if (difficulties) {
@@ -504,12 +515,22 @@ export default function Quiz() {
                   </div>
                 </div>
 
-                {/* Section Badge - Only English */}
-                <div className="flex items-center mb-4">
-                  <span className="px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary" data-testid="badge-section">
-                    {currentQuestion.section}
-                  </span>
-                </div>
+                {/* Section Badge - Show topic only in Practice mode */}
+                {isPracticeMode && practiceTopicInfo && (
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary" data-testid="badge-section">
+                      {currentQuestion.section}
+                    </span>
+                    {practiceTopicInfo.topic && (
+                      <>
+                        <span className="text-gray-400">|</span>
+                        <span className="text-xs font-medium text-gray-600">
+                          {practiceTopicInfo.subTopic || practiceTopicInfo.topic}
+                        </span>
+                      </>
+                    )}
+                  </div>
+                )}
 
                 {/* Question Text */}
                 <PassageRenderer 
