@@ -107,8 +107,15 @@ export default function Practice() {
   const [isLoading, setIsLoading] = useState(true);
   const [expandedSections, setExpandedSections] = useState<string[]>([
     'English Reading & Writing',
+    'Craft and Structure',
+    'Words in Context',
+    'Text Structure and Purpose',
+    'Expression of Ideas',
     'Information and Ideas',
+    'Central Ideas and Details',
+    'Command of Evidence',
     'Standard English Conventions',
+    'Form, Structure, and Sense',
   ]);
   const [selectedDifficulties, setSelectedDifficulties] = useState<DifficultyFilter>({
     easy: true,
@@ -145,10 +152,10 @@ export default function Practice() {
   }, [questions]);
 
   const getCount = (subSection?: string, topic?: string, subTopic?: string): number => {
-    return filteredQuestions.filter(q => {
-      if (subTopic) return q.subTopic === subTopic;
-      if (topic) return q.topic === topic;
-      if (subSection) return q.subSection === subSection;
+    return filteredQuestions.filter((q) => {
+      if (subSection && q.subSection !== subSection) return false;
+      if (topic && q.topic !== topic) return false;
+      if (subTopic && q.subTopic !== subTopic) return false;
       return true;
     }).length;
   };
