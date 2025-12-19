@@ -69,6 +69,12 @@ export function PracticeSelector({ questions, isOpen, onClose }: PracticeSelecto
   const navigate = useNavigate();
   const [expandedSections, setExpandedSections] = useState<string[]>([
     'English Reading & Writing',
+    'Craft and Structure',
+    'Words in Context',
+    'Text Structure and Purpose',
+    'Information and Ideas',
+    'Central Ideas and Details',
+    'Command of Evidence',
   ]);
   const [selectedDifficulties, setSelectedDifficulties] = useState<DifficultyFilter>({
     easy: true,
@@ -92,10 +98,10 @@ export function PracticeSelector({ questions, isOpen, onClose }: PracticeSelecto
 
   // Count questions for each category with difficulty filter
   const getCount = (subSection?: string, topic?: string, subTopic?: string): number => {
-    return filteredQuestions.filter(q => {
-      if (subTopic) return q.subTopic === subTopic;
-      if (topic) return q.topic === topic;
-      if (subSection) return q.subSection === subSection;
+    return filteredQuestions.filter((q) => {
+      if (subSection && q.subSection !== subSection) return false;
+      if (topic && q.topic !== topic) return false;
+      if (subTopic && q.subTopic !== subTopic) return false;
       return true;
     }).length;
   };
