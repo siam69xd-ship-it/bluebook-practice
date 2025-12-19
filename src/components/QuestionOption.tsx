@@ -36,12 +36,12 @@ export function QuestionOption({
   return (
     <div
       className={cn(
-        'group relative flex items-center gap-4 px-5 py-4 rounded-lg border-2 transition-all duration-200 cursor-pointer',
+        'group relative flex items-center gap-4 px-5 py-4 rounded-xl border transition-all duration-200 cursor-pointer',
         isEliminated && 'opacity-40',
         !isEliminated && !showOptionWrong && !showOptionCorrect && !showCorrectIndicator && !isSelected && 
-          'border-gray-300 bg-white hover:border-gray-400',
+          'border-border bg-card hover:border-muted-foreground/50 hover:shadow-sm',
         isSelected && !isOptionChecked && !isChecked && 
-          'border-gray-500 bg-white',
+          'border-foreground/30 bg-card shadow-sm',
         showOptionWrong && 'border-red-400 bg-red-50',
         showOptionCorrect && 'border-green-400 bg-green-50',
         showCorrectIndicator && 'border-green-300 bg-green-50/50'
@@ -52,11 +52,11 @@ export function QuestionOption({
       {/* Circle Letter Badge - SAT Style */}
       <div
         className={cn(
-          'flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center font-semibold text-base border-2 transition-all duration-200',
+          "flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-semibold text-lg border-2 transition-all duration-200",
           !isSelected && !isOptionChecked && !showCorrectIndicator && 
-            'border-gray-400 bg-white text-gray-700',
+            'border-foreground/40 bg-card text-foreground',
           isSelected && !isOptionChecked && !isChecked && 
-            'border-gray-800 bg-gray-800 text-white',
+            'border-foreground bg-foreground text-background',
           showOptionWrong && 'border-red-500 bg-red-500 text-white',
           showOptionCorrect && 'border-green-500 bg-green-500 text-white',
           showCorrectIndicator && 'border-green-500 bg-green-100 text-green-700'
@@ -68,14 +68,13 @@ export function QuestionOption({
       {/* Option text - SAT font style */}
       <span
         className={cn(
-          'flex-1 text-base leading-relaxed font-normal',
-          isEliminated && 'line-through text-gray-400',
-          !isEliminated && !showOptionWrong && !showOptionCorrect && !showCorrectIndicator && 'text-gray-800',
+          "flex-1 text-[1.0625rem] leading-relaxed font-normal quiz-option-text",
+          isEliminated && 'line-through text-muted-foreground',
+          !isEliminated && !showOptionWrong && !showOptionCorrect && !showCorrectIndicator && 'text-foreground',
           showOptionWrong && 'text-red-700',
           showOptionCorrect && 'text-green-700',
           showCorrectIndicator && 'text-green-700'
         )}
-        style={{ fontFamily: "'Merriweather', 'Georgia', serif" }}
       >
         {text}
       </span>
@@ -89,7 +88,7 @@ export function QuestionOption({
               e.stopPropagation();
               onCheckOption();
             }}
-            className="flex-shrink-0 px-4 py-1.5 bg-blue-600 text-white text-sm font-medium rounded-full hover:bg-blue-700 transition-colors"
+            className="flex-shrink-0 px-4 py-1.5 bg-foreground text-background text-sm font-medium rounded-full hover:bg-foreground/90 transition-colors"
             title="Check this option"
             data-testid={`button-check-option-${letter}`}
           >
@@ -104,10 +103,10 @@ export function QuestionOption({
             onEliminate();
           }}
           className={cn(
-            'flex-shrink-0 w-9 h-9 rounded-full border-2 flex items-center justify-center transition-all duration-200',
+            'flex-shrink-0 w-10 h-10 rounded-full border flex items-center justify-center transition-all duration-200',
             isEliminated
-              ? 'border-gray-500 bg-gray-100 text-gray-600'
-              : 'border-gray-300 bg-white text-gray-400 hover:border-gray-400 hover:text-gray-500'
+              ? 'border-foreground/50 bg-muted text-foreground'
+              : 'border-border bg-card text-muted-foreground hover:border-muted-foreground hover:text-foreground'
           )}
           title={isEliminated ? 'Restore option' : 'Eliminate option'}
           data-testid={`button-eliminate-${letter}`}

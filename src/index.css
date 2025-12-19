@@ -188,15 +188,19 @@
   .quiz-passage {
     font-family: 'Noto Serif', serif;
     font-size: 1.125rem;
-    line-height: 1.6;
+    line-height: 1.75;
     color: hsl(var(--bluebook-text));
   }
   
   .quiz-question {
     font-family: 'Noto Serif', serif;
-    font-size: 1.125rem;
-    line-height: 1.6;
+    font-size: 1.0625rem;
+    line-height: 1.7;
     color: hsl(var(--bluebook-text));
+  }
+  
+  .quiz-option-text {
+    font-family: 'Noto Serif', serif;
   }
 }
 
