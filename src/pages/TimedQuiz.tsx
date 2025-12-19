@@ -15,6 +15,7 @@ import {
   XCircle,
   AlertCircle,
   ArrowLeft,
+  Undo2,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { HighlightTool } from '@/components/HighlightTool';
@@ -116,6 +117,7 @@ export default function TimedQuiz() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [loadError, setLoadError] = useState(false);
   const [showHighlightTool, setShowHighlightTool] = useState(false);
+  const [isEliminationMode, setIsEliminationMode] = useState(false);
   
   const [quizPhase, setQuizPhase] = useState<QuizPhase>('setup');
   const [timeRemaining, setTimeRemaining] = useState(0);
@@ -265,6 +267,13 @@ export default function TimedQuiz() {
       : [...eliminated, letter];
     updateQuestionState(currentQuestion.id, { eliminatedOptions: newEliminated });
   };
+
+  const handleUndoEliminations = () => {
+    if (!currentQuestion) return;
+    updateQuestionState(currentQuestion.id, { eliminatedOptions: [] });
+  };
+
+  const hasEliminations = (currentState?.eliminatedOptions?.length || 0) > 0;
   
   const handleToggleMark = () => {
     if (!currentQuestion || quizPhase !== 'active') return;
@@ -851,11 +860,39 @@ export default function TimedQuiz() {
                     Mark for Review
                   </button>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-3">
                   <button className="flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700">
                     <Flag className="w-4 h-4" />
                     Report
                   </button>
+                  {/* Elimination Tool Toggle */}
+                  <button
+                    onClick={() => setIsEliminationMode(!isEliminationMode)}
+                    className={cn(
+                      "flex items-center justify-center w-8 h-8 rounded transition-colors",
+                      isEliminationMode 
+                        ? "bg-gray-900 text-white" 
+                        : "text-gray-500 hover:bg-gray-100"
+                    )}
+                    title={isEliminationMode ? "Exit elimination mode" : "Enter elimination mode"}
+                  >
+                    <span className="relative text-sm font-bold">
+                      S
+                      <span className="absolute inset-0 flex items-center justify-center">
+                        <span className="w-full h-[1.5px] bg-current rotate-[-20deg]" />
+                      </span>
+                    </span>
+                  </button>
+                  {hasEliminations && (
+                    <button
+                      onClick={handleUndoEliminations}
+                      className="flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700"
+                      title="Undo all eliminations"
+                    >
+                      <Undo2 className="w-4 h-4" />
+                      Undo
+                    </button>
+                  )}
                 </div>
               </div>
 
@@ -880,6 +917,7 @@ export default function TimedQuiz() {
                     onEliminate={() => handleToggleElimination(letter)}
                     onCheckOption={() => {}}
                     hideCheckButton={true}
+                    showEliminationButtons={isEliminationMode}
                   />
                 ))}
               </div>
