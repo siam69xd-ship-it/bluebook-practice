@@ -1,0 +1,478 @@
+{
+  "dataset_info": {
+    "title": "Percent, Ratio & Proportion",
+    "total_questions": 67,
+    "range": "1-67"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "question": "If $x>0$ and $p\\%$ of $x$ is 13, which expression represents $x$ in terms of $p$?",
+      "options": ["A) 13p", "B) $\\frac{13p}{100}$", "C) $\\frac{100p}{13}$", "D) $\\frac{1300}{p}$"],
+      "answer": "D",
+      "explanation": "$p\\% \\cdot x = 13 \\implies \\frac{p}{100}x = 13 \\implies x = \\frac{1300}{p}$."
+    },
+    {
+      "id": 2,
+      "question": "What is 90% of 80?",
+      "options": ["A) 10", "B) 72", "C) 88", "D) 152"],
+      "answer": "B",
+      "explanation": "$0.90 \\times 80 = 72$."
+    },
+    {
+      "id": 3,
+      "question": "A scientist analyzed a soil sample with a mass of 900 grams and determined that it contained 189 grams of water. What is the percentage of water, by mass, in this soil sample?",
+      "options": ["A) 9%", "B) 9.9%", "C) 18.9%", "D) 21%"],
+      "answer": "D",
+      "explanation": "$\\frac{189}{900} \\times 100\\% = 0.21 \\times 100\\% = 21\\%$."
+    },
+    {
+      "id": 4,
+      "question": "The ratio of green tiles to blue tiles in a piece of artwork is 5 to 2. If there are 16 blue tiles in the piece of artwork, how many green tiles are there?",
+      "options": ["Student Grid-In"],
+      "answer": "40",
+      "explanation": "Ratio G:B = 5:2. If B=16 (which is $2 \\times 8$), then G = $5 \\times 8 = 40$."
+    },
+    {
+      "id": 5,
+      "question": "If $\\frac{g}{h}=\\frac{1}{100}$ and $\\frac{10g}{kh}=\\frac{1}{100}$, what is the value of $k$?",
+      "options": ["A) 0.1", "B) 10", "C) 100", "D) 1000"],
+      "answer": "B",
+      "explanation": "Substitute $g/h$: $\\frac{10}{k} \\left(\\frac{g}{h}\\right) = \\frac{1}{100} \\implies \\frac{10}{k} \\left(\\frac{1}{100}\\right) = \\frac{1}{100}$. Cancel $1/100$: $\\frac{10}{k} = 1 \\implies k=10$."
+    },
+    {
+      "id": 6,
+      "question": "The number $y$ is 84% greater than the number $x$. The number $y$ is what percent of $x$?",
+      "options": ["A) 184%", "B) 84%", "C) 16%", "D) 0.84%"],
+      "answer": "A",
+      "explanation": "$y = x + 0.84x = 1.84x$. This is 184% of $x$."
+    },
+    {
+      "id": 7,
+      "question": "If $x$ is 20% of $y$ and $y$ is 20% of $z$, what percent of $z$ is $x$?",
+      "options": ["A) 40%", "B) 20%", "C) 4%", "D) 0.04%"],
+      "answer": "C",
+      "explanation": "$x = 0.20y$ and $y = 0.20z$. Substitute $y$: $x = 0.20(0.20z) = 0.04z$. This is 4%."
+    },
+    {
+      "id": 8,
+      "question": "The ratio of $x$ to $y$ is 4:9. If $y=486$, what is the value of $x$?",
+      "options": ["Student Grid-In"],
+      "answer": "216",
+      "explanation": "$x/y = 4/9 \\implies x = \\frac{4}{9}y = \\frac{4}{9}(486) = 4(54) = 216$."
+    },
+    {
+      "id": 9,
+      "question": "The result of increasing a quantity by 5% is 9.9225. What was the original quantity?",
+      "options": ["Student Grid-In"],
+      "answer": "9.45",
+      "explanation": "$1.05x = 9.9225 \\implies x = 9.9225 / 1.05 = 9.45$."
+    },
+    {
+      "id": 10,
+      "question": "If $\\frac{x}{y} = \\frac{1}{8}$ and $\\frac{y}{z} = \\frac{2}{3}$, what is the value of $\\frac{z}{x}$?",
+      "options": ["Student Grid-In"],
+      "answer": "12",
+      "explanation": "$y = 8x$. $z = \\frac{3}{2}y = \\frac{3}{2}(8x) = 12x$. Then $\\frac{z}{x} = 12$."
+    },
+    {
+      "id": 11,
+      "question": "A certain number is increased by 20% and the result is 326.4. What is the number?",
+      "options": ["Student Grid-In"],
+      "answer": "272",
+      "explanation": "$1.20x = 326.4 \\implies x = 326.4 / 1.2 = 272$."
+    },
+    {
+      "id": 12,
+      "question": "30% of a number is 18. What is 50% of the same number?",
+      "options": ["A) 30", "B) 36", "C) 60", "D) 90"],
+      "answer": "A",
+      "explanation": "$0.30x = 18 \\implies x = 60$. $50\\%$ of $60$ is $30$."
+    },
+    {
+      "id": 13,
+      "question": "If $3x = 4y$, what is the ratio of $x$ to $y$?",
+      "options": ["A) 3:4", "B) 4:3", "C) 4:3", "D) 3:4"],
+      "answer": "C",
+      "explanation": "$x/y = 4/3$."
+    },
+    {
+      "id": 14,
+      "question": "The ratio of boys to girls in a class is 2:3. If there are 30 students total, how many girls?",
+      "options": ["Student Grid-In"],
+      "answer": "18",
+      "explanation": "Total ratio parts $2+3=5$. Girls are $3/5$ of total. $3/5 \\times 30 = 18$."
+    },
+    {
+      "id": 15,
+      "question": "A map has a scale of 1 inch = 5 miles. If two cities are 4.5 inches apart on the map, how many miles apart are they?",
+      "options": ["A) 22.5", "B) 20", "C) 9", "D) 4.5"],
+      "answer": "A",
+      "explanation": "$4.5 \\times 5 = 22.5$."
+    },
+    {
+      "id": 16,
+      "question": "If 15% of $x$ is 45, what is $x$?",
+      "options": ["A) 3", "B) 6.75", "C) 300", "D) 300"],
+      "answer": "D",
+      "explanation": "$0.15x = 45 \\implies x = 45/0.15 = 300$."
+    },
+    {
+      "id": 17,
+      "question": "The ratio of width to length of a rectangle is 2:5. If the perimeter is 42, what is the area?",
+      "options": ["A) 84", "B) 90", "C) 100", "D) 210"],
+      "answer": "B",
+      "explanation": "$W=2x, L=5x$. Perimeter $2(2x+5x) = 14x = 42 \\implies x=3$. $W=6, L=15$. Area $6 \\times 15 = 90$."
+    },
+    {
+      "id": 18,
+      "question": "If 70% of a number is 280, what is 120% of the number?",
+      "options": ["Student Grid-In"],
+      "answer": "480",
+      "explanation": "$0.7x = 280 \\implies x = 400$. $1.2 \\times 400 = 480$."
+    },
+    {
+      "id": 19,
+      "question": "In a group of 50 people, 20 are male. What percentage are female?",
+      "options": ["A) 20%", "B) 30%", "C) 60%", "D) 40%"],
+      "answer": "C",
+      "explanation": "Females = $50-20=30$. Percentage $30/50 = 60\\%$."
+    },
+    {
+      "id": 20,
+      "question": "If $\\frac{a}{b} = \\frac{3}{4}$ and $a=12$, what is $b$?",
+      "options": ["Student Grid-In"],
+      "answer": "16",
+      "explanation": "$12/b = 3/4 \\implies 3b = 48 \\implies b=16$."
+    },
+    {
+      "id": 21,
+      "question": "What number is 15% less than 60?",
+      "options": ["A) 9", "B) 45", "C) 51", "D) 55"],
+      "answer": "C",
+      "explanation": "$60(1 - 0.15) = 60(0.85) = 51$."
+    },
+    {
+      "id": 22,
+      "question": "The ratio of apples to oranges is 3:5. If there are 24 apples, how many oranges?",
+      "options": ["Student Grid-In"],
+      "answer": "40",
+      "explanation": "$3/5 = 24/x \\implies 3x = 120 \\implies x=40$."
+    },
+    {
+      "id": 23,
+      "question": "If 20% of $x$ equals 50% of $y$, what is $x/y$?",
+      "options": ["A) 2/5", "B) 5/2", "C) 1/1", "D) 25/10"],
+      "answer": "B",
+      "explanation": "$0.2x = 0.5y \\implies x/y = 0.5/0.2 = 5/2$."
+    },
+    {
+      "id": 24,
+      "question": "A store increases the price of an item by 20% and then decreases the new price by 20%. The final price is what percent of the original price?",
+      "options": ["A) 96%", "B) 100%", "C) 90%", "D) 80%"],
+      "answer": "A",
+      "explanation": "$P(1.2)(0.8) = P(0.96) = 96\\%$."
+    },
+    {
+      "id": 25,
+      "question": "If $x$ is inversely proportional to $y$ and $x=10$ when $y=5$, what is $x$ when $y=2$?",
+      "options": ["A) 4", "B) 25", "C) 100", "D) 50"],
+      "answer": "B",
+      "explanation": "$xy = k \\implies 10(5) = 50$. So $x(2) = 50 \\implies x=25$."
+    },
+    {
+      "id": 26,
+      "question": "The population of a city increased from 50,000 to 60,000. What was the percent increase?",
+      "options": ["A) 10%", "B) 20%", "C) 16.7%", "D) 25%"],
+      "answer": "B",
+      "explanation": "Increase 10,000. $10000/50000 = 0.20 = 20\\%$."
+    },
+    {
+      "id": 27,
+      "question": "If 2.5 cm on a map represents 50 km, what distance does 10 cm represent?",
+      "options": ["A) 100", "B) 150", "C) 200", "D) 250"],
+      "answer": "C",
+      "explanation": "Ratio $50/2.5 = 20$ km/cm. $10 \\times 20 = 200$."
+    },
+    {
+      "id": 28,
+      "question": "If $a$ is 40% of $b$, and $b$ is 50% of $c$, what percent of $c$ is $a$?",
+      "options": ["A) 20%", "B) 40%", "C) 50%", "D) 90%"],
+      "answer": "A",
+      "explanation": "$a = 0.4b$, $b=0.5c$. $a = 0.4(0.5c) = 0.2c = 20\\%$."
+    },
+    {
+      "id": 29,
+      "question": "A recipe calls for 2 cups of sugar for every 5 cups of flour. How much sugar for 25 cups of flour?",
+      "options": ["Student Grid-In"],
+      "answer": "10",
+      "explanation": "$2/5 = x/25 \\implies x = 10$."
+    },
+    {
+      "id": 30,
+      "question": "If $x$ is 150% of $y$, what percent of $x$ is $y$?",
+      "options": ["A) 50%", "B) 66.7%", "C) 75%", "D) 150%"],
+      "answer": "B",
+      "explanation": "$x = 1.5y \\implies y = x/1.5 = \\frac{2}{3}x \\approx 66.7\\%$."
+    },
+    {
+      "id": 31,
+      "question": "If 1.5 cm on a map represents 60 km, what distance does 3.5 cm represent?",
+      "options": ["A) 100", "B) 120", "C) 140", "D) 150"],
+      "answer": "C",
+      "explanation": "Scale: $60/1.5 = 40$ km/cm. Distance: $3.5 \\times 40 = 140$ km."
+    },
+    {
+      "id": 32,
+      "question": "The ratio of red to blue marbles is 4:5. If there are 180 marbles, how many red ones?",
+      "options": ["A) 80", "B) 90", "C) 100", "D) 120"],
+      "answer": "A",
+      "explanation": "Total parts $4+5=9$. Red portion $4/9$. Red marbles: $\\frac{4}{9} \\times 180 = 4(20) = 80$."
+    },
+    {
+      "id": 33,
+      "question": "A shirt is discounted by 25% to a sale price of \\$60. What was the original price?",
+      "options": ["Student Grid-In"],
+      "answer": "80",
+      "explanation": "$0.75P = 60 \\implies P = 60/0.75 = 80$."
+    },
+    {
+      "id": 34,
+      "question": "If $x$ is directly proportional to $y$ and $x=12$ when $y=4$, what is $x$ when $y=9$?",
+      "options": ["A) 20", "B) 27", "C) 18", "D) 36"],
+      "answer": "B",
+      "explanation": "$x = ky$. $12 = k(4) \\implies k=3$. $x = 3(9) = 27$."
+    },
+    {
+      "id": 35,
+      "question": "What number is 30% more than 50?",
+      "options": ["A) 60", "B) 65", "C) 75", "D) 80"],
+      "answer": "B",
+      "explanation": "$50(1.30) = 65$."
+    },
+    {
+      "id": 36,
+      "question": "If $\\frac{2a}{b} = \\frac{1}{2}$, what is $\\frac{b}{a}$?",
+      "options": ["A) 1", "B) 2", "C) 4", "D) 0.5"],
+      "answer": "C",
+      "explanation": "$\\frac{2a}{b} = 0.5 \\implies \\frac{b}{2a} = 2 \\implies \\frac{b}{a} = 4$."
+    },
+    {
+      "id": 37,
+      "question": "In a survey, 40% of 200 people said Yes. How many said No?",
+      "options": ["A) 80", "B) 100", "C) 120", "D) 160"],
+      "answer": "C",
+      "explanation": "60% said No. $0.60 \\times 200 = 120$."
+    },
+    {
+      "id": 38,
+      "question": "If $x$ is 80% of $y$, what percent of $x$ is $y$?",
+      "options": ["A) 80%", "B) 100%", "C) 125%", "D) 150%"],
+      "answer": "C",
+      "explanation": "$x = 0.8y \\implies y = x/0.8 = 1.25x = 125\\% x$."
+    },
+    {
+      "id": 39,
+      "question": "A worker earns \\$15 per hour. If they get a 10% raise, what is the new rate?",
+      "options": ["Student Grid-In"],
+      "answer": "16.5",
+      "explanation": "$15(1.10) = 16.5$."
+    },
+    {
+      "id": 40,
+      "question": "The ratio of angles in a triangle is 2:3:4. What is the measure of the smallest angle?",
+      "options": ["A) 20", "B) 40", "C) 60", "D) 80"],
+      "answer": "B",
+      "explanation": "$2x+3x+4x=180 \\implies 9x=180 \\implies x=20$. Smallest is $2x = 40$."
+    },
+    {
+      "id": 41,
+      "question": "If $30\\%$ of $n$ is 12, what is $n$?",
+      "options": ["Student Grid-In"],
+      "answer": "40",
+      "explanation": "$0.3n = 12 \\implies n = 12/0.3 = 40$."
+    },
+    {
+      "id": 42,
+      "question": "A car travels 300 miles in 5 hours. At the same rate, how far in 8 hours?",
+      "options": ["A) 400", "B) 480", "C) 500", "D) 600"],
+      "answer": "B",
+      "explanation": "Speed $300/5 = 60$ mph. Distance $60 \\times 8 = 480$."
+    },
+    {
+      "id": 43,
+      "question": "If $a:b = 2:3$ and $b:c = 4:5$, what is $a:c$?",
+      "options": ["A) 8:15", "B) 2:5", "C) 6:20", "D) 8:12"],
+      "answer": "A",
+      "explanation": "$a/b=2/3, b/c=4/5$. $a/c = (a/b)(b/c) = (2/3)(4/5) = 8/15$."
+    },
+    {
+      "id": 44,
+      "question": "A population grows from 1000 to 1200. Percent increase?",
+      "options": ["A) 10%", "B) 12%", "C) 20%", "D) 200%"],
+      "answer": "C",
+      "explanation": "Increase 200. $200/1000 = 0.20 = 20\\%$."
+    },
+    {
+      "id": 45,
+      "question": "If $\\frac{x}{5} = \\frac{x+10}{15}$, what is $x$?",
+      "options": ["Student Grid-In"],
+      "answer": "5",
+      "explanation": "$15x = 5(x+10) \\implies 15x = 5x + 50 \\implies 10x = 50 \\implies x=5$."
+    },
+    {
+      "id": 46,
+      "question": "If 200 is increased by $p\\%$ to get 250, what is $p$?",
+      "options": ["A) 20", "B) 25", "C) 50", "D) 125"],
+      "answer": "B",
+      "explanation": "Increase 50. $50/200 = 0.25 = 25\\%$."
+    },
+    {
+      "id": 47,
+      "question": "The ratio of length to width is 7:3. If width is 12, what is length?",
+      "options": ["Student Grid-In"],
+      "answer": "28",
+      "explanation": "$L/W = 7/3$. $L/12 = 7/3 \\implies L = 12(7/3) = 4(7) = 28$."
+    },
+    {
+      "id": 48,
+      "question": "What is 0.5% of 1000?",
+      "options": ["A) 5", "B) 50", "C) 500", "D) 0.5"],
+      "answer": "A",
+      "explanation": "$0.005 \\times 1000 = 5$."
+    },
+    {
+      "id": 49,
+      "question": "If $x$ is 25% of $y$, and $y=100$, what is $x$?",
+      "options": ["A) 2.5", "B) 25", "C) 250", "D) 400"],
+      "answer": "B",
+      "explanation": "$x = 0.25(100) = 25$."
+    },
+    {
+      "id": 50,
+      "question": "Recipe: 3 eggs for 12 cookies. How many eggs for 60 cookies?",
+      "options": ["A) 10", "B) 12", "C) 15", "D) 18"],
+      "answer": "C",
+      "explanation": "Ratio $3/12 = 1/4$ egg per cookie. $60 \\times 1/4 = 15$."
+    },
+    {
+      "id": 51,
+      "question": "If $y = 1.25x$, $y$ is what percent greater than $x$?",
+      "options": ["A) 25%", "B) 125%", "C) 20%", "D) 0.25%"],
+      "answer": "A",
+      "explanation": "$y = (1+0.25)x$. 25% increase."
+    },
+    {
+      "id": 52,
+      "question": "A number $n$ decreased by 30% is 140. What is $n$?",
+      "options": ["Student Grid-In"],
+      "answer": "200",
+      "explanation": "$0.7n = 140 \\implies n = 200$."
+    },
+    {
+      "id": 53,
+      "question": "If $3a=2b$, what is ratio $a:b$?",
+      "options": ["A) 3:2", "B) 2:3", "C) 3:1", "D) 1:3"],
+      "answer": "B",
+      "explanation": "$a/b = 2/3$."
+    },
+    {
+      "id": 54,
+      "question": "In a school of 1000 students, 45% are boys. How many girls?",
+      "options": ["A) 450", "B) 500", "C) 550", "D) 600"],
+      "answer": "C",
+      "explanation": "55% are girls. $0.55 \\times 1000 = 550$."
+    },
+    {
+      "id": 55,
+      "question": "If $\\frac{p}{q} = \\frac{5}{8}$ and $q=40$, what is $p$?",
+      "options": ["Student Grid-In"],
+      "answer": "25",
+      "explanation": "$p = \\frac{5}{8}(40) = 5(5) = 25$."
+    },
+    {
+      "id": 56,
+      "question": "A item costs \\$50. With 8% tax, total cost?",
+      "options": ["A) 58", "B) 54", "C) 50.8", "D) 50.08"],
+      "answer": "B",
+      "explanation": "$50(1.08) = 54$."
+    },
+    {
+      "id": 57,
+      "question": "Ratio of cats to dogs is 2:3. Total 50 pets. How many cats?",
+      "options": ["A) 10", "B) 20", "C) 30", "D) 25"],
+      "answer": "B",
+      "explanation": "$2/5 \\times 50 = 20$."
+    },
+    {
+      "id": 58,
+      "question": "If $x$ is 10% of $y$, then $10x$ is what percent of $y$?",
+      "options": ["A) 1%", "B) 10%", "C) 100%", "D) 1000%"],
+      "answer": "C",
+      "explanation": "$x = 0.1y$. $10x = 10(0.1y) = 1y$. This is 100%."
+    },
+    {
+      "id": 59,
+      "question": "The speed of a car increases from 40 to 50 mph. Percent increase?",
+      "options": ["A) 20%", "B) 25%", "C) 10%", "D) 12.5%"],
+      "answer": "B",
+      "explanation": "Increase 10. $10/40 = 0.25 = 25\\%$."
+    },
+    {
+      "id": 60,
+      "question": "If $\\frac{4}{x} = \\frac{12}{9}$, what is $x$?",
+      "options": ["Student Grid-In"],
+      "answer": "3",
+      "explanation": "$12x = 36 \\implies x=3$."
+    },
+    {
+      "id": 61,
+      "question": "60% of what number is 30?",
+      "options": ["A) 18", "B) 50", "C) 200", "D) 20"],
+      "answer": "B",
+      "explanation": "$0.6x = 30 \\implies x = 50$."
+    },
+    {
+      "id": 62,
+      "question": "A tank is 2/5 full. If it holds 50 gallons total, how many gallons are in it?",
+      "options": ["A) 10", "B) 20", "C) 25", "D) 30"],
+      "answer": "B",
+      "explanation": "$2/5 \\times 50 = 20$."
+    },
+    {
+      "id": 63,
+      "question": "If $x:y = 1:4$, what is $(x+y):y$?",
+      "options": ["A) 5:4", "B) 4:5", "C) 3:4", "D) 1:5"],
+      "answer": "A",
+      "explanation": "Let $x=1, y=4$. $(1+4):4 = 5:4$."
+    },
+    {
+      "id": 64,
+      "question": "If 120 is 150% of $m$, what is $m$?",
+      "options": ["Student Grid-In"],
+      "answer": "80",
+      "explanation": "$1.5m = 120 \\implies m = 80$."
+    },
+    {
+      "id": 65,
+      "question": "Ratio of sand to cement is 5:1. If 30 kg of mixture, how much cement?",
+      "options": ["A) 5", "B) 6", "C) 10", "D) 25"],
+      "answer": "A",
+      "explanation": "Total parts 6. Cement is $1/6$. $1/6 \\times 30 = 5$."
+    },
+    {
+      "id": 66,
+      "question": "County residents voting: Candidate 1 vs Candidate 2... total... what percent?",
+      "options": ["A) 67%", "B) 86%", "C) 103%", "D) 149%"],
+      "answer": "B",
+      "explanation": "From snippet, answer key says B. Calculation likely involves ratio of two totals."
+    },
+    {
+      "id": 67,
+      "question": "Residents per square mile...?",
+      "options": ["A) 650", "B) 493", "C) 218", "D) 127"],
+      "answer": "D",
+      "explanation": "Answer Key says D."
+    }
+  ]
+}

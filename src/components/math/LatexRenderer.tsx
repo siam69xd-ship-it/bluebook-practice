@@ -16,22 +16,23 @@ function LatexRendererComponent({ content, className = '', displayMode = false }
 
     let processedContent = content;
     
+    // Clean up multiple dots (like "..." or "....") - replace with ellipsis
+    processedContent = processedContent.replace(/\.{3,}/g, '…');
+    
     // Pre-process: protect currency amounts from being parsed as LaTeX
-    // Replace $X,XXX patterns (currency) with a placeholder
     const currencyPlaceholders: string[] = [];
     processedContent = processedContent.replace(/\$(\d{1,3}(?:,\d{3})*(?:\.\d{2})?)/g, (match, amount) => {
       currencyPlaceholders.push(`$${amount}`);
       return `%%CURRENCY_${currencyPlaceholders.length - 1}%%`;
     });
     
-    // Also protect standalone $ followed by numbers without comma (like $50)
+    // Protect standalone $ followed by numbers (like $50)
     processedContent = processedContent.replace(/\$(\d+(?:\.\d{2})?)\b(?!\$)/g, (match, amount) => {
       currencyPlaceholders.push(`$${amount}`);
       return `%%CURRENCY_${currencyPlaceholders.length - 1}%%`;
     });
 
-    // Handle display mode LaTeX ($$...$$) - centered equations on their own line
-    // These should be rendered as block-level centered equations
+    // Handle display mode LaTeX ($$...$$) - centered equations
     processedContent = processedContent.replace(/\$\$([\s\S]*?)\$\$/g, (_, latex) => {
       try {
         const rendered = katex.renderToString(latex.trim(), { 
@@ -40,39 +41,47 @@ function LatexRendererComponent({ content, className = '', displayMode = false }
           trust: true,
           strict: false
         });
-        // Wrap in centered div with proper spacing
-        return `<div class="my-6 text-center text-lg">${rendered}</div>`;
+        return `<div class="my-4 flex justify-center">${rendered}</div>`;
       } catch {
         return `$$${latex}$$`;
       }
     });
     
-    // Handle inline LaTeX ($...$) - must have content between $s
-    processedContent = processedContent.replace(/\$([^$\n]+?)\$/g, (_, latex) => {
-      // Skip if it looks like currency that wasn't caught
-      if (/^\d/.test(latex.trim())) return `$${latex}$`;
+    // Handle inline LaTeX ($...$)
+    processedContent = processedContent.replace(/\$([^$\n]+?)\$/g, (match, latex) => {
+      const trimmed = latex.trim();
+      // Skip if it looks like currency
+      if (/^\d/.test(trimmed)) return match;
+      // Skip if empty
+      if (!trimmed) return match;
       try {
-        return katex.renderToString(latex.trim(), { 
+        return katex.renderToString(trimmed, { 
           displayMode: false, 
           throwOnError: false,
           trust: true,
           strict: false
         });
       } catch {
-        return `$${latex}$`;
+        return match;
       }
     });
     
-    // Handle standalone \frac commands not wrapped in $
-    processedContent = processedContent.replace(/(?<!\$)\\frac\{([^}]*)\}\{([^}]*)\}(?!\$)/g, (_, num, den) => {
-      try {
-        return katex.renderToString(`\\frac{${num}}{${den}}`, { 
-          displayMode: false, 
-          throwOnError: false 
-        });
-      } catch {
-        return `${num}/${den}`;
-      }
+    // Handle standalone \frac, \sqrt, \text commands not wrapped in $
+    const latexCommands = [
+      { pattern: /(?<![\\$])\\frac\{([^}]*)\}\{([^}]*)\}/g, handler: (m: string, n: string, d: string) => `\\frac{${n}}{${d}}` },
+      { pattern: /(?<![\\$])\\sqrt\{([^}]*)\}/g, handler: (m: string, c: string) => `\\sqrt{${c}}` },
+      { pattern: /(?<![\\$])\\text\{([^}]*)\}/g, handler: (m: string, c: string) => `\\text{${c}}` },
+    ];
+    
+    latexCommands.forEach(({ pattern, handler }) => {
+      processedContent = processedContent.replace(pattern, (...args) => {
+        try {
+          const latex = handler(...args as [string, string, string]);
+          return katex.renderToString(latex, { displayMode: false, throwOnError: false });
+        } catch {
+          return args[0];
+        }
+      });
     });
 
     // Restore currency placeholders
@@ -80,7 +89,7 @@ function LatexRendererComponent({ content, className = '', displayMode = false }
       processedContent = processedContent.replace(`%%CURRENCY_${index}%%`, currency);
     });
 
-    // Handle HTML entities and line breaks
+    // Handle line breaks
     processedContent = processedContent
       .replace(/<br\s*\/?>/gi, '<br/>')
       .replace(/\n/g, '<br/>');
@@ -97,7 +106,6 @@ function LatexRendererComponent({ content, className = '', displayMode = false }
   );
 }
 
-// Memoize to prevent unnecessary re-renders
 const LatexRenderer = memo(LatexRendererComponent);
 
 export default LatexRenderer;

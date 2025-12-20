@@ -1,0 +1,185 @@
+{
+  "dataset_info": {
+    "title": "Unit Conversion",
+    "total_questions": 25,
+    "part": "1 of 1",
+    "range": "1-25"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "question": "A scientist takes two samples of Earth's crust, each with a mass of 3240 grams. Sample A has density of 3.0 g/cm³, and sample B has a density of 2.7 g/cm³. How much greater is the volume, in cubic centimeters, of sample B than sample A?",
+      "options": ["Student Grid-In"],
+      "answer": "120",
+      "explanation": "Volume = Mass / Density. $V_A = 3240 / 3.0 = 1080$. $V_B = 3240 / 2.7 = 1200$. Difference: $1200 - 1080 = 120$."
+    },
+    {
+      "id": 2,
+      "question": "The walls of a small apartment were covered using exactly 3 gallons of paint. The paint was spread uniformly over a total area of 960 square feet. What was the rate, in gallons per square foot, at which the paint was used?",
+      "options": ["A) 1/960", "B) 1/320", "C) 320", "D) 1/3"],
+      "answer": "B",
+      "explanation": "Rate = Gallons / Sq Ft = $3 / 960$. Simplify: $1 / 320$."
+    },
+    {
+      "id": 3,
+      "question": "The area of a rectangular region is increasing at a rate of 20 square feet per hour. Which of the following is closest to this rate in square meters per minute? (Use 1 meter = 3.28 feet)",
+      "options": ["A) 0.03", "B) 0.18", "C) 1.09", "D) 2.03"],
+      "answer": "A",
+      "explanation": "Convert 20 sq ft/hr to sq meters/min. $1 \\text{ m} = 3.28 \\text{ ft} \\implies 1 \\text{ sq m} = (3.28)^2 \\text{ sq ft} = 10.7584 \\text{ sq ft}$. Rate = $20 \\text{ sq ft/hr} \\times \\frac{1 \\text{ sq m}}{10.7584 \\text{ sq ft}} \\times \\frac{1 \\text{ hr}}{60 \\text{ min}} = \\frac{20}{10.7584 \\times 60} = \\frac{20}{645.5} \\approx 0.031$."
+    },
+    {
+      "id": 4,
+      "question": "The speed of a white-throated needletail, a type of bird, in flight was measured to be 49 miles per hour. What was the white-throated needletail's measured speed, in kilometers per hour? (Use 1 mile = 1.61 kilometers)",
+      "options": ["Student Grid-In"],
+      "answer": "79",
+      "explanation": "$49 \\text{ miles/hr} \\times 1.61 \\text{ km/mile} = 78.89 \\approx 79$."
+    },
+    {
+      "id": 5,
+      "question": "The mass of a piece of iron is 454 grams. Given that 1 pound = 453.6 grams, what is the mass of the piece of iron in pounds?",
+      "options": ["A) 0.001", "B) 1.00", "C) 1.01", "D) 206,000"],
+      "answer": "B",
+      "explanation": "$454 / 453.6 \\approx 1.00088$. Closest is 1.00."
+    },
+    {
+      "id": 6,
+      "question": "A rectangle has a length of $x$ centimeters and a width of $y$ centimeters. If the area of the rectangle is 25 square inches, which equation represents the area of the rectangle in square centimeters? (1 inch = 2.54 centimeters)",
+      "options": ["A) $xy = 25(2.54)$", "B) $xy = 25(2.54)^2$", "C) $xy = 25/2.54$", "D) $xy = 25/(2.54)^2$"],
+      "answer": "B",
+      "explanation": "Area in sq cm = Area in sq in $\\times (2.54)^2$. So $xy = 25(2.54)^2$."
+    },
+    {
+      "id": 7,
+      "question": "A certain medication is prescribed as 1 teaspoon every 4 hours. How many milliliters of medication are taken in one day? (1 teaspoon = 5 milliliters)",
+      "options": ["A) 15", "B) 20", "C) 30", "D) 60"],
+      "answer": "C",
+      "explanation": "One day = 24 hours. Doses per day = $24/4 = 6$. Total tsp = $6 \\times 1 = 6$. Total ml = $6 \\times 5 = 30$."
+    },
+    {
+      "id": 8,
+      "question": "The distance between two towns is 35 miles. What is this distance in kilometers? (1 mile = 1.61 kilometers)",
+      "options": ["A) 21.7", "B) 56.35", "C) 36.61", "D) 60.5"],
+      "answer": "B",
+      "explanation": "$35 \\times 1.61 = 56.35$."
+    },
+    {
+      "id": 9,
+      "question": "The area of a rug is 36 square feet. What is the area of the rug in square yards? (1 yard = 3 feet)",
+      "options": ["A) 4", "B) 9", "C) 12", "D) 108"],
+      "answer": "A",
+      "explanation": "$1 \\text{ sq yd} = 3^2 \\text{ sq ft} = 9 \\text{ sq ft}$. Area = $36 / 9 = 4$ sq yards."
+    },
+    {
+      "id": 10,
+      "question": "A car travels at a speed of 60 miles per hour. What is the speed in feet per second? (1 mile = 5280 feet)",
+      "options": ["A) 44", "B) 88", "C) 120", "D) 3600"],
+      "answer": "B",
+      "explanation": "$60 \\text{ miles/hr} \\times \\frac{5280 \\text{ ft}}{1 \\text{ mile}} \\times \\frac{1 \\text{ hr}}{3600 \\text{ sec}} = \\frac{60 \\times 5280}{3600} = \\frac{316800}{3600} = 88$."
+    },
+    {
+      "id": 11,
+      "question": "The capacity of a fuel tank is 15 gallons. How many liters does the tank hold? (1 gallon = 3.79 liters)",
+      "options": ["A) 3.96", "B) 18.79", "C) 56.85", "D) 60.85"],
+      "answer": "C",
+      "explanation": "$15 \\times 3.79 = 56.85$."
+    },
+    {
+      "id": 12,
+      "question": "A length of 254 centimeters is equivalent to how many inches? (1 inch = 2.54 centimeters)",
+      "options": ["A) 10", "B) 100", "C) 645", "D) 1000"],
+      "answer": "B",
+      "explanation": "$254 / 2.54 = 100$."
+    },
+    {
+      "id": 13,
+      "question": "A runner completes a 10-kilometer race in 40 minutes. What is the runner's average speed in kilometers per hour?",
+      "options": ["A) 4", "B) 15", "C) 25", "D) 40"],
+      "answer": "B",
+      "explanation": "40 minutes = $40/60$ hours = $2/3$ hours. Speed = $10 / (2/3) = 10 \\times 3/2 = 15$."
+    },
+    {
+      "id": 14,
+      "question": "If a box has a volume of 2 cubic feet, what is the volume in cubic inches? (1 foot = 12 inches)",
+      "options": ["A) 24", "B) 288", "C) 1728", "D) 3456"],
+      "answer": "D",
+      "explanation": "$1 \\text{ cubic ft} = 12^3 \\text{ cubic in} = 1728$. Volume = $2 \\times 1728 = 3456$."
+    },
+    {
+      "id": 15,
+      "question": "A recipe calls for 500 grams of flour. How many kilograms is this? (1 kilogram = 1000 grams)",
+      "options": ["A) 0.05", "B) 0.5", "C) 5", "D) 50"],
+      "answer": "B",
+      "explanation": "$500 / 1000 = 0.5$."
+    },
+    {
+      "id": 16,
+      "question": "The density of a substance is 2 grams per cubic centimeter. What is the density in kilograms per cubic meter? (1 kg = 1000 g, 1 m = 100 cm)",
+      "options": ["A) 20", "B) 200", "C) 2000", "D) 20000"],
+      "answer": "C",
+      "explanation": "$2 \\text{ g/cm}^3 \\times \\frac{1 \\text{ kg}}{1000 \\text{ g}} \\times \\left(\\frac{100 \\text{ cm}}{1 \\text{ m}}\\right)^3 = \\frac{2}{1000} \\times 1000000 = 2 \\times 1000 = 2000$."
+    },
+    {
+      "id": 17,
+      "question": "A car uses 8 liters of fuel to travel 100 kilometers. How many miles per gallon is this approximately? (1 mile = 1.61 km, 1 gallon = 3.79 liters)",
+      "options": ["A) 20", "B) 25", "C) 29", "D) 35"],
+      "answer": "C",
+      "explanation": "Fuel efficiency = Distance/Volume. Dist: $100 \\text{ km} = 100/1.61 \\text{ miles} \\approx 62.11 \\text{ miles}$. Vol: $8 \\text{ L} = 8/3.79 \\text{ gal} \\approx 2.11 \\text{ gal}$. MPG = $62.11 / 2.11 \\approx 29.4$."
+    },
+    {
+      "id": 18,
+      "question": "An object moves at 10 meters per second. What is this speed in kilometers per hour?",
+      "options": ["A) 18", "B) 24", "C) 36", "D) 60"],
+      "answer": "C",
+      "explanation": "$10 \\text{ m/s} \\times \\frac{3600 \\text{ s}}{1 \\text{ hr}} \\times \\frac{1 \\text{ km}}{1000 \\text{ m}} = 10 \\times 3.6 = 36$."
+    },
+    {
+      "id": 19,
+      "question": "The price of gold is \\$60 per gram. What is the price per ounce? (1 ounce = 28.35 grams)",
+      "options": ["A) 1500", "B) 1600", "C) 1701", "D) 1800"],
+      "answer": "C",
+      "explanation": "$60 \\text{ $/g} \\times 28.35 \\text{ g/oz} = 1701$."
+    },
+    {
+      "id": 20,
+      "question": "A storage tank has a volume of 0.84 cubic meters. What is the volume in quarts? (100 cm = 1 m, 946.35 cubic cm = 1 quart)",
+      "options": ["A) 0.09", "B) 7.95", "C) 794.93", "D) 887.62"],
+      "answer": "D",
+      "explanation": "$0.84 \\text{ m}^3 = 0.84 \\times (100)^3 \\text{ cm}^3 = 0.84 \\times 1000000 = 840000 \\text{ cm}^3$. Quarts = $840000 / 946.35 \\approx 887.62$."
+    },
+    {
+      "id": 21,
+      "question": "Bone mineral density is 0.812 g/cm². What is this in g/mm²? (1 cm = 10 mm)",
+      "options": ["A) 81.2", "B) 8.12", "C) 0.0812", "D) 0.00812"],
+      "answer": "D",
+      "explanation": "$1 \\text{ cm}^2 = (10 \\text{ mm})^2 = 100 \\text{ mm}^2$. Density = $0.812 \\text{ g} / 100 \\text{ mm}^2 = 0.00812$."
+    },
+    {
+      "id": 22,
+      "question": "Rate of speed increase is 1490 meters per hour per second. What is this in feet per second squared? (1 m = 3.28 ft)",
+      "options": ["A) 1.36", "B) 4.89", "C) 136", "D) 4890"],
+      "answer": "A",
+      "explanation": "$1490 \\text{ m/hr/s} = \\frac{1490 \\text{ m}}{1 \\text{ hr} \\cdot 1 \\text{ s}} \\times \\frac{3.28 \\text{ ft}}{1 \\text{ m}} \\times \\frac{1 \\text{ hr}}{3600 \\text{ s}} = \\frac{1490 \\times 3.28}{3600} \\text{ ft/s}^2 = \\frac{4887.2}{3600} \\approx 1.357$."
+    },
+    {
+      "id": 23,
+      "question": "A field has an area of 4047 square meters. How many acres is this? (1 acre = 4047 square meters)",
+      "options": ["Student Grid-In"],
+      "answer": "1",
+      "explanation": "$4047 / 4047 = 1$."
+    },
+    {
+      "id": 24,
+      "question": "How many centimeters are equivalent to 47 meters? (1 m = 100 cm)",
+      "options": ["Student Grid-In"],
+      "answer": "4700",
+      "explanation": "$47 \\times 100 = 4700$."
+    },
+    {
+      "id": 25,
+      "question": "An area of 56.00 square nautical miles is equivalent to $k$ square kilometers. Value of $k$? (1 nautical mile = 1.852 km)",
+      "options": ["Student Grid-In"],
+      "answer": "192.1",
+      "explanation": "$1 \\text{ sq naut mile} = (1.852)^2 \\text{ sq km} \\approx 3.4299$. Area = $56 \\times 3.4299 \\approx 192.07$. Rounded to tenth: 192.1."
+    }
+  ]
+}
