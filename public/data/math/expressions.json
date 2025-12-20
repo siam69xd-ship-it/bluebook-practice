@@ -1,0 +1,668 @@
+{
+  "dataset_info": {
+    "title": "SAT Math Expressions",
+    "total_questions": 94,
+    "part": "Complete Set",
+    "range": "1-94"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "question": "The ratio of a person's weight on Earth to the person's weight on the Moon is constant. An astronaut who weighs 540 newtons on Earth weighs 90 newtons on the Moon. Another astronaut weighs $w$ newtons on Earth. Which of the following expressions represents this astronaut's weight, in newtons, on the Moon?",
+      "options": ["A) $6w$", "B) $0.6w$", "C) $\\frac{6}{w}$", "D) $\\frac{w}{6}$"],
+      "answer": "D",
+      "explanation": "Ratio of Earth/Moon = $540/90 = 6$. Moon weight is $1/6$ of Earth weight. For weight $w$, Moon weight is $w/6$."
+    },
+    {
+      "id": 2,
+      "question": "Which of the following expressions is equivalent to $(\\frac{a}{4}+\\frac{b}{3})^2$?",
+      "options": ["A) $\\frac{a^2}{4}+\\frac{b^2}{3}$", "B) $\\frac{a^2}{16}+\\frac{b^2}{9}$", "C) $\\frac{a^2}{4}+\\frac{ab}{12}+\\frac{b^2}{3}$", "D) $\\frac{a^2}{16}+\\frac{ab}{6}+\\frac{b^2}{9}$"],
+      "answer": "D",
+      "explanation": "Use $(x+y)^2 = x^2+2xy+y^2$. $(\\frac{a}{4})^2 + 2(\\frac{a}{4})(\\frac{b}{3}) + (\\frac{b}{3})^2 = \\frac{a^2}{16} + \\frac{2ab}{12} + \\frac{b^2}{9} = \\frac{a^2}{16} + \\frac{ab}{6} + \\frac{b^2}{9}$."
+    },
+    {
+      "id": 3,
+      "question": "Jaqueline spent $150 for supplies and gas to start a lawn-mowing service. She charges $25 for each lawn she mows. In the first week Jaqueline made $50 after the cost of supplies and gas was deducted. Which equation represents this situation, where $x$ is the number of lawns Jaqueline mowed during the first week?",
+      "options": ["A) $25x-150=50$", "B) $50-25x=150$", "C) $150-25x=50$", "D) $25x+50=150$"],
+      "answer": "A",
+      "explanation": "Profit = Revenue - Cost. Revenue is $25x$, Cost is $150$, Profit is $50$. Equation: $25x - 150 = 50$."
+    },
+    {
+      "id": 4,
+      "question": "Which expression is equivalent to $(3x^3-x^2+4)(5x^2+8x)$?",
+      "options": ["A) $15x^5+19x^4-8x^3+20x+32$", "B) $15x^5+19x^4-8x^3-20x^2+32$", "C) $15x^5+19x^4-8x^3+20x^2+32x$", "D) $15x^5+29x^4-8x^3-20x^2+32x$"],
+      "answer": "C",
+      "explanation": "Expand: $3x^3(5x^2+8x) - x^2(5x^2+8x) + 4(5x^2+8x) = 15x^5+24x^4 - 5x^4-8x^3 + 20x^2+32x$. Combine terms: $15x^5+19x^4-8x^3+20x^2+32x$."
+    },
+    {
+      "id": 5,
+      "question": "If $\\frac{6}{7}p+12=54$ what is the value of $7p$?",
+      "options": ["Student Grid-In"],
+      "answer": "343",
+      "explanation": "Subtract 12: $\\frac{6}{7}p = 42$. Multiply by 7: $6p = 294$. Divide by 6: $p = 49$. Value of $7p = 7(49) = 343$."
+    },
+    {
+      "id": 6,
+      "question": "$b^2+5c=9d$. The given equation relates the real numbers $b, c,$ and $d,$ where $d>\\frac{5}{9}c$. Which equation correctly expresses $b$ in terms of $c$ and $d$?",
+      "options": ["A) $b=\\frac{9d+5c}{2}$", "B) $b=\\frac{9d-5c}{2}$", "C) $b=\\pm\\sqrt{9d+5c}$", "D) $b=\\pm\\sqrt{9d-5c}$"],
+      "answer": "D",
+      "explanation": "Isolate $b^2$: $b^2 = 9d - 5c$. Take square root: $b = \\pm\\sqrt{9d-5c}$."
+    },
+    {
+      "id": 7,
+      "question": "If $x^3+y^3=12$ and $x^3-y^3=6$, what is the value of $x^6-y^6$?",
+      "options": ["Student Grid-In"],
+      "answer": "72",
+      "explanation": "Use difference of squares: $x^6-y^6 = (x^3)^2-(y^3)^2 = (x^3+y^3)(x^3-y^3) = (12)(6) = 72$."
+    },
+    {
+      "id": 8,
+      "question": "Which expression is equivalent to $2(xy^2+x^2y)-8(xy^2-4x^2y)$?",
+      "options": ["A) $-6xy^2+34x^2y$", "B) $-6xy^2+33x^2y$", "C) $-6xy^2-30x^2y$", "D) $-6xy^2-31x^2y$"],
+      "answer": "A",
+      "explanation": "Distribute: $2xy^2+2x^2y - 8xy^2+32x^2y$. Combine: $(2-8)xy^2 + (2+32)x^2y = -6xy^2+34x^2y$."
+    },
+    {
+      "id": 9,
+      "question": "If $2x+3=9,$ what is the value of $4x-4$?",
+      "options": ["Student Grid-In"],
+      "answer": "8",
+      "explanation": "$2x=6 \\rightarrow x=3$. Then $4(3)-4 = 12-4 = 8$."
+    },
+    {
+      "id": 10,
+      "question": "Which expression is equivalent to $(131y)^{\\frac{1}{2}}$, where $y>1$?",
+      "options": ["A) $131\\sqrt{y}$", "B) $\\sqrt{131}y$", "C) $\\sqrt{131y}$", "D) $\\sqrt{(131y)^2}$"],
+      "answer": "C",
+      "explanation": "Exponent $1/2$ means square root: $\\sqrt{131y}$."
+    },
+    {
+      "id": 11,
+      "question": "Which expression is equivalent to $(5a^2-3ab+7b^2)-(4a^2+ab-2b^2)$?",
+      "options": ["A) $a^2-4ab+9b^2$", "B) $a^2-2ab+5b^2$", "C) $a^4-4a^2b^2+9b^4$", "D) $a^4-2a^2b^2+5b^4$"],
+      "answer": "A",
+      "explanation": "Subtract corresponding terms: $(5-4)a^2 + (-3-1)ab + (7-(-2))b^2 = a^2 - 4ab + 9b^2$."
+    },
+    {
+      "id": 12,
+      "question": "$7x+16=\\frac{4}{y}$. The given equation relates the distinct positive numbers $x$ and $y$. Which equation correctly expresses $y$ in terms of $x$?",
+      "options": ["A) $y=7x+12$", "B) $y=\\frac{4}{7x+16}$", "C) $y=\\frac{7x+16}{4}$", "D) $y=4(7x+16)$"],
+      "answer": "B",
+      "explanation": "Multiply by $y$: $y(7x+16)=4$. Divide by $(7x+16)$: $y = \\frac{4}{7x+16}$."
+    },
+    {
+      "id": 13,
+      "question": "A total of 6 squares each have side length $r$. A total of 3 equilateral triangle each have side length $t$. None of these squares and triangles shares a side. The sum of the perimeters of all these squares and triangles is 75. Which equation represents this situation?",
+      "options": ["A) $18r+12t=75$", "B) $24r+9t=75$", "C) $6r+3t=75$"],
+      "answer": "B",
+      "explanation": "Perimeter of one square = $4r$. Total for 6 squares = $24r$. Perimeter of one triangle = $3t$. Total for 3 triangles = $9t$. Sum = $24r+9t=75$."
+    },
+    {
+      "id": 14,
+      "question": "$v=-\\frac{w}{130x}$. The given equation relates the distinct positive numbers $v, w,$ and $x$. Which equation correctly expresses $w$ in terms of $v$ and $x$?",
+      "options": ["A) $w=-130vx$", "B) $w=-\\frac{130v}{x}$", "C) $w=-\\frac{x}{130v}$", "D) $w=v+130x$"],
+      "answer": "A",
+      "explanation": "Multiply both sides by $-130x$ to isolate $w$: $w = -130vx$."
+    },
+    {
+      "id": 15,
+      "question": "Which expression is equivalent to $(9nr^2+3nr)+(6n^2r+5nr)$?",
+      "options": ["A) $15n^2r^2+8nr$", "B) $15n^3r^3+8n^2r^2$", "C) $54n^3r^3+15n^2r^2$", "D) $9nr^2+6n^2r+8nr$"],
+      "answer": "D",
+      "explanation": "Combine like terms: $3nr + 5nr = 8nr$. Result: $9nr^2 + 6n^2r + 8nr$."
+    },
+    {
+      "id": 16,
+      "question": "Which expression is equivalent to $60y+90y$?",
+      "options": ["A) $540y^2$", "B) $150y^2$", "C) $150y$"],
+      "answer": "C",
+      "explanation": "Combine like terms: $60y + 90y = 150y$."
+    },
+    {
+      "id": 17,
+      "question": "If $9(x+3)=81$, what is the value of $x+3$?",
+      "options": ["A) 6", "B) 9", "C) 72"],
+      "answer": "B",
+      "explanation": "Divide by 9: $x+3 = 81/9 = 9$."
+    },
+    {
+      "id": 18,
+      "question": "Which expression is equivalent to $15(x+10)$?",
+      "options": ["A) $15x+10$", "B) $15x+150$", "C) $15x+25$", "D) $15x+5$"],
+      "answer": "B",
+      "explanation": "Distribute 15: $15(x) + 15(10) = 15x + 150$."
+    },
+    {
+      "id": 19,
+      "question": "$v=-\\frac{w}{161x}$. The given equation relates the distinct positive numbers $v, w,$ and $x$. Which equation correctly expresses $w$ in terms of $v$ and $x$?",
+      "options": ["A) $w=-161vx$", "B) $w=-\\frac{161v}{x}$", "C) $w=-\\frac{x}{161v}$", "D) $w=v+161x$"],
+      "answer": "A",
+      "explanation": "Multiply by $-161x$: $w = -161vx$."
+    },
+    {
+      "id": 20,
+      "question": "Which expression is equivalent to $16(x+5)$?",
+      "options": ["A) $16x+5$", "B) $16x+80$", "C) $16x+21$", "D) $16x+11$"],
+      "answer": "B",
+      "explanation": "Distribute 16: $16x + 16(5) = 16x + 80$."
+    },
+    {
+      "id": 21,
+      "question": "Which expression is equivalent to $\\frac{y+2}{x-9}+\\frac{y(x-9)}{x^2y-9xy}$?",
+      "options": ["A) $\\frac{xy+y-7}{x^3y-18x^2y+81xy}$", "B) $\\frac{xy+10y+2}{x^2y-9xy+x-9}$", "C) $\\frac{xy^2+3xy-9y}{x^2y-9xy}$", "D) $\\frac{xy^2+3xy-9y}{x^3y-18x^2y+81xy}$"],
+      "answer": "C",
+      "explanation": "Simplify term 2: $\\frac{y(x-9)}{xy(x-9)} = \\frac{1}{x}$. Add: $\\frac{y+2}{x-9} + \\frac{1}{x}$. Common denom $x(x-9)$. Num: $x(y+2) + (x-9) = xy+2x+x-9 = xy+3x-9$. Result $\\frac{xy+3x-9}{x(x-9)}$. Multiply num/denom by $y$ to match C: $\\frac{xy^2+3xy-9y}{x^2y-9xy}$."
+    },
+    {
+      "id": 22,
+      "question": "$x=2a(b+5)$. The given equation relates the positive numbers $a, b,$ and $x$. Which equation correctly expresses $a$ in terms of $b$ and $x$?",
+      "options": ["A) $a=\\frac{x}{2}-(b+5)$", "B) $a=\\frac{x}{2(b+5)}$", "C) $a=\\frac{2(b+5)}{x}$", "D) $a=2x(b+5)$"],
+      "answer": "B",
+      "explanation": "Divide by $2(b+5)$ to isolate $a$: $a = \\frac{x}{2(b+5)}$."
+    },
+    {
+      "id": 23,
+      "question": "$x=2a(b+3)$. The given equation relates positive numbers $x, a,$ and $b$. Which equation correctly expresses $a$ in terms of $b$ and $x$?",
+      "options": ["A) $a=\\frac{x}{2}-4b+3$", "B) $a=\\frac{x}{2(b+3)}$", "C) $a=\\frac{2(b+3)}{x}$", "D) $a=2x(b+3)$"],
+      "answer": "B",
+      "explanation": "Divide by $2(b+3)$: $a = \\frac{x}{2(b+3)}$."
+    },
+    {
+      "id": 24,
+      "question": "If $\\frac{x}{y}=63$ and $\\frac{cx}{3y}=63,$ what is the value of $c$?",
+      "options": ["Student Grid-In"],
+      "answer": "3",
+      "explanation": "Rewrite eq 2: $\\frac{c}{3} \\cdot \\frac{x}{y} = 63$. Substitute eq 1: $\\frac{c}{3}(63) = 63$. Divide by 63: $\\frac{c}{3} = 1 \\rightarrow c=3$."
+    },
+    {
+      "id": 25,
+      "question": "The function $f$ gives the product of a number, $x$, and a number that is 66 more than $x$. Which equation defines $f$?",
+      "options": ["A) $f(x)=x^2+x+66$", "B) $f(x)=x^2+66$", "C) $f(x)=x^2+66x$", "D) $f(x)=x^2+66x+66$"],
+      "answer": "C",
+      "explanation": "Product of $x$ and $(x+66)$ is $x(x+66) = x^2+66x$."
+    },
+    {
+      "id": 26,
+      "question": "If $8+\\frac{9(6-x)}{4}=\\frac{7(6-x)}{3},$ what is the value of $6-x$?",
+      "options": ["Student Grid-In"],
+      "answer": "96",
+      "explanation": "Let $u = 6-x$. $8 + \\frac{9u}{4} = \\frac{7u}{3}$. Mult by 12: $96 + 27u = 28u$. $96 = u$. Thus $6-x = 96$."
+    },
+    {
+      "id": 27,
+      "question": "If $\\frac{7}{8}p+35=56,$ what is the value of $8p$?",
+      "options": ["Student Grid-In"],
+      "answer": "192",
+      "explanation": "$\\frac{7}{8}p = 21$. $p = 21 \\times \\frac{8}{7} = 24$. $8p = 8(24) = 192$."
+    },
+    {
+      "id": 28,
+      "question": "$(5x^3-2)-(-6x^3+3)$. The given expression is equivalent to $bx^3-5$ where $b$ is a constant. What is the value of $b$?",
+      "options": ["Student Grid-In"],
+      "answer": "11",
+      "explanation": "$5x^3 - (-6x^3) = 11x^3$. $-2 - 3 = -5$. Expression is $11x^3 - 5$. So $b=11$."
+    },
+    {
+      "id": 29,
+      "question": "Which expression is equivalent to $(x^3+6x^2-8x)+8(x^2+4)$?",
+      "options": ["A) $x^3+4x^2-8x+32$", "B) $x^3+14x^2-8x+32$", "C) $x^3+8x^2-8x+32$", "D) $x^3+6x^2-8x+32$"],
+      "answer": "B",
+      "explanation": "Distribute: $8x^2+32$. Add: $x^3 + (6+8)x^2 - 8x + 32 = x^3+14x^2-8x+32$."
+    },
+    {
+      "id": 30,
+      "question": "Which expression is equivalent to $(4x^2+6)-(3x^2)$?",
+      "options": ["A) 7", "B) $7x^2+6$", "C) $x^2-6$", "D) $x^2+6$"],
+      "answer": "D",
+      "explanation": "$4x^2 - 3x^2 = x^2$. Constant remains $+6$. Result $x^2+6$."
+    },
+    {
+      "id": 31,
+      "question": "Which expression is equivalent to $\\frac{y+4}{x-7}+\\frac{y(x-7)}{x^2y-7xy}$?",
+      "options": ["A) $\\frac{xy+y-3}{x^3y-14x^2y+49xy}$", "B) $\\frac{xy+8y+4}{x^2y-7x^2y+x-7}$", "C) $\\frac{xy^2+5xy-7y}{x^2y-7xy}$", "D) $\\frac{xy^2+5xy-7y}{x^3y-14x^2y+49xy}$"],
+      "answer": "C",
+      "explanation": "Simplify term 2: $\\frac{y(x-7)}{xy(x-7)} = \\frac{1}{x}$. Add: $\\frac{y+4}{x-7} + \\frac{1}{x}$. Common denom $x(x-7)$. Num: $x(y+4) + (x-7) = xy+4x+x-7 = xy+5x-7$. Result $\\frac{xy+5x-7}{x(x-7)}$. To match Option C, multiply num/denom by $y$: $\\frac{xy^2+5xy-7y}{x^2y-7xy}$."
+    },
+    {
+      "id": 32,
+      "question": "A piece of string with a length of 35 inches is cut into two parts. One part has a length of $x$ inches, and the other part has a length of $y$ inches. The value of $x$ is 5 more than 2 times the value of $y$. What is the value of $x$?",
+      "options": ["Student Grid-In"],
+      "answer": "25",
+      "explanation": "System: 1) $x+y=35$, 2) $x=2y+5$. Sub (2) into (1): $(2y+5)+y=35 \\rightarrow 3y=30 \\rightarrow y=10$. Then $x=2(10)+5=25$."
+    },
+    {
+      "id": 33,
+      "question": "If $\\frac{x}{y}=3$ and $\\frac{5x}{ty}=135,$ what is the value of $t$?",
+      "options": ["A) $\\frac{1}{9}$", "B) $\\frac{3}{5}$", "C) $\\frac{5}{3}$", "D) 9"],
+      "answer": "A",
+      "explanation": "Substitute $x/y=3$ into second eq: $\\frac{5}{t}(3) = 135 \\rightarrow \\frac{15}{t} = 135$. Solve for $t$: $15 = 135t \\rightarrow t = 15/135 = 1/9$."
+    },
+    {
+      "id": 34,
+      "question": "Which expression is equivalent to $(x^3+4x^2-3x)+5(x^2+8)$?",
+      "options": ["A) $x^3+9x^2-3x+40$", "B) $x^3+4x^2-3x+40$", "C) $x^3+8x^2-3x+40$", "D) $x^3+5x^2-3x+40$"],
+      "answer": "A",
+      "explanation": "Distribute: $5x^2+40$. Combine: $x^3 + (4+5)x^2 - 3x + 40 = x^3+9x^2-3x+40$."
+    },
+    {
+      "id": 35,
+      "question": "$\\frac{2}{c}-\\frac{7}{d}=5$. The given equation relates the variables $c$ and $d$, where $c$ and $d$ are greater than 1. Which equation correctly expresses $d$ in terms of $c$?",
+      "options": ["A) $d=\\frac{c}{7(2-5c)}$", "B) $d=\\frac{7c}{2-5c}$", "C) $d=\\frac{7(2-5c)}{c}$", "D) $d=\\frac{2-5c}{7c}$"],
+      "answer": "B",
+      "explanation": "Rearrange: $\\frac{7}{d} = \\frac{2}{c} - 5 = \\frac{2-5c}{c}$. Invert both sides: $\\frac{d}{7} = \\frac{c}{2-5c}$. Multiply by 7: $d = \\frac{7c}{2-5c}$."
+    },
+    {
+      "id": 36,
+      "question": "$ak=\\frac{b}{12}(7+m)$. The given equation relates the positive variables $a, b, k,$ and $m$. Which equation correctly expresses $m$ in terms of $a, b,$ and $k$?",
+      "options": ["A) $m=\\frac{12(ak-7)}{b}$", "B) $m=ak-7-\\frac{b}{12}$", "C) $m=ak-\\frac{7b}{12}$", "D) $m=\\frac{12ak}{b}-7$"],
+      "answer": "D",
+      "explanation": "Multiply by 12: $12ak = b(7+m)$. Divide by $b$: $\\frac{12ak}{b} = 7+m$. Subtract 7: $m = \\frac{12ak}{b}-7$."
+    },
+    {
+      "id": 37,
+      "question": "If $a=3k+4r$ and $b=9k-12r+6$, which expression is equivalent to $a-b$?",
+      "options": ["A) $-6k+16r-6$", "B) $-6k+16r+6$", "C) $-6k-8r+6$", "D) $-6k-8r-6$"],
+      "answer": "A",
+      "explanation": "$(3k+4r) - (9k-12r+6) = 3k-9k + 4r-(-12r) - 6 = -6k + 16r - 6$."
+    },
+    {
+      "id": 38,
+      "question": "$(9y+9)-(5y+7)$. The given expression is equivalent to $by+c$, where $b$ and $c$ are constants. What is the value of $b$?",
+      "options": ["Student Grid-In"],
+      "answer": "4",
+      "explanation": "$9y-5y = 4y$. $9-7 = 2$. Expression is $4y+2$. So $b=4$."
+    },
+    {
+      "id": 39,
+      "question": "The product of a positive number $x$ and the number that is 5 more than $x$ is 104. What is the value of $x$?",
+      "options": ["A) 4", "B) 8", "C) 13", "D) 26"],
+      "answer": "B",
+      "explanation": "$x(x+5)=104 \\rightarrow x^2+5x-104=0$. Factor: $(x+13)(x-8)=0$. Since $x$ is positive, $x=8$."
+    },
+    {
+      "id": 40,
+      "question": "Which expression is equivalent to $15(x+10)$?",
+      "options": ["A) $15x+10$", "B) $15x+150$", "C) $15x+25$", "D) $15x+5$"],
+      "answer": "B",
+      "explanation": "Distribute: $15x + 150$."
+    },
+    {
+      "id": 41,
+      "question": "$\\frac{20}{p}=\\frac{20}{q}-\\frac{20}{r}-\\frac{20}{s}$. The given equation relates the positive variables $p,q,r,$ and $s$. Which of the following is equivalent to $q$?",
+      "options": ["A) $p+r+s$", "B) $20(p+r+s)$", "C) $\\frac{prs}{pr+rs+ps}$", "D) $\\frac{prs}{20p+20r+20s}$"],
+      "answer": "C",
+      "explanation": "Divide by 20: $\\frac{1}{p} = \\frac{1}{q} - \\frac{1}{r} - \\frac{1}{s}$. Isolate $\\frac{1}{q}$: $\\frac{1}{q} = \\frac{1}{p} + \\frac{1}{r} + \\frac{1}{s}$. Common denom $prs$: $\\frac{1}{q} = \\frac{rs+ps+pr}{prs}$. Flip: $q = \\frac{prs}{pr+rs+ps}$."
+    },
+    {
+      "id": 42,
+      "question": "Which expression is equivalent to $\\frac{20\\pi^2}{\\pi^2-x^2}-\\frac{20\\pi}{x+\\pi}$?",
+      "options": ["A) $\\frac{20\\pi}{\\pi-x}$", "B) $\\frac{20\\pi x}{\\pi^2-x^2}$", "C) $\\frac{20\\pi^2-20\\pi}{\\pi^2-x^2}$", "D) $\\frac{20\\pi-10}{(\\pi-x^2)(x+1)}$"],
+      "answer": "B",
+      "explanation": "Factor denom 1: $(\\pi-x)(\\pi+x)$. Multiply second term by $\\frac{\\pi-x}{\\pi-x}$: $\\frac{20\\pi(\\pi-x)}{\\pi^2-x^2}$. Subtract: $\\frac{20\\pi^2 - (20\\pi^2 - 20\\pi x)}{\\pi^2-x^2} = \\frac{20\\pi x}{\\pi^2-x^2}$."
+    },
+    {
+      "id": 43,
+      "question": "On average, a certain tree grows 51 centimeters every $m$ months. At this rate, which expression represents the number of centimeters, on average, the tree grows every $k$ years?",
+      "options": ["A) $\\frac{17m}{4k}$", "B) $\\frac{17k}{4m}$", "C) $\\frac{612m}{k}$", "D) $\\frac{612k}{m}$"],
+      "answer": "D",
+      "explanation": "Rate = $51/m$ cm/month. Time = $k$ years = $12k$ months. Growth = Rate $\\times$ Time = $\\frac{51}{m} \\times 12k = \\frac{612k}{m}$."
+    },
+    {
+      "id": 44,
+      "question": "Which expression is equivalent to $(6t^4-3t^2+3t-6)-(2t^4-4t^3+6t^2-6)$?",
+      "options": ["A) $4t^4+4t^3-9t^2-3t-12$", "B) $4t^4+4t^3-9t^2+3t$", "C) $4t^4+t^3-9t-12$", "D) $4t^4+t^3+3t$"],
+      "answer": "B",
+      "explanation": "Group terms: $(6-2)t^4 - (-4)t^3 + (-3-6)t^2 + 3t + (-6-(-6)) = 4t^4 + 4t^3 - 9t^2 + 3t$."
+    },
+    {
+      "id": 45,
+      "question": "Which expression is equivalent to $4(x^2+6)$?",
+      "options": ["A) $4x^2+24$", "B) $4x^2+10$", "C) $4x^2+6$", "D) $4x^2-2$"],
+      "answer": "A",
+      "explanation": "Distribute: $4x^2 + 24$."
+    },
+    {
+      "id": 46,
+      "question": "$b-22=\\frac{x}{y}$. The given equation relates positive numbers $b, x,$ and $y$. Which equation correctly expresses $x$ in terms of $b$ and $y$?",
+      "options": ["A) $x=\\frac{by-22}{y}$", "B) $x=by-22$", "C) $x=by-22y$", "D) $x=\\frac{b-22}{y}$"],
+      "answer": "C",
+      "explanation": "Multiply both sides by $y$: $y(b-22) = x \\rightarrow x = by - 22y$."
+    },
+    {
+      "id": 47,
+      "question": "The expression $72y^5-48y^4$ is equivalent to $ry^4(12y-8)$ where $r$ is a constant. What is the value of $r$?",
+      "options": ["Student Grid-In"],
+      "answer": "6",
+      "explanation": "Factor out $r y^4$: $r(12y^5) - r(8y^4) = 12ry^5 - 8ry^4$. Set equal to original: $12r = 72 \\rightarrow r=6$. Check second term: $8(6) = 48$. Correct."
+    },
+    {
+      "id": 48,
+      "question": "Which expression is equivalent to $11(x^2-100y^2)$?",
+      "options": ["A) $11(x-2y)(x-50y)$", "B) $11(x-2y)(x+50y)$", "C) $11(x-10y)(x-10y)$", "D) $11(x-10y)(x+10y)$"],
+      "answer": "D",
+      "explanation": "Difference of squares inside parenthesis: $x^2-(10y)^2 = (x-10y)(x+10y)$. Multiply by 11: $11(x-10y)(x+10y)$."
+    },
+    {
+      "id": 49,
+      "question": "Which expression is equivalent to $(9c+8)-(4c^3-6)$?",
+      "options": ["A) $4c^3+9c+2$", "B) $4c^3+9c+14$", "C) $-4c^3+9c+2$", "D) $-4c^3+9c+14$"],
+      "answer": "D",
+      "explanation": "$-4c^3 + 9c + (8 - (-6)) = -4c^3 + 9c + 14$."
+    },
+    {
+      "id": 50,
+      "question": "The kinetic energy $K$, in joules, of an object is given by the formula $K=\\frac{1}{2}mv^2$, where $m$ is the mass... If the kinetic energy... can be found by using the formula $K=32v^2$, what is the mass of the object, in kilograms?",
+      "options": ["A) 1,024", "B) 64", "C) 32", "D) 16"],
+      "answer": "B",
+      "explanation": "Match coefficients: $\\frac{1}{2}m = 32$. Solve for $m$: $m = 64$."
+    },
+    {
+      "id": 51,
+      "question": "Which expression is equivalent to $11x^3+2x^2+7x$?",
+      "options": ["A) $20(x^3+x^2+x)$", "B) $x(11x^2+2x+7)$", "C) $7x(11x^3+2x^2+1)$", "D) $20(x^3+x^2+x)$"],
+      "answer": "B",
+      "explanation": "Factor out common $x$: $x(11x^2 + 2x + 7)$."
+    },
+    {
+      "id": 52,
+      "question": "$\\frac{49}{p}=\\frac{49}{q}-\\frac{49}{r}-\\frac{49}{s}$. The given equation relates the positive variables $p, q, r$ and $s$. Which of the following is equivalent to $q$?",
+      "options": ["A) $p+r+s$", "B) $49p+r+s$", "C) $\\frac{prs}{pr+ps+rs}$", "D) $\\frac{prs}{49p+49r+49s}$"],
+      "answer": "C",
+      "explanation": "Divide by 49: $1/p = 1/q - 1/r - 1/s$. Isolate $1/q = 1/p + 1/r + 1/s$. Sum fractions: $(rs+ps+pr)/prs$. Flip: $q = prs/(pr+ps+rs)$."
+    },
+    {
+      "id": 53,
+      "question": "The total mass, in kilograms, of $r$ identical objects is $t$. Which expression represents the total mass, in kilograms, of $146r$ of these objects?",
+      "options": ["A) $146-t$", "B) $146+t$", "C) $\\frac{t}{146}$", "D) $146t$"],
+      "answer": "D",
+      "explanation": "Mass of one object = $t/r$. Mass of $146r$ objects = $146r \\times (t/r) = 146t$."
+    },
+    {
+      "id": 54,
+      "question": "If $\\frac{j}{k}=62$ and $\\frac{96j}{12xk}=62,$ what is the value of $x$?",
+      "options": ["A) $\\frac{1}{8}$", "B) $\\frac{6}{31}$", "C) 8", "D) 294"],
+      "answer": "C",
+      "explanation": "Sub $j/k$: $\\frac{96}{12x}(62) = 62$. Divide by 62: $\\frac{96}{12x} = 1$. $96 = 12x \\rightarrow x=8$."
+    },
+    {
+      "id": 55,
+      "question": "If $\\frac{42}{x}=7x,$ what is the value of $7x^2$?",
+      "options": ["A) 6", "B) 7", "C) 42", "D) 294"],
+      "answer": "C",
+      "explanation": "Multiply by $x$: $42 = 7x^2$. The value of $7x^2$ is 42."
+    },
+    {
+      "id": 56,
+      "question": "$b-72=\\frac{x}{y}$. The given equation relates the positive numbers $b, x,$ and $y$. Which equation correctly expresses $x$ in terms of $b$ and $y$?",
+      "options": ["A) $x=\\frac{b-72}{y}$", "B) $x=by-72$", "C) $x=\\frac{by-72}{y}$", "D) $x=by-72y$"],
+      "answer": "D",
+      "explanation": "Multiply by $y$: $y(b-72) = x \\rightarrow x = by - 72y$."
+    },
+    {
+      "id": 57,
+      "question": "Which expression is equivalent to $(3nr^2+4nr)+(8n^2r+2nr)$?",
+      "options": ["A) $11n^2r^2+6nr$", "B) $11n^3r^3+6n^2r^2$", "C) $24n^3r^3+8n^2r^2$", "D) $3nr^2+8n^2r+6nr$"],
+      "answer": "D",
+      "explanation": "Combine like terms ($4nr+2nr=6nr$). Terms $3nr^2$ and $8n^2r$ are unique. Result: $3nr^2 + 8n^2r + 6nr$."
+    },
+    {
+      "id": 58,
+      "question": "Which expression is equivalent to $63x^2$?",
+      "options": ["A) $63(1+x^2)$", "B) $(7x)(9x)$", "C) $(7x^2)(9x^2)$", "D) $(63x^2)(x)$"],
+      "answer": "B",
+      "explanation": "Multiply: $(7x)(9x) = 63x^2$."
+    },
+    {
+      "id": 59,
+      "question": "$v=-\\frac{w}{188x}$. The given equation relates the distinct positive numbers $v, w$ and $x$. Which equation correctly expresses $w$ in terms of $v$ and $x$?",
+      "options": ["A) $w=-188vx$", "B) $w=-\\frac{188v}{x}$", "C) $w=-\\frac{x}{188v}$", "D) $w=v+188x$"],
+      "answer": "A",
+      "explanation": "Multiply by $-188x$: $w = -188vx$."
+    },
+    {
+      "id": 60,
+      "question": "One gallon of sealant costs $23$ and will cover $250$ square feet... A deck has area $d$. Which represents cost $c$ to cover the deck twice?",
+      "options": ["A) $c=\\frac{250d}{23}$", "B) $c=\\frac{500d}{23}$", "C) $c=23(\\frac{d}{125})$", "D) $c=23(\\frac{d}{250})$"],
+      "answer": "C",
+      "explanation": "Area to cover = $2d$. Gallons needed = $2d/250 = d/125$. Cost = Price $\\times$ Gallons = $23(d/125)$."
+    },
+    {
+      "id": 61,
+      "question": "$PC=N(44-C)$. The given equation relates the variables $P, N,$ and $C$. Which expression represents the value of $C$ for distinct positive values of $P$ and $N$?",
+      "options": ["A) $\\frac{C(N+P)}{N}$", "B) $\\frac{PC}{44-C}$", "C) $\\frac{44N}{P+N}$", "D) $\\frac{44N}{P+1}$"],
+      "answer": "C",
+      "explanation": "Distribute $N$: $PC = 44N - NC$. Move $NC$ to left: $PC + NC = 44N$. Factor out $C$: $C(P+N) = 44N$. Divide by $(P+N)$: $C = \\frac{44N}{P+N}$."
+    },
+    {
+      "id": 62,
+      "question": "$49=\\frac{2K}{v^2}$. For an object with a mass of 49 kilograms... Which equation correctly expresses this object's speed, $v$, in terms of the object's kinetic energy, $K$?",
+      "options": ["A) $v=\\sqrt{\\frac{2K}{49}}$", "B) $v=\\frac{49^2}{2K}$", "C) $v=\\sqrt{\\frac{49}{2K}}$", "D) $v=\\frac{2K}{49^2}$"],
+      "answer": "A",
+      "explanation": "Multiply by $v^2$: $49v^2 = 2K$. Divide by 49: $v^2 = \\frac{2K}{49}$. Take square root: $v = \\sqrt{\\frac{2K}{49}}$."
+    },
+    {
+      "id": 63,
+      "question": "Which expression is equivalent to $158t^3-24t^2u$?",
+      "options": ["A) $2t(79t^2-12u)$", "B) $2t^2(79t-12u)$", "C) $2tu(79t^2-12)$", "D) $2t^2u(79t-12)$"],
+      "answer": "B",
+      "explanation": "Factor out GCF $2t^2$: $2t^2(79t) - 2t^2(12u) = 2t^2(79t - 12u)$."
+    },
+    {
+      "id": 64,
+      "question": "On average, a certain tree grows 87 centimeters every $m$ months. At this rate, which expression represents the number of centimeters the tree grows every $k$ years?",
+      "options": ["A) $\\frac{29m}{4k}$", "B) $\\frac{29k}{4m}$", "C) $\\frac{1,044m}{k}$", "D) $\\frac{1,044k}{m}$"],
+      "answer": "D",
+      "explanation": "Rate = $87/m$ cm/mo. Time = $k$ years = $12k$ months. Growth = $\\frac{87}{m} \\times 12k = \\frac{1044k}{m}$."
+    },
+    {
+      "id": 65,
+      "question": "The expression $19x^5+20x^5-10x^5$ is equivalent to $bx^5$ where $b$ is a constant. What is the value of $b$?",
+      "options": ["Student Grid-In"],
+      "answer": "29",
+      "explanation": "Combine coefficients: $19 + 20 - 10 = 39 - 10 = 29$. So $b=29$."
+    },
+    {
+      "id": 66,
+      "question": "Which expression is equivalent to $(133y)^{\\frac{1}{2}}$ where $y>1$?",
+      "options": ["A) $133\\cdot\\sqrt{y}$", "B) $\\sqrt{133}\\cdot y$", "C) $\\sqrt{133y}$", "D) $\\sqrt{(133y)^2}$"],
+      "answer": "C",
+      "explanation": "Rational exponent $\\frac{1}{2}$ corresponds to square root: $\\sqrt{133y}$."
+    },
+    {
+      "id": 67,
+      "question": "Which expression is equivalent to $4yz^3+5yz+3yz^3$?",
+      "options": ["A) $7yz^3+5yz$", "B) $7yz^6+5yz$", "C) $12yz^6$", "D) $12yz^7$"],
+      "answer": "A",
+      "explanation": "Combine like terms ($4yz^3$ and $3yz^3$): $(4+3)yz^3 + 5yz = 7yz^3 + 5yz$."
+    },
+    {
+      "id": 68,
+      "question": "If $\\frac{x}{y}=76$ and $\\frac{cx}{4y}=76,$ what is the value of $c$?",
+      "options": ["Student Grid-In"],
+      "answer": "4",
+      "explanation": "Substitute $x/y=76$ into second eq: $\\frac{c}{4}(76) = 76$. Divide by 76: $c/4 = 1 \\rightarrow c=4$."
+    },
+    {
+      "id": 69,
+      "question": "If $\\frac{72}{x}=6x,$ what is the value of $6x^2$?",
+      "options": ["A) 432", "B) 72", "C) 12", "D) 6"],
+      "answer": "B",
+      "explanation": "Multiply by $x$: $72 = 6x^2$. The question asks for the value of $6x^2$, which is exactly 72."
+    },
+    {
+      "id": 70,
+      "question": "$f=\\frac{(10x)^2}{7g}$. The given equation relates positive numbers $f, x, g$. Which equation expresses $x$ in terms of $f$ and $g$?",
+      "options": ["A) $x=\\frac{\\sqrt{7fg}}{10}$", "B) $x=10\\sqrt{7fg}$", "C) $x=\\sqrt{\\frac{7fg}{10}}$", "D) $x=\\sqrt{7fg}-10$"],
+      "answer": "A",
+      "explanation": "Expand top: $f = \\frac{100x^2}{7g}$. Multiply by $7g$: $7fg = 100x^2$. Divide by 100: $x^2 = \\frac{7fg}{100}$. Square root: $x = \\frac{\\sqrt{7fg}}{10}$."
+    },
+    {
+      "id": 71,
+      "question": "The expression $7x^6+9x^6-8x^6$ is equivalent to $bx^6$ where $b$ is a constant. What is the value of $b$?",
+      "options": ["Student Grid-In"],
+      "answer": "8",
+      "explanation": "$7+9-8 = 16-8 = 8$."
+    },
+    {
+      "id": 72,
+      "question": "$q-34r=s$. The given equation relates positive numbers $q, r, s$. Which equation expresses $q$ in terms of $r$ and $s$?",
+      "options": ["A) $q=s-34r$", "B) $q=s+34r$", "C) $q=34rs$", "D) $q=-\\frac{s}{34r}$"],
+      "answer": "B",
+      "explanation": "Add $34r$ to both sides: $q = s + 34r$."
+    },
+    {
+      "id": 73,
+      "question": "$\\frac{46}{p}=\\frac{46}{q}-\\frac{46}{r}-\\frac{46}{s}$. Which is equivalent to $q$?",
+      "options": ["A) $\\frac{prs}{pr+ps+rs}$", "B) $46p+46r+46s$", "C) $p+r+s$", "D) $46(p+r+s)$"],
+      "answer": "A",
+      "explanation": "Divide by 46: $1/p = 1/q - 1/r - 1/s$. Rearrange: $1/q = 1/p + 1/r + 1/s$. Common denom $prs$: $1/q = (rs+ps+pr)/prs$. Flip: $q = prs/(pr+ps+rs)$."
+    },
+    {
+      "id": 74,
+      "question": "Which expression is equivalent to $20x^2+3+5x^2$?",
+      "options": ["A) $25x^4+3$", "B) $25x^2+3$", "C) $28x^4$", "D) $28x^2$"],
+      "answer": "B",
+      "explanation": "Combine $20x^2 + 5x^2 = 25x^2$. Result $25x^2+3$."
+    },
+    {
+      "id": 75,
+      "question": "Which expression is equivalent to $30x^2+6x+6$?",
+      "options": ["A) $5x^2+6x+6$", "B) $30x(x+1)$", "C) $6(5x^2+x+1)$", "D) $42x^2+x+1$"],
+      "answer": "C",
+      "explanation": "Factor out 6: $6(5x^2 + x + 1)$."
+    },
+    {
+      "id": 76,
+      "question": "Which expression is equivalent to $3xy(2x^2+7y)$?",
+      "options": ["A) $5x^3y+10xy^2$", "B) $6x^2y+7y$", "C) $6x^2y+21xy$", "D) $6x^3y+21xy^2$"],
+      "answer": "D",
+      "explanation": "Distribute: $(3xy)(2x^2) + (3xy)(7y) = 6x^3y + 21xy^2$."
+    },
+    {
+      "id": 77,
+      "question": "Which expression is equivalent to $15(x+10)$?",
+      "options": ["A) $15x+10$", "B) $15x+150$", "C) $15x+25$", "D) $15x+5$"],
+      "answer": "B",
+      "explanation": "Distribute 15: $15x + 150$."
+    },
+    {
+      "id": 78,
+      "question": "$P=N(34-C)$. The given equation relates variables $P, N, C$. Which expression represents $C$?",
+      "options": ["A) $C+\\frac{P}{N}$", "B) $34+\\frac{P}{N}$", "C) $34-\\frac{P}{C}$", "D) $34-\\frac{P}{N}$"],
+      "answer": "D",
+      "explanation": "Divide by $N$: $P/N = 34 - C$. Rearrange: $C = 34 - P/N$."
+    },
+    {
+      "id": 79,
+      "question": "A right rectangular prism has a base area of $56t$ $cm^2$. The length of the base is $14/3$ cm, and height is 3 cm. Which expression represents the surface area?",
+      "options": ["A) $112t+56$", "B) $184t+28$", "C) $1,680t+28$"],
+      "answer": "B",
+      "explanation": "Base area $A_b = l \\cdot w = 56t$. Height $h=3$. Surface Area $SA = 2(lw + lh + wh)$. We know $lw = 56t$. Find $w$: $(14/3)w = 56t \\rightarrow w = 56t \\cdot (3/14) = 12t$. Now calculate faces: $lh = (14/3)(3) = 14$. $wh = (12t)(3) = 36t$. $SA = 2(56t + 14 + 36t) = 2(92t + 14) = 184t + 28$."
+    },
+    {
+      "id": 80,
+      "question": "Which expression is equivalent to $7x^5-6x^4+9x^3$?",
+      "options": ["A) $x^4(7x-6)$", "B) $x^3(7x^2-6x+9)$", "C) $9x^3(7x^2-6x+1)$", "D) $6x^5(-6x^4+9x^3+1)$"],
+      "answer": "B",
+      "explanation": "Factor out GCF $x^3$: $x^3(7x^2 - 6x + 9)$."
+    },
+    {
+      "id": 81,
+      "question": "$11m=7(n+p)$. The given equation relates positive numbers $m, n, p$. Which equation gives $n$ in terms of $m$ and $p$?",
+      "options": ["A) $n=\\frac{7p}{11m}$", "B) $n=\\frac{11m}{7}-p$", "C) $n=7(11m)+p$", "D) $n=11m-7-p$"],
+      "answer": "B",
+      "explanation": "Divide by 7: $11m/7 = n + p$. Subtract $p$: $n = \\frac{11m}{7} - p$."
+    },
+    {
+      "id": 82,
+      "question": "Which expression is equivalent to $5xy+30x^2y+35xy^2$?",
+      "options": ["A) $5xy(1+30x+35y)$", "B) $5xy(1+6x+7y)$", "C) $5xy(30x+35y)$", "D) $5xy(6x+7y)$"],
+      "answer": "B",
+      "explanation": "Factor out GCF $5xy$: $5xy(1 + 6x + 7y)$."
+    },
+    {
+      "id": 83,
+      "question": "Kinetic energy $K=\\frac{1}{2}mv^2$. If $K=98v^2$, what is the mass $m$?",
+      "options": ["A) 9,604", "B) 196", "C) 98", "D) 49"],
+      "answer": "B",
+      "explanation": "Set equations equal: $\\frac{1}{2}mv^2 = 98v^2$. Divide by $v^2$: $\\frac{1}{2}m = 98$. Multiply by 2: $m = 196$."
+    },
+    {
+      "id": 84,
+      "question": "One gallon of sealant costs $13$ and covers $300$ sq ft. Deck area $d$. Cost $c$ to cover twice?",
+      "options": ["A) $c=\\frac{300d}{13}$", "B) $c=\\frac{600d}{13}$", "C) $c=13(\\frac{d}{150})$", "D) $c=13(\\frac{d}{300})$"],
+      "answer": "C",
+      "explanation": "Total area = $2d$. Gallons = $2d/300 = d/150$. Cost = $13 \\times (d/150)$."
+    },
+    {
+      "id": 85,
+      "question": "Which expression is equivalent to $(5x^3-3x+8)-(9x^6+5x-3)$?",
+      "options": ["A) $-4x^9-8x-11$", "B) $-9x^6+5x^3-8x+11$", "C) $-9x^6+5x^3+2x+5$", "D) $-4x^9-2x+5$"],
+      "answer": "B",
+      "explanation": "Arrange by degree: $-9x^6 + 5x^3 + (-3x - 5x) + (8 - (-3)) = -9x^6 + 5x^3 - 8x + 11$."
+    },
+    {
+      "id": 86,
+      "question": "Which expression is equivalent to $2x^3+8x^2y+xy^2+4y^3$?",
+      "options": ["A) $(2x^2+4y)(x+y^2)$", "B) $(2x^2+y^2)(x+4y)$", "C) $(2x^3+y^2)(x^2+4y^3)$", "D) $(2x^3+y^3)(x+4y)$"],
+      "answer": "B",
+      "explanation": "Group: $2x^2(x+4y) + y^2(x+4y)$. Factor: $(2x^2+y^2)(x+4y)$."
+    },
+    {
+      "id": 87,
+      "question": "$b-49=\\frac{x}{y}$. The given equation relates positive numbers $b, x, y$. Which equation expresses $x$?",
+      "options": ["A) $x=\\frac{by-49}{y}$", "B) $x=by-49y$", "C) $x=by-49$", "D) $x=\\frac{b-49}{y}$"],
+      "answer": "B",
+      "explanation": "Multiply by $y$: $y(b-49) = x \\rightarrow x = by - 49y$."
+    },
+    {
+      "id": 88,
+      "question": "$\\frac{2a}{b}=6.5$ and $\\frac{a}{bn}=26$ what is the value of $n$?",
+      "options": ["Student Grid-In"],
+      "answer": "1/8",
+      "explanation": "From eq 1: $a/b = 6.5/2 = 3.25$. Substitute into eq 2: $\\frac{3.25}{n} = 26 \\rightarrow n = 3.25/26 = 1/8$."
+    },
+    {
+      "id": 89,
+      "question": "Which expression is equivalent to $14(x^2-6)$?",
+      "options": ["A) $14x^2-84$", "B) $14x^2-20$", "C) $14x^2-6$", "D) $14x^2+8$"],
+      "answer": "A",
+      "explanation": "Distribute: $14x^2 - 14(6) = 14x^2 - 84$."
+    },
+    {
+      "id": 90,
+      "question": "One gallon of sealant costs $29$ and covers $300$ sq ft. Deck area $d$. Cost $c$ to cover twice?",
+      "options": ["A) $c=\\frac{300d}{29}$", "B) $c=\\frac{600d}{29}$", "C) $c=29(\\frac{d}{150})$", "D) $c=29(\\frac{d}{300})$"],
+      "answer": "C",
+      "explanation": "Total area $2d$. Gallons $2d/300 = d/150$. Cost $29(d/150)$."
+    },
+    {
+      "id": 91,
+      "question": "A machine makes 9-inch, 8-inch, and 3-inch parts. 9-inch is 4 times number $n$ of 8-inch. 3-inch is 15. Total 100 parts. Equation?",
+      "options": ["A) $9(4n)+8n+3(15)=100$", "B) $9n+8n+3n=100$", "C) $4n+15=100$", "D) $5n+15=100$"],
+      "answer": "D",
+      "explanation": "9-inch count: $4n$. 8-inch count: $n$. 3-inch count: 15. Total: $4n + n + 15 = 100 \\rightarrow 5n + 15 = 100$."
+    },
+    {
+      "id": 92,
+      "question": "Hassan put up wire fencing along each edge of a rectangular garden with length $x$ and width $y$. Total 44 feet. Equation?",
+      "options": ["A) $2x+2y=44$", "B) $x+y=44$", "C) $2xy=44$", "D) $xy=44$"],
+      "answer": "A",
+      "explanation": "Perimeter of rectangle: $2(\\text{length}) + 2(\\text{width})$. So $2x + 2y = 44$."
+    },
+    {
+      "id": 93,
+      "question": "Machine makes 8-inch, 5-inch, 7-inch parts. 8-inch is 3 times number $n$ of 5-inch. 7-inch is 12. Total 100. Equation?",
+      "options": ["A) $8(3n)+5n+7(12)=100$", "B) $8n+5n+7n=100$", "C) $3n+12=100$", "D) $4n+12=100$"],
+      "answer": "D",
+      "explanation": "8-inch count: $3n$. 5-inch count: $n$. 7-inch count: 12. Total: $3n + n + 12 = 100 \\rightarrow 4n + 12 = 100$."
+    },
+    {
+      "id": 94,
+      "question": "$0.24x^2+0.56x+1.52$ can be rewritten as $a(3x^2+7x+19)$. Value of $a$?",
+      "options": ["Student Grid-In"],
+      "answer": "0.08",
+      "explanation": "Match leading coefficients: $3a = 0.24 \\rightarrow a = 0.08$. Check: $7(0.08)=0.56$, $19(0.08)=1.52$. Matches."
+    }
+  ]
+}

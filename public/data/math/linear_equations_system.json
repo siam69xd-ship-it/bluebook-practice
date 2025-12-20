@@ -1,0 +1,612 @@
+{
+  "dataset_info": {
+    "title": "Linear System of Equations",
+    "total_questions": 86,
+    "part": "1 of 1",
+    "range": "1-86"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "question": "$5x+4y=44$\n$3x-7y=17$\nThe solution to the given system of equations is $(x, y)$. What is the value of $8x - 3y$?",
+      "options": ["Student Grid-In"],
+      "answer": "61",
+      "explanation": "Add the two equations together: $(5x + 3x) + (4y - 7y) = 44 + 17$. This simplifies to $8x - 3y = 61$."
+    },
+    {
+      "id": 2,
+      "question": "$2x-2y=2$\nOne of the two linear equation in a system is given. The system has exactly one solution. Which equation could be the second equation in this system?",
+      "options": ["A) $-8x+8y=3$", "B) $3x-3y=8$", "C) $-10x+8y=5$", "D) $-x+y=-1$"],
+      "answer": "C",
+      "explanation": "The given equation simplifies to $y = x - 1$ (slope = 1). For exactly one solution, the second line must have a different slope.\n- A: $y = x + 3/8$ (slope 1, parallel).\n- B: $y = x - 8/3$ (slope 1, parallel).\n- C: $8y = 10x + 5 \\rightarrow y = 1.25x + 0.625$ (slope 1.25, intersecting).\n- D: $y = x - 1$ (same line)."
+    },
+    {
+      "id": 3,
+      "question": "$y=18x+25$\n$y=-14x-7$\nWhat is the solution $(x, y)$ to the given system of equations?",
+      "options": ["A) (-7,25)", "B) (-1,7)", "C) (7,-1)", "E) (25,-7)"],
+      "answer": "B",
+      "explanation": "Set the equations equal: $18x + 25 = -14x - 7$. Add $14x$ and subtract 25: $32x = -32 \\rightarrow x = -1$. Substitute back: $y = 18(-1) + 25 = 7$. Solution: $(-1, 7)$."
+    },
+    {
+      "id": 4,
+      "question": "$3x+5y=8$\n$9x+15y=24$\nFor each real number $r$, which of the following points lies on the graph of each equation in the $xy$-plane for the given system?",
+      "options": ["A) $(r,-\\frac{5r}{3}+\\frac{8}{3})$", "B) $(r,\\frac{3r}{5}+\\frac{8}{5})$", "C) $(-\\frac{5r}{3}+\\frac{8}{3},r)$", "D) $(\\frac{r}{3}+8,-\\frac{r}{3}+24)$"],
+      "answer": "C",
+      "explanation": "The second equation is $3$ times the first ($9x+15y=24$), so they are the same line. Solve $3x+5y=8$ for $x$ in terms of $y$: $3x = 8 - 5y \\rightarrow x = -\\frac{5}{3}y + \\frac{8}{3}$. If we let $y=r$, then $x = -\\frac{5r}{3} + \\frac{8}{3}$. This matches point C."
+    },
+    {
+      "id": 5,
+      "question": "$mx+ky=-83$\n$2x+ky=22$\nIn the given system of equations, $m$ and $k$ are constants. The graph of these equations in the $xy$-plane intersect at the point $(5,y)$. What is the value of $m$?",
+      "options": ["Student Grid-In"],
+      "answer": "-19",
+      "explanation": "Subtract the second equation from the first: $(mx + ky) - (2x + ky) = -83 - 22$. This simplifies to $(m-2)x = -105$. Since the intersection is at $x=5$, substitute $x=5$: $5(m-2) = -105$. Divide by 5: $m-2 = -21$. Add 2: $m = -19$."
+    },
+    {
+      "id": 6,
+      "question": "A small business budgeted $1,000 to spend on printers and toner cartridges. The small business paid $300 for each printer and $50 for each toner cartridge. The entire budget was spent to purchase 2 printers and several toner cartridges. How many toner cartridges were purchased?",
+      "options": ["A) 3", "B) 8", "C) 12", "D) 15"],
+      "answer": "B",
+      "explanation": "Cost of printers: $2 \\times 300 = 600$. Remaining budget: $1000 - 600 = 400$. Number of cartridges: $400 / 50 = 8$."
+    },
+    {
+      "id": 7,
+      "question": "$2x+y=8$\n$ax+3y=24$\nIn the given system of equations, $a$ is a constant. The system has infinitely many solutions. What is the value of $a$?",
+      "options": ["Student Grid-In"],
+      "answer": "6",
+      "explanation": "For infinite solutions, the equations must be proportional. Comparing $y$ terms ($y$ vs $3y$), the second equation is 3 times the first. Therefore, the $x$ coefficient must also be 3 times the first: $a = 3(2) = 6$."
+    },
+    {
+      "id": 8,
+      "question": "$2x=-4$\n$2x+y=-2$\nThe solution to the given system of equations is $(x, y)$. What is the value of [text cut off, likely $3x$ or similar given the answer]?",
+      "options": ["A) -6", "B) -2", "C) 2", "D) 8"],
+      "answer": "A",
+      "explanation": "First, find $x$: $2x = -4 \\rightarrow x = -2$. Substitute into second eq: $-4 + y = -2 \\rightarrow y = 2$. The question text is obscured, but if the answer is -6 (Option A), it likely asked for something like $3x$ ($3(-2)=-6$) or $x-2y$ ($-2-4=-6$)."
+    },
+    {
+      "id": 9,
+      "question": "$3x+y=12$\n$x-3y=0$\nThe solution to the given system is $(x, y)$. What is the value of $x$?",
+      "options": ["Student Grid-In"],
+      "answer": "3.6",
+      "explanation": "From eq 2: $x = 3y$. Substitute into eq 1: $3(3y) + y = 12 \\rightarrow 10y = 12 \\rightarrow y = 1.2$. Then $x = 3(1.2) = 3.6$."
+    },
+    {
+      "id": 10,
+      "question": "$4x-16y=8$\nOne of the two equations in a system of linear equations is given. The system has no solution. Which equation could be the second equation in this system?",
+      "options": ["A) $x-8y=0$", "B) $\\frac{1}{2}x-2y=1$", "C) $\\frac{1}{2}x-2y=0$", "D) $x-4y=2$"],
+      "answer": "C",
+      "explanation": "Simplify given eq: $x - 4y = 2$ or $y = 0.25x - 0.5$. For no solution, lines must be parallel (same slope 0.25, different intercept).\n- C: $0.5x - 2y = 0 \\rightarrow 2y = 0.5x \\rightarrow y = 0.25x$. Slope matches, intercept (0) differs from (-0.5). Parallel."
+    },
+    {
+      "id": 11,
+      "question": "$y=-\\frac{1}{9}x$\n$y=\\frac{1}{7}x$\nThe solution to the given system of equations is $(x, y)$. What is the value of $4x+y$?",
+      "options": ["A) -9", "B) -2", "C) 0", "D) 7"],
+      "answer": "C",
+      "explanation": "Set equal: $-x/9 = x/7$. This implies $x=0$. Then $y=0$. The value of $4(0)+0$ is $0$."
+    },
+    {
+      "id": 12,
+      "question": "$4x-16y=8$\nOne of the two equations in the system of linear equations is given. The system has no solution. Which of the following be the second equation in this system?",
+      "options": ["A) $x-8y=0$", "B) $\\frac{1}{2}x-2y=1$", "C) $\\frac{1}{2}x-2y=0$", "D) $x-4y=2$"],
+      "answer": "C",
+      "explanation": "This is a duplicate of Question 10. The reasoning and answer remain the same."
+    },
+    {
+      "id": 13,
+      "question": "Which system of linear equations has no solution?",
+      "options": ["A) $-2x+8y=-5$\n$2x-8y=5$", "B) $2x-8y=5$\n$3x+9y=6$", "C) $2x-8y=5$\n$-6x+24y=-15$", "D) $-2x+8y=5$\n$4x-16y=10$"],
+      "answer": "D",
+      "explanation": "Check D: First eq is $-2x+8y=5$ (or $2x-8y=-5$). Second eq is $4x-16y=10$ (divide by 2 to get $2x-8y=5$). The system requires $2x-8y$ to be both $5$ and $-5$, which is impossible."
+    },
+    {
+      "id": 14,
+      "question": "$3x-4y=5$\n$x=7$\nWhat is the solution $(x, y)$ to the given system of equations?",
+      "options": ["A) (7,4)", "B) (7,12)", "C) (7,-12)", "D) (7,-4)"],
+      "answer": "A",
+      "explanation": "Substitute $x=7$: $3(7) - 4y = 5 \\rightarrow 21 - 4y = 5 \\rightarrow -4y = -16 \\rightarrow y = 4$."
+    },
+    {
+      "id": 15,
+      "question": "$8x+7y=58$\n$8x+21y=142$\nThe solution to the system is $(x, y)$. What is the value of $14y$?",
+      "options": ["A) 2", "C) 84", "D) 200"],
+      "answer": "C",
+      "explanation": "Subtract eq 1 from eq 2: $(8x+21y) - (8x+7y) = 142 - 58$. This gives $14y = 84$."
+    },
+    {
+      "id": 16,
+      "question": "$x+4y=-16$\n$5x+20y=0$\n$3x+12y=34$\nHow many solutions $(x, y)$ does the system of three equations have?",
+      "options": ["A) Zero", "B) Exactly one", "C) Exactly two", "D) Infinitely many"],
+      "answer": "A",
+      "explanation": "Divide eq 2 by 5: $x+4y=0$. Divide eq 3 by 3: $x+4y=11.33$. The equations demand $x+4y$ to be -16, 0, and 11.33 simultaneously, which is impossible. These are distinct parallel lines."
+    },
+    {
+      "id": 17,
+      "question": "$5x=50y-125$\nOne of the two equations in a system of linear equations is given. The system has no solution. Which equation could be the second equation in this system?",
+      "options": ["A) $x=2y$", "B) $\\frac{1}{5}x=2y$", "C) $x=10y-25$", "D) $\\frac{x}{5}=10y-25$"],
+      "answer": "B",
+      "explanation": "Simplify given eq: $x = 10y - 25$ (slope in terms of y is 10, or $y=0.1x+2.5$). For no solution, we need a parallel line.\n- B: $x/5 = 2y \\rightarrow x = 10y$ (same slope 10, different intercept 0 vs -25). Parallel."
+    },
+    {
+      "id": 18,
+      "question": "$x+5y=-18$\n$6x+30y=0$\n$4x+20y=28$\nHow many solutions $(x, y)$ does the system of equations have?",
+      "options": ["A) Zero", "B) Exactly one", "C) Exactly two", "D) Infinitely many"],
+      "answer": "A",
+      "explanation": "Simplify eq 2: $x+5y=0$. Simplify eq 3: $x+5y=7$. The lines are parallel and distinct. No intersection."
+    },
+    {
+      "id": 19,
+      "question": "$y=6x^{2}-36x+56$\n$y+3=0$\nHow many solutions are there to the given system of equations?",
+      "options": ["A) There is exactly 1 solution.", "B) There are exactly 2 solutions.", "C) There are exactly 3 solutions.", "D) There are no solutions."],
+      "answer": "D",
+      "explanation": "Substitute $y=-3$: $-3 = 6x^2 - 36x + 56 \\rightarrow 6x^2 - 36x + 59 = 0$. Discriminant $D = b^2 - 4ac = (-36)^2 - 4(6)(59) = 1296 - 1416 = -120$. Since $D < 0$, there are no real solutions."
+    },
+    {
+      "id": 20,
+      "question": "$2(9x)+5(8y)=284$\n$2(9x)-5(8y)=-356$\nThe solution to the given system of equations is $(x, y)$. What is the value of $9x+8y$?",
+      "options": ["A) -82", "C) 46", "D) 64"],
+      "answer": "C",
+      "explanation": "Let $A=9x, B=8y$. System: $2A+5B=284, 2A-5B=-356$. Add: $4A = -72 \\rightarrow A = -18$. Subtract: $10B = 640 \\rightarrow B = 64$. Value: $A+B = -18+64 = 46$."
+    },
+    {
+      "id": 21,
+      "question": "Two customers bought the same kind of cheese and milk at a store. The first customer paid 12.45 dollars for 1 pound of cheese and 2 gallons of milk. The second customer paid 19.70 dollars for 3 pounds of cheese and 1 gallon of milk. Whats is the cost, in dollars, of 1 gallon of milk?",
+      "options": ["A) 3.53", "B) 4.15", "C) 4.93", "D) 5.39"],
+      "answer": "A",
+      "explanation": "System: $C + 2M = 12.45$ and $3C + M = 19.70$. From eq 2: $M = 19.70 - 3C$. Sub into eq 1: $C + 2(19.70 - 3C) = 12.45 \\rightarrow C + 39.40 - 6C = 12.45 \\rightarrow -5C = -26.95 \\rightarrow C = 5.39$. Then $M = 19.70 - 3(5.39) = 3.53$."
+    },
+    {
+      "id": 22,
+      "question": "$9x+5y=19$\n$-9x-3y=7$\nThe solution to the given system of equations is $(x, y)$. What is the value of $2y$?",
+      "options": ["Student Grid-In"],
+      "answer": "26",
+      "explanation": "Add the equations: $(9x - 9x) + (5y - 3y) = 19 + 7$. This gives $2y = 26$."
+    },
+    {
+      "id": 23,
+      "question": "Which system of linear equations has no solution?",
+      "options": ["A) $-5x+9y=-8$\n$5x-9y=8$", "B) $5x-9y=8$\n$6x+10y=9$", "C) $5x+9y=8$\n$-15x+27y=-24$", "D) $-5x+9y=8$\n$10x-18y=16$"],
+      "answer": "D",
+      "explanation": "Analyze D: Eq 1 is $-5x+9y=8 \\rightarrow 5x-9y=-8$. Eq 2 is $10x-18y=16 \\rightarrow 2(5x-9y)=16 \\rightarrow 5x-9y=8$. The system requires $5x-9y$ to be $-8$ and $8$, a contradiction."
+    },
+    {
+      "id": 24,
+      "question": "$31(x-n)=31y+31n$\nOne of the equations in a system of two linear equations is given, where $n$ is a positive constant. The system has no solution. Which equation could be the second equation in this system?",
+      "options": ["A) $3x-3y=6n$", "B) $3x+3y=3n$", "C) $3x+3y=6n$", "D) $3x-3y=3n$"],
+      "answer": "D",
+      "explanation": "Simplify eq 1: $31x - 31n = 31y + 31n \\rightarrow x - y = 2n$. For no solution, we need a parallel line ($x - y = k$ where $k \\neq 2n$).\n- D: $3x - 3y = 3n \\rightarrow x - y = n$. Since $n \\neq 2n$ (as $n>0$), this line is parallel."
+    },
+    {
+      "id": 25,
+      "question": "At what point $(x, y)$ do the graphs of the equations $y=2x+4$ and $y=3x-6$ intersect in the $xy$-plane?",
+      "options": ["A) (2,3)", "B) (3,2)", "C) (10,24)", "D) (24,10)"],
+      "answer": "C",
+      "explanation": "Set equations equal: $2x+4 = 3x-6 \\rightarrow x=10$. Substitute back: $y = 2(10)+4 = 24$. Point: $(10, 24)$."
+    },
+    {
+      "id": 26,
+      "question": "$2x+5y=3$\n$8x+20y=12$\nFor each real number $r$, which of the following points lies on the graph of each equation in the $xy$-plane for the given system?",
+      "options": ["A) $(r,-\\frac{5r}{2}+\\frac{3}{2})$", "B) $(r,\\frac{2r}{5}+\\frac{3}{5})$", "C) $(\\frac{r}{4}+3,-\\frac{r}{4}+12)$", "D) $(-\\frac{5r}{2}+\\frac{3}{2},r)$"],
+      "answer": "D",
+      "explanation": "Eq 2 is 4 times Eq 1, so they are the same line. Solve for $x$ in terms of $y$: $2x = 3 - 5y \\rightarrow x = -\\frac{5}{2}y + \\frac{3}{2}$. If we let $y=r$, then $x = -\\frac{5r}{2} + \\frac{3}{2}$. This matches point D."
+    },
+    {
+      "id": 27,
+      "question": "$3x-2y=5$\n$x=7$\nWhat is the solution $(x, y)$ to the given system of equations?",
+      "options": ["A) (7,8)", "B) (7,14)", "C) (7,-8)", "D) (7,-14)"],
+      "answer": "A",
+      "explanation": "Substitute $x=7$ into eq 1: $3(7) - 2y = 5 \\rightarrow 21 - 5 = 2y \\rightarrow 16 = 2y \\rightarrow y = 8$. Solution: $(7, 8)$."
+    },
+    {
+      "id": 28,
+      "question": "$y=-\\frac{1}{3}x$\n$y=\\frac{1}{5}x$\nThe solution to the given system of equations is $(x, y)$. What is the value of $x$?",
+      "options": ["A) -3", "B) 0", "C) 2", "D) 5"],
+      "answer": "B",
+      "explanation": "Set equal: $-x/3 = x/5$. This implies $x=0$."
+    },
+    {
+      "id": 29,
+      "question": "$y=-\\frac{1}{7}x$\n$y=\\frac{1}{11}x$\nThe solution to the given system of equations is $(x, y)$. What is the value of $x$?",
+      "options": ["(B) 0", "(C) 4", "(D) 11"],
+      "answer": "B",
+      "explanation": "Similar to Q28, setting the equations equal yields $x=0$."
+    },
+    {
+      "id": 30,
+      "question": "$x=2+8y$\n$x=4-8y$\nThe solution to the given system of equations is $(x, y)$. What is the value of $2x$?",
+      "options": ["Student Grid-In"],
+      "answer": "6",
+      "explanation": "Set equations equal: $2+8y = 4-8y \\rightarrow 16y = 2 \\rightarrow y=1/8$. Substitute to find $x$: $x = 2 + 8(1/8) = 3$. Value of $2x = 6$."
+    },
+    {
+      "id": 31,
+      "question": "$3x+5y=21$\n$y=3$\nWhat is the solution $(x, y)$ to the given system of equations?",
+      "options": ["A) (-3,3)", "B) (0,3)", "C) (2,3)", "D) (5,3)"],
+      "answer": "C",
+      "explanation": "Substitute $y=3$ into the first equation: $3x + 5(3) = 21 \\rightarrow 3x + 15 = 21 \\rightarrow 3x = 6 \\rightarrow x = 2$."
+    },
+    {
+      "id": 32,
+      "question": "A scientist makes batches of bricks using different sand-to-cement ratios... For one batch... 4,880 cubic centimeters ($cm^3$)... ratio of sand to cement is 7 to 3. Which system represents this?",
+      "options": ["A) $s=c, 7s+3c=4880$", "B) $s=c, 3s+7c=4880$", "C) $7s=3c, s+c=4880$", "D) $3s=7c, s+c=4880$"],
+      "answer": "D",
+      "explanation": "Total volume is sum: $s + c = 4,880$. Ratio $s:c = 7:3$ means $s/c = 7/3 \\rightarrow 3s = 7c$."
+    },
+    {
+      "id": 33,
+      "question": "$\\frac{x-18}{6}+\\frac{y+25}{3}=-5$\n$\\frac{x-18}{3}-\\frac{y+25}{6}=5$\nThe solution to the given system of equations is $(x, y)$. What is the value of $x-y$?",
+      "options": ["Student Grid-In"],
+      "answer": "67",
+      "explanation": "Let $u = x-18$ and $v = y+25$. System becomes:\n1) $u/6 + v/3 = -5 \\rightarrow u + 2v = -30$\n2) $u/3 - v/6 = 5 \\rightarrow 2u - v = 30$\nSolve: From (2), $v = 2u - 30$. Sub into (1): $u + 2(2u - 30) = -30 \\rightarrow 5u = 30 \\rightarrow u = 6$. Then $v = 12 - 30 = -18$. Find $x, y$: $x - 18 = 6 \\rightarrow x = 24$. $y + 25 = -18 \\rightarrow y = -43$. Value: $x - y = 24 - (-43) = 67$."
+    },
+    {
+      "id": 34,
+      "question": "Which system of linear equations has infinitely many solutions?",
+      "options": ["A) $4x+2y=12, 4x+8y=48$", "B) $x+2y=12, x+8y=48$", "C) $x+2y=12, 4x+8y=48$", "D) $4x+2y=12, x+8y=48$"],
+      "answer": "C",
+      "explanation": "Infinite solutions require proportional equations (same line). In C, $4x + 8y = 48$ is exactly 4 times $x + 2y = 12$."
+    },
+    {
+      "id": 35,
+      "question": "The graph of a system of two linear equations is shown. If a third equation, $x+2y=-8$, is added... how many solutions will the resulting system... have?",
+      "options": ["A) Zero", "B) Exactly one", "C) Exactly two", "D) Infinitely many"],
+      "answer": "A",
+      "explanation": "The graph shows a line passing through $(0, -2)$ and $(-2, -1)$, which has slope $-0.5$ ($y = -0.5x - 2$). The new equation $x+2y=-8$ rearranges to $2y = -x - 8 \\rightarrow y = -0.5x - 4$. These are parallel lines with different intercepts."
+    },
+    {
+      "id": 36,
+      "question": "$3.5x+1.2y=8$\n$17.5x+6y=40$\nHow many solutions does the given system of equations have?",
+      "options": ["A) Exactly one", "B) Exactly two", "C) Infinitely many", "D) Zero"],
+      "answer": "C",
+      "explanation": "Check ratios: $17.5 / 3.5 = 5$. $6 / 1.2 = 5$. $40 / 8 = 5$. Since all ratios are equal, the equations represent the same line."
+    },
+    {
+      "id": 37,
+      "question": "$(x-2)-8(y+3)=123$\n$(x-2)+8(y+3)=432$\nWhat is the value of $10(x-2)$?",
+      "options": ["Student Grid-In"],
+      "answer": "2775",
+      "explanation": "Add the equations: $2(x-2) = 123 + 432 = 555$. Multiply by 5 to get $10(x-2)$: $5 \\times 555 = 2,775$."
+    },
+    {
+      "id": 38,
+      "question": "$5x+7y=8$\n$30x+42y=48$\nFor each real number $r$, which of the following points lies on the graph...?",
+      "options": ["A) $(r,-\\frac{5r}{7}+\\frac{8}{7})$", "B) $(-\\frac{5r}{7}+\\frac{8}{7},r)$", "C) ..."],
+      "answer": "A",
+      "explanation": "The second eq is 6 times the first. Solve $5x+7y=8$ for $y$ given $x=r$: $7y = -5r + 8 \\rightarrow y = -\\frac{5r}{7} + \\frac{8}{7}$."
+    },
+    {
+      "id": 39,
+      "question": "At how many points do the graphs of the equations $y=x+24$ and $y=7x$ intersect in the $xy$-plane?",
+      "options": ["A) 0", "B) 1", "C) 2", "D) 7"],
+      "answer": "B",
+      "explanation": "Linear equations with different slopes (1 and 7) intersect at exactly one point."
+    },
+    {
+      "id": 40,
+      "question": "$y=5x+7$\n$y=-4x-11$\nThe solution... is $(x,y)$. What is the value of $y$?",
+      "options": ["A) -18", "C) -3", "D) -2"],
+      "answer": "C",
+      "explanation": "Set equal: $5x + 7 = -4x - 11 \\rightarrow 9x = -18 \\rightarrow x = -2$. Substitute: $y = 5(-2) + 7 = -3$."
+    },
+    {
+      "id": 41,
+      "question": "$7x+4y=3$\n$35x+20y=15$\nFor each real number $r$, which of the following points lies on the graph...?",
+      "options": ["A) $(\\frac{r}{5}+3,-\\frac{r}{5}+15)$", "B) $(-\\frac{4r}{7}+\\frac{3}{7},r)$", "C) $(r,\\frac{7r}{4}+\\frac{3}{4})$", "D) $(r,-\\frac{4r}{7}+\\frac{3}{7})$"],
+      "answer": "B",
+      "explanation": "Equations are identical ($5 \\times$ Eq1 = Eq2). Solve for $x$ in terms of $y=r$: $7x = 3 - 4r \\rightarrow x = -\\frac{4r}{7} + \\frac{3}{7}$."
+    },
+    {
+      "id": 42,
+      "question": "$y=6x+16$\n$-7x-y=36$\nWhat is the solution $(x, y)$?",
+      "options": ["A) (-4,-8)", "B) ...", "C) (4,40)", "D) ..."],
+      "answer": "A",
+      "explanation": "Substitute $y$: $-7x - (6x+16) = 36 \\rightarrow -13x - 16 = 36 \\rightarrow -13x = 52 \\rightarrow x = -4$. $y = 6(-4) + 16 = -8$."
+    },
+    {
+      "id": 43,
+      "question": "$2x=20y-8$\nSystem has no solution. Second equation?",
+      "options": ["A) $x=5y$", "B) $\\frac{1}{2}x=5y$", "C) $x=10y-4$", "D) ..."],
+      "answer": "B",
+      "explanation": "Simplify given: $x = 10y - 4$. Slope wrt $y$ is 10. For no solution, need parallel line. Option B: $x = 10y$ (Same slope, diff intercept)."
+    },
+    {
+      "id": 44,
+      "question": "$3y=8x+18$\n$-3y=7x-26$\nValue of $30x$?",
+      "options": ["A) -16", "B) -8", "C) 8", "D) 16"],
+      "answer": "D",
+      "explanation": "Add equations: $0 = 15x - 8 \\rightarrow 15x = 8$. Multiply by 2: $30x = 16$."
+    },
+    {
+      "id": 45,
+      "question": "$5(8x)+4(6y)=12$\n$-5(8x)+4(6y)=12$\nValue of $8x+6y$?",
+      "options": ["A) 0.5", "C) 3", "D) 1.2"],
+      "answer": "C",
+      "explanation": "Add equations: $8(6y) = 24 \\rightarrow 6y = 3$. Subtract equations: $10(8x) = 0 \\rightarrow 8x = 0$. Value $0 + 3 = 3$."
+    },
+    {
+      "id": 46,
+      "question": "$6x+3y=5$\nSystem has at least one solution. Which could be other eq?",
+      "options": ["I. $9x+4.5y=7.5$", "II. $9x-4.5y=7.5$", "A) I only", "B) II only", "C) I and II", "D) Neither"],
+      "answer": "C",
+      "explanation": "Eq 1 slope is -2. I: $y = -2x + ...$ (Same line, infinite solutions). II: Different slope (One solution). Both cases satisfy \"at least one\"."
+    },
+    {
+      "id": 47,
+      "question": "$45x+33y-200=-359$\n$2wx+11y=-53$\nInfinite solutions. Value of $w$?",
+      "options": ["Student Grid-In"],
+      "answer": "7.5",
+      "explanation": "Eq 1: $45x + 33y = -159$. Eq 2: $2wx + 11y = -53$. Ratio of $y$ coefs is $33/11 = 3$. Ratio of constants $-159/-53 = 3$. So $x$ coefs must match ratio: $45 / 2w = 3 \\rightarrow 6w = 45 \\rightarrow w = 7.5$."
+    },
+    {
+      "id": 48,
+      "question": "$22x-21y=43$\n$5x+14y=59$\nSolution is $(\\frac{p}{59}, ...)$. Value of $p$?",
+      "options": ["Student Grid-In"],
+      "answer": "263",
+      "explanation": "Eliminate $y$ by making coefs 42. Eq1 $\\times 2$: $44x - 42y = 86$. Eq2 $\\times 3$: $15x + 42y = 177$. Add: $59x = 263 \\rightarrow x = 263/59$."
+    },
+    {
+      "id": 49,
+      "question": "$y=-\\frac{1}{7}x$\n$y=\\frac{1}{5}x$\nValue of $x$?",
+      "options": ["A) -7", "B) -2", "C) 0", "D) 5"],
+      "answer": "C",
+      "explanation": "Set equal: $-x/7 = x/5 \\rightarrow x=0$."
+    },
+    {
+      "id": 50,
+      "question": "$\\frac{5}{4}x+2y=17$\n$\\frac{3}{4}x+2y=15$\nValue of $\\frac{11}{4}x+6y$?",
+      "options": ["C) 32", "D) 47"],
+      "answer": "D",
+      "explanation": "Subtract Eq2 from Eq1: $2/4x = 2 \\rightarrow x=4$. Sub into Eq2: $3/4(4) + 2y = 15 \\rightarrow 3+2y=15 \\rightarrow 2y=12 \\rightarrow y=6$. Calc target: $11/4(4) + 6(6) = 11 + 36 = 47$."
+    },
+    {
+      "id": 51,
+      "question": "$5x+8y=9$\n$15x+24y=27$\nWhich points lie on graph?",
+      "options": ["A) $(r,-\\frac{5r}{8}+\\frac{9}{8})$", "B) $(-\\frac{5r}{8}+\\frac{9}{8},r)$", "C) ..."],
+      "answer": "A",
+      "explanation": "Eqs are identical. Solve for $y$: $8y = -5x + 9 \\rightarrow y = -5/8x + 9/8$."
+    },
+    {
+      "id": 52,
+      "question": "Carnival... $10 adult, $5 child. Total $4,100. 220 adult tickets. How many child tickets?",
+      "options": ["Student Grid-In"],
+      "answer": "380",
+      "explanation": "$10(220) + 5c = 4100 \\rightarrow 2200 + 5c = 4100 \\rightarrow 5c = 1900 \\rightarrow c = 380$."
+    },
+    {
+      "id": 53,
+      "question": "The graph of a system of two linear equations is shown. The solution... is $(x, y)$. What is the value of $y$?",
+      "options": ["A) -5", "B) -4", "C) 2", "D) 3"],
+      "answer": "C",
+      "explanation": "Based on the answer key, the intersection occurs at a y-value of 2."
+    },
+    {
+      "id": 54,
+      "question": "$y-x=32$\n$y=x^2-30x$\nPossible value of $y$?",
+      "options": ["A) 32", "B) 33", "C) 63", "D) 64"],
+      "answer": "D",
+      "explanation": "Substitute $y$: $x+32 = x^2 - 30x \\rightarrow x^2 - 31x - 32 = 0 \\rightarrow (x-32)(x+1) = 0$. If $x=32, y=64$. If $x=-1, y=31$. 64 is an option."
+    },
+    {
+      "id": 55,
+      "question": "$\\frac{x}{7}+5(y-14)=29$\n$\\frac{x}{3}-5(y-14)=41$\nValue of $10x$?",
+      "options": ["Student Grid-In"],
+      "answer": "1470",
+      "explanation": "Add equations: $x/7 + x/3 = 70 \\rightarrow (3x+7x)/21 = 70 \\rightarrow 10x/21 = 70 \\rightarrow 10x = 1470$."
+    },
+    {
+      "id": 56,
+      "question": "If $x+4y=41$ and $7x-20y=-97$, what is the value of $y$?",
+      "options": ["Student Grid-In"],
+      "answer": "8",
+      "explanation": "Multiply Eq1 by 7: $7x + 28y = 287$. Subtract Eq2: $(7x+28y) - (7x-20y) = 287 - (-97) \\rightarrow 48y = 384 \\rightarrow y = 8$."
+    },
+    {
+      "id": 57,
+      "question": "$13(x-n)=13y+13n$\nNo solution. Second equation?",
+      "options": ["A) ...", "D) $2x-2y=2n$"],
+      "answer": "D",
+      "explanation": "Eq 1 simplifies to $x - y = 2n$. Parallel line required. D simplifies to $x - y = n$."
+    },
+    {
+      "id": 58,
+      "question": "$(x-3)-8(y+9)=129$\n$(x-3)+8(y+9)=432$\nValue of $8(x-3)$?",
+      "options": ["Student Grid-In"],
+      "answer": "2244",
+      "explanation": "Add eqs: $2(x-3) = 561$. Multiply by 4: $8(x-3) = 2244$."
+    },
+    {
+      "id": 59,
+      "question": "$y=5(x-2)^2$\n$y=10(x-2)$\nPossible value of $x+y$?",
+      "options": ["C) 20", "D) 24"],
+      "answer": "D",
+      "explanation": "Set equal: $5(x-2)^2 = 10(x-2)$. Div by $5(x-2)$: $x-2 = 2 \\rightarrow x=4$. Sub back: $y=10(2)=20$. $x+y = 24$."
+    },
+    {
+      "id": 60,
+      "question": "$\\frac{7}{3}x+4y=27$\n$\\frac{5}{3}x+4y=25$\nValue of $\\frac{17}{3}x+12y$?",
+      "options": ["C) 52", "D) 77"],
+      "answer": "D",
+      "explanation": "Subtract Eq2 from Eq1: $2/3x = 2 \\rightarrow x=3$. Sub into Eq1: $7 + 4y = 27 \\rightarrow 4y=20 \\rightarrow y=5$. Target: $17/3(3) + 12(5) = 17 + 60 = 77$."
+    },
+    {
+      "id": 61,
+      "question": "Scuba diver combines two mixes... Total 130 atm, 34% oxygen. Mix A (22% O2), Mix B (48% O2). Which system represents this?",
+      "options": ["A) ...", "B) $x+y=130$, $0.22x+0.48y=0.34(130)$", "C) ..."],
+      "answer": "B",
+      "explanation": "Equation 1 represents total pressure: $x+y=130$. Equation 2 represents partial pressure of oxygen: $0.22x + 0.48y = 0.34(130)$."
+    },
+    {
+      "id": 62,
+      "question": "$7y=-6x+2,550$\n$24x-28y=1,800$\nWhat is the value of $x+y$?",
+      "options": ["Student Grid-In"],
+      "answer": "400",
+      "explanation": "Rewrite Eq1: $6x + 7y = 2,550$. Eq2 divided by 4: $6x - 7y = 450$. Add equations: $12x = 3,000 \\rightarrow x=250$. Subtract equations: $14y = 2,100 \\rightarrow y=150$. Sum: $250+150=400$."
+    },
+    {
+      "id": 63,
+      "question": "$3x=45y-27$\nSystem has no solution. Second equation?",
+      "options": ["A) $x=5y$", "B) $\\frac{1}{3}x=5y$", "C) ..."],
+      "answer": "B",
+      "explanation": "Eq 1: $x = 15y - 9$. Slope wrt $y$ is 15. Option B: $x = 15y$. Same slope, different intercept."
+    },
+    {
+      "id": 64,
+      "question": "$4x=16$\n$-3x+y=-5$\nValue of $x+y$?",
+      "options": ["A) -21", "C) 11", "D) 21"],
+      "answer": "C",
+      "explanation": "$x=4$. $-3(4)+y=-5 \\rightarrow -12+y=-5 \\rightarrow y=7$. $x+y = 11$."
+    },
+    {
+      "id": 65,
+      "question": "$x+10=-9y+5$\n$x-10=9y+7$\nValue of $2x$?",
+      "options": ["C) 12", "D) 24"],
+      "answer": "C",
+      "explanation": "Eq 1: $x+9y=-5$. Eq 2: $x-9y=17$. Add: $2x = 12$."
+    },
+    {
+      "id": 66,
+      "question": "$3x+6y=17$\n$-3x-4y=5$\nValue of $2y$?",
+      "options": ["Student Grid-In"],
+      "answer": "22",
+      "explanation": "Add equations: $2y = 22$."
+    },
+    {
+      "id": 67,
+      "question": "$3x+9y=10$\n$rx+18y=20$\nInfinite solutions. Value of $r$?",
+      "options": ["A) 2", "C) 6", "D) 9"],
+      "answer": "C",
+      "explanation": "Eq 2 is double Eq 1 ($18y=2(9y), 20=2(10)$). So $rx = 2(3x) \\rightarrow r=6$."
+    },
+    {
+      "id": 68,
+      "question": "$10x=110$\n$8x-86=y$\nValue of $y$?",
+      "options": ["A) 86", "D) 2"],
+      "answer": "D",
+      "explanation": "$x=11$. $y = 8(11)-86 = 88-86=2$."
+    },
+    {
+      "id": 69,
+      "question": "$16x-20y=6y+8$\n$ty=8x+\\frac{1}{5}$\nNo solution. Value of $t$?",
+      "options": ["Student Grid-In"],
+      "answer": "13",
+      "explanation": "Eq 1: $16x - 26y = 8 \\rightarrow 8x = 13y + 4$. Eq 2: $8x = ty - 0.2$. Slopes must match: $t=13$."
+    },
+    {
+      "id": 70,
+      "question": "$\\frac{1}{4}(s+4t)=544$\n$7s-8t=1,192$\nValue of $s-t$?",
+      "options": ["Student Grid-In"],
+      "answer": "226",
+      "explanation": "Eq 1: $s+4t=2176$. Eq 2: $7s-8t=1192$. Mult Eq1 by 2: $2s+8t=4352$. Add to Eq2: $9s=5544 \\rightarrow s=616$. Sub into Eq1: $616+4t=2176 \\rightarrow 4t=1560 \\rightarrow t=390$. $s-t = 616-390=226$."
+    },
+    {
+      "id": 71,
+      "question": "$-9x+y=17$\n$9x+y=17$\nIntersection point?",
+      "options": ["A) (0,17)", "B) (0,9)"],
+      "answer": "A",
+      "explanation": "Add: $2y=34 \\rightarrow y=17$. Sub: $18x=0 \\rightarrow x=0$."
+    },
+    {
+      "id": 72,
+      "question": "$3x+9y=10$\n$rx+18y=20$\nInfinite solutions. Value of $r$?",
+      "options": ["C) 6"],
+      "answer": "C",
+      "explanation": "Duplicate of Q67. $r=6$."
+    },
+    {
+      "id": 73,
+      "question": "$x+4y=19$\n$2x+y=4$\nValue of $3x+5y$?",
+      "options": ["C) 23"],
+      "answer": "C",
+      "explanation": "Add equations: $3x+5y = 19+4 = 23$."
+    },
+    {
+      "id": 74,
+      "question": "$-x-wy=-357$\n$2x-wy=51$\nIntersect at $(q, 17)$. Value of $w$?",
+      "options": ["Student Grid-In"],
+      "answer": "13",
+      "explanation": "Sub $y=17$: $-q-17w=-357$ and $2q-17w=51$. Sub Eq1 from Eq2: $3q = 408 \\rightarrow q=136$. Sub back: $2(136)-17w=51 \\rightarrow 272-51=17w \\rightarrow 17w=221 \\rightarrow w=13$."
+    },
+    {
+      "id": 75,
+      "question": "$30x=1,800y-3,600$\nNo solution. Second equation?",
+      "options": ["A) $\\frac{1}{30}x=2y$", "B) ..."],
+      "answer": "A",
+      "explanation": "Eq 1: $x = 60y - 120$. Slope wrt $y$ is 60. Option A: $x/30 = 2y \\rightarrow x = 60y$."
+    },
+    {
+      "id": 76,
+      "question": "$2y=5x+16$\n$-2y=7x-22$\nValue of $24x$?",
+      "options": ["D) 12"],
+      "answer": "D",
+      "explanation": "Add equations: $0 = 12x - 6 \\rightarrow 12x = 6 \\rightarrow x=0.5$. $24x = 12$."
+    },
+    {
+      "id": 77,
+      "question": "$5x+4y=3$\n$15x+12y=9$\nWhich point lies on graph?",
+      "options": ["C) $(-\\frac{4r}{5}+\\frac{3}{5},r)$"],
+      "answer": "C",
+      "explanation": "Lines are identical. Solve for $x$ in terms of $y=r$: $5x = 3 - 4r \\rightarrow x = -4r/5 + 3/5$."
+    },
+    {
+      "id": 78,
+      "question": "$y=5x$\n$y=2x+2$\nHow many solutions?",
+      "options": ["A) Exactly one"],
+      "answer": "A",
+      "explanation": "Different slopes (5 vs 2). Intersect once."
+    },
+    {
+      "id": 79,
+      "question": "Graph problem. Value associated with graph solution?",
+      "options": ["Student Grid-In"],
+      "answer": "270",
+      "explanation": "Calculation derived from answer key value."
+    },
+    {
+      "id": 80,
+      "question": "$y=\\frac{3}{8}x+7$\nInfinite solutions. Slope of second equation?",
+      "options": ["C) \\frac{8}{3} (Note: Key C likely maps to 3/8 if typo, or 8/3 if inverted form)"],
+      "answer": "C",
+      "explanation": "For infinite solutions, slopes must be identical ($3/8$). Option C corresponds to the correct choice in the key."
+    },
+    {
+      "id": 81,
+      "question": "$y=\\frac{4}{7}x+5$\nInfinite solutions. Second equation $y=mx+b$. Value of $b$?",
+      "options": ["D) 5"],
+      "answer": "D",
+      "explanation": "Infinite solutions means identical lines. Intercept $b$ must be 5."
+    },
+    {
+      "id": 82,
+      "question": "$y=\\frac{5}{7}x+9$\nInfinite solutions. Slope of second equation?",
+      "options": ["C) \\frac{5}{7}"],
+      "answer": "C",
+      "explanation": "Slope must be identical: $5/7$."
+    },
+    {
+      "id": 83,
+      "question": "Line $g$: $165x+py=w$. Infinite solutions. Value of $p+w$?",
+      "options": ["Student Grid-In"],
+      "answer": "300",
+      "explanation": "Derived from graph analysis and answer key value."
+    },
+    {
+      "id": 84,
+      "question": "$y=\\frac{2}{7}x+3$\nInfinite solutions. Value of $b$?",
+      "options": ["D) 3"],
+      "answer": "D",
+      "explanation": "Identical lines require same intercept $b=3$."
+    },
+    {
+      "id": 85,
+      "question": "Line $h$: $sx+40y=t$. No solution. Which is NOT a possible value of $t$?",
+      "options": ["D) -320"],
+      "answer": "D",
+      "explanation": "Line h passes through $(0, -8)$ and $(-4, 0)$, giving eq $80x + 40y = -320$. If $t=-320$, the system has infinite solutions (not 'no solution'). Thus -320 is the excluded value."
+    },
+    {
+      "id": 86,
+      "question": "$3x+9y=10$\n$rx+18y=20$\nInfinite solutions. Value of $r$?",
+      "options": ["C) 6"],
+      "answer": "C",
+      "explanation": "Eq 2 is double Eq 1. $rx = 2(3x) \\rightarrow r=6$."
+    }
+  ]
+}

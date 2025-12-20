@@ -1,0 +1,172 @@
+{
+  "dataset_info": {
+    "title": "Exponents & Radicals",
+    "total_questions": 15,
+    "part": "1 of 1",
+    "range": "1-15"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "question": "$\\sqrt{a^2b^6}$. If $a$ and $b$ are positive numbers, which of the following is equivalent to the expression above?",
+      "options": [
+        "A) $ab^4$",
+        "B) $ab^3$",
+        "C) $ab\\sqrt{ab^4}$",
+        "D) $ab\\sqrt{b^3}$"
+      ],
+      "answer": "B",
+      "explanation": "Apply the square root to each term: $\\sqrt{a^2}\\sqrt{b^6} = a^{(2/2)}b^{(6/2)} = a^1b^3 = ab^3$."
+    },
+    {
+      "id": 2,
+      "question": "Which expression is equivalent to $\\sqrt[5]{32a^3b^4}$, where $a>0$ and $b>0$?",
+      "options": [
+        "A) $2a^{3/5}b^{4/5}$",
+        "B) $2a^{5/3}b^{5/4}$",
+        "C) $32a^{3/5}b^{4/5}$",
+        "D) $32a^{5/3}b^{5/4}$"
+      ],
+      "answer": "A",
+      "explanation": "Evaluate the constant: $\\sqrt[5]{32} = 2$. Convert variables to rational exponents: $\\sqrt[5]{a^3} = a^{3/5}$ and $\\sqrt[5]{b^4} = b^{4/5}$. Result: $2a^{3/5}b^{4/5}$."
+    },
+    {
+      "id": 3,
+      "question": "The expression $\\frac{x^{20}(x^{-4})}{5x^{-3}}$ is equivalent to $\\frac{1}{5}x^c$, where $c$ is a constant and $x>0$. What is the value of $c$?",
+      "options": [
+        "A) 4",
+        "B) 5",
+        "C) 19",
+        "D) 21"
+      ],
+      "answer": "C",
+      "explanation": "Simplify the numerator: $x^{20} \\cdot x^{-4} = x^{16}$. Divide by the denominator: $\\frac{x^{16}}{5x^{-3}} = \\frac{1}{5}x^{16 - (-3)} = \\frac{1}{5}x^{19}$. Thus, $c = 19$."
+    },
+    {
+      "id": 4,
+      "question": "$W = \\frac{R^2}{R^2+S^2}$. The given equation relates the variables $R, S,$ and $W$, where $R, S,$ and $W$ represent positive numbers. Which equation correctly expresses $S$ in terms of $R$ and $W$?",
+      "options": [
+        "A) $S = \\sqrt{\\frac{R^2-WR^2}{W}}$",
+        "B) $S = \\frac{R^2}{R^2+W^2}$",
+        "C) $S = \\sqrt{R^2-WR^2}$",
+        "D) $S = \\sqrt{\\frac{R^2}{W} - R^2}$"
+      ],
+      "answer": "A",
+      "explanation": "Multiply by the denominator: $W(R^2+S^2) = R^2$. Distribute $W$: $WR^2 + WS^2 = R^2$. Subtract $WR^2$: $WS^2 = R^2 - WR^2$. Divide by $W$: $S^2 = \\frac{R^2-WR^2}{W}$. Take the square root: $S = \\sqrt{\\frac{R^2-WR^2}{W}}$."
+    },
+    {
+      "id": 5,
+      "question": "Which of the following is equivalent to $x^{-2/3}$ for all positive values of $x$?",
+      "options": [
+        "A) $\\sqrt[3]{x^2}$",
+        "B) $-\\sqrt[3]{x^2}$",
+        "C) $\\frac{1}{\\sqrt[3]{x^2}}$",
+        "D) $\\frac{1}{\\sqrt{x^3}}$"
+      ],
+      "answer": "C",
+      "explanation": "A negative exponent indicates a reciprocal: $x^{-2/3} = \\frac{1}{x^{2/3}}$. Converting the rational exponent to a radical gives $\\frac{1}{\\sqrt[3]{x^2}}$."
+    },
+    {
+      "id": 6,
+      "question": "What is the value of the exponent when the expression $x^{2/3} \\cdot x^{1/2}$ is simplified to $x^n$?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "7/6",
+      "explanation": "When multiplying terms with the same base, add the exponents: $\\frac{2}{3} + \\frac{1}{2}$. Common denominator is 6: $\\frac{4}{6} + \\frac{3}{6} = \\frac{7}{6}$."
+    },
+    {
+      "id": 7,
+      "question": "Value calculation question (Context missing from snippet, answer derived from key).",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "4/225",
+      "explanation": "Based on the answer key, the solution is the fraction 4/225."
+    },
+    {
+      "id": 8,
+      "question": "Value calculation question (Context missing from snippet, answer derived from key).",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "23/30",
+      "explanation": "Based on the answer key, the solution is the fraction 23/30."
+    },
+    {
+      "id": 9,
+      "question": "Which expression is equivalent to $\\sqrt[12]{x^5y^5}$, where $x$ and $y$ are positive?",
+      "options": [
+        "A) $(xy)^{12/5}$",
+        "B) $(xy)^{5/12}$",
+        "C) $(xy)^{17}$",
+        "D) $(xy)^{60}$"
+      ],
+      "answer": "B",
+      "explanation": "Convert the radical $\\sqrt[12]{\\dots}$ to the exponent $1/12$. The expression becomes $(x^5y^5)^{1/12} = ((xy)^5)^{1/12} = (xy)^{5/12}$."
+    },
+    {
+      "id": 10,
+      "question": "The expression $(6x^2)(3x^7)$ is equivalent to $bx^9$, where $b$ is a constant. What is the value of $b$?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "18",
+      "explanation": "Multiply the coefficients: $6 \\times 3 = 18$. Add the exponents of $x$: $2 + 7 = 9$. The expression is $18x^9$. Thus, $b = 18$."
+    },
+    {
+      "id": 11,
+      "question": "$r = \\sqrt{5w-3}$. The given equation relates the real numbers $r$ and $w$, where $w > 3/5$. Which equation correctly expresses $w$ in terms of $r$?",
+      "options": [
+        "A) $w = \\sqrt{-3r+5}$",
+        "B) $w = \\sqrt{5r-3}$",
+        "C) $w = \\frac{r^2}{5} + \\frac{3}{5}$",
+        "D) $w = \\frac{r^2}{5} + 3$"
+      ],
+      "answer": "C",
+      "explanation": "Square both sides: $r^2 = 5w - 3$. Add 3: $r^2 + 3 = 5w$. Divide by 5: $w = \\frac{r^2+3}{5} = \\frac{r^2}{5} + \\frac{3}{5}$."
+    },
+    {
+      "id": 12,
+      "question": "If $n$ and $k$ are numbers greater than 1 and $\\sqrt[4]{n^5}$ is equivalent to $\\sqrt[3]{k^2}$, for what value of $a$ is $n^{2a+1}$ equal to $k$?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "7/16",
+      "explanation": "Convert radicals to exponents: $n^{5/4} = k^{2/3}$. Raise both sides to the power of $3/2$ to isolate $k$: $k = (n^{5/4})^{3/2} = n^{15/8}$. We are given $k = n^{2a+1}$. Equating the exponents of $n$: $2a + 1 = \\frac{15}{8}$. Subtract 1: $2a = \\frac{15}{8} - \\frac{8}{8} = \\frac{7}{8}$. Divide by 2: $a = \\frac{7}{16}$."
+    },
+    {
+      "id": 13,
+      "question": "$\\sqrt[5]{x^m}$. In the given expression, $m$ is a constant and $x > 1$. The expression can be rewritten as $\\sqrt[7]{x}$. What is the value of $m$?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "5/7",
+      "explanation": "Rewrite as rational exponents: $x^{m/5}$ and $x^{1/7}$. Set the exponents equal: $\\frac{m}{5} = \\frac{1}{7}$. Multiply by 5: $m = \\frac{5}{7}$."
+    },
+    {
+      "id": 14,
+      "question": "Which expression is equivalent to $(158y)^{1/2}$, where $y > 1$?",
+      "options": [
+        "A) $158\\sqrt{y}$",
+        "B) $\\sqrt{158}y$",
+        "C) $\\sqrt{158y}$",
+        "D) $\\sqrt{(158y)^2}$"
+      ],
+      "answer": "C",
+      "explanation": "An exponent of $1/2$ is equivalent to a square root. $(158y)^{1/2} = \\sqrt{158y}$."
+    },
+    {
+      "id": 15,
+      "question": "$p = \\sqrt{12c-25}$. The given equation relates the variables $p$ and $c$, where $c$ is positive. Which equation correctly expresses $c$ in terms of $p$?",
+      "options": [
+        "A) $c = \\frac{(p+25)^2}{12}$",
+        "B) $c = \\frac{p^2}{12} + \\frac{25}{12}$",
+        "C) $c = \\frac{p}{24} + \\frac{25}{24}$",
+        "D) $c = \\sqrt{\\frac{p+25}{12}}$"
+      ],
+      "answer": "B",
+      "explanation": "Square both sides: $p^2 = 12c - 25$. Add 25: $p^2 + 25 = 12c$. Divide by 12: $c = \\frac{p^2+25}{12} = \\frac{p^2}{12} + \\frac{25}{12}$."
+    }
+  ]
+}

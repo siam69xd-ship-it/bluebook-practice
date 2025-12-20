@@ -1,0 +1,626 @@
+{
+  "dataset_info": {
+    "title": "SAT Math Linear Equations",
+    "total_questions": 88,
+    "part": "1 of 1",
+    "range": "1-88"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "question": "If $(x+9)-5=25$, what is the value of $x+9$?",
+      "options": ["A) 30", "B) 21", "C) 20", "D) 11"],
+      "answer": "A",
+      "explanation": "Add 5 to both sides: $(x+9) = 25 + 5 = 30$."
+    },
+    {
+      "id": 2,
+      "question": "Which equation has no solution?",
+      "options": ["A) $x=x+1$", "B) $x=2x+2$", "C) $x+1=x+1$", "D) $x+1=2x+2$"],
+      "answer": "A",
+      "explanation": "Subtract $x$ from both sides: $0 = 1$, which is false. Therefore, there is no solution."
+    },
+    {
+      "id": 3,
+      "question": "If $5(x+1)=25$, what is the value of $x+1$?",
+      "options": ["A) 4", "B) 5", "C) 19", "D) 20"],
+      "answer": "B",
+      "explanation": "Divide both sides by 5: $x+1 = 25/5 = 5$."
+    },
+    {
+      "id": 4,
+      "question": "$|15-x|-9=0$. What are all positive solutions to the given equation?",
+      "options": ["A) -6 and -24", "B) -6 and 24", "C) 6 and -24", "D) 6 and 24"],
+      "answer": "D",
+      "explanation": "Isolate the absolute value: $|15-x| = 9$. This gives two cases: 1) $15-x = 9 \\Rightarrow x=6$. 2) $15-x = -9 \\Rightarrow x=24$. Both are positive."
+    },
+    {
+      "id": 5,
+      "question": "$ax-y=bxy$. The given equation relates the positive numbers $a, b, x,$ and $y$. Which equation correctly expresses $a$ in terms of $b, x,$ and $y$?",
+      "options": ["A) $a=\\frac{bxy+y}{x}$", "B) $a=\\frac{bxy-y}{x}$", "C) $a=\\frac{x}{bxy+y}$", "D) $a=\\frac{x}{bxy-y}$"],
+      "answer": "A",
+      "explanation": "Add $y$ to both sides: $ax = bxy + y$. Divide by $x$: $a = \\frac{bxy+y}{x}$."
+    },
+    {
+      "id": 6,
+      "question": "What value of $x$ is the solution to the equation $x+10=3$?",
+      "options": ["A) -13", "B) -7", "C) 7", "D) 13"],
+      "answer": "B",
+      "explanation": "Subtract 10 from both sides: $x = 3 - 10 = -7$."
+    },
+    {
+      "id": 7,
+      "question": "$|3x-12|=18$. What is the sum of the solutions to the given equation?",
+      "options": ["A) -2", "B) 8", "C) 10", "D) 12"],
+      "answer": "B",
+      "explanation": "Case 1: $3x-12=18 \\Rightarrow 3x=30 \\Rightarrow x=10$. Case 2: $3x-12=-18 \\Rightarrow 3x=-6 \\Rightarrow x=-2$. Sum: $10 + (-2) = 8$."
+    },
+    {
+      "id": 8,
+      "question": "How many solutions does the equation $10x=10$ have?",
+      "options": ["A) Zero", "B) Exactly one", "C) Exactly two", "D) Infinitely many"],
+      "answer": "B",
+      "explanation": "Divide by 10: $x=1$. There is exactly one unique solution."
+    },
+    {
+      "id": 9,
+      "question": "The cost to rent a bus... is $950 for the first 3 hours and an additional $50 per hour for each hour after the first 3 hours. If the total cost... for $t$ hours is 1,250, which equation represents this situation?",
+      "options": ["A) $950+50(t-3)=1,250$", "B) $950+50(3t)=1,250$", "C) $950(t-3)+50t=1,250$", "D) $950(3t)+50t=1,250$"],
+      "answer": "A",
+      "explanation": "Base cost is 950. Extra hours is $(t-3)$. Cost for extra hours is $50(t-3)$. Total equation: $950 + 50(t-3) = 1,250$."
+    },
+    {
+      "id": 10,
+      "question": "$6(x-9)=11(x-9)$. What value of $x$ is the solution to the given equation?",
+      "options": ["Student Grid-In"],
+      "answer": "9",
+      "explanation": "Let $u = x-9$. Then $6u = 11u$. Subtract $6u$: $0 = 5u$, so $u=0$. Therefore $x-9=0 \\Rightarrow x=9$."
+    },
+    {
+      "id": 11,
+      "question": "$\\frac{1}{3}(6y-9)=13$. What value of $y$ satisfies the given equation?",
+      "options": ["Student Grid-In"],
+      "answer": "8",
+      "explanation": "Multiply by 3: $6y-9=39$. Add 9: $6y=48$. Divide by 6: $y=8$."
+    },
+    {
+      "id": 12,
+      "question": "$|6x-3|=|5x|$. What is the smallest solution to the given equation?",
+      "options": ["Student Grid-In"],
+      "answer": "3/11",
+      "explanation": "Case 1: $6x-3=5x \\Rightarrow x=3$. Case 2: $6x-3=-5x \\Rightarrow 11x=3 \\Rightarrow x=3/11$. Smallest is $3/11$."
+    },
+    {
+      "id": 13,
+      "question": "$9x+x=2x+x+5$. Which of the following equations has the same solution as the given equation?",
+      "options": ["A) $7x=5$", "B) $7x=-5$", "C) $11x=5$", "D) $11x=-5$"],
+      "answer": "A",
+      "explanation": "Combine like terms: Left side $10x$. Right side $3x+5$. Equation: $10x = 3x+5$. Subtract $3x$: $7x=5$."
+    },
+    {
+      "id": 14,
+      "question": "$12x=65-x$. What value of $x$ is the solution to the given equation?",
+      "options": ["Student Grid-In"],
+      "answer": "5",
+      "explanation": "Add $x$ to both sides: $13x = 65$. Divide by 13: $x=5$."
+    },
+    {
+      "id": 15,
+      "question": "$-5x+15rx=135$. In the given equation, $r$ is a constant. The equation has no solution. What is the value of $r$?",
+      "options": ["A) 1/9", "B) 1/3", "C) 3", "D) 9"],
+      "answer": "B",
+      "explanation": "Factor out $x$: $x(-5+15r) = 135$. For no solution, the coefficient of $x$ must be 0 (resulting in $0=135$, a contradiction). $-5+15r=0 \\Rightarrow 15r=5 \\Rightarrow r=1/3$."
+    },
+    {
+      "id": 16,
+      "question": "If $2x+3=9$, what is the value of $4x-4$?",
+      "options": ["Student Grid-In"],
+      "answer": "8",
+      "explanation": "Solve for $x$: $2x=6 \\Rightarrow x=3$. Then $4(3)-4 = 12-4 = 8$."
+    },
+    {
+      "id": 17,
+      "question": "If $-9(15-3x)+5=-10(15-3x)+21$, what is the value of $15-3x$?",
+      "options": ["Student Grid-In"],
+      "answer": "16",
+      "explanation": "Let $u = 15-3x$. $-9u+5 = -10u+21$. Add $10u$: $u+5=21$. Subtract 5: $u=16$."
+    },
+    {
+      "id": 18,
+      "question": "A gentoo penguin was recorded swimming at a rate of 6 meters per second for 110 meters. For approximately how many seconds was the penguin recorded swimming at this rate?",
+      "options": ["A) 18", "B) 50", "C) 55", "D) 66"],
+      "answer": "A",
+      "explanation": "Time = Distance / Speed. $t = 110 / 6 = 18.33$. Closest integer is 18."
+    },
+    {
+      "id": 19,
+      "question": "A veterinarian recommends... 24 calories per pound... plus 14 calories. Which equation represents this... where $c$ is total calories... weight is $x$ pounds?",
+      "options": ["A) $c=24x$", "B) $c=38x$", "C) $c=14x+24$", "D) $c=24x+14$"],
+      "answer": "D",
+      "explanation": "Variable part: 24 per pound ($24x$). Fixed part: 14. Total: $c = 24x + 14$."
+    },
+    {
+      "id": 20,
+      "question": "How many solutions does the equation $9x+6=5x+4x+12$ have?",
+      "options": ["A) Exactly one", "B) Exactly two", "C) Infinitely many", "D) Zero"],
+      "answer": "D",
+      "explanation": "Simplify right side: $9x+6 = 9x+12$. Subtract $9x$: $6=12$. False statement. Zero solutions."
+    },
+    {
+      "id": 21,
+      "question": "Raheem bought 3 shirts... coupon for $30 off... cost was $15. What was the original price... for 1 shirt?",
+      "options": ["Student Grid-In"],
+      "answer": "15",
+      "explanation": "Let $p$ be price. $3p - 30 = 15$. Add 30: $3p = 45$. Divide by 3: $p = 15$."
+    },
+    {
+      "id": 22,
+      "question": "If $4+\\frac{5(3-x)}{2}=\\frac{8(3-x)}{3}$ what is the value of $3-x$?",
+      "options": ["Student Grid-In"],
+      "answer": "24",
+      "explanation": "Let $u = 3-x$. $4 + 2.5u = (8/3)u$. Multiply by 6: $24 + 15u = 16u$. Subtract $15u$: $24 = u$."
+    },
+    {
+      "id": 23,
+      "question": "$13x=42-x$. What value of $x$ is the solution?",
+      "options": ["Student Grid-In"],
+      "answer": "3",
+      "explanation": "Add $x$: $14x = 42$. Divide by 14: $x=3$."
+    },
+    {
+      "id": 24,
+      "question": "If $\\frac{x-18}{30}=\\frac{x-18}{6}$, what is the value of $x+18$?",
+      "options": ["A) 0", "B) 5", "C) 18", "D) 36"],
+      "answer": "D",
+      "explanation": "Let $u = x-18$. $u/30 = u/6$. This implies $u = 5u$, which only holds if $u=0$. So $x-18=0 \\Rightarrow x=18$. Find $x+18$: $18+18=36$."
+    },
+    {
+      "id": 25,
+      "question": "If $2x=10$ what is the value of $4x$?",
+      "options": ["A) 70", "B) 10", "C) 12", "D) 20"],
+      "answer": "D",
+      "explanation": "$x=5$. $4x = 4(5) = 20$. Alternatively, multiply equation by 2: $2(2x) = 2(10) \\Rightarrow 4x=20$."
+    },
+    {
+      "id": 26,
+      "question": "$k+21=63$. What is the solution?",
+      "options": ["A) 3", "B) 42", "C) 84", "D) 1,323"],
+      "answer": "B",
+      "explanation": "Subtract 21: $k = 63 - 21 = 42$."
+    },
+    {
+      "id": 27,
+      "question": "If $\\frac{x-4}{5}=\\frac{x-4}{7}$, the value of $x-4$ is between...",
+      "options": ["A) -7 and -5", "B) -3 and 3", "C) 3.5 and 4.5", "D) 4.75 and 7.25"],
+      "answer": "B",
+      "explanation": "Similar to Q24. $u/5 = u/7$ implies $u=0$. So $x-4=0$. The value 0 is between -3 and 3."
+    },
+    {
+      "id": 28,
+      "question": "If $12+\\frac{7(3-x)}{6}=\\frac{5(3-x)}{3}$, which equation must also be true?",
+      "options": ["A) $3-x=207$", "B) $3-x=-24$", "C) $x-3=207$", "D) $x-3=-24$"],
+      "answer": "D",
+      "explanation": "Let $u = 3-x$. $12 + (7/6)u = (5/3)u$. Mult by 6: $72 + 7u = 10u$. $72 = 3u \\Rightarrow u=24$. So $3-x=24$. Rearranging for $x-3$: $-(x-3)=24 \\Rightarrow x-3=-24$."
+    },
+    {
+      "id": 29,
+      "question": "What value of $x$ is the solution to $20x+72=32x$?",
+      "options": ["A) -5", "B) 1/6", "C) 6/13", "D) 6"],
+      "answer": "D",
+      "explanation": "Subtract $20x$: $72 = 12x$. Divide by 12: $x=6$."
+    },
+    {
+      "id": 30,
+      "question": "Cost to rent bus... $950 for first 2 hours... $50 per hour after... Total $1,250 for $t$ hours ($t>2$). Equation?",
+      "options": ["A) $950(t-2)+50t=1,250$", "B) $950(2t)+50t=1,250$", "C) $950+50(t-2)=1,250$", "D) $950+50(2t)=1,250$"],
+      "answer": "C",
+      "explanation": "Base $950 covers first 2h. Extra hours: $t-2$. Extra cost: $50(t-2)$. Total: $950 + 50(t-2) = 1,250$."
+    },
+    {
+      "id": 31,
+      "question": "If $4x=6$, what is the value of $12x$?",
+      "options": ["A) 9", "B) 3", "C) 18", "D) 27"],
+      "answer": "C",
+      "explanation": "Multiply equation by 3: $3(4x) = 3(6) \\Rightarrow 12x = 18$."
+    },
+    {
+      "id": 32,
+      "question": "Raheem bought 9 shirts... coupon $54 off... total $108. Original price of 1 shirt?",
+      "options": ["Student Grid-In"],
+      "answer": "18",
+      "explanation": "$9p - 54 = 108$. $9p = 162$. $p = 18$."
+    },
+    {
+      "id": 33,
+      "question": "$F(x)=\\frac{9}{5}(x-273.15)+32$... If temperature increased by 8.80 kelvins, by how much did Fahrenheit increase?",
+      "options": ["A) 15.84", "B) 47.84", "C) 475.83", "D) 507.83"],
+      "answer": "A",
+      "explanation": "This is a linear function with slope $9/5$. Change in $F = (9/5) \\times$ Change in $x$. $\\Delta F = 1.8 \\times 8.80 = 15.84$."
+    },
+    {
+      "id": 34,
+      "question": "$g(x)=x/2$. For what value of $x$ does $g(x)=624$?",
+      "options": ["Student Grid-In"],
+      "answer": "1248",
+      "explanation": "$x/2 = 624 \\Rightarrow x = 624 \\times 2 = 1248$."
+    },
+    {
+      "id": 35,
+      "question": "Which equation has no solution?",
+      "options": ["A) $-19x-1/7=-19x-1/7$", "B) $-19x-1/7=-19x+1/7$", "C) ..."],
+      "answer": "B",
+      "explanation": "Option B simplifies to $-1/7 = 1/7$ by subtracting $-19x$, which is false."
+    },
+    {
+      "id": 36,
+      "question": "$\\frac{8(cx+3)}{5}=4x-3$. Equation has no solution. Value of $c$?",
+      "options": ["A) -5/2", "B) 2/5", "C) -2/5", "D) 5/2"],
+      "answer": "D",
+      "explanation": "Expand: $(8c/5)x + 24/5 = 4x - 3$. Slopes must be equal for no solution: $8c/5 = 4$. $8c = 20$. $c = 20/8 = 5/2$."
+    },
+    {
+      "id": 37,
+      "question": "If $5x=4$, what is the value of $40x$?",
+      "options": ["A) 4", "B) 12", "C) 28", "D) 32"],
+      "answer": "D",
+      "explanation": "Multiply by 8: $8(5x) = 8(4) \\Rightarrow 40x = 32$."
+    },
+    {
+      "id": 38,
+      "question": "The equation $4|x-3|=k$, where $k$ is a constant, has exactly one solution. Which of the following could be the value of $k/4$?",
+      "options": ["A) -3 only", "B) -3 or 3", "C) 0 only", "D) 3 only"],
+      "answer": "C",
+      "explanation": "For an absolute value equation $|A|=B$ to have exactly one solution, $B$ must be 0. Here, $|x-3| = k/4$. Thus, $k/4$ must be 0."
+    },
+    {
+      "id": 39,
+      "question": "$\\sqrt{2x+19}=5$. What is the solution to the equation shown?",
+      "options": ["A) 22", "B) 12", "C) 3", "D) -7"],
+      "answer": "C",
+      "explanation": "Square both sides: $2x+19 = 25$. Subtract 19: $2x = 6$. Divide by 2: $x = 3$."
+    },
+    {
+      "id": 40,
+      "question": "$\\frac{1}{6}(x+2)-\\frac{1}{5}(x+2)=-5$. What value of $x$ is the solution to the given equation?",
+      "options": ["Student Grid-In"],
+      "answer": "148",
+      "explanation": "Let $u = x+2$. The equation is $\\frac{u}{6} - \\frac{u}{5} = -5$. Common denominator is 30: $\\frac{5u-6u}{30} = -5 \\Rightarrow \\frac{-u}{30} = -5$. Multiply by -30: $u = 150$. Since $x+2=150$, $x=148$."
+    },
+    {
+      "id": 41,
+      "question": "How many solutions does the equation $6x+4=6x+8$ have?",
+      "options": ["A) Infinitely many", "B) Exactly two", "C) Exactly one", "D) Zero"],
+      "answer": "D",
+      "explanation": "Subtract $6x$ from both sides: $4 = 8$. This is a false statement, so there are zero solutions."
+    },
+    {
+      "id": 42,
+      "question": "A batch of smoothies consist of 4 cups of milk and 2 bananas and has 1,228 milligrams (mg) of calcium. There is 304 mg of calcium in 1 cup of milk. How much calcium, in mg, is in 1 banana?",
+      "options": ["A) 6", "B) 12", "C) 462", "D) 1,216"],
+      "answer": "A",
+      "explanation": "Let $b$ be calcium in a banana. $4(304) + 2b = 1,228$. $1,216 + 2b = 1,228$. $2b = 12$. $b = 6$."
+    },
+    {
+      "id": 43,
+      "question": "If $\\frac{x-5}{4}=\\frac{x-5}{11}$, the value of $x-5$ is between which of the following pairs of values?",
+      "options": ["A) -11 and -7", "B) -6 and -3", "C) -3 and 2", "D) 4 and 6"],
+      "answer": "C",
+      "explanation": "For $\\frac{A}{4} = \\frac{A}{11}$, $A$ must be 0. So $x-5=0$. The value 0 lies between -3 and 2."
+    },
+    {
+      "id": 44,
+      "question": "$7x-6x+130=260$. What value of $x$ is the solution to the given equation?",
+      "options": ["Student Grid-In"],
+      "answer": "130",
+      "explanation": "Combine $x$ terms: $x + 130 = 260$. Subtract 130: $x = 130$."
+    },
+    {
+      "id": 45,
+      "question": "$5(y-15)+10=4(y-15)+10$. What value of $y$ is the solution to the given equation?",
+      "options": ["A) 0", "B) 1", "C) 10", "D) 15"],
+      "answer": "D",
+      "explanation": "Subtract 10 from both sides: $5(y-15) = 4(y-15)$. Let $u=y-15$. $5u=4u$ implies $u=0$. So $y-15=0 \\Rightarrow y=15$."
+    },
+    {
+      "id": 46,
+      "question": "A teacher is creating an assignment worth 28 points... questions worth 1 point ($x$) and questions worth 2 points ($y$). Which equation represents this situation?",
+      "options": ["A) $3xy=28$", "B) $3(x+y)=28$", "C) $2x+y=28$", "D) $x+2y=28$"],
+      "answer": "D",
+      "explanation": "Total points = (Points per type 1 * quantity) + (Points per type 2 * quantity). $1(x) + 2(y) = 28$."
+    },
+    {
+      "id": 47,
+      "question": "$|x-6|=13$. What is the sum of the solutions to the given equation?",
+      "options": ["A) 0", "B) 12", "C) 19", "D) 26"],
+      "answer": "B",
+      "explanation": "Two cases: $x-6=13 \\Rightarrow x=19$ and $x-6=-13 \\Rightarrow x=-7$. Sum: $19 + (-7) = 12$."
+    },
+    {
+      "id": 48,
+      "question": "$-3x+6rx=42$. In the given equation, $r$ is a constant. The equation has no solution. What is the value of $r$?",
+      "options": ["A) 1/7", "B) 1/2", "C) 2", "D) 7"],
+      "answer": "B",
+      "explanation": "Factor out $x$: $x(6r-3) = 42$. For no solution, the coefficient of $x$ must be 0 (since RHS is non-zero). $6r-3=0 \\Rightarrow 6r=3 \\Rightarrow r=1/2$."
+    },
+    {
+      "id": 49,
+      "question": "If $8(x+3)=64$, what is the value of $(x+3)$?",
+      "options": ["A) 5", "B) 8", "C) 53", "D) 56"],
+      "answer": "B",
+      "explanation": "Divide both sides by 8: $x+3 = 8$."
+    },
+    {
+      "id": 50,
+      "question": "An object's average acceleration... is change in speed / time. Change is 22 m/s in 8 seconds. What is average acceleration?",
+      "options": ["A) 0.36", "B) 2.75", "C) 14", "D) 30"],
+      "answer": "B",
+      "explanation": "$22 / 8 = 2.75$."
+    },
+    {
+      "id": 51,
+      "question": "How many solutions does the equation $5x+3=5x+7$ have?",
+      "options": ["A) Zero", "B) Exactly one", "C) Exactly two", "D) Infinitely many"],
+      "answer": "A",
+      "explanation": "Subtract $5x$: $3=7$. False statement. Zero solutions."
+    },
+    {
+      "id": 52,
+      "question": "If $6(8-2x)+3=5(8-2x)+19$, what is the value of $8-2x$?",
+      "options": ["A) -16", "B) -4", "C) 4", "D) 16"],
+      "answer": "D",
+      "explanation": "Let $u = 8-2x$. $6u + 3 = 5u + 19$. Subtract $5u$: $u + 3 = 19$. $u = 16$."
+    },
+    {
+      "id": 53,
+      "question": "$13x+50=180$. Which equation has the same solution?",
+      "options": ["A) $13x=50$", "B) $13x=80$", "C) $13x=130$", "D) $13x=180$"],
+      "answer": "C",
+      "explanation": "Subtract 50 from both sides: $13x = 130$."
+    },
+    {
+      "id": 54,
+      "question": "Which equation has no solution?",
+      "options": ["A) $3(x-1)=-3(-x+1)$", "B) $3(x-1)=-3(-x-1)$", "C) $3(x-1)=4(x-1)$", "D) ..."],
+      "answer": "B",
+      "explanation": "Expand B: $3x-3 = 3x+3$. Subtract $3x$: $-3=3$, which is false."
+    },
+    {
+      "id": 55,
+      "question": "If $46=16+2(x-8)$, what is the value of $2(x-8)$?",
+      "options": ["A) -16", "B) -4", "C) 30", "D) 38"],
+      "answer": "C",
+      "explanation": "Subtract 16 from both sides: $30 = 2(x-8)$."
+    },
+    {
+      "id": 56,
+      "question": "Sophia bought confetti ($3) and balloons ($1) for $56. She bought 10 packages of confetti. How many balloons?",
+      "options": ["Student Grid-In"],
+      "answer": "26",
+      "explanation": "Confetti cost: $10 \\times 3 = 30$. Remaining for balloons: $56 - 30 = 26$. Since balloons are $1 each, she bought 26."
+    },
+    {
+      "id": 57,
+      "question": "In 2010... 35 skaters. Advanced ($a$) increased 53%, Intermediate ($b$) increased 44%. Total increased 49%. Which equation represents this?",
+      "options": ["A) $1.53a+1.49b=35(1.44)$", "B) $1.49a+0.53b=35(1.44)$", "C) $1.53a+1.44b=35(1.49)$", "D) ..."],
+      "answer": "C",
+      "explanation": "New Advanced = $1.53a$. New Intermediate = $1.44b$. New Total = $35(1.49)$. Equation: $1.53a + 1.44b = 35(1.49)$."
+    },
+    {
+      "id": 58,
+      "question": "$\\frac{12x+28}{4}-\\frac{s}{13}=r(x-8)$. Equation has infinitely many solutions. What is the value of $s$?",
+      "options": ["Student Grid-In"],
+      "answer": "403",
+      "explanation": "Simplify LHS: $3x + 7 - s/13$. RHS: $rx - 8r$. Match coefficients: $3=r$. Match constants: $7 - s/13 = -8r$. Substitute $r=3$: $7 - s/13 = -24$. $-s/13 = -31$. $s = 31 \\times 13 = 403$."
+    },
+    {
+      "id": 59,
+      "question": "The equation $d=33w+100$ gives amount saved after $w$ weeks. Amount saved in 10 weeks?",
+      "options": ["A) 380", "B) 430", "C) 480", "D) 530"],
+      "answer": "B",
+      "explanation": "$d = 33(10) + 100 = 330 + 100 = 430$."
+    },
+    {
+      "id": 60,
+      "question": "Which of the following equations has exactly one solution?",
+      "options": ["A) $1/44+x=x$", "B) $1/44+x=-x-1/44$", "C) $1/44-x=1/44-x$", "D) ..."],
+      "answer": "B",
+      "explanation": "A is false (0 sol). C is identity (infinite). B simplifies to $2x = -2/44$, which gives one unique solution."
+    },
+    {
+      "id": 61,
+      "question": "If $\\frac{1}{6}x+5=8$, what is the value of $6x$?",
+      "options": ["A) 108", "B) 258", "C) 318", "D) 468"],
+      "answer": "A",
+      "explanation": "Solve for $x$: $x/6 = 3 \\Rightarrow x = 18$. Then $6x = 108$."
+    },
+    {
+      "id": 62,
+      "question": "$0.10x+0.20y=0.19(x+y)$. 50 gallons of 10% solution ($x=50$). What is volume of 20% solution ($y$)?",
+      "options": ["Student Grid-In"],
+      "answer": "450",
+      "explanation": "$0.10(50) + 0.20y = 0.19(50+y)$. $5 + 0.2y = 9.5 + 0.19y$. $0.01y = 4.5$. $y = 450$."
+    },
+    {
+      "id": 63,
+      "question": "$4(x-3)=13+2(x-3)$. What is the value of $x-3$?",
+      "options": ["Student Grid-In"],
+      "answer": "6.5",
+      "explanation": "Let $u = x-3$. $4u = 13 + 2u$. $2u = 13$. $u = 6.5$."
+    },
+    {
+      "id": 64,
+      "question": "Park earns $16 per umbrella. Profit $400. Expenses $144. How many umbrellas ($u$)?",
+      "options": ["Student Grid-In"],
+      "answer": "34",
+      "explanation": "$400 = 16u - 144$. $544 = 16u$. $u = 34$."
+    },
+    {
+      "id": 65,
+      "question": "$14,000 = 2,800 + 200t$. Best interpretation of 200?",
+      "options": ["A) Down payment", "B) Monthly payment", "C) Total paid", "D) Total months"],
+      "answer": "B",
+      "explanation": "200 is the coefficient of time ($t$), representing the recurring monthly payment."
+    },
+    {
+      "id": 66,
+      "question": "How many solutions does $5x+3=5x$ have?",
+      "options": ["A) Zero", "B) Exactly one", "C) Exactly two", "D) Infinitely many"],
+      "answer": "A",
+      "explanation": "Subtract $5x$: $3=0$. False. Zero solutions."
+    },
+    {
+      "id": 67,
+      "question": "If $8x+7=79$ what is the value of $80x+70$?",
+      "options": ["A) 790", "B) 150", "C) 90", "D) 9"],
+      "answer": "A",
+      "explanation": "$80x+70 = 10(8x+7) = 10(79) = 790$."
+    },
+    {
+      "id": 68,
+      "question": "If $8(x+7)=7(x+7)+68$, what is the value of $x+7$?",
+      "options": ["A) -7", "B) 61", "C) 68", "D) 75"],
+      "answer": "C",
+      "explanation": "Let $u = x+7$. $8u = 7u + 68$. Subtract $7u$: $u = 68$."
+    },
+    {
+      "id": 69,
+      "question": "Horses ($h$) need 2 acres. Goats ($g$) need 1 acre. Total 21 acres. Equation?",
+      "options": ["A) $2g+h=21$", "B) $g+2h=21$", "C) ..."],
+      "answer": "B",
+      "explanation": "$1g + 2h = 21$."
+    },
+    {
+      "id": 70,
+      "question": "String length 96. Parts $x$ and $y$. $x$ is 6 more than 4 times $y$. Value of $x$?",
+      "options": ["A) 23", "B) 26", "C) 51", "D) 78"],
+      "answer": "D",
+      "explanation": "$x+y=96$ and $x=4y+6$. $(4y+6)+y=96 \\Rightarrow 5y=90 \\Rightarrow y=18$. $x = 4(18)+6 = 78$."
+    },
+    {
+      "id": 71,
+      "question": "How many solutions does $17(x-16)=-16(x+17)$ have?",
+      "options": ["A) Exactly one", "B) Exactly two", "C) Infinitely many", "D) Zero"],
+      "answer": "A",
+      "explanation": "This is a linear equation $17x - C_1 = -16x - C_2$. Since slopes (17 and -16) are different, lines intersect once."
+    },
+    {
+      "id": 72,
+      "question": "If $44=6+2(x-3)$, what is the value of $2(x-3)$?",
+      "options": ["A) 6", "B) 22", "C) 38", "D) 41"],
+      "answer": "C",
+      "explanation": "Subtract 6 from both sides: $38 = 2(x-3)$."
+    },
+    {
+      "id": 73,
+      "question": "$2.5c+5d=60$. If 12 dogs ($d=12$), how many cats?",
+      "options": ["A) 0", "B) 5", "C) 30", "D) 60"],
+      "answer": "A",
+      "explanation": "$2.5c + 5(12) = 60$. $2.5c + 60 = 60$. $2.5c = 0$. $c = 0$."
+    },
+    {
+      "id": 74,
+      "question": "How many solutions does $7x-19=19-7x$ have?",
+      "options": ["A) Zero", "B) Exactly one", "C) Exactly two", "D) Infinitely many"],
+      "answer": "B",
+      "explanation": "Add $7x$: $14x - 19 = 19$. $14x = 38$. Unique solution exists."
+    },
+    {
+      "id": 75,
+      "question": "$6(x-4)=(x-4)+6$. What is the value of $x-4$?",
+      "options": ["Student Grid-In"],
+      "answer": "1.2",
+      "explanation": "Let $u = x-4$. $6u = u + 6$. $5u = 6$. $u = 6/5 = 1.2$."
+    },
+    {
+      "id": 76,
+      "question": "If $9-4(4-9x)=2-5(4-9x)$, what is the value of $4-9x$?",
+      "options": ["Student Grid-In"],
+      "answer": "-7",
+      "explanation": "Let $u = 4-9x$. The equation is $9-4u = 2-5u$. Add $5u$: $9+u = 2$. Subtract 9: $u = -7$."
+    },
+    {
+      "id": 77,
+      "question": "$a(7x-14)+5a=7(ax-2a)-35$. Equation has infinitely many solutions. Possible values of $a$?",
+      "options": ["A) 0 only", "B) -7 only", "C) Any real number"],
+      "answer": "B",
+      "explanation": "Expand LHS: $7ax - 14a + 5a = 7ax - 9a$. Expand RHS: $7ax - 14a - 35$. Set equal: $7ax - 9a = 7ax - 14a - 35$. Cancel $7ax$: $-9a = -14a - 35$. $5a = -35$. $a = -7$."
+    },
+    {
+      "id": 78,
+      "question": "$d=15t$. Rate of change of distance?",
+      "options": ["A) 15t", "B) 15", "C) 1/15", "D) 1/15t"],
+      "answer": "B",
+      "explanation": "The equation is linear ($y=mx$). The rate of change is the slope, 15."
+    },
+    {
+      "id": 79,
+      "question": "Pigeon flies at 16 m/s. Meters flown in 4 seconds?",
+      "options": ["A) 64", "B) 20", "C) 16", "D) 12"],
+      "answer": "A",
+      "explanation": "Distance = Speed $\\times$ Time. $16 \\times 4 = 64$."
+    },
+    {
+      "id": 80,
+      "question": "Region divided into 40 square lots of area $R$. Length is 1.6 times width ($W$). Width is $x\\sqrt{R}$. Value of $x$?",
+      "options": ["Student Grid-In"],
+      "answer": "5",
+      "explanation": "Total Area = $40R$. Also Area = $L \\times W = (1.6W)(W) = 1.6W^2$. So $1.6W^2 = 40R$. Substitute $W = x\\sqrt{R}$: $1.6(x^2 R) = 40R$. Divide by $R$: $1.6x^2 = 40$. $x^2 = 25$. $x=5$."
+    },
+    {
+      "id": 81,
+      "question": "$11,000=2.00x-6,500$. Interpretation of $2.00x$?",
+      "options": ["A) Monthly sales revenue", "B) Revenue per stapler", "C) Cost per stapler", "D) Cost of x staplers"],
+      "answer": "A",
+      "explanation": "Profit = Revenue - Cost. Here $2.00x$ is the positive term representing total revenue from selling $x$ items."
+    },
+    {
+      "id": 82,
+      "question": "If $7+x=3$, what is the value of $56+8x$?",
+      "options": ["Student Grid-In"],
+      "answer": "24",
+      "explanation": "Notice $56+8x = 8(7+x)$. Substitute 3: $8(3) = 24$."
+    },
+    {
+      "id": 83,
+      "question": "$-\\frac{3}{19}rx+\\frac{s}{8}=10-\\frac{5}{57}x$. Equation has no solution. Value of $r$?",
+      "options": ["Student Grid-In"],
+      "answer": "5/9",
+      "explanation": "Slopes must be equal: $-\\frac{3}{19}r = -\\frac{5}{57}$. Multiply by -1: $\\frac{3r}{19} = \\frac{5}{57}$. $r = \\frac{5}{57} \\times \\frac{19}{3} = \\frac{5}{3 \\times 3} = 5/9$."
+    },
+    {
+      "id": 84,
+      "question": "If $\\frac{x-16}{27}=\\frac{x-16}{9}$, what is the value of $x+16$?",
+      "options": ["A) 0", "B) 3", "C) 16", "D) 32"],
+      "answer": "D",
+      "explanation": "For $\\frac{A}{27} = \\frac{A}{9}$, $A$ must be 0. So $x-16=0 \\Rightarrow x=16$. Then $x+16 = 32$."
+    },
+    {
+      "id": 85,
+      "question": "$8|7-x|+1=81$. Sum of solutions?",
+      "options": ["A) -14", "B) -3", "C) 10", "D) 14"],
+      "answer": "D",
+      "explanation": "$8|7-x|=80 \\Rightarrow |7-x|=10$. Case 1: $7-x=10 \\Rightarrow x=-3$. Case 2: $7-x=-10 \\Rightarrow x=17$. Sum: $-3+17=14$."
+    },
+    {
+      "id": 86,
+      "question": "$s=40+2t$. Speed 3 seconds after acceleration?",
+      "options": ["A) 40", "B) 42", "C) 43", "D) 46"],
+      "answer": "D",
+      "explanation": "Substitute $t=3$: $s = 40 + 2(3) = 46$."
+    },
+    {
+      "id": 87,
+      "question": "$20h+17c=1,055$. Interpretation of 20?",
+      "options": ["A) Dollars per hour regular job", "B) Dollars per hour second job", "C) Weeks worked", "D) ..."],
+      "answer": "A",
+      "explanation": "20 is the coefficient of $h$ (regular job hours), representing the hourly wage."
+    },
+    {
+      "id": 88,
+      "question": "If $7+x=4$, what is the value of $42+6x$?",
+      "options": ["Student Grid-In"],
+      "answer": "24",
+      "explanation": "$42+6x = 6(7+x)$. Substitute 4: $6(4)=24$."
+    }
+  ]
+}
