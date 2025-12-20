@@ -28,54 +28,70 @@ export default function MathQuestionOption({
   onEliminate,
   disabled
 }: MathQuestionOptionProps) {
-  const getOptionStyles = () => {
-    if (showResult) {
-      if (isCorrect) {
-        return 'border-emerald-500 bg-emerald-50 ring-2 ring-emerald-500';
-      }
-      if (isIncorrect) {
-        return 'border-red-500 bg-red-50 ring-2 ring-red-500';
-      }
-    }
-    if (isSelected) {
-      return 'border-[#0077c8] bg-blue-50 ring-2 ring-[#0077c8]';
-    }
-    if (isEliminated) {
-      return 'opacity-50 line-through bg-slate-100';
-    }
-    return 'border-slate-300 hover:border-[#0077c8] hover:bg-blue-50/50';
-  };
+  // Check if text contains LaTeX
+  const hasLatex = /\$.*?\$|\\frac|\\sqrt/.test(text);
 
   return (
     <div className="relative flex items-center gap-3">
+      {/* Main Option Button - Bluebook Style */}
       <button
         onClick={onClick}
         disabled={disabled || isEliminated}
         className={cn(
-          'flex-1 flex items-start gap-4 p-4 rounded-lg border-2 transition-all text-left',
-          getOptionStyles()
+          'flex-1 flex items-center gap-4 px-5 py-4 rounded-lg border-2 transition-all text-left',
+          // Eliminated state
+          isEliminated && 'opacity-40 bg-gray-50',
+          // Default state
+          !isEliminated && !isSelected && !showResult && 
+            'border-gray-200 bg-white hover:border-gray-400',
+          // Selected state (before check)
+          isSelected && !showResult && 
+            'border-gray-900 bg-white',
+          // Correct answer shown
+          showResult && isCorrect && 'border-green-500 bg-green-50',
+          // Incorrect answer shown
+          showResult && isIncorrect && 'border-red-500 bg-red-50',
+          // Show correct answer when not selected
+          showResult && !isSelected && !isCorrect && !isIncorrect && 'border-gray-200 bg-white'
         )}
       >
-        {/* Radio Circle */}
+        {/* Circle Letter Badge - SAT Bluebook Style */}
         <div className={cn(
-          'w-6 h-6 rounded-full border-2 flex items-center justify-center flex-shrink-0 mt-0.5',
-          isSelected ? 'border-[#0077c8] bg-[#0077c8]' : 'border-slate-400',
-          showResult && isCorrect && 'border-emerald-500 bg-emerald-500',
-          showResult && isIncorrect && 'border-red-500 bg-red-500'
+          'flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center font-semibold text-base border-2 transition-all',
+          // Default state
+          !isSelected && !showResult && 
+            'border-gray-400 bg-white text-gray-900',
+          // Selected state
+          isSelected && !showResult && 
+            'border-gray-900 bg-gray-900 text-white',
+          // Correct state
+          showResult && isCorrect && 'border-green-500 bg-green-500 text-white',
+          // Incorrect state
+          showResult && isIncorrect && 'border-red-500 bg-red-500 text-white',
+          // Default when showing result but not this option
+          showResult && !isCorrect && !isIncorrect && 
+            'border-gray-400 bg-white text-gray-900'
         )}>
-          {isSelected && (
-            <div className="w-2.5 h-2.5 rounded-full bg-white" />
-          )}
+          {label}
         </div>
 
-        {/* Option Content */}
-        <div className="flex-1">
-          <span className="font-semibold text-slate-700 mr-2">{label})</span>
-          <LatexRenderer content={text} className="inline text-slate-800" />
-        </div>
+        {/* Option Text with LaTeX support */}
+        <span className={cn(
+          'flex-1 text-[16px] leading-relaxed',
+          isEliminated && 'line-through text-gray-400',
+          !isEliminated && 'text-gray-900',
+          showResult && isIncorrect && 'text-red-700',
+          showResult && isCorrect && 'text-green-700'
+        )}>
+          {hasLatex ? (
+            <LatexRenderer content={text} className="inline" />
+          ) : (
+            text
+          )}
+        </span>
       </button>
 
-      {/* Elimination Button */}
+      {/* Elimination Button - SAT style circle with diagonal strikethrough */}
       {showEliminationButtons && (
         <button
           onClick={(e) => {
@@ -83,21 +99,22 @@ export default function MathQuestionOption({
             onEliminate?.();
           }}
           className={cn(
-            'w-8 h-8 rounded-full border-2 flex items-center justify-center text-sm font-medium transition-all',
+            'flex-shrink-0 w-8 h-8 rounded-full border-2 flex items-center justify-center transition-all relative',
             isEliminated
-              ? 'border-slate-400 bg-slate-200 text-slate-500'
-              : 'border-slate-300 hover:border-red-400 hover:bg-red-50 text-slate-600'
+              ? 'border-gray-400 bg-transparent'
+              : 'border-gray-300 bg-transparent hover:border-gray-500'
           )}
+          title={isEliminated ? 'Restore option' : 'Eliminate option'}
         >
-          {isEliminated ? (
-            <span className="relative">
-              {label}
-              <span className="absolute inset-0 flex items-center justify-center">
-                <span className="w-6 h-0.5 bg-slate-500 rotate-45" />
-              </span>
+          {/* Letter */}
+          <span className="text-xs font-semibold text-gray-600">
+            {label}
+          </span>
+          {/* Diagonal strikethrough when eliminated */}
+          {isEliminated && (
+            <span className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <span className="w-[calc(100%+4px)] h-[2px] bg-gray-500 rotate-[-45deg] absolute" />
             </span>
-          ) : (
-            label
           )}
         </button>
       )}

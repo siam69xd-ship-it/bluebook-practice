@@ -28,6 +28,7 @@ import DesmosCalculator from '@/components/math/DesmosCalculator';
 import MathReferenceSheet from '@/components/math/MathReferenceSheet';
 import GridInInput from '@/components/math/GridInInput';
 import LatexRenderer from '@/components/math/LatexRenderer';
+import MathQuestionLayout from '@/components/math/MathQuestionLayout';
 import {
   getAllQuestionsAsync,
   filterQuestions,
@@ -381,6 +382,24 @@ export default function Quiz() {
   }
 
   const isCorrect = currentState?.userAnswer === currentQuestion.correctAnswer;
+
+  // Use Math-specific layout for Math questions
+  if (isMathQuestion) {
+    return (
+      <MathQuestionLayout
+        questions={filteredQuestions}
+        currentIndex={currentIndex}
+        questionStates={questionStates}
+        onNavigate={handleNavigate}
+        onUpdateState={updateQuestionState}
+        onCheckAnswer={handleCheckAnswer}
+        showNavigator={showNavigator}
+        setShowNavigator={setShowNavigator}
+        isTimerHidden={isTimerHidden}
+        setIsTimerHidden={setIsTimerHidden}
+      />
+    );
+  }
 
   return (
     <div className="min-h-screen bg-bluebook-bg flex">
