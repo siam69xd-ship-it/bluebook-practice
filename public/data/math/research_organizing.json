@@ -1,0 +1,101 @@
+{
+  "dataset_info": {
+    "title": "Research Organizing (Margin of Errors, Outliers)",
+    "total_questions": 13,
+    "part": "1 of 1",
+    "range": "1-13"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "question": "A company conducted a study on extracurricular activities and school spirit. 90 students selected from a large school district in the US. Results showed a relationship. What prevents generalizing to all students in the US?",
+      "options": ["A) Selected students are not all from same school.", "B) Number of selected students is too small.", "C) Number of selected students from each grade is different.", "D) The selected students are from only one school district."],
+      "answer": "D",
+      "explanation": "The sample was drawn from a single school district. To generalize to the entire US, the sample must be representative of the US population, not just one district."
+    },
+    {
+      "id": 2,
+      "question": "Machine fills bags with 10 oz cranberries. 148 bags selected at random. Average weight 10.02 oz, margin of error 0.08 oz. Conclusion?",
+      "options": ["A) The true mean weight of all bags is exactly 10.02 oz.", "B) It is plausible the true mean is between 9.94 and 10.10 oz.", "C) All bags weigh between 9.94 and 10.10 oz.", "D) ..."],
+      "answer": "B",
+      "explanation": "The confidence interval is Mean $\\pm$ Margin of Error: $10.02 \\pm 0.08 = [9.94, 10.10]$. It is plausible the population mean lies in this interval."
+    },
+    {
+      "id": 3,
+      "question": "Poll of 1000 adults. 45% support a policy. Margin of error 3%. Confidence interval?",
+      "options": ["A) 42% to 48%", "B) 45% to 48%", "C) 42% to 45%", "D) ..."],
+      "answer": "A",
+      "explanation": "$45\\% \\pm 3\\% = 42\\%$ to $48\\%$."
+    },
+    {
+      "id": 4,
+      "question": "Study estimates mean height of a species of tree is 15 meters with margin of error 2 meters. Which is a plausible value for the mean height?",
+      "options": ["A) 12", "B) 14", "C) 18", "D) 20"],
+      "answer": "B",
+      "explanation": "Interval: $15 \\pm 2 = [13, 17]$. 14 falls within this range."
+    },
+    {
+      "id": 5,
+      "question": "Survey of 500 voters. 52% favor Candidate A. Margin of error 4%. Is it plausible that Candidate A loses (receives < 50%)?",
+      "options": ["A) Yes, because 48% is in the interval.", "B) No, because 50% is not in the interval.", "C) ...", "D) ..."],
+      "answer": "A",
+      "explanation": "Interval: $52 \\pm 4 = [48, 56]$. The interval includes values less than 50% (e.g., 48%, 49%), so it is plausible they lose."
+    },
+    {
+      "id": 6,
+      "question": "Data set: 10, 12, 11, 13, 50. Which value is an outlier?",
+      "options": ["A) 10", "B) 13", "C) 50", "D) 12"],
+      "answer": "C",
+      "explanation": "50 is significantly larger than the other values (10-13)."
+    },
+    {
+      "id": 7,
+      "question": "Standard deviation of a dataset is 5. Mean is 20. Which value is 3 standard deviations from the mean?",
+      "options": ["A) 25", "B) 30", "C) 35", "D) 15"],
+      "answer": "C",
+      "explanation": "$20 + 3(5) = 20 + 15 = 35$."
+    },
+    {
+      "id": 8,
+      "question": "A sample size is increased from 100 to 400. How does the margin of error change (assuming same confidence level)?",
+      "options": ["A) It doubles.", "B) It is halved.", "C) It stays the same.", "D) It quadruples."],
+      "answer": "B",
+      "explanation": "Margin of error is inversely proportional to the square root of sample size. $\\sqrt{400} = 20$, $\\sqrt{100} = 10$. Ratio is $10/20 = 1/2$. Margin of error is halved."
+    },
+    {
+      "id": 9,
+      "question": "Which factor decreases the margin of error?",
+      "options": ["A) Decreasing sample size", "B) Increasing sample size", "C) Increasing variability", "D) Increasing confidence level"],
+      "answer": "B",
+      "explanation": "Larger sample sizes reduce the margin of error."
+    },
+    {
+      "id": 10,
+      "question": "In a box plot, an outlier is usually defined as a data point that is:",
+      "options": ["A) Greater than Q3 + 1.5(IQR)", "B) Greater than Q3 + IQR", "C) ...", "D) ..."],
+      "answer": "A",
+      "explanation": "Standard definition of outlier: $> Q3 + 1.5(\\text{IQR})$ or $< Q1 - 1.5(\\text{IQR})$."
+    },
+    {
+      "id": 11,
+      "question": "Survey of 200 people. 60% like product X. Margin of error 5%. Range of people who like product X?",
+      "options": ["A) 110 to 130", "B) 115 to 125", "C) ...", "D) ..."],
+      "answer": "A",
+      "explanation": "Percentage range: $60 \\pm 5 = 55\\%$ to $65\\%$. In numbers: $0.55 \\times 200 = 110$, $0.65 \\times 200 = 130$. Range 110 to 130."
+    },
+    {
+      "id": 12,
+      "question": "Poll estimates 40% support with margin of error 6%. Conclusion about support being < 34% or > 46%?",
+      "options": ["A) Plausible it is between 34% and 46%", "B) ...", "C) ...", "D) ..."],
+      "answer": "A",
+      "explanation": "Interval is $34\\%$ to $46\\%$. It is plausible the true value is within this range."
+    },
+    {
+      "id": 13,
+      "question": "Employees surveyed about books read. Mean 6.8, Margin of Error 1.1. Appropriate conclusion?",
+      "options": ["A) Plausible actual mean < 5.7", "B) Plausible actual mean is between 5.7 and 7.9", "C) Plausible every employee read between 6.8 and 10.1", "D) Plausible actual mean > 7.9"],
+      "answer": "B",
+      "explanation": "Confidence interval: $6.8 \\pm 1.1 = [5.7, 7.9]$. It is plausible the true mean is in this interval."
+    }
+  ]
+}

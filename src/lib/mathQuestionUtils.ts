@@ -44,6 +44,11 @@ const MATH_DATA_FILES = [
   { file: 'polynomials.json', topic: 'Polynomials' },
   { file: 'exponents_radicals.json', topic: 'Exponents & Radicals' },
   { file: 'functions_function_notation.json', topic: 'Functions & Function Notation' },
+  { file: 'mean_median_mode_range.json', topic: 'Mean/Median/Mode/Range' },
+  { file: 'research_organizing.json', topic: 'Research Organizing' },
+  { file: 'percent_ratio_proportion.json', topic: 'Percent; Ratio & Proportion' },
+  { file: 'probability.json', topic: 'Probability' },
+  { file: 'unit_conversion.json', topic: 'Unit Conversion' },
 ];
 
 export async function loadAllMathQuestions(): Promise<MathQuestion[]> {
