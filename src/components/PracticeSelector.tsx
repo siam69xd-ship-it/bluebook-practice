@@ -57,6 +57,20 @@ const FILTER_STRUCTURE = {
       },
     },
   },
+  'Math': {
+    'Algebra': {
+      'Expressions': null,
+      'Linear Equations': null,
+      'Linear System of Equations': null,
+      'Linear Functions': null,
+      'Linear Inequalities': null,
+    },
+    'Advanced Math': {
+      'Polynomials': null,
+      'Exponents & Radicals': null,
+      'Functions & Function Notation': null,
+    },
+  },
 };
 
 type DifficultyFilter = {
@@ -190,7 +204,7 @@ export function PracticeSelector({ questions, isOpen, onClose }: PracticeSelecto
     );
   };
 
-  const renderSubTopics = (parentTopic: string, subTopics: Record<string, null>, subSection: string) => {
+  const renderSubTopics = (parentTopic: string, subTopics: Record<string, null>, subSection: string, mainSection: string) => {
     return Object.keys(subTopics).map(subTopic => {
       const count = getCount(subSection, parentTopic, subTopic);
       return (
@@ -199,7 +213,7 @@ export function PracticeSelector({ questions, isOpen, onClose }: PracticeSelecto
             subTopic,
             count,
             () => startPractice({
-              section: 'English',
+              section: mainSection === 'English Reading & Writing' ? 'English' : 'Math',
               subSection,
               topic: parentTopic,
               subTopic,
@@ -211,7 +225,7 @@ export function PracticeSelector({ questions, isOpen, onClose }: PracticeSelecto
     });
   };
 
-  const renderTopics = (subSection: string, topics: Record<string, any>) => {
+  const renderTopics = (subSection: string, topics: Record<string, any>, mainSection: string) => {
     return Object.entries(topics).map(([topic, subTopics]) => {
       const count = getCount(subSection, topic);
       const hasSubTopics = subTopics !== null && typeof subTopics === 'object';
@@ -244,7 +258,7 @@ export function PracticeSelector({ questions, isOpen, onClose }: PracticeSelecto
                   className="overflow-hidden"
                 >
                   <div className="space-y-0.5 pl-2">
-                    {renderSubTopics(topic, subTopics, subSection)}
+                    {renderSubTopics(topic, subTopics, subSection, mainSection)}
                   </div>
                 </motion.div>
               )}
@@ -259,7 +273,7 @@ export function PracticeSelector({ questions, isOpen, onClose }: PracticeSelecto
             topic,
             count,
             () => startPractice({
-              section: 'English',
+              section: mainSection === 'English Reading & Writing' ? 'English' : 'Math',
               subSection,
               topic,
             })
@@ -269,7 +283,7 @@ export function PracticeSelector({ questions, isOpen, onClose }: PracticeSelecto
     });
   };
 
-  const renderSubSections = (subSections: Record<string, any>) => {
+  const renderSubSections = (subSections: Record<string, any>, mainSection: string) => {
     return Object.entries(subSections).map(([subSection, topics]) => {
       const count = getCount(subSection);
       const hasTopics = topics !== null && typeof topics === 'object';
@@ -301,7 +315,7 @@ export function PracticeSelector({ questions, isOpen, onClose }: PracticeSelecto
                 className="overflow-hidden"
               >
                 <div className="space-y-0.5 pl-2">
-                  {renderTopics(subSection, topics)}
+                  {renderTopics(subSection, topics, mainSection)}
                 </div>
               </motion.div>
             )}
@@ -406,7 +420,7 @@ export function PracticeSelector({ questions, isOpen, onClose }: PracticeSelecto
                         className="overflow-hidden"
                       >
                         <div className="space-y-1 pl-2">
-                          {renderSubSections(subSections)}
+                          {renderSubSections(subSections, section)}
                         </div>
                       </motion.div>
                     )}

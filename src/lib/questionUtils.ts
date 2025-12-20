@@ -3,7 +3,7 @@ import { Difficulty, getQuestionDifficulty } from './difficultyData';
 export interface Question {
   id: number;
   sourceId: string; // Original ID from JSON (e.g., GAP_001, UP_001, GRA_001)
-  section: string;
+  section: string; // "English" or "Math"
   subSection: string;
   topic: string;
   subTopic?: string;
@@ -14,6 +14,8 @@ export interface Question {
   correctAnswer: string;
   explanation: string;
   difficulty?: Difficulty;
+  isGridIn?: boolean; // For math grid-in questions
+  hasLatex?: boolean; // For math questions with LaTeX
 }
 
 export interface TextHighlight {
@@ -1052,6 +1054,68 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
           (q.difficulty?.toLowerCase() as Difficulty) || getQuestionDifficulty("Command of Evidence", "Graphs", index),
         ));
       });
+    }
+    
+    // ==================== MATH QUESTIONS ====================
+    // Load all math JSON files
+    const mathFiles = [
+      { file: 'expressions.json', topic: 'Expressions', subSection: 'Algebra' },
+      { file: 'linear_equations.json', topic: 'Linear Equations', subSection: 'Algebra' },
+      { file: 'linear_equations_system.json', topic: 'Linear System of Equations', subSection: 'Algebra' },
+      { file: 'linear_functions.json', topic: 'Linear Functions', subSection: 'Algebra' },
+      { file: 'linear_inequalities.json', topic: 'Linear Inequalities', subSection: 'Algebra' },
+      { file: 'polynomials.json', topic: 'Polynomials', subSection: 'Advanced Math' },
+      { file: 'exponents_radicals.json', topic: 'Exponents & Radicals', subSection: 'Advanced Math' },
+      { file: 'functions_function_notation.json', topic: 'Functions & Function Notation', subSection: 'Advanced Math' },
+    ];
+    
+    for (const { file, topic, subSection } of mathFiles) {
+      try {
+        const response = await fetch(`/data/math/${file}`);
+        if (response.ok) {
+          const data = await response.json();
+          if (data.questions && Array.isArray(data.questions)) {
+            data.questions.forEach((q: any, index: number) => {
+              // Parse options from array format to object format
+              const options: { [key: string]: string } = {};
+              let isGridIn = true;
+              
+              if (q.options && Array.isArray(q.options) && q.options.length > 0) {
+                isGridIn = false;
+                q.options.forEach((opt: string) => {
+                  const match = opt.match(/^([A-D])\)\s*(.+)$/s);
+                  if (match) {
+                    options[match[1]] = match[2].trim();
+                  }
+                });
+              }
+              
+              // Check for LaTeX in question
+              const hasLatex = /\$.*?\$|\\frac|\\sqrt|\\times|\\div|\^/.test(q.question || '');
+              
+              addQuestion({
+                id: globalId++,
+                sourceId: `MATH_${subSection.toUpperCase().replace(/\s+/g, '_')}_${topic.toUpperCase().replace(/\s+/g, '_')}_${String(index + 1).padStart(3, '0')}`,
+                section: 'Math',
+                subSection,
+                topic,
+                subTopic: undefined,
+                passage: '', // Math questions typically don't have passages
+                questionPrompt: q.question || '',
+                questionText: q.question || '',
+                options,
+                correctAnswer: q.answer || '',
+                explanation: q.explanation || '',
+                difficulty: 'medium' as Difficulty, // Will be updated later
+                isGridIn,
+                hasLatex,
+              });
+            });
+          }
+        }
+      } catch (error) {
+        console.warn(`Failed to load math file ${file}:`, error);
+      }
     }
     
   } catch (error) {

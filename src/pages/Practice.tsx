@@ -63,6 +63,20 @@ const FILTER_STRUCTURE = {
       },
     },
   },
+  'Math': {
+    'Algebra': {
+      'Expressions': null,
+      'Linear Equations': null,
+      'Linear System of Equations': null,
+      'Linear Functions': null,
+      'Linear Inequalities': null,
+    },
+    'Advanced Math': {
+      'Polynomials': null,
+      'Exponents & Radicals': null,
+      'Functions & Function Notation': null,
+    },
+  },
 };
 
 type DifficultyFilter = {
@@ -312,7 +326,7 @@ export default function Practice() {
     );
   };
 
-  const renderSubTopics = (parentTopic: string, subTopics: Record<string, null>, subSection: string) => {
+  const renderSubTopics = (parentTopic: string, subTopics: Record<string, null>, subSection: string, mainSection: string) => {
     return Object.keys(subTopics).map(subTopic => {
       const count = getCount(subSection, parentTopic, subTopic);
       return (
@@ -321,7 +335,7 @@ export default function Practice() {
             subTopic,
             count,
             () => startPractice({
-              section: 'English',
+              section: mainSection === 'English Reading & Writing' ? 'English' : 'Math',
               subSection,
               topic: parentTopic,
               subTopic,
@@ -333,7 +347,7 @@ export default function Practice() {
     });
   };
 
-  const renderTopics = (subSection: string, topics: Record<string, any>) => {
+  const renderTopics = (subSection: string, topics: Record<string, any>, mainSection: string) => {
     return Object.entries(topics).map(([topic, subTopics]) => {
       const count = getCount(subSection, topic);
       const hasSubTopics = subTopics !== null && typeof subTopics === 'object';
@@ -368,7 +382,7 @@ export default function Practice() {
                   className="overflow-hidden"
                 >
                   <div className="space-y-0.5">
-                    {renderSubTopics(topic, subTopics, subSection)}
+                    {renderSubTopics(topic, subTopics, subSection, mainSection)}
                   </div>
                 </motion.div>
               )}
@@ -383,7 +397,7 @@ export default function Practice() {
             topic,
             count,
             () => startPractice({
-              section: 'English',
+              section: mainSection === 'English Reading & Writing' ? 'English' : 'Math',
               subSection,
               topic,
             }),
@@ -394,12 +408,14 @@ export default function Practice() {
     });
   };
 
-  const renderSubSections = (subSections: Record<string, any>) => {
+  const renderSubSections = (subSections: Record<string, any>, mainSection: string) => {
     const subSectionIcons: Record<string, React.ElementType> = {
       'Craft and Structure': BookOpen,
       'Expression of Ideas': Sparkles,
       'Information and Ideas': Target,
       'Standard English Conventions': Filter,
+      'Algebra': Target,
+      'Advanced Math': Zap,
     };
 
     const subSectionGradients: Record<string, string> = {
@@ -407,6 +423,8 @@ export default function Practice() {
       'Expression of Ideas': 'from-blue-500 to-cyan-500',
       'Information and Ideas': 'from-emerald-500 to-teal-500',
       'Standard English Conventions': 'from-amber-500 to-orange-500',
+      'Algebra': 'from-indigo-500 to-blue-600',
+      'Advanced Math': 'from-purple-500 to-pink-600',
     };
 
     return Object.entries(subSections).map(([subSection, topics]) => {
@@ -454,7 +472,7 @@ export default function Practice() {
                 className="overflow-hidden"
               >
                 <div className="space-y-1 pl-4 pt-2 pb-2 ml-5 border-l-2 border-border">
-                  {renderTopics(subSection, topics)}
+                  {renderTopics(subSection, topics, mainSection)}
                 </div>
               </motion.div>
             )}
@@ -575,7 +593,8 @@ export default function Practice() {
           
           {Object.entries(FILTER_STRUCTURE).map(([section, subSections]) => (
             <div key={section} className="space-y-3">
-              {renderSubSections(subSections)}
+              <h3 className="text-sm font-bold text-primary uppercase tracking-wide px-4 pt-4">{section}</h3>
+              {renderSubSections(subSections, section)}
             </div>
           ))}
         </motion.div>
