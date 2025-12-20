@@ -13,7 +13,6 @@ import {
   Undo2,
   Info,
   Lightbulb,
-  MessageCircle,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Timer } from '@/components/Timer';
@@ -325,14 +324,6 @@ export default function MathQuestionLayout({
             {/* Info Button */}
             <button className="p-2 rounded-full hover:bg-gray-100 transition-colors">
               <Info className="w-5 h-5 text-gray-500" />
-            </button>
-            
-            {/* Ask Prepy - Purple button for Math */}
-            <button
-              className="flex items-center gap-2 px-4 py-2 bg-[#6b5ce7] text-white rounded-full text-sm font-medium hover:bg-[#5a4bd6] transition-colors"
-            >
-              <MessageCircle className="w-4 h-4" />
-              Ask Prepy
             </button>
             
             {/* Explanation */}

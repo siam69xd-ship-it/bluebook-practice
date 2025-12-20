@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Lightbulb } from 'lucide-react';
+import LatexRenderer from '@/components/math/LatexRenderer';
 
 interface ExplanationPanelProps {
   isOpen: boolean;
@@ -14,6 +15,9 @@ export function ExplanationPanel({
   explanation,
   correctAnswer,
 }: ExplanationPanelProps) {
+  // Check if content has LaTeX
+  const hasLatex = /\$.*?\$|\\frac|\\sqrt|\\times|\\div|\^|_\{/.test(explanation);
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -65,9 +69,16 @@ export function ExplanationPanel({
                   <h4 className="text-sm font-semibold text-foreground uppercase tracking-wide">
                     Why this is correct
                   </h4>
-                  <p className="text-foreground/80 leading-relaxed">
-                    {explanation}
-                  </p>
+                  {hasLatex ? (
+                    <LatexRenderer 
+                      content={explanation} 
+                      className="text-foreground/80 leading-relaxed"
+                    />
+                  ) : (
+                    <p className="text-foreground/80 leading-relaxed">
+                      {explanation}
+                    </p>
+                  )}
                 </div>
               </div>
 
