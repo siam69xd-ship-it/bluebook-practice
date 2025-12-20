@@ -71,12 +71,17 @@ export default function MathQuestionLayout({
   const isGridInQuestion = currentQuestion?.isGridIn;
   const hasEliminations = (currentState?.eliminatedOptions?.length || 0) > 0;
   const isCorrect = currentState?.userAnswer === currentQuestion?.correctAnswer;
+  const isWrong = currentState?.checked && !isCorrect;
 
+  // Allow selecting new answer after checking wrong - just track checked options
   const handleSelectAnswer = (letter: string) => {
-    if (!currentQuestion || currentState?.checked) return;
+    if (!currentQuestion) return;
+    // Don't allow selecting already checked wrong options
     if (currentState?.checkedOptions?.includes(letter)) return;
     onUpdateState(currentQuestion.id, {
       userAnswer: currentState?.userAnswer === letter ? null : letter,
+      // Reset checked state when selecting new answer after wrong
+      checked: false,
     });
   };
 
@@ -284,22 +289,29 @@ export default function MathQuestionLayout({
                 />
               ) : (
                 <div className="space-y-3">
-                  {Object.entries(currentQuestion.options).map(([letter, text]) => (
-                    <MathQuestionOption
-                      key={letter}
-                      label={letter}
-                      text={text}
-                      isSelected={currentState?.userAnswer === letter}
-                      isCorrect={currentState?.checked && letter === currentQuestion.correctAnswer}
-                      isIncorrect={currentState?.checked && currentState?.userAnswer === letter && letter !== currentQuestion.correctAnswer}
-                      showResult={currentState?.checked || false}
-                      onClick={() => handleSelectAnswer(letter)}
-                      isEliminated={currentState?.eliminatedOptions?.includes(letter) || false}
-                      showEliminationButtons={isEliminationMode || (currentState?.eliminatedOptions?.includes(letter) || false)}
-                      onEliminate={() => handleToggleElimination(letter)}
-                      disabled={currentState?.checked || false}
-                    />
-                  ))}
+                  {Object.entries(currentQuestion.options).map(([letter, text]) => {
+                    const isThisCheckedWrong = currentState?.checkedOptions?.includes(letter) && letter !== currentQuestion.correctAnswer;
+                    const isThisSelected = currentState?.userAnswer === letter;
+                    const showAsCorrect = currentState?.checked && isCorrect && letter === currentQuestion.correctAnswer;
+                    const showAsWrong = currentState?.checked && isThisSelected && !isCorrect;
+                    
+                    return (
+                      <MathQuestionOption
+                        key={letter}
+                        label={letter}
+                        text={text}
+                        isSelected={isThisSelected}
+                        isCorrect={showAsCorrect}
+                        isIncorrect={showAsWrong || isThisCheckedWrong}
+                        showResult={currentState?.checked || isThisCheckedWrong}
+                        onClick={() => handleSelectAnswer(letter)}
+                        isEliminated={currentState?.eliminatedOptions?.includes(letter) || false}
+                        showEliminationButtons={isEliminationMode || (currentState?.eliminatedOptions?.includes(letter) || false)}
+                        onEliminate={() => handleToggleElimination(letter)}
+                        disabled={(currentState?.checked && isCorrect) || isThisCheckedWrong}
+                      />
+                    );
+                  })}
                 </div>
               )}
             </motion.div>
@@ -335,15 +347,26 @@ export default function MathQuestionLayout({
               Explanation
             </button>
             
-            {/* Check */}
-            {!currentState?.checked ? (
+            {/* Check Button - show check if not correct yet */}
+            {!(currentState?.checked && isCorrect) ? (
               <button
-                onClick={onCheckAnswer}
+                onClick={() => {
+                  if (currentState?.userAnswer) {
+                    // Track this option as checked
+                    const checkedOptions = currentState?.checkedOptions || [];
+                    if (!checkedOptions.includes(currentState.userAnswer)) {
+                      onUpdateState(currentQuestion.id, {
+                        checkedOptions: [...checkedOptions, currentState.userAnswer],
+                      });
+                    }
+                    onCheckAnswer();
+                  }
+                }}
                 disabled={!currentState?.userAnswer}
                 className={cn(
                   "flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-colors",
                   currentState?.userAnswer
-                    ? "text-green-600 hover:bg-green-50 border border-green-300"
+                    ? "bg-[#e6f7ff] text-[#0077cc] hover:bg-[#cceeff] border border-[#0077cc]"
                     : "text-gray-400 border border-gray-200 cursor-not-allowed"
                 )}
               >
@@ -353,11 +376,8 @@ export default function MathQuestionLayout({
                 Check
               </button>
             ) : (
-              <span className={cn(
-                "flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium",
-                isCorrect ? "bg-green-500 text-white" : "bg-red-500 text-white"
-              )}>
-                {isCorrect ? "Correct!" : "Incorrect"}
+              <span className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-green-500 text-white">
+                Correct!
               </span>
             )}
           </div>

@@ -30,15 +30,18 @@ function LatexRendererComponent({ content, className = '', displayMode = false }
       return `%%CURRENCY_${currencyPlaceholders.length - 1}%%`;
     });
 
-    // Handle display mode LaTeX ($$...$$) - centered equations
+    // Handle display mode LaTeX ($$...$$) - centered equations on their own line
+    // These should be rendered as block-level centered equations
     processedContent = processedContent.replace(/\$\$([\s\S]*?)\$\$/g, (_, latex) => {
       try {
-        return `<div class="my-4 text-center">${katex.renderToString(latex.trim(), { 
+        const rendered = katex.renderToString(latex.trim(), { 
           displayMode: true, 
           throwOnError: false,
           trust: true,
           strict: false
-        })}</div>`;
+        });
+        // Wrap in centered div with proper spacing
+        return `<div class="my-6 text-center text-lg">${rendered}</div>`;
       } catch {
         return `$$${latex}$$`;
       }

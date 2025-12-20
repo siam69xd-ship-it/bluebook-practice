@@ -36,11 +36,11 @@ export default function MathQuestionOption({
 
   // Determine border/background states
   // Selected but not checked: blue highlight
-  // After check: green for correct, red for incorrect
+  // After check: green for correct, red for incorrect (stays red for previously checked wrong)
   const getBorderColor = () => {
     if (isEliminated) return 'border-gray-200';
     if (showResult && isCorrect) return 'border-green-500';
-    if (showResult && isIncorrect) return 'border-red-500';
+    if (showResult && isIncorrect) return 'border-red-400';
     if (isSelected && !showResult) return 'border-[#0077cc]'; // Blue selection like reference
     return 'border-gray-200 hover:border-gray-400';
   };
@@ -100,13 +100,6 @@ export default function MathQuestionOption({
             cleanText
           )}
         </span>
-
-        {/* Check button on the right for selected option - only before checking */}
-        {isSelected && !showResult && (
-          <div className="flex-shrink-0 px-3 py-1 bg-gray-900 text-white text-sm font-medium rounded">
-            Check
-          </div>
-        )}
       </button>
 
       {/* Elimination Button - SAT style circle with diagonal strikethrough */}
