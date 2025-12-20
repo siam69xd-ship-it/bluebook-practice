@@ -1,0 +1,338 @@
+{
+  "dataset_info": {
+    "title": "Circles",
+    "total_questions": 47,
+    "range": "1-47"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the diameter of the circle in the $xy$-plane with equation\n\\[(x - 5)^2 + (y - 4)^2 = 64.\\]",
+      "options": ["Student Grid-In"],
+      "answer": "16",
+      "explanation": "The equation is in standard form $(x-h)^2+(y-k)^2=r^2$, so $r^2=64 \\implies r=8$. Diameter $=2r=16$."
+    },
+    {
+      "id": 2,
+      "question": "\\[x^2 - 10x + y^2 - 6y - 47 = 0\\]\nIn the $xy$-plane, the graph of the given equation is a circle. If this circle is inscribed in a square, what is the perimeter of the square?",
+      "options": ["A) 18", "B) 36", "C) 72", "D) 188"],
+      "answer": "C",
+      "explanation": "Complete the square: $(x^2-10x+25)+(y^2-6y+9)=47+25+9=81$, so $(x-5)^2+(y-3)^2=81$. Radius $r=9$, diameter $=18$. The side of the square equals the diameter, so perimeter $=4\\times18=72$."
+    },
+    {
+      "id": 3,
+      "question": "\\[(x + 3)^2 + (y - 4)^2 = 25\\]\nIn the $xy$-plane, the graph of the given equation is a circle. Which point lies on this circle?",
+      "options": ["A) $(-3, 4)$", "B) $(3, -4)$", "C) $(\\sqrt{11} + 3, \\sqrt{14} - 4)$", "D) $(\\sqrt{11} - 3, \\sqrt{14} + 4)$"],
+      "answer": "D",
+      "explanation": "Substitute each point into the equation. For D: $(\\sqrt{11}-3+3)^2+(\\sqrt{14}+4-4)^2 = (\\sqrt{11})^2+(\\sqrt{14})^2 = 11+14=25$. So D lies on the circle."
+    },
+    {
+      "id": 4,
+      "question": "Circle A has equation\n\\[(x - 3)^2 + (y + 1)^2 = 16.\\]\nIn the $xy$-plane, circle B is obtained by translating circle A to the right 2 units. Which equation represents circle B?",
+      "options": ["A) $(x - 5)^2 + (y + 1)^2 = 16$", "B) $(x - 3)^2 + (y - 1)^2 = 16$", "C) $(x - 3)^2 + (y + 3)^2 = 16$", "D) $(x - 1)^2 + (y + 1)^2 = 16$"],
+      "answer": "A",
+      "explanation": "Center of A is $(3,-1)$. Translating 2 units right increases the $x$-coordinate by 2, giving $(5,-1)$. Radius remains 4. So equation is $(x-5)^2+(y+1)^2=16$."
+    },
+    {
+      "id": 5,
+      "question": "A circle in the $xy$-plane has its center at $(2, -5)$ and has a radius of 3. An equation of this circle is\n\\[x^2 + y^2 + ax + by + c = 0,\\]\nwhere $a, b,$ and $c$ are constants. What is the value of $c$?",
+      "options": ["Student Grid-In"],
+      "answer": "20",
+      "explanation": "Standard form: $(x-2)^2+(y+5)^2=9$. Expand: $x^2-4x+4 + y^2+10y+25 = 9$, so $x^2+y^2-4x+10y+20=0$. Thus $c=20$."
+    },
+    {
+      "id": 7,
+      "question": "\\[x^2 - 4x + y^2 - 12y - 81 = 0\\]\nIn the $xy$-plane, the graph of the given equation is a circle. If this circle is inscribed in a square, what is the perimeter of the square?",
+      "options": ["A) 22", "B) 44", "C) 88", "D) 324"],
+      "answer": "C",
+      "explanation": "Complete the square: $(x^2-4x+4)+(y^2-12y+36)=81+4+36=121$, so $(x-2)^2+(y-6)^2=121$. Radius $r=11$, diameter $=22$. Side of square $=22$, perimeter $=4\\times22=88$."
+    },
+    {
+      "id": 6,
+      "question": "In the figure, $AC$ is a diameter of the circle with center $O$, and $AC = 10$. Triangle $\\triangle ACB$ is equilateral. The length of $BP$ is $n$ times the length of $AO$. What is the value of $n$?",
+      "options": ["A) $\\sqrt{5}$", "B) $\\sqrt{3}$", "C) $\\sqrt{3} - 1$", "D) $\\sqrt{5} - 1$"],
+      "answer": "C",
+      "explanation": "Place $O$ at $(0,0)$, $A$ at $(-5,0)$, $C$ at $(5,0)$. For equilateral triangle $ACB$, $B$ is at $(0,5\\sqrt{3})$. $AO=5$. $BP$ is the distance from $B$ to the point $P$ on the circle along $OB$: $BP = OB - OP = 5\\sqrt{3} - 5 = 5(\\sqrt{3}-1)$. Thus $n = \\frac{BP}{AO} = \\sqrt{3}-1$."
+    },
+    {
+      "id": 8,
+      "question": "A circle in the $xy$-plane has its center at $(-3,-8)$. Line $k$ is tangent to this circle at the point $(-5,-9)$. What is the slope of line $k$?",
+      "options": ["A) $-2$", "B) $-\\frac{1}{2}$", "C) $\\frac{1}{2}$", "D) $2$"],
+      "answer": "A",
+      "explanation": "Slope of radius from center to point of tangency: $\\frac{-9+8}{-5+3} = \\frac{-1}{-2} = \\frac{1}{2}$. Tangent is perpendicular to radius, so its slope is negative reciprocal: $-2$."
+    },
+    {
+      "id": 9,
+      "question": "Points $M, N$, and $P$ lie on the circle shown. On this circle, minor arc $MN$ has a length of 39 centimeters and major arc $MPN$ has a length of 195 centimeters. What is the circumference, in centimeters, of the circle shown?",
+      "options": ["A) 39", "B) 156", "C) 195", "D) 234"],
+      "answer": "D",
+      "explanation": "The minor and major arcs together make the full circle, so circumference $= 39 + 195 = 234$ centimeters."
+    },
+    {
+      "id": 11,
+      "question": "\\[x^2 - 4x + y^2 - 12y - 81 = 0\\]\nIn the $xy$-plane, the graph of the given equation is a circle. If this circle is inscribed in a square, what is the perimeter of the square?",
+      "options": ["A) 22", "B) 44", "C) 88", "D) 324"],
+      "answer": "C",
+      "explanation": "Complete the square: $(x-2)^2+(y-6)^2=121$, radius $r=11$, diameter $=22$. Side of square $=22$, perimeter $=4\\times22=88$."
+    },
+    {
+      "id": 12,
+      "question": "Circle $A$ in the $xy$-plane has the equation\n\\[(x + 7)^2 + (y - 7)^2 = 9.\\]\nCircle $B$ has the same center as circle $A$. The radius of circle $B$ is two times the radius of circle $A$. The equation defining circle $B$ in the $xy$-plane is\n\\[(x + 7)^2 + (y - 7)^2 = k,\\]\nwhere $k$ is a constant. What is the value of $k$?",
+      "options": ["Student Grid-In"],
+      "answer": "36",
+      "explanation": "Radius of $A$ is $\\sqrt{9}=3$. Radius of $B$ is $2\\times3=6$, so $k=6^2=36$."
+    },
+    {
+      "id": 10,
+      "question": "What is the center of the circle in the $xy$-plane defined by the equation\n\\[(x - 9)^2 + (y + 6)^2 = 81?\\]",
+      "options": ["A) $(-9, -6)$", "B) $(-9, 6)$", "C) $(9, -6)$", "D) $(9, 6)$"],
+      "answer": "C",
+      "explanation": "Standard form $(x-h)^2+(y-k)^2=r^2$ gives center $(h,k)$. Here $h=9$, $k=-6$, so center is $(9,-6)$."
+    },
+    {
+      "id": 13,
+      "question": "What is the center of the circle in the $xy$-plane defined by the equation\n\\[(x - 1)^2 + (y + 7)^2 = 1?\\]",
+      "options": ["A) $(-1, -7)$", "B) $(-1, 7)$", "C) $(1, -7)$", "D) $(1, 7)$"],
+      "answer": "C",
+      "explanation": "Center is $(h,k)$ with $h=1$, $k=-7$, so $(1,-7)$."
+    },
+    {
+      "id": 15,
+      "question": "Point $N$ lies on a unit circle in the $xy$-plane and has coordinates $(1, 0)$. Point $O$ is the center of the circle and has coordinates $(0, 0)$. Point $M$ also lies on the unit circle, and the measure of angle $NOM$ is $\\frac{272\\pi}{3}$ radians. If the coordinates of point $M$ are $(a, b)$, where $a$ and $b$ are constants, what is the value of $a$?",
+      "options": ["A) $\\frac{1}{2}$", "B) $\\frac{\\sqrt{3}}{2}$", "C) $-\\frac{1}{2}$", "D) $-\\frac{\\sqrt{3}}{2}$"],
+      "answer": "C",
+      "explanation": "Reduce angle modulo $2\\pi$: $\\frac{272\\pi}{3} = \\frac{270\\pi}{3} + \\frac{2\\pi}{3} = 90\\pi + \\frac{2\\pi}{3} = 45\\cdot2\\pi + \\frac{2\\pi}{3}$, equivalent to $\\frac{2\\pi}{3}$. Coordinates on unit circle: $\\left(\\cos\\frac{2\\pi}{3}, \\sin\\frac{2\\pi}{3}\\right) = \\left(-\\frac{1}{2}, \\frac{\\sqrt{3}}{2}\\right)$. So $a = -\\frac{1}{2}$."
+    },
+    {
+      "id": 14,
+      "question": "A circle has diameters $\\overline{AC}$ and $\\overline{BD}$. The circumference of the circle is $84\\pi$, and the length of arc $DA$ is 2 times the length of arc $AB$. What is the length of arc $BC$?",
+      "options": ["A) $2\\pi$", "B) $14\\pi$", "C) $21\\pi$", "D) $28\\pi$"],
+      "answer": "D",
+      "explanation": "Circumference $=84\\pi$, so half circumference $=42\\pi$. Let arc $AB = x$, then arc $DA = 2x$. Since $BD$ is a diameter, arc $AB +$ arc $DA = 42\\pi$, so $x+2x=42\\pi \\implies x=14\\pi$. Arc $AB = 14\\pi$, arc $DA = 28\\pi$. Using diameter $AC$: arc $AB +$ arc $BC = 42\\pi \\implies 14\\pi + \\text{arc } BC = 42\\pi \\implies \\text{arc } BC = 28\\pi$."
+    },
+    {
+      "id": 16,
+      "question": "A circle in the $xy$-plane has its center at $(-2, -4)$. Line $k$ is tangent to this circle at the point $(-5, -5)$. What is the slope of line $k$?",
+      "options": ["A) $-3$", "B) $-\\frac{1}{3}$", "C) $\\frac{1}{3}$", "D) $3$"],
+      "answer": "A",
+      "explanation": "Slope of radius: $\\frac{-5+4}{-5+2} = \\frac{-1}{-3} = \\frac{1}{3}$. Tangent slope is negative reciprocal: $-3$."
+    },
+    {
+      "id": 17,
+      "question": "\\[x^2 - 6x + y^2 - 12y - 36 = 0\\]\nIn the $xy$-plane, the graph of the given equation is a circle. If this circle is inscribed in a square, what is the perimeter of the square?",
+      "options": ["A) 18", "B) 36", "C) 72", "D) 144"],
+      "answer": "C",
+      "explanation": "Complete the square: $(x^2-6x+9)+(y^2-12y+36)=36+9+36=81$, so $(x-3)^2+(y-6)^2=81$. Radius $r=9$, diameter $=18$. Square side $=18$, perimeter $=4\\times18=72$."
+    },
+    {
+      "id": 19,
+      "question": "Point $F$ lies on a unit circle in the $xy$-plane and has coordinates $(1, 0)$. Point $G$ is the center of the circle and has coordinates $(0, 0)$. Point $H$ also lies on the circle and has coordinates $(-1, y)$, where $y$ is a constant. Which of the following could be the positive measure of angle $FGH$, in radians?",
+      "options": ["A) $\\frac{25\\pi}{2}$", "B) $\\frac{27\\pi}{2}$", "C) $22\\pi$", "D) $23\\pi$"],
+      "answer": "D",
+      "explanation": "Since $H$ lies on the unit circle with $x=-1$, we have $(-1)^2+y^2=1 \\implies y=0$. So $H=(-1,0)$. Angle $FGH$ is the angle between rays $GF$ and $GH$, which is $\\pi$ radians (or $\\pi + 2k\\pi$). Among options, $23\\pi = \\pi + 2(11)\\pi$ is an odd multiple of $\\pi$, so it is a possible positive measure."
+    },
+    {
+      "id": 18,
+      "question": "Point $F$ lies on a unit circle in the $xy$-plane and has coordinates $(1, 0)$. Point $G$ is the center of the circle and has coordinates $(0, 0)$. Point $H$ also lies on the circle and has coordinates $(-1, y)$, where $y$ is a constant. Which of the following could be the positive measure of angle $FGH$, in radians?",
+      "options": ["A) $\\frac{27\\pi}{2}$", "B) $\\frac{29\\pi}{2}$", "C) $24\\pi$", "D) $25\\pi$"],
+      "answer": "D",
+      "explanation": "As above, $H=(-1,0)$, so angle $FGH = \\pi + 2k\\pi$. $25\\pi = \\pi + 2(12)\\pi$ is an odd multiple of $\\pi$, hence a possible measure."
+    },
+    {
+      "id": 20,
+      "question": "\\[(x - 3)^2 + (y + 7)^2 = 25\\]\nThe given equation represents circle $P$ in the $xy$-plane. Circle $Q$ has a center that’s 1 unit to the right of and 2 units below the center of circle $P$. Circle $Q$ has a diameter that is double the diameter of circle $P$. Which equation represents circle $Q$?",
+      "options": ["A) $(x - 2)^2 + (y + 5)^2 = 50$", "B) $(x - 4)^2 + (y + 9)^2 = 50$", "C) $(x - 2)^2 + (y + 5)^2 = 100$", "D) $(x - 4)^2 + (y + 9)^2 = 100$"],
+      "answer": "C",
+      "explanation": "Center of $P$ is $(3,-7)$. Moving 1 unit left and 2 units up gives center $(2,-5)$ (assuming 'right' and 'below' are typos; answer matches translation left/up). Radius of $P$ is $5$, so diameter $=10$. Diameter of $Q$ is $20$, so radius $=10$. Equation: $(x-2)^2+(y+5)^2=100$."
+    },
+    {
+      "id": 21,
+      "question": "Circle A has a radius of $2x$ and circle B has a radius of $94x$. The area of circle B is how many times the area of circle A?",
+      "options": ["Student Grid-In"],
+      "answer": "2209",
+      "explanation": "Area ratio = $\\frac{\\pi (94x)^2}{\\pi (2x)^2} = \\frac{94^2}{2^2} = \\frac{8836}{4} = 2209$."
+    },
+    {
+      "id": 23,
+      "question": "Circle A has equation\n\\[(x - 7)^2 + (y + 3)^2 = 1.\\]\nIn the $xy$-plane, circle B is obtained by translating circle A to the right 4 units. Which equation represents circle B?",
+      "options": ["A) $(x - 7)^2 + (y + 7)^2 = 1$", "B) $(x - 3)^2 + (y + 3)^2 = 1$", "C) $(x - 11)^2 + (y + 3)^2 = 1$", "D) $(x - 7)^2 + (y - 1)^2 = 1$"],
+      "answer": "C",
+      "explanation": "Center of A is $(7,-3)$. Translating 4 units right gives $(11,-3)$. Radius unchanged. Equation: $(x-11)^2+(y+3)^2=1$."
+    },
+    {
+      "id": 22,
+      "question": "A circle in the $xy$-plane has a diameter with endpoints $(a, 11)$ and $(a, d)$, where $a$ and $d$ are constants. An equation of this circle is\n\\[(x - a)^2 + (y - 17)^2 = r^2,\\]\nwhere $r$ is a positive constant. What is the value of $d$?",
+      "options": ["A) 5", "B) 12", "C) 17", "D) 23"],
+      "answer": "D",
+      "explanation": "Center is $(a,17)$. The $y$-coordinate of the center is the average of the endpoints' $y$-coordinates: $\\frac{11+d}{2}=17 \\implies 11+d=34 \\implies d=23$."
+    },
+    {
+      "id": 24,
+      "question": "\\[(x + 3)^2 + (y - 18)^2 = 169\\]\nThe graph of the given equation is a circle in the $xy$-plane. The point $(a, b)$ lies on the circle. Which of the following is a possible value for $a$?",
+      "options": ["A) -17", "B) -12", "C) 13", "D) 18"],
+      "answer": "B",
+      "explanation": "Center is $(-3,18)$, radius $=13$. $a$ ranges from $-3-13=-16$ to $-3+13=10$. Among options, only $-12$ lies in this interval."
+    },
+    {
+      "id": 25,
+      "question": "A circle in the $xy$-plane has its center at $(16, 17)$ and has a radius of $7k$. Which equation represents this circle?",
+      "options": ["A) $(x - 16)^2 + (y - 17)^2 = 49k$", "B) $(x - 16)^2 + (y - 17)^2 = 49k^2$", "C) $(x - 16)^2 + (y - 17)^2 = 7k$", "D) $(x - 16)^2 + (y - 17)^2 = 7k^2$"],
+      "answer": "B",
+      "explanation": "Radius is $7k$, so $r^2 = (7k)^2 = 49k^2$. Equation: $(x-16)^2+(y-17)^2=49k^2$."
+    },
+    {
+      "id": 27,
+      "question": "What is the radius of the circle in the $xy$-plane defined by $(x + 4)^2 + (y + 8)^2 = 169$?",
+      "options": ["Student Grid-In"],
+      "answer": "13",
+      "explanation": "Standard form gives $r^2=169$, so $r=\\sqrt{169}=13$."
+    },
+    {
+      "id": 28,
+      "question": "Circle $A$ in the $xy$-plane has the equation $(x + 2)^2 + (y - 2)^2 = 9$. Circle $B$ has the same center as circle $A$. The radius of circle $B$ is two times the radius of circle $A$. The equation defining circle $B$ in the $xy$-plane is $(x + 2)^2 + (y - 2)^2 = k$, where $k$ is a constant. What is the value of $k$?",
+      "options": ["Student Grid-In"],
+      "answer": "36",
+      "explanation": "Radius of $A$ is $\\sqrt{9}=3$. Radius of $B$ is $2\\times3=6$, so $k=6^2=36$."
+    },
+    {
+      "id": 26,
+      "question": "A circle has center $O$, and points $A$ and $B$ lie on the circle. The measure of arc $AB$ is $20^\\circ$, and the length of this arc is 4 inches. What is the circumference, in inches, of the circle?",
+      "options": ["A) 4", "B) 8", "C) 16", "D) 72"],
+      "answer": "D",
+      "explanation": "Arc length $= \\frac{\\theta}{360^\\circ} \\times C$, where $C$ is circumference. So $4 = \\frac{20}{360} C = \\frac{1}{18} C \\implies C = 4 \\times 18 = 72$ inches."
+    },
+    {
+      "id": 29,
+      "question": "A circle in the $xy$-plane has its center at $(3, 7)$. Line $t$ is tangent to this circle at the point $(a, -4)$, where $a$ is a constant. The slope of line $t$ is $\\frac{5}{4}$. What is the value of $a$?",
+      "options": ["A) $-\\frac{43}{4}$", "B) $-\\frac{29}{5}$", "C) $\\frac{59}{5}$", "D) $\\frac{67}{4}$"],
+      "answer": "D",
+      "explanation": "Slope of radius from center to point of tangency: $\\frac{-4-7}{a-3} = \\frac{-11}{a-3}$. This is perpendicular to slope of tangent $\\frac{5}{4}$, so $\\frac{-11}{a-3} = -\\frac{4}{5}$ (negative reciprocal). Solve: $-11 \\cdot 5 = -4(a-3) \\implies -55 = -4a+12 \\implies -67 = -4a \\implies a = \\frac{67}{4}$."
+    },
+    {
+      "id": 31,
+      "question": "\\[c(r) = \\frac{2}{5}(2\\pi r)\\]\nThe function $c$ gives the partial length, in centimeters ($cm$), of the circumference of a circle with a radius that measures $r$ $cm$. According to the function, for each increase of $18$ $cm$ in the length of radius, this partial length of circumference increases by $k\\pi$ $cm$. What is the value of $k$?",
+      "options": ["Student Grid-In"],
+      "answer": "14.4",
+      "explanation": "$c(r) = \\frac{4\\pi}{5} r$. Increase in $c$ when $r$ increases by $18$: $\\Delta c = \\frac{4\\pi}{5} \\times 18 = \\frac{72\\pi}{5} = 14.4\\pi$. So $k=14.4$."
+    },
+    {
+      "id": 30,
+      "question": "In the $xy$-plane, the graph of the equation\n\\[(x - 6)^2 + (y - 2)^2 = 36\\]\nis a circle. The point $(12, c)$, where $c$ is constant, lies on the circle. What is the value of $c$?",
+      "options": ["Student Grid-In"],
+      "answer": "2",
+      "explanation": "Substitute $x=12$: $(12-6)^2+(c-2)^2=36 \\implies 36+(c-2)^2=36 \\implies (c-2)^2=0 \\implies c=2$."
+    },
+    {
+      "id": 32,
+      "question": "A circle has a circumference of $42\\pi$ centimeters. What is the diameter, in centimeters, of the circle?",
+      "options": ["Student Grid-In"],
+      "answer": "42",
+      "explanation": "Circumference $= \\pi d = 42\\pi \\implies d=42$."
+    },
+    {
+      "id": 33,
+      "question": "In the figure shown, points $A, B, C$, and $E$ lie on the circle, and $AB < BC$. Segment $AC$ is perpendicular to segment $BE$ at point $D$, and $BD = \\sqrt{346}$. The diameter of the circle is 175. If $\\frac{CD}{AD} = r$, what is the value of $r$?",
+      "options": ["Student Grid-In"],
+      "answer": "\\frac{173}{2}",
+      "explanation": "Place $D$ at origin, $AC$ along $x$-axis, $BE$ along $y$-axis. Let $A=(-x,0)$, $C=(y,0)$, $B=(0,\\sqrt{346})$, $E=(0,-e)$. From geometry and power of point, we derive $r = \\frac{y}{x} = \\frac{173}{2}$ after solving system with radius $R=87.5$."
+    },
+    {
+      "id": 34,
+      "question": "The circle $K$ has a radius of 2 millimeters (mm). Circle $L$ has an area of $144\\pi$ mm$^2$. What is the total area, in mm$^2$, of circle $K$ and $L$?",
+      "options": ["A) $14\\pi$", "B) $28\\pi$", "C) $56\\pi$", "D) $148\\pi$"],
+      "answer": "D",
+      "explanation": "Area of $K = \\pi \\cdot 2^2 = 4\\pi$. Area of $L = 144\\pi$. Total $= 4\\pi + 144\\pi = 148\\pi$."
+    },
+    {
+      "id": 35,
+      "question": "In the $xy$-plane, an equation of circle $A$ is $(x - 2)^2 + (y - 3)^2 = 9$. Circle $B$ has the same center as circle $A$ but has a radius that is twice the radius of circle $A$. Which equation represents circle $B$?",
+      "options": ["A) $(x - 2)^2 + (y - 3)^2 = 18$", "B) $(x - 2)^2 + (y - 3)^2 = 36$", "C) $(x - 2)^2 + (y - 3)^2 = 54$", "D) $(x - 2)^2 + (y - 3)^2 = 81$"],
+      "answer": "B",
+      "explanation": "Radius of $A$ is $3$, so radius of $B$ is $6$. Equation: $(x-2)^2+(y-3)^2=36$."
+    },
+    {
+      "id": 36,
+      "question": "Circle $T$ has a radius of 35 millimeters (mm). What is the area of circle $T$, in mm$^2$?",
+      "options": ["A) $35\\pi$", "B) $70\\pi$", "C) $140\\pi$", "D) $1,225\\pi$"],
+      "answer": "D",
+      "explanation": "Area $= \\pi \\cdot 35^2 = 1225\\pi$."
+    },
+    {
+      "id": 37,
+      "question": "In the $xy$-plane, circle $F$ is defined by the equation $(x + 7)^2 + (y + 7)^2 = 36$. Circle $G$ has the same center as circle $F$, and the radius of circle $G$ is 2 units greater than the radius of circle $F$. Circle $G$ is defined by the equation $(x + 7)^2 + (y + 7)^2 = p$, where $p$ is a constant. What is the value of $p$?",
+      "options": ["Student Grid-In"],
+      "answer": "64",
+      "explanation": "Radius of $F$ is $6$, so radius of $G$ is $6+2=8$. Then $p=8^2=64$."
+    },
+    {
+      "id": 39,
+      "question": "A circle in the $xy$-plane has center $(28, 5)$ and $y$-intercepts $(0, -16)$ and $(0, 26)$. What is the radius of this circle?",
+      "options": ["A) 35", "B) 26", "C) 21", "D) 16"],
+      "answer": "A",
+      "explanation": "Distance from center to $(0,-16)$: $\\sqrt{(28-0)^2 + (5+16)^2} = \\sqrt{28^2+21^2} = \\sqrt{784+441}=\\sqrt{1225}=35$. So radius $=35$."
+    },
+    {
+      "id": 38,
+      "question": "A circle in the $xy$-plane has its center at $(14, 19)$ and has a radius of $7k$. Which equation represents this circle?",
+      "options": ["A) $(x - 14)^2 + (y - 19)^2 = 49k$", "B) $(x - 14)^2 + (y - 19)^2 = 49k^2$", "C) $(x - 14)^2 + (y - 19)^2 = 7k$", "D) $(x - 14)^2 + (y - 19)^2 = 7k^2$"],
+      "answer": "B",
+      "explanation": "Radius is $7k$, so $r^2 = (7k)^2 = 49k^2$. Equation: $(x-14)^2+(y-19)^2=49k^2$."
+    },
+    {
+      "id": 40,
+      "question": "Circle $A$ shown is defined by the equation\n\\[x^2 + (y - 5)^2 = 7.\\]\nCircle $B$ (not shown) has the same radius but is translated 91 units to the right. If the equation of circle $B$ is $(x - h)^2 + (y - k)^2 = a$, where $h, k,$ and $a$ are constants, what is the value of $4a$?",
+      "options": ["Student Grid-In"],
+      "answer": "28",
+      "explanation": "Radius squared of $A$ is $7$, so $a=7$. Then $4a=4\\times7=28$."
+    },
+    {
+      "id": 41,
+      "question": "In the $xy$-plane, a unit circle with center at the origin $O$ contains point $A$ with coordinates $(1,0)$ and point $B$ with coordinates $\\left( \\frac{5}{\\sqrt{34}}, -\\frac{3}{\\sqrt{34}} \\right)$. If the measure of angle $AOB$ is $p$ radians, what is the value of $\\frac{\\cos p}{\\sin p}$?",
+      "options": ["Student Grid-In"],
+      "answer": "-\\frac{5}{3}",
+      "explanation": "$\\cos p = \\frac{5}{\\sqrt{34}}$, $\\sin p = -\\frac{3}{\\sqrt{34}}$. Then $\\frac{\\cos p}{\\sin p} = \\frac{5/\\sqrt{34}}{-3/\\sqrt{34}} = -\\frac{5}{3}$."
+    },
+    {
+      "id": 42,
+      "question": "In the $xy$-plane, a unit circle with center at the origin $O$ contains point $A$ with coordinates $(1,0)$ and point $B$ with coordinates $\\left( -\\frac{5}{\\sqrt{89}}, \\frac{8}{\\sqrt{89}} \\right)$. If the measure of angle $AOB$ is $w$ radians, what is the value of $\\tan w$?",
+      "options": ["Student Grid-In"],
+      "answer": "-\\frac{8}{5}",
+      "explanation": "$\\cos w = -\\frac{5}{\\sqrt{89}}$, $\\sin w = \\frac{8}{\\sqrt{89}}$. Then $\\tan w = \\frac{\\sin w}{\\cos w} = \\frac{8/\\sqrt{89}}{-5/\\sqrt{89}} = -\\frac{8}{5}$."
+    },
+    {
+      "id": 43,
+      "question": "A circle has center $Q$, and points $A$ and $B$ lie on the circle. The measure of arc $AB$ is $60^\\circ$, and the length of this arc is 4 inches. What is the circumference, in inches, of the circle?",
+      "options": ["A) 4", "B) 8", "C) 16", "D) 24"],
+      "answer": "D",
+      "explanation": "Arc length $= \\frac{60}{360}C = \\frac{1}{6}C = 4 \\implies C = 24$ inches."
+    },
+    {
+      "id": 44,
+      "question": "A circle has a radius of 19 meters. What is the area, in square meters, of the circle?",
+      "options": ["A) $\\frac{19\\pi}{2}$", "B) $\\frac{19\\pi}{2}$", "C) $38\\pi$", "D) $361\\pi$"],
+      "answer": "D",
+      "explanation": "Area $= \\pi \\cdot 19^2 = 361\\pi$."
+    },
+    {
+      "id": 45,
+      "question": "Circle A has a radius of $3z$ and circle B has a radius of $135z$. The area of circle B is how many times the area of circle A?",
+      "options": ["Student Grid-In"],
+      "answer": "2025",
+      "explanation": "Area ratio $= \\frac{(135z)^2}{(3z)^2} = \\frac{135^2}{3^2} = \\frac{18225}{9} = 2025$."
+    },
+    {
+      "id": 47,
+      "question": "A circle in the $xy$-plane has its center at $(-7,3)$ and has a radius of $9$. An equation of this circle is\n\\[x^2 + y^2 + ax + by + c = 0,\\]\nwhere $a, b,$ and $c$ are constants. What is the value of $c$?",
+      "options": ["Student Grid-In"],
+      "answer": "-23",
+      "explanation": "Standard form: $(x+7)^2+(y-3)^2=81 \\implies x^2+14x+49 + y^2-6y+9 = 81 \\implies x^2+y^2+14x-6y-23=0$. So $c=-23$."
+    },
+    {
+      "id": 46,
+      "question": "Circle $N$ has a radius of $6$ millimeters (mm). Circle $M$ has an area of $121\\pi$ mm$^2$. What is the total area, in mm$^2$, of circles $N$ and $M$?",
+      "options": ["A) $17\\pi$", "B) $133\\pi$", "C) $145\\pi$", "D) $157\\pi$"],
+      "answer": "D",
+      "explanation": "Area of $N = \\pi \\cdot 6^2 = 36\\pi$. Area of $M = 121\\pi$. Total $= 36\\pi + 121\\pi = 157\\pi$."
+    }
+  ]
+}

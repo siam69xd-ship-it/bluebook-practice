@@ -1154,6 +1154,7 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
       { file: 'exponents_radicals.json', topic: 'Exponents & Radicals', subSection: 'Advanced Math' },
       { file: 'functions_function_notation.json', topic: 'Functions & Function Notation', subSection: 'Advanced Math' },
       { file: 'exponential_functions.json', topic: 'Exponential Functions', subSection: 'Advanced Math' },
+      { file: 'quadratics.json', topic: 'Quadratics', subSection: 'Advanced Math' },
 
       // Problem Solving
       { file: 'percent_ratio_proportion.json', topic: 'Percent; Ratio & Proportion', subSection: 'Problem Solving' },
@@ -1162,6 +1163,13 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
       { file: 'mean_median_mode_range.json', topic: 'Mean/Median/Mode/Range', subSection: 'Problem Solving' },
       { file: 'scatterplots.json', topic: 'Scatterplots', subSection: 'Problem Solving' },
       { file: 'research_organizing.json', topic: 'Research Organizing', subSection: 'Problem Solving' },
+
+      // Geometry and Trigonometry
+      { file: 'lines_angles.json', topic: 'Lines & Angles', subSection: 'Geometry and Trigonometry' },
+      { file: 'triangles.json', topic: 'Triangles', subSection: 'Geometry and Trigonometry' },
+      { file: 'trigonometry.json', topic: 'Trigonometry', subSection: 'Geometry and Trigonometry' },
+      { file: 'circles.json', topic: 'Circles', subSection: 'Geometry and Trigonometry' },
+      { file: 'areas_volumes.json', topic: 'Areas & Volumes', subSection: 'Geometry and Trigonometry' },
     ];
     
     for (const { file, topic, subSection } of mathFiles) {

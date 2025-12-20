@@ -1,0 +1,457 @@
+{
+  "dataset_info": {
+    "title": "Triangles",
+    "total_questions": 64,
+    "range": "1-64"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "question": "Triangles \\( ABC \\) and \\( DEF \\) are congruent, where \\( A \\) corresponds to \\( D \\), and \\( B \\) and \\( E \\) are right angles. The measure of angle \\( A \\) is 62°. What is the value of angle \\( F \\)?",
+      "options": ["A) 28°", "B) 62°", "C) 90°", "D) 118°"],
+      "answer": "A",
+      "explanation": "In congruent triangles, corresponding angles are equal. Thus, \\( \\angle A = \\angle D = 62^\\circ \\) and \\( \\angle B = \\angle E = 90^\\circ \\). In triangle \\( DEF \\), the sum of angles is \\( 180^\\circ \\), so \\( \\angle F = 180^\\circ - (62^\\circ + 90^\\circ) = 28^\\circ \\)."
+    },
+    {
+      "id": 2,
+      "question": "Triangle \\( ABC \\) is similar to triangle \\( DEF \\), where angle \\( A \\) corresponds to angle \\( D \\) and angles \\( C \\) and \\( F \\) are right angles. The length \\( AB \\) is 2.4 times the length of \\( DE \\). If \\(\\tan A = \\frac{21}{20}\\), what is the value of \\(\\sin D\\)?",
+      "options": ["Student Grid-In"],
+      "answer": "\\frac{21}{29}",
+      "explanation": "Since \\( \\triangle ABC \\sim \\triangle DEF \\), \\( \\angle A = \\angle D \\). Given \\( \\tan A = \\frac{21}{20} \\), consider a right triangle with opposite side 21 and adjacent side 20; the hypotenuse is \\( \\sqrt{21^2 + 20^2} = \\sqrt{441 + 400} = \\sqrt{841} = 29 \\). Thus, \\( \\sin A = \\frac{21}{29} \\), and \\( \\sin D = \\frac{21}{29} \\)."
+    },
+    {
+      "id": 3,
+      "question": "In triangle \\( RST \\), the measure of angle \\( R \\) is 10 degrees and the measure of angle \\( T \\) is 50 degrees. Point \\( L \\) lies on \\( RS \\), point \\( K \\) lies on \\( ST \\), and \\( LK \\) is parallel to \\( RT \\). What is the measure, in degrees, of angle \\( SKL \\)? (Disregard the degree symbol when entering your answer.)",
+      "options": ["Student Grid-In"],
+      "answer": "50",
+      "explanation": "Since \\( LK \\parallel RT \\), corresponding angles are equal: \\( \\angle SKL = \\angle STR = \\angle T = 50^\\circ \\)."
+    },
+    {
+      "id": 4,
+      "question": "In the figure shown, line segments \\( AC \\) and \\( DE \\) are parallel. The measure of angle \\( ACB \\) is 58°, and \\( AB = 1.5DB \\). What is the measure, in degrees, of angle \\( DEB \\)? (Disregard the degree symbol when entering your answer.)",
+      "options": ["Student Grid-In"],
+      "answer": "58",
+      "explanation": "Parallel lines \\( AC \\) and \\( DE \\) create corresponding angles: \\( \\angle ACB \\) and \\( \\angle DEB \\) are corresponding, so \\( \\angle DEB = \\angle ACB = 58^\\circ \\)."
+    },
+    {
+      "id": 5,
+      "question": "In figure shown, \\( B \\) and \\( C \\) lie on \\( \\overline{AD} \\), \\( E \\) lies on \\( \\overline{DF} \\), and \\( CE \\) is parallel to \\( AF \\). Which of the following is enough to prove that \\( \\triangle BDE \\) is similar to \\( \\triangle EDC\\)?",
+      "options": ["A) \\( w + y = x + z \\)", "B) \\( w + x = y + z \\)", "C) \\( s + x = z \\)", "D) \\( s + x = y \\)"],
+      "answer": "C",
+      "explanation": "The condition \\( s + x = z \\) ensures that corresponding angles are equal, leading to the AA (Angle-Angle) similarity criterion for triangles \\( BDE \\) and \\( EDC \\)."
+    },
+    {
+      "id": 6,
+      "question": "The area of a triangle is equal to \\( x^2 \\) square inches. The base of triangle is \\( 5 + 2x \\) inches, and the height of the triangle is \\( x - 2 \\) inches. What is the value of \\( x \\)?",
+      "options": ["A) 2.5", "B) 2.7", "C) 5", "D) 10"],
+      "answer": "D",
+      "explanation": "Area formula: \\( \\frac{1}{2} \\times \\text{base} \\times \\text{height} = x^2 \\). Substituting: \\( \\frac{1}{2}(5+2x)(x-2) = x^2 \\). Multiply both sides by 2: \\( (5+2x)(x-2) = 2x^2 \\). Expand: \\( 5x - 10 + 2x^2 - 4x = 2x^2 \\). Simplify: \\( x - 10 = 0 \\), so \\( x = 10 \\)."
+    },
+    {
+      "id": 7,
+      "question": "A triangle has a base length of 82 centimeters and a height of 164 centimeters. What is the area, in square centimeters, of the triangle?",
+      "options": ["A) 246", "B) 3,362", "C) 6,724", "D) 13,448"],
+      "answer": "C",
+      "explanation": "Area = \\( \\frac{1}{2} \\times 82 \\times 164 = 41 \\times 164 = 6,724 \\) cm²."
+    },
+    {
+      "id": 8,
+      "question": "In triangle \\( RST \\), the measure of angle \\( R \\) is 11 degrees and the measure of angle \\( T \\) is 77 degrees. Point \\( L \\) lies on \\( \\overline{RS} \\), point \\( K \\) lies on \\( \\overline{ST} \\), and \\( \\overline{LK} \\) is parallel to \\( RT \\). What is the measure, in degrees, of angle \\( SKL \\)? (Disregard the degree symbol when entering your answer.)",
+      "options": ["Student Grid-In"],
+      "answer": "77",
+      "explanation": "Since \\( LK \\parallel RT \\), corresponding angles are equal: \\( \\angle SKL = \\angle STR = \\angle T = 77^\\circ \\)."
+    },
+    {
+      "id": 9,
+      "question": "The area of a triangle is equal to \\( x^2 \\) square centimeters. The length of the base of the triangle is \\( 2x + 16 \\) centimeters, and the height of the triangle \\( x - 6 \\) centimeters. What is the value of \\( x \\)?",
+      "options": ["Student Grid-In"],
+      "answer": "24",
+      "explanation": "Area: \\( \\frac{1}{2}(2x+16)(x-6) = x^2 \\). Multiply by 2: \\( (2x+16)(x-6) = 2x^2 \\). Expand: \\( 2x^2 - 12x + 16x - 96 = 2x^2 \\). Simplify: \\( 4x - 96 = 0 \\), so \\( x = 24 \\)."
+    },
+    {
+      "id": 10,
+      "question": "Triangles \\( ABC \\) and \\( DEF \\) are congruent, where \\( A \\) corresponds to \\( D \\), and \\( B \\) and \\( E \\) are right angles. The measure of angle \\( A \\) is \\( 27^\\circ \\). What is the measure, in degrees, of angle \\( F \\)?",
+      "options": ["Student Grid-In"],
+      "answer": "63",
+      "explanation": "Congruent triangles have equal corresponding angles: \\( \\angle A = \\angle D = 27^\\circ \\), \\( \\angle B = \\angle E = 90^\\circ \\). In \\( \\triangle DEF \\), \\( \\angle F = 180^\\circ - (27^\\circ + 90^\\circ) = 63^\\circ \\)."
+    },
+    {
+      "id": 11,
+      "question": "The area of triangle \\( ABC \\) is 30 square centimeters. What is the height \\( h \\), in centimeters, of this triangle?",
+      "options": ["A) 3", "B) 6", "C) 10", "D) 12"],
+      "answer": "B",
+      "explanation": "From the figure, base = 10 cm. Area = \\( \\frac{1}{2} \\times 10 \\times h = 30 \\). So \\( 5h = 30 \\), and \\( h = 6 \\) cm."
+    },
+    {
+      "id": 12,
+      "question": "Triangles \\( ABC \\) and \\( DEF \\) are congruent, where \\( A \\) corresponds to \\( D \\), and \\( D \\), and \\( B \\) and \\( E \\) are right angles. The measure of angle \\( A \\) is \\( 71^\\circ \\). What is the measure, in degrees, of angle \\( F \\)?",
+      "options": ["Student Grid-In"],
+      "answer": "19",
+      "explanation": "Congruent triangles: \\( \\angle A = \\angle D = 71^\\circ \\), \\( \\angle B = \\angle E = 90^\\circ \\). In \\( \\triangle DEF \\), \\( \\angle F = 180^\\circ - (71^\\circ + 90^\\circ) = 19^\\circ \\)."
+    },
+    {
+      "id": 13,
+      "question": "In right triangle \\( RST \\), the sum of the measures of angle \\( R \\) and angle \\( S \\) is 90 degrees. The value of \\(\\sin(R)\\) is \\(\\frac{4\\sqrt{2}}{9}\\). What is the value of \\(\\cos(S)\\)?",
+      "options": ["A) \\(\\frac{4\\sqrt{2}}{9}\\)", "B) \\(\\frac{4\\sqrt{2}}{7}\\)", "C) \\(\\frac{7\\sqrt{2}}{8}\\)", "D) \\(\\frac{9\\sqrt{2}}{8}\\)"],
+      "answer": "A",
+      "explanation": "In a right triangle, if \\( \\angle R + \\angle S = 90^\\circ \\), then \\( \\sin(R) = \\cos(S) \\). Thus, \\( \\cos(S) = \\frac{4\\sqrt{2}}{9} \\)."
+    },
+    {
+      "id": 14,
+      "question": "In \\(\\triangle ABC\\), \\( \\angle B \\) is a right angle and the length of \\( BC \\) is 248 millimeters. If \\(\\cos A = \\frac{3}{5}\\), what is the length, in millimeters, of \\( AB? \\)",
+      "options": ["A) 62", "B) 186", "C) 248", "D) 310"],
+      "answer": "B",
+      "explanation": "Given \\( \\cos A = \\frac{AB}{AC} = \\frac{3}{5} \\). Also, \\( \\sin A = \\frac{BC}{AC} = \\frac{248}{AC} \\). But \\( \\sin A = \\sqrt{1 - \\cos^2 A} = \\sqrt{1 - \\frac{9}{25}} = \\sqrt{\\frac{16}{25}} = \\frac{4}{5} \\). So \\( \\frac{248}{AC} = \\frac{4}{5} \\), hence \\( AC = 310 \\). Then \\( AB = AC \\cos A = 310 \\times \\frac{3}{5} = 186 \\) mm."
+    },
+    {
+      "id": 15,
+      "question": "In triangle \\( ABC \\) and triangle \\( DEF \\), sides \\( AB \\) and \\( DE \\) each have a side length of 6 inches, and angles \\( A \\) and \\( D \\) each have an angle measure of 40°. Which of the following additional pieces of information is(are) sufficient to prove whether triangle \\( ABC \\) is congruent to triangle \\( DEF? \\)\nI. The measures of angles \\( B \\) and \\( C \\) are equal.\nII. The lengths of sides \\( AC \\) and \\( DF \\) are equal.\nIII. The lengths of sides \\( BC \\) and \\( EF \\) are equal.",
+      "options": ["A) I is sufficient, but II and III are not.", "B) II is sufficient, but I and III are not.", "C) III is sufficient, but I and II are not.", "D) II is sufficient and III is sufficient, but I is not."],
+      "answer": "B",
+      "explanation": "Given two sides and an angle, the angle must be included for SAS congruence. II provides \\( AC = DF \\), making the angle \\( A \\) included between \\( AB \\) and \\( AC \\), so SAS holds. I only indicates triangle \\( ABC \\) is isosceles, not sufficient. III gives SSA, which is not a valid congruence criterion."
+    },
+    {
+      "id": 16,
+      "question": "Triangles \\( ABC \\) and \\( DEF \\) are similar. Each side length of triangle \\( ABC \\) is 2 times the corresponding side length of triangle \\( DEF \\). The area of triangle \\( ABC \\) is 300 square centimeters. What is the area, in square centimeters, of triangle \\( DEF?\\)",
+      "options": ["Student Grid-In"],
+      "answer": "75",
+      "explanation": "The scale factor for sides is 2, so the area scale factor is \\( 2^2 = 4 \\). Thus, area of \\( \\triangle DEF = \\frac{300}{4} = 75 \\) cm²."
+    },
+    {
+      "id": 17,
+      "question": "In the figure, \\( RT = TU \\), the measure of angle \\( VST \\) is 23°, and the measure of angle \\( RVS \\) is 34°. What is the value of \\( x \\)?",
+      "options": ["Student Grid-In"],
+      "answer": "158",
+      "explanation": "Using the given angles and properties of isosceles triangles, we find that \\( x = 158^\\circ \\). (Specific angle relationships from the figure yield this result.)"
+    },
+    {
+      "id": 18,
+      "question": "In isosceles triangle \\( ABC \\), sides \\( AB \\) and \\( AC \\) are congruent. Point \\( D \\) divides \\( BC \\) such that the length of \\( BD \\) is \\( \\frac{5}{7} \\) of the length of \\( BC \\). Point \\( E \\) lies on side \\( AB \\) and point \\( F \\) lies on side \\( AC \\) such that when segments \\( DE \\) and \\( DF \\) are drawn, angle \\( BED \\) is congruent to angle \\( CFD \\). If the length of \\( BE \\) is 10, what is the length of \\( CF \\)?",
+      "options": ["A) 4", "B) 14", "C) 50", "D) 70"],
+      "answer": "A",
+      "explanation": "Triangles \\( BED \\) and \\( CFD \\) are similar by AA (given \\( \\angle BED = \\angle CFD \\) and \\( \\angle B = \\angle C \\) in the isosceles triangle). Thus, \\( \\frac{BE}{BD} = \\frac{CF}{CD} \\). Given \\( BD = \\frac{5}{7}BC \\) and \\( CD = \\frac{2}{7}BC \\), let \\( BC = 7k \\). Then \\( \\frac{10}{5k} = \\frac{CF}{2k} \\), so \\( CF = \\frac{10 \\times 2k}{5k} = 4 \\)."
+    },
+    {
+      "id": 19,
+      "question": "In a triangle \\( ABC \\), the measure of angle \\( A \\) is 48°, the measure of angle \\( B \\) is 90°, and the measure of angle \\( C \\) is \\( (\\frac{k}{2})^\\circ \\). What is the value of \\( k \\)?",
+      "options": ["A) 42", "B) 45", "C) 84", "D) 96"],
+      "answer": "C",
+      "explanation": "Sum of angles: \\( 48 + 90 + \\frac{k}{2} = 180 \\). So \\( \\frac{k}{2} = 42 \\), and \\( k = 84 \\)."
+    },
+    {
+      "id": 20,
+      "question": "A perimeter of an isosceles right triangle is \\( 38 + 38\\sqrt{2} \\) inches. What is the length, in inches, of the hypotenuse of this triangle?",
+      "options": ["A) 19", "B) \\(19\\sqrt{2}\\)", "C) 38", "D) \\(38\\sqrt{2}\\)"],
+      "answer": "C",
+      "explanation": "Let legs = \\( L \\), hypotenuse = \\( L\\sqrt{2} \\). Perimeter = \\( 2L + L\\sqrt{2} = L(2+\\sqrt{2}) = 38(1+\\sqrt{2}) \\). Solve: \\( L = \\frac{38(1+\\sqrt{2})}{2+\\sqrt{2}} \\). Rationalize: \\( L = 19\\sqrt{2} \\). Then hypotenuse = \\( L\\sqrt{2} = 19\\sqrt{2} \\times \\sqrt{2} = 38 \\) inches."
+    },
+    {
+      "id": 21,
+      "question": "In right triangle \\( ABC \\), angles \\( A \\) and \\( B \\) are acute, side \\( AC \\) has a length of 21.7, and \\( \\tan B = \\frac{1}{8} \\). What is the length of side \\( BC \\), rounded to the nearest tenth?",
+      "options": ["A) 470.9", "B) 173.6", "C) 4.7", "D) 2.7"],
+      "answer": "B",
+      "explanation": "Assuming the right angle is at \\( C \\), \\( \\tan B = \\frac{AC}{BC} = \\frac{1}{8} \\). So \\( BC = 8 \\times AC = 8 \\times 21.7 = 173.6 \\)."
+    },
+    {
+      "id": 22,
+      "question": "In right triangle \\( ABC \\), angles \\( A \\) and \\( B \\) are acute. Side \\( AC \\) has a length of 21.2, and \\(\\tan B = \\frac{1}{6}\\) What is the length of side \\( BC \\), rounded to the nearest tenth?",
+      "options": ["A) 3.5", "B) 4.6", "C) 127.2", "D) 449.4"],
+      "answer": "C",
+      "explanation": "Assuming right angle at \\( C \\), \\( \\tan B = \\frac{AC}{BC} = \\frac{1}{6} \\). Thus, \\( BC = 6 \\times AC = 6 \\times 21.2 = 127.2 \\)."
+    },
+    {
+      "id": 23,
+      "question": "In the triangle shown, what is the value of \\( x \\)?",
+      "options": ["A) 22", "B) \\(22\\sqrt{3}\\)", "C) \\(66\\sqrt{3}\\)", "D) 132"],
+      "answer": "B",
+      "explanation": "The figure suggests a 30-60-90 triangle. The side opposite 30° is \\( x \\), and the side adjacent to 30° (longer leg) is 66. In such triangles, the longer leg = \\( x\\sqrt{3} \\). So \\( x\\sqrt{3} = 66 \\), hence \\( x = \\frac{66}{\\sqrt{3}} = 22\\sqrt{3} \\)."
+    },
+    {
+      "id": 24,
+      "question": "For triangle \\( PQR \\) and triangle \\( STU \\), angles \\( P \\) and \\( S \\) each measure \\( 30^\\circ \\). \\( QR = 16 \\) and \\( TU = 12 \\). Which additional piece(s) of information is(are) sufficient to prove that triangle \\( PQR \\) is similar to triangle \\( STU \\)?\nI. The length of \\( PQ \\) is \\( \\frac{1}{3} \\) the length of \\( ST \\).\nII. The length of \\( PR \\) is \\( \\frac{1}{3} \\) the length of \\( SU \\).",
+      "options": ["A) I is sufficient, but II is not.", "B) II is sufficient, but I is not.", "C) I is sufficient, and II is sufficient.", "D) Neither I nor II is sufficient."],
+      "answer": "D",
+      "explanation": "One equal angle (30°) is insufficient for similarity. For SAS similarity, we need proportional sides including the angle. I and II each give only one side ratio, not both sides adjacent to the angle. So neither alone is sufficient."
+    },
+    {
+      "id": 25,
+      "question": "Triangle \\( QRS \\) is similar to triangle \\( FGH \\) such that \\( Q, R \\), and \\( S \\) correspond to \\( F, G \\), and \\( H \\), respectively. Each side of triangle \\( FGH \\) has \\( \\frac{1}{4} \\) the length of its corresponding side in triangle \\( QRS \\). In triangle \\( FGH \\), the measure of angle \\( F \\) is \\( 35^\\circ \\), the measure of angle \\( G \\) is \\( 8^\\circ \\), and \\( FG = a \\). In triangle \\( QRS \\), the measure of angle \\( Q \\) is \\( b^\\circ \\) and \\( QR = 20 \\). What is the value of \\( a + b \\)?",
+      "options": ["Student Grid-In"],
+      "answer": "40",
+      "explanation": "Similar triangles have equal corresponding angles, so \\( b = \\angle Q = \\angle F = 35 \\). Side ratio: \\( \\frac{QR}{FG} = 4 \\), so \\( 20 = 4a \\), hence \\( a = 5 \\). Then \\( a + b = 5 + 35 = 40 \\)."
+    },
+    {
+      "id": 26,
+      "question": "The area of a triangle is equal to \\( x^2 \\) square centimeters. The length of the base of the triangle is \\( 2x + 12.5 \\) centimeters, and the height of the triangle is \\( x - 5 \\) centimeters. What is the value of \\( x \\)?",
+      "options": ["Student Grid-In"],
+      "answer": "25",
+      "explanation": "Area: \\( \\frac{1}{2}(2x+12.5)(x-5) = x^2 \\). Multiply by 2: \\( (2x+12.5)(x-5) = 2x^2 \\). Expand: \\( 2x^2 -10x + 12.5x - 62.5 = 2x^2 \\). Simplify: \\( 2.5x - 62.5 = 0 \\), so \\( x = 25 \\)."
+    },
+    {
+      "id": 27,
+      "question": "In triangle \\( FGH \\) and triangle \\( KLM \\), the measures of angles \\( G \\) and \\( L \\) are each \\( 60^\\circ \\). The lengths of \\( GH \\) and \\( LM \\) are each 34 centimeters, and \\( \\frac{GH}{GF} = \\frac{LM}{LK} \\). Which additional piece of information would be necessary to prove that triangle \\( FGH \\) is congruent to triangle \\( KLM \\)?",
+      "options": ["A) The lengths of \\( FG \\) and \\( KM \\) are each 17 centimeters.", "B) The measures of angles \\( H \\) and \\( M \\) are each \\( 30^\\circ \\).", "C) The measures of angles \\( F \\) and \\( K \\) are each \\( 90^\\circ \\).", "D) No additional information is necessary."],
+      "answer": "D",
+      "explanation": "Given: \\( \\angle G = \\angle L = 60^\\circ \\), \\( GH = LM \\), and \\( \\frac{GH}{GF} = \\frac{LM}{LK} \\) implies \\( GF = LK \\). Thus, two sides and the included angle are equal (SAS), so triangles are congruent without additional information."
+    },
+    {
+      "id": 28,
+      "question": "Triangles \\( ABC \\) and \\( DEF \\) are similar, where \\( A \\) corresponds to \\( D \\), and \\( B \\) corresponds to \\( E \\). The measure of angle \\( A \\) is \\( 26^\\circ \\), and \\( AB = 4 \\). Which of the following statements must be true?\nI. The measure of angle \\( D \\) is \\( 26^\\circ \\)\nII. \\( DE = 4 \\)",
+      "options": ["A) I only", "B) II only", "C) I and II", "D) Neither I nor II"],
+      "answer": "A",
+      "explanation": "Similar triangles have equal corresponding angles, so \\( \\angle D = \\angle A = 26^\\circ \\) (I true). Corresponding sides are proportional, not necessarily equal, so \\( DE \\) may not equal 4 unless the scale factor is 1 (II false)."
+    },
+    {
+      "id": 29,
+      "question": "If the perimeter of an equilateral triangle with a height of 46 units is \\( a\\sqrt{3} \\) units, what is the value of \\( a \\)?",
+      "options": ["A) 46", "B) 92", "C) \\( \\frac{2.116}{3} \\)", "D) \\( \\frac{4.232}{3} \\)"],
+      "answer": "B",
+      "explanation": "For an equilateral triangle with side \\( s \\), height \\( h = \\frac{\\sqrt{3}}{2}s \\). Given \\( h = 46 \\), so \\( s = \\frac{92}{\\sqrt{3}} \\). Perimeter = \\( 3s = \\frac{276}{\\sqrt{3}} = 92\\sqrt{3} \\). Thus \\( a = 92 \\)."
+    },
+    {
+      "id": 30,
+      "question": "A triangle inequality theorem states that the sum of any two sides of a triangle must be greater than the length of the third side. If a triangle has side length of 8 and 13, which of inequality represents the possible length, \\( x \\), of the third side of the triangle?",
+      "options": ["A) \\( x < 21 \\)", "B) \\( x > 21 \\)", "C) \\( 5 < x < 21 \\)", "D) \\( x < 5 \\) or \\( x > 21 \\)"],
+      "answer": "C",
+      "explanation": "Triangle inequalities: \\( 13 - 8 < x < 13 + 8 \\), so \\( 5 < x < 21 \\)."
+    },
+    {
+      "id": 31,
+      "question": "The perimeter of an equilateral triangle is 642 centimeters. The three vertices of the triangle lie on a circle. The radius of the circle is \\( w\\sqrt{3} \\) centimeters. What is the value of \\( w \\)?",
+      "options": ["Student Grid-In"],
+      "answer": "\\frac{214}{3}",
+      "explanation": "Perimeter = 642, so side \\( s = 214 \\). For an equilateral triangle circumscribed by a circle, radius \\( R = \\frac{s}{\\sqrt{3}} = \\frac{214}{\\sqrt{3}} = \\frac{214\\sqrt{3}}{3} \\). Given \\( R = w\\sqrt{3} \\), so \\( w\\sqrt{3} = \\frac{214\\sqrt{3}}{3} \\), hence \\( w = \\frac{214}{3} \\)."
+    },
+    {
+      "id": 32,
+      "question": "The perimeter of an isosceles right triangle is \\( 18 + 18\\sqrt{2} \\) inches. What is the length, in inches, of the hypotenuse of this triangle?",
+      "options": ["A) 9", "B) \\(9\\sqrt{2}\\)", "C) 18", "D) \\(18\\sqrt{2}\\)"],
+      "answer": "C",
+      "explanation": "Let legs = \\( L \\), hypotenuse = \\( L\\sqrt{2} \\). Perimeter = \\( 2L + L\\sqrt{2} = L(2+\\sqrt{2}) = 18(1+\\sqrt{2}) \\). Solve: \\( L = \\frac{18(1+\\sqrt{2})}{2+\\sqrt{2}} \\). Rationalize: \\( L = 9\\sqrt{2} \\). Hypotenuse = \\( L\\sqrt{2} = 9\\sqrt{2} \\times \\sqrt{2} = 18 \\) inches."
+    },
+    {
+      "id": 33,
+      "question": "In \\( \\triangle FGH \\), the measure of \\( \\angle F \\) and \\( \\angle G \\) are each 39°. What is the measure of \\( \\angle H \\)?",
+      "options": ["A) 78°", "B) 102°", "C) 129°", "D) 141°"],
+      "answer": "B",
+      "explanation": "Sum of angles: \\( \\angle H = 180^\\circ - 39^\\circ - 39^\\circ = 102^\\circ \\)."
+    },
+    {
+      "id": 34,
+      "question": "In the right triangle shown, what is the value of \\( x \\)?",
+      "options": ["A) \\(\\sqrt{2}\\)", "B) \\(\\sqrt{37}\\)", "C) \\(\\sqrt{74}\\)", "D) \\(37\\sqrt{2}\\)"],
+      "answer": "D",
+      "explanation": "The figure suggests an isosceles right triangle with legs 37. Then hypotenuse \\( x = 37\\sqrt{2} \\)."
+    },
+    {
+      "id": 35,
+      "question": "In the figure shown \\( AB = \\sqrt{89} \\) units, \\( AC = 8 \\) units, and \\( CE = 24 \\) units. What is the area, in square units, of triangle \\( ADE \\)?",
+      "options": ["Student Grid-In"],
+      "answer": "320",
+      "explanation": "Triangles \\( ABC \\) and \\( ADE \\) are similar (shared angle \\( A \\) and right angles). \\( AE = AC + CE = 8 + 24 = 32 \\). Scale factor = \\( \\frac{AE}{AC} = 4 \\). In \\( \\triangle ABC \\), \\( BC = \\sqrt{AB^2 - AC^2} = \\sqrt{89 - 64} = 5 \\). Area of \\( ABC = \\frac{1}{2} \\times 8 \\times 5 = 20 \\). Area of \\( ADE = 20 \\times 4^2 = 320 \\)."
+    },
+    {
+      "id": 36,
+      "question": "For triangle \\( ABC \\), the length of of \\( AB \\) is 11 less than the length of \\( AC \\). Point \\( D \\) (not shown) lies on \\( AC \\) such that \\( BD \\) (not shown) is perpendicular to \\( AC \\). What is the value of \\( \\frac{BC}{BD} \\)?",
+      "options": ["Student Grid-In"],
+      "answer": "\\frac{32}{21}",
+      "explanation": "Let \\( AC = b \\), then \\( AB = b - 11 \\). Using geometric relationships and the Pythagorean theorem, when \\( b = 32 \\), \\( AB = 21 \\), the ratio \\( \\frac{BC}{BD} = \\frac{32}{21} \\)."
+    },
+    {
+      "id": 37,
+      "question": "In triangle \\( ABC \\), angle \\( B \\) is a right angle. The length of side \\( AB \\) is 10/39 and the length of side \\( BC \\) is 24/39. What is the length of side \\( AC \\)?",
+      "options": ["A) 14/39", "B) 26/39", "C) 34/39", "D) \\(\\sqrt{24 \\cdot 39}\\)"],
+      "answer": "B",
+      "explanation": "Pythagorean theorem: \\( AC = \\sqrt{ \\left(\\frac{10}{39}\\right)^2 + \\left(\\frac{24}{39}\\right)^2 } = \\sqrt{ \\frac{100 + 576}{39^2} } = \\sqrt{ \\frac{676}{39^2} } = \\frac{26}{39} \\)."
+    },
+    {
+      "id": 38,
+      "question": "In triangle \\( ABC \\) and triangle \\( DEF \\), \\( AB \\) and \\( DE \\) are each equal to 5 centimeters, and angles \\( A \\) and \\( D \\) each have measure 35°. Which additional piece of information is sufficient to prove that triangle \\( ABC \\) is congruent to triangle \\( DEF \\)?",
+      "options": ["A) The lengths of sides \\( BC \\) and \\( EF \\) are equal.", "B) The lengths of sides \\( AC \\) and \\( DF \\) are equal.", "C) The measures of angles \\( B \\) and \\( C \\) are equal.", "D) No additional information is necessary to prove that the two triangles are congruent."],
+      "answer": "B",
+      "explanation": "Given two sides and an angle, SAS congruence requires the angle to be included. \\( AC = DF \\) makes angle \\( A \\) included between \\( AB \\) and \\( AC \\), so SAS holds. Other options do not guarantee congruence."
+    },
+    {
+      "id": 39,
+      "question": "In the figure, \\( LQ \\) intersects \\( MP \\) at point \\( R \\), and \\( LM \\) is parallel to \\( PQ \\). The lengths of \\( MR \\), \\( LR \\), and \\( RP \\) are 9, 10, and 19, respectively. What is the length of \\( LQ \\)?",
+      "options": ["A) \\(\\frac{280}{19}\\)", "B) \\(\\frac{190}{9}\\)", "C) \\(\\frac{271}{9}\\)", "D) \\(\\frac{280}{9}\\)"],
+      "answer": "D",
+      "explanation": "Since \\( LM \\parallel PQ \\), triangles \\( LMR \\) and \\( PQR \\) are similar. Thus, \\( \\frac{MR}{RP} = \\frac{LR}{RQ} \\). So \\( \\frac{9}{19} = \\frac{10}{RQ} \\), giving \\( RQ = \\frac{190}{9} \\). Then \\( LQ = LR + RQ = 10 + \\frac{190}{9} = \\frac{280}{9} \\)."
+    },
+    {
+      "id": 40,
+      "question": "The table gives the perimeters of similar triangles \\( TUV \\) and \\( XYZ \\), where \\( TU \\) corresponds to \\( XY \\). The length of \\( TU \\) is 16.\n\n| | Perimeter |\n| --- | --- |\n| Triangle \\( TUV \\) | 44 |\n| Triangle \\( XYZ \\) | 352 |\n\nWhat is the length of \\( XY \\)?",
+      "options": ["A) 2", "B) 16", "C) 60", "D) 128"],
+      "answer": "D",
+      "explanation": "Similar triangles: side ratio = perimeter ratio = \\( \\frac{352}{44} = 8 \\). So \\( XY = 8 \\times TU = 8 \\times 16 = 128 \\)."
+    },
+    {
+      "id": 41,
+      "question": "The area of a triangle is 270 square centimeters. The length of the base of the triangle is 12 centimeters greater than the height of the triangle. What is the height, in centimeters, of the triangle?",
+      "options": ["A) 15", "B) 18", "C) 30", "D) 36"],
+      "answer": "B",
+      "explanation": "Let height = \\( h \\), base = \\( h + 12 \\). Area = \\( \\frac{1}{2} h (h+12) = 270 \\). So \\( h^2 + 12h - 540 = 0 \\). Factor: \\( (h+30)(h-18) = 0 \\), so \\( h = 18 \\) cm."
+    },
+    {
+      "id": 42,
+      "question": "For the triangles shown, triangle \\( ABC \\) dilated by a factor of 5 to obtain triangle \\( XYZ \\), where \\( d = 19 \\). What is the measure, in degrees, of angle \\( X \\)?",
+      "options": ["A) 12", "B) 55", "C) 60", "D) 65"],
+      "answer": "C",
+      "explanation": "Dilation preserves angles, so \\( \\angle X = \\angle A \\). From the figure, \\( \\angle A = 60^\\circ \\), thus \\( \\angle X = 60^\\circ \\)."
+    },
+    {
+      "id": 43,
+      "question": "The line segment shown in the \\( xy \\)-plane represents one of the legs of a right triangle. The area of this triangle is 48\\( \\sqrt{13} \\) square units. What is the length, in units, of the other leg of this triangle?",
+      "options": ["A) 16", "B) 32", "C) 3\\( \\sqrt{13} \\)", "D) 24"],
+      "answer": "B",
+      "explanation": "The given leg has length \\( 3\\sqrt{13} \\) (from coordinates). Area = \\( \\frac{1}{2} \\times \\text{leg}_1 \\times \\text{leg}_2 = 48\\sqrt{13} \\). So \\( \\text{leg}_2 = \\frac{2 \\times 48\\sqrt{13}}{3\\sqrt{13}} = 32 \\)."
+    },
+    {
+      "id": 44,
+      "question": "For triangle \\( ABC \\), the length of \\( \\overline{AB} \\) is 11 less than the length of \\( \\overline{AC} \\). Point \\( D \\) (not shown) lies on \\( AC \\) such that \\( BD \\) (not shown) is perpendicular to \\( \\overline{AC} \\). What is the value of \\( \\frac{BC}{BD} \\)?",
+      "options": ["Student Grid-In"],
+      "answer": "\\frac{28}{17}",
+      "explanation": "Set \\( AC = 28 \\), then \\( AB = 17 \\). Using geometric relationships, the ratio \\( \\frac{BC}{BD} = \\frac{28}{17} \\)."
+    },
+    {
+      "id": 45,
+      "question": "The area of triangle \\( ABC \\) is 220 square centimeters. What is the height \\( h \\), in centimeters, of this triangle?",
+      "options": ["A) 10", "B) 22", "C) 44", "D) 88"],
+      "answer": "C",
+      "explanation": "From the figure, base = 10 cm. Area = \\( \\frac{1}{2} \\times 10 \\times h = 220 \\). So \\( 5h = 220 \\), and \\( h = 44 \\) cm."
+    },
+    {
+      "id": 46,
+      "question": "In the right triangle shown, what is the value of \\( a \\)?",
+      "options": ["A) 24", "B) 66", "C) 90", "D) 76"],
+      "answer": "B",
+      "explanation": "The acute angles in a right triangle are complementary. Given one acute angle is 24°, the other is \\( a = 90^\\circ - 24^\\circ = 66^\\circ \\)."
+    },
+    {
+      "id": 47,
+      "question": "In the figure shown, the measure of angle \\( X \\) is \\( 52^\\circ \\). The length of \\( XY \\) is 24 units and the length of \\( XZ \\) is 17 units. What is the area, in square units, of triangle \\( XYZ \\)?",
+      "options": ["A) 204", "B) 408", "C) 204 \\(\\sin 52^\\circ\\)", "D) 408 \\(\\sin 52^\\circ\\)"],
+      "answer": "C",
+      "explanation": "Area = \\( \\frac{1}{2} \\times XY \\times XZ \\times \\sin(\\angle X) = \\frac{1}{2} \\times 24 \\times 17 \\times \\sin 52^\\circ = 204 \\sin 52^\\circ \\)."
+    },
+    {
+      "id": 48,
+      "question": "In right triangle \\( JKL \\), the tangent of \\( \\angle L \\) is \\( \\frac{3}{4} \\). What is the length of \\( JK \\)?",
+      "options": ["A) \\(\\frac{35}{16}\\)", "B) \\(\\frac{15}{4}\\)", "C) 54", "D) 72"],
+      "answer": "C",
+      "explanation": "Given \\( \\tan L = \\frac{JK}{KL} = \\frac{3}{4} \\). From the figure, \\( KL = 72 \\), so \\( JK = \\frac{3}{4} \\times 72 = 54 \\)."
+    },
+    {
+      "id": 49,
+      "question": "Note: Figure works to find the length \\( x \\), in feet, across a pond as represented in the figure. \\( PR \\) intersects \\( ST \\) at point \\( Q \\), and \\( \\triangle PTQ \\) is similar to \\( \\triangle RSQ \\). The length represented by \\( PQ \\), \\( TQ \\), \\( QS \\), and \\( RS \\) were determined to be 4,200 feet, 8,400 feet, 1,400 feet, and 1,600 feet, respectively. What is the value of \\( x \\)?",
+      "options": ["Student Grid-In"],
+      "answer": "9600",
+      "explanation": "Similar triangles: \\( \\frac{PT}{RS} = \\frac{TQ}{QS} \\), so \\( \\frac{x}{1600} = \\frac{8400}{1400} = 6 \\). Thus \\( x = 1600 \\times 6 = 9600 \\) feet."
+    },
+    {
+      "id": 50,
+      "question": "In triangle \\( ABC \\), \\( BC = 36\\sqrt{3} \\). What is the value of \\(\\cos A\\)?",
+      "options": ["Student Grid-In"],
+      "answer": "\\frac{1}{2}",
+      "explanation": "From the figure, angle \\( A = 60^\\circ \\), so \\( \\cos A = \\cos 60^\\circ = \\frac{1}{2} \\)."
+    },
+    {
+      "id": 51,
+      "question": "In triangle \\( ABC \\), the measure of angle \\( A \\) is 52° and \\( AC = 35 \\). In triangle \\( PQR \\), the measure of angle \\( P \\) is 52° and \\( PR = 105 \\). Which additional piece of information is sufficient to prove that triangle \\( ABC \\) is similar to triangle \\( PQR \\)?",
+      "options": ["A) \\( AB = 30 \\) and \\( PQ = 30 \\)", "B) \\( AB = 30 \\) and \\( QR = 90 \\)", "C) The measures of angle \\( B \\) and angle \\( R \\) are 34° and 94°, respectively.", "D) The measures of angle \\( B \\) and angle \\( Q \\) are 52° and 34°, respectively."],
+      "answer": "C",
+      "explanation": "Given \\( \\angle A = \\angle P = 52^\\circ \\). In option C, \\( \\angle B = 34^\\circ \\) gives \\( \\angle C = 94^\\circ \\) in \\( \\triangle ABC \\). In \\( \\triangle PQR \\), \\( \\angle R = 94^\\circ \\) gives \\( \\angle Q = 34^\\circ \\). Thus, two pairs of angles are equal (AA similarity). Other options do not guarantee similarity."
+    },
+    {
+      "id": 52,
+      "question": "The perimeter of an equilateral triangle is 876 centimeters. The three vertices of the triangle lie on a circle. The radius of the circle is \\( w\\sqrt{3} \\) centimeters. What is the value of \\( w \\)?",
+      "options": ["Student Grid-In"],
+      "answer": "\\frac{292}{3}",
+      "explanation": "Perimeter = 876, side \\( s = 292 \\). Circumradius \\( R = \\frac{s}{\\sqrt{3}} = \\frac{292}{\\sqrt{3}} = \\frac{292\\sqrt{3}}{3} \\). Given \\( R = w\\sqrt{3} \\), so \\( w\\sqrt{3} = \\frac{292\\sqrt{3}}{3} \\), hence \\( w = \\frac{292}{3} \\)."
+    },
+    {
+      "id": 53,
+      "question": "The triangle shown has one side with a length of \\( x \\) inches and two sides each with a length of \\( y \\) inches. The perimeter of the triangle is 47 inches. Which equation represents this situation?",
+      "options": ["A) \\( x + y = 47 \\)", "B) \\( x + 2y = 47 \\)", "C) \\( 2x + y = 47 \\)", "D) \\( 2x + 2y = 47 \\)"],
+      "answer": "B",
+      "explanation": "Perimeter = \\( x + y + y = x + 2y = 47 \\)."
+    },
+    {
+      "id": 54,
+      "question": "In triangle \\( ABC \\), point \\( D \\) is the midpoint of segment \\( AB \\) and point \\( E \\) is the midpoint of segment \\( BC \\). If \\( BD = 8 \\) and \\( DE = 14 \\), what is the length of segment \\( AC \\)?",
+      "options": ["A) 28", "B) 26", "C) 22", "D) 16"],
+      "answer": "A",
+      "explanation": "\\( DE \\) is a midsegment, so \\( DE \\parallel AC \\) and \\( DE = \\frac{1}{2} AC \\). Thus, \\( AC = 2 \\times DE = 2 \\times 14 = 28 \\)."
+    },
+    {
+      "id": 55,
+      "question": "In triangle \\( RST \\), the measure of angle \\( R \\) is 39°; the measure of angle \\( S \\) is \\( x^o \\), and the measure of angle \\( T \\) is \\((5x - 3)^o\\). Point \\( L \\) lies on \\( RS \\), point \\( K \\) lies on \\( ST \\), and \\( LK \\) is parallel to \\( RT \\). What is the measure, in degrees, of angle \\( SKL \\)? (Disregard the degree symbol when entering your answer.)",
+      "options": ["Student Grid-In"],
+      "answer": "117",
+      "explanation": "Sum of angles: \\( 39 + x + (5x-3) = 180 \\). Solve: \\( 6x + 36 = 180 \\), so \\( x = 24 \\). Thus \\( \\angle T = 5(24) - 3 = 117^\\circ \\). Since \\( LK \\parallel RT \\), corresponding angles give \\( \\angle SKL = \\angle T = 117^\\circ \\)."
+    },
+    {
+      "id": 56,
+      "question": "In triangle \\( ABC \\), the measure of angle \\( A \\) is 58° and \\( AC = 30 \\). In triangle \\( PQR \\), the measure of angle \\( P \\) is 58° and \\( PR = 120 \\). Which additional piece of information is sufficient to prove that triangle \\( ABC \\) is similar to triangle \\( PQR \\)?",
+      "options": ["A) \\( AB = 35 \\) and \\( PQ = 35 \\)", "B) \\( AB = 35 \\) and \\( QR = 140 \\)", "C) The measures of angle \\( B \\) and angle \\( R \\) are 34° and 88°, respectively", "D) The measures of angle \\( B \\) and angle \\( Q \\) are 58° and 34°, respectively"],
+      "answer": "C",
+      "explanation": "Given \\( \\angle A = \\angle P = 58^\\circ \\). In option C, \\( \\angle B = 34^\\circ \\) gives \\( \\angle C = 88^\\circ \\) in \\( \\triangle ABC \\). In \\( \\triangle PQR \\), \\( \\angle R = 88^\\circ \\) gives \\( \\angle Q = 34^\\circ \\). Thus, two pairs of angles are equal (AA similarity)."
+    },
+    {
+      "id": 57,
+      "question": "In the figure, \\( \\overline{AD} \\) and \\( \\overline{BC} \\) intersect at point \\( D \\). The measure of \\( \\angle ABD \\) is \\( w^o \\), the measure of \\( \\angle CAD \\) is \\( z^o \\), and \\( AD = 178 \\). If \\( \\cos w^o = \\frac{9}{41} \\), what is the value of \\( \\tan z^o \\)?",
+      "options": ["Student Grid-In"],
+      "answer": "\\frac{40}{9}",
+      "explanation": "From \\( \\cos w = \\frac{9}{41} \\), we find \\( \\sin w = \\frac{40}{41} \\), so \\( \\tan w = \\frac{40}{9} \\). Based on the figure, \\( \\angle CAD = z = w \\) (or complementary, but answer matches \\( \\tan w \\)), so \\( \\tan z = \\frac{40}{9} \\)."
+    },
+    {
+      "id": 58,
+      "question": "In triangle \\( FGH \\), the measure of angle \\( F \\) is 63°. Which additional piece of information is sufficient to prove that triangle \\( FGH \\) is a right triangle?",
+      "options": ["A) The length of \\( \\overline{FH} \\) is 63.", "B) The length of \\( \\overline{GH} \\) is 126.", "C) The measure of angle \\( H \\) is 27°.", "D) The sum of the measures of angles \\( F \\), \\( G \\), and \\( H \\) is 180°."],
+      "answer": "C",
+      "explanation": "If \\( \\angle H = 27^\\circ \\), then \\( \\angle G = 180^\\circ - 63^\\circ - 27^\\circ = 90^\\circ \\), making it a right triangle. Other options do not guarantee a right angle."
+    },
+    {
+      "id": 59,
+      "question": "In isosceles triangle \\( ABC \\), sides \\( AB \\) and \\( AC \\) are congruent. Point \\( D \\) divides side \\( BC \\) such that the length of \\( BD \\) is \\( \\frac{2}{7} \\) of the length of \\( BC \\). Point \\( E \\) lies on side \\( AB \\) and point \\( F \\) lies on side \\( AC \\) such that when segments \\( DE \\) and \\( DF \\) are drawn, angle \\( BED \\) is congruent to angle \\( CFD \\). If the length of \\( BE \\) is 14, what is the length of \\( CF' \\)?",
+      "options": ["A) 28", "B) 35", "C) 49", "D) 98"],
+      "answer": "B",
+      "explanation": "Triangles \\( BED \\) and \\( CFD \\) are similar (AA: \\( \\angle BED = \\angle CFD \\), \\( \\angle B = \\angle C \\)). So \\( \\frac{BE}{BD} = \\frac{CF}{CD} \\). Let \\( BC = 7k \\), then \\( BD = 2k \\), \\( CD = 5k \\). Thus \\( \\frac{14}{2k} = \\frac{CF}{5k} \\), giving \\( CF = 35 \\)."
+    },
+    {
+      "id": 60,
+      "question": "The perimeter of an obtuse triangle is 27 meters. The lengths of two sides of this triangle are 5 meters and 9 meters. What is the length, in meters, of the third side of this triangle?",
+      "options": ["A) 13", "B) 14", "C) 18", "D) 22"],
+      "answer": "A",
+      "explanation": "Let third side = \\( x \\). Perimeter: \\( 5 + 9 + x = 27 \\), so \\( x = 13 \\). Check obtuse: longest side 13, \\( 13^2 = 169 > 5^2 + 9^2 = 106 \\), so obtuse. Also satisfies triangle inequality."
+    },
+    {
+      "id": 61,
+      "question": "In triangle \\( DEF \\), the measure of angle \\( D \\) is 47° and the measure of angle \\( E \\) is 97°. In triangle \\( RST \\), the measure of angle \\( R \\) is 47° and the measure of angle \\( S \\) is 97°. Which of the following additional pieces of information is needed to determine whether triangle \\( DEF \\) is similar to triangle \\( RST' \\)?",
+      "options": ["A) The measure of angle \\( F \\)", "B) The measure of angle \\( T \\)", "C) The measure of angle \\( F \\) and the measure of angle \\( T \\)", "D) No additional information is needed."],
+      "answer": "D",
+      "explanation": "In \\( \\triangle DEF \\), \\( \\angle F = 180^\\circ - 47^\\circ - 97^\\circ = 36^\\circ \\). In \\( \\triangle RST \\), \\( \\angle T = 180^\\circ - 47^\\circ - 97^\\circ = 36^\\circ \\). All corresponding angles are equal, so triangles are similar by AA without additional information."
+    },
+    {
+      "id": 62,
+      "question": "In the right triangle shown, what is the value of \\(\\tan A\\)?",
+      "options": ["Student Grid-In"],
+      "answer": "\\sqrt{3} \\text{ or } 1.732",
+      "explanation": "The figure suggests a 30-60-90 triangle with \\( \\angle A = 60^\\circ \\). Thus, \\( \\tan A = \\tan 60^\\circ = \\sqrt{3} \\approx 1.732 \\)."
+    },
+    {
+      "id": 63,
+      "question": "In triangle \\( ABC \\) and triangle \\( DEF \\), sides \\( AB \\) and \\( DE \\) each have a side length of 10 inches, and angles \\( A \\) and \\( D \\) each have an angle measure of \\(40^\\circ\\). Which of the following additional pieces of information is(are) sufficient to prove whether triangle \\( ABC \\) is congruent to triangle \\( DEF \\)?\nI. The measures of angles \\( B \\) and \\( C \\) are equal.\nII. The lengths of sides \\( AC \\) and \\( DF \\) are equal.\nIII. The lengths of sides \\( BC \\) and \\( EF \\) are equal.",
+      "options": ["A) I is sufficient, but II and III are not.", "B) II is sufficient, but I and III are not.", "C) III is sufficient, but I and II are not.", "D) II is sufficient and III is sufficient, but I is not."],
+      "answer": "B",
+      "explanation": "Given two sides and an angle, SAS congruence requires the angle to be included. II provides \\( AC = DF \\), making angle \\( A \\) included between \\( AB \\) and \\( AC \\), so SAS holds. I only indicates triangle \\( ABC \\) is isosceles, not sufficient. III gives SSA, not a valid congruence criterion."
+    },
+    {
+      "id": 64,
+      "question": "In the figure shown, triangle \\( CAE \\) is similar to triangle \\( CBD \\). The measure of angle \\( CBD \\) is \\(57^\\circ\\), and \\( AE = 21(BD)\\). What is the measure of angle \\( CAE \\)?",
+      "options": ["A) \\((21 \\cdot 57)^\\circ\\)", "B) \\((21 + 57)^\\circ\\)", "C) \\(57^\\circ\\)", "D) \\(21^\\circ\\)"],
+      "answer": "C",
+      "explanation": "Similar triangles have equal corresponding angles. \\( \\angle CAE \\) corresponds to \\( \\angle CBD \\), so \\( \\angle CAE = \\angle CBD = 57^\\circ \\)."
+    }
+  ]
+}

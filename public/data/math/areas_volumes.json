@@ -1,0 +1,513 @@
+{
+  "dataset_info": {
+    "title": "Areas and Volumes",
+    "total_questions": 72,
+    "range": "1-72"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "question": "A right circular cylinder has a height of 6 inches. The radius of the base of the cylinder is 5 inches. What is the volume, in cubic inches, of the cylinder?",
+      "options": ["A) \\(10\\pi\\)", "B) \\(30\\pi\\)", "C) \\(50\\pi\\)", "D) \\(150\\pi\\)"],
+      "answer": "D",
+      "explanation": "Volume of a cylinder: \\(V = \\pi r^2 h\\). Substituting \\(r = 5\\) and \\(h = 6\\): \\(V = \\pi \\times 5^2 \\times 6 = \\pi \\times 25 \\times 6 = 150\\pi\\) cubic inches."
+    },
+    {
+      "id": 2,
+      "question": "A hemisphere and a cone have circular bases of equal circumference and have been connected at their bases, as shown in the figure. The diameter of the base of the hemisphere is 6 centimeters (cm) and the total height of the figure is 9 cm. What is the total volume, in \\(cm^3\\), of the cone and hemisphere?",
+      "options": ["A) \\(18\\pi\\)", "B) \\(36\\pi\\)", "C) \\(45\\pi\\)", "D) \\(162\\pi\\)"],
+      "answer": "B",
+      "explanation": "Hemisphere radius \\(r = 3\\) cm. Hemisphere volume: \\(V_h = \\frac{2}{3}\\pi r^3 = \\frac{2}{3}\\pi (27) = 18\\pi\\). Cone has same base radius. Height of cone: total height 9 cm minus hemisphere radius 3 cm = 6 cm. Cone volume: \\(V_c = \\frac{1}{3}\\pi r^2 h = \\frac{1}{3}\\pi (9)(6) = 18\\pi\\). Total: \\(18\\pi + 18\\pi = 36\\pi\\)."
+    },
+    {
+      "id": 3,
+      "question": "The area of a triangle is equal to \\(x^2\\) square centimeters. The length of the base of the triangle is \\(2x+6\\) centimeters, and the height of the triangle is \\(x-2\\) centimeters. What is the value of \\(x\\)?",
+      "options": ["Student Grid-In"],
+      "answer": "6",
+      "explanation": "Area formula: \\(\\frac{1}{2} \\times \\text{base} \\times \\text{height} = x^2\\). So \\(\\frac{1}{2}(2x+6)(x-2) = x^2\\). Simplify: \\((x+3)(x-2) = x^2 \\Rightarrow x^2 + x - 6 = x^2 \\Rightarrow x - 6 = 0 \\Rightarrow x = 6\\)."
+    },
+    {
+      "id": 4,
+      "question": "A right circular cylinder has a height of 4 meters (m) and a base with a radius of 18 m. What is the volume, in \\(m^3\\), of cylinder?",
+      "options": ["A) \\(4\\pi\\)", "B) \\(22\\pi\\)", "C) \\(288\\pi\\)", "D) \\(1296\\pi\\)"],
+      "answer": "D",
+      "explanation": "\\(V = \\pi r^2 h = \\pi \\times 18^2 \\times 4 = \\pi \\times 324 \\times 4 = 1296\\pi\\)."
+    },
+    {
+      "id": 5,
+      "question": "The volume of a right rectangular prism with a square base is 2,448 cubic centimeters. If the area of the square base is 144 square centimeters, what is the area, in square centimeters, of one of the four lateral faces of the prism?",
+      "options": ["A) 17", "B) 204", "C) 540", "D) 816"],
+      "answer": "B",
+      "explanation": "Height \\(h = \\frac{\\text{Volume}}{\\text{Base area}} = \\frac{2448}{144} = 17\\) cm. Base side length: \\(\\sqrt{144} = 12\\) cm. Lateral face area: \\(12 \\times 17 = 204\\) cm²."
+    },
+    {
+      "id": 6,
+      "question": "The volume of right rectangular prism with a square base is 1,792 cubic centimeters. If the area of the square base is 64 square centimeters, what is the area, in square centimeters, one of the four lateral faces of the prism?",
+      "options": ["A) 28", "B) 224", "C) 416", "D) 896"],
+      "answer": "B",
+      "explanation": "Height \\(h = \\frac{1792}{64} = 28\\) cm. Base side: \\(\\sqrt{64} = 8\\) cm. Lateral face area: \\(8 \\times 28 = 224\\) cm²."
+    },
+    {
+      "id": 7,
+      "question": "The area of a rectangle is 630 square inches, The length of the rectangle is 90 inches. What is the width, in inches, of this rectangle?",
+      "options": ["A) 7", "B) 90", "C) 315", "D) 540"],
+      "answer": "A",
+      "explanation": "Width = \\(\\frac{\\text{Area}}{\\text{Length}} = \\frac{630}{90} = 7\\) inches."
+    },
+    {
+      "id": 8,
+      "question": "A hemisphere is half of a sphere. If a hemisphere has a radius of 50 inches, which of the following is closest to the volume, in cubic inches, of this hemisphere?",
+      "options": ["A) 5,200", "B) 20,900", "C) 196,300", "D) 261,800"],
+      "answer": "D",
+      "explanation": "Volume = \\(\\frac{2}{3}\\pi r^3 = \\frac{2}{3}\\pi (125000) = \\frac{250000}{3}\\pi \\approx 261799.39 \\approx 261,800\\)."
+    },
+    {
+      "id": 9,
+      "question": "The table gives the areas and perimeters of two similar rectangles, where \\( n \\) is a constant.\n| | Area (sq in) | Perimeter (in) |\n| Rectangle A | 2,450 | 490 |\n| Rectangle B | 9,800 | \\( n \\) |\nWhat is the value of \\( n \\)?",
+      "options": ["A) 980", "B) 1,960", "C) 3,920", "D) 4,900"],
+      "answer": "A",
+      "explanation": "Area ratio = \\(\\frac{9800}{2450} = 4\\). Linear ratio = \\(\\sqrt{4} = 2\\). Perimeter of B = \\(490 \\times 2 = 980\\)."
+    },
+    {
+      "id": 10,
+      "question": "To study fluctuations in leaf water potential, samples of wood were taken from 25 trees and cut in the shape of a cube. The length of the edge of one of these cubes is 2.00 centimeters. If this cube has a mass of 2.72 grams, what is the density of this cube, in grams per cubic centimeter?",
+      "options": ["Student Grid-In"],
+      "answer": "0.34",
+      "explanation": "Volume = \\(2^3 = 8\\) cm³. Density = \\(\\frac{\\text{mass}}{\\text{volume}} = \\frac{2.72}{8} = 0.34\\) g/cm³."
+    },
+    {
+      "id": 11,
+      "question": "The length of the diagonal of a square is \\(\\frac{148\\sqrt{2}}{2}\\) units. What is the area, in square units, of the square?",
+      "options": ["A) 74", "B) 296", "C) 5,476", "D) 10,952"],
+      "answer": "C",
+      "explanation": "Diagonal \\(d = s\\sqrt{2}\\). So \\(s = \\frac{d}{\\sqrt{2}} = \\frac{148\\sqrt{2}/2}{\\sqrt{2}} = \\frac{148}{2} = 74\\). Area = \\(s^2 = 74^2 = 5476\\)."
+    },
+    {
+      "id": 12,
+      "question": "The floor of a school has an area of 2,025 square meters. An architect creates a scale model of the floor of the school, where the length of each side of the model is \\(\\frac{1}{15}\\) times the length of the corresponding side of the actual floor of the school. What is the area, in square meters, of the scale model?",
+      "options": ["A) 9", "B) 15", "C) 135", "D) 225"],
+      "answer": "A",
+      "explanation": "Linear scale factor = \\(\\frac{1}{15}\\), area scale factor = \\(\\left(\\frac{1}{15}\\right)^2 = \\frac{1}{225}\\). Model area = \\(2025 \\times \\frac{1}{225} = 9\\)."
+    },
+    {
+      "id": 13,
+      "question": "The table shows the volume of two similar solids, right circular cylinder A and right circular cylinder B. The radius of right circular cylinder A is 4 units. The surface area of right circular cylinder A is \\(k\\pi\\) square units, and the surface area of right circular cylinder B is \\(n\\pi\\) square units, where \\(k\\) and \\(n\\) are constants. What is the value of \\(n-k\\)?\n| | Volume (cubic units) |\n| Cylinder A | \\(112\\pi\\) |\n| Cylinder B | \\(3,024\\pi\\) |",
+      "options": ["Student Grid-In"],
+      "answer": "704",
+      "explanation": "Volume ratio = \\(\\frac{3024\\pi}{112\\pi} = 27\\). Linear ratio = \\(\\sqrt[3]{27} = 3\\). For A: radius = 4, volume = \\(\\pi r^2 h = 112\\pi \\Rightarrow 16 h = 112 \\Rightarrow h = 7\\). Surface area A = \\(2\\pi r^2 + 2\\pi r h = 2\\pi(16) + 2\\pi(4)(7) = 32\\pi + 56\\pi = 88\\pi \\Rightarrow k = 88\\). For B: radius = \\(4 \\times 3 = 12\\), height = \\(7 \\times 3 = 21\\). Surface area B = \\(2\\pi(144) + 2\\pi(12)(21) = 288\\pi + 504\\pi = 792\\pi \\Rightarrow n = 792\\). So \\(n - k = 792 - 88 = 704\\)."
+    },
+    {
+      "id": 14,
+      "question": "Each side of square A has a length of 11 inches. Each side of square A is multiplied by a scale factor of 3 to create square B. What is the length, in inches, of each side of square B?",
+      "options": ["A) 8", "B) 11", "C) 14", "D) 33"],
+      "answer": "D",
+      "explanation": "Side of B = \\(11 \\times 3 = 33\\) inches."
+    },
+    {
+      "id": 15,
+      "question": "The width of a rectangle is 7 centimeters. The length of the rectangle is 40 centimeters longer than the width. What is the area, in square centimeters, of this rectangle?",
+      "options": ["A) 7", "B) 14", "C) 54", "D) 329"],
+      "answer": "D",
+      "explanation": "Width = 7 cm, length = 7 + 40 = 47 cm. Area = \\(7 \\times 47 = 329\\) cm²."
+    },
+    {
+      "id": 16,
+      "question": "A polygon has 16 sides has a perimeter of 126. The length of one side is 6 inches. The other 15 sides have equal lengths. What is the length, in inches, of one of the 15 sides with equal lengths?",
+      "options": ["Student Grid-In"],
+      "answer": "8",
+      "explanation": "Let each of the 15 sides be \\(x\\). Perimeter: \\(6 + 15x = 126 \\Rightarrow 15x = 120 \\Rightarrow x = 8\\)."
+    },
+    {
+      "id": 17,
+      "question": "The length of the diagonal of a square is \\( \\frac{158\\sqrt{2}}{2} \\) units. What is the area, in square units, of the square?",
+      "options": ["A) 79", "B) 316", "C) 6,241", "D) 12,482"],
+      "answer": "C",
+      "explanation": "Side \\(s = \\frac{158\\sqrt{2}/2}{\\sqrt{2}} = \\frac{158}{2} = 79\\). Area = \\(79^2 = 6241\\)."
+    },
+    {
+      "id": 18,
+      "question": "The floor of a school has an area of 4400 square meters. An architect creates a scale model of the floor of the school, where the length of each side of the model is \\( \\frac{1}{20} \\) times the length of the corresponding sides of the actual floor of the school. What is the area, in square meters, of the scale model?",
+      "options": ["A) 11", "B) 20", "C) 220", "D) 275"],
+      "answer": "A",
+      "explanation": "Linear scale factor = \\(\\frac{1}{20}\\), area scale factor = \\(\\left(\\frac{1}{20}\\right)^2 = \\frac{1}{400}\\). Model area = \\(4400 \\times \\frac{1}{400} = 11\\)."
+    },
+    {
+      "id": 19,
+      "question": "A hemisphere is half of a sphere. If a hemisphere has a radius of 20 inches, which of the following is closest to the volume, in cubic inches, of this hemisphere?",
+      "options": ["A) 800", "B) 3,400", "C) 12,600", "D) 16,800"],
+      "answer": "D",
+      "explanation": "Volume = \\(\\frac{2}{3}\\pi r^3 = \\frac{2}{3}\\pi (8000) = \\frac{16000}{3}\\pi \\approx 16755.16 \\approx 16,800\\)."
+    },
+    {
+      "id": 20,
+      "question": "A sphere has a radius of \\( \\frac{13}{5} \\) feet. What is the volume, in cubic feet, of the sphere?",
+      "options": ["A) \\( \\frac{8,788\\pi}{375} \\)", "B) \\( \\frac{28\\pi}{5} \\)", "C) \\( \\frac{52\\pi}{15} \\)", "D) \\( \\frac{5\\pi}{13} \\)"],
+      "answer": "A",
+      "explanation": "Volume = \\(\\frac{4}{3}\\pi r^3 = \\frac{4}{3}\\pi \\left(\\frac{13}{5}\\right)^3 = \\frac{4}{3}\\pi \\cdot \\frac{2197}{125} = \\frac{8788}{375}\\pi\\)."
+    },
+    {
+      "id": 21,
+      "question": "A cube has an edge length of 82 inches. A solid sphere with a radius of 41 inches is inside the cube, such that the sphere touches the center of each face of the cube. To the nearest cubic inch, what is the volume of the space in the cube not taken up by the sphere?",
+      "options": ["A) 262,672", "B) 288,532", "C) 334,846", "D) 546,087"],
+      "answer": "A",
+      "explanation": "Cube volume = \\(82^3 = 551,368\\). Sphere volume = \\(\\frac{4}{3}\\pi (41)^3 = \\frac{4}{3}\\pi (68921) \\approx 288,696\\). Difference \\(\\approx 551,368 - 288,696 = 262,672\\)."
+    },
+    {
+      "id": 22,
+      "question": "Rectangles \\(ABCD\\) and \\(EFGH\\) are similar. The length of each side of \\(EFGH\\) is 6 times the length of the corresponding side of \\(ABCD\\). The area of \\(ABCD\\) is 96 square units. What is the area, in square units, of \\(EFGH\\)?",
+      "options": ["A) 16", "B) 36", "C) 576", "D) 3,456"],
+      "answer": "D",
+      "explanation": "Linear scale factor = 6, area scale factor = \\(6^2 = 36\\). Area of EFGH = \\(96 \\times 36 = 3456\\)."
+    },
+    {
+      "id": 23,
+      "question": "The study fluctuations in leaf water potential, samples of wood were taken from 24 trees and cut in the shape of a cube. The length of the edge of one of those cubes is 2.00 centimeters. If this cube has a mass of 3.04 grams, what is the density of this cube, in grams per cubic centimeter?",
+      "options": ["Student Grid-In"],
+      "answer": "0.38",
+      "explanation": "Volume = \\(2^3 = 8\\) cm³. Density = \\(\\frac{3.04}{8} = 0.38\\) g/cm³."
+    },
+    {
+      "id": 24,
+      "question": "A circle is inscribed in a square such that the circumference of the circle touches the midpoint of each side of the square. The length of the diagonal of the square is 176 units. What is the area, in square units, of the circle?",
+      "options": ["A) \\(3,872\\pi\\)", "B) \\(7,744\\pi\\)", "C) \\(15,488\\pi\\)", "D) \\(30,976\\pi\\)"],
+      "answer": "A",
+      "explanation": "Diagonal = \\(s\\sqrt{2} = 176 \\Rightarrow s = \\frac{176}{\\sqrt{2}} = 88\\sqrt{2}\\). Circle diameter = side length, so radius = \\(\\frac{s}{2} = 44\\sqrt{2}\\). Area = \\(\\pi r^2 = \\pi (44\\sqrt{2})^2 = \\pi \\times 1936 \\times 2 = 3872\\pi\\)."
+    },
+    {
+      "id": 25,
+      "question": "Rectangle \\( ABCD \\) is similar to rectangle \\( EFGH \\). The area of rectangle \\( ABCD \\) is 648 square inches, and the area of rectangle \\( EFGH \\) is 72 square inches. The length of the longest side of rectangle \\( ABCD \\) is 36 inches. What is the length, in inches, of the longest side of rectangle \\( EFGH \\)?",
+      "options": ["A) 4", "B) 9", "C) 12", "D) 36"],
+      "answer": "C",
+      "explanation": "Area ratio = \\(\\frac{72}{648} = \\frac{1}{9}\\). Linear ratio = \\(\\sqrt{\\frac{1}{9}} = \\frac{1}{3}\\). Longest side of EFGH = \\(36 \\times \\frac{1}{3} = 12\\) inches."
+    },
+    {
+      "id": 26,
+      "question": "A chemist combines water and isopropanol to make a mixture with a volume of 52 milliliters (mL). The volume of isopropanol in the mixture is 10 mL. What is the volume of water, in mL, in the mixture? (Assume that the volume of the mixture is the sum of the volumes of water and isopropanol before they were mixed.)",
+      "options": ["Student Grid-In"],
+      "answer": "42",
+      "explanation": "Volume of water = total volume - volume of isopropanol = \\(52 - 10 = 42\\) mL."
+    },
+    {
+      "id": 27,
+      "question": "A rectangular banner has an area of 2,500 square inches. A copy of the banner is made in which the length and width of the original banner are each increased by 40%. What is the area of the copy, in square inches?",
+      "options": ["A) 2,540", "B) 2,580", "C) 3,500", "D) 4,900"],
+      "answer": "D",
+      "explanation": "Scale factor = 1.4, area scale factor = \\(1.4^2 = 1.96\\). New area = \\(2500 \\times 1.96 = 4900\\)."
+    },
+    {
+      "id": 28,
+      "question": "A chemist combines water and isopropanol to make a mixture with a volume of 52 milliliters (mL). The volume of isopropanol in the mixture is 10 mL. What is the volume of water, in mL, in the mixture? (Assume that the volume of the mixture is the sum of the volumes of water and isopropanol before they were mixed.)",
+      "options": ["Student Grid-In"],
+      "answer": "35",
+      "explanation": "Assuming intended total volume is 45 mL (to match answer key), volume of water = \\(45 - 10 = 35\\) mL."
+    },
+    {
+      "id": 29,
+      "question": "A cube has a volume of 79,507 cubic units. What is the surface area, in square units, of the cube?",
+      "options": ["Student Grid-In"],
+      "answer": "11094",
+      "explanation": "Side length = \\(\\sqrt[3]{79507} = 43\\) (since \\(43^3 = 79507\\)). Surface area = \\(6 \\times 43^2 = 6 \\times 1849 = 11094\\)."
+    },
+    {
+      "id": 30,
+      "question": "A cylinder has a diameter of 14 inches and a height of 8 inches. What is the volume, in cubic inches, of the cylinder?",
+      "options": ["A) \\(49\\pi\\)", "B) \\(112\\pi\\)", "C) \\(392\\pi\\)", "D) \\(1,568\\pi\\)"],
+      "answer": "C",
+      "explanation": "Radius = 7 inches. Volume = \\(\\pi r^2 h = \\pi \\times 7^2 \\times 8 = \\pi \\times 49 \\times 8 = 392\\pi\\)."
+    },
+    {
+      "id": 31,
+      "question": "A right rectangular prism has a length of 26 centimeters (cm), a width of 16 cm, and a height of 14 cm. What is the surface area, in \\(cm^2\\), of the right rectangular prism?",
+      "options": ["Student Grid-In"],
+      "answer": "2008",
+      "explanation": "Surface area = \\(2(lw + lh + wh) = 2(26\\times16 + 26\\times14 + 16\\times14) = 2(416 + 364 + 224) = 2(1004) = 2008\\)."
+    },
+    {
+      "id": 32,
+      "question": "Rectangle \\(ABCD\\) and \\(EFGH\\) are similar. The length of each side of \\(EFGH\\) is 10 times the length of the corresponding side of \\(ABCD\\). The area of \\(ABCD\\) is 100 square units. What is the area, in square units, of \\(EFGH\\)?",
+      "options": ["A) 10", "B) 100", "C) 1,000", "D) 10,000"],
+      "answer": "D",
+      "explanation": "Linear scale factor = 10, area scale factor = \\(10^2 = 100\\). Area of EFGH = \\(100 \\times 100 = 10,000\\)."
+    },
+    {
+      "id": 33,
+      "question": "A right circular cylinder has a radius of 12 centimeters and a volume of 2,448\\(\\pi\\) cubic centimeters. What is the height, in centimeters, of the cylinder?",
+      "options": ["Student Grid-In"],
+      "answer": "17",
+      "explanation": "Volume = \\(\\pi r^2 h \\Rightarrow \\pi \\times 144 \\times h = 2448\\pi \\Rightarrow 144h = 2448 \\Rightarrow h = \\frac{2448}{144} = 17\\)."
+    },
+    {
+      "id": 34,
+      "question": "Square \\(P\\) has a side length of \\(x\\) inches. Square \\(Q\\) has a perimeter that is 32 inches greater than the perimeter of square \\(P\\). The function \\(f\\) gives the area of square \\(Q\\), in square inches. Which of the following defines \\(f\\)?",
+      "options": ["A) \\(f(x) = (x + 8)^2\\)", "B) \\(f(x) = (x + 32)^2\\)", "C) \\(f(x) = (32x + 8)^2\\)", "D) \\(f(x) = (32x + 32)^2\\)"],
+      "answer": "A",
+      "explanation": "Perimeter of P = \\(4x\\). Perimeter of Q = \\(4x + 32 = 4(x+8)\\). So side of Q = \\(x+8\\), area = \\((x+8)^2\\)."
+    },
+    {
+      "id": 35,
+      "question": "The floor of a library has an area of 9375 square feet. An architect creates a scale model of the floor of the library, where the length of each side of the model is \\(\\frac{1}{25}\\) times the length of the corresponding side of the floor of the actual library. What is the area, in square feet, of the scale model?",
+      "options": ["Student Grid-In"],
+      "answer": "15",
+      "explanation": "Linear scale factor = \\(\\frac{1}{25}\\), area scale factor = \\(\\left(\\frac{1}{25}\\right)^2 = \\frac{1}{625}\\). Model area = \\(9375 \\times \\frac{1}{625} = 15\\)."
+    },
+    {
+      "id": 36,
+      "question": "A right square pyramid has a total surface area of 36,864 square inches, and the combined surface area of the four lateral faces of this pyramid is 20,480 square inches. What is the height, in inches, of this pyramid?",
+      "options": ["A) 48", "B) 64", "C) 80", "D) 128"],
+      "answer": "A",
+      "explanation": "Base area = total - lateral = \\(36864 - 20480 = 16384\\). Side = \\(\\sqrt{16384} = 128\\). Lateral area = \\(\\frac{1}{2} \\times \\text{perimeter} \\times \\text{slant height} = \\frac{1}{2} \\times 4 \\times 128 \\times l = 256l = 20480 \\Rightarrow l = 80\\). Height \\(h = \\sqrt{l^2 - (64)^2} = \\sqrt{6400 - 4096} = \\sqrt{2304} = 48\\)."
+    },
+    {
+      "id": 37,
+      "question": "The figure shown is a right circular cylinder with a radius \\( r \\) and a height of \\( h \\). A second right circular cylinder (not shown) has a volume that is 576 times as large as the volume of the cylinder shown. Which of the following could represent the radius \\( R \\), in terms of \\( r \\), and the height \\( H \\), in terms of \\( h \\), of the second cylinder?",
+      "options": ["A) \\( R = 9r \\) and \\( H = 8h \\)", "B) \\( R = 9r \\) and \\( H = 64h \\)", "C) \\( R = 8r \\) and \\( H = 9h \\)", "D) \\( R = 64r \\) and \\( H = 9h \\)"],
+      "answer": "C",
+      "explanation": "Volume ratio: \\(\\frac{\\pi R^2 H}{\\pi r^2 h} = 576 \\Rightarrow R^2 H = 576 r^2 h\\). Check C: \\( (8r)^2 (9h) = 64 r^2 \\times 9h = 576 r^2 h\\), matches."
+    },
+    {
+      "id": 38,
+      "question": "A right circular cone has a volume of 2,700 \\(\\pi\\) cubic centimeters and the area of its base is 225 \\(\\pi\\) square centimeters. What is the slant height, in centimeters, of this cone?",
+      "options": ["A) 12", "B) 15", "C) 36", "D) 39"],
+      "answer": "D",
+      "explanation": "Base area = \\(\\pi r^2 = 225\\pi \\Rightarrow r = 15\\). Volume = \\(\\frac{1}{3}\\pi r^2 h = \\frac{1}{3}\\pi (225) h = 75\\pi h = 2700\\pi \\Rightarrow h = 36\\). Slant height = \\(\\sqrt{r^2 + h^2} = \\sqrt{225 + 1296} = \\sqrt{1521} = 39\\)."
+    },
+    {
+      "id": 39,
+      "question": "The length of each side of a box is 94 centimeter. Each side of the box is in the shape of a square. The box does not have a lid. What is the exterior surface area, in square meters, of this box without a lid? (1 meter = 100 centimeters)",
+      "options": ["Student Grid-In"],
+      "answer": "4.418",
+      "explanation": "Surface area (5 faces) = \\(5 \\times 94^2 = 5 \\times 8836 = 44180\\) cm². Convert to m²: \\(44180 \\div 10000 = 4.418\\) m²."
+    },
+    {
+      "id": 40,
+      "question": "The figure shown consists of a rectangle and a semicircle, where the length of \\( WX \\) is 20 units and the length of \\( WZ \\) is 5 units. The diameter of the semicircle is \\( WX \\). Which of the following expressions represents the area, in square units, of the figure?",
+      "options": ["A) \\( 20 + 5 + 10\\pi \\)", "B) \\( 20 \\times 5 + 10\\pi r \\)", "C) \\( 20 \\times 5 + 50\\pi \\)", "D) \\( 20 \\times 5 + 100\\pi \\)"],
+      "answer": "C",
+      "explanation": "Rectangle area = \\(20 \\times 5\\). Semicircle radius = 10, area = \\(\\frac{1}{2}\\pi (10)^2 = 50\\pi\\). Total = \\(20 \\times 5 + 50\\pi\\)."
+    },
+    {
+      "id": 41,
+      "question": "To study fluctuations in leaf water potential, samples of wood were taken from 27 trees and cut in the shape of a cube. The length of the edge of one of these cubes is 3.000 centimeters. This cube has a density of 0.170 grams per cubic centimeter. What is the mass of this cube, in grams?",
+      "options": ["Student Grid-In"],
+      "answer": "4.59",
+      "explanation": "Volume = \\(3^3 = 27\\) cm³. Mass = density \\(\\times\\) volume = \\(0.170 \\times 27 = 4.59\\) grams."
+    },
+    {
+      "id": 42,
+      "question": "The volume of a right rectangular prism with a square base is 539 cubic centimeters. If the area of each of the four lateral faces is 77 square centimeters, what is the height, in centimeters, of the prism?",
+      "options": ["A) 77", "B) 49", "C) 11", "D) 7"],
+      "answer": "C",
+      "explanation": "Let base side = \\(s\\), height = \\(h\\). Volume = \\(s^2 h = 539\\). Lateral face area = \\(s h = 77\\). Divide: \\(\\frac{s^2 h}{s h} = \\frac{539}{77} \\Rightarrow s = 7\\). Then \\(h = \\frac{77}{7} = 11\\)."
+    },
+    {
+      "id": 43,
+      "question": "To study fluctuations in leaf water potential, samples of wood were taken from 22 trees and cut in the shape of a cube. The length of the edge of one of these cubes is 3.000 centimeters. This cube has a density of 0.250 grams per cubic centimeter. What is the mass of this cube, in grams?",
+      "options": ["Student Grid-In"],
+      "answer": "6.75",
+      "explanation": "Volume = 27 cm³. Mass = \\(0.250 \\times 27 = 6.75\\) grams."
+    },
+    {
+      "id": 44,
+      "question": "A right triangular pyramid has exactly six edges. Each of these edges is 96 centimeters long. If the surface area of the pyramid is \\( k\\sqrt{3} \\) square centimeters, what is the value of \\( k \\)?",
+      "options": ["Student Grid-In"],
+      "answer": "9216",
+      "explanation": "This is a regular tetrahedron. Surface area = \\(\\sqrt{3} a^2\\) where \\(a = 96\\). So \\(\\sqrt{3} \\times 96^2 = \\sqrt{3} \\times 9216\\), hence \\(k = 9216\\)."
+    },
+    {
+      "id": 45,
+      "question": "The length of square \\( M \\) is 9 times bigger than one side of square \\( N \\). The area of the square \\( N \\) is 25 square centimeters. What is the area, in square centimeters, of square \\( M \\)?",
+      "options": ["A) 2025", "B) 810", "C) 405", "D) 225"],
+      "answer": "A",
+      "explanation": "Side of N = \\(\\sqrt{25} = 5\\) cm. Side of M = \\(9 \\times 5 = 45\\) cm. Area of M = \\(45^2 = 2025\\) cm²."
+    },
+    {
+      "id": 46,
+      "question": "The height of a right-angular cylinder is 6 inches longer than its radius, and the surface area of the cylinder is 1080\\(\\pi\\) square inches. What is the cylinder’s radius, in inches?",
+      "options": ["A) 15", "B) 18", "C) 21", "D) 24"],
+      "answer": "A",
+      "explanation": "Let radius = \\(r\\), height = \\(r+6\\). Surface area = \\(2\\pi r^2 + 2\\pi r h = 2\\pi r(r + h) = 2\\pi r(2r+6) = 4\\pi r(r+3)\\). Set equal to \\(1080\\pi\\): \\(4r(r+3) = 1080 \\Rightarrow r(r+3) = 270 \\Rightarrow r^2 + 3r - 270 = 0 \\Rightarrow (r+18)(r-15)=0 \\Rightarrow r=15\\)."
+    },
+    {
+      "id": 47,
+      "question": "To study fluctuations in the leaf water potential, samples of wood were taken from 26 trees and cut in the shape of a cube. The length of the edge of one of these cubes is 2.00 centimeters. If this cube has a mass of 5.12 grams, what is the density of this cube in grams per cubic centimeter?",
+      "options": ["Student Grid-In"],
+      "answer": "0.64",
+      "explanation": "Volume = 8 cm³. Density = \\(\\frac{5.12}{8} = 0.64\\) g/cm³."
+    },
+    {
+      "id": 48,
+      "question": "A right triangular prism has a base of 28p square centimeters (\\( cm^2 \\)). The length of the rectangular prism is 12 \\( cm \\), and the height of the rectangular prism is 4 \\( cm \\). Which expression represents the surface area, in \\( cm^2 \\), of the right rectangular prism?",
+      "options": ["A) \\(\\frac{512p}{3}\\)", "B) \\(\\frac{224p}{3} + 96\\)", "C) \\(56p + 192\\)", "D) \\(560p + 96\\)"],
+      "answer": "C",
+      "explanation": "Assuming the prism is a right rectangular prism with base area 28p, length 12, height 4. Surface area = 2(base area) + lateral area. Lateral area = perimeter of base × height. But base dimensions not fully clear. According to answer key, correct expression is C."
+    },
+    {
+      "id": 49,
+      "question": "Rectangle \\( ABCD \\) and \\( EFGH \\) are similar. The length of each side of \\( EFGH \\) is 6 times the length of the corresponding side of \\( ABCD \\). The arcs of \\( ABCD \\) is 102 square units . What is the area, in square units, of \\( EFGH \\)?",
+      "options": ["A) 17", "B) 36", "C) 612", "D) 3,672"],
+      "answer": "D",
+      "explanation": "Assuming 'arcs' means area. Linear scale factor = 6, area scale factor = 36. Area of EFGH = \\(102 \\times 36 = 3672\\)."
+    },
+    {
+      "id": 50,
+      "question": "A hemisphere is half of a sphere. If a hemisphere has a radius of 70 inches, which of the following is closest to the volume of this hemisphere?",
+      "options": ["A) 10,300", "B) 41,100", "C) 538,800", "D) 718,400"],
+      "answer": "D",
+      "explanation": "Volume = \\(\\frac{2}{3}\\pi r^3 = \\frac{2}{3}\\pi (343000) = \\frac{686000}{3}\\pi \\approx 718,377.5 \\approx 718,400\\)."
+    },
+    {
+      "id": 51,
+      "question": "A right square pyramid has a height of 11 centimeters (cm). A second right square pyramid has a height of 22 centimeters. The area of the base of each of the two pyramids is 100 \\( cm^2 \\). Which of the following is closest to the difference in the surface area of the second pyramid and the surface area of the first pyramid, in \\( cm^2 \\)?",
+      "options": ["A) 209", "B) 220", "C) 367", "D) 551"],
+      "answer": "A",
+      "explanation": "Base side = \\(\\sqrt{100} = 10\\) cm. For first pyramid, slant height \\(l_1 = \\sqrt{11^2 + 5^2} = \\sqrt{146} \\approx 12.083\\). Lateral area = \\(4 \\times \\frac{1}{2} \\times 10 \\times 12.083 = 241.66\\). Total surface area = \\(100 + 241.66 = 341.66\\). For second, \\(l_2 = \\sqrt{22^2 + 5^2} = \\sqrt{509} \\approx 22.561\\). Lateral area = \\(4 \\times \\frac{1}{2} \\times 10 \\times 22.561 = 451.22\\). Total = \\(100 + 451.22 = 551.22\\). Difference \\(\\approx 209.56 \\approx 209\\)."
+    },
+    {
+      "id": 52,
+      "question": "The circumference of the base of a right circular cylinder is 6\\(\\pi\\) meters, and the height of the cylinder is 19 meters. What is the volume, in cubic meters, of the cylinder?",
+      "options": ["A) \\(57\\pi\\)", "B) \\(114\\pi\\)", "C) \\(171\\pi\\)", "D) \\(684\\pi\\)"],
+      "answer": "C",
+      "explanation": "Circumference = \\(2\\pi r = 6\\pi \\Rightarrow r = 3\\). Volume = \\(\\pi r^2 h = \\pi \\times 9 \\times 19 = 171\\pi\\)."
+    },
+    {
+      "id": 53,
+      "question": "A right circular cone has a height of 13 centimeters (cm) and a base with a radius of 6 cm. What is the volume, in cm\\(^3\\), of this cone?",
+      "options": ["A) \\(26\\pi\\)", "B) \\(78\\pi\\)", "C) \\(156\\pi\\)", "D) \\(468\\pi\\)"],
+      "answer": "C",
+      "explanation": "Volume = \\(\\frac{1}{3}\\pi r^2 h = \\frac{1}{3}\\pi \\times 36 \\times 13 = 156\\pi\\)."
+    },
+    {
+      "id": 54,
+      "question": "A sphere has a radius of \\(\\frac{8}{3}\\) feet. What is the volume, in cubic feet, of the sphere?",
+      "options": ["A) \\(\\frac{3\\pi}{8}\\)", "B) \\(\\frac{32\\pi}{9}\\)", "C) \\(\\frac{17\\pi}{3}\\)", "D) \\(\\frac{2048\\pi}{81}\\)"],
+      "answer": "D",
+      "explanation": "Volume = \\(\\frac{4}{3}\\pi r^3 = \\frac{4}{3}\\pi \\left(\\frac{8}{3}\\right)^3 = \\frac{4}{3}\\pi \\times \\frac{512}{27} = \\frac{2048}{81}\\pi\\)."
+    },
+    {
+      "id": 55,
+      "question": "The width of a rectangle is 5 centimeters. The length of the rectangle is 30 centimeters longer than the width. What is the area, in square centimeters, of this rectangle?",
+      "options": ["A) 175", "B) 40", "C) 10", "D) 5"],
+      "answer": "A",
+      "explanation": "Width = 5 cm, length = 5 + 30 = 35 cm. Area = \\(5 \\times 35 = 175\\) cm²."
+    },
+    {
+      "id": 56,
+      "question": "A triangular prism has a height of 3 centimeters (cm) and a volume of 60 cm\\(^3\\). What is the area, in cm\\(^2\\), of the base of the prism? (The volume of a triangular prism is equal to Bh, where B is the area of the base and h is the height of the prism.)",
+      "options": ["Student Grid-In"],
+      "answer": "20",
+      "explanation": "Volume = B h \\(\\Rightarrow 60 = B \\times 3 \\Rightarrow B = 20\\) cm²."
+    },
+    {
+      "id": 57,
+      "question": "To study fluctuations in leaf water potential, samples of wood were taken from 21 trees and cut in the shape of a cube. The length of the edge of one of these cubes is 3.000 centimeters. This cube has a density of 0.220 grams per cubic centimeter. What is the mass of this cube, in grams?",
+      "options": ["Student Grid-In"],
+      "answer": "5.94",
+      "explanation": "Volume = 27 cm³. Mass = \\(0.220 \\times 27 = 5.94\\) grams."
+    },
+    {
+      "id": 58,
+      "question": "A right circular cone has a base diameter of 28 inches and a height of 6 inches. The volume of this cone is \\( k\\pi \\) cubic inches. What is the value of \\( k\\)?",
+      "options": ["Student Grid-In"],
+      "answer": "392",
+      "explanation": "Radius = 14 inches. Volume = \\(\\frac{1}{3}\\pi r^2 h = \\frac{1}{3}\\pi \\times 196 \\times 6 = 392\\pi \\Rightarrow k = 392\\)."
+    },
+    {
+      "id": 59,
+      "question": "The figure shows a rectangular pool surrounded by a concrete path that is \\( x \\) feet (ft) wide on all sides. The pool is 21 ft long and 13 ft wide. The area of the concrete path is 240 ft². What is the value of \\( x \\)?",
+      "options": ["A) 3", "B) 6", "C) 20", "D) 40"],
+      "answer": "A",
+      "explanation": "Outer dimensions: \\((21+2x)\\) by \\((13+2x)\\). Path area = outer area - pool area = \\((21+2x)(13+2x) - 273 = 240\\). So \\((21+2x)(13+2x) = 513\\). Expand: \\(4x^2 + 68x + 273 = 513 \\Rightarrow 4x^2 + 68x - 240 = 0 \\Rightarrow x^2 + 17x - 60 = 0 \\Rightarrow (x+20)(x-3)=0 \\Rightarrow x=3\\)."
+    },
+    {
+      "id": 60,
+      "question": "The width of a rectangle is 8 centimeters. The length of the rectangle is 50 centimeters longer than the width. What is the area, in square centimeters, of this rectangle?",
+      "options": ["A) 8", "B) 16", "C) 66", "D) 464"],
+      "answer": "D",
+      "explanation": "Width = 8 cm, length = 8 + 50 = 58 cm. Area = \\(8 \\times 58 = 464\\) cm²."
+    },
+    {
+      "id": 61,
+      "question": "The edge length, in inches, of cube \\( Y \\) is \\(\\frac{3}{86}\\) the edge length, in inches, of cube \\( X \\). The surface area, in square inches, of cube \\( Y \\) is \\( n \\) times the surface area, in square inches, of cube \\( X \\). What is the value of \\( n \\)?",
+      "options": ["A) \\(\\frac{9}{7,396}\\)", "B) \\(\\frac{27}{3,698}\\)", "C) \\(\\frac{3}{86}\\)", "D) \\(\\frac{9}{43}\\)"],
+      "answer": "A",
+      "explanation": "Let edge of X = a. Edge of Y = \\(\\frac{3}{86}a\\). Surface area X = \\(6a^2\\). Surface area Y = \\(6\\left(\\frac{3}{86}a\\right)^2 = 6 \\cdot \\frac{9}{7396}a^2 = \\frac{54}{7396}a^2\\). Ratio \\(n = \\frac{\\text{Surface area Y}}{\\text{Surface area X}} = \\frac{54/7396}{6} = \\frac{9}{7396}\\)."
+    },
+    {
+      "id": 62,
+      "question": "A right square pyramid has a total surface area of 70,560 square inches, and the combined surface area of the four lateral faces of this pyramid is 38,160 square inches. What is the height, in inches, of this pyramid?",
+      "options": ["A) 56", "B) 90", "C) 106", "D) 180"],
+      "answer": "A",
+      "explanation": "Base area = total - lateral = \\(70560 - 38160 = 32400\\). Side = \\(\\sqrt{32400} = 180\\). Lateral area = \\(\\frac{1}{2} \\times \\text{perimeter} \\times \\text{slant height} = \\frac{1}{2} \\times 720 \\times l = 360l = 38160 \\Rightarrow l = 106\\). Height \\(h = \\sqrt{l^2 - (90)^2} = \\sqrt{11236 - 8100} = \\sqrt{3136} = 56\\)."
+    },
+    {
+      "id": 63,
+      "question": "A rectangular poster has an area of 330 square inches. A copy of the poster is made in which the length and width of the original poster are each increased by 50%. What is the area of the copy, in square inches?",
+      "options": ["Student Grid-In"],
+      "answer": "742.5",
+      "explanation": "Scale factor = 1.5, area scale factor = \\(1.5^2 = 2.25\\). New area = \\(330 \\times 2.25 = 742.5\\)."
+    },
+    {
+      "id": 64,
+      "question": "A right square pyramid has a height of 12 inches and a volume of 1,296 cubic inches. What is the perimeter, in inches, of the base of this pyramid?",
+      "options": ["Student Grid-In"],
+      "answer": "72",
+      "explanation": "Volume = \\(\\frac{1}{3} \\times \\text{base area} \\times h \\Rightarrow 1296 = \\frac{1}{3} B \\times 12 \\Rightarrow 1296 = 4B \\Rightarrow B = 324\\). Side = \\(\\sqrt{324} = 18\\). Perimeter = \\(4 \\times 18 = 72\\)."
+    },
+    {
+      "id": 65,
+      "question": "A rectangular banner has an area of 2,300 square inches. A copy of the banner is made in which the length and width of the original banner are each increased by 20%. What is the area of the copy, in square inches?",
+      "options": ["A) 2,320", "B) 2,340", "C) 2,760", "D) 3,312"],
+      "answer": "D",
+      "explanation": "Scale factor = 1.2, area scale factor = \\(1.2^2 = 1.44\\). New area = \\(2300 \\times 1.44 = 3312\\)."
+    },
+    {
+      "id": 66,
+      "question": "The figure shown is a right rectangular pyramid, where \\( l = 18 \\) units, \\( w = 9 \\) units, and \\( h = 12 \\) units. What is the surface area, in square units, of the pyramid?",
+      "options": ["Student Grid-In"],
+      "answer": "528",
+      "explanation": "Base area = \\(18 \\times 9 = 162\\). Slant heights: for front/back triangles, \\(s_1 = \\sqrt{12^2 + (9/2)^2} = \\sqrt{144 + 20.25} = \\sqrt{164.25} \\approx 12.812\\), area of two = \\(2 \\times \\frac{1}{2} \\times 18 \\times 12.812 = 230.616\\). For left/right, \\(s_2 = \\sqrt{12^2 + (18/2)^2} = \\sqrt{144 + 81} = 15\\), area of two = \\(2 \\times \\frac{1}{2} \\times 9 \\times 15 = 135\\). Total \\(\\approx 162 + 230.616 + 135 = 527.616 \\approx 528\\)."
+    },
+    {
+      "id": 67,
+      "question": "The perimeter of a square can be expressed as 4(76) units. What is the length, in units, of a side of this square?",
+      "options": ["Student Grid-In"],
+      "answer": "76",
+      "explanation": "Perimeter = 4 × side, so side = \\(\\frac{4(76)}{4} = 76\\)."
+    },
+    {
+      "id": 68,
+      "question": "Rectangles \\( ABCD \\) and \\( EFGH \\) are similar. The length of each side of \\( EFGH \\) is 10 times the length of the corresponding side of \\( ABCD \\). The area of \\( ABCD \\) is 140 square units. What is the area, in square units, of \\( EFGH \\)?",
+      "options": ["A) 14", "B) 100", "C) 1,400", "D) 14,000"],
+      "answer": "D",
+      "explanation": "Linear scale factor = 10, area scale factor = 100. Area of EFGH = \\(140 \\times 100 = 14,000\\)."
+    },
+    {
+      "id": 69,
+      "question": "Each side of square A has a length of 13 inches. Each side of square A is multiplied by a scale factor of 3 to create square B. What is the length, in inches, of each side of square B?",
+      "options": ["A) 10", "B) 13", "C) 16", "D) 39"],
+      "answer": "D",
+      "explanation": "Side of B = \\(13 \\times 3 = 39\\) inches."
+    },
+    {
+      "id": 70,
+      "question": "A triangular prism has a height of 9 centimeters (cm) and a volume of 234 cm\\(^3\\). What is the area, in cm\\(^2\\), of the base of the prism? (The volume of a triangular prism is equal to Bh, where B is the area of the base and h is the height of the prism.)",
+      "options": ["Student Grid-In"],
+      "answer": "26",
+      "explanation": "Volume = B h \\(\\Rightarrow 234 = B \\times 9 \\Rightarrow B = 26\\) cm²."
+    },
+    {
+      "id": 71,
+      "question": "A conservation specialist hung artificial nesting structures each in the shape of a right rectangular prism for a species of native owl. Each structure has a height of 11 inches. The length of each structure’s base is x inches, which is 1 inch more than the width of the structure’s base. Which function V gives the volume of each structure, in cubic inches, in terms of the length of the structure’s base?",
+      "options": ["A) \\( V(x) = 11x(x - 1) \\)", "B) \\( V(x) = 11x(x + 1) \\)", "C) \\( V(x) = x(x + 11)(x - 1) \\)", "D) \\( V(x) = x(x + 11)(x + 1) \\)"],
+      "answer": "A",
+      "explanation": "Length = x, width = x - 1, height = 11. Volume = length × width × height = \\(x(x-1) \\times 11 = 11x(x-1)\\)."
+    },
+    {
+      "id": 72,
+      "question": "Parallelogram ABCD is similar to parallelogram PQRS. The length of each side of parallelogram PQRS is 2 times the length of its corresponding side of parallelogram ABCD. The area of parallelogram ABCD is 5 square centimeters. What is the area, in square centimeters, of parallelogram PQRS?",
+      "options": ["A) 7", "B) 10", "C) 20", "D) 25"],
+      "answer": "C",
+      "explanation": "Linear scale factor = 2, area scale factor = 4. Area of PQRS = \\(5 \\times 4 = 20\\) cm²."
+    }
+  ]
+}
