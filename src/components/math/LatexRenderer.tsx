@@ -32,21 +32,6 @@ function LatexRendererComponent({ content, className = '', displayMode = false }
       return `%%CURRENCY_${currencyPlaceholders.length - 1}%%`;
     });
 
-    // Handle display mode LaTeX \[...\] - centered equations
-    processedContent = processedContent.replace(/\\\[([\s\S]*?)\\\]/g, (_, latex) => {
-      try {
-        const rendered = katex.renderToString(latex.trim(), { 
-          displayMode: true, 
-          throwOnError: false,
-          trust: true,
-          strict: false
-        });
-        return `<div class="my-4 flex justify-center">${rendered}</div>`;
-      } catch {
-        return `\\[${latex}\\]`;
-      }
-    });
-
     // Handle display mode LaTeX ($$...$$) - centered equations
     processedContent = processedContent.replace(/\$\$([\s\S]*?)\$\$/g, (_, latex) => {
       try {
@@ -59,22 +44,6 @@ function LatexRendererComponent({ content, className = '', displayMode = false }
         return `<div class="my-4 flex justify-center">${rendered}</div>`;
       } catch {
         return `$$${latex}$$`;
-      }
-    });
-    
-    // Handle inline LaTeX \(...\) format (common in JSON files)
-    processedContent = processedContent.replace(/\\\(([^)]+?)\\\)/g, (match, latex) => {
-      const trimmed = latex.trim();
-      if (!trimmed) return match;
-      try {
-        return katex.renderToString(trimmed, { 
-          displayMode: false, 
-          throwOnError: false,
-          trust: true,
-          strict: false
-        });
-      } catch {
-        return match;
       }
     });
     
@@ -97,7 +66,7 @@ function LatexRendererComponent({ content, className = '', displayMode = false }
       }
     });
     
-    // Handle standalone \frac, \sqrt, \text commands not wrapped in $ or \(...\)
+    // Handle standalone \frac, \sqrt, \text commands not wrapped in $
     const latexCommands = [
       { pattern: /(?<![\\$])\\frac\{([^}]*)\}\{([^}]*)\}/g, handler: (m: string, n: string, d: string) => `\\frac{${n}}{${d}}` },
       { pattern: /(?<![\\$])\\sqrt\{([^}]*)\}/g, handler: (m: string, c: string) => `\\sqrt{${c}}` },

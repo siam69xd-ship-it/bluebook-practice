@@ -535,33 +535,13 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
   
   const questions: Question[] = [];
   const seenSourceIds = new Set<string>();
-  const seenQuestionTexts = new Set<string>(); // For content-based deduplication
   let globalId = 1;
-  
-  // Helper to normalize question text for comparison (remove whitespace, lowercase)
-  const normalizeForComparison = (text: string, section: string): string => {
-    // Include section to avoid cross-section deduplication
-    return `${section}:${text.replace(/\s+/g, ' ').trim().toLowerCase().substring(0, 150)}`;
-  };
   
   // Helper to add question with deduplication
   const addQuestion = (q: Question) => {
-    // Check for sourceId duplicate
     if (q.sourceId && seenSourceIds.has(q.sourceId)) {
       return; // Skip duplicate
     }
-    
-    // Check for content-based duplicate within same section (first 150 chars normalized)
-    const questionContent = q.questionPrompt || q.questionText || '';
-    // Only deduplicate if question text is substantial (more than 20 chars)
-    if (questionContent.length > 20) {
-      const normalizedText = normalizeForComparison(questionContent, q.section);
-      if (seenQuestionTexts.has(normalizedText)) {
-        return; // Skip duplicate content
-      }
-      seenQuestionTexts.add(normalizedText);
-    }
-    
     if (q.sourceId) {
       seenSourceIds.add(q.sourceId);
     }
