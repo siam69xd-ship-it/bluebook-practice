@@ -1,0 +1,215 @@
+{
+  "dataset_info": {
+    "title": "Scatterplots",
+    "total_questions": 17,
+    "range": "1-27"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "question": "The scatterplot shows the relationship between two variables, x and y. A line of best fit is also shown. Which of the following equations is the most appropriate linear model for the data shown? (Points trend downwards from approx (0, 25) to (3, 7))",
+      "options": [
+        "A) y = -6 + 28x",
+        "B) y = 6 - 28x",
+        "C) y = 28 + 6x",
+        "D) y = 28 - 6x"
+      ],
+      "answer": "D",
+      "explanation": "The line starts at a y-intercept of approximately 28. It has a negative slope, dropping from y=25 to y=7 over 3 units of x (slope ≈ -18/3 = -6). The equation y = 28 - 6x fits this description."
+    },
+    {
+      "id": 2,
+      "question": "What data point has an actual y-value that is 2 less than the y-value predicted by the line of best fit for the corresponding x-value?",
+      "options": [
+        "A) (2, 12)",
+        "B) (6, 14)",
+        "C) (10, 12)",
+        "D) (18, 4)"
+      ],
+      "answer": "D",
+      "explanation": "We are looking for a point where Actual = Predicted - 2. At x=18, the line of best fit is at y=6. The actual data point is at y=4. Since 4 = 6 - 2, this matches the condition."
+    },
+    {
+      "id": 3,
+      "question": "The line graphs show the number of games won by two football teams from 2004 to 2010. For how many of the years shown was the number of games won by Team A greater than the number of games won by Team B?",
+      "options": [
+        "A) 1",
+        "B) 2",
+        "C) 6",
+        "D) 7"
+      ],
+      "answer": "C",
+      "explanation": "Comparing the two lines year by year: Team A (squares) is above Team B (circles) in 2004, 2005, 2007, 2008, 2009, and 2010. That is a total of 6 years."
+    },
+    {
+      "id": 4,
+      "question": "The scatterplot shows the relationship between two variables, x and y. A line of best fit is also shown. Which of the following best represents the line of best fit shown?",
+      "options": [
+        "A) y = 77 + 0.01x",
+        "B) y = 77 + 0.79x",
+        "C) y = 77 + 68.9x",
+        "D) y = 77 + 78.9x"
+      ],
+      "answer": "D",
+      "explanation": "The line passes through approximately (2, 200) and (8, 700). The slope is (700-200)/(8-2) = 500/6 ≈ 83.3. Option D (slope 78.9) is the closest match."
+    },
+    {
+      "id": 5,
+      "question": "The scatterplot shows the relationship between two variables x and y. Which of the following equations is the most appropriate model for the data shown? (Parabolic shape opening upwards with vertex at approx (0, 8))",
+      "options": [
+        "A) y = x² - 8",
+        "B) y = x² + 8",
+        "C) y = (x - 8)²",
+        "D) y = (x + 8)²"
+      ],
+      "answer": "B",
+      "explanation": "The data forms a parabola opening upwards. The vertex (minimum point) is at (0, 8). The standard vertex form is y = a(x-h)² + k. With h=0 and k=8, the equation is y = x² + 8."
+    },
+    {
+      "id": 6,
+      "question": "The scatterplot shows the relationship between two variables, x and y. A line of best fit is also shown. Which of the following equations best represents the line of best fit shown?",
+      "options": [
+        "A) y = 3.5 + 1.8x",
+        "B) y = -2.4 + 1.55x",
+        "C) y = 3.4 + 1.55x",
+        "D) y = 2.4 - 1.5x"
+      ],
+      "answer": "C",
+      "explanation": "The line has a positive y-intercept around 3.5 and a positive slope. Option C (y = 3.4 + 1.55x) is the only option with both a positive slope and a positive intercept close to the graph's values."
+    },
+    {
+      "id": 7,
+      "question": "Which of the following is closest to the slope of this line of best fit? (Line trends downwards from approx (1, 14) to (13, 0))",
+      "options": [
+        "A) -3.3",
+        "B) -1.1",
+        "C) 1.1",
+        "D) 3.3"
+      ],
+      "answer": "B",
+      "explanation": "Using points (1, 14) and (13, 0), the slope is (0 - 14) / (13 - 1) = -14 / 12 ≈ -1.16. This is closest to -1.1."
+    },
+    {
+      "id": 8,
+      "question": "Which of the following equations best represents the line of best fit shown? (Positive slope, intercept approx 3.3)",
+      "options": [
+        "A) y = 3.3 + 1.6x",
+        "B) y = 3.3 - 1.6x",
+        "C) y = -3.3 + 1.6x",
+        "D) y = -3.3 - 1.6x"
+      ],
+      "answer": "A",
+      "explanation": "The graph shows a line with a positive slope and a positive y-intercept around 3. Option A is the only choice with both positive slope (+1.6) and positive intercept (+3.3)."
+    },
+    {
+      "id": 12,
+      "question": "During which of the following time periods did the greatest increase in recorded temperature take place?",
+      "options": [
+        "A) From x=6 to x=7",
+        "B) From x=5 to x=6",
+        "C) From x=2 to x=3",
+        "D) From x=1 to x=2"
+      ],
+      "answer": "C",
+      "explanation": "Checking the intervals: x=2 to 3 goes from 60°F to 75°F (Increase of 15). x=6 to 7 goes from 62°F to 64°F (Increase of 2). The other intervals show decreases. The greatest increase is from x=2 to x=3."
+    },
+    {
+      "id": 15,
+      "question": "Which of the following is closest to the slope of this line of best fit? (Negative slope, x range 1-10, y range 1-10)",
+      "options": [
+        "A) -7",
+        "B) -0.7",
+        "C) 0.7",
+        "D) 7"
+      ],
+      "answer": "B",
+      "explanation": "The line passes near (1, 7.5) and (9, 1). The slope is roughly (1 - 7.5) / (9 - 1) = -6.5 / 8 ≈ -0.8. This is closest to -0.7."
+    },
+    {
+      "id": 16,
+      "question": "The scatterplot shows the body length of a New Zealand fur seal. For a New Zealand fur seal at an age of 3 years old, what is the body length in centimeters predicted by the line of best fit, to the nearest 10 cm?",
+      "answer": "110",
+      "options": [],
+      "explanation": "At x=3, the line of best fit is vertically between the points for x=1 (approx 88) and x=5 (approx 132). The midpoint is (88+132)/2 = 110. Visual inspection of the line at x=3 confirms it is at y=110."
+    },
+    {
+      "id": 17,
+      "question": "Which of the following best represents the line of best fit shown? (Line passes through approx (1, 200) and (10, 750))",
+      "options": [
+        "A) y = 148.13 + 0.02x",
+        "B) y = 148.13 + 0.59x",
+        "C) y = 148.13 + 48.61x",
+        "D) y = 148.13 + 58.61x"
+      ],
+      "answer": "D",
+      "explanation": "The slope can be estimated: (750 - 200) / (10 - 1) = 550 / 9 ≈ 61. Option D, with a slope of 58.61, is the closest match."
+    },
+    {
+      "id": 18,
+      "question": "Which of the following is closest to the slope of the line of best fit shown? (Line decreases from y≈11 to y≈4 over x=1 to 8)",
+      "options": [
+        "A) -11.19",
+        "B) -0.84",
+        "C) 0.84",
+        "D) 11.19"
+      ],
+      "answer": "B",
+      "explanation": "Using points (1, 11) and (8, 5) roughly: Slope = (5 - 11) / (8 - 1) = -6 / 7 ≈ -0.85. Matches option B (-0.84)."
+    },
+    {
+      "id": 19,
+      "question": "Which of the following equations best represents this line of best fit? (Line passes near origin and (5, 5))",
+      "options": [
+        "A) y = 1.1x",
+        "B) y = -1.1x",
+        "C) y = 5.2",
+        "D) y = -5.2"
+      ],
+      "answer": "A",
+      "explanation": "The line passes near the origin (0,0) and goes up to approx (5, 5.5). The slope is positive and slightly greater than 1. y = 1.1x is the best fit."
+    },
+    {
+      "id": 20,
+      "question": "The graph models the number of active projects a company was working on x months after the end of November 2011. According to the model, what is the predicted number of active projects the company was working on at the end of November 2011?",
+      "options": [
+        "A) 0",
+        "B) 8",
+        "C) 11",
+        "D) 12"
+      ],
+      "answer": "B",
+      "explanation": "\"End of November 2011\" corresponds to x = 0. Looking at the y-intercept of the curve on the graph, the value is 8."
+    },
+    {
+      "id": 24,
+      "question": "The scatterplot shows 5 measurements of the body length of a New Zealand fur seal. For a seal at age 3 years old, what is the body length predicted by the line of best fit, to the nearest 10 cm?",
+      "answer": "100",
+      "options": [],
+      "explanation": "The line passes through approx (1, 80) and (6, 125). Slope ≈ (125-80)/5 = 9. Equation: y = 9x + 71. At x=3: y = 27 + 71 = 98. Rounded to the nearest 10, the answer is 100."
+    },
+    {
+      "id": 26,
+      "question": "In 2002, the NFS granted a total of approximately 39 million dollars to US museums. Which of the following is closest to the percentage of this total that was granted to museums in Minnesota?",
+      "options": [
+        "A) 0.1%",
+        "B) 1.2%",
+        "C) 8.2%",
+        "D) 12.2%"
+      ],
+      "answer": "C",
+      "explanation": "From the graph, the grant amount for Minnesota in 2002 was 3.2 million. Percentage = (3.2 / 39) * 100 ≈ 8.205%."
+    },
+    {
+      "id": 27,
+      "question": "What is the approximate average rate of change of the amount, in millions of dollars per year, that the NFS granted to museums in Minnesota from 2000 to 2006?",
+      "options": [
+        "A) -2.07",
+        "B) -0.48",
+        "C) 0.41",
+        "D) 0.82"
+      ],
+      "answer": "B",
+      "explanation": "Value in 2000 = 3.9 million. Value in 2006 = 1.0 million. Rate of change = (1.0 - 3.9) / (2006 - 2000) = -2.9 / 6 ≈ -0.483 million per year."
+    }
+  ]
+}

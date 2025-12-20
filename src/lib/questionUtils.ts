@@ -1142,11 +1142,14 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
     // ==================== MATH QUESTIONS ====================
     // Load all math JSON files
     const mathFiles = [
+      // Algebra
       { file: 'expressions.json', topic: 'Expressions', subSection: 'Algebra' },
       { file: 'linear_equations.json', topic: 'Linear Equations', subSection: 'Algebra' },
       { file: 'linear_equations_system.json', topic: 'Linear System of Equations', subSection: 'Algebra' },
       { file: 'linear_functions.json', topic: 'Linear Functions', subSection: 'Algebra' },
       { file: 'linear_inequalities.json', topic: 'Linear Inequalities', subSection: 'Algebra' },
+
+      // Advanced Math
       { file: 'polynomials.json', topic: 'Polynomials', subSection: 'Advanced Math' },
       { file: 'exponents_radicals.json', topic: 'Exponents & Radicals', subSection: 'Advanced Math' },
       { file: 'functions_function_notation.json', topic: 'Functions & Function Notation', subSection: 'Advanced Math' },
@@ -1156,6 +1159,7 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
       { file: 'unit_conversion.json', topic: 'Unit Conversion', subSection: 'Problem Solving' },
       { file: 'probability.json', topic: 'Probability', subSection: 'Problem Solving' },
       { file: 'mean_median_mode_range.json', topic: 'Mean/Median/Mode/Range', subSection: 'Problem Solving' },
+      { file: 'scatterplots.json', topic: 'Scatterplots', subSection: 'Problem Solving' },
       { file: 'research_organizing.json', topic: 'Research Organizing', subSection: 'Problem Solving' },
     ];
     
