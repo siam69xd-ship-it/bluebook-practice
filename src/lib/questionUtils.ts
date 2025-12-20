@@ -197,7 +197,75 @@ function cleanMalformedJson(raw: string): string {
   cleaned = cleaned.replace(/,\s*\]/g, ']');
   cleaned = cleaned.replace(/,\s*\}/g, '}');
   
+  // Fix unescaped backslashes that aren't LaTeX commands
+  // Keep common LaTeX sequences: \frac, \sqrt, \implies, \le, \ge, \times, \div, etc.
+  // cleaned = cleaned.replace(/\\(?![frac|sqrt|implies|le|ge|times|div|ne|pm|mp|approx|cdot|ldots|Rightarrow|rightarrow|Leftarrow|leftarrow|infty|pi|alpha|beta|gamma|theta|lambda|mu|sigma|delta|epsilon|phi|omega|neq|leq|geq|n"])/g, '\\\\');
+  
   return cleaned;
+}
+
+// Extract math questions from raw JSON using regex (simpler format than new format)
+function extractMathQuestionsFromRaw(raw: string): any[] {
+  const questions: any[] = [];
+  
+  // Match simpler math question format: {"id": X, "question": "...", "options": [...], "answer": "...", "explanation": "..."}
+  const questionBlocks = raw.split(/\{\s*"id"\s*:\s*\d+/).slice(1); // Split at each question start
+  
+  for (let i = 0; i < questionBlocks.length; i++) {
+    const block = '{"id": ' + (i + 1) + questionBlocks[i];
+    try {
+      // Find the end of this question object
+      let depth = 0;
+      let endIndex = -1;
+      for (let j = 0; j < block.length; j++) {
+        if (block[j] === '{') depth++;
+        if (block[j] === '}') depth--;
+        if (depth === 0 && j > 0) {
+          endIndex = j + 1;
+          break;
+        }
+      }
+      
+      if (endIndex > 0) {
+        const questionStr = block.slice(0, endIndex);
+        try {
+          const q = JSON.parse(questionStr);
+          if (q.id && q.question) {
+            questions.push(q);
+          }
+        } catch {
+          // Try to extract fields manually
+          const idMatch = questionStr.match(/"id"\s*:\s*(\d+)/);
+          const questionMatch = questionStr.match(/"question"\s*:\s*"((?:[^"\\]|\\.)*)"/);
+          const answerMatch = questionStr.match(/"answer"\s*:\s*"([^"]+)"/);
+          const explanationMatch = questionStr.match(/"explanation"\s*:\s*"((?:[^"\\]|\\.)*)"/);
+          const optionsMatch = questionStr.match(/"options"\s*:\s*\[([\s\S]*?)\]/);
+          
+          if (idMatch && questionMatch && answerMatch) {
+            const options: string[] = [];
+            if (optionsMatch) {
+              const optStrings = optionsMatch[1].match(/"([^"]+)"/g);
+              if (optStrings) {
+                optStrings.forEach(s => options.push(s.replace(/^"|"$/g, '')));
+              }
+            }
+            
+            questions.push({
+              id: parseInt(idMatch[1]),
+              question: questionMatch[1].replace(/\\"/g, '"').replace(/\\n/g, '\n'),
+              options: options,
+              answer: answerMatch[1],
+              explanation: explanationMatch?.[1]?.replace(/\\"/g, '"').replace(/\\n/g, '\n') || ''
+            });
+          }
+        }
+      }
+    } catch {
+      // Skip unparseable block
+    }
+  }
+  
+  return questions;
 }
 
 // Extract all question-like objects from raw JSON text using regex
@@ -386,6 +454,13 @@ async function loadJsonFile(path: string): Promise<any> {
     if (extractedQuestions.length > 0) {
       console.warn(`Extracted ${extractedQuestions.length} questions from malformed ${path} using regex`);
       return { questions: extractedQuestions };
+    }
+    
+    // Try extracting math questions (simpler format)
+    const mathQuestions = extractMathQuestionsFromRaw(raw);
+    if (mathQuestions.length > 0) {
+      console.warn(`Extracted ${mathQuestions.length} math questions from ${path} using regex`);
+      return { questions: mathQuestions };
     }
 
     console.error(`Failed to parse ${path} even after recovery`);
