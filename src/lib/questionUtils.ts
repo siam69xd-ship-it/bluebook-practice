@@ -1153,6 +1153,7 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
       { file: 'polynomials.json', topic: 'Polynomials', subSection: 'Advanced Math' },
       { file: 'exponents_radicals.json', topic: 'Exponents & Radicals', subSection: 'Advanced Math' },
       { file: 'functions_function_notation.json', topic: 'Functions & Function Notation', subSection: 'Advanced Math' },
+      { file: 'exponential_functions.json', topic: 'Exponential Functions', subSection: 'Advanced Math' },
 
       // Problem Solving
       { file: 'percent_ratio_proportion.json', topic: 'Percent; Ratio & Proportion', subSection: 'Problem Solving' },
