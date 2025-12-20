@@ -221,15 +221,6 @@ export default function Index() {
                 <Timer className="w-5 h-5 mr-2" />
                 Timed Quiz
               </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                onClick={() => navigate('/math')}
-                className="w-full sm:w-auto border-2 border-violet-500 text-violet-600 hover:bg-violet-50 h-14 px-8 text-base font-semibold"
-              >
-                <Calculator className="w-5 h-5 mr-2" />
-                Math Section
-              </Button>
             </motion.div>
 
             {savedProgress && answeredCount > 0 && (
