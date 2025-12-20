@@ -75,6 +75,23 @@ const FILTER_STRUCTURE = {
       'Polynomials': null,
       'Exponents & Radicals': null,
       'Functions & Function Notation': null,
+      'Exponential Functions': null,
+      'Quadratics': null,
+    },
+    'Problem Solving': {
+      'Percent; Ratio & Proportion': null,
+      'Unit Conversion': null,
+      'Probability': null,
+      'Mean/Median/Mode/Range': null,
+      'Scatterplots': null,
+      'Research Organizing': null,
+    },
+    'Geometry and Trigonometry': {
+      'Lines & Angles': null,
+      'Triangles': null,
+      'Trigonometry': null,
+      'Circles': null,
+      'Areas & Volumes': null,
     },
   },
 };

@@ -24,6 +24,7 @@ import MathReference from '@/components/math/MathReference';
 import MathFilterSidebar from '@/components/math/MathFilterSidebar';
 import MathQuestionOption from '@/components/math/MathQuestionOption';
 import LatexRenderer from '@/components/math/LatexRenderer';
+import GridInInput from '@/components/math/GridInInput';
 import { loadAllMathQuestions, filterMathQuestions, parseOptionLabel, MathQuestion } from '@/lib/mathQuestionUtils';
 
 export default function Math() {
@@ -32,6 +33,7 @@ export default function Math() {
   const [filteredQuestions, setFilteredQuestions] = useState<MathQuestion[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
+  const [gridInValue, setGridInValue] = useState('');
   const [showResult, setShowResult] = useState(false);
   const [timer, setTimer] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
@@ -86,15 +88,38 @@ export default function Math() {
   };
 
   const handleSubmit = () => {
-    if (selectedAnswer) {
+    if (currentQuestion?.isGridIn) {
+      if (gridInValue.trim()) {
+        setShowResult(true);
+      }
+    } else if (selectedAnswer) {
       setShowResult(true);
     }
+  };
+
+  const isGridInCorrect = () => {
+    if (!currentQuestion) return false;
+    const userAnswer = gridInValue.trim().toLowerCase();
+    const correctAnswer = currentQuestion.answer.trim().toLowerCase();
+    // Handle multiple acceptable answers (separated by comma or 'or')
+    const acceptableAnswers = correctAnswer.split(/[,|]|or/).map(a => a.trim());
+    return acceptableAnswers.some(ans => {
+      // Check exact match or evaluate as number
+      if (userAnswer === ans) return true;
+      const userNum = parseFloat(userAnswer);
+      const ansNum = parseFloat(ans);
+      if (!isNaN(userNum) && !isNaN(ansNum)) {
+        return window.Math.abs(userNum - ansNum) < 0.01;
+      }
+      return false;
+    });
   };
 
   const handleNext = () => {
     if (currentIndex < filteredQuestions.length - 1) {
       setCurrentIndex(prev => prev + 1);
       setSelectedAnswer(null);
+      setGridInValue('');
       setShowResult(false);
       setEliminatedOptions(new Set());
     }
@@ -104,6 +129,7 @@ export default function Math() {
     if (currentIndex > 0) {
       setCurrentIndex(prev => prev - 1);
       setSelectedAnswer(null);
+      setGridInValue('');
       setShowResult(false);
       setEliminatedOptions(new Set());
     }
@@ -327,17 +353,21 @@ export default function Math() {
                     })
                   ) : (
                     // Grid-in question
-                    <div className="p-4 border-2 border-dashed border-slate-300 rounded-lg text-center">
-                      <p className="text-slate-500 mb-2">Grid-In Answer</p>
-                      <p className="font-mono text-2xl font-bold text-slate-800">{currentQuestion.answer}</p>
-                    </div>
+                    <GridInInput
+                      value={gridInValue}
+                      onChange={setGridInValue}
+                      isChecked={showResult}
+                      isCorrect={isGridInCorrect()}
+                      correctAnswer={currentQuestion.answer}
+                      disabled={showResult}
+                    />
                   )}
 
                   {/* Submit Button */}
-                  {!showResult && currentQuestion.options.length > 0 && (
+                  {!showResult && (
                     <Button
                       onClick={handleSubmit}
-                      disabled={!selectedAnswer}
+                      disabled={currentQuestion.isGridIn ? !gridInValue.trim() : !selectedAnswer}
                       className="w-full mt-6 bg-[#0077c8] hover:bg-[#005fa3] text-white"
                     >
                       Submit Answer
