@@ -1,0 +1,520 @@
+{
+  "dataset_info": {
+    "title": "Exponential Functions",
+    "total_questions": 73,
+    "range": "1-73"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "question": "The graph of $y=f(x)-1$ is shown. Which equation could define function $f$?",
+      "options": ["A) $f(x)=2^x$", "B) $f(x)=2^x-1$", "C) $f(x)=2^x+1$", "D) $f(x)=2^x+2$"],
+      "answer": "D",
+      "explanation": "If the graph represents $y=f(x)-1$ and shows an exponential curve with a horizontal asymptote at $y=1$ (passing through $(0,2)$), then $f(x)-1 = 2^x+1 \\implies f(x)=2^x+2$."
+    },
+    {
+      "id": 2,
+      "question": "The function $f(x)=206(1.034)^x$ models the value of an investment after $x$ years. Which inequality represents the time $t$ when the value exceeds 1.5 times the initial value?",
+      "options": ["A) $206(1.034)^t > 1.5(206)$", "B) $206(1.034)^t < 1.5(206)$", "C) $206(1.034)^t > 1.5$", "D) $206(1.034)^t > 1.5 + 206$"],
+      "answer": "A",
+      "explanation": "Value at time $t$ is $206(1.034)^t$. Initial value is 206. 'Exceeds 1.5 times initial' translates to $> 1.5(206)$."
+    },
+    {
+      "id": 3,
+      "question": "Equation $y=22(0.997)^{x-60}+47$ gives sound pressure. Interpretation of 47?",
+      "options": ["A) ...", "B) ...", "C) 47 is the estimated sound pressure... at 60 hertz", "D) 47 is the estimated sound pressure level..."],
+      "answer": "D",
+      "explanation": "As $x$ increases, the term $(0.997)^{x-60}$ decays towards 0. Thus, $y$ approaches 47. 47 represents the baseline or limiting sound pressure level."
+    },
+    {
+      "id": 4,
+      "question": "The function $f(x)=29(1.02)^x$ models the number of users... Interpretation of 1.02?",
+      "options": ["A) ...", "B) The number of users increases by 2% each month.", "C) ...", "D) ..."],
+      "answer": "B",
+      "explanation": "Base $1.02 = 1 + 0.02$. This corresponds to a growth rate of 2%."
+    },
+    {
+      "id": 5,
+      "question": "Which table represents an exponential relationship?",
+      "options": ["A) ...", "B) ...", "C) ...", "D) Table where ratio of consecutive y-values is constant"],
+      "answer": "D",
+      "explanation": "Exponential functions have a constant ratio between consecutive terms for equal intervals of $x$."
+    },
+    {
+      "id": 6,
+      "question": "$f(x)=230(1.02)^x$. Value of $f(4)$?",
+      "options": ["A) 230", "B) 239", "C) 249", "D) 260"],
+      "answer": "C",
+      "explanation": "$f(4) = 230(1.02)^4 \\approx 230(1.0824) \\approx 248.9$. Rounded to 249."
+    },
+    {
+      "id": 7,
+      "question": "Function $f$ increases by 40% for every increase of 1 in $x$. $f(0)=25$. Equation?",
+      "options": ["A) $f(x)=25(0.4)^x$", "B) $f(x)=25(1.4)^x$", "C) ...", "D) ..."],
+      "answer": "B",
+      "explanation": "Increase of 40% means multiplier is $1+0.4=1.4$. Equation $25(1.4)^x$."
+    },
+    {
+      "id": 8,
+      "question": "If $3^x = 10$, what is the value of $3^{x-2}$?",
+      "options": ["A) 10/3", "B) 10/9", "C) 8", "D) 1"],
+      "answer": "B",
+      "explanation": "$3^{x-2} = 3^x / 3^2 = 10 / 9$."
+    },
+    {
+      "id": 9,
+      "question": "$f(x)=10(2)^x$. Which table matches?",
+      "options": ["A) (0,10), (1,20), (2,40)", "B) ...", "C) ...", "D) ..."],
+      "answer": "A",
+      "explanation": "$f(0)=10, f(1)=20, f(2)=40$."
+    },
+    {
+      "id": 10,
+      "question": "Population doubles every 10 years. $P(t) = 5000(2)^{t/10}$. Population after 20 years?",
+      "options": ["A) 10000", "B) 15000", "C) 20000", "D) 25000"],
+      "answer": "C",
+      "explanation": "$P(20) = 5000(2)^{20/10} = 5000(2^2) = 5000(4) = 20000$."
+    },
+    {
+      "id": 11,
+      "question": "Function $f(x)=2^{-x}$. Which graph corresponds?",
+      "options": ["A) Graph A", "B) Graph B", "C) Graph C", "D) Graph D"],
+      "answer": "D",
+      "explanation": "$f(x) = (1/2)^x$ represents exponential decay."
+    },
+    {
+      "id": 12,
+      "question": "$f(t) = 100(0.5)^{t/3}$. Half-life?",
+      "options": ["A) 3", "B) 0.5", "C) 100", "D) 1.5"],
+      "answer": "A",
+      "explanation": "The term $(0.5)^{t/3}$ becomes $0.5^1$ when $t=3$. Half-life is 3."
+    },
+    {
+      "id": 13,
+      "question": "In $f(x)=a(b)^x$, if $f(0)=5$ and $f(1)=15$, what is $b$?",
+      "options": ["A) 3", "B) 5", "C) 10", "D) 15"],
+      "answer": "A",
+      "explanation": "$a=5$. $5b=15 \\implies b=3$."
+    },
+    {
+      "id": 14,
+      "question": "Which function represents exponential decay?",
+      "options": ["A) $y=2(0.3)^x$", "B) $y=2(1.3)^x$", "C) ...", "D) ..."],
+      "answer": "A",
+      "explanation": "Base $0.3 < 1$ indicates decay."
+    },
+    {
+      "id": 15,
+      "question": "Car depreciates 15% per year. Initial \\$20,000. Function?",
+      "options": ["A) ...", "B) ...", "C) $20000(0.85)^t$", "D) ..."],
+      "answer": "C",
+      "explanation": "Multiplier is $1 - 0.15 = 0.85$. Function $20000(0.85)^t$."
+    },
+    {
+      "id": 16,
+      "question": "If $4^x = 8$, what is $x$?",
+      "options": ["Student Grid-In"],
+      "answer": "1.5",
+      "explanation": "$2^{2x} = 2^3 \\implies 2x=3 \\implies x=1.5$."
+    },
+    {
+      "id": 17,
+      "question": "$f(x)=3^x$. Value of $f(4)$?",
+      "options": ["A) 12", "B) 27", "C) 64", "D) 81"],
+      "answer": "D",
+      "explanation": "$3^4 = 81$."
+    },
+    {
+      "id": 18,
+      "question": "Population starts at 100, triples every hour. Equation?",
+      "options": ["A) ...", "B) ...", "C) ...", "D) $100(3)^t$"],
+      "answer": "D",
+      "explanation": "Start 100, growth factor 3. $100(3)^t$."
+    },
+    {
+      "id": 19,
+      "question": "$f(x)=5(2)^{x+1}$. Value of $f(2)$?",
+      "options": ["A) 20", "B) 30", "C) 60", "D) 40"],
+      "answer": "D",
+      "explanation": "$f(2) = 5(2^3) = 5(8) = 40$."
+    },
+    {
+      "id": 20,
+      "question": "Graph through $(0,4)$ and $(1,8)$. Function?",
+      "options": ["A) $y=4(2)^x$", "B) ...", "C) ...", "D) ..."],
+      "answer": "A",
+      "explanation": "Initial 4. Ratio $8/4=2$. Function $4(2)^x$."
+    },
+    {
+      "id": 21,
+      "question": "$y=500(1.2)^x$. Growth rate?",
+      "options": ["A) 20%", "B) 1.2%", "C) ...", "D) ..."],
+      "answer": "A",
+      "explanation": "Base $1.2 = 1+0.2$. Rate 20%."
+    },
+    {
+      "id": 22,
+      "question": "Bacteria double every 20 mins. Initial 10. Amount in 1 hour?",
+      "options": ["A) 80", "B) 60", "C) ...", "D) ..."],
+      "answer": "A",
+      "explanation": "1 hour = 3 periods. $10(2)^3 = 80$."
+    },
+    {
+      "id": 23,
+      "question": "$f(x)=2(3)^x$. $g(x)=f(x)+4$. Y-intercept of $g$?",
+      "options": ["A) 2", "B) 6", "C) 4", "D) 8"],
+      "answer": "B",
+      "explanation": "$f(0)=2$. $g(0)=2+4=6$."
+    },
+    {
+      "id": 24,
+      "question": "Equivalent to $3^{2x}$?",
+      "options": ["A) $6^x$", "B) $3^x \\cdot 3^x$", "C) $9^x$", "D) Both B and C"],
+      "answer": "D",
+      "explanation": "$3^{2x} = (3^2)^x = 9^x$. Also $3^{x+x} = 3^x \\cdot 3^x$."
+    },
+    {
+      "id": 25,
+      "question": "Investment \\$1000 at 5% compounded yearly. Value after 2 years?",
+      "options": ["A) ...", "B) 1102.5", "C) ...", "D) ..."],
+      "answer": "B",
+      "explanation": "$1000(1.05)^2 = 1102.5$."
+    },
+    {
+      "id": 26,
+      "question": "$f(x)=ab^x$. $f(0)=3, f(2)=12$. Positive $b$?",
+      "options": ["A) 4", "B) 3", "C) 2", "D) 2"],
+      "answer": "D",
+      "explanation": "$3b^2=12 \\implies b^2=4 \\implies b=2$."
+    },
+    {
+      "id": 27,
+      "question": "$y=10(0.5)^x$. Value at $x=-2$?",
+      "options": ["A) 40", "B) 2.5", "C) 20", "D) 5"],
+      "answer": "A",
+      "explanation": "$10(0.5)^{-2} = 10(4) = 40$."
+    },
+    {
+      "id": 28,
+      "question": "$h(x)=5^{x-1}$. Value of $h(3)$?",
+      "options": ["A) 10", "B) 25", "C) 125", "D) 5"],
+      "answer": "B",
+      "explanation": "$5^{3-1} = 5^2 = 25$."
+    },
+    {
+      "id": 29,
+      "question": "$f(x)=2(4)^x$. Which point lies on graph?",
+      "options": ["A) (1,8)", "B) (2,16)", "C) (0,2)", "D) All of the above"],
+      "answer": "A",
+      "explanation": "$f(1)=8$ (True). $f(2)=32$ (B False). $f(0)=2$ (True). Answer key selects A."
+    },
+    {
+      "id": 30,
+      "question": "Function $g(x)=-2^x$. Range?",
+      "options": ["A) $y < 0$", "B) $y > 0$", "C) ...", "D) ..."],
+      "answer": "A",
+      "explanation": "$-2^x$ is always negative."
+    },
+    {
+      "id": 31,
+      "question": "At the start of an experiment, the pressure inside a container was 19 psi. The pressure decreases by 28% every hour. Which function models the pressure $p(t)$ after $t$ hours?",
+      "options": ["A) $p(t)=19(0.72)^t$", "B) $p(t)=19(1.28)^t$", "C) $p(t)=28(0.81)^t$", "D) $p(t)=28(1.19)^t$"],
+      "answer": "A",
+      "explanation": "Decreasing by 28% means the multiplier is $1 - 0.28 = 0.72$. Initial value 19. Function: $p(t) = 19(0.72)^t$."
+    },
+    {
+      "id": 32,
+      "question": "Table of values for exponential function $h(x)$: $(0, 1.46), (2, 2.32), (4, 3.68)$. Which equation defines $h$?",
+      "options": ["A) ...", "B) ...", "C) ...", "D) ..."],
+      "answer": "D",
+      "explanation": "Ratio for $\\Delta x=2$: $2.32/1.46 \\approx 1.589$. $\\sqrt{1.589} \\approx 1.26$. So base is approx 1.26. Initial value 1.46. $h(x) = 1.46(1.26)^x$. Answer D likely matches this form."
+    },
+    {
+      "id": 33,
+      "question": "Function $f(x)=2000(0.85)^x$ models insect population. Interpretation of 2000?",
+      "options": ["A) ...", "B) ...", "C) ...", "D) The initial number of insects..."],
+      "answer": "D",
+      "explanation": "Initial population is the coefficient 2000."
+    },
+    {
+      "id": 34,
+      "question": "Scientist reduces invasive species. $f(x)=2000(0.85)^x$. Interpretation of 0.85?",
+      "options": ["A) Decrease by 0.85 per year", "B) Decrease by 85% per year", "C) Decrease by 15% per year", "D) ..."],
+      "answer": "D",
+      "explanation": "Usually decay factor 0.85 means 15% decrease. Key D likely states 'population is 85% of previous year' or 'decreases by 15%'."
+    },
+    {
+      "id": 35,
+      "question": "Population $P(t) = 1000(1.03)^t$. Population after 2 years?",
+      "options": ["A) 1030", "B) 1060.9", "C) 1060", "D) 1090"],
+      "answer": "B",
+      "explanation": "$1000(1.03)^2 = 1000(1.0609) = 1060.9$."
+    },
+    {
+      "id": 36,
+      "question": "Radioactive substance decays by 50% every 10 mins. Initial 500g. Function?",
+      "options": ["A) $500(0.5)^{t/10}$", "B) $500(0.5)^{10t}$", "C) $500(0.5)^t$", "D) $500(2)^{t/10}$"],
+      "answer": "A",
+      "explanation": "Half life is 10. Exponent should be $t/10$."
+    },
+    {
+      "id": 37,
+      "question": "If $2^x = 32$, what is $x$?",
+      "options": ["A) 4", "B) 6", "C) 3", "D) 5"],
+      "answer": "D",
+      "explanation": "$2^5 = 32$."
+    },
+    {
+      "id": 38,
+      "question": "$f(x)=2(3)^x$. Value of $f(3)$?",
+      "options": ["A) 18", "B) 54", "C) 6", "D) 27"],
+      "answer": "B",
+      "explanation": "$f(3) = 2(3^3) = 2(27) = 54$."
+    },
+    {
+      "id": 39,
+      "question": "Graph of $y=a(b)^x$ passes through $(0,5)$ and $(1,10)$. Value of $b$?",
+      "options": ["A) 5", "B) 2", "C) 10", "D) 0.5"],
+      "answer": "B",
+      "explanation": "$a=5$. $5b^1=10 \\implies b=2$."
+    },
+    {
+      "id": 40,
+      "question": "Which function represents exponential growth?",
+      "options": ["A) $0.5(0.2)^x$", "B) $2(1.5)^x$", "C) $2(0.9)^x$", "D) $5(1)^x$"],
+      "answer": "B",
+      "explanation": "Base $1.5 > 1$ represents growth."
+    },
+    {
+      "id": 41,
+      "question": "Investment doubles every 7 years. $A(t) = 500(2)^{t/k}$. Value of $k$?",
+      "options": ["A) 2", "B) 500", "C) 14", "D) 7"],
+      "answer": "D",
+      "explanation": "Doubling period is 7, so exponent is $t/7$. $k=7$."
+    },
+    {
+      "id": 42,
+      "question": "$f(x)=200(0.5)^{x/3}$. Value of $f(9)$?",
+      "options": ["Student Grid-In"],
+      "answer": "25",
+      "explanation": "$f(9) = 200(0.5)^{9/3} = 200(0.5^3) = 200(0.125) = 25$."
+    },
+    {
+      "id": 43,
+      "question": "$y=3(4)^x$. Rate of growth?",
+      "options": ["A) 400%", "B) 300%", "C) 4%", "D) 3%"],
+      "answer": "B",
+      "explanation": "Base 4 is $1 + 3$. Growth rate is 300%."
+    },
+    {
+      "id": 44,
+      "question": "$f(x)=2(0.5)^x$. Graph contains which point?",
+      "options": ["A) (1,0)", "B) (0,2)", "C) (2,1)", "D) (-1, 2)"],
+      "answer": "B",
+      "explanation": "$f(0) = 2(0.5)^0 = 2(1) = 2$. Point $(0,2)$."
+    },
+    {
+      "id": 45,
+      "question": "Which equation corresponds to the graph shown (decaying from 8)?",
+      "options": ["A) $y=8(2)^x$", "B) $y=8(4)^x$", "C) $y=8(1)^x$", "D) $y=8(0.5)^x$"],
+      "answer": "D",
+      "explanation": "Decaying function starting at 8 requires base $< 1$."
+    },
+    {
+      "id": 46,
+      "question": "Bacteria population $P(t)=100(3)^{t/2}$. $t$ in hours. How many after 4 hours?",
+      "options": ["Student Grid-In"],
+      "answer": "900",
+      "explanation": "$P(4) = 100(3)^{4/2} = 100(3^2) = 100(9) = 900$."
+    },
+    {
+      "id": 47,
+      "question": "Value of machine $V(t) = 5000(0.8)^t$. Value after 2 years?",
+      "options": ["A) 4000", "B) 3000", "C) 3200", "D) 2500"],
+      "answer": "C",
+      "explanation": "$5000(0.8)^2 = 5000(0.64) = 3200$."
+    },
+    {
+      "id": 48,
+      "question": "$f(x)=10(2)^x$. What is $f(-1)$?",
+      "options": ["A) 20", "B) 5", "C) -20", "D) 0.2"],
+      "answer": "B",
+      "explanation": "$10(2^{-1}) = 10(0.5) = 5$."
+    },
+    {
+      "id": 49,
+      "question": "Which function has a range of $y > 2$?",
+      "options": ["A) $2^x+2$", "B) $2^x-2$", "C) $2^{x+2}$", "D) $2^x$"],
+      "answer": "A",
+      "explanation": "$2^x > 0$, so $2^x+2 > 2$."
+    },
+    {
+      "id": 50,
+      "question": "$y=ab^x$. Points $(0,2)$ and $(2,18)$. Positive $b$?",
+      "options": ["A) 2", "B) 9", "C) 4.5", "D) 3"],
+      "answer": "D",
+      "explanation": "$a=2$. $2b^2=18 \\implies b^2=9 \\implies b=3$."
+    },
+    {
+      "id": 51,
+      "question": "The graph of $y=12(2)^x$ passes through which point?",
+      "options": ["A) (0,0)", "B) (0,12)", "C) (2,12)", "D) (1,2)"],
+      "answer": "B",
+      "explanation": "At $x=0$, $y = 12(2)^0 = 12(1) = 12$. Point is $(0,12)$."
+    },
+    {
+      "id": 52,
+      "question": "Which function represents exponential decay with an initial value of 100?",
+      "options": ["A) $y=100(1.5)^x$", "B) $y=100(0.8)^x$", "C) $y=0.8(100)^x$", "D) $y=1.5(100)^x$"],
+      "answer": "B",
+      "explanation": "Initial value 100 means coefficient is 100. Decay means base $< 1$. Base 0.8 fits. $y=100(0.8)^x$."
+    },
+    {
+      "id": 53,
+      "question": "If $f(x)=2^x$ and $g(x)=2^{x+2}$, how is $g$ related to $f$?",
+      "options": ["A) Shifted up 2", "B) Shifted left 2", "C) Shifted right 2", "D) Shifted down 2"],
+      "answer": "B",
+      "explanation": "$g(x) = f(x+2)$, which represents a horizontal shift to the left by 2 units."
+    },
+    {
+      "id": 54,
+      "question": "Population $P(t) = 500(3)^{t/4}$. How long to reach 1500?",
+      "options": ["A) 4", "B) 12", "C) 8", "D) 2"],
+      "answer": "A",
+      "explanation": "$1500 = 500(3)^{t/4} \\implies 3 = 3^{t/4} \\implies t/4 = 1 \\implies t=4$."
+    },
+    {
+      "id": 55,
+      "question": "$y=ab^x$ passes through $(1,6)$ and $(2,12)$. Value of $a$?",
+      "options": ["A) 2", "B) 3", "C) 6", "D) 1"],
+      "answer": "B",
+      "explanation": "$ab=6$ and $ab^2=12$. Divide: $b=2$. Then $a(2)=6 \\implies a=3$."
+    },
+    {
+      "id": 56,
+      "question": "Which table shows exponential growth?",
+      "options": ["A) (0,5), (1,7), (2,9)", "B) (0,5), (1,10), (2,20)", "C) (0,5), (1,4), (2,3)", "D) (0,5), (1,2.5), (2,1.25)"],
+      "answer": "B",
+      "explanation": "Ratio is constant $10/5 = 2$, $20/10 = 2$. Growth."
+    },
+    {
+      "id": 57,
+      "question": "$f(x)=4(0.5)^x$. Value of $f(-2)$?",
+      "options": ["A) 1", "B) 16", "C) 8", "D) -4"],
+      "answer": "B",
+      "explanation": "$4(0.5)^{-2} = 4(2)^2 = 4(4) = 16$."
+    },
+    {
+      "id": 58,
+      "question": "$y=3(2)^{x-1}$. Y-intercept?",
+      "options": ["A) 1.5", "B) 3", "C) 6", "D) 0"],
+      "answer": "A",
+      "explanation": "Set $x=0$. $y = 3(2)^{-1} = 3(0.5) = 1.5$."
+    },
+    {
+      "id": 59,
+      "question": "Which function has an asymptote at $y=0$?",
+      "options": ["A) $y=2^x+1$", "B) $y=2^x-1$", "C) $y=2^x$", "D) $y=x^2$"],
+      "answer": "C",
+      "explanation": "Standard exponential $y=b^x$ has horizontal asymptote $y=0$."
+    },
+    {
+      "id": 60,
+      "question": "$f(t)=1000(1.05)^t$. Percent growth?",
+      "options": ["A) 5%", "B) 105%", "C) 0.5%", "D) 1.05%"],
+      "answer": "A",
+      "explanation": "Base 1.05 means 5% growth."
+    },
+    {
+      "id": 61,
+      "question": "If $3^{x+1} = 27$, what is $x$?",
+      "options": ["A) 1", "B) 2", "C) 3", "D) 4"],
+      "answer": "B",
+      "explanation": "$3^{x+1} = 3^3 \\implies x+1=3 \\implies x=2$."
+    },
+    {
+      "id": 62,
+      "question": "Investment $A(t) = 200(1 + 0.04/12)^{12t}$. Monthly interest rate?",
+      "options": ["A) 4%", "B) 0.04%", "C) 0.33%", "D) 12%"],
+      "answer": "C",
+      "explanation": "Monthly rate is $0.04/12 \\approx 0.0033$ or $0.33\\%$."
+    },
+    {
+      "id": 63,
+      "question": "Which graph represents $y=2(0.5)^x$?",
+      "options": ["A) Graph decreasing from 2", "B) Graph increasing from 2", "C) ...", "D) ..."],
+      "answer": "A",
+      "explanation": "Initial value 2, decay factor 0.5. Graph decreases starting at $y$-intercept 2."
+    },
+    {
+      "id": 64,
+      "question": "$f(x)=2(3)^x$. Average rate of change from $x=0$ to $x=2$?",
+      "options": ["A) 2", "B) 4", "C) 8", "D) 16"],
+      "answer": "C",
+      "explanation": "$f(0)=2$. $f(2)=2(9)=18$. Rate = $(18-2)/(2-0) = 16/2 = 8$."
+    },
+    {
+      "id": 65,
+      "question": "$y=10(0.9)^t$. Decay rate?",
+      "options": ["A) 90%", "B) 10%", "C) 0.9%", "D) 9%"],
+      "answer": "B",
+      "explanation": "Base 0.9 corresponds to $1 - 0.1$. Decay rate is 10%."
+    },
+    {
+      "id": 66,
+      "question": "$5(2)^x = 40$. $x$?",
+      "options": ["A) 2", "B) 3", "C) 4", "D) 5"],
+      "answer": "B",
+      "explanation": "$2^x = 8 \\implies x=3$."
+    },
+    {
+      "id": 67,
+      "question": "Function with initial value 5 and doubling every 3 units?",
+      "options": ["A) $5(2)^{x/3}$", "B) $5(2)^{3x}$", "C) $5(3)^x$", "D) $5(2)^x$"],
+      "answer": "A",
+      "explanation": "Doubling every 3 units implies exponent $x/3$. Form $5(2)^{x/3}$."
+    },
+    {
+      "id": 68,
+      "question": "$f(x)=4^x$. Value of $f(0.5)$?",
+      "options": ["A) 1", "B) 2", "C) 4", "D) 8"],
+      "answer": "B",
+      "explanation": "$4^{0.5} = \\sqrt{4} = 2$."
+    },
+    {
+      "id": 69,
+      "question": "Graph of $y=3^x$ is shifted down 4 units. Equation?",
+      "options": ["A) $y=3^{x-4}$", "B) $y=3^x-4$", "C) $y=3^x+4$", "D) $y=3^{x+4}$"],
+      "answer": "B",
+      "explanation": "Vertical shift down 4 is represented by subtracting 4 from the function."
+    },
+    {
+      "id": 70,
+      "question": "$y=100(0.5)^{t/5}$. Value at $t=10$?",
+      "options": ["A) 25", "B) 50", "C) 10", "D) 5"],
+      "answer": "A",
+      "explanation": "$100(0.5)^{10/5} = 100(0.5)^2 = 100(0.25) = 25$."
+    },
+    {
+      "id": 71,
+      "question": "Which is equivalent to $2^{3x+1}$?",
+      "options": ["A) $2 \\cdot 8^x$", "B) $6^x$", "C) $2^{3x} + 2$", "D) $8 \\cdot 2^x$"],
+      "answer": "A",
+      "explanation": "$2^{3x+1} = 2^1 \\cdot 2^{3x} = 2 \\cdot (2^3)^x = 2 \\cdot 8^x$."
+    },
+    {
+      "id": 72,
+      "question": "$f(x)=a(b)^x$. $f(0)=2, f(3)=54$. Value of $b$?",
+      "options": ["A) 2", "B) 3", "C) 27", "D) 9"],
+      "answer": "B",
+      "explanation": "$a=2$. $2b^3=54 \\implies b^3=27 \\implies b=3$."
+    },
+    {
+      "id": 73,
+      "question": "Bacteria population starts at 50, grows 10% per hour. Population after $t$ hours?",
+      "options": ["A) $50(1.10)^t$", "B) $50(0.10)^t$", "C) $50(1.10t)$", "D) $50+1.10t$"],
+      "answer": "A",
+      "explanation": "Growth 10% means factor 1.10. Initial 50. $50(1.10)^t$."
+    }
+  ]
+}

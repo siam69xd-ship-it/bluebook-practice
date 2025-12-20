@@ -50,6 +50,8 @@ const MATH_DATA_FILES = [
   { file: 'percent_ratio_proportion.json', topic: 'Percent; Ratio & Proportion' },
   { file: 'probability.json', topic: 'Probability' },
   { file: 'unit_conversion.json', topic: 'Unit Conversion' },
+  { file: 'scatterplots.json', topic: 'Scatterplots' },
+  { file: 'exponential_functions.json', topic: 'Exponential Functions' },
 ];
 
 export async function loadAllMathQuestions(): Promise<MathQuestion[]> {
