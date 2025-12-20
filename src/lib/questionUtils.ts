@@ -185,9 +185,17 @@ function cleanMalformedJson(raw: string): string {
   // Fix ][ -> ],[  (concatenated arrays without comma)
   cleaned = cleaned.replace(/\]\s*\[/g, '],[');
   
+  // Fix ]{ -> ],{  (array followed by object)
+  cleaned = cleaned.replace(/\]\s*\{/g, '],{');
+  
   // Fix trailing garbage like }    }   ] after a proper object
   // Remove duplicate closing braces/brackets that break parsing
   cleaned = cleaned.replace(/\}\s*\}\s*\]/g, '}]');
+  cleaned = cleaned.replace(/\}\s*\}\s*\{/g, '},{');
+  
+  // Remove trailing commas before closing brackets
+  cleaned = cleaned.replace(/,\s*\]/g, ']');
+  cleaned = cleaned.replace(/,\s*\}/g, '}');
   
   return cleaned;
 }
