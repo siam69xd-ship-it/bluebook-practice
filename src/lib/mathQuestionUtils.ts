@@ -5,6 +5,7 @@ export interface MathQuestion {
   options: string[];
   answer: string;
   explanation: string;
+  isGridIn: boolean;
 }
 
 interface RawMathQuestion {
@@ -59,11 +60,18 @@ export async function loadAllMathQuestions(): Promise<MathQuestion[]> {
       const response = await fetch(`/data/math/${file}`);
       if (response.ok) {
         const data: MathDataFile = await response.json();
-        const questionsWithTopic = data.questions.map((q, index) => ({
-          ...q,
-          id: allQuestions.length + index + 1,
-          topic,
-        }));
+        const questionsWithTopic = data.questions.map((q, index) => {
+          // Check if it's a grid-in question
+          const isGridIn = q.options.length === 0 || 
+            (q.options.length === 1 && q.options[0].toLowerCase().includes('grid-in'));
+          return {
+            ...q,
+            id: allQuestions.length + index + 1,
+            topic,
+            isGridIn,
+            options: isGridIn ? [] : q.options,
+          };
+        });
         allQuestions.push(...questionsWithTopic);
       }
     } catch (error) {
