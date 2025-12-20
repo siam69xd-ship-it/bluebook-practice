@@ -1071,16 +1071,20 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
     
     for (const { file, topic, subSection } of mathFiles) {
       try {
-        const response = await fetch(`/data/math/${file}`);
-        if (response.ok) {
-          const data = await response.json();
-          if (data.questions && Array.isArray(data.questions)) {
-            data.questions.forEach((q: any, index: number) => {
-              // Parse options from array format to object format
-              const options: { [key: string]: string } = {};
-              let isGridIn = true;
+        // Use loadJsonFile which handles concatenated JSON objects
+        const data = await loadJsonFile(`/data/math/${file}`);
+        if (data && data.questions && Array.isArray(data.questions)) {
+          data.questions.forEach((q: any, index: number) => {
+            // Parse options from array format to object format
+            const options: { [key: string]: string } = {};
+            let isGridIn = true;
+            
+            if (q.options && Array.isArray(q.options) && q.options.length > 0) {
+              // Check if it's a Student Grid-In placeholder
+              const isPlaceholderGridIn = q.options.length === 1 && 
+                (q.options[0] === 'Student Grid-In' || q.options[0].toLowerCase().includes('grid'));
               
-              if (q.options && Array.isArray(q.options) && q.options.length > 0) {
+              if (!isPlaceholderGridIn) {
                 isGridIn = false;
                 q.options.forEach((opt: string) => {
                   const match = opt.match(/^([A-D])\)\s*(.+)$/s);
@@ -1089,29 +1093,29 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
                   }
                 });
               }
-              
-              // Check for LaTeX in question
-              const hasLatex = /\$.*?\$|\\frac|\\sqrt|\\times|\\div|\^/.test(q.question || '');
-              
-              addQuestion({
-                id: globalId++,
-                sourceId: `MATH_${subSection.toUpperCase().replace(/\s+/g, '_')}_${topic.toUpperCase().replace(/\s+/g, '_')}_${String(index + 1).padStart(3, '0')}`,
-                section: 'Math',
-                subSection,
-                topic,
-                subTopic: undefined,
-                passage: '', // Math questions typically don't have passages
-                questionPrompt: q.question || '',
-                questionText: q.question || '',
-                options,
-                correctAnswer: q.answer || '',
-                explanation: q.explanation || '',
-                difficulty: 'medium' as Difficulty, // Will be updated later
-                isGridIn,
-                hasLatex,
-              });
+            }
+            
+            // Check for LaTeX in question
+            const hasLatex = /\$.*?\$|\\frac|\\sqrt|\\times|\\div|\^/.test(q.question || '');
+            
+            addQuestion({
+              id: globalId++,
+              sourceId: `MATH_${subSection.toUpperCase().replace(/\s+/g, '_')}_${topic.toUpperCase().replace(/\s+/g, '_')}_${String(index + 1).padStart(3, '0')}`,
+              section: 'Math',
+              subSection,
+              topic,
+              subTopic: undefined,
+              passage: '', // Math questions typically don't have passages
+              questionPrompt: q.question || '',
+              questionText: q.question || '',
+              options,
+              correctAnswer: q.answer || '',
+              explanation: q.explanation || '',
+              difficulty: 'medium' as Difficulty, // Will be updated later
+              isGridIn,
+              hasLatex,
             });
-          }
+          });
         }
       } catch (error) {
         console.warn(`Failed to load math file ${file}:`, error);
