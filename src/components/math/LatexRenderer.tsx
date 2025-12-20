@@ -5,33 +5,49 @@ import 'katex/dist/katex.min.css';
 interface LatexRendererProps {
   content: string;
   className?: string;
+  displayMode?: boolean;
 }
 
-function LatexRendererComponent({ content, className = '' }: LatexRendererProps) {
+function LatexRendererComponent({ content, className = '', displayMode = false }: LatexRendererProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!containerRef.current || !content) return;
 
-    // Process content and replace LaTeX expressions
     let processedContent = content;
     
-    // Handle display mode LaTeX ($$...$$)
+    // Pre-process: protect currency amounts from being parsed as LaTeX
+    // Replace $X,XXX patterns (currency) with a placeholder
+    const currencyPlaceholders: string[] = [];
+    processedContent = processedContent.replace(/\$(\d{1,3}(?:,\d{3})*(?:\.\d{2})?)/g, (match, amount) => {
+      currencyPlaceholders.push(`$${amount}`);
+      return `%%CURRENCY_${currencyPlaceholders.length - 1}%%`;
+    });
+    
+    // Also protect standalone $ followed by numbers without comma (like $50)
+    processedContent = processedContent.replace(/\$(\d+(?:\.\d{2})?)\b(?!\$)/g, (match, amount) => {
+      currencyPlaceholders.push(`$${amount}`);
+      return `%%CURRENCY_${currencyPlaceholders.length - 1}%%`;
+    });
+
+    // Handle display mode LaTeX ($$...$$) - centered equations
     processedContent = processedContent.replace(/\$\$([\s\S]*?)\$\$/g, (_, latex) => {
       try {
-        return katex.renderToString(latex.trim(), { 
+        return `<div class="my-4 text-center">${katex.renderToString(latex.trim(), { 
           displayMode: true, 
           throwOnError: false,
           trust: true,
           strict: false
-        });
+        })}</div>`;
       } catch {
         return `$$${latex}$$`;
       }
     });
     
-    // Handle inline LaTeX ($...$)
+    // Handle inline LaTeX ($...$) - must have content between $s
     processedContent = processedContent.replace(/\$([^$\n]+?)\$/g, (_, latex) => {
+      // Skip if it looks like currency that wasn't caught
+      if (/^\d/.test(latex.trim())) return `$${latex}$`;
       try {
         return katex.renderToString(latex.trim(), { 
           displayMode: false, 
@@ -56,6 +72,11 @@ function LatexRendererComponent({ content, className = '' }: LatexRendererProps)
       }
     });
 
+    // Restore currency placeholders
+    currencyPlaceholders.forEach((currency, index) => {
+      processedContent = processedContent.replace(`%%CURRENCY_${index}%%`, currency);
+    });
+
     // Handle HTML entities and line breaks
     processedContent = processedContent
       .replace(/<br\s*\/?>/gi, '<br/>')
@@ -68,7 +89,7 @@ function LatexRendererComponent({ content, className = '' }: LatexRendererProps)
     <div 
       ref={containerRef} 
       className={className}
-      style={{ lineHeight: '1.6' }}
+      style={{ lineHeight: '1.8' }}
     />
   );
 }
