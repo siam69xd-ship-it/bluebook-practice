@@ -16,7 +16,7 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { Question, FilterOption, getAllQuestionsAsync } from '@/lib/questionUtils';
+import { Question, FilterOption, getAllQuestionsAsync, clearQuestionCache } from '@/lib/questionUtils';
 import { Difficulty } from '@/lib/difficultyData';
 
 const FILTER_STRUCTURE = {
@@ -155,10 +155,16 @@ export default function Practice() {
   });
 
   useEffect(() => {
-    getAllQuestionsAsync().then(q => {
-      setQuestions(q);
-      setIsLoading(false);
-    });
+    clearQuestionCache();
+    getAllQuestionsAsync()
+      .then(q => {
+        setQuestions(q);
+        setIsLoading(false);
+      })
+      .catch(() => {
+        setQuestions([]);
+        setIsLoading(false);
+      });
   }, []);
 
   const filteredQuestions = useMemo(() => {
