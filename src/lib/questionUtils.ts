@@ -539,8 +539,9 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
   let globalId = 1;
   
   // Helper to normalize question text for comparison (remove whitespace, lowercase)
-  const normalizeForComparison = (text: string): string => {
-    return text.replace(/\s+/g, ' ').trim().toLowerCase().substring(0, 100);
+  const normalizeForComparison = (text: string, section: string): string => {
+    // Include section to avoid cross-section deduplication
+    return `${section}:${text.replace(/\s+/g, ' ').trim().toLowerCase().substring(0, 150)}`;
   };
   
   // Helper to add question with deduplication
@@ -550,17 +551,19 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
       return; // Skip duplicate
     }
     
-    // Check for content-based duplicate (first 100 chars normalized)
-    const normalizedText = normalizeForComparison(q.questionPrompt || q.questionText);
-    if (normalizedText && seenQuestionTexts.has(normalizedText)) {
-      return; // Skip duplicate content
+    // Check for content-based duplicate within same section (first 150 chars normalized)
+    const questionContent = q.questionPrompt || q.questionText || '';
+    // Only deduplicate if question text is substantial (more than 20 chars)
+    if (questionContent.length > 20) {
+      const normalizedText = normalizeForComparison(questionContent, q.section);
+      if (seenQuestionTexts.has(normalizedText)) {
+        return; // Skip duplicate content
+      }
+      seenQuestionTexts.add(normalizedText);
     }
     
     if (q.sourceId) {
       seenSourceIds.add(q.sourceId);
-    }
-    if (normalizedText) {
-      seenQuestionTexts.add(normalizedText);
     }
     questions.push(q);
   };
