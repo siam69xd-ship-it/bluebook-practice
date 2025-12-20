@@ -12,6 +12,9 @@ import {
   Flag,
   Pencil,
   Undo2,
+  Calculator,
+  BookOpen,
+  ChevronDown,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Timer } from '@/components/Timer';
@@ -21,6 +24,10 @@ import { QuestionOption } from '@/components/QuestionOption';
 import { QuestionNavigator } from '@/components/QuestionNavigator';
 import { ExplanationPanel } from '@/components/ExplanationPanel';
 import { PassageRenderer } from '@/components/PassageRenderer';
+import DesmosCalculator from '@/components/math/DesmosCalculator';
+import MathReferenceSheet from '@/components/math/MathReferenceSheet';
+import GridInInput from '@/components/math/GridInInput';
+import LatexRenderer from '@/components/math/LatexRenderer';
 import {
   getAllQuestionsAsync,
   filterQuestions,
@@ -60,6 +67,9 @@ export default function Quiz() {
   const [isPracticeMode, setIsPracticeMode] = useState(false);
   const [practiceTopicInfo, setPracticeTopicInfo] = useState<{topic?: string; subTopic?: string} | null>(null);
   const [isEliminationMode, setIsEliminationMode] = useState(false);
+  const [showCalculator, setShowCalculator] = useState(false);
+  const [showReference, setShowReference] = useState(false);
+  const [gridInAnswer, setGridInAnswer] = useState('');
 
   // Fetch attempt counts for logged-in users
   const { data: attemptCounts = {} } = useQuery<Record<string, number>>({
@@ -183,6 +193,8 @@ export default function Quiz() {
 
   const currentQuestion = filteredQuestions[currentIndex];
   const currentState = currentQuestion ? questionStates[currentQuestion.id] || getInitialQuestionState() : null;
+  const isMathQuestion = currentQuestion?.section === 'Math';
+  const isGridInQuestion = isMathQuestion && currentQuestion?.isGridIn;
 
   // Save progress on changes
   useEffect(() => {
@@ -377,7 +389,7 @@ export default function Quiz() {
         {/* Top Bar - Bluebook Style */}
         <header className="sticky top-0 z-30 bg-white border-b border-gray-200">
           <div className="flex items-center justify-between px-4 h-14">
-            {/* Left: Back arrow, Home, Title */}
+            {/* Left: Back arrow, Title with Directions dropdown */}
             <div className="flex items-center gap-2">
               <button
                 onClick={() => navigate('/')}
@@ -386,14 +398,12 @@ export default function Quiz() {
               >
                 <ChevronLeft className="w-5 h-5 text-gray-600" />
               </button>
-              <button
-                onClick={() => navigate('/')}
-                className="p-2 rounded-md hover:bg-gray-100 transition-colors"
-                data-testid="button-home"
-              >
-                <Home className="w-5 h-5 text-gray-600" />
-              </button>
-              <span className="text-base font-medium text-gray-900 ml-2">Real DSAT Question Bank</span>
+              <div className="flex flex-col">
+                <span className="text-base font-medium text-gray-900">SAT® Suite Question Bank</span>
+                <button className="flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700">
+                  Directions <ChevronDown className="w-3 h-3" />
+                </button>
+              </div>
             </div>
 
             {/* Center: Timer with Hide toggle */}
@@ -404,7 +414,7 @@ export default function Quiz() {
               />
               <button
                 onClick={() => setIsTimerHidden(!isTimerHidden)}
-                className="flex items-center gap-1.5 px-3 py-1.5 text-sm text-gray-600 hover:bg-gray-100 rounded-md transition-colors"
+                className="flex items-center gap-1.5 px-3 py-1.5 text-sm text-gray-600 hover:bg-gray-100 rounded-md transition-colors border border-gray-300"
                 data-testid="button-hide-timer"
               >
                 <span className="flex gap-0.5">
@@ -415,19 +425,53 @@ export default function Quiz() {
               </button>
             </div>
 
-            {/* Right: Highlight, Fullscreen */}
-            <div className="flex items-center gap-2">
-              <button
-                onClick={() => setShowHighlightTool(!showHighlightTool)}
-                className={cn(
-                  "flex flex-col items-center gap-0.5 px-3 py-1 rounded-md transition-colors",
-                  showHighlightTool ? "bg-gray-100" : "hover:bg-gray-100"
-                )}
-                data-testid="button-highlight-toggle"
-              >
-                <Pencil className="w-4 h-4 text-gray-600" />
-                <span className="text-xs text-gray-600">Highlight</span>
-              </button>
+            {/* Right: Calculator (Math), Reference (Math), Highlight (English), Fullscreen */}
+            <div className="flex items-center gap-1">
+              {/* Calculator - Math only */}
+              {isMathQuestion && (
+                <button
+                  onClick={() => setShowCalculator(!showCalculator)}
+                  className={cn(
+                    "flex flex-col items-center gap-0.5 px-3 py-1 rounded-md transition-colors",
+                    showCalculator ? "bg-gray-100" : "hover:bg-gray-100"
+                  )}
+                  data-testid="button-calculator"
+                >
+                  <Calculator className="w-5 h-5 text-gray-600" />
+                  <span className="text-xs text-gray-600">Calculator</span>
+                </button>
+              )}
+              
+              {/* Reference - Math only */}
+              {isMathQuestion && (
+                <button
+                  onClick={() => setShowReference(!showReference)}
+                  className={cn(
+                    "flex flex-col items-center gap-0.5 px-3 py-1 rounded-md transition-colors",
+                    showReference ? "bg-gray-100" : "hover:bg-gray-100"
+                  )}
+                  data-testid="button-reference"
+                >
+                  <BookOpen className="w-5 h-5 text-gray-600" />
+                  <span className="text-xs text-gray-600">Reference</span>
+                </button>
+              )}
+              
+              {/* Highlight - English only */}
+              {!isMathQuestion && (
+                <button
+                  onClick={() => setShowHighlightTool(!showHighlightTool)}
+                  className={cn(
+                    "flex flex-col items-center gap-0.5 px-3 py-1 rounded-md transition-colors",
+                    showHighlightTool ? "bg-gray-100" : "hover:bg-gray-100"
+                  )}
+                  data-testid="button-highlight-toggle"
+                >
+                  <Pencil className="w-4 h-4 text-gray-600" />
+                  <span className="text-xs text-gray-600">Highlight</span>
+                </button>
+              )}
+              
               <button
                 onClick={toggleFullscreen}
                 className="flex flex-col items-center gap-0.5 px-3 py-1 rounded-md hover:bg-gray-100 transition-colors"
@@ -443,8 +487,8 @@ export default function Quiz() {
             </div>
           </div>
 
-          {/* Highlight Tool Bar */}
-          {showHighlightTool && (
+          {/* Highlight Tool Bar - English only */}
+          {showHighlightTool && !isMathQuestion && (
             <div className="px-4 py-2 border-t border-gray-200 bg-gray-50">
               <HighlightTool
                 selectedColor={selectedHighlightColor}
@@ -571,31 +615,49 @@ export default function Quiz() {
                   </div>
                 )}
 
-                {/* Question Text */}
-                <PassageRenderer 
-                  content={currentQuestion.questionPrompt || 'Based on the text, select the best answer to the question.'}
-                  className="quiz-question mb-6"
-                />
+                {/* Question Text - Use LaTeX for Math */}
+                {isMathQuestion && currentQuestion.hasLatex ? (
+                  <LatexRenderer 
+                    content={currentQuestion.questionPrompt || ''} 
+                    className="quiz-question mb-6 text-gray-900"
+                  />
+                ) : (
+                  <PassageRenderer 
+                    content={currentQuestion.questionPrompt || 'Based on the text, select the best answer to the question.'}
+                    className="quiz-question mb-6"
+                  />
+                )}
 
-                {/* Options */}
-                <div className="space-y-3">
-                  {Object.entries(currentQuestion.options).map(([letter, text]) => (
-                    <QuestionOption
-                      key={letter}
-                      letter={letter}
-                      text={text}
-                      isSelected={currentState?.userAnswer === letter}
-                      isEliminated={currentState?.eliminatedOptions?.includes(letter) || false}
-                      isChecked={currentState?.checked || false}
-                      isOptionChecked={currentState?.checkedOptions?.includes(letter) || false}
-                      correctAnswer={currentQuestion.correctAnswer}
-                      onSelect={() => handleSelectAnswer(letter)}
-                      onEliminate={() => handleToggleElimination(letter)}
-                      onCheckOption={() => handleCheckOption(letter)}
-                      showEliminationButtons={isEliminationMode}
-                    />
-                  ))}
-                </div>
+                {/* Grid-In Input for Math questions without options */}
+                {isGridInQuestion ? (
+                  <GridInInput
+                    value={currentState?.userAnswer || ''}
+                    onChange={(value) => updateQuestionState(currentQuestion.id, { userAnswer: value })}
+                    isChecked={currentState?.checked || false}
+                    isCorrect={currentState?.userAnswer === currentQuestion.correctAnswer}
+                    correctAnswer={currentQuestion.correctAnswer}
+                  />
+                ) : (
+                  /* Multiple Choice Options */
+                  <div className="space-y-3">
+                    {Object.entries(currentQuestion.options).map(([letter, text]) => (
+                      <QuestionOption
+                        key={letter}
+                        letter={letter}
+                        text={isMathQuestion ? text : text}
+                        isSelected={currentState?.userAnswer === letter}
+                        isEliminated={currentState?.eliminatedOptions?.includes(letter) || false}
+                        isChecked={currentState?.checked || false}
+                        isOptionChecked={currentState?.checkedOptions?.includes(letter) || false}
+                        correctAnswer={currentQuestion.correctAnswer}
+                        onSelect={() => handleSelectAnswer(letter)}
+                        onEliminate={() => handleToggleElimination(letter)}
+                        onCheckOption={() => handleCheckOption(letter)}
+                        showEliminationButtons={isEliminationMode}
+                      />
+                    ))}
+                  </div>
+                )}
               </motion.div>
             </AnimatePresence>
           </div>
@@ -708,6 +770,10 @@ export default function Quiz() {
         explanation={currentQuestion.explanation}
         correctAnswer={currentQuestion.correctAnswer}
       />
+
+      {/* Math Tools */}
+      <DesmosCalculator isOpen={showCalculator} onClose={() => setShowCalculator(false)} />
+      <MathReferenceSheet isOpen={showReference} onClose={() => setShowReference(false)} />
     </div>
   );
 }
