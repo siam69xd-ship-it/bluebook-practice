@@ -7,7 +7,7 @@
   "questions": [
     {
       "id": 1,
-      "question": "In the figure, parallel lines \( a \) and \( b \) are intersected by lines \( c, d, \) and \( e \). If \( x = 49, y = 136, \) and \( v < z \), which statement about \( x \) and \( w \) must be true?\nA) \( x < w \)  \nB) \( x > w \)  \nC) \( x = w \)  \nD) \( x + w = 90 \)",
+      "question": "In the figure, parallel lines $a$ and $b$ are intersected by lines $c, d,$ and $e$. If $x = 49, y = 136,$ and $v < z$, which statement about $x$ and $w$ must be true?",
       "options": ["A) \( x < w \)", "B) \( x > w \)", "C) \( x = w \)", "D) \( x + w = 90 \)"],
       "answer": "B",
       "explanation": "Since lines \(a\) and \(b\) are parallel, angles formed by transversals have specific relationships. From the figure, angle \(w\) is supplementary to angle \(y\) (they lie on a straight line or are consecutive interior angles). Thus, \(w = 180^\\circ - y = 180^\\circ - 136^\\circ = 44^\\circ\). Given \(x = 49^\\circ\), we have \(x > w\)."
@@ -28,28 +28,28 @@
     },
     {
       "id": 4,
-      "question": "For two acute angles, \( \\angle A \) and \( \\angle B \), \( \\cos A = \\sin B \). The measures, in degrees, of \( \\angle A \) and \( \\angle B \) are \( x + 8 \) and \( 4x + 2 \), respectively. What is the value of \( x \)?\nA) 37  \nB) 34  \nC) 16  \nD) 2",
+      "question": "For two acute angles, $\\angle A$ and $\\angle B$, $\\cos A = \\sin B$. The measures, in degrees, of $\\angle A$ and $\\angle B$ are $x + 8$ and $4x + 2$, respectively. What is the value of $x$?",
       "options": ["A) 37", "B) 34", "C) 16", "D) 2"],
       "answer": "C",
       "explanation": "For acute angles, \( \\cos A = \\sin B \) implies \( A + B = 90^\\circ \) because \( \\sin B = \\cos(90^\\circ - B) \). Thus: \((x+8) + (4x+2) = 90 \\implies 5x + 10 = 90 \\implies 5x = 80 \\implies x = 16\)."
     },
     {
       "id": 5,
-      "question": "Quadrilaterals \( PQRS \) and \( WXYZ \) are similar, where \( P, Q, \) and \( R \) corresponds to \( W, X, \) and \( Y, \) respectively. The measure of \( \\angle S \) is \( 105^\\circ, PS=25, \) and \( WZ=5 \). What is the measure of \( \\angle Z \)?\nA) \( 5^\\circ \)  \nB) \( 21^\\circ \)  \nC) \( 75^\\circ \)  \nD) \( 105^\\circ \)",
+      "question": "Quadrilaterals $PQRS$ and $WXYZ$ are similar, where $P, Q,$ and $R$ corresponds to $W, X,$ and $Y,$ respectively. The measure of $\\angle S$ is $105^\\circ, PS=25,$ and $WZ=5$. What is the measure of $\\angle Z$?",
       "options": ["A) \( 5^\\circ \)", "B) \( 21^\\circ \)", "C) \( 75^\\circ \)", "D) \( 105^\\circ \)"],
       "answer": "D",
       "explanation": "In similar polygons, corresponding angles are equal. Since \(P, Q, R\) correspond to \(W, X, Y\), the remaining vertex \(S\) corresponds to \(Z\). Therefore, \( \\angle Z = \\angle S = 105^\\circ \)."
     },
     {
       "id": 6,
-      "question": "For two acute angles \( \\angle Q \) and \( \\angle R \), \( \\cos Q = \\sin R \). The measures, in degrees, of \( \\angle Q \) and \( \\angle R \) are \( x + 21 \) and \( 4x + 9 \), respectively. What is the value of \( x \)?\nA) 4  \nB) 12  \nC) 30  \nD) 69",
+      "question": "For two acute angles $\\angle Q$ and $\\angle R$, $\\cos Q = \\sin R$. The measures, in degrees, of $\\angle Q$ and $\\angle R$ are $x + 21$ and $4x + 9$, respectively. What is the value of $x$?",
       "options": ["A) 4", "B) 12", "C) 30", "D) 69"],
       "answer": "B",
       "explanation": "Again, \( \\cos Q = \\sin R \) implies \( Q + R = 90^\\circ \). So: \((x+21) + (4x+9) = 90 \\implies 5x + 30 = 90 \\implies 5x = 60 \\implies x = 12\)."
     },
     {
       "id": 7,
-      "question": "Two lines intersect at exactly one point, forming two acute angles and two obtuse angles. The measure of one of these angles is \((9x - 190)^\\circ\). Which of the following could NOT be the sum of the measures of any two of these angles?\nA) \((-18x + 380)^\\circ\)  \nB) \((-18x + 740)^\\circ\)  \nC) \((18x - 380)^\\circ\)  \nD) \(180^\\circ\)",
+      "question": "Two lines intersect at exactly one point, forming two acute angles and two obtuse angles. The measure of one of these angles is $(9x - 190)^\\circ$. Which of the following could NOT be the sum of the measures of any two of these angles?",
       "options": ["A) \((-18x + 380)^\\circ\)", "B) \((-18x + 740)^\\circ\)", "C) \((18x - 380)^\\circ\)", "D) \(180^\\circ\)"],
       "answer": "A",
       "explanation": "When two lines intersect, vertical angles are equal, and adjacent angles are supplementary. Let the acute angle be \( \\theta = 9x - 190 \). Then the four angles are: \( \\theta, \\theta, 180^\\circ - \\theta, 180^\\circ - \\theta \). Possible sums of two angles: two acute: \( 2\\theta = 18x - 380 \); two obtuse: \( 2(180^\\circ - \\theta) = 360^\\circ - 2\\theta = 740 - 18x \); one acute and one obtuse (adjacent): \( \\theta + (180^\\circ - \\theta) = 180^\\circ \). The expression \( -18x + 380 \) does not match any of these for valid \( x \) (with \( \\theta \) acute)."

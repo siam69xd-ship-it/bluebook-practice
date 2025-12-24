@@ -16,20 +16,40 @@ function LatexRendererComponent({ content, className = '', displayMode = false }
 
     let processedContent = content;
     
+    // Remove option-like text at the end of questions (A) text \nB) text... patterns)
+    // Matches patterns like: \nA) ... \nB) ... \nC) ... \nD) ...
+    processedContent = processedContent.replace(/\n[A-D]\)\s+[^\n]+(?=\s*$|\s*\n[A-D]\))/gi, '');
+    processedContent = processedContent.replace(/\n[A-D]\)\s+[^\n]+$/gi, '');
+    // Also handle: A) text  \nB) text patterns (2 spaces before newline)
+    processedContent = processedContent.replace(/\s+[A-D]\)\s+[^\n]+(?:\s+[A-D]\)\s+[^\n]+)+$/gi, '');
+    
     // Clean up multiple dots (like "..." or "....") - replace with ellipsis
     processedContent = processedContent.replace(/\.{3,}/g, '…');
     
-    // Pre-process: protect currency amounts from being parsed as LaTeX
-    const currencyPlaceholders: string[] = [];
+    // Pre-process: convert currency amounts from $X to "X dollars" 
+    // Match $15, $8, $1,000, $15.99 etc. and convert to "X dollars"
     processedContent = processedContent.replace(/\$(\d{1,3}(?:,\d{3})*(?:\.\d{2})?)/g, (match, amount) => {
-      currencyPlaceholders.push(`$${amount}`);
-      return `%%CURRENCY_${currencyPlaceholders.length - 1}%%`;
+      return `${amount} dollars`;
     });
     
-    // Protect standalone $ followed by numbers (like $50)
+    // Convert standalone $ followed by numbers (like $50)
     processedContent = processedContent.replace(/\$(\d+(?:\.\d{2})?)\b(?!\$)/g, (match, amount) => {
-      currencyPlaceholders.push(`$${amount}`);
-      return `%%CURRENCY_${currencyPlaceholders.length - 1}%%`;
+      return `${amount} dollars`;
+    });
+
+    // Handle display mode LaTeX \[...\] - centered equations  
+    processedContent = processedContent.replace(/\\\[([\s\S]*?)\\\]/g, (_, latex) => {
+      try {
+        const rendered = katex.renderToString(latex.trim(), { 
+          displayMode: true, 
+          throwOnError: false,
+          trust: true,
+          strict: false
+        });
+        return `<div class="my-4 flex justify-center">${rendered}</div>`;
+      } catch {
+        return `\\[${latex}\\]`;
+      }
     });
 
     // Handle display mode LaTeX ($$...$$) - centered equations
@@ -47,6 +67,22 @@ function LatexRendererComponent({ content, className = '', displayMode = false }
       }
     });
     
+    // Handle inline LaTeX \(...\) - most common in these JSON files
+    processedContent = processedContent.replace(/\\\(([^)]*?)\\\)/g, (match, latex) => {
+      const trimmed = latex.trim();
+      if (!trimmed) return match;
+      try {
+        return katex.renderToString(trimmed, { 
+          displayMode: false, 
+          throwOnError: false,
+          trust: true,
+          strict: false
+        });
+      } catch {
+        return match;
+      }
+    });
+
     // Handle inline LaTeX ($...$)
     processedContent = processedContent.replace(/\$([^$\n]+?)\$/g, (match, latex) => {
       const trimmed = latex.trim();
@@ -82,11 +118,6 @@ function LatexRendererComponent({ content, className = '', displayMode = false }
           return args[0];
         }
       });
-    });
-
-    // Restore currency placeholders
-    currencyPlaceholders.forEach((currency, index) => {
-      processedContent = processedContent.replace(`%%CURRENCY_${index}%%`, currency);
     });
 
     // Handle line breaks
