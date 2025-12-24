@@ -1198,8 +1198,8 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
               }
             }
             
-            // Check for LaTeX in question
-            const hasLatex = /\$.*?\$|\\frac|\\sqrt|\\times|\\div|\^/.test(q.question || '');
+            // Check for LaTeX in question - include \( \) and \[ \] formats
+            const hasLatex = /\$.*?\$|\\frac|\\sqrt|\\times|\\div|\^|\\\(|\\\[/.test(q.question || '');
             
             addQuestion({
               id: globalId++,

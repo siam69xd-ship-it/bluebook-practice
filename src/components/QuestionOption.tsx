@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils';
-
+import LatexRenderer from '@/components/math/LatexRenderer';
 interface QuestionOptionProps {
   letter: string;
   text: string;
@@ -70,7 +70,7 @@ export function QuestionOption({
         {letter}
       </div>
 
-      {/* Option text - SAT font style */}
+      {/* Option text - SAT font style with LaTeX support */}
       <span
         className={cn(
           "flex-1 text-[0.9375rem] leading-relaxed font-normal quiz-option-text",
@@ -81,7 +81,7 @@ export function QuestionOption({
           showCorrectIndicator && 'text-green-700'
         )}
       >
-        {text}
+        <LatexRenderer content={text} className="inline" />
       </span>
 
       {/* Action buttons - Right side */}
