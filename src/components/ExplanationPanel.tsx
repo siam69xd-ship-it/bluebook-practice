@@ -15,9 +15,6 @@ export function ExplanationPanel({
   explanation,
   correctAnswer,
 }: ExplanationPanelProps) {
-  // Check if content has LaTeX
-  const hasLatex = /\$.*?\$|\\frac|\\sqrt|\\times|\\div|\^|_\{/.test(explanation);
-
   return (
     <AnimatePresence>
       {isOpen && (
@@ -61,24 +58,20 @@ export function ExplanationPanel({
                 {/* Correct Answer */}
                 <div className="mb-6 p-4 rounded-xl bg-success/10 border border-success/30">
                   <p className="text-sm font-medium text-success mb-1">Correct Answer</p>
-                  <p className="text-2xl font-bold text-success">{correctAnswer}</p>
+                  <p className="text-2xl font-bold text-success">
+                    <LatexRenderer content={correctAnswer} className="inline" />
+                  </p>
                 </div>
 
-                {/* Explanation */}
+                {/* Explanation - always use LatexRenderer */}
                 <div className="space-y-4">
                   <h4 className="text-sm font-semibold text-foreground uppercase tracking-wide">
                     Why this is correct
                   </h4>
-                  {hasLatex ? (
-                    <LatexRenderer 
-                      content={explanation} 
-                      className="text-foreground/80 leading-relaxed"
-                    />
-                  ) : (
-                    <p className="text-foreground/80 leading-relaxed">
-                      {explanation}
-                    </p>
-                  )}
+                  <LatexRenderer 
+                    content={explanation} 
+                    className="text-foreground/80 leading-relaxed"
+                  />
                 </div>
               </div>
 

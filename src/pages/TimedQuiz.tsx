@@ -23,6 +23,7 @@ import { HighlightableText } from '@/components/HighlightableText';
 import { QuestionOption } from '@/components/QuestionOption';
 import { QuestionNavigator } from '@/components/QuestionNavigator';
 import { PassageRenderer } from '@/components/PassageRenderer';
+import LatexRenderer from '@/components/math/LatexRenderer';
 import {
   getAllQuestionsAsync,
   Question,
@@ -897,10 +898,18 @@ export default function TimedQuiz() {
               </div>
 
 
-              <PassageRenderer 
-                content={currentQuestion.questionPrompt || 'Based on the text, select the best answer to the question.'}
-                className="text-gray-800 mb-6 text-base leading-relaxed"
-              />
+              {/* Use LatexRenderer for math questions, PassageRenderer for others */}
+              {currentQuestion.subSection === 'Math' ? (
+                <LatexRenderer 
+                  content={currentQuestion.questionPrompt || 'Solve the following problem.'}
+                  className="text-gray-800 mb-6 text-base leading-relaxed"
+                />
+              ) : (
+                <PassageRenderer 
+                  content={currentQuestion.questionPrompt || 'Based on the text, select the best answer to the question.'}
+                  className="text-gray-800 mb-6 text-base leading-relaxed"
+                />
+              )}
 
               <div className="space-y-3">
                 {Object.entries(currentQuestion.options).map(([letter, text]) => (

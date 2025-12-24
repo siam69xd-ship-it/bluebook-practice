@@ -28,9 +28,6 @@ export default function MathQuestionOption({
   onEliminate,
   disabled
 }: MathQuestionOptionProps) {
-  // Check if text contains LaTeX patterns
-  const hasLatex = /\$.*?\$|\\frac|\\sqrt|\\times|\\div|\^|_\{/.test(text);
-  
   // Clean option text - remove A), B), etc. prefix if present
   const cleanText = text.replace(/^[A-D]\)\s*/, '');
 
@@ -86,7 +83,7 @@ export default function MathQuestionOption({
           {label}
         </div>
 
-        {/* Option Text with LaTeX support */}
+        {/* Option Text with LaTeX support - always use LatexRenderer */}
         <span className={cn(
           'flex-1 text-[17px] leading-relaxed',
           isEliminated && 'line-through text-gray-400',
@@ -94,11 +91,7 @@ export default function MathQuestionOption({
           showResult && isIncorrect && 'text-red-700',
           showResult && isCorrect && 'text-green-700'
         )}>
-          {hasLatex ? (
-            <LatexRenderer content={cleanText} className="inline" />
-          ) : (
-            cleanText
-          )}
+          <LatexRenderer content={cleanText} className="inline" />
         </span>
       </button>
 

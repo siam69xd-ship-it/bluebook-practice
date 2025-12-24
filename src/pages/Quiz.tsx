@@ -634,8 +634,8 @@ export default function Quiz() {
                   </div>
                 )}
 
-                {/* Question Text - Use LaTeX for Math */}
-                {isMathQuestion && currentQuestion.hasLatex ? (
+                {/* Question Text - Use LaTeX for Math questions */}
+                {isMathQuestion ? (
                   <LatexRenderer 
                     content={currentQuestion.questionPrompt || ''} 
                     className="quiz-question mb-6 text-gray-900"
