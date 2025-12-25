@@ -24,11 +24,16 @@ function LatexRendererComponent({ content, className = '', displayMode = false }
     // Clean up multiple dots (like "..." or "....") - replace with ellipsis
     processedContent = processedContent.replace(/\.{3,}/g, '…');
     
-    // Pre-process: convert currency amounts from $X to "X dollars" 
-    // Match $15, $8, $1,000, $15.99 etc. BUT NOT if followed by LaTeX content
-    // Use a more precise regex that excludes LaTeX-like patterns
-    processedContent = processedContent.replace(/\$(\d{1,3}(?:,\d{3})*(?:\.\d{2})?)\s*(?![a-zA-Z\\{^_])/g, (match, amount) => {
-      return `${amount} dollars `;
+    // IMPORTANT: First, protect actual currency amounts by temporarily replacing them
+    // Match patterns like $15, $1,000, $15.99, \$20 (escaped dollar) that are ACTUAL currency
+    // These will be restored after LaTeX processing
+    const currencyPlaceholders: string[] = [];
+    
+    // Match \$number (escaped dollar - common in LaTeX context for currency)
+    processedContent = processedContent.replace(/\\\$(\d{1,3}(?:,\d{3})*(?:\.\d{2})?)/g, (match, amount) => {
+      const placeholder = `__CURRENCY_${currencyPlaceholders.length}__`;
+      currencyPlaceholders.push(`$${amount}`);
+      return placeholder;
     });
 
     // Handle display mode LaTeX \[...\] - centered equations  
@@ -62,7 +67,7 @@ function LatexRendererComponent({ content, className = '', displayMode = false }
     });
     
     // Handle inline LaTeX \(...\) - common in JSON files
-    processedContent = processedContent.replace(/\\\(([^)]*?)\\\)/g, (match, latex) => {
+    processedContent = processedContent.replace(/\\\(([\s\S]*?)\\\)/g, (match, latex) => {
       const trimmed = latex.trim();
       if (!trimmed) return match;
       try {
@@ -78,13 +83,17 @@ function LatexRendererComponent({ content, className = '', displayMode = false }
     });
 
     // Handle inline LaTeX ($...$) - single dollar signs
-    // More robust regex: match $...$ where content contains LaTeX-like characters
+    // Key: Only treat as LaTeX if content has math-like characters (letters, operators, backslashes)
     processedContent = processedContent.replace(/\$([^$\n]+?)\$/g, (match, latex) => {
       const trimmed = latex.trim();
-      // Skip if it looks like a pure number (currency that wasn't caught earlier)
-      if (/^\d+([.,]\d+)?$/.test(trimmed)) return match;
       // Skip if empty
       if (!trimmed) return match;
+      // Skip if it's just a number (pure currency amount like $15)
+      if (/^[\d,]+(\.\d{2})?$/.test(trimmed)) {
+        // This is currency - keep dollar sign
+        return `$${trimmed}`;
+      }
+      // This is LaTeX - render it
       try {
         return katex.renderToString(trimmed, { 
           displayMode: false, 
@@ -95,6 +104,11 @@ function LatexRendererComponent({ content, className = '', displayMode = false }
       } catch {
         return match;
       }
+    });
+    
+    // Restore currency placeholders
+    currencyPlaceholders.forEach((currency, idx) => {
+      processedContent = processedContent.replace(`__CURRENCY_${idx}__`, currency);
     });
     
     // Handle standalone \frac, \sqrt, \text, \cdot, \pm, \implies commands not wrapped in $
