@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
+import LatexRenderer from './LatexRenderer';
 
 interface GridInInputProps {
   value: string;
@@ -33,6 +34,16 @@ export default function GridInInput({
     }
   };
 
+  // Format answer for display - convert fractions to LaTeX
+  const formatAnswer = (answer: string) => {
+    // Check if it's a fraction like "7/6" or "5/7"
+    if (/^\d+\/\d+$/.test(answer.trim())) {
+      const [num, den] = answer.split('/');
+      return `$\\frac{${num}}{${den}}$`;
+    }
+    return answer;
+  };
+
   return (
     <div className="space-y-4">
       {/* Grid-In Input - SAT Bluebook Style */}
@@ -64,7 +75,7 @@ export default function GridInInput({
         <div className="flex items-center gap-2 text-sm">
           <span className="text-gray-600">Correct answer:</span>
           <span className="font-semibold text-green-700 bg-green-50 px-3 py-1 rounded border border-green-200">
-            {correctAnswer}
+            <LatexRenderer content={formatAnswer(correctAnswer)} className="inline" />
           </span>
         </div>
       )}
