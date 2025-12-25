@@ -60,33 +60,92 @@ const MATH_DATA_FILES = [
   { file: 'areas_volumes.json', topic: 'Areas & Volumes' },
 ];
 
-export async function loadAllMathQuestions(): Promise<MathQuestion[]> {
-  const allQuestions: MathQuestion[] = [];
+// Helper to extract questions from potentially malformed JSON
+function extractQuestionsFromText(text: string): RawMathQuestion[] {
+  const questions: RawMathQuestion[] = [];
   
-  for (const { file, topic } of MATH_DATA_FILES) {
+  // Try to find all question objects using regex
+  const questionRegex = /\{\s*"id"\s*:\s*(\d+)\s*,\s*"question"\s*:\s*"((?:[^"\\]|\\.)*)"\s*,\s*"options"\s*:\s*\[((?:[^\]]*?))\]\s*,\s*"answer"\s*:\s*"((?:[^"\\]|\\.)*)"\s*,\s*"explanation"\s*:\s*"((?:[^"\\]|\\.)*)"\s*\}/gs;
+  
+  let match;
+  while ((match = questionRegex.exec(text)) !== null) {
     try {
-      const response = await fetch(`/data/math/${file}`);
-      if (response.ok) {
-        const data: MathDataFile = await response.json();
-        const questionsWithTopic = data.questions.map((q, index) => {
-          // Check if it's a grid-in question
-          const isGridIn = q.options.length === 0 || 
-            (q.options.length === 1 && q.options[0].toLowerCase().includes('grid-in'));
-          return {
-            ...q,
-            id: allQuestions.length + index + 1,
-            topic,
-            isGridIn,
-            options: isGridIn ? [] : q.options,
-          };
-        });
-        allQuestions.push(...questionsWithTopic);
+      const optionsStr = match[3].trim();
+      let options: string[] = [];
+      
+      if (optionsStr) {
+        // Parse options array
+        const optionMatches = optionsStr.match(/"(?:[^"\\]|\\.)*"/g);
+        if (optionMatches) {
+          options = optionMatches.map(o => JSON.parse(o));
+        }
       }
-    } catch (error) {
-      console.warn(`Failed to load ${file}:`, error);
+      
+      questions.push({
+        id: parseInt(match[1]),
+        question: JSON.parse(`"${match[2]}"`),
+        options,
+        answer: JSON.parse(`"${match[4]}"`),
+        explanation: JSON.parse(`"${match[5]}"`)
+      });
+    } catch (e) {
+      // Skip malformed question
     }
   }
   
+  return questions;
+}
+
+export async function loadAllMathQuestions(): Promise<MathQuestion[]> {
+  const allQuestions: MathQuestion[] = [];
+  
+  const loadPromises = MATH_DATA_FILES.map(async ({ file, topic }) => {
+    try {
+      const response = await fetch(`/data/math/${file}`);
+      if (!response.ok) return [];
+      
+      const text = await response.text();
+      let rawQuestions: RawMathQuestion[] = [];
+      
+      try {
+        // Try normal JSON parse first
+        const data: MathDataFile = JSON.parse(text);
+        rawQuestions = data.questions || [];
+      } catch (parseError) {
+        // If JSON parse fails, try to extract questions using regex
+        console.warn(`Fallback extraction for ${file}`);
+        rawQuestions = extractQuestionsFromText(text);
+      }
+      
+      return rawQuestions.map((q, index) => {
+        const isGridIn = q.options.length === 0 || 
+          (q.options.length === 1 && q.options[0].toLowerCase().includes('grid-in'));
+        return {
+          ...q,
+          id: index + 1,
+          topic,
+          isGridIn,
+          options: isGridIn ? [] : q.options,
+        };
+      });
+    } catch (error) {
+      console.warn(`Failed to load ${file}:`, error);
+      return [];
+    }
+  });
+  
+  const results = await Promise.all(loadPromises);
+  
+  // Flatten and reassign IDs
+  let idCounter = 1;
+  for (const questions of results) {
+    for (const q of questions) {
+      q.id = idCounter++;
+      allQuestions.push(q);
+    }
+  }
+  
+  console.log(`Loaded ${allQuestions.length} math questions`);
   return allQuestions;
 }
 
