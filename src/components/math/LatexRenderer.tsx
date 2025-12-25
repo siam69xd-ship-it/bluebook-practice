@@ -24,127 +24,78 @@ function LatexRendererComponent({ content, className = '', displayMode = false }
     // Clean up multiple dots (like "..." or "....") - replace with ellipsis
     processedContent = processedContent.replace(/\.{3,}/g, '…');
     
-    // IMPORTANT: First, protect actual currency amounts by temporarily replacing them
-    // Match patterns like $15, $1,000, $15.99, \$20 (escaped dollar) that are ACTUAL currency
-    // These will be restored after LaTeX processing
-    const currencyPlaceholders: string[] = [];
-    
-    // Match \$number (escaped dollar - common in LaTeX context for currency)
-    processedContent = processedContent.replace(/\\\$(\d{1,3}(?:,\d{3})*(?:\.\d{2})?)/g, (match, amount) => {
-      const placeholder = `__CURRENCY_${currencyPlaceholders.length}__`;
-      currencyPlaceholders.push(`$${amount}`);
-      return placeholder;
-    });
-
-    // Handle display mode LaTeX \[...\] - centered equations  
-    processedContent = processedContent.replace(/\\\[([\s\S]*?)\\\]/g, (_, latex) => {
+    // KaTeX rendering helper
+    const renderKatex = (latex: string, isDisplayMode: boolean): string => {
       try {
-        const rendered = katex.renderToString(latex.trim(), { 
-          displayMode: true, 
+        return katex.renderToString(latex.trim(), { 
+          displayMode: isDisplayMode, 
           throwOnError: false,
           trust: true,
           strict: false
         });
-        return `<div class="my-4 flex justify-center">${rendered}</div>`;
       } catch {
-        return `\\[${latex}\\]`;
+        return latex;
       }
+    };
+
+    // Handle display mode LaTeX \[...\] - centered equations  
+    processedContent = processedContent.replace(/\\\[([\s\S]*?)\\\]/g, (_, latex) => {
+      const rendered = renderKatex(latex, true);
+      return `<div class="my-4 flex justify-center">${rendered}</div>`;
     });
 
     // Handle display mode LaTeX ($$...$$) - centered equations
     processedContent = processedContent.replace(/\$\$([\s\S]*?)\$\$/g, (_, latex) => {
-      try {
-        const rendered = katex.renderToString(latex.trim(), { 
-          displayMode: true, 
-          throwOnError: false,
-          trust: true,
-          strict: false
-        });
-        return `<div class="my-4 flex justify-center">${rendered}</div>`;
-      } catch {
-        return `$$${latex}$$`;
-      }
+      const rendered = renderKatex(latex, true);
+      return `<div class="my-4 flex justify-center">${rendered}</div>`;
     });
     
     // Handle inline LaTeX \(...\) - common in JSON files
     processedContent = processedContent.replace(/\\\(([\s\S]*?)\\\)/g, (match, latex) => {
       const trimmed = latex.trim();
       if (!trimmed) return match;
-      try {
-        return katex.renderToString(trimmed, { 
-          displayMode: false, 
-          throwOnError: false,
-          trust: true,
-          strict: false
-        });
-      } catch {
-        return match;
-      }
+      return renderKatex(trimmed, false);
     });
 
     // Handle inline LaTeX ($...$) - single dollar signs
-    // Key: Only treat as LaTeX if content has math-like characters (letters, operators, backslashes)
+    // Key: Only treat as LaTeX if content has math-like characters
     processedContent = processedContent.replace(/\$([^$\n]+?)\$/g, (match, latex) => {
       const trimmed = latex.trim();
       // Skip if empty
       if (!trimmed) return match;
-      // Skip if it's just a number (pure currency amount like $15)
+      // Skip if it's just a number (pure currency amount like $15, $1,000)
       if (/^[\d,]+(\.\d{2})?$/.test(trimmed)) {
         // This is currency - keep dollar sign
         return `$${trimmed}`;
       }
       // This is LaTeX - render it
-      try {
-        return katex.renderToString(trimmed, { 
-          displayMode: false, 
-          throwOnError: false,
-          trust: true,
-          strict: false
-        });
-      } catch {
-        return match;
-      }
+      return renderKatex(trimmed, false);
     });
     
-    // Restore currency placeholders
-    currencyPlaceholders.forEach((currency, idx) => {
-      processedContent = processedContent.replace(`__CURRENCY_${idx}__`, currency);
+    // Handle standalone \frac{num}{den} not wrapped in $
+    processedContent = processedContent.replace(/(?<![\\$])\\frac\{([^}]*)\}\{([^}]*)\}/g, (match, num, den) => {
+      return renderKatex(`\\frac{${num}}{${den}}`, false);
     });
     
-    // Handle standalone \frac, \sqrt, \text, \cdot, \pm, \implies commands not wrapped in $
-    const standalonePatterns = [
-      // \frac{num}{den}
-      { 
-        pattern: /(?<![\\$])\\frac\{([^}]*)\}\{([^}]*)\}/g, 
-        handler: (m: string, n: string, d: string) => `\\frac{${n}}{${d}}` 
-      },
-      // \sqrt{content} or \sqrt[n]{content}
-      { 
-        pattern: /(?<![\\$])\\sqrt(?:\[([^\]]*)\])?\{([^}]*)\}/g, 
-        handler: (m: string, index: string | undefined, content: string) => 
-          index ? `\\sqrt[${index}]{${content}}` : `\\sqrt{${content}}` 
-      },
-      // \text{content}
-      { 
-        pattern: /(?<![\\$])\\text\{([^}]*)\}/g, 
-        handler: (m: string, c: string) => `\\text{${c}}` 
-      },
-    ];
+    // Handle standalone \sqrt{content} or \sqrt[n]{content}
+    processedContent = processedContent.replace(/(?<![\\$])\\sqrt(?:\[([^\]]*)\])?\{([^}]*)\}/g, (match, index, content) => {
+      const latex = index ? `\\sqrt[${index}]{${content}}` : `\\sqrt{${content}}`;
+      return renderKatex(latex, false);
+    });
     
-    standalonePatterns.forEach(({ pattern, handler }) => {
-      processedContent = processedContent.replace(pattern, (...args) => {
-        try {
-          const latex = handler(args[0], args[1], args[2]);
-          return katex.renderToString(latex, { 
-            displayMode: false, 
-            throwOnError: false,
-            trust: true,
-            strict: false
-          });
-        } catch {
-          return args[0];
-        }
-      });
+    // Handle standalone \text{content}
+    processedContent = processedContent.replace(/(?<![\\$])\\text\{([^}]*)\}/g, (match, content) => {
+      return renderKatex(`\\text{${content}}`, false);
+    });
+    
+    // Handle standalone \overline{content}
+    processedContent = processedContent.replace(/(?<![\\$])\\overline\{([^}]*)\}/g, (match, content) => {
+      return renderKatex(`\\overline{${content}}`, false);
+    });
+    
+    // Handle standalone \pi, \theta, \cos, \sin, \tan (common trig)
+    processedContent = processedContent.replace(/(?<![\\$a-zA-Z])\\(pi|theta|cos|sin|tan|alpha|beta|gamma|delta|epsilon|sigma|omega|infty|pm|times|div|cdot|leq|geq|neq|approx|equiv|implies|Rightarrow|ge|le)(?![a-zA-Z{])/g, (match, symbol) => {
+      return renderKatex(`\\${symbol}`, false);
     });
 
     // Handle line breaks
