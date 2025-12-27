@@ -23,16 +23,37 @@ function LatexRendererComponent({ content, className = '', displayMode = false }
     
     // Clean up multiple dots (like "..." or "....") - replace with ellipsis
     processedContent = processedContent.replace(/\.{3,}/g, '…');
-    
+
+    // Fix common data issue: unescaped $ inside \text{...} (e.g., \text{ $/g}).
+    // Unescaped $ breaks our $...$ parsing and KaTeX rendering.
+    processedContent = processedContent.replace(/\\text\{([^}]*)\}/g, (match, inner) => {
+      let out = '';
+      for (let i = 0; i < inner.length; i++) {
+        const ch = inner[i];
+        if (ch === '$' && (i === 0 || inner[i - 1] !== '\\')) {
+          out += '\\$';
+        } else {
+          out += ch;
+        }
+      }
+      return `\\text{${out}}`;
+    });
+
     // KaTeX rendering helper
     const renderKatex = (latex: string, isDisplayMode: boolean): string => {
       try {
-        return katex.renderToString(latex.trim(), { 
-          displayMode: isDisplayMode, 
+        const rendered = katex.renderToString(latex.trim(), {
+          displayMode: isDisplayMode,
           throwOnError: false,
           trust: true,
-          strict: false
+          strict: false,
         });
+
+        if (import.meta.env.DEV && rendered.includes('katex-error')) {
+          console.warn('[KaTeX] Render issue:', latex);
+        }
+
+        return rendered;
       } catch {
         return latex;
       }
@@ -58,17 +79,28 @@ function LatexRendererComponent({ content, className = '', displayMode = false }
     });
 
     // Handle inline LaTeX ($...$) - single dollar signs
-    // Key: Only treat as LaTeX if content has math-like characters
-    processedContent = processedContent.replace(/\$([^$\n]+?)\$/g, (match, latex) => {
-      const trimmed = latex.trim();
-      // Skip if empty
+    // Note: Some datasets use $...$ for both math and currency. We use a simple
+    // context heuristic: if it's just a plain number AND nearby text suggests money,
+    // preserve the $ as currency; otherwise, render as math.
+    processedContent = processedContent.replace(/\$((?:\\\$|[^$\n])+?)\$/g, (match, latex, offset, full) => {
+      const trimmed = String(latex).trim();
       if (!trimmed) return match;
-      // Skip if it's just a number (pure currency amount like $15, $1,000)
-      if (/^[\d,]+(\.\d{2})?$/.test(trimmed)) {
-        // This is currency - keep dollar sign
-        return `$${trimmed}`;
+
+      const isPlainNumber = /^-?[\d,]+(\.\d+)?$/.test(trimmed);
+      if (isPlainNumber) {
+        const start = Math.max(0, offset - 40);
+        const end = Math.min(full.length, offset + match.length + 40);
+        const around = full.slice(start, end).toLowerCase();
+
+        const moneyContext = /\b(cost|costs|costing|price|priced|pay|paid|fee|fees|charge|charged|charges|dollar|dollars|usd|worth|spend|spent|buy|bought|sell|sold|rent|salary|wage)\b/.test(around);
+
+        if (moneyContext) {
+          // Keep as currency
+          return `$${trimmed}`;
+        }
       }
-      // This is LaTeX - render it
+
+      // Render as LaTeX math
       return renderKatex(trimmed, false);
     });
     
