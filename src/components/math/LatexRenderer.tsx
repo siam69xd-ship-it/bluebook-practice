@@ -130,6 +130,19 @@ function LatexRendererComponent({ content, className = '', displayMode = false }
       return renderKatex(`\\${symbol}`, false);
     });
 
+    // Handle HTML tables - add styling classes
+    processedContent = processedContent.replace(/<table([^>]*)>/gi, (match, attrs) => {
+      // Remove old attributes and add proper styling
+      return `<table class="my-4 border-collapse border border-slate-300 w-auto inline-table">`;
+    });
+    processedContent = processedContent.replace(/<th([^>]*)>/gi, 
+      `<th class="border border-slate-300 px-4 py-2 bg-slate-100 font-semibold text-left">`
+    );
+    processedContent = processedContent.replace(/<td([^>]*)>/gi, 
+      `<td class="border border-slate-300 px-4 py-2 text-center">`
+    );
+    processedContent = processedContent.replace(/<tr([^>]*)>/gi, '<tr>');
+
     // Handle line breaks
     processedContent = processedContent
       .replace(/<br\s*\/?>/gi, '<br/>')
