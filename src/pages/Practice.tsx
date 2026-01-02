@@ -1,29 +1,24 @@
-import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { getAllQuestionsAsync, Question } from '@/lib/questionUtils';
-import { PracticeSelector } from '@/components/PracticeSelector';
+import { useState } from 'react';
+import { getMathQuestions } from '@/lib/mathQuestionUtils';
+// ... other imports
 
 export default function Practice() {
-  const navigate = useNavigate();
-  const [loading, setLoading] = useState(true);
-  const [questions, setQuestions] = useState<Question[]>([]);
-  const [showSelector, setShowSelector] = useState(true);
+  const [loading, setLoading] = useState(false); // Add loading state
+  const [questions, setQuestions] = useState([]);
 
-  useEffect(() => {
-    const loadQuestions = async () => {
-      setLoading(true);
-      try {
-        const data = await getAllQuestionsAsync();
-        setQuestions(data);
-      } catch (error) {
-        console.error("Failed to load questions:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    
-    loadQuestions();
-  }, []);
+  const handleStart = async (topicId: string) => {
+    setLoading(true); // Start loading
+    try {
+      // await the async function
+      const data = await getMathQuestions(topicId);
+      setQuestions(data);
+      // Navigate to question view or set mode to 'started'
+    } catch (error) {
+      console.error("Failed to start:", error);
+    } finally {
+      setLoading(false); // Stop loading
+    }
+  };
 
   if (loading) {
     return (
@@ -34,11 +29,5 @@ export default function Practice() {
     );
   }
 
-  return (
-    <PracticeSelector 
-      questions={questions} 
-      isOpen={showSelector} 
-      onClose={() => navigate('/')} 
-    />
-  );
+  // ... rest of your component (PracticeSelector, etc.)
 }

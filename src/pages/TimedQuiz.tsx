@@ -32,6 +32,7 @@ import {
   TextHighlight,
   getInitialQuestionState,
 } from '@/lib/questionUtils';
+import { loadAllMathQuestions } from '@/lib/mathQuestionUtils';
 import { cn } from '@/lib/utils';
 import { useAuth } from '@/hooks/useAuth';
 import { useFullscreen } from '@/hooks/useFullscreen';
@@ -97,16 +98,35 @@ export default function TimedQuiz() {
   const [selectedTopics, setSelectedTopics] = useState<Set<string>>(new Set());
   const [questionCount, setQuestionCount] = useState(20);
 
-  // Load Questions from unified loader
+  // Load Questions from both sources
   const loadQuestions = useCallback(async () => {
     setLoadError(false);
     setIsLoaded(false);
     
     try {
-      const allLoadedQuestions = await getAllQuestionsAsync();
+      // 1. English
+      const englishQuestions = await getAllQuestionsAsync();
+      const formattedEnglish = englishQuestions.map(q => ({
+        ...q,
+        section: 'Reading and Writing',
+        subSection: q.subSection || 'Reading and Writing'
+      }));
 
-      if (allLoadedQuestions.length > 0) {
-        setAllQuestions(allLoadedQuestions);
+      // 2. Math
+      const mathQuestionsRaw = await loadAllMathQuestions();
+      const formattedMath = mathQuestionsRaw.map((q: any) => ({
+        ...q,
+        id: typeof q.id === 'string' && q.id.startsWith('math-') ? q.id : `math-${q.id}`, 
+        section: 'Math',
+        subSection: 'Math', // Unified subsection for selection simplicity
+        questionPrompt: q.question, 
+        correctAnswer: q.answer,
+      }));
+
+      const combined = [...formattedEnglish, ...formattedMath as unknown as Question[]];
+
+      if (combined.length > 0) {
+        setAllQuestions(combined);
         setIsLoaded(true);
       } else {
         throw new Error("No questions found");
