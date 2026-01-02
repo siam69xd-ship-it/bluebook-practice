@@ -142,7 +142,7 @@ export function PracticeSelector({ questions, isOpen, onClose }: PracticeSelecto
       difficulties: selectedDifficulties,
     };
     sessionStorage.setItem('practiceConfig', JSON.stringify(practiceConfig));
-    navigate('/math');
+    navigate('/quiz');
   };
 
   const DifficultyBadge = ({ difficulty, count }: { difficulty: keyof DifficultyFilter; count: number }) => {
