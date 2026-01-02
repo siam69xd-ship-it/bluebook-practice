@@ -12,64 +12,80 @@ interface PracticeSelectorProps {
   onClose: () => void;
 }
 
-// Filter structure matching the topic hierarchy with subtopics
-const FILTER_STRUCTURE = {
-  'English Reading & Writing': {
-    'Craft and Structure': {
-      'Cross-Text Connections': null,
-      'Text Structure and Purpose': {
-        'Main Purpose': null,
-        'Overall Structure': null,
-        'Underlined Purpose': null,
-      },
-      'Words in Context': {
-        'Gap Fillings': null,
-        'Synonyms': null,
-      },
+// Complete filter structure with all topics
+const ENGLISH_FILTER_STRUCTURE = {
+  'Craft and Structure': {
+    'Cross-Text Connections': null,
+    'Text Structure and Purpose': {
+      'Main Purpose': null,
+      'Overall Structure': null,
+      'Underlined Purpose': null,
     },
-    'Expression of Ideas': {
-      'Rhetorical Synthesis': null,
-      'Transitions': null,
-    },
-    'Information and Ideas': {
-      'Central Ideas and Details': {
-        'Main Ideas': null,
-        'Detail Questions': null,
-      },
-      'Command of Evidence': {
-        'Support': null,
-        'Weaken': null,
-        'Quotation': null,
-        'Graphs': null,
-      },
-      'Inferences': null,
-    },
-    'Standard English Conventions': {
-      'Boundaries': null,
-      'Form, Structure, and Sense': {
-        'Subject-Verb Agreement': null,
-        'Verb Tenses': null,
-        'Verb Forms': null,
-        'Pronouns': null,
-        'Modifiers': null,
-        'Parallel Structure': null,
-        'Miscellaneous Topics': null,
-      },
+    'Words in Context': {
+      'Gap Fillings': null,
+      'Synonyms': null,
     },
   },
-  'Math': {
-    'Algebra': {
-      'Expressions': null,
-      'Linear Equations': null,
-      'Linear System of Equations': null,
-      'Linear Functions': null,
-      'Linear Inequalities': null,
+  'Expression of Ideas': {
+    'Rhetorical Synthesis': null,
+    'Transitions': null,
+  },
+  'Information and Ideas': {
+    'Central Ideas and Details': {
+      'Main Ideas': null,
+      'Detail Questions': null,
     },
-    'Advanced Math': {
-      'Polynomials': null,
-      'Exponents & Radicals': null,
-      'Functions & Function Notation': null,
+    'Command of Evidence': {
+      'Support': null,
+      'Weaken': null,
+      'Quotation': null,
+      'Graphs': null,
     },
+    'Inferences': null,
+  },
+  'Standard English Conventions': {
+    'Boundaries': null,
+    'Form, Structure, and Sense': {
+      'Subject-Verb Agreement': null,
+      'Verb Tenses': null,
+      'Verb Forms': null,
+      'Pronouns': null,
+      'Modifiers': null,
+      'Parallel Structure': null,
+      'Miscellaneous Topics': null,
+    },
+  },
+};
+
+const MATH_FILTER_STRUCTURE = {
+  'Algebra': {
+    'Expressions': null,
+    'Linear Equations': null,
+    'Linear System of Equations': null,
+    'Linear Functions': null,
+    'Linear Inequalities': null,
+  },
+  'Advanced Math': {
+    'Polynomials': null,
+    'Exponents & Radicals': null,
+    'Functions & Function Notation': null,
+    'Exponential Functions': null,
+    'Quadratics': null,
+  },
+  'Problem Solving': {
+    'Percent; Ratio & Proportion': null,
+    'Unit Conversion': null,
+    'Probability': null,
+    'Mean/Median/Mode/Range': null,
+    'Scatterplots': null,
+    'Research Organizing': null,
+  },
+  'Geometry and Trigonometry': {
+    'Lines & Angles': null,
+    'Triangles': null,
+    'Trigonometry': null,
+    'Circles': null,
+    'Areas & Volumes': null,
   },
 };
 
@@ -79,40 +95,53 @@ type DifficultyFilter = {
   hard: boolean;
 };
 
+type SectionType = 'English' | 'Math' | null;
+
 export function PracticeSelector({ questions, isOpen, onClose }: PracticeSelectorProps) {
   const navigate = useNavigate();
-  const [expandedSections, setExpandedSections] = useState<string[]>([
-    'English Reading & Writing',
-    'Craft and Structure',
-    'Words in Context',
-    'Text Structure and Purpose',
-    'Information and Ideas',
-    'Central Ideas and Details',
-    'Command of Evidence',
-  ]);
+  const [expandedSections, setExpandedSections] = useState<string[]>([]);
+  const [selectedSection, setSelectedSection] = useState<SectionType>(null);
   const [selectedDifficulties, setSelectedDifficulties] = useState<DifficultyFilter>({
     easy: true,
     medium: true,
     hard: true,
   });
 
-  // Filter questions based on difficulty selection
+  // Separate questions by section
+  const englishQuestions = useMemo(() => 
+    questions.filter(q => q.section === 'English'), [questions]);
+  const mathQuestions = useMemo(() => 
+    questions.filter(q => q.section === 'Math'), [questions]);
+
+  // Filter questions based on difficulty and selected section
   const filteredQuestions = useMemo(() => {
     const activeDifficulties = Object.entries(selectedDifficulties)
       .filter(([_, selected]) => selected)
       .map(([diff]) => diff as Difficulty);
     
-    if (activeDifficulties.length === 0) return [];
-    if (activeDifficulties.length === 3) return questions;
+    let baseQuestions = questions;
+    if (selectedSection === 'English') {
+      baseQuestions = englishQuestions;
+    } else if (selectedSection === 'Math') {
+      baseQuestions = mathQuestions;
+    }
     
-    return questions.filter(q => 
+    if (activeDifficulties.length === 0) return [];
+    if (activeDifficulties.length === 3) return baseQuestions;
+    
+    return baseQuestions.filter(q => 
       q.difficulty && activeDifficulties.includes(q.difficulty)
     );
-  }, [questions, selectedDifficulties]);
+  }, [questions, selectedDifficulties, selectedSection, englishQuestions, mathQuestions]);
 
-  // Count questions for each category with difficulty filter
-  const getCount = (subSection?: string, topic?: string, subTopic?: string): number => {
-    return filteredQuestions.filter((q) => {
+  // Count questions for each category
+  const getCount = (section: SectionType, subSection?: string, topic?: string, subTopic?: string): number => {
+    let baseQuestions = filteredQuestions;
+    if (section) {
+      baseQuestions = baseQuestions.filter(q => q.section === section);
+    }
+    
+    return baseQuestions.filter((q) => {
       if (subSection && q.subSection !== subSection) return false;
       if (topic && q.topic !== topic) return false;
       if (subTopic && q.subTopic !== subTopic) return false;
@@ -135,8 +164,19 @@ export function PracticeSelector({ questions, isOpen, onClose }: PracticeSelecto
     }));
   };
 
+  const selectMainSection = (section: SectionType) => {
+    setSelectedSection(section);
+    // Expand the first subsection when selecting
+    if (section === 'English') {
+      setExpandedSections(['Craft and Structure']);
+    } else if (section === 'Math') {
+      setExpandedSections(['Algebra']);
+    } else {
+      setExpandedSections([]);
+    }
+  };
+
   const startPractice = (filter: Partial<FilterOption>) => {
-    // Store difficulty filter and topic filter in sessionStorage
     const practiceConfig = {
       filter,
       difficulties: selectedDifficulties,
@@ -145,7 +185,7 @@ export function PracticeSelector({ questions, isOpen, onClose }: PracticeSelecto
     navigate('/quiz');
   };
 
-  const DifficultyBadge = ({ difficulty, count }: { difficulty: keyof DifficultyFilter; count: number }) => {
+  const DifficultyBadge = ({ difficulty }: { difficulty: keyof DifficultyFilter }) => {
     const colors = {
       easy: 'bg-green-500/20 text-green-600 border-green-500/30',
       medium: 'bg-yellow-500/20 text-yellow-600 border-yellow-500/30',
@@ -175,16 +215,25 @@ export function PracticeSelector({ questions, isOpen, onClose }: PracticeSelecto
   };
 
   const renderTopicItem = (
-    label: string,
-    count: number,
-    onClick: () => void,
-    isSubTopic: boolean = false
+    section: SectionType,
+    subSection: string,
+    topic: string,
+    subTopic?: string,
+    isNested: boolean = false
   ) => {
+    const count = getCount(section, subSection, topic, subTopic);
     const disabled = count === 0;
+    const label = subTopic || topic;
 
     return (
       <button
-        onClick={disabled ? undefined : onClick}
+        key={label}
+        onClick={disabled ? undefined : () => startPractice({
+          section: section!,
+          subSection,
+          topic,
+          subTopic,
+        })}
         disabled={disabled}
         className={cn(
           'w-full flex items-center justify-between px-4 py-3 rounded-xl transition-all duration-200 group',
@@ -192,42 +241,29 @@ export function PracticeSelector({ questions, isOpen, onClose }: PracticeSelecto
           disabled
             ? 'opacity-50 cursor-not-allowed'
             : 'hover:bg-primary/5 hover:border-primary/20',
-          isSubTopic ? 'ml-4' : ''
+          isNested ? 'ml-4' : ''
         )}
       >
         <span className="text-sm text-foreground">{label}</span>
         <div className="flex items-center gap-2">
           <span className="text-xs text-muted-foreground">{count} questions</span>
-          <Play className="w-4 h-4 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
+          {!disabled && <Play className="w-4 h-4 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />}
         </div>
       </button>
     );
   };
 
-  const renderSubTopics = (parentTopic: string, subTopics: Record<string, null>, subSection: string, mainSection: string) => {
-    return Object.keys(subTopics).map(subTopic => {
-      const count = getCount(subSection, parentTopic, subTopic);
-      return (
-        <div key={subTopic}>
-          {renderTopicItem(
-            subTopic,
-            count,
-            () => startPractice({
-              section: mainSection === 'English Reading & Writing' ? 'English' : 'Math',
-              subSection,
-              topic: parentTopic,
-              subTopic,
-            }),
-            true
-          )}
-        </div>
-      );
-    });
+  const renderSubTopics = (section: SectionType, subSection: string, parentTopic: string, subTopics: Record<string, null>) => {
+    return Object.keys(subTopics).map(subTopic => (
+      <div key={subTopic}>
+        {renderTopicItem(section, subSection, parentTopic, subTopic, true)}
+      </div>
+    ));
   };
 
-  const renderTopics = (subSection: string, topics: Record<string, any>, mainSection: string) => {
+  const renderTopics = (section: SectionType, subSection: string, topics: Record<string, any>) => {
     return Object.entries(topics).map(([topic, subTopics]) => {
-      const count = getCount(subSection, topic);
+      const count = getCount(section, subSection, topic);
       const hasSubTopics = subTopics !== null && typeof subTopics === 'object';
 
       if (hasSubTopics) {
@@ -258,7 +294,7 @@ export function PracticeSelector({ questions, isOpen, onClose }: PracticeSelecto
                   className="overflow-hidden"
                 >
                   <div className="space-y-0.5 pl-2">
-                    {renderSubTopics(topic, subTopics, subSection, mainSection)}
+                    {renderSubTopics(section, subSection, topic, subTopics)}
                   </div>
                 </motion.div>
               )}
@@ -269,23 +305,15 @@ export function PracticeSelector({ questions, isOpen, onClose }: PracticeSelecto
 
       return (
         <div key={topic}>
-          {renderTopicItem(
-            topic,
-            count,
-            () => startPractice({
-              section: mainSection === 'English Reading & Writing' ? 'English' : 'Math',
-              subSection,
-              topic,
-            })
-          )}
+          {renderTopicItem(section, subSection, topic)}
         </div>
       );
     });
   };
 
-  const renderSubSections = (subSections: Record<string, any>, mainSection: string) => {
+  const renderSubSections = (section: SectionType, subSections: Record<string, any>) => {
     return Object.entries(subSections).map(([subSection, topics]) => {
-      const count = getCount(subSection);
+      const count = getCount(section, subSection);
       const hasTopics = topics !== null && typeof topics === 'object';
 
       return (
@@ -315,7 +343,7 @@ export function PracticeSelector({ questions, isOpen, onClose }: PracticeSelecto
                 className="overflow-hidden"
               >
                 <div className="space-y-0.5 pl-2">
-                  {renderTopics(subSection, topics, mainSection)}
+                  {renderTopics(section, subSection, topics)}
                 </div>
               </motion.div>
             )}
@@ -364,69 +392,92 @@ export function PracticeSelector({ questions, isOpen, onClose }: PracticeSelecto
             <div className="px-6 py-4 border-b border-border bg-muted/30">
               <p className="text-sm font-medium text-foreground mb-3">Filter by Difficulty</p>
               <div className="flex flex-wrap gap-2">
-                <DifficultyBadge difficulty="easy" count={questions.filter(q => q.difficulty === 'easy').length} />
-                <DifficultyBadge difficulty="medium" count={questions.filter(q => q.difficulty === 'medium').length} />
-                <DifficultyBadge difficulty="hard" count={questions.filter(q => q.difficulty === 'hard').length} />
+                <DifficultyBadge difficulty="easy" />
+                <DifficultyBadge difficulty="medium" />
+                <DifficultyBadge difficulty="hard" />
+              </div>
+            </div>
+
+            {/* Section Selection (MUTUALLY EXCLUSIVE) */}
+            <div className="px-6 py-4 border-b border-border">
+              <p className="text-sm font-medium text-foreground mb-3">Choose Section</p>
+              <div className="flex gap-3">
+                <button
+                  onClick={() => selectMainSection('English')}
+                  className={cn(
+                    'flex-1 py-4 px-4 rounded-xl border-2 transition-all duration-200 text-center',
+                    selectedSection === 'English'
+                      ? 'border-blue-500 bg-blue-500/10 text-blue-600'
+                      : 'border-border hover:border-blue-300 hover:bg-blue-50/50'
+                  )}
+                >
+                  <div className="font-semibold">English</div>
+                  <div className="text-xs text-muted-foreground mt-1">
+                    {englishQuestions.length} questions
+                  </div>
+                </button>
+                <button
+                  onClick={() => selectMainSection('Math')}
+                  className={cn(
+                    'flex-1 py-4 px-4 rounded-xl border-2 transition-all duration-200 text-center',
+                    selectedSection === 'Math'
+                      ? 'border-purple-500 bg-purple-500/10 text-purple-600'
+                      : 'border-border hover:border-purple-300 hover:bg-purple-50/50'
+                  )}
+                >
+                  <div className="font-semibold">Math</div>
+                  <div className="text-xs text-muted-foreground mt-1">
+                    {mathQuestions.length} questions
+                  </div>
+                </button>
               </div>
             </div>
 
             {/* Topics List */}
             <div className="flex-1 overflow-y-auto p-4">
-              {/* Practice All */}
-              <button
-                onClick={() => startPractice({})}
-                className="w-full flex items-center justify-between px-4 py-4 rounded-xl bg-primary/10 hover:bg-primary/20 border border-primary/20 transition-all duration-200 mb-4 group"
-              >
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center">
-                    <Play className="w-5 h-5 text-primary" />
-                  </div>
-                  <div className="text-left">
-                    <span className="text-base font-semibold text-foreground">Practice All Questions</span>
-                    <p className="text-xs text-muted-foreground">{filteredQuestions.length} questions available</p>
-                  </div>
+              {!selectedSection && (
+                <div className="text-center py-12 text-muted-foreground">
+                  <p className="text-lg font-medium mb-2">Select a section above</p>
+                  <p className="text-sm">Choose English or Math to see available topics</p>
                 </div>
-              </button>
+              )}
 
-              {/* Main Section */}
-              {Object.entries(FILTER_STRUCTURE).map(([section, subSections]) => (
-                <div key={section} className="space-y-1">
+              {selectedSection && (
+                <>
+                  {/* Practice All in Section */}
                   <button
-                    onClick={() => toggleSection(section)}
-                    className="w-full flex items-center justify-between px-4 py-3 hover:bg-muted/50 rounded-xl transition-all duration-200"
+                    onClick={() => startPractice({ section: selectedSection })}
+                    className="w-full flex items-center justify-between px-4 py-4 rounded-xl bg-primary/10 hover:bg-primary/20 border border-primary/20 transition-all duration-200 mb-4 group"
                   >
-                    <span className="text-sm font-bold text-primary uppercase tracking-wide">
-                      {section}
-                    </span>
-                    <div className="flex items-center gap-2">
-                      <span className="text-xs text-muted-foreground">
-                        {filteredQuestions.length} questions
-                      </span>
-                      {expandedSections.includes(section) ? (
-                        <ChevronDown className="w-4 h-4 text-muted-foreground" />
-                      ) : (
-                        <ChevronRight className="w-4 h-4 text-muted-foreground" />
-                      )}
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center">
+                        <Play className="w-5 h-5 text-primary" />
+                      </div>
+                      <div className="text-left">
+                        <span className="text-base font-semibold text-foreground">
+                          Practice All {selectedSection}
+                        </span>
+                        <p className="text-xs text-muted-foreground">
+                          {getCount(selectedSection)} questions available
+                        </p>
+                      </div>
                     </div>
                   </button>
 
-                  <AnimatePresence>
-                    {expandedSections.includes(section) && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.2 }}
-                        className="overflow-hidden"
-                      >
-                        <div className="space-y-1 pl-2">
-                          {renderSubSections(subSections, section)}
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              ))}
+                  {/* SubSections */}
+                  {selectedSection === 'English' && (
+                    <div className="space-y-1">
+                      {renderSubSections('English', ENGLISH_FILTER_STRUCTURE)}
+                    </div>
+                  )}
+
+                  {selectedSection === 'Math' && (
+                    <div className="space-y-1">
+                      {renderSubSections('Math', MATH_FILTER_STRUCTURE)}
+                    </div>
+                  )}
+                </>
+              )}
             </div>
           </motion.div>
         </>
