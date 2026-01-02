@@ -32,25 +32,14 @@ import {
   TextHighlight,
   getInitialQuestionState,
 } from '@/lib/questionUtils';
-import { loadAllMathQuestions, MathQuestion } from '@/lib/mathQuestionUtils'; // Import Math loader
+import { loadAllMathQuestions } from '@/lib/mathQuestionUtils';
 import { cn } from '@/lib/utils';
 import { useAuth } from '@/hooks/useAuth';
 import { useFullscreen } from '@/hooks/useFullscreen';
-import { useQueryClient } from '@tanstack/react-query';
 import { parseOptionLabel } from '@/lib/mathQuestionUtils';
 
-// Math Layout Components
-import {
-  ResizablePanelGroup,
-  ResizablePanel,
-  ResizableHandle
-} from '@/components/ui/resizable';
-import { ScrollArea } from '@/components/ui/scroll-area';
-import DraggableCalculator from '@/components/math/DraggableCalculator';
-import MathReference from '@/components/math/MathReference';
-import GridInInput from '@/components/math/GridInInput';
-import MathQuestionOption from '@/components/math/MathQuestionOption';
-import LatexRenderer from '@/components/math/LatexRenderer';
+// Components
+import MathQuestionLayout from '@/components/math/MathQuestionLayout';
 
 interface TopicInfo {
   name: string;
@@ -61,7 +50,6 @@ interface TopicInfo {
 
 type QuizPhase = 'setup' | 'active' | 'completed';
 
-// Helper to shuffle array
 function shuffleArray<T>(array: T[]): T[] {
   const shuffled = [...array];
   for (let i = shuffled.length - 1; i > 0; i--) {
@@ -75,18 +63,16 @@ function calculateQuizTime(questions: Question[], requestedCount: number): numbe
   if (questions.length === 0) return 0;
   
   const actualCount = Math.min(requestedCount, questions.length);
-  const selectedQuestions = questions.slice(0, actualCount); // Assume already shuffled or just taking first n
+  const selectedQuestions = questions.slice(0, actualCount);
   
   let totalTime = 0;
-  
   for (const q of selectedQuestions) {
     if (q.section === 'Math') {
-      totalTime += 95; // ~1.6 mins for Math
+      totalTime += 95; // ~1 min 35 sec for Math
     } else {
-      totalTime += 71; // ~1.2 mins for R&W
+      totalTime += 71; // ~1 min 11 sec for R&W
     }
   }
-
   return Math.round(totalTime);
 }
 
@@ -105,45 +91,39 @@ export default function TimedQuiz() {
   const [loadError, setLoadError] = useState(false);
   const [showHighlightTool, setShowHighlightTool] = useState(false);
   const [isEliminationMode, setIsEliminationMode] = useState(false);
+  const [isTimerHidden, setIsTimerHidden] = useState(false);
   
   const [quizPhase, setQuizPhase] = useState<QuizPhase>('setup');
   const [timeRemaining, setTimeRemaining] = useState(0);
   const [selectedTopics, setSelectedTopics] = useState<Set<string>>(new Set());
-  const [questionCount, setQuestionCount] = useState(30);
-  const [reviewingQuestion, setReviewingQuestion] = useState<number | null>(null);
+  const [questionCount, setQuestionCount] = useState(20);
 
-  // Math Tools
-  const [showCalculator, setShowCalculator] = useState(false);
-  const [showReference, setShowReference] = useState(false);
-  
+  // Load Questions from both sources
   const loadQuestions = useCallback(async () => {
     setLoadError(false);
     setIsLoaded(false);
     
     try {
-      // 1. Load English Questions
+      // 1. English
       const englishQuestions = await getAllQuestionsAsync();
-      const englishWithSection = englishQuestions.map(q => ({
+      const formattedEnglish = englishQuestions.map(q => ({
         ...q,
-        section: 'Reading and Writing', // Enforce section
+        section: 'Reading and Writing',
         subSection: q.subSection || 'Reading and Writing'
       }));
 
-      // 2. Load Math Questions
+      // 2. Math
       const mathQuestionsRaw = await loadAllMathQuestions();
-      const mathWithSection = mathQuestionsRaw.map((q: any) => ({
+      const formattedMath = mathQuestionsRaw.map((q: any) => ({
         ...q,
-        id: `math-${q.id}`, // Ensure unique IDs if needed, or rely on distinct number ranges
-        section: 'Math', // CRITICAL: This was missing before
-        subSection: 'Math', // Group all math under one subsection for simplicity in selection, or map topics
-        questionPrompt: q.question, // Map 'question' to 'questionPrompt' to match English interface
+        id: typeof q.id === 'string' && q.id.startsWith('math-') ? q.id : `math-${q.id}`, 
+        section: 'Math',
+        subSection: 'Math', // Unified subsection for selection simplicity
+        questionPrompt: q.question, 
         correctAnswer: q.answer,
-        questionText: q.question, // For Review fallback
       }));
 
-      // 3. Merge
-      // Note: We cast mathWithSection to Question[] to satisfy TS if the types slightly differ
-      const combined = [...englishWithSection, ...mathWithSection as unknown as Question[]];
+      const combined = [...formattedEnglish, ...formattedMath as unknown as Question[]];
 
       if (combined.length > 0) {
         setAllQuestions(combined);
@@ -162,15 +142,11 @@ export default function TimedQuiz() {
     loadQuestions();
   }, [loadQuestions]);
   
-  // Group questions for the UI selection
   const topicGroups = useMemo(() => {
     const groups: { [section: string]: { [topic: string]: number } } = {};
-    
     allQuestions.forEach(q => {
-      // Group by SECTION (Reading and Writing vs Math)
       const sectionName = q.section || 'General';
       if (!groups[sectionName]) groups[sectionName] = {};
-      
       const topic = q.topic || 'General';
       groups[sectionName][topic] = (groups[sectionName][topic] || 0) + 1;
     });
@@ -186,69 +162,58 @@ export default function TimedQuiz() {
     return calculateQuizTime(availableQuestions, questionCount);
   }, [availableQuestions, questionCount]);
   
-  // --- STRICT SELECTION LOGIC ---
+  // Strict Selection Logic
   const toggleTopic = (topic: string, section: string) => {
     setSelectedTopics(prev => {
       const newSet = new Set(prev);
       
-      // Determine the section of the *current* selection (if any)
-      let currentSelectionSection = '';
+      // Check section of currently selected topics
+      let currentSection = '';
       if (prev.size > 0) {
         const firstTopic = Array.from(prev)[0];
-        // Find which section this topic belongs to
         const sampleQ = allQuestions.find(q => q.topic === firstTopic);
-        currentSelectionSection = sampleQ?.section || '';
+        currentSection = sampleQ?.section || '';
       }
 
-      // If user clicks a topic in a DIFFERENT section, clear previous selection
-      if (currentSelectionSection && currentSelectionSection !== section) {
+      // If switching sections, clear previous
+      if (currentSection && currentSection !== section) {
         newSet.clear();
       }
 
-      if (newSet.has(topic)) {
-        newSet.delete(topic);
-      } else {
-        newSet.add(topic);
-      }
+      if (newSet.has(topic)) newSet.delete(topic);
+      else newSet.add(topic);
+      
       return newSet;
     });
   };
   
   const selectAllInSection = (section: string) => {
     const topics = Object.keys(topicGroups[section] || {});
-    
     setSelectedTopics(prev => {
       const newSet = new Set(prev);
-      
-      // Check if we need to clear other sections
-      let currentSelectionSection = '';
+      let currentSection = '';
       if (prev.size > 0) {
         const firstTopic = Array.from(prev)[0];
         const sampleQ = allQuestions.find(q => q.topic === firstTopic);
-        currentSelectionSection = sampleQ?.section || '';
+        currentSection = sampleQ?.section || '';
       }
 
-      if (currentSelectionSection && currentSelectionSection !== section) {
+      if (currentSection && currentSection !== section) {
         newSet.clear();
       }
 
       const allSelected = topics.every(t => newSet.has(t));
-      if (allSelected) {
-        topics.forEach(t => newSet.delete(t));
-      } else {
-        topics.forEach(t => newSet.add(t));
-      }
+      if (allSelected) topics.forEach(t => newSet.delete(t));
+      else topics.forEach(t => newSet.add(t));
+      
       return newSet;
     });
   };
   
   const startQuiz = () => {
     if (availableQuestions.length === 0) return;
-    
-    const actualCount = Math.min(questionCount, availableQuestions.length);
     const shuffled = shuffleArray(availableQuestions);
-    const selected = shuffled.slice(0, actualCount);
-    
+    const selected = shuffled.slice(0, Math.min(questionCount, availableQuestions.length));
     setQuizQuestions(selected);
     setTimeRemaining(calculatedTime);
     setCurrentIndex(0);
@@ -259,12 +224,9 @@ export default function TimedQuiz() {
   useEffect(() => {
     if (quizPhase !== 'active') return;
     timerRef.current = setInterval(() => {
-      setTimeRemaining(prev => {
-        if (prev <= 1) {
-          submitQuiz();
-          return 0;
-        }
-        return prev - 1;
+      setTimeRemaining(p => {
+        if (p <= 1) { submitQuiz(); return 0; }
+        return p - 1;
       });
     }, 1000);
     return () => { if (timerRef.current) clearInterval(timerRef.current); };
@@ -285,40 +247,7 @@ export default function TimedQuiz() {
       [questionId]: { ...(prev[questionId] || getInitialQuestionState()), ...updates },
     }));
   }, []);
-  
-  const handleSelectAnswer = (letter: string) => {
-    if (!currentQuestion || quizPhase !== 'active') return;
-    updateQuestionState(currentQuestion.id, {
-      userAnswer: currentState?.userAnswer === letter ? null : letter,
-    });
-  };
-  
-  const handleGridInChange = (val: string) => {
-     if (!currentQuestion || quizPhase !== 'active') return;
-     updateQuestionState(currentQuestion.id, { userAnswer: val });
-  }
 
-  const handleToggleElimination = (letter: string) => {
-    if (!currentQuestion || quizPhase !== 'active') return;
-    const eliminated = currentState?.eliminatedOptions || [];
-    const newEliminated = eliminated.includes(letter)
-      ? eliminated.filter(l => l !== letter)
-      : [...eliminated, letter];
-    updateQuestionState(currentQuestion.id, { eliminatedOptions: newEliminated });
-  };
-
-  const handleUndoEliminations = () => {
-    if (!currentQuestion) return;
-    updateQuestionState(currentQuestion.id, { eliminatedOptions: [] });
-  };
-  
-  const handleToggleMark = () => {
-    if (!currentQuestion || quizPhase !== 'active') return;
-    updateQuestionState(currentQuestion.id, {
-      markedForReview: !currentState?.markedForReview,
-    });
-  };
-  
   const handleNavigate = (direction: 'prev' | 'next' | number) => {
     let targetIndex: number;
     if (typeof direction === 'number') targetIndex = direction;
@@ -327,64 +256,56 @@ export default function TimedQuiz() {
     else return;
     setCurrentIndex(targetIndex);
   };
-  
-  const handleAddHighlight = (highlight: TextHighlight) => {
-    if (!currentQuestion) return;
-    const currentHighlights = currentState?.highlights || [];
-    updateQuestionState(currentQuestion.id, { highlights: [...currentHighlights, highlight] });
-  };
-  
-  const handleRemoveHighlight = (index: number) => {
-    if (!currentQuestion) return;
-    const currentHighlights = currentState?.highlights || [];
-    updateQuestionState(currentQuestion.id, { highlights: currentHighlights.filter((_, i) => i !== index) });
-  };
-  
-  const formatTime = (seconds: number): string => {
-    const mins = Math.floor(seconds / 60);
-    const secs = seconds % 60;
-    return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
-  };
-  
-  if (!isLoaded) return <div className="h-screen flex items-center justify-center">Loading Questions...</div>;
 
+  const handleSelectAnswer = (letter: string) => {
+    if (!currentQuestion || quizPhase !== 'active') return;
+    updateQuestionState(currentQuestion.id, {
+      userAnswer: currentState?.userAnswer === letter ? null : letter,
+    });
+  };
+
+  const handleToggleElimination = (letter: string) => {
+    if (!currentQuestion) return;
+    const eliminated = currentState?.eliminatedOptions || [];
+    const newEliminated = eliminated.includes(letter) ? eliminated.filter(l => l !== letter) : [...eliminated, letter];
+    updateQuestionState(currentQuestion.id, { eliminatedOptions: newEliminated });
+  };
+
+  // Render Loading
+  if (!isLoaded) return <div className="h-screen flex items-center justify-center text-slate-500">Loading Questions...</div>;
+
+  // Render Setup
   if (quizPhase === 'setup') {
     return (
       <div className="min-h-screen bg-bluebook-bg">
         <header className="sticky top-0 z-30 bg-white border-b border-gray-200">
-          <div className="flex items-center justify-between px-4 h-14">
-            <div className="flex items-center gap-2">
-              <button onClick={() => navigate('/')} className="p-2 hover:bg-gray-100 rounded-md"><ArrowLeft className="w-5 h-5 text-gray-600" /></button>
-              <span className="text-base font-medium">Quiz Setup</span>
-            </div>
+          <div className="flex items-center px-4 h-14">
+            <button onClick={() => navigate('/')} className="p-2 hover:bg-gray-100 rounded-md mr-2"><ArrowLeft className="w-5 h-5" /></button>
+            <span className="text-base font-medium">Quiz Setup</span>
           </div>
         </header>
         <main className="container mx-auto px-4 py-8 max-w-4xl">
           <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-6">
-            <h2 className="text-xl font-semibold mb-2">Select Topics</h2>
-            <p className="text-sm text-amber-600 mb-4 bg-amber-50 p-3 rounded border border-amber-100">
-              Note: You can only select <strong>Math</strong> OR <strong>Reading/Writing</strong> topics for a single quiz.
-            </p>
-            <div className="space-y-4">
+            <h2 className="text-xl font-semibold mb-4">Select Topics</h2>
+            <div className="text-sm bg-amber-50 text-amber-800 p-3 rounded mb-4 border border-amber-100">
+               Select <strong>Math</strong> OR <strong>Reading/Writing</strong>. Selections are exclusive to one section.
+            </div>
+            <div className="space-y-6">
               {Object.entries(topicGroups).map(([section, topics]) => (
                 <div key={section} className="border rounded-xl p-4">
                   <div className="flex items-center justify-between mb-3">
-                    <h3 className="font-bold text-lg text-slate-800">{section}</h3>
-                    <button onClick={() => selectAllInSection(section)} className="text-sm text-primary hover:underline">Select All {section}</button>
+                    <h3 className="font-bold text-slate-900">{section}</h3>
+                    <button onClick={() => selectAllInSection(section)} className="text-sm text-primary hover:underline">Select All</button>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {Object.entries(topics).map(([topic, count]) => (
                       <button
                         key={topic}
                         onClick={() => toggleTopic(topic, section)}
-                        className={cn(
-                          "px-3 py-1.5 rounded-full text-sm transition-colors border",
-                          selectedTopics.has(topic) 
-                            ? "bg-primary text-white border-primary" 
-                            : "bg-white text-gray-700 hover:bg-gray-50 border-gray-200"
-                        )}
+                        className={cn("px-3 py-1.5 rounded-full text-sm border transition-colors", 
+                          selectedTopics.has(topic) ? "bg-slate-900 text-white border-slate-900" : "bg-white text-slate-700 hover:bg-slate-50 border-slate-200")}
                       >
-                        {topic} <span className="opacity-60 ml-1">({count})</span>
+                        {topic} <span className="opacity-60">({count})</span>
                       </button>
                     ))}
                   </div>
@@ -393,50 +314,63 @@ export default function TimedQuiz() {
             </div>
           </div>
           
-           <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-6">
-            <h2 className="text-xl font-semibold mb-4">Quiz Settings</h2>
-            <div className="flex items-center gap-4 mb-4">
-                <span className="w-32 font-medium">No. of Questions:</span>
-                <input type="number" min="5" max="100" value={questionCount} onChange={e => setQuestionCount(Number(e.target.value))} className="border rounded px-3 py-2 w-24" />
-                <span className="text-sm text-gray-500">(Max available: {availableQuestions.length})</span>
-            </div>
-            <div className="flex items-center gap-4">
-                <span className="w-32 font-medium">Est. Time:</span>
-                <span className="font-mono font-bold text-lg bg-slate-100 px-3 py-1 rounded">{formatTime(calculatedTime)}</span>
-            </div>
-           </div>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-6 flex items-center gap-6">
+             <div>
+                <label className="block text-sm font-medium mb-1">Question Count</label>
+                <input type="number" min="1" max="100" value={questionCount} onChange={e => setQuestionCount(Number(e.target.value))} className="border rounded px-3 py-2 w-24" />
+             </div>
+             <div>
+                <label className="block text-sm font-medium mb-1">Est. Time</label>
+                <div className="font-mono text-lg bg-slate-100 px-3 py-2 rounded">{Math.floor(calculatedTime/60)}m {calculatedTime%60}s</div>
+             </div>
+          </div>
 
-          <div className="flex justify-center pb-10">
-             <Button size="xl" onClick={startQuiz} disabled={availableQuestions.length === 0} className="px-12 h-12 text-lg">Start Quiz</Button>
+          <div className="flex justify-center">
+             <Button size="lg" onClick={startQuiz} disabled={availableQuestions.length === 0} className="px-12">Start Quiz</Button>
           </div>
         </main>
       </div>
     );
   }
 
-  // COMPLETED PHASE
+  // Render Completed
   if (quizPhase === 'completed') {
-      // Basic completion screen - expand this for full review if needed
-      return (
-          <div className="min-h-screen flex flex-col items-center justify-center bg-bluebook-bg">
-              <div className="bg-white p-8 rounded-2xl shadow-lg text-center max-w-md w-full">
-                  <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-                  <h1 className="text-3xl font-bold mb-4">Quiz Complete!</h1>
-                  <p className="text-gray-600 mb-6">Great job finishing the quiz.</p>
-                  <Button onClick={() => navigate('/')} className="w-full">Return Home</Button>
-              </div>
-          </div>
-      )
+    return (
+      <div className="min-h-screen flex flex-col items-center justify-center bg-bluebook-bg">
+         <div className="bg-white p-8 rounded-xl shadow text-center max-w-md w-full">
+            <h1 className="text-2xl font-bold mb-4">Quiz Complete</h1>
+            <p className="mb-6 text-slate-600">You have finished the practice session.</p>
+            <Button onClick={() => navigate('/')} className="w-full">Return Home</Button>
+         </div>
+      </div>
+    );
   }
 
-  // ACTIVE PHASE
+  // Active Quiz View
   if (!currentQuestion) return null;
 
+  // === MATH LAYOUT ===
+  if (isMathQuestion) {
+    return (
+      <MathQuestionLayout
+        questions={quizQuestions}
+        currentIndex={currentIndex}
+        questionStates={questionStates}
+        onNavigate={handleNavigate}
+        onUpdateState={updateQuestionState}
+        onCheckAnswer={() => {}} // Check logic handled inside if needed, or implement here
+        showNavigator={showNavigator}
+        setShowNavigator={setShowNavigator}
+        isTimerHidden={isTimerHidden}
+        setIsTimerHidden={setIsTimerHidden}
+      />
+    );
+  }
+
+  // === ENGLISH (R&W) LAYOUT ===
+  // Standard split pane for English
   return (
     <div className="h-screen w-screen overflow-hidden flex flex-col bg-white">
-      <DraggableCalculator isOpen={showCalculator} onClose={() => setShowCalculator(false)} />
-      <MathReference isOpen={showReference} onClose={() => setShowReference(false)} />
-      
       <QuestionNavigator
         totalQuestions={quizQuestions.length}
         questionIds={quizQuestions.map(q => q.id)}
@@ -447,172 +381,76 @@ export default function TimedQuiz() {
         onClose={() => setShowNavigator(false)}
       />
 
-      {/* Header */}
       <header className="h-[60px] bg-white border-b border-gray-200 flex items-center justify-between px-4 flex-shrink-0">
-         <div className="flex items-center gap-2">
-            <button onClick={() => navigate('/')} className="p-2 hover:bg-gray-100 rounded"><Home className="w-5 h-5 text-gray-600"/></button>
-            <span className="font-medium ml-2">Timed Quiz</span>
-         </div>
-         <div className={cn("text-xl font-mono font-bold px-4 py-1 rounded", timeRemaining < 60 ? "bg-red-50 text-red-600" : "text-gray-900")}>
-            {formatTime(timeRemaining)}
-         </div>
-         <div className="flex items-center gap-2">
-            {isMathQuestion ? (
-                <>
-                 <Button variant="ghost" size="sm" onClick={() => setShowCalculator(!showCalculator)} className={cn(showCalculator && "bg-gray-100")}>
-                    <Calculator className="w-4 h-4 mr-2"/> Calculator
-                 </Button>
-                 <Button variant="ghost" size="sm" onClick={() => setShowReference(!showReference)} className={cn(showReference && "bg-gray-100")}>
-                    <BookOpen className="w-4 h-4 mr-2"/> Reference
-                 </Button>
-                </>
-            ) : (
-                <Button variant="ghost" size="sm" onClick={() => setShowHighlightTool(!showHighlightTool)} className={cn(showHighlightTool && "bg-gray-100")}>
-                    <Pencil className="w-4 h-4 mr-2"/> Highlight
-                </Button>
-            )}
-             <Button variant="ghost" size="icon" onClick={toggleFullscreen}>
-                {isFullscreen ? <Minimize className="w-4 h-4"/> : <Maximize className="w-4 h-4"/>}
-             </Button>
-         </div>
+        <div className="flex items-center gap-2">
+           <span className="font-medium">Reading and Writing</span>
+        </div>
+        <div className="font-mono font-bold">{Math.floor(timeRemaining/60).toString().padStart(2,'0')}:{(timeRemaining%60).toString().padStart(2,'0')}</div>
+        <div className="flex items-center gap-2">
+           <Button variant="ghost" size="sm" onClick={() => setShowHighlightTool(!showHighlightTool)} className={cn(showHighlightTool && "bg-slate-100")}>
+             <Pencil className="w-4 h-4 mr-2" /> Highlight
+           </Button>
+           <Button variant="ghost" size="icon" onClick={toggleFullscreen}>
+             {isFullscreen ? <Minimize className="w-4 h-4"/> : <Maximize className="w-4 h-4"/>}
+           </Button>
+        </div>
       </header>
 
-      {/* MAIN CONTENT AREA */}
-      {isMathQuestion ? (
-        // --- MATH LAYOUT (SPLIT PANE) ---
-        <ResizablePanelGroup direction="horizontal" className="flex-1">
-            <ResizablePanel defaultSize={50} minSize={30}>
-                <ScrollArea className="h-full">
-                    <div className="p-8">
-                         <div className="flex items-center gap-3 mb-6">
-                            <span className="bg-slate-900 text-white w-8 h-8 flex items-center justify-center rounded font-bold text-sm">
-                                {currentIndex + 1}
-                            </span>
-                            <Button variant="ghost" size="sm" onClick={handleToggleMark} className={cn("gap-2", currentState?.markedForReview ? "text-amber-600 bg-amber-50" : "text-slate-500")}>
-                                <Bookmark className={cn("w-4 h-4", currentState?.markedForReview && "fill-current")} />
-                                {currentState?.markedForReview ? "Marked" : "Mark for Review"}
-                            </Button>
-                         </div>
-                         <div className="font-serif text-lg leading-relaxed text-[#1a1a1a]">
-                            <LatexRenderer content={currentQuestion.questionPrompt || currentQuestion.questionText || ""} />
-                         </div>
-                    </div>
-                </ScrollArea>
-            </ResizablePanel>
-            
-            <ResizableHandle withHandle />
-            
-            <ResizablePanel defaultSize={50} minSize={30}>
-                <ScrollArea className="h-full">
-                    <div className="p-8">
-                         <div className="space-y-4">
-                            {currentQuestion.isGridIn ? (
-                                <GridInInput 
-                                    value={currentState?.userAnswer || ''}
-                                    onChange={handleGridInChange}
-                                    isChecked={false} isCorrect={false} correctAnswer=""
-                                />
-                            ) : (
-                                Object.entries(currentQuestion.options || {}).map(([letter, text]) => {
-                                    const { label, text: optionText } = parseOptionLabel(text as string);
-                                    return (
-                                        <MathQuestionOption
-                                            key={letter}
-                                            label={label || letter}
-                                            text={optionText || text as string}
-                                            isSelected={currentState?.userAnswer === letter}
-                                            isCorrect={false} isIncorrect={false} showResult={false}
-                                            onClick={() => handleSelectAnswer(letter)}
-                                            isEliminated={currentState?.eliminatedOptions?.includes(letter)}
-                                            showEliminationButtons={isEliminationMode}
-                                            onEliminate={() => handleToggleElimination(letter)}
-                                        />
-                                    );
-                                })
-                            )}
-                            
-                            <div className="flex justify-end pt-4">
-                                <Button variant="ghost" size="sm" onClick={() => setIsEliminationMode(!isEliminationMode)} className={cn("text-xs text-slate-500", isEliminationMode && "bg-slate-100 text-slate-900")}>
-                                    {isEliminationMode ? "Exit Elimination Mode" : "Eliminate Options (ABC)"}
-                                </Button>
-                            </div>
-                         </div>
-                    </div>
-                </ScrollArea>
-            </ResizablePanel>
-        </ResizablePanelGroup>
-      ) : (
-        // --- READING/WRITING LAYOUT (Standard Split) ---
-        <main className="flex-1 flex flex-col lg:flex-row">
-            <div className="flex-1 p-6 overflow-y-auto border-r border-gray-200 bg-white">
-                 <AnimatePresence mode="wait">
-                    <motion.div key={currentQuestion.id} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-                        <HighlightableText
-                            text={currentQuestion.passage || ''}
-                            highlights={currentState?.highlights || []}
-                            selectedColor={selectedHighlightColor}
-                            onAddHighlight={handleAddHighlight}
-                            onRemoveHighlight={handleRemoveHighlight}
-                            className="quiz-passage text-gray-800 whitespace-pre-wrap leading-relaxed text-base font-serif"
-                        />
-                    </motion.div>
-                 </AnimatePresence>
-            </div>
-            <div className="flex-1 p-6 overflow-y-auto bg-bluebook-panel">
-                 <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center gap-3">
-                        <span className="bg-slate-900 text-white w-8 h-8 flex items-center justify-center rounded font-bold text-sm">
-                            {currentIndex + 1}
-                        </span>
-                        <Button variant="ghost" size="sm" onClick={handleToggleMark} className={cn("gap-2", currentState?.markedForReview ? "text-amber-600 bg-amber-50" : "text-slate-500")}>
-                            <Bookmark className={cn("w-4 h-4", currentState?.markedForReview && "fill-current")} />
-                            {currentState?.markedForReview ? "Marked" : "Mark for Review"}
-                        </Button>
-                    </div>
-                    <div className="flex gap-2">
-                        <button onClick={() => setIsEliminationMode(!isEliminationMode)} className={cn("w-8 h-8 rounded flex items-center justify-center transition-colors", isEliminationMode ? "bg-slate-900 text-white" : "hover:bg-gray-100 text-slate-400")}>
-                            <span className="line-through font-serif decoration-2">ABC</span>
-                        </button>
-                        {(currentState?.eliminatedOptions?.length || 0) > 0 && (
-                            <button onClick={handleUndoEliminations} className="text-slate-400 hover:text-slate-600"><Undo2 className="w-5 h-5" /></button>
-                        )}
-                    </div>
-                 </div>
-                 
-                 <div className="mb-6 font-medium text-gray-900">
-                    <PassageRenderer content={currentQuestion.questionPrompt || ''} />
-                 </div>
-                 
-                 <div className="space-y-3">
-                    {Object.entries(currentQuestion.options || {}).map(([letter, text]) => (
-                        <QuestionOption 
-                            key={letter} letter={letter} text={text as string}
-                            isSelected={currentState?.userAnswer === letter}
-                            isEliminated={currentState?.eliminatedOptions?.includes(letter)}
-                            onSelect={() => handleSelectAnswer(letter)}
-                            onEliminate={() => handleToggleElimination(letter)}
-                            showEliminationButtons={isEliminationMode}
-                            correctAnswer="" isChecked={false} isOptionChecked={false} onCheckOption={()=>{}} hideCheckButton
-                        />
-                    ))}
-                 </div>
-            </div>
-        </main>
-      )}
+      {/* English Split Pane */}
+      <main className="flex-1 flex flex-col lg:flex-row overflow-hidden">
+         {/* Passage Left */}
+         <div className="flex-1 p-8 overflow-y-auto border-r border-gray-200">
+             <HighlightableText 
+                text={currentQuestion.passage || ""} 
+                highlights={currentState?.highlights || []} 
+                selectedColor={selectedHighlightColor} 
+                onAddHighlight={(h) => updateQuestionState(currentQuestion.id, { highlights: [...(currentState?.highlights||[]), h]})}
+                onRemoveHighlight={(i) => updateQuestionState(currentQuestion.id, { highlights: (currentState?.highlights||[]).filter((_, idx) => idx !== i)})}
+                className="font-serif text-lg leading-relaxed"
+             />
+         </div>
+         {/* Question Right */}
+         <div className="flex-1 p-8 overflow-y-auto bg-slate-50">
+             <div className="flex items-center justify-between mb-4">
+                 <span className="bg-slate-900 text-white w-8 h-8 flex items-center justify-center rounded font-bold">{currentIndex+1}</span>
+                 <Button variant="ghost" size="sm" onClick={() => updateQuestionState(currentQuestion.id, { markedForReview: !currentState?.markedForReview })}>
+                    <Bookmark className={cn("w-4 h-4 mr-2", currentState?.markedForReview && "fill-current")} /> Mark for Review
+                 </Button>
+             </div>
+             
+             <PassageRenderer content={currentQuestion.questionPrompt || ""} className="mb-6 font-medium" />
+             
+             <div className="space-y-3">
+                {Object.entries(currentQuestion.options || {}).map(([letter, text]) => (
+                   <QuestionOption
+                      key={letter} letter={letter} text={text as string}
+                      isSelected={currentState?.userAnswer === letter}
+                      isEliminated={currentState?.eliminatedOptions?.includes(letter)}
+                      onSelect={() => handleSelectAnswer(letter)}
+                      onEliminate={() => handleToggleElimination(letter)}
+                      showEliminationButtons={isEliminationMode}
+                      correctAnswer="" isChecked={false} isOptionChecked={false} onCheckOption={()=>{}} hideCheckButton
+                   />
+                ))}
+             </div>
+             
+             <div className="mt-6 flex justify-end">
+                <Button variant="ghost" size="sm" onClick={() => setIsEliminationMode(!isEliminationMode)} className={cn("text-xs", isEliminationMode && "bg-slate-200")}>
+                   {isEliminationMode ? "Exit Elimination" : "Eliminate Choices"}
+                </Button>
+             </div>
+         </div>
+      </main>
 
-      {/* Footer */}
-      <footer className="h-[70px] bg-white border-t border-slate-200 flex items-center justify-between px-6 flex-shrink-0">
-         <Button variant="ghost" onClick={() => setShowNavigator(true)} className="text-slate-600 hover:bg-slate-100 font-medium">
+      <footer className="h-[70px] bg-white border-t border-gray-200 flex items-center justify-between px-6 flex-shrink-0">
+         <Button variant="ghost" onClick={() => setShowNavigator(true)} className="font-medium">
             Question {currentIndex + 1} of {quizQuestions.length}
          </Button>
-         
          <div className="flex gap-3">
-            <Button variant="outline" onClick={() => handleNavigate('prev')} disabled={currentIndex===0} className="px-6">Back</Button>
-            {currentIndex === quizQuestions.length - 1 ? (
-                <Button onClick={submitQuiz} className="bg-green-600 hover:bg-green-700 px-8">Submit Quiz</Button>
-            ) : (
-                <Button onClick={() => handleNavigate('next')} className="bg-blue-600 hover:bg-blue-700 px-8">Next</Button>
-            )}
+            <Button variant="outline" onClick={() => handleNavigate('prev')} disabled={currentIndex===0}>Back</Button>
+            <Button onClick={currentIndex === quizQuestions.length - 1 ? submitQuiz : () => handleNavigate('next')} className="bg-blue-600 hover:bg-blue-700 text-white px-8">
+               {currentIndex === quizQuestions.length - 1 ? "Submit" : "Next"}
+            </Button>
          </div>
       </footer>
     </div>
