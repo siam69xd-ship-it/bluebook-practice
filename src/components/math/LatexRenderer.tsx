@@ -43,7 +43,10 @@ function LatexRendererComponent({ content, className = '', displayMode = false }
       return `\\text{${out}}`;
     });
 
-    // KaTeX rendering helper
+    // Track errors for debugging
+    const errors: { latex: string; error?: string }[] = [];
+    
+    // KaTeX rendering helper with enhanced error logging
     const renderKatex = (latex: string, isDisplayMode: boolean): string => {
       try {
         const rendered = katex.renderToString(latex.trim(), {
@@ -53,12 +56,39 @@ function LatexRendererComponent({ content, className = '', displayMode = false }
           strict: false,
         });
 
-        if (import.meta.env.DEV && rendered.includes('katex-error')) {
-          console.warn('[KaTeX] Render issue:', latex);
+        // Check for KaTeX error class in output
+        if (rendered.includes('katex-error')) {
+          const errorInfo = { latex: latex.trim(), error: 'KaTeX render error (red text)' };
+          errors.push(errorInfo);
+          console.error(
+            '%c[KaTeX ERROR]%c Render failed for:',
+            'background: #ff4444; color: white; padding: 2px 6px; border-radius: 3px;',
+            'color: inherit;',
+            `\n  Input: "${latex.trim()}"`,
+            `\n  Full content snippet: "${content.slice(0, 200)}..."`
+          );
+          // Return with visual error indicator in dev mode
+          if (import.meta.env.DEV) {
+            return `<span class="katex-debug-error" style="background: #fee2e2; border: 1px solid #fca5a5; padding: 2px 4px; border-radius: 3px; font-family: monospace; font-size: 0.85em;" title="KaTeX error: ${latex.trim().replace(/"/g, '&quot;')}">${rendered}</span>`;
+          }
         }
 
         return rendered;
-      } catch {
+      } catch (e) {
+        const errorMsg = e instanceof Error ? e.message : 'Unknown error';
+        errors.push({ latex: latex.trim(), error: errorMsg });
+        console.error(
+          '%c[KaTeX EXCEPTION]%c',
+          'background: #dc2626; color: white; padding: 2px 6px; border-radius: 3px;',
+          'color: inherit;',
+          `\n  Input: "${latex.trim()}"`,
+          `\n  Error: ${errorMsg}`,
+          `\n  Full content: "${content.slice(0, 200)}..."`
+        );
+        // Return raw text with error styling in dev mode
+        if (import.meta.env.DEV) {
+          return `<span class="katex-debug-exception" style="background: #fef3c7; border: 1px solid #fcd34d; padding: 2px 4px; border-radius: 3px; font-family: monospace; font-size: 0.85em;" title="Exception: ${errorMsg}">${latex}</span>`;
+        }
         return latex;
       }
     };
