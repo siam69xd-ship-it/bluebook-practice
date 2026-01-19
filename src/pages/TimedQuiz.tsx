@@ -430,8 +430,8 @@ export default function TimedQuiz() {
   
   if (quizPhase === 'setup') {
     return (
-      <div className="min-h-screen bg-bluebook-bg animate-content-reveal">
-        <header className="sticky top-0 z-30 bg-white border-b border-gray-200">
+      <div className="min-h-screen bg-bluebook-bg">
+        <header className="sticky top-0 z-30 bg-white border-b border-gray-200 animate-stagger-fade stagger-1">
           <div className="flex items-center justify-between px-4 h-14">
             <div className="flex items-center gap-2">
               <button
@@ -446,7 +446,7 @@ export default function TimedQuiz() {
         </header>
         
         <main className="container mx-auto px-4 py-8 max-w-4xl">
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-6">
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-6 animate-stagger-fade stagger-2">
             <h2 className="text-xl font-semibold mb-4">Select Topics</h2>
             <p className="text-sm text-muted-foreground mb-4">
               Choose one or more topics. Leave all unchecked to include all questions.
