@@ -33,13 +33,13 @@ const PageLoader = () => (
   </div>
 );
 
-// Remove preloader instantly once app mounts
+// Remove preloader instantly
 const useRemovePreloader = () => {
   useEffect(() => {
     const preloader = document.getElementById('app-preloader');
     if (preloader) {
       preloader.classList.add('fade-out');
-      setTimeout(() => preloader.remove(), 100);
+      setTimeout(() => preloader.remove(), 50);
     }
   }, []);
 };

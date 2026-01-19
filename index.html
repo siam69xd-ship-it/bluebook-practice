@@ -24,67 +24,16 @@
     <meta name="twitter:image" content="https://nextprep.app/og-image.png" />
 
     <style>
-      /* Ultra-fast critical CSS for preloader */
-      #app-preloader {
-        position: fixed;
-        inset: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: #ffffff;
-        z-index: 9999;
-        transition: opacity 0.1s ease-out;
-      }
-      #app-preloader.fade-out {
-        opacity: 0;
-        pointer-events: none;
-      }
-      .preloader-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-      }
-      .preloader-logo {
-        width: 44px;
-        height: 44px;
-        border-radius: 10px;
-        background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .preloader-logo svg {
-        width: 24px;
-        height: 24px;
-        color: white;
-      }
-      .preloader-spinner {
-        width: 20px;
-        height: 20px;
-        border: 2px solid #e2e8f0;
-        border-top-color: #2563eb;
-        border-radius: 50%;
-        animation: spin 0.4s linear infinite;
-      }
-      @keyframes spin { to { transform: rotate(360deg); } }
+      #app-preloader{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#fff;z-index:9999;transition:opacity 50ms}
+      #app-preloader.fade-out{opacity:0;pointer-events:none}
+      .preloader-spinner{width:18px;height:18px;border:2px solid #e2e8f0;border-top-color:#2563eb;border-radius:50%;animation:s .3s linear infinite}
+      @keyframes s{to{transform:rotate(360deg)}}
     </style>
   </head>
 
   <body>
     <!-- Preloader shown immediately while JS loads -->
-    <div id="app-preloader">
-      <div class="preloader-content">
-        <div class="preloader-logo">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/>
-            <path d="M22 10v6"/>
-            <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/>
-          </svg>
-        </div>
-        <div class="preloader-spinner"></div>
-      </div>
-    </div>
+    <div id="app-preloader"><div class="preloader-spinner"></div></div>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
