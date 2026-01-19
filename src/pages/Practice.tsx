@@ -481,10 +481,16 @@ export default function Practice() {
     </div>
   );
 
+  if (isLoading) {
+    return (
+      <div className="min-h-screen gradient-hero">
+        <LoadingProgressBar isLoading={true} />
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen gradient-hero">
-      <LoadingProgressBar isLoading={isLoading} />
-      
       <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
@@ -509,7 +515,7 @@ export default function Practice() {
       </header>
 
       <main className="container mx-auto px-4 py-8 max-w-5xl">
-        <div className="text-center mb-10 animate-fade-in">
+        <div className="text-center mb-10">
           <h1 className="text-3xl sm:text-4xl font-bold mb-3">
             <span className="gradient-text">Choose Your Practice</span>
           </h1>
@@ -518,7 +524,7 @@ export default function Practice() {
           </p>
         </div>
 
-        <div className="mb-10 animate-fade-in" style={{ animationDelay: '50ms' }}>
+        <div className="mb-10">
           <div className="flex items-center gap-2 mb-4">
             <Filter className="w-5 h-5 text-primary" />
             <h2 className="font-semibold text-foreground">Filter by Difficulty</h2>
@@ -530,7 +536,7 @@ export default function Practice() {
           </div>
         </div>
 
-        <div className="mb-8 animate-fade-in" style={{ animationDelay: '100ms' }}>
+        <div className="mb-8">
           <CategoryCard
             title="Practice All Questions"
             count={filteredQuestions.length}
@@ -540,23 +546,18 @@ export default function Practice() {
           />
         </div>
 
-        <div className="space-y-4 animate-fade-in" style={{ animationDelay: '150ms' }}>
+        <div className="space-y-4">
           <div className="flex items-center gap-2 mb-2">
             <BookOpen className="w-5 h-5 text-primary" />
             <h2 className="font-semibold text-foreground">Topics</h2>
-            {isLoading && <Loader2 className="w-4 h-4 animate-spin text-muted-foreground" />}
           </div>
           
-          {isLoading ? (
-            <LoadingSkeleton />
-          ) : (
-            Object.entries(FILTER_STRUCTURE).map(([section, subSections]) => (
-              <div key={section} className="space-y-3">
-                <h3 className="text-sm font-bold text-primary uppercase tracking-wide px-4 pt-4">{section}</h3>
-                {renderSubSections(subSections, section)}
-              </div>
-            ))
-          )}
+          {Object.entries(FILTER_STRUCTURE).map(([section, subSections]) => (
+            <div key={section} className="space-y-3">
+              <h3 className="text-sm font-bold text-primary uppercase tracking-wide px-4 pt-4">{section}</h3>
+              {renderSubSections(subSections, section)}
+            </div>
+          ))}
         </div>
 
         <div className="h-20" />
