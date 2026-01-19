@@ -474,6 +474,21 @@ async function loadJsonFile(path: string): Promise<any> {
 let cachedQuestions: Question[] | null = null;
 let prefetchPromise: Promise<Question[]> | null = null;
 
+// Progress tracking for loading
+type ProgressCallback = (loaded: number, total: number) => void;
+let progressCallbacks: ProgressCallback[] = [];
+
+export function subscribeToLoadingProgress(callback: ProgressCallback): () => void {
+  progressCallbacks.push(callback);
+  return () => {
+    progressCallbacks = progressCallbacks.filter(cb => cb !== callback);
+  };
+}
+
+function notifyProgress(loaded: number, total: number) {
+  progressCallbacks.forEach(cb => cb(loaded, total));
+}
+
 // Clear cache (useful for reloading questions)
 export function clearQuestionCache() {
   cachedQuestions = null;
@@ -558,34 +573,51 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
   };
   
   try {
-    // Load all JSON files
+    // Define all JSON file paths
+    const filePaths = [
+      '/data/boundaries.json',
+      '/data/verbs.json',
+      '/data/pronoun.json',
+      '/data/modifiers.json',
+      '/data/transitions.json',
+      '/data/inference.json',
+      '/data/cross_text_connections.json',
+      '/data/main_purpose.json',
+      '/data/overall_structure.json',
+      '/data/underlined_purpose.json',
+      '/data/gap_fillings.json',
+      '/data/synonyms.json',
+      '/data/support.json',
+      '/data/weaken.json',
+      '/data/quotation.json',
+      '/data/graphs.json',
+      '/data/main_ideas.json',
+      '/data/detailed_questions.json',
+      '/data/rhetorical_synthesis.json',
+    ];
+    
+    const total = filePaths.length;
+    let loaded = 0;
+    
+    // Load files with progress tracking
+    const loadWithProgress = async (path: string): Promise<any> => {
+      const result = await loadJsonFile(path);
+      loaded++;
+      notifyProgress(loaded, total);
+      return result;
+    };
+    
+    // Notify start
+    notifyProgress(0, total);
+    
+    // Load all JSON files with progress tracking
     const [
       boundariesData, verbsData, pronounData, modifiersData,
       transitionsData, inferenceData,
       crossTextData, mainPurposeData, overallStructureData, underlinedPurposeData,
       gapFillingsData, synonymsData, supportData, weakenData, quotationData, graphsData,
       mainIdeasData, detailedQuestionsData, rhetoricalSynthesisData
-    ] = await Promise.all([
-      loadJsonFile('/data/boundaries.json'),
-      loadJsonFile('/data/verbs.json'),
-      loadJsonFile('/data/pronoun.json'),
-      loadJsonFile('/data/modifiers.json'),
-      loadJsonFile('/data/transitions.json'),
-      loadJsonFile('/data/inference.json'),
-      loadJsonFile('/data/cross_text_connections.json'),
-      loadJsonFile('/data/main_purpose.json'),
-      loadJsonFile('/data/overall_structure.json'),
-      loadJsonFile('/data/underlined_purpose.json'),
-      loadJsonFile('/data/gap_fillings.json'),
-      loadJsonFile('/data/synonyms.json'),
-      loadJsonFile('/data/support.json'),
-      loadJsonFile('/data/weaken.json'),
-      loadJsonFile('/data/quotation.json'),
-      loadJsonFile('/data/graphs.json'),
-      loadJsonFile('/data/main_ideas.json'),
-      loadJsonFile('/data/detailed_questions.json'),
-      loadJsonFile('/data/rhetorical_synthesis.json'),
-    ]);
+    ] = await Promise.all(filePaths.map(loadWithProgress));
     
     // Process Boundaries
     const boundariesQuestions = boundariesData?.["English Reading & Writing"]?.["Standard English Conventions"]?.["Boundaries"] || [];
