@@ -29,6 +29,7 @@ import MathReferenceSheet from '@/components/math/MathReferenceSheet';
 import GridInInput from '@/components/math/GridInInput';
 import LatexRenderer from '@/components/math/LatexRenderer';
 import MathQuestionLayout from '@/components/math/MathQuestionLayout';
+import KatexDebugPanel from '@/components/math/KatexDebugPanel';
 import {
   getAllQuestionsAsync,
   filterQuestions,
@@ -793,6 +794,9 @@ export default function Quiz() {
       {/* Math Tools */}
       <DesmosCalculator isOpen={showCalculator} onClose={() => setShowCalculator(false)} />
       <MathReferenceSheet isOpen={showReference} onClose={() => setShowReference(false)} />
+      
+      {/* KaTeX Debug Panel (dev mode only) */}
+      <KatexDebugPanel />
     </div>
   );
 }
