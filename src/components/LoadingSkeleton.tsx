@@ -171,3 +171,90 @@ export function MathSkeleton({ className }: { className?: string }) {
     </div>
   );
 }
+
+export function HomeSkeleton({ className }: { className?: string }) {
+  return (
+    <div className={cn("min-h-screen bg-gradient-to-b from-slate-50 via-white to-blue-50/30", className)}>
+      {/* Header skeleton */}
+      <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-100">
+        <div className="container mx-auto px-4 py-4">
+          <nav className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <div className={cn("w-11 h-11 rounded-xl bg-muted", skeletonPulse)} />
+              <div>
+                <div className={cn("w-24 h-5 rounded bg-muted mb-1", skeletonPulse)} />
+                <div className={cn("w-20 h-3 rounded bg-muted", skeletonPulse)} />
+              </div>
+            </div>
+            <div className={cn("w-20 h-8 rounded bg-muted", skeletonPulse)} />
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        {/* Hero skeleton */}
+        <section className="container mx-auto px-4 pt-16 pb-20 lg:pt-24 lg:pb-28">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className={cn("w-48 h-8 rounded-full bg-muted mx-auto mb-6", skeletonPulse)} />
+            <div className={cn("w-96 max-w-full h-12 rounded bg-muted mx-auto mb-3", skeletonPulse)} />
+            <div className={cn("w-80 max-w-full h-12 rounded bg-muted mx-auto mb-6", skeletonPulse)} />
+            <div className={cn("w-full max-w-2xl h-6 rounded bg-muted mx-auto mb-2", skeletonPulse)} />
+            <div className={cn("w-3/4 max-w-xl h-6 rounded bg-muted mx-auto mb-10", skeletonPulse)} />
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <div className={cn("w-40 h-14 rounded-lg bg-muted", skeletonPulse)} />
+              <div className={cn("w-40 h-14 rounded-lg bg-muted", skeletonPulse)} />
+            </div>
+          </div>
+        </section>
+
+        {/* Stats skeleton */}
+        <section className="container mx-auto px-4 pb-20">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+              {[1, 2, 3, 4].map(i => (
+                <div key={i} className="bg-white rounded-2xl p-6 border border-slate-100">
+                  <div className={cn("w-12 h-12 rounded-xl bg-muted mb-4", skeletonPulse)} />
+                  <div className={cn("w-16 h-8 rounded bg-muted mb-2", skeletonPulse)} />
+                  <div className={cn("w-24 h-4 rounded bg-muted", skeletonPulse)} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Features skeleton */}
+        <section className="container mx-auto px-4 pb-20">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-10">
+              <div className={cn("w-72 h-8 rounded bg-muted mx-auto mb-3", skeletonPulse)} />
+              <div className={cn("w-64 h-5 rounded bg-muted mx-auto", skeletonPulse)} />
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[1, 2, 3, 4].map(i => (
+                <div key={i} className="bg-white rounded-2xl p-6 border border-slate-100">
+                  <div className={cn("w-14 h-14 rounded-xl bg-muted mb-5", skeletonPulse)} />
+                  <div className={cn("w-28 h-5 rounded bg-muted mb-2", skeletonPulse)} />
+                  <div className={cn("w-full h-4 rounded bg-muted mb-1", skeletonPulse)} />
+                  <div className={cn("w-3/4 h-4 rounded bg-muted", skeletonPulse)} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </main>
+
+      {/* Footer skeleton */}
+      <footer className="border-t border-slate-100 bg-white">
+        <div className="container mx-auto px-4 py-8">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <div className={cn("w-8 h-8 rounded-lg bg-muted", skeletonPulse)} />
+              <div className={cn("w-20 h-5 rounded bg-muted", skeletonPulse)} />
+            </div>
+            <div className={cn("w-64 h-4 rounded bg-muted", skeletonPulse)} />
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}

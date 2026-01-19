@@ -20,12 +20,15 @@ import { Button } from '@/components/ui/button';
 import { loadProgress, getAllQuestionsAsync, getTopicCounts, Question, prefetchQuestions } from '@/lib/questionUtils';
 import { useState, useEffect, useCallback } from 'react';
 import { useAuth } from '@/hooks/useAuth';
+import { LoadingProgressBar } from '@/components/LoadingProgressBar';
+import { HomeSkeleton } from '@/components/LoadingSkeleton';
 
 export default function Index() {
   const navigate = useNavigate();
   const { user, isAuthenticated, isLoading: authLoading } = useAuth();
   const [allQuestions, setAllQuestions] = useState<Question[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [showContent, setShowContent] = useState(false);
   const savedProgress = loadProgress();
 
   // Prefetch questions immediately on mount
@@ -95,8 +98,17 @@ export default function Index() {
     visible: { opacity: 1, y: 0 },
   };
 
+  if (!showContent) {
+    return (
+      <>
+        <LoadingProgressBar isLoading={isLoading} onLoadingComplete={() => setShowContent(true)} />
+        <HomeSkeleton />
+      </>
+    );
+  }
+
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-blue-50/30">
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-blue-50/30 animate-content-reveal">
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-100">
         <div className="container mx-auto px-4 py-4">
           <nav className="flex items-center justify-between">
