@@ -72,6 +72,7 @@ export default function Quiz() {
   const [showCalculator, setShowCalculator] = useState(false);
   const [showReference, setShowReference] = useState(false);
   const [gridInAnswer, setGridInAnswer] = useState('');
+  const [isInitialLoad, setIsInitialLoad] = useState(true); // Track initial load to avoid resetting index
 
   // Fetch attempt counts for logged-in users
   const { data: attemptCounts = {} } = useQuery<Record<string, number>>({
@@ -169,6 +170,8 @@ export default function Quiz() {
           setCurrentIndex(saved.currentIndex);
         }
         setIsLoaded(true);
+        // Mark initial load complete after a short delay to prevent filter change effect from resetting index
+        setTimeout(() => setIsInitialLoad(false), 100);
       } else if (retryCount < maxRetries) {
         retryCount++;
         await new Promise(resolve => setTimeout(resolve, 500));
@@ -205,10 +208,12 @@ export default function Quiz() {
     }
   }, [questionStates, currentIndex, activeFilter, isLoaded, allQuestions.length]);
 
-  // Reset current index when filter changes
+  // Reset current index when filter changes (but not on initial load)
   useEffect(() => {
-    setCurrentIndex(0);
-  }, [activeFilter]);
+    if (!isInitialLoad) {
+      setCurrentIndex(0);
+    }
+  }, [activeFilter, isInitialLoad]);
 
   // Update question state
   const updateQuestionState = useCallback((questionId: number, updates: Partial<QuestionState>) => {
