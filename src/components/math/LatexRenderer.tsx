@@ -95,12 +95,26 @@ function LatexRendererComponent({ content, className = '', displayMode = false }
 
     // Handle inline LaTeX ($...$) - single dollar signs
     // Now that currency is protected, we can safely parse $...$ as LaTeX
-    processedContent = processedContent.replace(/\$((?:\\\$|[^$\n])+?)\$/g, (match, latex) => {
+    // IMPORTANT: Use a more careful approach to avoid matching across sentence boundaries
+    // Match $...$ where content doesn't contain long runs of regular text (which indicates mismatched delimiters)
+    processedContent = processedContent.replace(/\$((?:\\\$|[^$])+?)\$/g, (match, latex) => {
       const trimmed = String(latex).trim();
       if (!trimmed) return match;
       
       // Skip if it looks like a placeholder we created
       if (trimmed.startsWith('_CURRENCY_')) return match;
+      
+      // Skip if content looks like regular text (contains long word sequences without math symbols)
+      // This prevents matching across sentence boundaries like "$1\le t\le36.$ Which statement..." to later "$"
+      // Real LaTeX typically contains: \, ^, _, {, }, digits, short variable names
+      // If we see sentence-like patterns, it's likely mismatched delimiters
+      const hasLongTextRun = /[A-Za-z]{10,}/.test(trimmed);  // 10+ consecutive letters suggests prose
+      const hasSentencePatterns = /\.\s+[A-Z]/.test(trimmed);  // Period + space + capital = sentence boundary
+      const hasQuestionMark = /\?/.test(trimmed);  // Questions are text, not math
+      
+      if (hasLongTextRun || hasSentencePatterns || hasQuestionMark) {
+        return match;  // Don't render as LaTeX, leave as-is
+      }
 
       // Render as LaTeX math
       return renderKatex(trimmed, false);
