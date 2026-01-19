@@ -472,10 +472,19 @@ async function loadJsonFile(path: string): Promise<any> {
 }
 
 let cachedQuestions: Question[] | null = null;
+let prefetchPromise: Promise<Question[]> | null = null;
 
 // Clear cache (useful for reloading questions)
 export function clearQuestionCache() {
   cachedQuestions = null;
+  prefetchPromise = null;
+}
+
+// Prefetch questions in background (call early to warm cache)
+export function prefetchQuestions(): void {
+  if (!cachedQuestions && !prefetchPromise) {
+    prefetchPromise = getAllQuestionsAsync();
+  }
 }
 
 // Helper to create question with all required fields
