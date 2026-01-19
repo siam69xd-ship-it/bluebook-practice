@@ -16,6 +16,10 @@ function LatexRendererComponent({ content, className = '', displayMode = false }
 
     let processedContent = content;
     
+    // STEP 0: Convert escaped dollar signs from JSON (\\$) to temporary placeholder
+    // This handles cases like "\\$60" in JSON which should display as "$60" (currency)
+    processedContent = processedContent.replace(/\\\$/g, '__ESCAPED_DOLLAR__');
+    
     // Remove option-like text at the end of questions (A) text \nB) text... patterns)
     processedContent = processedContent.replace(/\n[A-D]\)\s+[^\n]+(?=\s*$|\s*\n[A-D]\))/gi, '');
     processedContent = processedContent.replace(/\n[A-D]\)\s+[^\n]+$/gi, '');
@@ -71,17 +75,18 @@ function LatexRendererComponent({ content, className = '', displayMode = false }
       return `<div class="my-4 flex justify-center">${rendered}</div>`;
     });
     
-    // Handle inline LaTeX \(...\) - common in JSON files
+    // Handle inline LaTeX \(...\) - common in JSON files (MUST be before $...$ parsing)
     processedContent = processedContent.replace(/\\\(([\s\S]*?)\\\)/g, (match, latex) => {
       const trimmed = latex.trim();
       if (!trimmed) return match;
       return renderKatex(trimmed, false);
     });
 
-    // STEP 1: Protect currency amounts BEFORE any LaTeX parsing
+    // STEP 1: Protect currency amounts BEFORE $...$ LaTeX parsing
     // This prevents $150 from being treated as start of LaTeX when $25 appears later
+    // Match: $150, $25, $1,000, $99.99 etc.
     const currencyPlaceholders: { placeholder: string; original: string }[] = [];
-    processedContent = processedContent.replace(/\$(\d{1,3}(?:,\d{3})*(?:\.\d{2})?|\d+(?:\.\d{2})?)/g, (match, amount) => {
+    processedContent = processedContent.replace(/\$(\d{1,3}(?:,\d{3})*(?:\.\d+)?|\d+(?:\.\d+)?)/g, (match, amount) => {
       const placeholder = `__CURRENCY_${currencyPlaceholders.length}__`;
       currencyPlaceholders.push({ placeholder, original: `$${amount}` });
       return placeholder;
@@ -104,6 +109,9 @@ function LatexRendererComponent({ content, className = '', displayMode = false }
     for (const { placeholder, original } of currencyPlaceholders) {
       processedContent = processedContent.replace(placeholder, original);
     }
+    
+    // Restore escaped dollar signs as regular dollar signs (currency)
+    processedContent = processedContent.replace(/__ESCAPED_DOLLAR__/g, '$');
     
     // Handle standalone \frac{num}{den} not wrapped in $
     processedContent = processedContent.replace(/(?<![\\$])\\frac\{([^}]*)\}\{([^}]*)\}/g, (match, num, den) => {
