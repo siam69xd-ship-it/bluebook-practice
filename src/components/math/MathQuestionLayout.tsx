@@ -119,7 +119,7 @@ export default function MathQuestionLayout({
           {/* Left: Back arrow, Title with Directions */}
           <div className="flex items-center gap-3">
             <button
-              onClick={() => navigate('/')}
+              onClick={() => navigate('/practice')}
               className="p-2 rounded-md hover:bg-gray-100 transition-colors"
             >
               <ChevronLeft className="w-5 h-5 text-gray-700" />

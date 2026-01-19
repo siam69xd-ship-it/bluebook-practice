@@ -358,7 +358,7 @@ export default function Quiz() {
           <p className="text-muted-foreground mb-4">Please check your connection and try again.</p>
           <div className="flex gap-3 justify-center">
             <Button onClick={loadQuestions} data-testid="button-retry">Try Again</Button>
-            <Button variant="outline" onClick={() => navigate('/')} data-testid="button-return-home">Return Home</Button>
+            <Button variant="outline" onClick={() => navigate('/practice')} data-testid="button-return-home">Return to Practice</Button>
           </div>
         </div>
       </div>
@@ -417,7 +417,7 @@ export default function Quiz() {
             {/* Left: Back arrow, Title with Directions dropdown */}
             <div className="flex items-center gap-2">
               <button
-                onClick={() => navigate('/')}
+                onClick={() => navigate('/practice')}
                 className="p-2 rounded-md hover:bg-gray-100 transition-colors"
                 data-testid="button-back-home"
               >
