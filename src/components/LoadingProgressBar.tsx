@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { cn } from '@/lib/utils';
 import { subscribeToLoadingProgress } from '@/lib/questionUtils';
 
@@ -10,45 +10,81 @@ interface LoadingProgressBarProps {
 export function LoadingProgressBar({ isLoading, className }: LoadingProgressBarProps) {
   const [progress, setProgress] = useState(0);
   const [visible, setVisible] = useState(false);
+  const animatedProgress = useRef(0);
+  const animationFrame = useRef<number>();
 
   useEffect(() => {
     if (isLoading) {
       setVisible(true);
       setProgress(0);
+      animatedProgress.current = 0;
       
       // Subscribe to actual loading progress
       const unsubscribe = subscribeToLoadingProgress((loaded, total) => {
-        const percentage = Math.round((loaded / total) * 100);
-        setProgress(percentage);
+        const targetProgress = Math.round((loaded / total) * 100);
+        
+        // Smoothly animate to target progress
+        const animate = () => {
+          if (animatedProgress.current < targetProgress) {
+            // Move faster when there's more distance to cover
+            const distance = targetProgress - animatedProgress.current;
+            const step = Math.max(1, Math.ceil(distance * 0.15));
+            animatedProgress.current = Math.min(animatedProgress.current + step, targetProgress);
+            setProgress(animatedProgress.current);
+            animationFrame.current = requestAnimationFrame(animate);
+          }
+        };
+        
+        if (animationFrame.current) {
+          cancelAnimationFrame(animationFrame.current);
+        }
+        animate();
       });
       
-      return unsubscribe;
+      return () => {
+        unsubscribe();
+        if (animationFrame.current) {
+          cancelAnimationFrame(animationFrame.current);
+        }
+      };
     } else {
-      // Complete the progress bar
-      setProgress(100);
+      // Complete the progress bar smoothly
+      const completeAnimation = () => {
+        if (animatedProgress.current < 100) {
+          animatedProgress.current = Math.min(animatedProgress.current + 5, 100);
+          setProgress(animatedProgress.current);
+          animationFrame.current = requestAnimationFrame(completeAnimation);
+        } else {
+          // Hide after completion animation
+          setTimeout(() => {
+            setVisible(false);
+            setProgress(0);
+            animatedProgress.current = 0;
+          }, 200);
+        }
+      };
       
-      // Hide after animation completes
-      const hideTimer = setTimeout(() => {
-        setVisible(false);
-        setProgress(0);
-      }, 400);
+      completeAnimation();
       
-      return () => clearTimeout(hideTimer);
+      return () => {
+        if (animationFrame.current) {
+          cancelAnimationFrame(animationFrame.current);
+        }
+      };
     }
   }, [isLoading]);
 
   if (!visible) return null;
 
   return (
-    <div className={cn("fixed top-0 left-0 right-0 z-[100] h-1 bg-muted/50", className)}>
+    <div className={cn("fixed top-0 left-0 right-0 z-[100] h-1 bg-muted/30", className)}>
       <div 
         className={cn(
-          "h-full bg-primary transition-all duration-200 ease-out",
+          "h-full bg-primary transition-opacity duration-200",
           progress === 100 && "opacity-0"
         )}
         style={{ 
           width: `${progress}%`,
-          transition: progress === 100 ? 'width 150ms ease-out, opacity 300ms ease-out 100ms' : 'width 200ms ease-out'
         }}
       />
     </div>
