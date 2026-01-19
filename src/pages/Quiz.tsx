@@ -416,11 +416,11 @@ export default function Quiz() {
   }
 
   return (
-    <div className="min-h-screen bg-bluebook-bg flex animate-content-reveal">
+    <div className="min-h-screen bg-bluebook-bg flex">
       {/* Main Content */}
       <div className="flex-1 flex flex-col min-h-screen">
         {/* Top Bar - Bluebook Style */}
-        <header className="sticky top-0 z-30 bg-white border-b border-gray-200">
+        <header className="sticky top-0 z-30 bg-white border-b border-gray-200 animate-stagger-fade stagger-1">
           <div className="flex items-center justify-between px-4 h-14">
             {/* Left: Back arrow, Title with Directions dropdown */}
             <div className="flex items-center gap-2">

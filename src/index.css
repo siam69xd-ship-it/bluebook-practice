@@ -293,6 +293,18 @@
   animation: content-reveal 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
+/* Staggered animation delays for sections */
+.stagger-1 { animation-delay: 0ms; }
+.stagger-2 { animation-delay: 60ms; }
+.stagger-3 { animation-delay: 120ms; }
+.stagger-4 { animation-delay: 180ms; }
+.stagger-5 { animation-delay: 240ms; }
+
+.animate-stagger-fade {
+  animation: content-reveal 0.35s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  opacity: 0;
+}
+
 @keyframes shimmer {
   0% {
     transform: translateX(-100%) skewX(-20deg);

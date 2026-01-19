@@ -501,8 +501,8 @@ export default function Practice() {
   }
 
   return (
-    <div className="min-h-screen gradient-hero animate-content-reveal">
-      <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
+    <div className="min-h-screen gradient-hero">
+      <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border animate-stagger-fade stagger-1">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Button
@@ -526,7 +526,7 @@ export default function Practice() {
       </header>
 
       <main className="container mx-auto px-4 py-8 max-w-5xl">
-        <div className="text-center mb-10">
+        <div className="text-center mb-10 animate-stagger-fade stagger-2">
           <h1 className="text-3xl sm:text-4xl font-bold mb-3">
             <span className="gradient-text">Choose Your Practice</span>
           </h1>
@@ -535,7 +535,7 @@ export default function Practice() {
           </p>
         </div>
 
-        <div className="mb-10">
+        <div className="mb-10 animate-stagger-fade stagger-3">
           <div className="flex items-center gap-2 mb-4">
             <Filter className="w-5 h-5 text-primary" />
             <h2 className="font-semibold text-foreground">Filter by Difficulty</h2>
@@ -547,7 +547,7 @@ export default function Practice() {
           </div>
         </div>
 
-        <div className="mb-8">
+        <div className="mb-8 animate-stagger-fade stagger-4">
           <CategoryCard
             title="Practice All Questions"
             count={filteredQuestions.length}
@@ -557,7 +557,7 @@ export default function Practice() {
           />
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-4 animate-stagger-fade stagger-5">
           <div className="flex items-center gap-2 mb-2">
             <BookOpen className="w-5 h-5 text-primary" />
             <h2 className="font-semibold text-foreground">Topics</h2>

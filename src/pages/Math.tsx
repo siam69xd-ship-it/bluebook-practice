@@ -189,7 +189,7 @@ export default function Math() {
   }
 
   return (
-    <div className="h-screen w-screen overflow-hidden flex flex-col bg-white animate-content-reveal">
+    <div className="h-screen w-screen overflow-hidden flex flex-col bg-white">
       {/* Calculator */}
       <DraggableCalculator isOpen={showCalculator} onClose={() => setShowCalculator(false)} />
       
@@ -206,7 +206,7 @@ export default function Math() {
       />
 
       {/* Header */}
-      <header className="h-[60px] bg-[#1e2b3e] flex items-center justify-between px-4 flex-shrink-0">
+      <header className="h-[60px] bg-[#1e2b3e] flex items-center justify-between px-4 flex-shrink-0 animate-stagger-fade stagger-1">
         {/* Left */}
         <div className="flex items-center gap-4">
           <Button

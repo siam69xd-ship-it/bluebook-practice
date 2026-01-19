@@ -108,8 +108,8 @@ export default function Index() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-blue-50/30 animate-content-reveal">
-      <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-100">
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-blue-50/30">
+      <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-100 animate-stagger-fade stagger-1">
         <div className="container mx-auto px-4 py-4">
           <nav className="flex items-center justify-between">
             <motion.div 
@@ -184,7 +184,7 @@ export default function Index() {
       </header>
 
       <main>
-        <section className="container mx-auto px-4 pt-16 pb-20 lg:pt-24 lg:pb-28">
+        <section className="container mx-auto px-4 pt-16 pb-20 lg:pt-24 lg:pb-28 animate-stagger-fade stagger-2">
           <motion.div 
             variants={containerVariants}
             initial="hidden"
@@ -259,7 +259,7 @@ export default function Index() {
           </motion.div>
         </section>
 
-        <section className="container mx-auto px-4 pb-20">
+        <section className="container mx-auto px-4 pb-20 animate-stagger-fade stagger-3">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -328,7 +328,7 @@ export default function Index() {
         </section>
 
         {!isLoading && (
-          <section className="container mx-auto px-4 pb-20">
+          <section className="container mx-auto px-4 pb-20 animate-stagger-fade stagger-4">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -390,7 +390,7 @@ export default function Index() {
           </section>
         )}
 
-        <section className="container mx-auto px-4 pb-20">
+        <section className="container mx-auto px-4 pb-20 animate-stagger-fade stagger-5">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
