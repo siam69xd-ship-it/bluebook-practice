@@ -22,6 +22,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { LoadingProgressBar } from '@/components/LoadingProgressBar';
 import { HomeSkeleton } from '@/components/LoadingSkeleton';
+import { prefetchRoute } from '@/lib/routePrefetch';
 
 export default function Index() {
   const navigate = useNavigate();
@@ -43,6 +44,17 @@ export default function Index() {
   // Prefetch on hover over Practice button for even faster loading
   const handlePracticeHover = useCallback(() => {
     prefetchQuestions();
+    prefetchRoute('/practice');
+  }, []);
+
+  // Prefetch timed quiz on hover
+  const handleTimedQuizHover = useCallback(() => {
+    prefetchRoute('/timed-quiz');
+  }, []);
+
+  // Prefetch quiz on hover
+  const handleQuizHover = useCallback(() => {
+    prefetchRoute('/quiz');
   }, []);
 
   const topicCounts = getTopicCounts(allQuestions);
@@ -237,6 +249,8 @@ export default function Index() {
                 variant="outline"
                 size="lg"
                 onClick={() => navigate('/timed-quiz')}
+                onMouseEnter={handleTimedQuizHover}
+                onFocus={handleTimedQuizHover}
                 className="w-full sm:w-auto border-2 border-slate-200 hover:bg-slate-50 h-14 px-8 text-base font-semibold"
               >
                 <Timer className="w-5 h-5 mr-2" />
@@ -249,6 +263,8 @@ export default function Index() {
                 <Button
                   variant="ghost"
                   onClick={() => navigate('/quiz')}
+                  onMouseEnter={handleQuizHover}
+                  onFocus={handleQuizHover}
                   className="text-slate-600 hover:text-slate-900"
                 >
                   <CheckCircle2 className="w-4 h-4 mr-2 text-emerald-500" />
