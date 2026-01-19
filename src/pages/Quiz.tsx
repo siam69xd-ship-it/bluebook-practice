@@ -64,6 +64,7 @@ export default function Quiz() {
   const [showNavigator, setShowNavigator] = useState(false);
   const [showExplanation, setShowExplanation] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [showContent, setShowContent] = useState(false);
   const [loadError, setLoadError] = useState(false);
   const [showHighlightTool, setShowHighlightTool] = useState(false);
   const [isTimerHidden, setIsTimerHidden] = useState(false);
@@ -340,14 +341,17 @@ export default function Quiz() {
     });
   };
 
-  if (!isLoaded) {
+  const handleLoadingComplete = useCallback(() => {
+    setShowContent(true);
+  }, []);
+
+  if (!showContent) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-bluebook-bg">
-        <LoadingProgressBar isLoading={true} />
-        <div className="text-center">
-          <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-4" />
-          <p className="text-muted-foreground">Loading questions...</p>
-        </div>
+        <LoadingProgressBar 
+          isLoading={!isLoaded} 
+          onLoadingComplete={handleLoadingComplete}
+        />
       </div>
     );
   }
@@ -410,7 +414,7 @@ export default function Quiz() {
   }
 
   return (
-    <div className="min-h-screen bg-bluebook-bg flex">
+    <div className="min-h-screen bg-bluebook-bg flex animate-[content-reveal_0.35s_ease-out]">
       {/* Main Content */}
       <div className="flex-1 flex flex-col min-h-screen">
         {/* Top Bar - Bluebook Style */}

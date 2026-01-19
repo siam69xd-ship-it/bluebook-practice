@@ -120,6 +120,7 @@ export default function TimedQuiz() {
   const [selectedHighlightColor, setSelectedHighlightColor] = useState<string | null>(null);
   const [showNavigator, setShowNavigator] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [showContent, setShowContent] = useState(false);
   const [loadError, setLoadError] = useState(false);
   const [showHighlightTool, setShowHighlightTool] = useState(false);
   const [isEliminationMode, setIsEliminationMode] = useState(false);
@@ -395,14 +396,17 @@ export default function TimedQuiz() {
     return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
   };
   
-  if (!isLoaded) {
+  const handleLoadingComplete = useCallback(() => {
+    setShowContent(true);
+  }, []);
+
+  if (!showContent) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-bluebook-bg">
-        <LoadingProgressBar isLoading={true} />
-        <div className="text-center">
-          <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-4" />
-          <p className="text-muted-foreground">Loading questions...</p>
-        </div>
+        <LoadingProgressBar 
+          isLoading={!isLoaded} 
+          onLoadingComplete={handleLoadingComplete}
+        />
       </div>
     );
   }
@@ -424,7 +428,7 @@ export default function TimedQuiz() {
   
   if (quizPhase === 'setup') {
     return (
-      <div className="min-h-screen bg-bluebook-bg">
+      <div className="min-h-screen bg-bluebook-bg animate-[content-reveal_0.35s_ease-out]">
         <header className="sticky top-0 z-30 bg-white border-b border-gray-200">
           <div className="flex items-center justify-between px-4 h-14">
             <div className="flex items-center gap-2">
