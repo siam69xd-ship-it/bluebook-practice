@@ -78,31 +78,32 @@ function LatexRendererComponent({ content, className = '', displayMode = false }
       return renderKatex(trimmed, false);
     });
 
+    // STEP 1: Protect currency amounts BEFORE any LaTeX parsing
+    // This prevents $150 from being treated as start of LaTeX when $25 appears later
+    const currencyPlaceholders: { placeholder: string; original: string }[] = [];
+    processedContent = processedContent.replace(/\$(\d{1,3}(?:,\d{3})*(?:\.\d{2})?|\d+(?:\.\d{2})?)/g, (match, amount) => {
+      const placeholder = `__CURRENCY_${currencyPlaceholders.length}__`;
+      currencyPlaceholders.push({ placeholder, original: `$${amount}` });
+      return placeholder;
+    });
+
     // Handle inline LaTeX ($...$) - single dollar signs
-    // Note: Some datasets use $...$ for both math and currency. We use a simple
-    // context heuristic: if it's just a plain number AND nearby text suggests money,
-    // preserve the $ as currency; otherwise, render as math.
-    processedContent = processedContent.replace(/\$((?:\\\$|[^$\n])+?)\$/g, (match, latex, offset, full) => {
+    // Now that currency is protected, we can safely parse $...$ as LaTeX
+    processedContent = processedContent.replace(/\$((?:\\\$|[^$\n])+?)\$/g, (match, latex) => {
       const trimmed = String(latex).trim();
       if (!trimmed) return match;
-
-      const isPlainNumber = /^-?[\d,]+(\.\d+)?$/.test(trimmed);
-      if (isPlainNumber) {
-        const start = Math.max(0, offset - 40);
-        const end = Math.min(full.length, offset + match.length + 40);
-        const around = full.slice(start, end).toLowerCase();
-
-        const moneyContext = /\b(cost|costs|costing|price|priced|pay|paid|fee|fees|charge|charged|charges|dollar|dollars|usd|worth|spend|spent|buy|bought|sell|sold|rent|salary|wage)\b/.test(around);
-
-        if (moneyContext) {
-          // Keep as currency
-          return `$${trimmed}`;
-        }
-      }
+      
+      // Skip if it looks like a placeholder we created
+      if (trimmed.startsWith('_CURRENCY_')) return match;
 
       // Render as LaTeX math
       return renderKatex(trimmed, false);
     });
+
+    // STEP 2: Restore currency amounts
+    for (const { placeholder, original } of currencyPlaceholders) {
+      processedContent = processedContent.replace(placeholder, original);
+    }
     
     // Handle standalone \frac{num}{den} not wrapped in $
     processedContent = processedContent.replace(/(?<![\\$])\\frac\{([^}]*)\}\{([^}]*)\}/g, (match, num, den) => {
