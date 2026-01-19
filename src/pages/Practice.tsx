@@ -501,7 +501,7 @@ export default function Practice() {
   }
 
   return (
-    <div className="min-h-screen gradient-hero animate-[content-reveal_0.35s_ease-out]">
+    <div className="min-h-screen gradient-hero animate-content-reveal">
       <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">

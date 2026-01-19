@@ -279,12 +279,18 @@
 }
 
 @keyframes content-reveal {
-  from {
+  0% {
     opacity: 0;
+    transform: translateY(8px);
   }
-  to {
+  100% {
     opacity: 1;
+    transform: translateY(0);
   }
+}
+
+.animate-content-reveal {
+  animation: content-reveal 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 @keyframes shimmer {

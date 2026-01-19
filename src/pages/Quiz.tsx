@@ -416,7 +416,7 @@ export default function Quiz() {
   }
 
   return (
-    <div className="min-h-screen bg-bluebook-bg flex animate-[content-reveal_0.35s_ease-out]">
+    <div className="min-h-screen bg-bluebook-bg flex animate-content-reveal">
       {/* Main Content */}
       <div className="flex-1 flex flex-col min-h-screen">
         {/* Top Bar - Bluebook Style */}
