@@ -82,48 +82,75 @@ function LatexRendererComponent({ content, className = '', displayMode = false }
       return renderKatex(trimmed, false);
     });
 
-    // STEP 1: Protect currency amounts BEFORE $...$ LaTeX parsing
-    // This prevents $150 from being treated as start of LaTeX when $25 appears later
-    // Match: $150, $25, $1,000, $99.99 etc.
-    // IMPORTANT: Currency must NOT be followed by letters (e.g., $17h is NOT currency, it's LaTeX)
-    const currencyPlaceholders: { placeholder: string; original: string }[] = [];
-    processedContent = processedContent.replace(/\$(\d{1,3}(?:,\d{3})*(?:\.\d+)?|\d+(?:\.\d+)?)(?![a-zA-Z])/g, (match, amount) => {
-      const placeholder = `__CURRENCY_${currencyPlaceholders.length}__`;
-      currencyPlaceholders.push({ placeholder, original: `$${amount}` });
-      return placeholder;
-    });
-
-    // Handle inline LaTeX ($...$) - single dollar signs
-    // Now that currency is protected, we can safely parse $...$ as LaTeX
-    // IMPORTANT: Use a more careful approach to avoid matching across sentence boundaries
-    // Match $...$ where content doesn't contain long runs of regular text (which indicates mismatched delimiters)
-    processedContent = processedContent.replace(/\$((?:\\\$|[^$])+?)\$/g, (match, latex) => {
-      const trimmed = String(latex).trim();
-      if (!trimmed) return match;
+    // STEP 1: Custom parser for $...$ LaTeX to handle complex cases
+    // This manually finds balanced $...$ pairs without crossing sentence boundaries
+    // and properly handles currency like $150 vs LaTeX like $x+y$
+    const parseInlineLaTeX = (text: string): string => {
+      let result = '';
+      let i = 0;
       
-      // Skip if it looks like a placeholder we created
-      if (trimmed.startsWith('_CURRENCY_')) return match;
-      
-      // Skip if content looks like regular text (contains long word sequences without math symbols)
-      // This prevents matching across sentence boundaries like "$1\le t\le36.$ Which statement..." to later "$"
-      // Real LaTeX typically contains: \, ^, _, {, }, digits, short variable names
-      // If we see sentence-like patterns, it's likely mismatched delimiters
-      const hasLongTextRun = /[A-Za-z]{10,}/.test(trimmed);  // 10+ consecutive letters suggests prose
-      const hasSentencePatterns = /\.\s+[A-Z]/.test(trimmed);  // Period + space + capital = sentence boundary
-      const hasQuestionMark = /\?/.test(trimmed);  // Questions are text, not math
-      
-      if (hasLongTextRun || hasSentencePatterns || hasQuestionMark) {
-        return match;  // Don't render as LaTeX, leave as-is
+      while (i < text.length) {
+        if (text[i] === '$') {
+          // Check if this is currency: $ followed by digits only (not followed by letters)
+          const currencyMatch = text.slice(i).match(/^\$(\d{1,3}(?:,\d{3})*(?:\.\d+)?|\d+(?:\.\d+)?)(?![a-zA-Z\\])/);
+          if (currencyMatch) {
+            result += currencyMatch[0];
+            i += currencyMatch[0].length;
+            continue;
+          }
+          
+          // Look for closing $ - but don't cross sentence boundaries
+          let j = i + 1;
+          let foundClose = false;
+          let latexContent = '';
+          
+          while (j < text.length) {
+            // Check for sentence boundary (period + space + capital or newline)
+            if (text[j] === '.' && j + 2 < text.length) {
+              const afterPeriod = text.slice(j + 1, j + 3);
+              if (/^\s[A-Z]/.test(afterPeriod)) {
+                // Sentence boundary - this $ is likely standalone, not LaTeX delimiter
+                break;
+              }
+            }
+            
+            // Check for closing $
+            if (text[j] === '$') {
+              latexContent = text.slice(i + 1, j);
+              
+              // Validate this looks like LaTeX, not mismatched delimiters
+              const hasLongText = /[A-Za-z]{12,}/.test(latexContent);
+              const hasQuestion = /\?/.test(latexContent);
+              const hasSentence = /\.\s+[A-Z]/.test(latexContent);
+              
+              if (!hasLongText && !hasQuestion && !hasSentence && latexContent.trim()) {
+                // Valid LaTeX block
+                result += renderKatex(latexContent, false);
+                i = j + 1;
+                foundClose = true;
+              }
+              break;
+            }
+            j++;
+          }
+          
+          if (!foundClose) {
+            // No valid closing $ found - output the $ as-is
+            result += '$';
+            i++;
+          }
+        } else {
+          result += text[i];
+          i++;
+        }
       }
+      
+      return result;
+    };
+    
+    processedContent = parseInlineLaTeX(processedContent);
 
-      // Render as LaTeX math
-      return renderKatex(trimmed, false);
-    });
-
-    // STEP 2: Restore currency amounts
-    for (const { placeholder, original } of currencyPlaceholders) {
-      processedContent = processedContent.replace(placeholder, original);
-    }
+    // Currency is now handled inline in parseInlineLaTeX
     
     // Restore escaped dollar signs as regular dollar signs (currency)
     processedContent = processedContent.replace(/__ESCAPED_DOLLAR__/g, '$');
