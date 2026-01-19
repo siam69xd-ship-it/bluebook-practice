@@ -16,7 +16,10 @@ import {
   AlertCircle,
   ArrowLeft,
   Undo2,
+  Calculator,
+  BookOpen,
 } from 'lucide-react';
+import MathQuestionLayout from '@/components/math/MathQuestionLayout';
 import { Button } from '@/components/ui/button';
 import { HighlightTool } from '@/components/HighlightTool';
 import { HighlightableText } from '@/components/HighlightableText';
@@ -119,6 +122,7 @@ export default function TimedQuiz() {
   const [loadError, setLoadError] = useState(false);
   const [showHighlightTool, setShowHighlightTool] = useState(false);
   const [isEliminationMode, setIsEliminationMode] = useState(false);
+  const [isTimerHidden, setIsTimerHidden] = useState(false);
   
   const [quizPhase, setQuizPhase] = useState<QuizPhase>('setup');
   const [timeRemaining, setTimeRemaining] = useState(0);
@@ -177,8 +181,48 @@ export default function TimedQuiz() {
     return calculateQuizTime(availableQuestions, questionCount);
   }, [availableQuestions, questionCount]);
   
-  const toggleTopic = (topic: string) => {
+  // Determine selected section type based on current selected topics
+  const selectedSectionType = useMemo(() => {
+    if (selectedTopics.size === 0) return null;
+    
+    // Check if any selected topic belongs to Math or English
+    const mathSubSections = ['Algebra', 'Advanced Math', 'Problem Solving', 'Geometry and Trigonometry'];
+    
+    for (const topic of selectedTopics) {
+      for (const [subSection, topics] of Object.entries(topicGroups)) {
+        if (topic in topics) {
+          return mathSubSections.includes(subSection) ? 'Math' : 'English';
+        }
+      }
+    }
+    return null;
+  }, [selectedTopics, topicGroups]);
+
+  // Check if a subSection belongs to Math
+  const isMathSubSection = (subSection: string) => {
+    return ['Algebra', 'Advanced Math', 'Problem Solving', 'Geometry and Trigonometry'].includes(subSection);
+  };
+
+  // Check if a subSection is disabled based on current selection
+  const isSubSectionDisabled = (subSection: string) => {
+    if (selectedSectionType === null) return false;
+    const isMath = isMathSubSection(subSection);
+    return selectedSectionType === 'Math' ? !isMath : isMath;
+  };
+
+  const toggleTopic = (topic: string, subSection: string) => {
+    const clickedIsMath = isMathSubSection(subSection);
+    
     setSelectedTopics(prev => {
+      // If clicking would switch section type, clear previous selections first
+      if (selectedSectionType !== null) {
+        const currentIsMath = selectedSectionType === 'Math';
+        if (clickedIsMath !== currentIsMath) {
+          // Switching sections - start fresh with just this topic
+          return new Set([topic]);
+        }
+      }
+      
       const newSet = new Set(prev);
       if (newSet.has(topic)) {
         newSet.delete(topic);
@@ -191,7 +235,17 @@ export default function TimedQuiz() {
   
   const selectAllInSubSection = (subSection: string) => {
     const topics = Object.keys(topicGroups[subSection] || {});
+    const clickedIsMath = isMathSubSection(subSection);
+    
     setSelectedTopics(prev => {
+      // If clicking would switch section type, clear previous and select all in this section
+      if (selectedSectionType !== null) {
+        const currentIsMath = selectedSectionType === 'Math';
+        if (clickedIsMath !== currentIsMath) {
+          return new Set(topics);
+        }
+      }
+      
       const newSet = new Set(prev);
       const allSelected = topics.every(t => newSet.has(t));
       if (allSelected) {
@@ -391,35 +445,56 @@ export default function TimedQuiz() {
             </p>
             
             <div className="space-y-4">
-              {Object.entries(topicGroups).map(([subSection, topics]) => (
-                <div key={subSection} className="border rounded-xl p-4">
-                  <div className="flex items-center justify-between mb-3">
-                    <h3 className="font-medium text-gray-900">{subSection}</h3>
-                    <button
-                      onClick={() => selectAllInSubSection(subSection)}
-                      className="text-sm text-primary hover:underline"
-                    >
-                      {Object.keys(topics).every(t => selectedTopics.has(t)) ? 'Deselect All' : 'Select All'}
-                    </button>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    {Object.entries(topics).map(([topic, count]) => (
+              {Object.entries(topicGroups).map(([subSection, topics]) => {
+                const disabled = isSubSectionDisabled(subSection);
+                const isMath = isMathSubSection(subSection);
+                
+                return (
+                  <div 
+                    key={subSection} 
+                    className={cn(
+                      "border rounded-xl p-4 transition-opacity",
+                      disabled && "opacity-40 pointer-events-none"
+                    )}
+                  >
+                    <div className="flex items-center justify-between mb-3">
+                      <div className="flex items-center gap-2">
+                        <h3 className="font-medium text-foreground">{subSection}</h3>
+                        <span className={cn(
+                          "px-2 py-0.5 text-xs rounded-full font-medium",
+                          isMath ? "bg-blue-100 text-blue-700" : "bg-purple-100 text-purple-700"
+                        )}>
+                          {isMath ? 'Math' : 'English'}
+                        </span>
+                      </div>
                       <button
-                        key={topic}
-                        onClick={() => toggleTopic(topic)}
-                        className={cn(
-                          "px-3 py-1.5 rounded-full text-sm transition-colors",
-                          selectedTopics.has(topic)
-                            ? "bg-primary text-white"
-                            : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-                        )}
+                        onClick={() => selectAllInSubSection(subSection)}
+                        className="text-sm text-primary hover:underline"
+                        disabled={disabled}
                       >
-                        {topic} ({count})
+                        {Object.keys(topics).every(t => selectedTopics.has(t)) ? 'Deselect All' : 'Select All'}
                       </button>
-                    ))}
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {Object.entries(topics).map(([topic, count]) => (
+                        <button
+                          key={topic}
+                          onClick={() => toggleTopic(topic, subSection)}
+                          disabled={disabled}
+                          className={cn(
+                            "px-3 py-1.5 rounded-full text-sm transition-colors",
+                            selectedTopics.has(topic)
+                              ? "bg-primary text-primary-foreground"
+                              : "bg-muted text-muted-foreground hover:bg-muted/80"
+                          )}
+                        >
+                          {topic} ({count})
+                        </button>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
           
@@ -733,6 +808,28 @@ export default function TimedQuiz() {
     );
   }
 
+  // Check if current quiz is Math-based
+  const isMathQuiz = currentQuestion.section === 'Math';
+
+  // For Math quiz, use MathQuestionLayout
+  if (isMathQuiz) {
+    return (
+      <MathQuestionLayout
+        questions={quizQuestions}
+        currentIndex={currentIndex}
+        questionStates={questionStates}
+        onNavigate={handleNavigate}
+        onUpdateState={updateQuestionState}
+        onCheckAnswer={() => {}} // No check in timed quiz - just selection
+        showNavigator={showNavigator}
+        setShowNavigator={setShowNavigator}
+        isTimerHidden={isTimerHidden}
+        setIsTimerHidden={setIsTimerHidden}
+      />
+    );
+  }
+
+  // English quiz - use original split-pane layout
   return (
     <div className="min-h-screen bg-bluebook-bg flex flex-col">
       <QuestionNavigator
@@ -745,30 +842,30 @@ export default function TimedQuiz() {
         onClose={() => setShowNavigator(false)}
       />
       
-      <header className="sticky top-0 z-30 bg-white border-b border-gray-200">
+      <header className="sticky top-0 z-30 bg-card border-b border-border">
         <div className="flex items-center justify-between px-4 h-14">
           <div className="flex items-center gap-2">
             <button
               onClick={() => navigate('/')}
-              className="p-2 rounded-md hover:bg-gray-100 transition-colors"
+              className="p-2 rounded-md hover:bg-muted transition-colors"
             >
-              <ChevronLeft className="w-5 h-5 text-gray-600" />
+              <ChevronLeft className="w-5 h-5 text-muted-foreground" />
             </button>
             <button
               onClick={() => navigate('/')}
-              className="p-2 rounded-md hover:bg-gray-100 transition-colors"
+              className="p-2 rounded-md hover:bg-muted transition-colors"
             >
-              <Home className="w-5 h-5 text-gray-600" />
+              <Home className="w-5 h-5 text-muted-foreground" />
             </button>
-            <span className="text-base font-medium text-gray-900 ml-2">Timed Quiz</span>
+            <span className="text-base font-medium text-foreground ml-2">Timed Quiz</span>
           </div>
 
           <div className="flex items-center gap-2">
             <div className={cn(
               "text-2xl font-mono font-bold px-4 py-1 rounded-lg",
-              timeRemaining <= 60 && "text-red-600 bg-red-50",
+              timeRemaining <= 60 && "text-destructive bg-destructive/10",
               timeRemaining > 60 && timeRemaining <= 300 && "text-amber-600 bg-amber-50",
-              timeRemaining > 300 && "text-gray-900"
+              timeRemaining > 300 && "text-foreground"
             )}>
               {formatTime(timeRemaining)}
             </div>
@@ -779,28 +876,28 @@ export default function TimedQuiz() {
               onClick={() => setShowHighlightTool(!showHighlightTool)}
               className={cn(
                 "flex flex-col items-center gap-0.5 px-3 py-1 rounded-md transition-colors",
-                showHighlightTool ? "bg-gray-100" : "hover:bg-gray-100"
+                showHighlightTool ? "bg-muted" : "hover:bg-muted"
               )}
             >
-              <Pencil className="w-4 h-4 text-gray-600" />
-              <span className="text-xs text-gray-600">Highlight</span>
+              <Pencil className="w-4 h-4 text-muted-foreground" />
+              <span className="text-xs text-muted-foreground">Highlight</span>
             </button>
             <button
               onClick={toggleFullscreen}
-              className="flex flex-col items-center gap-0.5 px-3 py-1 rounded-md hover:bg-gray-100 transition-colors"
+              className="flex flex-col items-center gap-0.5 px-3 py-1 rounded-md hover:bg-muted transition-colors"
             >
               {isFullscreen ? (
-                <Minimize className="w-4 h-4 text-gray-600" />
+                <Minimize className="w-4 h-4 text-muted-foreground" />
               ) : (
-                <Maximize className="w-4 h-4 text-gray-600" />
+                <Maximize className="w-4 h-4 text-muted-foreground" />
               )}
-              <span className="text-xs text-gray-600">Fullscreen</span>
+              <span className="text-xs text-muted-foreground">Fullscreen</span>
             </button>
           </div>
         </div>
 
         {showHighlightTool && (
-          <div className="px-4 py-2 border-t border-gray-200 bg-gray-50">
+          <div className="px-4 py-2 border-t border-border bg-muted/50">
             <HighlightTool
               selectedColor={selectedHighlightColor}
               onColorSelect={setSelectedHighlightColor}
@@ -810,7 +907,7 @@ export default function TimedQuiz() {
       </header>
 
       <main className="flex-1 flex flex-col lg:flex-row">
-        <div className="flex-1 p-6 overflow-y-auto border-r border-gray-200 bg-white">
+        <div className="flex-1 p-6 overflow-y-auto border-r border-border bg-card">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentQuestion.id}
@@ -825,7 +922,7 @@ export default function TimedQuiz() {
                 selectedColor={selectedHighlightColor}
                 onAddHighlight={handleAddHighlight}
                 onRemoveHighlight={handleRemoveHighlight}
-                className="quiz-passage text-gray-800 whitespace-pre-wrap leading-relaxed text-base"
+                className="quiz-passage text-foreground whitespace-pre-wrap leading-relaxed text-base"
               />
             </motion.div>
           </AnimatePresence>
@@ -842,7 +939,7 @@ export default function TimedQuiz() {
             >
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-3">
-                  <span className="flex items-center justify-center w-8 h-8 bg-gray-900 text-white text-sm font-bold rounded">
+                  <span className="flex items-center justify-center w-8 h-8 bg-foreground text-background text-sm font-bold rounded">
                     {currentIndex + 1}
                   </span>
                   <button
@@ -851,7 +948,7 @@ export default function TimedQuiz() {
                       "flex items-center gap-2 px-3 py-1.5 rounded-md text-sm transition-colors",
                       currentState?.markedForReview
                         ? "bg-amber-50 text-amber-700 border border-amber-200"
-                        : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                        : "bg-muted text-muted-foreground hover:bg-muted/80"
                     )}
                   >
                     <Bookmark className={cn(
@@ -862,7 +959,7 @@ export default function TimedQuiz() {
                   </button>
                 </div>
                 <div className="flex items-center gap-3">
-                  <button className="flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700">
+                  <button className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
                     <Flag className="w-4 h-4" />
                     Report
                   </button>
@@ -872,8 +969,8 @@ export default function TimedQuiz() {
                     className={cn(
                       "flex items-center justify-center w-8 h-8 rounded transition-colors",
                       isEliminationMode 
-                        ? "bg-gray-900 text-white" 
-                        : "text-gray-500 hover:bg-gray-100"
+                        ? "bg-foreground text-background" 
+                        : "text-muted-foreground hover:bg-muted"
                     )}
                     title={isEliminationMode ? "Exit elimination mode" : "Enter elimination mode"}
                   >
@@ -887,7 +984,7 @@ export default function TimedQuiz() {
                   {hasEliminations && (
                     <button
                       onClick={handleUndoEliminations}
-                      className="flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700"
+                      className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
                       title="Undo all eliminations"
                     >
                       <Undo2 className="w-4 h-4" />
@@ -897,19 +994,10 @@ export default function TimedQuiz() {
                 </div>
               </div>
 
-
-              {/* Use LatexRenderer for math questions, PassageRenderer for others */}
-              {currentQuestion.subSection === 'Math' ? (
-                <LatexRenderer 
-                  content={currentQuestion.questionPrompt || 'Solve the following problem.'}
-                  className="text-gray-800 mb-6 text-base leading-relaxed"
-                />
-              ) : (
-                <PassageRenderer 
-                  content={currentQuestion.questionPrompt || 'Based on the text, select the best answer to the question.'}
-                  className="text-gray-800 mb-6 text-base leading-relaxed"
-                />
-              )}
+              <PassageRenderer 
+                content={currentQuestion.questionPrompt || 'Based on the text, select the best answer to the question.'}
+                className="text-foreground mb-6 text-base leading-relaxed"
+              />
 
               <div className="space-y-3">
                 {Object.entries(currentQuestion.options).map(([letter, text]) => (
@@ -935,12 +1023,12 @@ export default function TimedQuiz() {
         </div>
       </main>
 
-      <footer className="sticky bottom-0 bg-white border-t border-gray-200">
+      <footer className="sticky bottom-0 bg-card border-t border-border">
         <div className="flex items-center justify-between px-4 py-3">
           <div className="flex items-center gap-3">
             <button 
               onClick={() => setShowNavigator(true)}
-              className="flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
+              className="flex items-center gap-2 px-4 py-2 bg-foreground text-background rounded-full text-sm font-medium hover:opacity-90 transition-colors"
             >
               {currentIndex + 1} of {quizQuestions.length}
               <ChevronLeft className="w-4 h-4 rotate-[-90deg]" />
