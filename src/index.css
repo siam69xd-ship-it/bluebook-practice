@@ -281,7 +281,7 @@
 @keyframes content-reveal {
   0% {
     opacity: 0;
-    transform: translateY(8px);
+    transform: translateY(6px);
   }
   100% {
     opacity: 1;
@@ -292,27 +292,29 @@
 @keyframes stagger-reveal {
   0% {
     opacity: 0;
-    transform: translateY(6px) scale(0.98);
+    transform: translateY(4px) scale(0.95);
+    filter: blur(4px);
   }
   100% {
     opacity: 1;
     transform: translateY(0) scale(1);
+    filter: blur(0);
   }
 }
 
 .animate-content-reveal {
-  animation: content-reveal 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: content-reveal 0.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-/* Staggered animation delays for sections - 40ms intervals for snappy feel */
+/* Staggered animation delays - ultra fast 25ms intervals */
 .stagger-1 { animation-delay: 0ms; }
-.stagger-2 { animation-delay: 40ms; }
-.stagger-3 { animation-delay: 80ms; }
-.stagger-4 { animation-delay: 120ms; }
-.stagger-5 { animation-delay: 160ms; }
+.stagger-2 { animation-delay: 25ms; }
+.stagger-3 { animation-delay: 50ms; }
+.stagger-4 { animation-delay: 75ms; }
+.stagger-5 { animation-delay: 100ms; }
 
 .animate-stagger-fade {
-  animation: stagger-reveal 0.3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: stagger-reveal 0.18s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   opacity: 0;
 }
 
