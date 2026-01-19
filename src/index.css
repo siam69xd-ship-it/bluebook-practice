@@ -289,19 +289,30 @@
   }
 }
 
+@keyframes stagger-reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(6px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 .animate-content-reveal {
   animation: content-reveal 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-/* Staggered animation delays for sections */
+/* Staggered animation delays for sections - 40ms intervals for snappy feel */
 .stagger-1 { animation-delay: 0ms; }
-.stagger-2 { animation-delay: 60ms; }
-.stagger-3 { animation-delay: 120ms; }
-.stagger-4 { animation-delay: 180ms; }
-.stagger-5 { animation-delay: 240ms; }
+.stagger-2 { animation-delay: 40ms; }
+.stagger-3 { animation-delay: 80ms; }
+.stagger-4 { animation-delay: 120ms; }
+.stagger-5 { animation-delay: 160ms; }
 
 .animate-stagger-fade {
-  animation: content-reveal 0.35s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: stagger-reveal 0.3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   opacity: 0;
 }
 
