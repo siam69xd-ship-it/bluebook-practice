@@ -26,6 +26,8 @@ import MathQuestionOption from '@/components/math/MathQuestionOption';
 import LatexRenderer from '@/components/math/LatexRenderer';
 import GridInInput from '@/components/math/GridInInput';
 import { loadAllMathQuestions, filterMathQuestions, parseOptionLabel, MathQuestion } from '@/lib/mathQuestionUtils';
+import { LoadingProgressBar } from '@/components/LoadingProgressBar';
+import { MathSkeleton } from '@/components/LoadingSkeleton';
 
 export default function Math() {
   const navigate = useNavigate();
@@ -37,6 +39,7 @@ export default function Math() {
   const [showResult, setShowResult] = useState(false);
   const [timer, setTimer] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
+  const [showContent, setShowContent] = useState(false);
   
   // UI States
   const [showCalculator, setShowCalculator] = useState(false);
@@ -165,11 +168,12 @@ export default function Math() {
     setFlaggedQuestions(newFlagged);
   };
 
-  if (isLoading) {
+  if (!showContent) {
     return (
-      <div className="h-screen w-screen flex items-center justify-center bg-[#1e2b3e]">
-        <div className="text-white text-xl">Loading Math Questions...</div>
-      </div>
+      <>
+        <LoadingProgressBar isLoading={isLoading} onLoadingComplete={() => setShowContent(true)} />
+        <MathSkeleton />
+      </>
     );
   }
 
