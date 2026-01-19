@@ -85,8 +85,9 @@ function LatexRendererComponent({ content, className = '', displayMode = false }
     // STEP 1: Protect currency amounts BEFORE $...$ LaTeX parsing
     // This prevents $150 from being treated as start of LaTeX when $25 appears later
     // Match: $150, $25, $1,000, $99.99 etc.
+    // IMPORTANT: Currency must NOT be followed by letters (e.g., $17h is NOT currency, it's LaTeX)
     const currencyPlaceholders: { placeholder: string; original: string }[] = [];
-    processedContent = processedContent.replace(/\$(\d{1,3}(?:,\d{3})*(?:\.\d+)?|\d+(?:\.\d+)?)/g, (match, amount) => {
+    processedContent = processedContent.replace(/\$(\d{1,3}(?:,\d{3})*(?:\.\d+)?|\d+(?:\.\d+)?)(?![a-zA-Z])/g, (match, amount) => {
       const placeholder = `__CURRENCY_${currencyPlaceholders.length}__`;
       currencyPlaceholders.push({ placeholder, original: `$${amount}` });
       return placeholder;
