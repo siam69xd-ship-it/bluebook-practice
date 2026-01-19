@@ -14,6 +14,7 @@ import {
   Loader2
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { LoadingProgressBar } from '@/components/LoadingProgressBar';
 import { cn } from '@/lib/utils';
 import { Question, FilterOption, getAllQuestionsAsync } from '@/lib/questionUtils';
 import { Difficulty } from '@/lib/difficultyData';
@@ -482,12 +483,7 @@ export default function Practice() {
 
   return (
     <div className="min-h-screen gradient-hero">
-      {/* Loading progress bar */}
-      {isLoading && (
-        <div className="fixed top-0 left-0 right-0 z-[100] h-1 bg-muted overflow-hidden">
-          <div className="h-full bg-primary animate-[loading-progress_1.5s_ease-in-out_infinite] w-1/3" />
-        </div>
-      )}
+      <LoadingProgressBar isLoading={isLoading} />
       
       <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
         <div className="container mx-auto px-4 py-4">

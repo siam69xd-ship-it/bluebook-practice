@@ -17,6 +17,7 @@ import {
   ChevronDown,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { LoadingProgressBar } from '@/components/LoadingProgressBar';
 import { Timer } from '@/components/Timer';
 import { HighlightTool } from '@/components/HighlightTool';
 import { HighlightableText } from '@/components/HighlightableText';
@@ -342,6 +343,7 @@ export default function Quiz() {
   if (!isLoaded) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-bluebook-bg">
+        <LoadingProgressBar isLoading={true} />
         <div className="text-center">
           <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-4" />
           <p className="text-muted-foreground">Loading questions...</p>
