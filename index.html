@@ -22,9 +22,77 @@
     <meta name="twitter:title" content="NextPrep - SAT Practice Platform" />
     <meta name="twitter:description" content="Practice real SAT questions with Bluebook-style interface" />
     <meta name="twitter:image" content="https://nextprep.app/og-image.png" />
+
+    <style>
+      /* Inline critical CSS for preloader */
+      #app-preloader {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(180deg, #f8fafc 0%, #ffffff 50%, #eff6ff 100%);
+        z-index: 9999;
+        transition: opacity 0.15s ease-out;
+      }
+      #app-preloader.fade-out {
+        opacity: 0;
+        pointer-events: none;
+      }
+      .preloader-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        animation: preloader-fade-in 0.2s ease-out;
+      }
+      .preloader-logo {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+      }
+      .preloader-logo svg {
+        width: 28px;
+        height: 28px;
+        color: white;
+      }
+      .preloader-spinner {
+        width: 24px;
+        height: 24px;
+        border: 2px solid #e2e8f0;
+        border-top-color: #2563eb;
+        border-radius: 50%;
+        animation: preloader-spin 0.6s linear infinite;
+      }
+      @keyframes preloader-spin {
+        to { transform: rotate(360deg); }
+      }
+      @keyframes preloader-fade-in {
+        from { opacity: 0; transform: scale(0.95); }
+        to { opacity: 1; transform: scale(1); }
+      }
+    </style>
   </head>
 
   <body>
+    <!-- Preloader shown immediately while JS loads -->
+    <div id="app-preloader">
+      <div class="preloader-content">
+        <div class="preloader-logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/>
+            <path d="M22 10v6"/>
+            <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/>
+          </svg>
+        </div>
+        <div class="preloader-spinner"></div>
+      </div>
+    </div>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
