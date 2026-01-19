@@ -17,6 +17,14 @@ function LatexRendererComponent({ content, className = '', displayMode = false }
 
     let processedContent = content;
     
+    // CRITICAL: Normalize double-escaped backslashes from JSON (\\frac → \frac, \\circ → \circ)
+    // JSON files often have escaped backslashes that need to be converted for KaTeX
+    // But preserve \\$ as escaped dollar, and \\\\ as literal backslash
+    processedContent = processedContent.replace(/\\\\([a-zA-Z]+)/g, '\\$1'); // \\frac → \frac, \\circ → \circ
+    processedContent = processedContent.replace(/\\\\\^/g, '^'); // \\^ → ^ (for exponents like 23^\\circ)
+    processedContent = processedContent.replace(/\\\\\{/g, '{'); // \\{ → {
+    processedContent = processedContent.replace(/\\\\\}/g, '}'); // \\} → }
+    
     // STEP 0: Convert escaped dollar signs from JSON (\\$) to temporary placeholder
     // This handles cases like "\\$60" in JSON which should display as "$60" (currency)
     processedContent = processedContent.replace(/\\\$/g, '__ESCAPED_DOLLAR__');
