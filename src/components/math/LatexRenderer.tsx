@@ -145,14 +145,24 @@ function LatexRendererComponent({ content, className = '', displayMode = false }
       const looksLikeProse = (s: string): boolean => {
         const trimmed = s.trim();
         if (!trimmed) return true;
+        
+        // Question marks are definitely prose
         if (/\?/.test(trimmed)) return true;
-
-        // If there's no LaTeX command (\...), but we see real words separated by spaces,
-        // it's almost certainly mismatched delimiters (e.g., "$408 for the first hour and $204...").
-        if (!trimmed.includes('\\') && /[A-Za-z]{3,}\s+[A-Za-z]{3,}/.test(trimmed)) return true;
-
-        // Very long spans of plain letters usually indicate prose, not math.
-        if (!trimmed.includes('\\') && trimmed.length > 80 && /[A-Za-z]/.test(trimmed)) return true;
+        
+        // Contains LaTeX commands - likely math even if there's some text
+        if (trimmed.includes('\\')) return false;
+        
+        // Multiple words separated by spaces (e.g., "408 for the first hour") = prose
+        if (/[A-Za-z]{3,}\s+[A-Za-z]{3,}/.test(trimmed)) return true;
+        
+        // Common prose patterns: comma + space + word
+        if (/,\s+[A-Za-z]{2,}/.test(trimmed)) return true;
+        
+        // Articles and common words that indicate prose
+        if (/\b(the|and|for|each|that|this|which|with|from|into|than)\b/i.test(trimmed)) return true;
+        
+        // Very long content without LaTeX commands is probably prose
+        if (trimmed.length > 60) return true;
 
         return false;
       };
