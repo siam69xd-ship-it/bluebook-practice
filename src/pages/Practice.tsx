@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { LoadingProgressBar } from '@/components/LoadingProgressBar';
+import { PracticeSkeleton } from '@/components/LoadingSkeleton';
 import { cn } from '@/lib/utils';
 import { Question, FilterOption, getAllQuestionsAsync } from '@/lib/questionUtils';
 import { Difficulty } from '@/lib/difficultyData';
@@ -486,15 +487,16 @@ export default function Practice() {
     setShowContent(true);
   };
 
-  // Show progress bar until loading complete AND animation triggers content
+  // Show progress bar with skeleton until loading complete
   if (!showContent) {
     return (
-      <div className="min-h-screen gradient-hero">
+      <>
         <LoadingProgressBar 
           isLoading={isLoading} 
           onLoadingComplete={handleLoadingComplete}
         />
-      </div>
+        <PracticeSkeleton />
+      </>
     );
   }
 

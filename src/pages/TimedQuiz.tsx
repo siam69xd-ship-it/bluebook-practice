@@ -22,6 +22,7 @@ import {
 import MathQuestionLayout from '@/components/math/MathQuestionLayout';
 import { Button } from '@/components/ui/button';
 import { LoadingProgressBar } from '@/components/LoadingProgressBar';
+import { QuizSkeleton } from '@/components/LoadingSkeleton';
 import { HighlightTool } from '@/components/HighlightTool';
 import { HighlightableText } from '@/components/HighlightableText';
 import { QuestionOption } from '@/components/QuestionOption';
@@ -402,12 +403,13 @@ export default function TimedQuiz() {
 
   if (!showContent) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-bluebook-bg">
+      <>
         <LoadingProgressBar 
           isLoading={!isLoaded} 
           onLoadingComplete={handleLoadingComplete}
         />
-      </div>
+        <QuizSkeleton />
+      </>
     );
   }
 

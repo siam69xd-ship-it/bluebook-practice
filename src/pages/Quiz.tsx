@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { LoadingProgressBar } from '@/components/LoadingProgressBar';
+import { QuizSkeleton } from '@/components/LoadingSkeleton';
 import { Timer } from '@/components/Timer';
 import { HighlightTool } from '@/components/HighlightTool';
 import { HighlightableText } from '@/components/HighlightableText';
@@ -347,12 +348,13 @@ export default function Quiz() {
 
   if (!showContent) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-bluebook-bg">
+      <>
         <LoadingProgressBar 
           isLoading={!isLoaded} 
           onLoadingComplete={handleLoadingComplete}
         />
-      </div>
+        <QuizSkeleton />
+      </>
     );
   }
 
