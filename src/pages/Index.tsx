@@ -1,5 +1,21 @@
 import { useNavigate } from 'react-router-dom';
-import { ArrowRight, LogOut, User, CheckCircle2 } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { 
+  ArrowRight, 
+  BookOpen, 
+  Clock, 
+  Target, 
+  Sparkles, 
+  LogOut, 
+  User, 
+  Timer,
+  GraduationCap,
+  Award,
+  TrendingUp,
+  CheckCircle2,
+  Zap,
+  Calculator
+} from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { loadProgress, getAllQuestionsAsync, getTopicCounts, Question } from '@/lib/questionUtils';
 import { useState, useEffect } from 'react';
@@ -24,176 +40,445 @@ export default function Index() {
     ? Object.values(savedProgress.questionStates).filter(s => s?.userAnswer).length
     : 0;
 
-  return (
-    <div className="min-h-screen bg-white">
-      {/* Minimal Header */}
-      <header className="border-b border-[#ddd]">
-        <div className="max-w-[960px] mx-auto px-6 py-5">
-          <nav className="flex items-center justify-between">
-            <div>
-              <span className="font-academic text-xl text-black tracking-tight">
-                Nextprep
-              </span>
-            </div>
+  const difficultyStats = {
+    easy: allQuestions.filter(q => q.difficulty === 'easy').length,
+    medium: allQuestions.filter(q => q.difficulty === 'medium').length,
+    hard: allQuestions.filter(q => q.difficulty === 'hard').length,
+  };
 
-            <div className="flex items-center gap-3">
+  const features = [
+    {
+      icon: BookOpen,
+      title: 'Real SAT Questions',
+      description: 'Authentic past exam questions for realistic practice',
+      gradient: 'from-blue-500 to-cyan-500',
+    },
+    {
+      icon: Target,
+      title: 'Smart Filtering',
+      description: 'Focus on specific topics and difficulty levels',
+      gradient: 'from-violet-500 to-purple-500',
+    },
+    {
+      icon: Clock,
+      title: 'Timed Practice',
+      description: 'Track your speed and improve efficiency',
+      gradient: 'from-amber-500 to-orange-500',
+    },
+    {
+      icon: TrendingUp,
+      title: 'Track Progress',
+      description: 'Monitor your improvement over time',
+      gradient: 'from-emerald-500 to-teal-500',
+    },
+  ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-blue-50/30">
+      <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-slate-100">
+        <div className="container mx-auto px-4 py-4">
+          <nav className="flex items-center justify-between">
+            <motion.div 
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              className="flex items-center gap-3"
+            >
+              <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-blue-600 to-violet-600 flex items-center justify-center shadow-lg shadow-blue-500/25">
+                <GraduationCap className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <span className="text-xl font-bold bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">
+                  NextPrep
+                </span>
+                <span className="hidden sm:block text-xs text-slate-500 -mt-0.5">SAT Preparation</span>
+              </div>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              className="flex items-center gap-3"
+            >
               {!authLoading && (
                 isAuthenticated && user ? (
                   <div className="flex items-center gap-3">
-                    <span className="text-sm text-[#555]">
-                      {user.firstName || user.email?.split('@')[0]}
-                    </span>
-                    <button
+                    <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 bg-slate-100 rounded-full">
+                      {user.profileImageUrl ? (
+                        <img
+                          src={user.profileImageUrl}
+                          alt="Profile"
+                          className="w-6 h-6 rounded-full object-cover"
+                        />
+                      ) : (
+                        <div className="w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-violet-500 flex items-center justify-center">
+                          <span className="text-xs text-white font-medium">
+                            {(user.firstName || user.email)?.[0]?.toUpperCase()}
+                          </span>
+                        </div>
+                      )}
+                      <span className="text-sm text-slate-700 font-medium">
+                        {user.firstName || user.email?.split('@')[0]}
+                      </span>
+                    </div>
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="border-slate-200 hover:bg-slate-100"
                       onClick={() => {
                         fetch('/api/auth/logout', { method: 'POST', credentials: 'include' })
                           .then(() => window.location.reload());
                       }}
-                      className="text-sm text-[#555] hover:text-black transition-colors"
                     >
-                      Sign Out
-                    </button>
+                      <LogOut className="w-4 h-4" />
+                    </Button>
                   </div>
                 ) : (
-                  <button
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
                     onClick={() => navigate('/auth')}
-                    className="text-sm text-[#555] hover:text-black transition-colors"
+                    className="border-slate-200 hover:bg-slate-100"
                   >
+                    <User className="w-4 h-4 mr-2" />
                     Sign In
-                  </button>
+                  </Button>
                 )
               )}
-            </div>
+            </motion.div>
           </nav>
         </div>
       </header>
 
       <main>
-        {/* Hero Section */}
-        <section className="min-h-[85vh] flex items-center">
-          <div className="max-w-[960px] mx-auto px-6 py-20">
-            {/* Eyebrow */}
-            <p className="text-xs uppercase tracking-[0.12em] text-[#555] mb-4">
-              Independent Academic SAT Practice
-            </p>
+        <section className="container mx-auto px-4 pt-16 pb-20 lg:pt-24 lg:pb-28">
+          <motion.div 
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            className="max-w-4xl mx-auto text-center"
+          >
+            <motion.div variants={itemVariants} className="mb-6">
+              <span className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-sm font-medium border border-blue-100">
+                <Sparkles className="w-4 h-4" />
+                Trusted by thousands of students
+              </span>
+            </motion.div>
 
-            {/* Main Headline */}
-            <h1 className="font-academic text-[42px] md:text-[48px] font-medium text-black leading-tight mb-6">
-              Practice the SAT as It Is Designed
-            </h1>
+            <motion.h1 
+              variants={itemVariants}
+              className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6"
+            >
+              <span className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 bg-clip-text text-transparent">
+                Master the SAT with
+              </span>
+              <br />
+              <span className="bg-gradient-to-r from-blue-600 via-violet-600 to-purple-600 bg-clip-text text-transparent">
+                Real Practice Questions
+              </span>
+            </motion.h1>
 
-            {/* Subheadline */}
-            <p className="text-lg text-[#222] max-w-[720px] leading-relaxed mb-5">
-              Over {isLoading ? '...' : allQuestions.length.toLocaleString()} topic-wise SAT questions with human-written explanations
-              and selectively applied AI-assisted reasoning feedback.
-            </p>
+            <motion.p 
+              variants={itemVariants}
+              className="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed"
+            >
+              Experience authentic Digital SAT questions in a clean, distraction-free environment. 
+              Practice smarter, not harder.
+            </motion.p>
 
-            {/* Value Statement */}
-            <p className="text-base text-[#333] max-w-[720px] leading-relaxed mb-10">
-              We do not teach answers.<br />
-              We teach how SAT questions are constructed — and how to reason through them accurately.
-            </p>
-
-            {/* CTAs */}
-            <div className="flex items-center gap-6 mb-6">
-              <button
+            <motion.div 
+              variants={itemVariants}
+              className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8"
+            >
+              <Button
+                size="lg"
                 onClick={() => navigate('/practice')}
-                className="border border-black px-6 py-3 text-black text-[15px] hover:bg-black hover:text-white transition-colors"
+                className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-700 hover:to-violet-700 text-white shadow-lg shadow-blue-500/25 h-14 px-8 text-base font-semibold group"
               >
-                Start Practicing
-              </button>
-              <button
+                Start Practice
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
                 onClick={() => navigate('/timed-quiz')}
-                className="text-[15px] text-black hover:underline flex items-center gap-1"
+                className="w-full sm:w-auto border-2 border-slate-200 hover:bg-slate-50 h-14 px-8 text-base font-semibold"
               >
-                Timed Quiz <ArrowRight className="w-4 h-4" />
-              </button>
-            </div>
+                <Timer className="w-5 h-5 mr-2" />
+                Timed Quiz
+              </Button>
+            </motion.div>
 
-            {/* Continue Progress */}
             {savedProgress && answeredCount > 0 && (
-              <button
-                onClick={() => navigate('/quiz')}
-                className="text-sm text-[#555] hover:text-black flex items-center gap-2 transition-colors"
-              >
-                <CheckCircle2 className="w-4 h-4" />
-                Continue where you left off ({answeredCount} answered)
-              </button>
+              <motion.div variants={itemVariants}>
+                <Button
+                  variant="ghost"
+                  onClick={() => navigate('/quiz')}
+                  className="text-slate-600 hover:text-slate-900"
+                >
+                  <CheckCircle2 className="w-4 h-4 mr-2 text-emerald-500" />
+                  Continue where you left off ({answeredCount} answered)
+                </Button>
+              </motion.div>
             )}
-          </div>
+          </motion.div>
         </section>
 
-        {/* Divider */}
-        <hr className="border-t border-[#ddd] max-w-[960px] mx-auto" />
+        <section className="container mx-auto px-4 pb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-5xl mx-auto"
+          >
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+              <motion.div 
+                whileHover={{ y: -4, scale: 1.02 }}
+                className="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-lg transition-all duration-300"
+              >
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center mb-4 shadow-lg shadow-blue-500/20">
+                  <BookOpen className="w-6 h-6 text-white" />
+                </div>
+                <p className="text-3xl font-bold text-slate-900 mb-1">
+                  {isLoading ? (
+                    <span className="animate-pulse">...</span>
+                  ) : (
+                    allQuestions.length.toLocaleString()
+                  )}
+                </p>
+                <p className="text-slate-500 text-sm font-medium">Total Questions</p>
+              </motion.div>
 
-        {/* Trust Statement */}
-        <section className="max-w-[960px] mx-auto px-6 py-16">
-          <ul className="space-y-2 text-[15px] text-[#333]">
-            <li>• Topic-wise SAT practice</li>
-            <li>• Human-written explanations</li>
-            <li>• Mistake-focused learning</li>
-            <li>• Ethical and exam-safe design</li>
-          </ul>
+              <motion.div 
+                whileHover={{ y: -4, scale: 1.02 }}
+                className="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-lg transition-all duration-300"
+              >
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center mb-4 shadow-lg shadow-violet-500/20">
+                  <Target className="w-6 h-6 text-white" />
+                </div>
+                <p className="text-3xl font-bold text-slate-900 mb-1">
+                  {isLoading ? (
+                    <span className="animate-pulse">...</span>
+                  ) : (
+                    Object.keys(topicCounts).length
+                  )}
+                </p>
+                <p className="text-slate-500 text-sm font-medium">Topics</p>
+              </motion.div>
+
+              <motion.div 
+                whileHover={{ y: -4, scale: 1.02 }}
+                className="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-lg transition-all duration-300"
+              >
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center mb-4 shadow-lg shadow-amber-500/20">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <p className="text-3xl font-bold text-slate-900 mb-1">3</p>
+                <p className="text-slate-500 text-sm font-medium">Difficulty Levels</p>
+              </motion.div>
+
+              <motion.div 
+                whileHover={{ y: -4, scale: 1.02 }}
+                className="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-lg transition-all duration-300"
+              >
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center mb-4 shadow-lg shadow-emerald-500/20">
+                  <Award className="w-6 h-6 text-white" />
+                </div>
+                <p className="text-3xl font-bold text-emerald-600 mb-1">{answeredCount}</p>
+                <p className="text-slate-500 text-sm font-medium">Answered</p>
+              </motion.div>
+            </div>
+          </motion.div>
         </section>
 
-        {/* Divider */}
-        <hr className="border-t border-[#ddd] max-w-[960px] mx-auto" />
-
-        {/* Content Section */}
-        <section className="max-w-[960px] mx-auto px-6 py-16">
-          <h2 className="font-academic text-2xl font-normal text-black mb-3">
-            Designed Around How the SAT Tests Thinking
-          </h2>
-          <hr className="border-t border-black w-16 mb-6" />
-          <p className="text-base text-[#222] max-w-[720px] leading-relaxed">
-            Questions are organized by reasoning skill rather than surface difficulty.
-            Each topic targets a specific cognitive pattern the SAT repeatedly tests,
-            allowing you to build genuine understanding instead of memorizing shortcuts.
-          </p>
-        </section>
-
-        {/* Stats Section */}
         {!isLoading && (
-          <>
-            <hr className="border-t border-[#ddd] max-w-[960px] mx-auto" />
-            <section className="max-w-[960px] mx-auto px-6 py-16">
-              <h2 className="font-academic text-2xl font-normal text-black mb-3">
-                Question Bank Overview
-              </h2>
-              <hr className="border-t border-black w-16 mb-8" />
-              
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <div>
-                  <p className="text-3xl font-normal text-black mb-1">
-                    {allQuestions.length.toLocaleString()}
-                  </p>
-                  <p className="text-sm text-[#555]">Total Questions</p>
-                </div>
-                <div>
-                  <p className="text-3xl font-normal text-black mb-1">
-                    {Object.keys(topicCounts).length}
-                  </p>
-                  <p className="text-sm text-[#555]">Topics</p>
-                </div>
-                <div>
-                  <p className="text-3xl font-normal text-black mb-1">3</p>
-                  <p className="text-sm text-[#555]">Difficulty Levels</p>
-                </div>
-                <div>
-                  <p className="text-3xl font-normal text-black mb-1">{answeredCount}</p>
-                  <p className="text-sm text-[#555]">Your Progress</p>
-                </div>
+          <section className="container mx-auto px-4 pb-20">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="max-w-5xl mx-auto"
+            >
+              <div className="text-center mb-10">
+                <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3">
+                  Difficulty Distribution
+                </h2>
+                <p className="text-slate-600">Practice questions organized by difficulty level</p>
               </div>
-            </section>
-          </>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <motion.div 
+                  whileHover={{ y: -4 }}
+                  className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-6 border border-emerald-100"
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center">
+                      <Sparkles className="w-5 h-5 text-white" />
+                    </div>
+                    <span className="font-semibold text-emerald-800">Easy</span>
+                  </div>
+                  <p className="text-4xl font-bold text-emerald-700">{difficultyStats.easy}</p>
+                  <p className="text-sm text-emerald-600 mt-1">Great for building confidence</p>
+                </motion.div>
+
+                <motion.div 
+                  whileHover={{ y: -4 }}
+                  className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-6 border border-amber-100"
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center">
+                      <Target className="w-5 h-5 text-white" />
+                    </div>
+                    <span className="font-semibold text-amber-800">Medium</span>
+                  </div>
+                  <p className="text-4xl font-bold text-amber-700">{difficultyStats.medium}</p>
+                  <p className="text-sm text-amber-600 mt-1">Perfect for steady progress</p>
+                </motion.div>
+
+                <motion.div 
+                  whileHover={{ y: -4 }}
+                  className="bg-gradient-to-br from-rose-50 to-red-50 rounded-2xl p-6 border border-rose-100"
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-rose-500 to-red-500 flex items-center justify-center">
+                      <Zap className="w-5 h-5 text-white" />
+                    </div>
+                    <span className="font-semibold text-rose-800">Hard</span>
+                  </div>
+                  <p className="text-4xl font-bold text-rose-700">{difficultyStats.hard}</p>
+                  <p className="text-sm text-rose-600 mt-1">Challenge yourself</p>
+                </motion.div>
+              </div>
+            </motion.div>
+          </section>
         )}
+
+        <section className="container mx-auto px-4 pb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-5xl mx-auto"
+          >
+            <div className="text-center mb-10">
+              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3">
+                Everything You Need to Succeed
+              </h2>
+              <p className="text-slate-600">Comprehensive tools for effective SAT preparation</p>
+            </div>
+            
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {features.map((feature, index) => (
+                <motion.div
+                  key={feature.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  whileHover={{ y: -6, scale: 1.02 }}
+                  className="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 group"
+                >
+                  <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${feature.gradient} flex items-center justify-center mb-5 shadow-lg group-hover:scale-110 transition-transform`}>
+                    <feature.icon className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="font-semibold text-slate-900 text-lg mb-2">{feature.title}</h3>
+                  <p className="text-slate-500 text-sm leading-relaxed">{feature.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </section>
+
+        {!isLoading && Object.keys(topicCounts).length > 0 && (
+          <section className="container mx-auto px-4 pb-20">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="max-w-4xl mx-auto"
+            >
+              <div className="text-center mb-10">
+                <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3">
+                  Available Topics
+                </h2>
+                <p className="text-slate-600">Comprehensive coverage of all SAT question types</p>
+              </div>
+              
+              <div className="flex flex-wrap justify-center gap-3">
+                {Object.entries(topicCounts).map(([topic, count]) => (
+                  <motion.div
+                    key={topic}
+                    whileHover={{ scale: 1.05 }}
+                    className="px-4 py-2.5 rounded-full bg-white border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-200 transition-all cursor-default"
+                  >
+                    <span className="font-medium text-slate-700">{topic}</span>
+                    <span className="ml-2 text-blue-600 font-semibold">{count}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          </section>
+        )}
+
+        <section className="container mx-auto px-4 pb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-3xl mx-auto text-center"
+          >
+            <div className="bg-gradient-to-br from-blue-600 via-violet-600 to-purple-600 rounded-3xl p-10 sm:p-14 shadow-2xl shadow-blue-500/20">
+              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+                Ready to Boost Your Score?
+              </h2>
+              <p className="text-blue-100 mb-8 text-lg">
+                Start practicing with real SAT questions today and see your improvement.
+              </p>
+              <Button
+                size="lg"
+                onClick={() => navigate('/practice')}
+                className="bg-white text-blue-600 hover:bg-blue-50 h-14 px-10 text-base font-semibold shadow-lg group"
+              >
+                Begin Practice Now
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </div>
+          </motion.div>
+        </section>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-[#fafafa] border-t border-[#ddd]">
-        <div className="max-w-[960px] mx-auto px-6 py-8 text-center">
-          <p className="text-[13px] text-[#555]">
-            © 2026 — Independent Academic SAT Preparation Platform
-          </p>
+      <footer className="border-t border-slate-100 bg-white">
+        <div className="container mx-auto px-4 py-8">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-600 to-violet-600 flex items-center justify-center">
+                <GraduationCap className="w-4 h-4 text-white" />
+              </div>
+              <span className="font-semibold text-slate-700">NextPrep</span>
+            </div>
+            <p className="text-sm text-slate-500">
+              Practice makes perfect. Start your SAT journey today.
+            </p>
+          </div>
         </div>
       </footer>
     </div>

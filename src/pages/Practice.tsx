@@ -1,6 +1,20 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ChevronDown, ChevronRight, ArrowRight, ArrowLeft, Check } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  ChevronDown, 
+  ChevronRight, 
+  Play, 
+  ArrowLeft,
+  Sparkles,
+  Zap,
+  Target,
+  BookOpen,
+  Filter,
+  Check,
+  Loader2
+} from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { Question, FilterOption, getAllQuestionsAsync, clearQuestionCache } from '@/lib/questionUtils';
 import { Difficulty } from '@/lib/difficultyData';
@@ -86,6 +100,36 @@ type DifficultyFilter = {
   easy: boolean;
   medium: boolean;
   hard: boolean;
+};
+
+const difficultyConfig = {
+  easy: {
+    label: 'Easy',
+    icon: Sparkles,
+    color: 'from-emerald-500 to-teal-500',
+    bgColor: 'bg-emerald-500/10',
+    borderColor: 'border-emerald-500/30',
+    textColor: 'text-emerald-600',
+    description: 'Great for building confidence'
+  },
+  medium: {
+    label: 'Medium',
+    icon: Target,
+    color: 'from-amber-500 to-orange-500',
+    bgColor: 'bg-amber-500/10',
+    borderColor: 'border-amber-500/30',
+    textColor: 'text-amber-600',
+    description: 'Perfect for steady progress'
+  },
+  hard: {
+    label: 'Hard',
+    icon: Zap,
+    color: 'from-rose-500 to-red-500',
+    bgColor: 'bg-rose-500/10',
+    borderColor: 'border-rose-500/30',
+    textColor: 'text-rose-600',
+    description: 'Challenge yourself'
+  }
 };
 
 export default function Practice() {
@@ -177,26 +221,103 @@ export default function Practice() {
     navigate('/quiz');
   };
 
-  const DifficultyToggle = ({ difficulty, label }: { difficulty: keyof DifficultyFilter; label: string }) => {
-    const isSelected = selectedDifficulties[difficulty];
+  const DifficultyCard = ({ difficulty }: { difficulty: keyof DifficultyFilter }) => {
+    const config = difficultyConfig[difficulty];
     const count = getDifficultyCounts[difficulty];
+    const isSelected = selectedDifficulties[difficulty];
+    const Icon = config.icon;
 
     return (
-      <button
+      <motion.button
+        whileHover={{ scale: 1.02, y: -2 }}
+        whileTap={{ scale: 0.98 }}
         onClick={() => toggleDifficulty(difficulty)}
         className={cn(
-          'flex items-center gap-2 px-4 py-2 border transition-colors text-sm',
-          isSelected
-            ? 'border-black bg-black text-white'
-            : 'border-[#ddd] bg-white text-[#555] hover:border-[#999]'
+          'relative flex flex-col items-center p-6 rounded-2xl border-2 transition-all duration-300 overflow-hidden group',
+          isSelected 
+            ? `${config.bgColor} ${config.borderColor}` 
+            : 'bg-muted/30 border-transparent opacity-50 hover:opacity-70'
         )}
       >
-        {isSelected && <Check className="w-3 h-3" />}
-        <span>{label}</span>
-        <span className={cn('text-xs', isSelected ? 'text-white/70' : 'text-[#999]')}>({count})</span>
-      </button>
+        {isSelected && (
+          <motion.div 
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            className="absolute top-3 right-3"
+          >
+            <div className={cn('w-5 h-5 rounded-full flex items-center justify-center', config.bgColor, config.borderColor, 'border')}>
+              <Check className="w-3 h-3 text-current" />
+            </div>
+          </motion.div>
+        )}
+        <div className={cn(
+          'w-14 h-14 rounded-xl flex items-center justify-center mb-3 bg-gradient-to-br',
+          config.color
+        )}>
+          <Icon className="w-7 h-7 text-white" />
+        </div>
+        <span className={cn('font-semibold text-lg', isSelected ? config.textColor : 'text-muted-foreground')}>
+          {config.label}
+        </span>
+        <span className={cn('text-2xl font-bold mt-1', isSelected ? 'text-foreground' : 'text-muted-foreground')}>
+          {count}
+        </span>
+        <span className="text-xs text-muted-foreground mt-1">{config.description}</span>
+      </motion.button>
     );
   };
+
+  const CategoryCard = ({ 
+    title, 
+    count, 
+    icon: Icon,
+    onClick,
+    gradient = 'from-primary to-accent'
+  }: { 
+    title: string; 
+    count: number; 
+    icon: React.ElementType;
+    onClick: () => void;
+    gradient?: string;
+  }) => (
+    <motion.button
+      whileHover={{ scale: 1.02, y: -3 }}
+      whileTap={{ scale: 0.98 }}
+      onClick={onClick}
+      disabled={count === 0}
+      className={cn(
+        'relative w-full flex items-center justify-between p-5 rounded-2xl transition-all duration-300 group overflow-hidden',
+        count > 0 
+          ? 'bg-card border border-border hover:border-primary/30 hover:shadow-lg cursor-pointer' 
+          : 'bg-muted/30 border border-transparent cursor-not-allowed opacity-50'
+      )}
+    >
+      <div className="flex items-center gap-4 z-10">
+        <div className={cn(
+          'w-12 h-12 rounded-xl flex items-center justify-center bg-gradient-to-br',
+          gradient
+        )}>
+          <Icon className="w-6 h-6 text-white" />
+        </div>
+        <div className="text-left">
+          <span className="font-semibold text-foreground block">{title}</span>
+          <span className="text-sm text-muted-foreground">{count} questions</span>
+        </div>
+      </div>
+      {count > 0 && (
+        <motion.div
+          initial={{ x: 10, opacity: 0 }}
+          whileHover={{ x: 0, opacity: 1 }}
+          className="flex items-center gap-2 text-primary"
+        >
+          <span className="text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+            Start
+          </span>
+          <Play className="w-5 h-5 fill-primary" />
+        </motion.div>
+      )}
+    </motion.button>
+  );
 
   const renderTopicItem = (
     label: string,
@@ -207,25 +328,24 @@ export default function Practice() {
     const disabled = count === 0;
 
     return (
-      <button
+      <motion.button
+        whileHover={disabled ? undefined : { x: 4 }}
         onClick={disabled ? undefined : onClick}
-        style={{ paddingLeft: `${(depth + 1) * 20}px` }}
+        style={{ paddingLeft: `${(depth + 1) * 16}px` }}
         className={cn(
-          "w-full flex items-center justify-between pr-4 py-2.5 transition-colors group text-left",
-          disabled 
-            ? "opacity-40 cursor-not-allowed" 
-            : "hover:bg-[#f5f5f5]"
+          "w-full flex items-center justify-between pr-4 py-3 rounded-xl transition-all duration-200 group",
+          disabled ? "opacity-50 cursor-not-allowed" : "hover:bg-primary/5"
         )}
         disabled={disabled}
       >
-        <span className="text-[15px] text-[#222]">{label}</span>
+        <span className="text-sm text-foreground">{label}</span>
         <div className="flex items-center gap-3">
-          <span className="text-xs text-[#888]">{count}</span>
-          {!disabled && (
-            <ArrowRight className="w-3.5 h-3.5 text-[#999] opacity-0 group-hover:opacity-100 transition-opacity" />
-          )}
+          <span className="text-xs px-2 py-1 rounded-full bg-muted text-muted-foreground">
+            {count}
+          </span>
+          <Play className="w-4 h-4 text-primary opacity-0 group-hover:opacity-100 transition-opacity fill-primary" />
         </div>
-      </button>
+      </motion.button>
     );
   };
 
@@ -257,27 +377,39 @@ export default function Practice() {
 
       if (hasSubTopics) {
         return (
-          <div key={topic}>
+          <div key={topic} className="space-y-1">
             <button
               onClick={() => toggleSection(topic)}
-              className="w-full flex items-center justify-between px-5 py-2.5 hover:bg-[#f5f5f5] transition-colors"
+              className="w-full flex items-center justify-between px-4 py-3 hover:bg-muted/50 rounded-xl transition-all duration-200"
             >
-              <span className="text-[15px] text-[#222]">{topic}</span>
+              <span className="text-sm font-medium text-foreground">{topic}</span>
               <div className="flex items-center gap-3">
-                <span className="text-xs text-[#888]">{count}</span>
+                <span className="text-xs px-2 py-1 rounded-full bg-muted text-muted-foreground">
+                  {count}
+                </span>
                 {expandedSections.includes(topic) ? (
-                  <ChevronDown className="w-4 h-4 text-[#888]" />
+                  <ChevronDown className="w-4 h-4 text-muted-foreground" />
                 ) : (
-                  <ChevronRight className="w-4 h-4 text-[#888]" />
+                  <ChevronRight className="w-4 h-4 text-muted-foreground" />
                 )}
               </div>
             </button>
 
-            {expandedSections.includes(topic) && (
-              <div className="border-l border-[#eee] ml-5">
-                {renderSubTopics(topic, subTopics, subSection, mainSection)}
-              </div>
-            )}
+            <AnimatePresence>
+              {expandedSections.includes(topic) && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                  className="overflow-hidden"
+                >
+                  <div className="space-y-0.5">
+                    {renderSubTopics(topic, subTopics, subSection, mainSection)}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         );
       }
@@ -300,150 +432,198 @@ export default function Practice() {
   };
 
   const renderSubSections = (subSections: Record<string, any>, mainSection: string) => {
+    const subSectionIcons: Record<string, React.ElementType> = {
+      'Craft and Structure': BookOpen,
+      'Expression of Ideas': Sparkles,
+      'Information and Ideas': Target,
+      'Standard English Conventions': Filter,
+      'Algebra': Target,
+      'Advanced Math': Zap,
+    };
+
+    const subSectionGradients: Record<string, string> = {
+      'Craft and Structure': 'from-violet-500 to-purple-600',
+      'Expression of Ideas': 'from-blue-500 to-cyan-500',
+      'Information and Ideas': 'from-emerald-500 to-teal-500',
+      'Standard English Conventions': 'from-amber-500 to-orange-500',
+      'Algebra': 'from-indigo-500 to-blue-600',
+      'Advanced Math': 'from-purple-500 to-pink-600',
+    };
+
     return Object.entries(subSections).map(([subSection, topics]) => {
       const count = getCount(subSection);
       const hasTopics = topics !== null && typeof topics === 'object';
+      const Icon = subSectionIcons[subSection] || BookOpen;
+      const gradient = subSectionGradients[subSection] || 'from-primary to-accent';
 
       return (
-        <div key={subSection} className="border-b border-[#eee] last:border-b-0">
+        <motion.div 
+          key={subSection} 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="space-y-2"
+        >
           <button
             onClick={() => toggleSection(subSection)}
-            className="w-full flex items-center justify-between px-4 py-3 hover:bg-[#fafafa] transition-colors"
+            className="w-full flex items-center justify-between p-4 bg-card border border-border hover:border-primary/20 rounded-2xl transition-all duration-200 group"
           >
-            <span className="text-[15px] font-medium text-black">{subSection}</span>
             <div className="flex items-center gap-3">
-              <span className="text-sm text-[#555]">{count} questions</span>
+              <div className={cn('w-10 h-10 rounded-xl flex items-center justify-center bg-gradient-to-br', gradient)}>
+                <Icon className="w-5 h-5 text-white" />
+              </div>
+              <span className="font-semibold text-foreground">{subSection}</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <span className="text-sm font-medium px-3 py-1 rounded-full bg-primary/10 text-primary">
+                {count} questions
+              </span>
               {expandedSections.includes(subSection) ? (
-                <ChevronDown className="w-4 h-4 text-[#888]" />
+                <ChevronDown className="w-5 h-5 text-muted-foreground" />
               ) : (
-                <ChevronRight className="w-4 h-4 text-[#888]" />
+                <ChevronRight className="w-5 h-5 text-muted-foreground" />
               )}
             </div>
           </button>
 
-          {expandedSections.includes(subSection) && hasTopics && (
-            <div className="border-l border-[#eee] ml-4 mb-2">
-              {renderTopics(subSection, topics, mainSection)}
-            </div>
-          )}
-        </div>
+          <AnimatePresence>
+            {expandedSections.includes(subSection) && hasTopics && (
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: 'auto', opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                className="overflow-hidden"
+              >
+                <div className="space-y-1 pl-4 pt-2 pb-2 ml-5 border-l-2 border-border">
+                  {renderTopics(subSection, topics, mainSection)}
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.div>
       );
     });
   };
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-white flex items-center justify-center">
-        <div className="text-center">
-          <p className="text-lg text-[#222]">Loading questions...</p>
-          <p className="text-sm text-[#555] mt-1">Preparing your practice session</p>
-        </div>
+      <div className="min-h-screen gradient-hero flex items-center justify-center">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          className="flex flex-col items-center gap-4"
+        >
+          <div className="relative">
+            <div className="w-16 h-16 rounded-2xl gradient-bg flex items-center justify-center">
+              <BookOpen className="w-8 h-8 text-white" />
+            </div>
+            <motion.div 
+              animate={{ rotate: 360 }}
+              transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
+              className="absolute -inset-2 border-2 border-primary/30 border-t-primary rounded-3xl"
+            />
+          </div>
+          <div className="text-center">
+            <p className="text-lg font-medium text-foreground">Loading questions...</p>
+            <p className="text-sm text-muted-foreground">Preparing your practice session</p>
+          </div>
+        </motion.div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="border-b border-[#ddd]">
-        <div className="max-w-[960px] mx-auto px-6 py-5">
+    <div className="min-h-screen gradient-hero">
+      <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
+        <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <button
+            <Button
+              variant="ghost"
+              size="sm"
               onClick={() => navigate('/')}
-              className="flex items-center gap-2 text-sm text-[#555] hover:text-black transition-colors"
+              className="gap-2"
             >
               <ArrowLeft className="w-4 h-4" />
               Back
-            </button>
-            <span className="font-academic text-xl text-black tracking-tight">Nextprep</span>
+            </Button>
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 rounded-lg gradient-bg flex items-center justify-center">
+                <span className="text-primary-foreground font-bold text-sm">N</span>
+              </div>
+              <span className="font-bold text-foreground">NextPrep</span>
+            </div>
             <div className="w-[60px]" />
           </div>
         </div>
       </header>
 
-      <main className="max-w-[960px] mx-auto px-6 py-12">
-        {/* Page Title */}
-        <div className="mb-10">
-          <p className="text-xs uppercase tracking-[0.12em] text-[#555] mb-3">
-            Practice Selection
-          </p>
-          <h1 className="font-academic text-[32px] md:text-[38px] font-medium text-black leading-tight mb-4">
-            Choose Your Focus
-          </h1>
-          <p className="text-base text-[#222] max-w-[600px]">
-            Select difficulty level and topic to begin a focused practice session.
-          </p>
-        </div>
-
-        {/* Difficulty Filter */}
-        <div className="mb-10">
-          <p className="text-sm text-[#555] mb-4">Filter by Difficulty</p>
-          <div className="flex flex-wrap gap-3">
-            <DifficultyToggle difficulty="easy" label="Easy" />
-            <DifficultyToggle difficulty="medium" label="Medium" />
-            <DifficultyToggle difficulty="hard" label="Hard" />
-          </div>
-        </div>
-
-        <hr className="border-t border-[#ddd] mb-10" />
-
-        {/* Practice All */}
-        <button
-          onClick={() => startPractice({})}
-          className="w-full flex items-center justify-between px-5 py-4 border border-black hover:bg-black hover:text-white transition-colors group mb-10"
+      <main className="container mx-auto px-4 py-8 max-w-5xl">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-center mb-10"
         >
-          <div className="text-left">
-            <span className="text-base font-medium">Practice All Questions</span>
-            <p className="text-sm text-[#555] group-hover:text-white/70 mt-0.5">
-              {filteredQuestions.length} questions available
-            </p>
+          <h1 className="text-3xl sm:text-4xl font-bold mb-3">
+            <span className="gradient-text">Choose Your Practice</span>
+          </h1>
+          <p className="text-muted-foreground text-lg max-w-xl mx-auto">
+            Select difficulty level and topic to begin your focused practice session
+          </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          className="mb-10"
+        >
+          <div className="flex items-center gap-2 mb-4">
+            <Filter className="w-5 h-5 text-primary" />
+            <h2 className="font-semibold text-foreground">Filter by Difficulty</h2>
           </div>
-          <ArrowRight className="w-5 h-5" />
-        </button>
-
-        {/* Topics */}
-        <div className="mb-6">
-          <h2 className="font-academic text-xl font-normal text-black mb-2">Topics</h2>
-          <hr className="border-t border-black w-12 mb-6" />
-        </div>
-
-        {Object.entries(FILTER_STRUCTURE).map(([section, subSections]) => (
-          <div key={section} className="mb-8">
-            {/* Section Header */}
-            <button
-              onClick={() => toggleSection(section)}
-              className="w-full flex items-center justify-between py-3 border-b border-[#ddd] mb-2"
-            >
-              <span className="text-xs uppercase tracking-[0.1em] font-medium text-[#555]">
-                {section}
-              </span>
-              {expandedSections.includes(section) ? (
-                <ChevronDown className="w-4 h-4 text-[#888]" />
-              ) : (
-                <ChevronRight className="w-4 h-4 text-[#888]" />
-              )}
-            </button>
-
-            {/* SubSections */}
-            {expandedSections.includes(section) && (
-              <div className="border border-[#eee]">
-                {renderSubSections(subSections, section)}
-              </div>
-            )}
+          <div className="grid grid-cols-3 gap-4">
+            <DifficultyCard difficulty="easy" />
+            <DifficultyCard difficulty="medium" />
+            <DifficultyCard difficulty="hard" />
           </div>
-        ))}
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="mb-8"
+        >
+          <CategoryCard
+            title="Practice All Questions"
+            count={filteredQuestions.length}
+            icon={Play}
+            onClick={() => startPractice({})}
+            gradient="from-primary to-accent"
+          />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          className="space-y-4"
+        >
+          <div className="flex items-center gap-2 mb-2">
+            <BookOpen className="w-5 h-5 text-primary" />
+            <h2 className="font-semibold text-foreground">Topics</h2>
+          </div>
+          
+          {Object.entries(FILTER_STRUCTURE).map(([section, subSections]) => (
+            <div key={section} className="space-y-3">
+              <h3 className="text-sm font-bold text-primary uppercase tracking-wide px-4 pt-4">{section}</h3>
+              {renderSubSections(subSections, section)}
+            </div>
+          ))}
+        </motion.div>
 
         <div className="h-20" />
       </main>
-
-      {/* Footer */}
-      <footer className="bg-[#fafafa] border-t border-[#ddd]">
-        <div className="max-w-[960px] mx-auto px-6 py-8 text-center">
-          <p className="text-[13px] text-[#555]">
-            © 2026 — Independent Academic SAT Preparation Platform
-          </p>
-        </div>
-      </footer>
     </div>
   );
 }
