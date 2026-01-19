@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils';
 
-const skeletonPulse = "animate-[pulse_2.5s_cubic-bezier(0.4,0,0.6,1)_infinite] opacity-60";
+const skeletonPulse = "animate-[pulse_1.5s_cubic-bezier(0.4,0,0.6,1)_infinite] opacity-50";
 
 export function PracticeSkeleton({ className }: { className?: string }) {
   return (
