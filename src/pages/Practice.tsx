@@ -1,7 +1,6 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
+import {
   ChevronDown, 
   ChevronRight, 
   Play, 
@@ -228,27 +227,21 @@ export default function Practice() {
     const Icon = config.icon;
 
     return (
-      <motion.button
-        whileHover={{ scale: 1.02, y: -2 }}
-        whileTap={{ scale: 0.98 }}
+      <button
         onClick={() => toggleDifficulty(difficulty)}
         className={cn(
-          'relative flex flex-col items-center p-6 rounded-2xl border-2 transition-all duration-300 overflow-hidden group',
+          'relative flex flex-col items-center p-6 rounded-2xl border-2 transition-all duration-150 overflow-hidden group hover:scale-[1.02] hover:-translate-y-0.5 active:scale-[0.98]',
           isSelected 
             ? `${config.bgColor} ${config.borderColor}` 
             : 'bg-muted/30 border-transparent opacity-50 hover:opacity-70'
         )}
       >
         {isSelected && (
-          <motion.div 
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            className="absolute top-3 right-3"
-          >
+          <div className="absolute top-3 right-3 animate-scale-in">
             <div className={cn('w-5 h-5 rounded-full flex items-center justify-center', config.bgColor, config.borderColor, 'border')}>
               <Check className="w-3 h-3 text-current" />
             </div>
-          </motion.div>
+          </div>
         )}
         <div className={cn(
           'w-14 h-14 rounded-xl flex items-center justify-center mb-3 bg-gradient-to-br',
@@ -263,7 +256,7 @@ export default function Practice() {
           {count}
         </span>
         <span className="text-xs text-muted-foreground mt-1">{config.description}</span>
-      </motion.button>
+      </button>
     );
   };
 
@@ -280,13 +273,11 @@ export default function Practice() {
     onClick: () => void;
     gradient?: string;
   }) => (
-    <motion.button
-      whileHover={{ scale: 1.02, y: -3 }}
-      whileTap={{ scale: 0.98 }}
+    <button
       onClick={onClick}
       disabled={count === 0}
       className={cn(
-        'relative w-full flex items-center justify-between p-5 rounded-2xl transition-all duration-300 group overflow-hidden',
+        'relative w-full flex items-center justify-between p-5 rounded-2xl transition-all duration-150 group overflow-hidden hover:scale-[1.01] hover:-translate-y-0.5 active:scale-[0.99]',
         count > 0 
           ? 'bg-card border border-border hover:border-primary/30 hover:shadow-lg cursor-pointer' 
           : 'bg-muted/30 border border-transparent cursor-not-allowed opacity-50'
@@ -305,18 +296,12 @@ export default function Practice() {
         </div>
       </div>
       {count > 0 && (
-        <motion.div
-          initial={{ x: 10, opacity: 0 }}
-          whileHover={{ x: 0, opacity: 1 }}
-          className="flex items-center gap-2 text-primary"
-        >
-          <span className="text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-            Start
-          </span>
+        <div className="flex items-center gap-2 text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-150">
+          <span className="text-sm font-medium">Start</span>
           <Play className="w-5 h-5 fill-primary" />
-        </motion.div>
+        </div>
       )}
-    </motion.button>
+    </button>
   );
 
   const renderTopicItem = (
@@ -328,13 +313,12 @@ export default function Practice() {
     const disabled = count === 0;
 
     return (
-      <motion.button
-        whileHover={disabled ? undefined : { x: 4 }}
+      <button
         onClick={disabled ? undefined : onClick}
         style={{ paddingLeft: `${(depth + 1) * 16}px` }}
         className={cn(
-          "w-full flex items-center justify-between pr-4 py-3 rounded-xl transition-all duration-200 group",
-          disabled ? "opacity-50 cursor-not-allowed" : "hover:bg-primary/5"
+          "w-full flex items-center justify-between pr-4 py-3 rounded-xl transition-all duration-100 group",
+          disabled ? "opacity-50 cursor-not-allowed" : "hover:bg-primary/5 hover:translate-x-1"
         )}
         disabled={disabled}
       >
@@ -343,9 +327,9 @@ export default function Practice() {
           <span className="text-xs px-2 py-1 rounded-full bg-muted text-muted-foreground">
             {count}
           </span>
-          <Play className="w-4 h-4 text-primary opacity-0 group-hover:opacity-100 transition-opacity fill-primary" />
+          <Play className="w-4 h-4 text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-100 fill-primary" />
         </div>
-      </motion.button>
+      </button>
     );
   };
 
@@ -395,21 +379,13 @@ export default function Practice() {
               </div>
             </button>
 
-            <AnimatePresence>
-              {expandedSections.includes(topic) && (
-                <motion.div
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: 'auto', opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.2 }}
-                  className="overflow-hidden"
-                >
-                  <div className="space-y-0.5">
-                    {renderSubTopics(topic, subTopics, subSection, mainSection)}
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
+            {expandedSections.includes(topic) && (
+              <div className="overflow-hidden animate-accordion-down">
+                <div className="space-y-0.5">
+                  {renderSubTopics(topic, subTopics, subSection, mainSection)}
+                </div>
+              </div>
+            )}
           </div>
         );
       }
@@ -457,15 +433,13 @@ export default function Practice() {
       const gradient = subSectionGradients[subSection] || 'from-primary to-accent';
 
       return (
-        <motion.div 
+        <div 
           key={subSection} 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="space-y-2"
+          className="space-y-2 animate-fade-in"
         >
           <button
             onClick={() => toggleSection(subSection)}
-            className="w-full flex items-center justify-between p-4 bg-card border border-border hover:border-primary/20 rounded-2xl transition-all duration-200 group"
+            className="w-full flex items-center justify-between p-4 bg-card border border-border hover:border-primary/20 rounded-2xl transition-all duration-150 group"
           >
             <div className="flex items-center gap-3">
               <div className={cn('w-10 h-10 rounded-xl flex items-center justify-center bg-gradient-to-br', gradient)}>
@@ -478,29 +452,21 @@ export default function Practice() {
                 {count} questions
               </span>
               {expandedSections.includes(subSection) ? (
-                <ChevronDown className="w-5 h-5 text-muted-foreground" />
+                <ChevronDown className="w-5 h-5 text-muted-foreground transition-transform duration-150" />
               ) : (
-                <ChevronRight className="w-5 h-5 text-muted-foreground" />
+                <ChevronRight className="w-5 h-5 text-muted-foreground transition-transform duration-150" />
               )}
             </div>
           </button>
 
-          <AnimatePresence>
-            {expandedSections.includes(subSection) && hasTopics && (
-              <motion.div
-                initial={{ height: 0, opacity: 0 }}
-                animate={{ height: 'auto', opacity: 1 }}
-                exit={{ height: 0, opacity: 0 }}
-                transition={{ duration: 0.3 }}
-                className="overflow-hidden"
-              >
-                <div className="space-y-1 pl-4 pt-2 pb-2 ml-5 border-l-2 border-border">
-                  {renderTopics(subSection, topics, mainSection)}
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </motion.div>
+          {expandedSections.includes(subSection) && hasTopics && (
+            <div className="overflow-hidden animate-accordion-down">
+              <div className="space-y-1 pl-4 pt-2 pb-2 ml-5 border-l-2 border-border">
+                {renderTopics(subSection, topics, mainSection)}
+              </div>
+            </div>
+          )}
+        </div>
       );
     });
   };
@@ -540,25 +506,16 @@ export default function Practice() {
       </header>
 
       <main className="container mx-auto px-4 py-8 max-w-5xl">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-10"
-        >
+        <div className="text-center mb-10 animate-fade-in">
           <h1 className="text-3xl sm:text-4xl font-bold mb-3">
             <span className="gradient-text">Choose Your Practice</span>
           </h1>
           <p className="text-muted-foreground text-lg max-w-xl mx-auto">
             Select difficulty level and topic to begin your focused practice session
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          className="mb-10"
-        >
+        <div className="mb-10 animate-fade-in" style={{ animationDelay: '50ms' }}>
           <div className="flex items-center gap-2 mb-4">
             <Filter className="w-5 h-5 text-primary" />
             <h2 className="font-semibold text-foreground">Filter by Difficulty</h2>
@@ -568,14 +525,9 @@ export default function Practice() {
             <DifficultyCard difficulty="medium" />
             <DifficultyCard difficulty="hard" />
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="mb-8"
-        >
+        <div className="mb-8 animate-fade-in" style={{ animationDelay: '100ms' }}>
           <CategoryCard
             title="Practice All Questions"
             count={filteredQuestions.length}
@@ -583,14 +535,9 @@ export default function Practice() {
             onClick={() => startPractice({})}
             gradient="from-primary to-accent"
           />
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="space-y-4"
-        >
+        <div className="space-y-4 animate-fade-in" style={{ animationDelay: '150ms' }}>
           <div className="flex items-center gap-2 mb-2">
             <BookOpen className="w-5 h-5 text-primary" />
             <h2 className="font-semibold text-foreground">Topics</h2>
@@ -607,7 +554,7 @@ export default function Practice() {
               </div>
             ))
           )}
-        </motion.div>
+        </div>
 
         <div className="h-20" />
       </main>

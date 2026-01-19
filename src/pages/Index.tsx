@@ -17,8 +17,8 @@ import {
   Calculator
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { loadProgress, getAllQuestionsAsync, getTopicCounts, Question } from '@/lib/questionUtils';
-import { useState, useEffect } from 'react';
+import { loadProgress, getAllQuestionsAsync, getTopicCounts, Question, prefetchQuestions } from '@/lib/questionUtils';
+import { useState, useEffect, useCallback } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 
 export default function Index() {
@@ -28,11 +28,18 @@ export default function Index() {
   const [isLoading, setIsLoading] = useState(true);
   const savedProgress = loadProgress();
 
+  // Prefetch questions immediately on mount
   useEffect(() => {
+    prefetchQuestions(); // Start loading in background
     getAllQuestionsAsync().then(questions => {
       setAllQuestions(questions);
       setIsLoading(false);
     });
+  }, []);
+
+  // Prefetch on hover over Practice button for even faster loading
+  const handlePracticeHover = useCallback(() => {
+    prefetchQuestions();
   }, []);
 
   const topicCounts = getTopicCounts(allQuestions);
@@ -207,10 +214,12 @@ export default function Index() {
               <Button
                 size="lg"
                 onClick={() => navigate('/practice')}
+                onMouseEnter={handlePracticeHover}
+                onFocus={handlePracticeHover}
                 className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-700 hover:to-violet-700 text-white shadow-lg shadow-blue-500/25 h-14 px-8 text-base font-semibold group"
               >
                 Start Practice
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-150" />
               </Button>
               <Button
                 variant="outline"
