@@ -82,69 +82,79 @@ function LatexRendererComponent({ content, className = '', displayMode = false }
       return renderKatex(trimmed, false);
     });
 
-    // STEP 1: Custom parser for $...$ LaTeX to handle complex cases
-    // This manually finds balanced $...$ pairs without crossing sentence boundaries
-    // and properly handles currency like $150 vs LaTeX like $x+y$
+    // STEP 1: Custom parser for $...$ inline math vs currency.
+    // Data can contain BOTH:
+    // - Currency: "$408" (no closing $)
+    // - Inline math: "$x+y$" or "$20$" (balanced $...$)
+    // We therefore:
+    // 1) Prefer rendering balanced $...$ if the content between looks like math.
+    // 2) Otherwise treat "$<number>" as currency.
     const parseInlineLaTeX = (text: string): string => {
       let result = '';
       let i = 0;
-      
+
+      const matchCurrencyAt = (idx: number): string | null => {
+        // Currency must NOT be followed by a letter, a backslash (LaTeX), or a closing '$' (which would mean $number$ math).
+        const m = text
+          .slice(idx)
+          .match(/^\$(\d{1,3}(?:,\d{3})*(?:\.\d+)?|\d+(?:\.\d+)?)(?![a-zA-Z\\$])/);
+        return m ? m[0] : null;
+      };
+
+      const looksLikeProse = (s: string): boolean => {
+        const trimmed = s.trim();
+        if (!trimmed) return true;
+        if (/\?/.test(trimmed)) return true;
+
+        // If there's no LaTeX command (\...), but we see real words separated by spaces,
+        // it's almost certainly mismatched delimiters (e.g., "$408 for the first hour and $204...").
+        if (!trimmed.includes('\\') && /[A-Za-z]{3,}\s+[A-Za-z]{3,}/.test(trimmed)) return true;
+
+        // Very long spans of plain letters usually indicate prose, not math.
+        if (!trimmed.includes('\\') && trimmed.length > 80 && /[A-Za-z]/.test(trimmed)) return true;
+
+        return false;
+      };
+
       while (i < text.length) {
-        if (text[i] === '$') {
-          // Check if this is currency: $ followed by digits only (not followed by letters)
-          const currencyMatch = text.slice(i).match(/^\$(\d{1,3}(?:,\d{3})*(?:\.\d+)?|\d+(?:\.\d+)?)(?![a-zA-Z\\])/);
-          if (currencyMatch) {
-            result += currencyMatch[0];
-            i += currencyMatch[0].length;
-            continue;
-          }
-          
-          // Look for closing $ - but don't cross sentence boundaries
-          let j = i + 1;
-          let foundClose = false;
-          let latexContent = '';
-          
-          while (j < text.length) {
-            // Check for sentence boundary (period + space + capital or newline)
-            if (text[j] === '.' && j + 2 < text.length) {
-              const afterPeriod = text.slice(j + 1, j + 3);
-              if (/^\s[A-Z]/.test(afterPeriod)) {
-                // Sentence boundary - this $ is likely standalone, not LaTeX delimiter
-                break;
-              }
-            }
-            
-            // Check for closing $
-            if (text[j] === '$') {
-              latexContent = text.slice(i + 1, j);
-              
-              // Validate this looks like LaTeX, not mismatched delimiters
-              const hasLongText = /[A-Za-z]{12,}/.test(latexContent);
-              const hasQuestion = /\?/.test(latexContent);
-              const hasSentence = /\.\s+[A-Z]/.test(latexContent);
-              
-              if (!hasLongText && !hasQuestion && !hasSentence && latexContent.trim()) {
-                // Valid LaTeX block
-                result += renderKatex(latexContent, false);
-                i = j + 1;
-                foundClose = true;
-              }
-              break;
-            }
-            j++;
-          }
-          
-          if (!foundClose) {
-            // No valid closing $ found - output the $ as-is
-            result += '$';
-            i++;
-          }
-        } else {
+        if (text[i] !== '$') {
           result += text[i];
           i++;
+          continue;
         }
+
+        // Safety: if "$$" somehow survived earlier processing, treat as literal.
+        if (text[i + 1] === '$') {
+          result += '$$';
+          i += 2;
+          continue;
+        }
+
+        const nextDollar = text.indexOf('$', i + 1);
+
+        // Prefer balanced $...$ rendering when the content between looks like math.
+        if (nextDollar !== -1) {
+          const between = text.slice(i + 1, nextDollar);
+          if (!looksLikeProse(between)) {
+            result += renderKatex(between, false);
+            i = nextDollar + 1;
+            continue;
+          }
+        }
+
+        // Not valid inline math; fall back to currency if applicable.
+        const currency = matchCurrencyAt(i);
+        if (currency) {
+          result += currency;
+          i += currency.length;
+          continue;
+        }
+
+        // Unmatched/unknown '$' -> keep it literal.
+        result += '$';
+        i++;
       }
-      
+
       return result;
     };
     
