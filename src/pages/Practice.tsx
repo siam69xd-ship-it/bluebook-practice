@@ -16,7 +16,7 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { Question, FilterOption, getAllQuestionsAsync, clearQuestionCache } from '@/lib/questionUtils';
+import { Question, FilterOption, getAllQuestionsAsync } from '@/lib/questionUtils';
 import { Difficulty } from '@/lib/difficultyData';
 
 const FILTER_STRUCTURE = {
@@ -155,7 +155,7 @@ export default function Practice() {
   });
 
   useEffect(() => {
-    clearQuestionCache();
+    // Load questions without clearing cache for faster subsequent visits
     getAllQuestionsAsync()
       .then(q => {
         setQuestions(q);
@@ -505,32 +505,14 @@ export default function Practice() {
     });
   };
 
-  if (isLoading) {
-    return (
-      <div className="min-h-screen gradient-hero flex items-center justify-center">
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          className="flex flex-col items-center gap-4"
-        >
-          <div className="relative">
-            <div className="w-16 h-16 rounded-2xl gradient-bg flex items-center justify-center">
-              <BookOpen className="w-8 h-8 text-white" />
-            </div>
-            <motion.div 
-              animate={{ rotate: 360 }}
-              transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
-              className="absolute -inset-2 border-2 border-primary/30 border-t-primary rounded-3xl"
-            />
-          </div>
-          <div className="text-center">
-            <p className="text-lg font-medium text-foreground">Loading questions...</p>
-            <p className="text-sm text-muted-foreground">Preparing your practice session</p>
-          </div>
-        </motion.div>
-      </div>
-    );
-  }
+  // Show skeleton UI while loading instead of blocking spinner
+  const LoadingSkeleton = () => (
+    <div className="animate-pulse space-y-3">
+      {[1, 2, 3, 4].map(i => (
+        <div key={i} className="h-16 bg-muted/50 rounded-2xl" />
+      ))}
+    </div>
+  );
 
   return (
     <div className="min-h-screen gradient-hero">
@@ -612,14 +594,19 @@ export default function Practice() {
           <div className="flex items-center gap-2 mb-2">
             <BookOpen className="w-5 h-5 text-primary" />
             <h2 className="font-semibold text-foreground">Topics</h2>
+            {isLoading && <Loader2 className="w-4 h-4 animate-spin text-muted-foreground" />}
           </div>
           
-          {Object.entries(FILTER_STRUCTURE).map(([section, subSections]) => (
-            <div key={section} className="space-y-3">
-              <h3 className="text-sm font-bold text-primary uppercase tracking-wide px-4 pt-4">{section}</h3>
-              {renderSubSections(subSections, section)}
-            </div>
-          ))}
+          {isLoading ? (
+            <LoadingSkeleton />
+          ) : (
+            Object.entries(FILTER_STRUCTURE).map(([section, subSections]) => (
+              <div key={section} className="space-y-3">
+                <h3 className="text-sm font-bold text-primary uppercase tracking-wide px-4 pt-4">{section}</h3>
+                {renderSubSections(subSections, section)}
+              </div>
+            ))
+          )}
         </motion.div>
 
         <div className="h-20" />
