@@ -136,6 +136,7 @@ export default function Practice() {
   const navigate = useNavigate();
   const [questions, setQuestions] = useState<Question[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [showContent, setShowContent] = useState(false);
   const [expandedSections, setExpandedSections] = useState<string[]>([
     'English Reading & Writing',
     'Craft and Structure',
@@ -481,16 +482,24 @@ export default function Practice() {
     </div>
   );
 
-  if (isLoading) {
+  const handleLoadingComplete = () => {
+    setShowContent(true);
+  };
+
+  // Show progress bar until loading complete AND animation triggers content
+  if (!showContent) {
     return (
       <div className="min-h-screen gradient-hero">
-        <LoadingProgressBar isLoading={true} />
+        <LoadingProgressBar 
+          isLoading={isLoading} 
+          onLoadingComplete={handleLoadingComplete}
+        />
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen gradient-hero animate-[content-reveal_0.4s_ease-out]">
+    <div className="min-h-screen gradient-hero animate-[content-reveal_0.35s_ease-out]">
       <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
