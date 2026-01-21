@@ -20,24 +20,21 @@ import { Button } from '@/components/ui/button';
 import { loadProgress, getAllQuestionsAsync, getTopicCounts, Question, prefetchQuestions } from '@/lib/questionUtils';
 import { useState, useEffect, useCallback } from 'react';
 import { useAuth } from '@/hooks/useAuth';
-import { LoadingProgressBar } from '@/components/LoadingProgressBar';
-import { HomeSkeleton } from '@/components/LoadingSkeleton';
 import { prefetchRoute } from '@/lib/routePrefetch';
 
 export default function Index() {
   const navigate = useNavigate();
   const { user, isAuthenticated, isLoading: authLoading } = useAuth();
   const [allQuestions, setAllQuestions] = useState<Question[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [showContent, setShowContent] = useState(false);
+  const [dataLoaded, setDataLoaded] = useState(false);
   const savedProgress = loadProgress();
 
-  // Prefetch questions immediately on mount
+  // Load questions in background - don't block UI render
   useEffect(() => {
-    prefetchQuestions(); // Start loading in background
+    prefetchQuestions();
     getAllQuestionsAsync().then(questions => {
       setAllQuestions(questions);
-      setIsLoading(false);
+      setDataLoaded(true);
     });
   }, []);
 
@@ -100,24 +97,17 @@ export default function Index() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
+        staggerChildren: 0.05,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: 10 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.15 } },
   };
 
-  if (!showContent) {
-    return (
-      <>
-        <LoadingProgressBar isLoading={isLoading} onLoadingComplete={() => setShowContent(true)} />
-        <HomeSkeleton />
-      </>
-    );
-  }
+  // Show content immediately - no loading gate
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-blue-50/30">
@@ -292,7 +282,7 @@ export default function Index() {
                   <BookOpen className="w-6 h-6 text-white" />
                 </div>
                 <p className="text-3xl font-bold text-slate-900 mb-1">
-                  {isLoading ? (
+                  {!dataLoaded ? (
                     <span className="animate-pulse">...</span>
                   ) : (
                     allQuestions.length.toLocaleString()
@@ -309,7 +299,7 @@ export default function Index() {
                   <Target className="w-6 h-6 text-white" />
                 </div>
                 <p className="text-3xl font-bold text-slate-900 mb-1">
-                  {isLoading ? (
+                  {!dataLoaded ? (
                     <span className="animate-pulse">...</span>
                   ) : (
                     Object.keys(topicCounts).length
@@ -343,7 +333,7 @@ export default function Index() {
           </motion.div>
         </section>
 
-        {!isLoading && (
+        {dataLoaded && (
           <section className="container mx-auto px-4 pb-20 animate-stagger-fade stagger-4">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -443,7 +433,7 @@ export default function Index() {
           </motion.div>
         </section>
 
-        {!isLoading && Object.keys(topicCounts).length > 0 && (
+        {dataLoaded && Object.keys(topicCounts).length > 0 && (
           <section className="container mx-auto px-4 pb-20">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
