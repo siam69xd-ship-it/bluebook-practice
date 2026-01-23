@@ -573,12 +573,16 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
   };
   
   try {
-    // Define all JSON file paths
+    // Define all JSON file paths - now using standardized format files
     const filePaths = [
       '/data/boundaries.json',
-      '/data/verbs.json',
+      '/data/subject_verb_agreement.json',
+      '/data/verb_tenses.json',
+      '/data/verb_forms.json',
       '/data/pronoun.json',
-      '/data/modifiers.json',
+      '/data/modifiers_questions.json',
+      '/data/parallel_structure.json',
+      '/data/miscellaneous_topics.json',
       '/data/transitions.json',
       '/data/inference.json',
       '/data/cross_text_connections.json',
@@ -612,244 +616,260 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
     
     // Load all JSON files with progress tracking
     const [
-      boundariesData, verbsData, pronounData, modifiersData,
+      boundariesData, svaData, verbTensesData, verbFormsData,
+      pronounData, modifiersData, parallelStructureData, miscTopicsData,
       transitionsData, inferenceData,
       crossTextData, mainPurposeData, overallStructureData, underlinedPurposeData,
       gapFillingsData, synonymsData, supportData, weakenData, quotationData, graphsData,
       mainIdeasData, detailedQuestionsData, rhetoricalSynthesisData
     ] = await Promise.all(filePaths.map(loadWithProgress));
     
-    // Process Boundaries
-    const boundariesQuestions = boundariesData?.["English Reading & Writing"]?.["Standard English Conventions"]?.["Boundaries"] || [];
-    boundariesQuestions.forEach((q: RawQuestion, index: number) => {
-      const { questionText, options } = parseQuestion(q.question);
-      const prompt = extractQuestionPrompt(questionText);
-      const passage = questionText.replace(prompt, '').trim();
-      addQuestion(createQuestion(
-        globalId++,
-        `BND_${String(index + 1).padStart(3, '0')}`,
-        "English",
-        "Standard English Conventions",
-        "Boundaries",
-        undefined,
-        passage,
-        prompt,
-        options,
-        q.answer,
-        q.explanation,
-        getQuestionDifficulty("Boundaries", undefined, index),
-      ));
-    });
+    // Helper to process standardized format questions
+    const processStandardizedQuestions = (
+      data: any,
+      topic: string,
+      subTopic: string | undefined,
+      idPrefix: string
+    ) => {
+      if (!data?.questions) return;
+      data.questions.forEach((q: any, index: number) => {
+        const questionText = q.content?.question || '';
+        const prompt = extractQuestionPrompt(questionText);
+        const passage = questionText.replace(prompt, '').trim();
+        
+        // Parse options from array format ["A) text", "B) text", ...] to object format
+        let options: { [key: string]: string } = {};
+        if (Array.isArray(q.content?.options)) {
+          q.content.options.forEach((opt: string) => {
+            const match = opt.match(/^([A-D])\)\s*(.*)$/);
+            if (match) {
+              options[match[1]] = match[2];
+            }
+          });
+        }
+        
+        const difficulty = (q.difficulty?.toLowerCase() || 'medium') as Difficulty;
+        
+        addQuestion(createQuestion(
+          globalId++,
+          `${idPrefix}_${String(index + 1).padStart(3, '0')}`,
+          "English",
+          "Standard English Conventions",
+          topic,
+          subTopic,
+          passage,
+          prompt,
+          options,
+          q.solution?.answer || '',
+          q.solution?.explanation || '',
+          difficulty,
+        ));
+      });
+    };
     
-    // Process Verbs
-    const verbsFormStructure = verbsData?.["English Reading & Writing"]?.["Standard English Conventions"]?.["Form, Structure, and Sense"];
-    if (verbsFormStructure) {
-      // Subject-Verb Agreement
-      (verbsFormStructure["Subject-Verb Agreement"] || []).forEach((q: RawQuestion, index: number) => {
-        const { questionText, options } = parseQuestion(q.question);
-        const prompt = extractQuestionPrompt(questionText);
-        const passage = questionText.replace(prompt, '').trim();
-        addQuestion(createQuestion(
-          globalId++,
-          `SVA_${String(index + 1).padStart(3, '0')}`,
-          "English",
-          "Standard English Conventions",
-          "Form, Structure, and Sense",
-          "Subject-Verb Agreement",
-          passage,
-          prompt,
-          options,
-          q.answer,
-          q.explanation,
-          getQuestionDifficulty("Form, Structure, and Sense", "Subject-Verb Agreement", index),
-        ));
-      });
-      
-      // Verb Tenses
-      (verbsFormStructure["Verb Tenses"] || []).forEach((q: RawQuestion, index: number) => {
-        const { questionText, options } = parseQuestion(q.question);
-        const prompt = extractQuestionPrompt(questionText);
-        const passage = questionText.replace(prompt, '').trim();
-        addQuestion(createQuestion(
-          globalId++,
-          `VT_${String(index + 1).padStart(3, '0')}`,
-          "English",
-          "Standard English Conventions",
-          "Form, Structure, and Sense",
-          "Verb Tenses",
-          passage,
-          prompt,
-          options,
-          q.answer,
-          q.explanation,
-          getQuestionDifficulty("Form, Structure, and Sense", "Verb Tenses", index),
-        ));
-      });
-      
-      // Verb Forms
-      (verbsFormStructure["Verb Forms"] || []).forEach((q: RawQuestion, index: number) => {
-        const { questionText, options } = parseQuestion(q.question);
-        const prompt = extractQuestionPrompt(questionText);
-        const passage = questionText.replace(prompt, '').trim();
-        addQuestion(createQuestion(
-          globalId++,
-          `VF_${String(index + 1).padStart(3, '0')}`,
-          "English",
-          "Standard English Conventions",
-          "Form, Structure, and Sense",
-          "Verb Forms",
-          passage,
-          prompt,
-          options,
-          q.answer,
-          q.explanation,
-          getQuestionDifficulty("Form, Structure, and Sense", "Verb Forms", index),
-        ));
-      });
+    // Process Boundaries - load from boundaries_full.json which has 125 questions
+    try {
+      const fullBoundariesData = await loadJsonFile('/data/boundaries_full.json').catch(() => null);
+      const fullBoundariesQuestions = fullBoundariesData?.["English Reading & Writing"]?.["Standard English Conventions"]?.["Boundaries"] || [];
+      if (fullBoundariesQuestions.length > 0) {
+        fullBoundariesQuestions.forEach((q: RawQuestion, index: number) => {
+          const { questionText, options } = parseQuestion(q.question);
+          const prompt = extractQuestionPrompt(questionText);
+          const passage = questionText.replace(prompt, '').trim();
+          addQuestion(createQuestion(
+            globalId++,
+            `BND_${String(index + 1).padStart(3, '0')}`,
+            "English",
+            "Standard English Conventions",
+            "Boundaries",
+            undefined,
+            passage,
+            prompt,
+            options,
+            q.answer,
+            q.explanation,
+            getQuestionDifficulty("Boundaries", undefined, index),
+          ));
+        });
+      } else if (boundariesData?.questions && boundariesData.questions.length > 0) {
+        // Fallback to standardized format if full file not available
+        processStandardizedQuestions(boundariesData, "Boundaries", undefined, "BND");
+      }
+    } catch (e) {
+      // Fallback to standardized format
+      if (boundariesData?.questions) {
+        processStandardizedQuestions(boundariesData, "Boundaries", undefined, "BND");
+      }
     }
     
-    // Process Pronouns
-    const pronounFormStructure = pronounData?.["English Reading & Writing"]?.["Standard English Conventions"]?.["Form, Structure, and Sense"];
-    if (pronounFormStructure) {
-      (pronounFormStructure["Pronouns"] || []).forEach((q: RawQuestion, index: number) => {
-        const { questionText, options } = parseQuestion(q.question);
-        const prompt = extractQuestionPrompt(questionText);
-        const passage = questionText.replace(prompt, '').trim();
-        addQuestion(createQuestion(
-          globalId++,
-          `PRO_${String(index + 1).padStart(3, '0')}`,
-          "English",
-          "Standard English Conventions",
-          "Form, Structure, and Sense",
-          "Pronouns",
-          passage,
-          prompt,
-          options,
-          q.answer,
-          q.explanation,
-          getQuestionDifficulty("Form, Structure, and Sense", "Pronouns", index),
-        ));
-      });
+    // Process Subject-Verb Agreement (new standardized format)
+    processStandardizedQuestions(svaData, "Form, Structure, and Sense", "Subject-Verb Agreement", "SVA");
+    
+    // Process Verb Tenses (new standardized format)
+    processStandardizedQuestions(verbTensesData, "Form, Structure, and Sense", "Verb Tenses", "VT");
+    
+    // Process Verb Forms (new standardized format)
+    processStandardizedQuestions(verbFormsData, "Form, Structure, and Sense", "Verb Forms", "VF");
+    
+    // Process Pronouns (check for both old nested and new standardized format)
+    if (pronounData?.questions) {
+      processStandardizedQuestions(pronounData, "Form, Structure, and Sense", "Pronouns", "PRO");
+    } else {
+      const pronounFormStructure = pronounData?.["English Reading & Writing"]?.["Standard English Conventions"]?.["Form, Structure, and Sense"];
+      if (pronounFormStructure) {
+        (pronounFormStructure["Pronouns"] || []).forEach((q: RawQuestion, index: number) => {
+          const { questionText, options } = parseQuestion(q.question);
+          const prompt = extractQuestionPrompt(questionText);
+          const passage = questionText.replace(prompt, '').trim();
+          addQuestion(createQuestion(
+            globalId++,
+            `PRO_${String(index + 1).padStart(3, '0')}`,
+            "English",
+            "Standard English Conventions",
+            "Form, Structure, and Sense",
+            "Pronouns",
+            passage,
+            prompt,
+            options,
+            q.answer,
+            q.explanation,
+            getQuestionDifficulty("Form, Structure, and Sense", "Pronouns", index),
+          ));
+        });
+      }
     }
     
-    // Process Modifiers
-    const modifiersFormStructure = modifiersData?.["English Reading & Writing"]?.["Standard English Conventions"]?.["Form, Structure, and Sense"];
-    if (modifiersFormStructure) {
-      // Modifiers
-      (modifiersFormStructure["Modifiers"] || []).forEach((q: RawQuestion, index: number) => {
-        const { questionText, options } = parseQuestion(q.question);
-        const prompt = extractQuestionPrompt(questionText);
-        const passage = questionText.replace(prompt, '').trim();
-        addQuestion(createQuestion(
-          globalId++,
-          `MOD_${String(index + 1).padStart(3, '0')}`,
-          "English",
-          "Standard English Conventions",
-          "Form, Structure, and Sense",
-          "Modifiers",
-          passage,
-          prompt,
-          options,
-          q.answer,
-          q.explanation,
-          getQuestionDifficulty("Form, Structure, and Sense", "Modifiers", index),
-        ));
-      });
-      
-      // Parallel Structure
-      (modifiersFormStructure["Parallel Structure"] || []).forEach((q: RawQuestion, index: number) => {
-        const { questionText, options } = parseQuestion(q.question);
-        const prompt = extractQuestionPrompt(questionText);
-        const passage = questionText.replace(prompt, '').trim();
-        addQuestion(createQuestion(
-          globalId++,
-          `PS_${String(index + 1).padStart(3, '0')}`,
-          "English",
-          "Standard English Conventions",
-          "Form, Structure, and Sense",
-          "Parallel Structure",
-          passage,
-          prompt,
-          options,
-          q.answer,
-          q.explanation,
-          getQuestionDifficulty("Form, Structure, and Sense", "Parallel Structure", index),
-        ));
-      });
-      
-      // Miscellaneous Topics / Other Topics
-      (modifiersFormStructure["Miscellaneous Topics"] || modifiersFormStructure["Other Topics"] || []).forEach((q: RawQuestion, index: number) => {
-        const { questionText, options } = parseQuestion(q.question);
-        const prompt = extractQuestionPrompt(questionText);
-        const passage = questionText.replace(prompt, '').trim();
-        addQuestion(createQuestion(
-          globalId++,
-          `MISC_${String(index + 1).padStart(3, '0')}`,
-          "English",
-          "Standard English Conventions",
-          "Form, Structure, and Sense",
-          "Miscellaneous Topics",
-          passage,
-          prompt,
-          options,
-          q.answer,
-          q.explanation,
-          getQuestionDifficulty("Form, Structure, and Sense", "Miscellaneous Topics", index),
-        ));
-      });
-    }
+    // Process Modifiers (new standardized format)
+    processStandardizedQuestions(modifiersData, "Form, Structure, and Sense", "Modifiers", "MOD");
+    
+    // Process Parallel Structure (new standardized format)
+    processStandardizedQuestions(parallelStructureData, "Form, Structure, and Sense", "Parallel Structure", "PS");
+    
+    // Process Miscellaneous Topics (new standardized format)
+    processStandardizedQuestions(miscTopicsData, "Form, Structure, and Sense", "Miscellaneous Topics", "MISC");
     
     // Track indices for difficulty assignment
     let transitionsIndex = 0;
     let inferencesIndex = 0;
     let rhetoricalSynthesisIndex = 0;
     
-    // Process Transitions questions
-    const expressionOfIdeas = transitionsData?.["English Reading & Writing"]?.["Expression of Ideas"];
-    
-    if (expressionOfIdeas) {
-      const transitionsArray = expressionOfIdeas["Transitions"] || [];
-      
-      transitionsArray.forEach((q: CentralIdeaQuestion) => {
-        const options = parseNewFormatOptions(q.options);
+    // Process Transitions questions (check for standardized format first)
+    if (transitionsData?.questions) {
+      transitionsData.questions.forEach((q: any, index: number) => {
+        const questionText = q.content?.question || '';
+        const prompt = extractQuestionPrompt(questionText);
+        const passage = q.content?.passage || questionText.replace(prompt, '').trim();
+        
+        let options: { [key: string]: string } = {};
+        if (Array.isArray(q.content?.options)) {
+          q.content.options.forEach((opt: string) => {
+            const match = opt.match(/^([A-D])\)\s*(.*)$/);
+            if (match) {
+              options[match[1]] = match[2];
+            }
+          });
+        }
+        
+        const difficulty = (q.difficulty?.toLowerCase() || 'medium') as Difficulty;
+        
         addQuestion(createQuestion(
           globalId++,
-          `TRN_${String(transitionsIndex + 1).padStart(3, '0')}`,
+          `TRN_${String(index + 1).padStart(3, '0')}`,
           "English",
           "Expression of Ideas",
           "Transitions",
           undefined,
-          q.passage || '',
-          q.question,
+          passage,
+          prompt,
           options,
-          q.answer,
-          q.explanation,
-          getQuestionDifficulty("Transitions", undefined, transitionsIndex++),
+          q.solution?.answer || '',
+          q.solution?.explanation || '',
+          difficulty,
         ));
+        transitionsIndex++;
       });
-      
-      // Rhetorical Synthesis
-      (expressionOfIdeas["Rhetorical Synthesis"] || []).forEach((q: CentralIdeaQuestion) => {
-        const options = parseNewFormatOptions(q.options);
-        addQuestion(createQuestion(
-          globalId++,
-          `RS_${String(rhetoricalSynthesisIndex + 1).padStart(3, '0')}`,
-          "English",
-          "Expression of Ideas",
-          "Rhetorical Synthesis",
-          undefined,
-          q.passage || '',
-          q.question,
-          options,
-          q.answer,
-          q.explanation,
-          getQuestionDifficulty("Rhetorical Synthesis", undefined, rhetoricalSynthesisIndex++),
-        ));
-      });
+    } else {
+      // Old nested format
+      const expressionOfIdeas = transitionsData?.["English Reading & Writing"]?.["Expression of Ideas"];
+      if (expressionOfIdeas) {
+        const transitionsArray = expressionOfIdeas["Transitions"] || [];
+        
+        transitionsArray.forEach((q: CentralIdeaQuestion) => {
+          const options = parseNewFormatOptions(q.options);
+          addQuestion(createQuestion(
+            globalId++,
+            `TRN_${String(transitionsIndex + 1).padStart(3, '0')}`,
+            "English",
+            "Expression of Ideas",
+            "Transitions",
+            undefined,
+            q.passage || '',
+            q.question,
+            options,
+            q.answer,
+            q.explanation,
+            getQuestionDifficulty("Transitions", undefined, transitionsIndex++),
+          ));
+        });
+        
+        // Rhetorical Synthesis
+        (expressionOfIdeas["Rhetorical Synthesis"] || []).forEach((q: CentralIdeaQuestion) => {
+          const options = parseNewFormatOptions(q.options);
+          addQuestion(createQuestion(
+            globalId++,
+            `RS_${String(rhetoricalSynthesisIndex + 1).padStart(3, '0')}`,
+            "English",
+            "Expression of Ideas",
+            "Rhetorical Synthesis",
+            undefined,
+            q.passage || '',
+            q.question,
+            options,
+            q.answer,
+            q.explanation,
+            getQuestionDifficulty("Rhetorical Synthesis", undefined, rhetoricalSynthesisIndex++),
+          ));
+        });
+      }
     }
     
-    // Process inference.json - contains Transitions and Inferences
-    if (inferenceData) {
+    // Process inference.json (check for standardized format first)
+    if (inferenceData?.questions) {
+      inferenceData.questions.forEach((q: any, index: number) => {
+        const questionText = q.content?.question || '';
+        const prompt = extractQuestionPrompt(questionText);
+        const passage = q.content?.passage || questionText.replace(prompt, '').trim();
+        
+        let options: { [key: string]: string } = {};
+        if (Array.isArray(q.content?.options)) {
+          q.content.options.forEach((opt: string) => {
+            const match = opt.match(/^([A-D])\)\s*(.*)$/);
+            if (match) {
+              options[match[1]] = match[2];
+            }
+          });
+        }
+        
+        const difficulty = (q.difficulty?.toLowerCase() || 'medium') as Difficulty;
+        
+        addQuestion(createQuestion(
+          globalId++,
+          `INF_${String(index + 1).padStart(3, '0')}`,
+          "English",
+          "Information and Ideas",
+          "Inferences",
+          undefined,
+          passage,
+          prompt,
+          options,
+          q.solution?.answer || '',
+          q.solution?.explanation || '',
+          difficulty,
+        ));
+        inferencesIndex++;
+      });
+    } else {
+      // Old nested format
       // Transitions from inference.json
       const inferenceExpressionOfIdeas = inferenceData?.["English Reading & Writing"]?.["Expression of Ideas"];
       if (inferenceExpressionOfIdeas) {
