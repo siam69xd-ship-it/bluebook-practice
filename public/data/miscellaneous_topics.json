@@ -1,0 +1,177 @@
+{
+  "test_metadata": {
+    "subject": "English Reading & Writing",
+    "category": "Standard English Conventions",
+    "skill": "Miscellaneous Topics"
+  },
+  "questions": [
+    {
+      "id": "misc_1",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Because he is very protective, Ralph stepped in to prevent his brother, who was only 8 years old, ________ fighting the older students.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) at\nB) to\nC) from\nD) with",
+        "options": ["A) at", "B) to", "C) from", "D) with"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Idiomatic preposition: 'prevent...from.'"
+      }
+    },
+    {
+      "id": "misc_2",
+      "difficulty": "Medium",
+      "content": {
+        "question": "After stepping onto the porch, the entire family was ________ seeing a bear in the backyard.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) startled with\nB) startled by\nC) surprised in\nD) surprised with",
+        "options": ["A) startled with", "B) startled by", "C) surprised in", "D) surprised with"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Idiomatic: 'startled by.'"
+      }
+    },
+    {
+      "id": "misc_3",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The treatment was administered and then patients were asked to return the next day since the ________ of the treatment, if there were any, do not appear for 24 hours.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) affects\nB) affect\nC) effect\nD) effects",
+        "options": ["A) affects", "B) affect", "C) effect", "D) effects"]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "'Effects' (noun, plural) meaning results. A/B are verbs, C singular."
+      }
+    },
+    {
+      "id": "misc_4",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Before the story about the financials became public, Aura System, an electric battery company, ________ gone public, but now there is no chance of that happening.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) would of\nB) could of\nC) might have\nD) possibly to have",
+        "options": ["A) would of", "B) could of", "C) might have", "D) possibly to have"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Correct modal: 'might have' for past possibility. A/B misuse 'of' for 'have.'"
+      }
+    },
+    {
+      "id": "misc_5",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Research performed on the hummingbird population indicated that more time spent searching for food ________ a longer lifespan.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) correlates with\nB) correlates to\nC) points for\nD) insists on",
+        "options": ["A) correlates with", "B) correlates to", "C) points for", "D) insists on"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Idiomatic: 'correlates with.'"
+      }
+    },
+    {
+      "id": "misc_6",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The invention of barcodes made cashiers' jobs so much easier, as it substantially ________ of minutes that it took to calculate the total price of a customer's purchase.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) reduced the amount\nB) lowered the amount\nC) decreased the number\nD) deducted the number",
+        "options": ["A) reduced the amount", "B) lowered the amount", "C) decreased the number", "D) deducted the number"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "'Number of minutes' (countable). A/B use 'amount' for uncountable."
+      }
+    },
+    {
+      "id": "misc_7",
+      "difficulty": "Easy",
+      "content": {
+        "question": "After turning in my paper, my teacher reminded me that I needed to ________ all of my sources.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) sight\nB) site\nC) cite\nD) recite",
+        "options": ["A) sight", "B) site", "C) cite", "D) recite"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "'Cite' means reference sources. A 'sight' vision, B 'site' location."
+      }
+    },
+    {
+      "id": "misc_8",
+      "difficulty": "Medium",
+      "content": {
+        "question": "For Donations Unlimited, donated clothes that are in fair to good condition are much easier to resell ________ used household items, such as pans, cutlery, or rice cookers.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) than\nB) then\nC) when compared on\nD) contrasted to",
+        "options": ["A) than", "B) then", "C) when compared on", "D) contrasted to"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Comparison: 'easier to...than.' B 'then' time."
+      }
+    },
+    {
+      "id": "misc_9",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Selecting the right marketing team and publishing strategy directly ________ the success – or failure – of the book launch.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) effects\nB) effect\nC) affect\nD) affects",
+        "options": ["A) effects", "B) effect", "C) affect", "D) affects"]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "'Affects' (verb) meaning influences."
+      }
+    },
+    {
+      "id": "misc_10",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Clear glass windows were installed in the house ________ letting in more natural light.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) as a means to\nB) as a means of\nC) as a virtue of\nD) as a virtue to",
+        "options": ["A) as a means to", "B) as a means of", "C) as a virtue of", "D) as a virtue to"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Idiomatic: 'as a means of.'"
+      }
+    },
+    {
+      "id": "misc_11",
+      "difficulty": "Easy",
+      "content": {
+        "question": "Before finalizing her decision to buy, Sarah did ________ research on the property values in the neighborhood to make sure that buying the house was a good financial decision.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) through\nB) thorough\nC) thru\nD) though",
+        "options": ["A) through", "B) thorough", "C) thru", "D) though"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "'Thorough' means complete. A 'through' passage."
+      }
+    },
+    {
+      "id": "misc_12",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Some mycologists prefer studying fungi in a laboratory ________ others prefer to do field work and attempt to identify new species of mushrooms in the wild.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) setting while\nB) setting, while\nC) setting, meanwhile,\nD) setting so that",
+        "options": ["A) setting while", "B) setting, while", "C) setting, meanwhile,", "D) setting so that"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "'Setting, while' for contrast with comma."
+      }
+    },
+    {
+      "id": "misc_13",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The five-star hotel lived up to its promise of excellent service: the staff were amazingly efficient, provided fantastic recommendations for the best restaurants and attractions in the city, and assisted in booking all of our transportations to _______ that we enjoyed our stay.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) ensure\nB) assure\nC) insure\nD) make an assurance",
+        "options": ["A) ensure", "B) assure", "C) insure", "D) make an assurance"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "'Ensure' means make certain. B 'assure' convince, C 'insure' protect financially."
+      }
+    },
+    {
+      "id": "misc_14",
+      "difficulty": "Medium",
+      "content": {
+        "question": "If I had a nickel for every time that I saw a dog ride a ________ broke long ago.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) bike, I would have been\nB) bike, I have been\nC) bike, I would of been\nD) bike, I was",
+        "options": ["A) bike, I would have been", "B) bike, I have been", "C) bike, I would of been", "D) bike, I was"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Conditional: 'would have been' (past perfect). C 'of' error."
+      }
+    }
+  ]
+}

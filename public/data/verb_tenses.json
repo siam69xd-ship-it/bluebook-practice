@@ -1,0 +1,333 @@
+{
+  "test_metadata": {
+    "subject": "English Reading & Writing",
+    "category": "Standard English Conventions",
+    "skill": "Verb Tenses"
+  },
+  "questions": [
+    {
+      "id": "vt_1",
+      "difficulty": "Medium",
+      "content": {
+        "question": "An emulsifier is a type of compound that ______ to stabilize an emulsion—a mixture of two or more liquids that otherwise would not easily blend. In the cosmetics industry, emulsifiers like Detostearyl are commonly used to blend oil and water.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) served\nB) had served\nC) serves\nD) was serving",
+        "options": ["A) served", "B) had served", "C) serves", "D) was serving"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "A general fact is stated, so present tense 'serves' is correct."
+      }
+    },
+    {
+      "id": "vt_2",
+      "difficulty": "Medium",
+      "content": {
+        "question": "In the spring of 1964, it was hard to go anywhere without hearing the song 'Cotton Candy' by The Sylvers. As of April 11, the song had spent thirteen straight weeks on the Billboard Hot 100 chart and ______ № 1 on the list.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) have been ranking\nB) was ranked\nC) were ranked\nD) are ranked",
+        "options": ["A) have been ranking", "B) was ranked", "C) were ranked", "D) are ranked"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Past tense 'was ranked' matches the past perfect 'had spent.'"
+      }
+    },
+    {
+      "id": "vt_3",
+      "difficulty": "Easy",
+      "content": {
+        "question": "The word 'robot' ______ first used in the 1920 play R.U.R. by Czech author Karel Capek.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) were\nB) were being\nC) was\nD) have been",
+        "options": ["A) were", "B) were being", "C) was", "D) have been"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The event occurred in the past (1920), so simple past 'was' is correct."
+      }
+    },
+    {
+      "id": "vt_4",
+      "difficulty": "Medium",
+      "content": {
+        "question": "In 2021, Sara McArthy ______ as a biologist at the University of Connecticut, studying squids.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) working\nB) was working\nC) to work\nD) to have worked",
+        "options": ["A) working", "B) was working", "C) to work", "D) to have worked"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Past continuous 'was working' indicates an ongoing action in the past."
+      }
+    },
+    {
+      "id": "vt_5",
+      "difficulty": "Medium",
+      "content": {
+        "question": "In Moscow, Russia, the average temperature is 62.6 degrees Fahrenheit in June, ______ to 66.6 degree in July, and then dips slightly to 62.6 degrees in August.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) has risen\nB) rises\nC) rising\nD) rose",
+        "options": ["A) has risen", "B) rises", "C) rising", "D) rose"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Present tense 'rises' is used for recurring patterns, parallel to 'is' and 'dips.'"
+      }
+    },
+    {
+      "id": "vt_6",
+      "difficulty": "Medium",
+      "content": {
+        "question": "In 1929, Edwin Herbert Land invented a polarizing filter that was featured in a number of products, from sunglasses to 3D movies. A decade later, Land ______ his technology to invent the world's first instant camera, the Polaroid Land camera.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) used\nB) to have used\nC) to use\nD) using",
+        "options": ["A) used", "B) to have used", "C) to use", "D) using"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Simple past 'used' indicates a completed past action."
+      }
+    },
+    {
+      "id": "vt_7",
+      "difficulty": "Medium",
+      "content": {
+        "question": "A region of the Soviet Union encompassing the present-day city of Tiraspol, Moldova, the Romanian-speaking Moldavian Autonomous Soviet Socialist Republic was in fact only nominally autonomous. President Mikhail Gorbachev's reforms, by helping the Moldavian Republic and other Soviet republics established along ethnolinguistic lines assert their prerogatives, ______ to the Soviet Union's breakup.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) which contributed\nB) contributed\nC) having contributed\nD) contributing",
+        "options": ["A) which contributed", "B) contributed", "C) having contributed", "D) contributing"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The main verb in past tense 'contributed' is needed for a historical event."
+      }
+    },
+    {
+      "id": "vt_8",
+      "difficulty": "Medium",
+      "content": {
+        "question": "If you had turned on the radio in the fall of 1964, there was a good chance that \n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) you would have heard 'Little Marie' by Chuck Berry.\nB) would you have heard 'Little Marie' by Chuck Berry.\nC) you would have heard 'Little Marie' by Chuck Berry?\nD) would you have heard 'Little Marie' by Chuck Berry?",
+        "options": ["A) you would have heard 'Little Marie' by Chuck Berry.", "B) would you have heard 'Little Marie' by Chuck Berry.", "C) you would have heard 'Little Marie' by Chuck Berry?", "D) would you have heard 'Little Marie' by Chuck Berry?"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Conditional perfect 'would have heard' matches the past perfect 'had turned.'"
+      }
+    },
+    {
+      "id": "vt_9",
+      "difficulty": "Medium",
+      "content": {
+        "question": "During the 20th century, Montana, New Jersey, and Colorado each selected a dinosaur from a different genus for its state fossil: Montana ______ from the genus Maiasaura; New Jersey, from Hadrosaurus; and Colorado, from Stegosaurus.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) is choosing\nB) will choose\nC) chooses\nD) chose",
+        "options": ["A) is choosing", "B) will choose", "C) chooses", "D) chose"]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Past tense 'chose' matches the past time frame 'During the 20th century.'"
+      }
+    },
+    {
+      "id": "vt_10",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Since then, the average processing power of microchips—whose cores can number in the dozens, hundreds, or even thousands— drastically\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) has improved\nB) have improved\nC) have been improving\nD) are improving",
+        "options": ["A) has improved", "B) have improved", "C) have been improving", "D) are improving"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "'Since then' requires present perfect. The singular subject 'average processing power' takes 'has improved.'"
+      }
+    },
+    {
+      "id": "vt_11",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The Seljuk Empire, which reigned in central Asia from around 1037 CE to 1194 CE, benefited from trade with other societies; its merchants exported cotton, silk, and fruit and ______ other valuable commodities, such as gold, silver, and agate, which were then traded locally.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) importing\nB) having imported\nC) to import\nD) imported",
+        "options": ["A) importing", "B) having imported", "C) to import", "D) imported"]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Past tense 'imported' is parallel to 'exported.'"
+      }
+    },
+    {
+      "id": "vt_12",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Contrasting a high saturation color palette against dark paper and stoneware, Atlanta-based artist Jiha Moon creates fused pieces, wherein Korean folk art, Western contemporary art, and global popular culture mix. New York's Derek Eller Gallery ______ her work in a solo exhibition that ran in early 2022.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) features\nB) has been featured\nC) featured\nD) will feature",
+        "options": ["A) features", "B) has been featured", "C) featured", "D) will feature"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Past tense 'featured' matches the past time 'ran in early 2022.'"
+      }
+    },
+    {
+      "id": "vt_13",
+      "difficulty": "Hard",
+      "content": {
+        "question": "After he finally watched The Maltese Falcon (1941) at last year's annual film festival, the infamously disagreeable film critic wrote a scathing review. Before that, the film he least enjoyed ______ the more recent classic Slumdog Millionaire (2008).\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) has been\nB) had been\nC) is\nD) was being",
+        "options": ["A) has been", "B) had been", "C) is", "D) was being"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Past perfect 'had been' indicates an action before another past action."
+      }
+    },
+    {
+      "id": "vt_14",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The Byzantine Empire, which reigned in the Mediterranean from around 330 CE to 1453 CE, benefited from trade with other societies: its merchants exported salt, textiles, and iron and ______ other valuable commodities, such as silk, grain, and spices, which were then traded locally.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) to import\nB) imported\nC) importing\nD) having imported",
+        "options": ["A) to import", "B) imported", "C) importing", "D) having imported"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Past tense 'imported' is parallel to 'exported.'"
+      }
+    },
+    {
+      "id": "vt_15",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Louisiana resident Oscar James Dunn, one of the nearly two thousand African Americans elected to public office during the decade that followed the Civil War, ______ his term as lieutenant governor in 1868.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) to begin\nB) having begun\nC) beginning\nD) began",
+        "options": ["A) to begin", "B) having begun", "C) beginning", "D) began"]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Simple past 'began' is needed for a past event."
+      }
+    },
+    {
+      "id": "vt_16",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Nanoengineers have developed synthesized cerium oxide nanoparticles that are used to improve treatments for certain conditions related to oxidative stress. As nanotechnology evolves, medical technology ______ to evolve as well.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) had likely been continuing\nB) will likely continue\nC) would likely have continued\nD) had likely continued",
+        "options": ["A) had likely been continuing", "B) will likely continue", "C) would likely have continued", "D) had likely continued"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Future tense 'will likely continue' is used for a prediction."
+      }
+    },
+    {
+      "id": "vt_17",
+      "difficulty": "Medium",
+      "content": {
+        "question": "We came to see the famous artworks inside the Museo Soumaya in Mexico City, yet the building itself ______ us the most. The building, we later learned, had been designed by Mexican architect Fernando Romero in 2011.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) to impress\nB) have impressed\nC) impressed\nD) impressing",
+        "options": ["A) to impress", "B) have impressed", "C) impressed", "D) impressing"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Simple past 'impressed' describes a past event."
+      }
+    },
+    {
+      "id": "vt_18",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Louisiana resident Oscar James Dunn, one of the nearly two thousand African Americans elected to public office during the decade that followed the Civil War, ______ his term as lieutenant governor in 1868.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) to begin\nB) having begun\nC) beginning\nD) began",
+        "options": ["A) to begin", "B) having begun", "C) beginning", "D) began"]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Same as VT 15; simple past 'began' is correct."
+      }
+    },
+    {
+      "id": "vt_19",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The Roman poet Lucan's Pharsalia, an epic poem about Julius Caesar, is an extant work: it can still be read. By contrast, lost works like Lucan's poem praising Emperor Nero, Laudes Neronis—no copy of which exists— ______ known to antiquarians only through references in extant works.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) have become\nB) is becoming\nC) has become\nD) becomes",
+        "options": ["A) have become", "B) is becoming", "C) has become", "D) becomes"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Present perfect 'have become' is used for a state continuing to the present. The subject 'lost works' is plural."
+      }
+    },
+    {
+      "id": "vt_20",
+      "difficulty": "Medium",
+      "content": {
+        "question": "An upcoming exhibition will showcase Vincent van Gogh's drawing The Spire of the Church of Our Lady, which Van Gogh ______ in the city of Nuenen nearly 150 years ago.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) will complete\nB) has been completing\nC) completed\nD) is completing",
+        "options": ["A) will complete", "B) has been completing", "C) completed", "D) is completing"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Simple past 'completed' is used for a finished past action."
+      }
+    },
+    {
+      "id": "vt_21",
+      "difficulty": "Medium",
+      "content": {
+        "question": "An upcoming exhibition will showcase Vincent van Gogh's drawing Sale of Building Scrap, which Van Gogh ______ in the city of Nuenen nearly 150 years ago.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) has been completing\nB) is completing\nC) will complete\nD) completed",
+        "options": ["A) has been completing", "B) is completing", "C) will complete", "D) completed"]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Same as VT 20; simple past 'completed' is correct."
+      }
+    },
+    {
+      "id": "vt_22",
+      "difficulty": "Medium",
+      "content": {
+        "question": "When we arrived in Venice, Utah, we ______ a large hillside geoglyph of the letter V. Later that day, our hosts remarked that such geoglyphs are quite common in the state.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) notice\nB) are noticing\nC) will notice\nD) noticed",
+        "options": ["A) notice", "B) are noticing", "C) will notice", "D) noticed"]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Simple past 'noticed' matches the past time 'arrived.'"
+      }
+    },
+    {
+      "id": "vt_23",
+      "difficulty": "Hard",
+      "content": {
+        "question": "Was the Greek mythological figure Dionysus, god of wine and the theater, based on a real person? That was the question posed by the writer Euhemerus (fourth century BCE). Euhemerus claimed that Dionysus and the other Greek deities were based on real-life heroes or leaders, tales of whose exploits, told and retold over time, ______ myths—a position later known as euhemerism.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) having eventually become\nB) eventually became\nC) to eventually become\nD) eventually becoming",
+        "options": ["A) having eventually become", "B) eventually became", "C) to eventually become", "D) eventually becoming"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Past tense 'eventually became' indicates a completed past action."
+      }
+    },
+    {
+      "id": "vt_24",
+      "difficulty": "Hard",
+      "content": {
+        "question": "In economics, soybeans are considered a commodity because they are essentially interchangeable, 'essentially' being a word that admits a degree of latitude. In 2021, researchers J. Shorish, M. Stephenson, and M. Zargham devised a mathematical model of fungibility (interchangeability) that would account for such variation. Distinguishing 'exactly the same' and 'nearly the same' commodities—whether crops, lumber, or precious metals—among their primary aims.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) were\nB) was\nC) having been\nD) being",
+        "options": ["A) were", "B) was", "C) having been", "D) being"]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The gerund 'being' is needed to complete the phrase 'among their primary aims.'"
+      }
+    },
+    {
+      "id": "vt_25",
+      "difficulty": "Medium",
+      "content": {
+        "question": "In the periodic table, an element's atomic number indicates how many protons there are in an atom of the element. For example, a calcium atom ______ 20 protons. Professor Raymond Chang explains this concept in more detail in the textbook Chemistry.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) is having\nB) had\nC) has had\nD) has",
+        "options": ["A) is having", "B) had", "C) has had", "D) has"]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Present tense 'has' is used for a general fact."
+      }
+    },
+    {
+      "id": "vt_26",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Yvonne Adhiambo Owuor, born in 1968, is a novelist from Nairobi, Kenya. In recent years more writers from Kenya, including Owuor, ______ to reach audiences beyond the African nation's borders.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) begins\nB) is beginning\nC) has begun\nD) have begun",
+        "options": ["A) begins", "B) is beginning", "C) has begun", "D) have begun"]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Present perfect 'have begun' is used for an action that started in the past and continues to the present. The subject 'writers' is plural."
+      }
+    },
+    {
+      "id": "vt_27",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The Hereford map is a mappa mundi from the fourteenth century. Currently held at Hereford Cathedral in Hereford, England, it is one of over 1,000 such world maps from the European Middle Ages still remaining, with the even older Theodulf of Orleans map from the eleventh century (now held at the Vatican Library in Vatican City) ______ another one.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) is\nB) has been\nC) being\nD) was",
+        "options": ["A) is", "B) has been", "C) being", "D) was"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The participle 'being' is needed to complete the absolute construction."
+      }
+    }
+  ]
+}

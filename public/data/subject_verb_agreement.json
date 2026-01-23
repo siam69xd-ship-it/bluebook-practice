@@ -1,0 +1,765 @@
+{
+  "test_metadata": {
+    "subject": "English Reading & Writing",
+    "category": "Standard English Conventions",
+    "skill": "Subject-Verb Agreement"
+  },
+  "questions": [
+    {
+      "id": "sva_1",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The writer Maya Angelou, along with others such as Lorenzo Thomas and Gwendolyn Brooks, ______ commonly associated with the Black Arts movement, a loose-knit group of writers and artists active in the 1960s and the 1970s who were interested in exploring the Black American experience through their work.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) have been\nB) is\nC) are\nD) were",
+        "options": ["A) have been", "B) is", "C) are", "D) were"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The subject is 'The writer Maya Angelou' (singular). The phrase 'along with others' does not change the subject's number, so a singular verb 'is' is required."
+      }
+    },
+    {
+      "id": "sva_2",
+      "difficulty": "Medium",
+      "content": {
+        "question": "On the other hand, Newark Liberty International Airport, which ______ located in Newark, New Jersey, saw an overall increase in departing passengers over the same time period, from 16,704,844 total passengers to 23,171,827.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) is\nB) are\nC) were\nD) have been",
+        "options": ["A) is", "B) are", "C) were", "D) have been"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "'Newark Liberty International Airport' is singular, so the singular verb 'is' is correct."
+      }
+    },
+    {
+      "id": "sva_3",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Fans of the film The Princess and the Frog (2009) likely ______ the commanding bass voice behind the character Dr. Facilier. It belongs to actor Keith David. The veteran actor has performed in everything from commercials to Broadway musicals, but he is most known for his voice acting.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) recognizes\nB) has recognized\nC) recognize\nD) is recognizing",
+        "options": ["A) recognizes", "B) has recognized", "C) recognize", "D) is recognizing"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The subject 'Fans' is plural, requiring the plural verb 'recognize.'"
+      }
+    },
+    {
+      "id": "sva_4",
+      "difficulty": "Medium",
+      "content": {
+        "question": "In the periodic table, an element's atomic number indicates the number of protons in an atom of that element. For example, there are 25 protons in a manganese atom. Raymand Chang's textbook General Chemistry: The Essential Concepts ______ this concept in detail.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) discussing\nB) discusses\nC) to discuss\nD) having discussed",
+        "options": ["A) discussing", "B) discusses", "C) to discuss", "D) having discussed"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The singular subject 'textbook' needs a singular verb: 'discusses.'"
+      }
+    },
+    {
+      "id": "sva_5",
+      "difficulty": "Medium",
+      "content": {
+        "question": "It is widely known that New York City's Museum of Modern Art (MoMA) ______ a vast collection of oil paintings, including Franz Marc's The World Cow and Katherine S. Dreier's Abstract Portrait of Marcel Duchamp.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) housing\nB) to house\nC) to have housed\nD) houses",
+        "options": ["A) housing", "B) to house", "C) to have housed", "D) houses"]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "'MoMA' is singular, so the singular present verb 'houses' is correct."
+      }
+    },
+    {
+      "id": "sva_6",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Water boils at around 212°F at sea level, but in Highland, Utah (elevation: 4,977 feet above sea level), it boils at around 202°F. Food writer J. Kenji López-Alt, who explores the science behind cooking, ______ that lower boiling points at higher elevations 'can wreak all sorts of havoc on recipes.'\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) explains\nB) explain\nC) have explained\nD) are explaining",
+        "options": ["A) explains", "B) explain", "C) have explained", "D) are explaining"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The singular subject 'Food writer J. Kenji López-Alt' requires the singular verb 'explains.'"
+      }
+    },
+    {
+      "id": "sva_7",
+      "difficulty": "Medium",
+      "content": {
+        "question": "What is the correct pronunciation of Kiribati? In the Gilbertese language spoken by residents of the island nation, the letter combination -ti makes the -s sound; as a result, the country's name ______ pronounced 'Kiribas.'\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) is\nB) are being\nC) have been\nD) are",
+        "options": ["A) is", "B) are being", "C) have been", "D) are"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The singular subject 'name' needs the singular verb 'is.'"
+      }
+    },
+    {
+      "id": "sva_8",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Ann Greely of Maine had been a fierce advocate of women's voting rights in the late 1800s. The dedication of Greely and her fellow activists ______ rewarded in 1920, when the Nineteenth Amendment to the US Constitution guaranteed American women the right to vote.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) was\nB) have been\nC) are\nD) were",
+        "options": ["A) was", "B) have been", "C) are", "D) were"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The singular subject 'dedication' takes the singular past verb 'was.'"
+      }
+    },
+    {
+      "id": "sva_9",
+      "difficulty": "Easy",
+      "content": {
+        "question": "The city of Quito in Ecuador ______ one of the rare places in the world located almost directly on the equator.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) is\nB) have been\nC) are\nD) are being",
+        "options": ["A) is", "B) have been", "C) are", "D) are being"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "'City' is singular, so the singular verb 'is' is correct."
+      }
+    },
+    {
+      "id": "sva_10",
+      "difficulty": "Medium",
+      "content": {
+        "question": "National Heritage Areas like the Arabia Mountain National Heritage Area in Georgia ______ officially designated by the United States Congress as being 'unique [and] nationally significant' for their natural, cultural, and historical attributes.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) has been\nB) are\nC) was\nD) is",
+        "options": ["A) has been", "B) are", "C) was", "D) is"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The plural subject 'National Heritage Areas' requires the plural verb 'are.'"
+      }
+    },
+    {
+      "id": "sva_11",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Upper Fruitland Chapter is one of the 110 chapters of the Navajo Nation (Naabeehó Bináhásdzo). The chapter, whose boundaries encompass 83,400 acres, ______ known as Doo Alk'ai in the Navajo language (Diné bizaaa).\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) are\nB) have been\nC) were\nD) is",
+        "options": ["A) are", "B) have been", "C) were", "D) is"]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The singular subject 'chapter' requires the singular verb 'is.'"
+      }
+    },
+    {
+      "id": "sva_12",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Anthropologist Lívia Barbosa, of the Universidade Federal Fluminense in Brazil, ______ food and sociability in contemporary Brazil—specifically, how foods such as carne-de-sol (a food cured meat dish) and pé-de-moleque (a traditional peanut brittle candy) function as central mechanisms in building social relationships, values, and identities.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) have studied\nB) studies\nC) study\nD) are studying",
+        "options": ["A) have studied", "B) studies", "C) study", "D) are studying"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The singular subject 'Anthropologist Lívia Barbosa' requires the singular verb 'studies.'"
+      }
+    },
+    {
+      "id": "sva_13",
+      "difficulty": "Medium",
+      "content": {
+        "question": "On Guadalupe Peak, which ______ an elevation of 8,751 feet, one can find the highest point in Texas.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) reaches\nB) reach\nC) reaching\nD) to reach",
+        "options": ["A) reaches", "B) reach", "C) reaching", "D) to reach"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "'Which' refers to the singular 'Guadalupe Peak,' so the singular verb 'reaches' is correct."
+      }
+    },
+    {
+      "id": "sva_14",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The writer Audre Lorde, along with others such as Haki Madhubuti and Quincy Troupe, ______ commonly associated with the Black Arts movement, a loose-knit group of writers and artists active in the 1960s and the 1970s who were interested in exploring the Black American experience through their work.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) are\nB) have been\nC) were\nD) is",
+        "options": ["A) are", "B) have been", "C) were", "D) is"]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The singular subject 'The writer Audre Lorde' requires the singular verb 'is.'"
+      }
+    },
+    {
+      "id": "sva_15",
+      "difficulty": "Medium",
+      "content": {
+        "question": "A species of Byropsis algae produces toxins to avoid being eaten by predators. However, in some cases, the toxins the organism uses to protect itself from predation actually ______ its attractiveness to predators. The Hawaiian sea slug, for example, not only tolerates Byropsis toxins but actually uses them for protection in the same way the algae does.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) is increasing\nB) increase\nC) increases\nD) has increased",
+        "options": ["A) is increasing", "B) increase", "C) increases", "D) has increased"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The plural subject 'toxins' requires the plural verb 'increase.'"
+      }
+    },
+    {
+      "id": "sva_16",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The Song of Roland is an epic poem that ______ a beautiful, heroic story. Originally composed in Old French in the 11th century, the poem has since been translated into many languages, allowing it to reach readers in all corners of the world.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) were telling\nB) have told\nC) tells\nD) tell",
+        "options": ["A) were telling", "B) have told", "C) tells", "D) tell"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The singular subject 'poem' requires the singular verb 'tells.'"
+      }
+    },
+    {
+      "id": "sva_17",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Margaret Wendell Huntington and Nessa Cohen were among the 300 artists who exhibited at the 1913 Armory Show, a groundbreaking New York City art exhibition that introduced modernism to American audiences. Though now canonical, many works featured in the show–particularly one abstract cubist painting by Marcel Duchamp–______ considered shocking at the time.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) were\nB) was\nC) is\nD) has been",
+        "options": ["A) were", "B) was", "C) is", "D) has been"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The plural subject 'works' requires the plural past verb 'were.'"
+      }
+    },
+    {
+      "id": "sva_18",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Light of Truth is a bronze and marble sculpture by artist Richard Hunt. It honors civil rights icon Ida B. Wells. The sculpture ______ in a tree-lined plaza in Chicago, just a few blocks from where Wells lived.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) were standing\nB) have been standing\nC) stands\nD) are standing",
+        "options": ["A) were standing", "B) have been standing", "C) stands", "D) are standing"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The singular subject 'sculpture' requires the singular verb 'stands.'"
+      }
+    },
+    {
+      "id": "sva_19",
+      "difficulty": "Easy",
+      "content": {
+        "question": "Pomo artist Susan Billy creates elaborate baskets. She typically ______ them from willow and sedge.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) weaving\nB) weaves\nC) to weave\nD) to be weaving",
+        "options": ["A) weaving", "B) weaves", "C) to weave", "D) to be weaving"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The singular subject 'She' requires the singular verb 'weaves.'"
+      }
+    },
+    {
+      "id": "sva_20",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Anthony van Dyck, a Flemish mannerist painter whose works are distinctive for their precise yet exaggerated details, ______ frequently included in the seventeenth-century art movement the Antwerp School, whose members were known for depicting rural life in the Low Countries.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) have been\nB) are\nC) were\nD) is",
+        "options": ["A) have been", "B) are", "C) were", "D) is"]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The singular subject 'Anthony van Dyck' requires the singular verb 'is.'"
+      }
+    },
+    {
+      "id": "sva_21",
+      "difficulty": "Hard",
+      "content": {
+        "question": "As comet C/1911 N1 (Kiess) orbits the Sun, it is trailed by a stream of rocky particles. When Earth passes through this meteoroid stream each year, typically between August 28 and September 5, the 66-kilometer-per-second collision between these meteoroids and atmospheric gases ______ streaks of light in the sky—the Aurigid meteor shower.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) produces\nB) are producing\nC) produce\nD) have produced",
+        "options": ["A) produces", "B) are producing", "C) produce", "D) have produced"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The singular subject 'collision' requires the singular verb 'produces.'"
+      }
+    },
+    {
+      "id": "sva_22",
+      "difficulty": "Hard",
+      "content": {
+        "question": "Released in 1996, the AMD K5 microchip contained a single CPU, or core, to execute commands. The invention of the dual-core chip in the early 2000s led to a seismic shift in processing power. Since then, the average processing power of microchips—whose cores can number in the dozens, hundreds, or even thousands—______ drastically\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) has improved\nB) have improved\nC) have been improving\nD) are improving",
+        "options": ["A) has improved", "B) have improved", "C) have been improving", "D) are improving"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The singular subject 'average processing power' requires the singular present perfect verb 'has improved.'"
+      }
+    },
+    {
+      "id": "sva_23",
+      "difficulty": "Medium",
+      "content": {
+        "question": "In knot theory (the mathematical study of curved, closed loops), knots are characterized by their crossing numbers—that is, the number of times the knotted thread crosses over itself. The trefoil knot and the figure-eight knot, each with a crossing number below five, ______ among the simplest possible knots with the fewest number of crossings.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) was\nB) is\nC) has been\nD) are",
+        "options": ["A) was", "B) is", "C) has been", "D) are"]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The plural subject 'knots' (trefoil knot and figure-eight knot) requires the plural verb 'are.'"
+      }
+    },
+    {
+      "id": "sva_24",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Often anthologized alongside the ______ associated with the Black Arts movement—such as Henry Dumas and Ntozake Shange—Haki Madhubuti's poem 'Quality: Gwendolyn Brooks at 73' stands out for its memorable first lines: 'breath, / life after seven decades plus three years / is a lot of breathing.'\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) works of other writer's\nB) work's of other writer's\nC) works of other writers\nD) work's of other writers",
+        "options": ["A) works of other writer's", "B) work's of other writer's", "C) works of other writers", "D) work's of other writers"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The plural noun 'works' is needed, and 'writers' is plural possessive. 'Works of other writers' is correct."
+      }
+    },
+    {
+      "id": "sva_25",
+      "difficulty": "Medium",
+      "content": {
+        "question": "On the other hand, Kansas City International Airport, which ______ located in Kansas City, Missouri, saw an overall increase in departing passengers over the same time period, from 4,891,704 total passengers to 5,759,138.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) is\nB) are\nC) were\nD) have been",
+        "options": ["A) is", "B) are", "C) were", "D) have been"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The singular subject 'Kansas City International Airport' requires the singular verb 'is.'"
+      }
+    },
+    {
+      "id": "sva_26",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Tarawa, with a population of roughly 30,000 people, ______ home to an impressive 29 percent of Kiribati's total population.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) are\nB) are being\nC) is\nD) have been",
+        "options": ["A) are", "B) are being", "C) is", "D) have been"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The singular subject 'Tarawa' requires the singular verb 'is.'"
+      }
+    },
+    {
+      "id": "sva_27",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Soña, with a population of roughly 1.3 million people, ______ home to an impressive 15 percent of Bulgaria's total population.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) is\nB) are\nC) are being\nD) have been",
+        "options": ["A) is", "B) are", "C) are being", "D) have been"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The singular subject 'Soña' requires the singular verb 'is.'"
+      }
+    },
+    {
+      "id": "sva_28",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Most US states and territories have had at least one woman serve as governor. In Nebraska, for example, Governor Kay A. Orr took office on January 9, 1987. In fact, the number of states and territories that have had only male governors ______ almost every year.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) shrinks\nB) shrink\nC) are shrinking\nD) have been shrinking",
+        "options": ["A) shrinks", "B) shrink", "C) are shrinking", "D) have been shrinking"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The singular subject 'number' requires the singular verb 'shrinks.'"
+      }
+    },
+    {
+      "id": "sva_29",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Trade with other societies was vital to the Byzantine Empire, which reigned in the Mediterranean from around 330 CE to 1453 CE. Its people profited by selling salt, textiles, and iron, items that ______ greatly in demand.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) has been\nB) were\nC) was\nD) is",
+        "options": ["A) has been", "B) were", "C) was", "D) is"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The plural subject 'items' requires the plural past verb 'were.'"
+      }
+    },
+    {
+      "id": "sva_30",
+      "difficulty": "Medium",
+      "content": {
+        "question": "In her work as a sociocultural anthropologist, Livia Barbosa studies food and sociability in contemporary Brazil—namely, how common Brazilian foods like tareco (a disk-shaped biscuit) and coxinha (a stuffed fried dough) ______ as central mechanisms in building social relationships, values, and identities.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) is functioning\nB) functions\nC) has functioned\nD) function",
+        "options": ["A) is functioning", "B) functions", "C) has functioned", "D) function"]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The plural subject 'foods' requires the plural verb 'function.'"
+      }
+    },
+    {
+      "id": "sva_31",
+      "difficulty": "Medium",
+      "content": {
+        "question": "In the list 'Things That Arouse a Fond Memory of the Past' from Sei Shōnagon's Pillow Book, the author delights in pressed silk, a moonlit night, and dried hollyhock. So shrewd an observer is Shōnagon, a lady-in-waiting to Empress Teishi, that her book's musings on tenth-century Japanese courtly life ______ readers a thousand years later.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) has fascinated\nB) fascinates\nC) fascinate\nD) is fascinating",
+        "options": ["A) has fascinated", "B) fascinates", "C) fascinate", "D) is fascinating"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The plural subject 'musings' requires the plural verb 'fascinate.'"
+      }
+    },
+    {
+      "id": "sva_32",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The present-day city of Yoshkar-Ola, Russia, was the capital of the Mari Autonomous Soviet Socialist Republic, one of many nominally autonomous republics within the Soviet Union. Each of these republics ______ established along ethnolinguistic lines: most residents of the Mari Republic spoke Mari, for example.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) have been\nB) are\nC) were\nD) was",
+        "options": ["A) have been", "B) are", "C) were", "D) was"]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The singular subject 'Each' requires the singular verb 'was.'"
+      }
+    },
+    {
+      "id": "sva_33",
+      "difficulty": "Medium",
+      "content": {
+        "question": "An emulsifier is a type of compound that serves to stabilize an emulsion—a mixture of two or more liquids that otherwise would not easily blend together. In the cosmetics industry, emulsifiers such as stearyl alcohol ______ to blend oil and water into homogeneous formulations, like lotions and perfumes.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) employed\nB) being employed\nC) are employed\nD) that they employ",
+        "options": ["A) employed", "B) being employed", "C) are employed", "D) that they employ"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The plural subject 'emulsifiers' requires the plural verb 'are employed.'"
+      }
+    },
+    {
+      "id": "sva_34",
+      "difficulty": "Medium",
+      "content": {
+        "question": "In the periodic table, an element's atomic number indicates how many protons there are in an atom of the element. For example, a helium atom ______ 2 protons. Professor Raymond Chang explains this concept in more detail in the textbook Chemistry.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) has had\nB) has\nC) is having\nD) had",
+        "options": ["A) has had", "B) has", "C) is having", "D) had"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The singular subject 'atom' requires the singular verb 'has.'"
+      }
+    },
+    {
+      "id": "sva_35",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The length of bird eggs varies widely across species, and an ecological ______ compared the lengths of eggs produced by different bird species found Holiastur indus eggs to be longer, on average, than Calidris alpina eggs.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) study, that\nB) study\nC) study that\nD) study which,",
+        "options": ["A) study, that", "B) study", "C) study that", "D) study which,"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The singular subject 'study' requires a relative clause 'that compared...' to complete the sentence."
+      }
+    },
+    {
+      "id": "sva_36",
+      "difficulty": "Hard",
+      "content": {
+        "question": "Mathematician Grigori Perelman, sometimes in conjunction with mathematicians Richard S. Hamilton and Shing-Tung Yau, ______ credited with proving the Poincaré conjecture. Having built on Hamilton's previous work to solve the proof, Perelman has insisted that Hamilton receive credit. Yau later found and closed gaps in Perelman's proof, persuading some mathematicians that he deserves credit as well.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) is\nB) have been\nC) are\nD) are being",
+        "options": ["A) is", "B) have been", "C) are", "D) are being"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The singular subject 'Mathematician Grigori Perelman' requires the singular verb 'is.'"
+      }
+    },
+    {
+      "id": "sva_37",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Objects orbiting in the outer solar system between Jupiter and Neptune, such as 2010 BL4, a 16-kilometer-wide body first detected in 2010, ______ both asteroidal and comet-like characteristics, being closer in size and appearance to asteroids but travelling in an elliptical orbit more closely resembling that of comets.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) exhibits\nB) exhibit\nC) is exhibiting\nD) has exhibited",
+        "options": ["A) exhibits", "B) exhibit", "C) is exhibiting", "D) has exhibited"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The plural subject 'Objects' requires the plural verb 'exhibit.'"
+      }
+    },
+    {
+      "id": "sva_38",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Increased gender diversity is revitalizing the field of economies, according to Harvard's Claudia Goldin. The trailblazing accomplishments of Goldin, winner of the 2023 Nobel Prize in Economics for her work on women in the labor force, ______ to the value of scholars of diverse backgrounds in spurring research into previously unexplored, but vitally important, topics.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) attests\nB) attest\nC) has attested\nD) is attesting",
+        "options": ["A) attests", "B) attest", "C) has attested", "D) is attesting"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The plural subject 'accomplishments' requires the plural verb 'attest.'"
+      }
+    },
+    {
+      "id": "sva_39",
+      "difficulty": "Medium",
+      "content": {
+        "question": "In the late nineteenth and early twentieth centuries, automobiles were commonly referred to as horseless carriages after the older technology they still resembled. Known as the Brass Era, this period in automotive design is remembered for its grandeur and artistry; its vehicles ______ by collectors for their ornate detailing and gleaming brass fittings.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) highly prized\nB) had been highly prized\nC) are highly prized\nD) were highly prized",
+        "options": ["A) highly prized", "B) had been highly prized", "C) are highly prized", "D) were highly prized"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The plural subject 'vehicles' requires the plural verb 'are highly prized.'"
+      }
+    },
+    {
+      "id": "sva_40",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Analyst, like other dactyls that pair exclusively with one other word (e.g., 'fortify' and 'mortify'), ______ with 'panelist' to form a closed rhyming pair.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) couple\nB) are coupled\nC) couples\nD) have coupled",
+        "options": ["A) couple", "B) are coupled", "C) couples", "D) have coupled"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The singular subject 'Analyst' requires the singular verb 'couples.'"
+      }
+    },
+    {
+      "id": "sva_41",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Upper Fruitland Chapter is one of the 110 chapters of the Navajo Nation (Naabeehó Bináhásdzo). The chapter, whose boundaries encompass 83,400 acres, ______ known as Doo Alk'ai in the Navajo language (Diné bizaad).\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) are\nB) have been\nC) were\nD) is",
+        "options": ["A) are", "B) have been", "C) were", "D) is"]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The singular subject 'chapter' requires the singular verb 'is.'"
+      }
+    },
+    {
+      "id": "sva_42",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Although the epic poem The Aeneid dates back to the 1st century BCE, ______ compelling narrative still captivates readers today.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) their\nB) they're\nC) its\nD) it's",
+        "options": ["A) their", "B) they're", "C) its", "D) it's"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The singular possessive pronoun 'its' is needed to refer to the singular poem."
+      }
+    },
+    {
+      "id": "sva_43",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Necclassical economic models assume that people consistently make rational economic decisions, but Francesca Gino of Harvard Business School makes no such assumption; behavioral economists such as Gino, whose research focuses on worker productivity, ______ that economic decision-making can in fact be highly irrational.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) contend\nB) is contending\nC) has contended\nD) contends",
+        "options": ["A) contend", "B) is contending", "C) has contended", "D) contends"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The plural subject 'behavioral economists' requires the plural verb 'contend.'"
+      }
+    },
+    {
+      "id": "sva_44",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The Greek dramatist Euripides's Cyclops, a satyr play, is an extant work: it can still be read. By contrast, lost works like Euripides's play about the hero Alcmaeon, Alcmaeon in Psophis – no copy of which exists – ______ known to antiquarians only through references in extant works.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) have become\nB) becomes\nC) has become\nD) is becoming",
+        "options": ["A) have become", "B) becomes", "C) has become", "D) is becoming"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The plural subject 'lost works' requires the plural present perfect verb 'have become.'"
+      }
+    },
+    {
+      "id": "sva_45",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Miniature Self-Portrait (1556) is one of dozens of remaining works by Sofonisba Anguissola. Currently, her painting ______ at the Museum of Fine Arts in Boston, where visitors can view the Italian Renaissance artist's work on display.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) will have hung\nB) hangs\nC) hung\nD) was hanging",
+        "options": ["A) will have hung", "B) hangs", "C) hung", "D) was hanging"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The singular subject 'painting' requires the singular verb 'hangs.'"
+      }
+    },
+    {
+      "id": "sva_46",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The human foot contains a variety of skeletal muscles, each playing an important role in the foot's healthy movement. The extensor digitorum brevis, which is attached to the calcaneus, ______ responsibility for extending the middle toes.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) bearing\nB) to bear\nC) bears\nD) having borne",
+        "options": ["A) bearing", "B) to bear", "C) bears", "D) having borne"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The singular subject 'The extensor digitorum brevis' requires the singular verb 'bears.'"
+      }
+    },
+    {
+      "id": "sva_47",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Most conifers (plants that grow cones, such as pines, firs, and spruces) are evergreen, meaning that they keep live foliage year-round. The tamarack tree (Larix laricina), however, is a deciduous conifer, meaning that it regularly ______ all its needles.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) shed\nB) have shed\nC) sheds\nD) shedding",
+        "options": ["A) shed", "B) have shed", "C) sheds", "D) shedding"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The singular subject 'it' refers to the tamarack tree and requires the singular verb 'sheds.'"
+      }
+    },
+    {
+      "id": "sva_48",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The constitution of Australia, enacted in 1901, enshrines 11 total rights across 17,318 words of text. According to constitutional scholar George Tsebelis, who examines the implications of constitutional length on civil rights, ______ 102nd in a global ranking of the shortest constitutions.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) they're\nB) their\nC) it's\nD) its",
+        "options": ["A) they're", "B) their", "C) it's", "D) its"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The contraction 'it's' (it is) is needed to refer to the singular constitution."
+      }
+    },
+    {
+      "id": "sva_49",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The fungus Scleroderma citrinum, commonly referred to as common earthball, is known to establish ectomycorrhizal bonds with certain oak tree species; in many cases, such symbiotic relationships, where in fungal hyphae make contact with the oak's root system, ______ extensive networks, which can be used to transport nutrients between trees.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) to form\nB) having formed\nC) form\nD) forming",
+        "options": ["A) to form", "B) having formed", "C) form", "D) forming"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The plural subject 'relationships' requires the plural verb 'form.'"
+      }
+    },
+    {
+      "id": "sva_50",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The parks of San Jose, California, seem to be making people happier. In a 2022 study, researchers ______ for a relationship between the physical location in which a social media post was created and the content of that post analyzed geotagged social media posts from San Jose. The team found that posts from the city's parks contained more words associated with happiness than other posts did.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) were looking\nB) looked\nC) looking\nD) had looked",
+        "options": ["A) were looking", "B) looked", "C) looking", "D) had looked"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The present participle 'looking' is needed to modify 'researchers' in a participial phrase."
+      }
+    },
+    {
+      "id": "sva_51",
+      "difficulty": "Medium",
+      "content": {
+        "question": "In the 1960s, Greece, Malta, and dozens of other countries were allocated unique country dialing codes to route international calls. Most of the original two- or three-digit codes ______ by International Telegraphs and Telephone Consultative Committee later changed in response to geopolitical circumstances or telecommunication needs.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) were assigned\nB) had been assigned\nC) assigned\nD) would be assigned",
+        "options": ["A) were assigned", "B) had been assigned", "C) assigned", "D) would be assigned"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The past participle 'assigned' is needed to modify 'codes' in a reduced relative clause."
+      }
+    },
+    {
+      "id": "sva_52",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The parks of Chicago, Illinois, seem to be making people happier. In a 2022 study, researchers ______ for a relationship between the physical location in which a social media post was created and the content of that post analyzed geotagged social media posts from Chicago. The team found that posts from the city's parks contained more words associated with happiness than other posts did.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) looking\nB) were looking\nC) looked\nD) had looked",
+        "options": ["A) looking", "B) were looking", "C) looked", "D) had looked"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The present participle 'looking' is needed to modify 'researchers' in a participial phrase."
+      }
+    },
+    {
+      "id": "sva_53",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Proto-Kru is a protolanguage, or a hypothesized ancestral language, of all the Kru languages (thirty-eight languages that, because ______ descendants of Proto-Kru, can provide information about the protolanguage's structure).\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) its\nB) they're\nC) their\nD) it's",
+        "options": ["A) its", "B) they're", "C) their", "D) it's"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The contraction 'they're' (they are) is needed to refer to the plural 'languages.'"
+      }
+    },
+    {
+      "id": "sva_54",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The Greek dramatist Euripides's Cyclops, a satyr play, is an extant work: it can still be read. By contrast, lost works like Euripides's play about the hero Alcmaeon, Alcmaeon in Psophis – no copy of which exists – ______ known to antiquarians only through references in extant works.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) have become\nB) becomes\nC) has become\nD) is becoming",
+        "options": ["A) have become", "B) becomes", "C) has become", "D) is becoming"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The plural subject 'lost works' requires the plural present perfect verb 'have become.'"
+      }
+    },
+    {
+      "id": "sva_55",
+      "difficulty": "Medium",
+      "content": {
+        "question": "In the list 'Adorable Things' from Sei Shonagon's Pillow Book, the author delights in baby sparrows, a face drawn on a melon, and a young courtier in ceremonial garb. So shrewd an observer is Shonagon, a lady-in-waiting to Empress Teishi, that her book's musings on tenth-century Japanese courtly life ______ readers a thousand years later.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) has fascinated\nB) fascinates\nC) is fascinating\nD) fascinate",
+        "options": ["A) has fascinated", "B) fascinates", "C) is fascinating", "D) fascinate"]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The plural subject 'musings' requires the plural verb 'fascinate.'"
+      }
+    },
+    {
+      "id": "sva_56",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Both Pontianak, Indonesia, and Manta, Ecuador, are located at less than one degree latitude. In other words, ______ cities basically sit right on the equator!\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) these\nB) each\nC) that\nD) this",
+        "options": ["A) these", "B) each", "C) that", "D) this"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The plural demonstrative 'these' is needed to refer to the two cities."
+      }
+    },
+    {
+      "id": "sva_57",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The Proto-Atlantic-Congo language, common ancestor of 1,453 African languages with similar linguistic properties, ______ like all protolanguages, hypothetical: there's no direct evidence these ancestral languages actually existed.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) were\nB) is\nC) are\nD) have been",
+        "options": ["A) were", "B) is", "C) are", "D) have been"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The singular subject 'The Proto-Atlantic-Congo language' requires the singular verb 'is.'"
+      }
+    },
+    {
+      "id": "sva_58",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Museo Castillo Serralles, a history museum in Ponce, Puerto Rico, is one of more than eighty museums in the US territory. Puerto Rico museums ______ visitors about everything from the territory's history to its architecture to its coffee.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) inform\nB) informing\nC) to inform\nD) having informed",
+        "options": ["A) inform", "B) informing", "C) to inform", "D) having informed"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The plural subject 'museums' requires the plural verb 'inform.'"
+      }
+    },
+    {
+      "id": "sva_59",
+      "difficulty": "Medium",
+      "content": {
+        "question": "In a US national election, one might expect major-party campaigns to focus on the most populous states. However, if polls and past voting data suggest that the outcome in a given state is a foregone conclusion, a campaign will not invest its resources there. Ultimately, a state's voting record and polling data, not its population size, ______ its importance to campaigns.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) determines\nB) has determined\nC) determining\nD) determine",
+        "options": ["A) determines", "B) has determined", "C) determining", "D) determine"]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The plural subject 'voting record and polling data' requires the plural verb 'determine.'"
+      }
+    },
+    {
+      "id": "sva_60",
+      "difficulty": "Medium",
+      "content": {
+        "question": "After much debate, ______ finally made a decision: the judges for the 1912 Nobel Prize in Literature would award Gerhart Johann Robert Hauptmann of Germany with that year's prize 'for his fruitful, varied and outstanding production in the realm of dramatic art'.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) it\nB) they\nC) you\nD) anyone",
+        "options": ["A) it", "B) they", "C) you", "D) anyone"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The plural pronoun 'they' is needed to refer to the judges."
+      }
+    },
+    {
+      "id": "sva_61",
+      "difficulty": "Medium",
+      "content": {
+        "question": "In a list titled 'Elegant Things' from Sei Shōnagon's Pillow Book, the author delights in a violet waistcoat, wisteria blossoms, and a child eating strawberries. Such lists, observed sharply yet simply by Shonagon, who served as a lady-in-waiting to Empress Teishi in the tenth century, ______ the daily minutiae of Japanese courtly life.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) reveals\nB) was revealing\nC) to reveal\nD) reveal",
+        "options": ["A) reveals", "B) was revealing", "C) to reveal", "D) reveal"]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The plural subject 'lists' requires the plural verb 'reveal.'"
+      }
+    },
+    {
+      "id": "sva_62",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The historian's books about Millard Fillmore ______ what she is best known for, but she is also well regarded for her scholarship on Thomas Jefferson.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) is\nB) are\nC) has been\nD) was",
+        "options": ["A) is", "B) are", "C) has been", "D) was"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The plural subject 'books' requires the plural verb 'are.'"
+      }
+    },
+    {
+      "id": "sva_63",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Disyllabic words ______ as trochees in English metrical verse, such as 'eyebrow' and 'mascot,' consist of one stressed syllable followed by one unstressed syllable.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) have been classified\nB) can be classified\nC) are classified\nD) classified",
+        "options": ["A) have been classified", "B) can be classified", "C) are classified", "D) classified"]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The past participle 'classified' is needed to modify 'words' in a reduced relative clause."
+      }
+    }
+  ]
+}

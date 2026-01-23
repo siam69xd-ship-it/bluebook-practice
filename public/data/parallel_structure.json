@@ -1,0 +1,309 @@
+{
+  "test_metadata": {
+    "subject": "English Reading & Writing",
+    "category": "Standard English Conventions",
+    "skill": "Parallel Structure"
+  },
+  "questions": [
+    {
+      "id": "ps_1",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Studies have shown that the secrets to achieving true happiness are strengthening your closest relationship and ________ care of yourself mentally and physically.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) take\nB) if you take\nC) taking\nD) to take",
+        "options": ["A) take", "B) if you take", "C) taking", "D) to take"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "This tests parallel structure in a list. 'Strengthening' is a gerund, so the parallel form is 'taking' (gerund)."
+      }
+    },
+    {
+      "id": "ps_2",
+      "difficulty": "Medium",
+      "content": {
+        "question": "At birth, baby birds get all of their nutrients by staying in the nest ________ directly from their parents' mouths.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) and they eat\nB) which they eat\nC) and eating\nD) that eat",
+        "options": ["A) and they eat", "B) which they eat", "C) and eating", "D) that eat"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Parallel structure with 'by staying...and eating.' Both are gerunds."
+      }
+    },
+    {
+      "id": "ps_3",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Manny not only overcame his fear of standing in front of large crowds but ________ the best public speaker in his entire school.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) also became\nB) he also became\nC) he also had become\nD) also becoming",
+        "options": ["A) also became", "B) he also became", "C) he also had become", "D) also becoming"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "'Not only...but also' requires parallel verbs: 'overcame...became.'"
+      }
+    },
+    {
+      "id": "ps_4",
+      "difficulty": "Medium",
+      "content": {
+        "question": "During the field trip to the beach, my classmates ignore the warning signs, climbing over the dunes and ________ to the dangerous polluted water.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) exposing themselves\nB) the exposure to\nC) were exposing themselves\nD) expose themselves",
+        "options": ["A) exposing themselves", "B) the exposure to", "C) were exposing themselves", "D) expose themselves"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Parallel participial phrases: 'climbing...exposing.'"
+      }
+    },
+    {
+      "id": "ps_5",
+      "difficulty": "Hard",
+      "content": {
+        "question": "To predict the efficacy of an antibiotic using a computer model, scientists predicted the reduction of bacteria in a petri dish using two separate models: model X and model Y. After 3 days, the predictions based on model X were better ________ and continued to be significantly more accurate 5 days later.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) than model Y\nB) than those based on model Y\nC) than compared with model Y\nD) than model Y's predictions",
+        "options": ["A) than model Y", "B) than those based on model Y", "C) than compared with model Y", "D) than model Y's predictions"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Parallel comparison: 'predictions...those (predictions).' A and D compare to the model itself."
+      }
+    },
+    {
+      "id": "ps_6",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The orchestra conductor can raise the volume by lifting his arms up higher and ________ the volume by moving his hands closer together.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) lowering\nB) lower\nC) lowered\nD) has lowered",
+        "options": ["A) lowering", "B) lower", "C) lowered", "D) has lowered"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Parallel infinitives implied: 'raise...lower.'"
+      }
+    },
+    {
+      "id": "ps_7",
+      "difficulty": "Medium",
+      "content": {
+        "question": "To enhance the survival rate of young salmon in hatcheries, fisheries expert David Park has proposed the introduction of controlled flow environments that mimic natural river conditions. This adaptation is strengthening the salmon's instinctual behaviors and better ________ them for their eventual release into the wild.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) preparing\nB) to prepare\nC) prepare\nD) prepared",
+        "options": ["A) preparing", "B) to prepare", "C) prepare", "D) prepared"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Parallel gerunds: 'strengthening...preparing.'"
+      }
+    },
+    {
+      "id": "ps_8",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Ancient artifacts such as the Rosetta Stone should be in the hands of people who know how to ________ .\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) properly repair, care for, and permanently protect them\nB) properly repair, while caring for and permanently protecting them.\nC) properly repairing, care for, and permanently protect them.\nD) to properly repair care for, permanently protecting them.",
+        "options": ["A) properly repair, care for, and permanently protect them", "B) properly repair, while caring for and permanently protecting them.", "C) properly repairing, care for, and permanently protect them.", "D) to properly repair care for, permanently protecting them."]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Parallel infinitives: 'to repair, care for, and protect.'"
+      }
+    },
+    {
+      "id": "ps_9",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The doctor was a specialist in cardiovascular surgery and ________ during his successful career in medicine.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) had invented the cardiac stint\nB) the cardiac stint inventor\nC) the inventor of the cardiac stint\nD) invented the cardiac stint",
+        "options": ["A) had invented the cardiac stint", "B) the cardiac stint inventor", "C) the inventor of the cardiac stint", "D) invented the cardiac stint"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Parallel nouns: 'a specialist...the inventor.'"
+      }
+    },
+    {
+      "id": "ps_10",
+      "difficulty": "Medium",
+      "content": {
+        "question": "As sustainability becomes more essential, businesses across different sectors are acknowledging the importance of environmentally responsible practices. A 2019 study from Georgetown University found that the benefits of environmental initiatives were actually higher for companies in the business-to-business sector ________ companies in the business-to-consumer sector.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) than those of\nB) than for\nC) than the benefits of\nD) than",
+        "options": ["A) than those of", "B) than for", "C) than the benefits of", "D) than"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Parallel prepositional phrases: 'higher for...than for.'"
+      }
+    },
+    {
+      "id": "ps_11",
+      "difficulty": "Medium",
+      "content": {
+        "question": "According to most doctors, ________ is just as important as exercise for the mind.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) exercising the body\nB) giving the body exercise\nC) exercise for the body\nD) body exercise",
+        "options": ["A) exercising the body", "B) giving the body exercise", "C) exercise for the body", "D) body exercise"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Parallel nouns: 'exercise for the mind...exercise for the body.'"
+      }
+    },
+    {
+      "id": "ps_12",
+      "difficulty": "Medium",
+      "content": {
+        "question": "I often still find myself struggling to properly season beverages, as their flavor profile is much more nuanced ________\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) than cooked dishes.\nB) than these.\nC) then cooked dishes.\nD) than that of cooked dishes.",
+        "options": ["A) than cooked dishes.", "B) than these.", "C) then cooked dishes.", "D) than that of cooked dishes."]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Parallel comparison: 'flavor profile...that (flavor profile) of.'"
+      }
+    },
+    {
+      "id": "ps_13",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The relocation of the gray wolf to Yellowstone National Park in 1995 was a significant event for the species and the park itself. In Yellowstone, the wolves caused a trophic cascade of ecological change – rebalancing elk, deer, and beaver populations – and _______ tourism to the park.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) increasing\nB) increased\nC) to increase\nD) having increased",
+        "options": ["A) increasing", "B) increased", "C) to increase", "D) having increased"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Parallel verbs: 'caused...rebalancing...increased.'"
+      }
+    },
+    {
+      "id": "ps_14",
+      "difficulty": "Medium",
+      "content": {
+        "question": "After traveling halfway around the world to Bali, Svetlana was disappointed that the swing at the rice fields was not ________ the pictures made it seem.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) as exciting a place to visit as\nB) an exciting place to visit\nC) a place to visit that was exciting\nD) excited to visit the place",
+        "options": ["A) as exciting a place to visit as", "B) an exciting place to visit", "C) a place to visit that was exciting", "D) excited to visit the place"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Parallel comparison: 'as...as.'"
+      }
+    },
+    {
+      "id": "ps_15",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Lucky visitors to the arctic circle might see the aurora borealis in the sky, an arctic fox in the snow, or ________\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) a beluga whale.\nB) beluga whales.\nC) a beluga whale in the sea.\nD) a swimming beluga whale.",
+        "options": ["A) a beluga whale.", "B) beluga whales.", "C) a beluga whale in the sea.", "D) a swimming beluga whale."]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Parallel prepositional phrases: 'in the sky...in the snow...in the sea.'"
+      }
+    },
+    {
+      "id": "ps_16",
+      "difficulty": "Hard",
+      "content": {
+        "question": "A recent study has identified a possible connection between the bioluminescent glow of jellyfish and the shimmering bioluminescence exhibited by fireflies. The study suggests the blue-green glow of a midwater jellyfish in the deep sea might indeed be a mating mechanism, just like ________ in terrestrial environments.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) the yellow-orange glow of a firefly\nB) those of fireflies\nC) fireflies\nD) that of fireflies",
+        "options": ["A) the yellow-orange glow of a firefly", "B) those of fireflies", "C) fireflies", "D) that of fireflies"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Parallel nouns: 'the...glow...the...glow.'"
+      }
+    },
+    {
+      "id": "ps_17",
+      "difficulty": "Medium",
+      "content": {
+        "question": "In his most recent public appearance, Dr. Rodriguez gave a speech about his autobiography, detailing his research in the field of cancer ________ his career achievements.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) immunotherapy and describing\nB) immunotherapy, and describes\nC) immunotherapy and described\nD) immunotherapy, after which he described",
+        "options": ["A) immunotherapy and describing", "B) immunotherapy, and describes", "C) immunotherapy and described", "D) immunotherapy, after which he described"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Parallel participles: 'detailing...describing.'"
+      }
+    },
+    {
+      "id": "ps_18",
+      "difficulty": "Medium",
+      "content": {
+        "question": "David relied on his own experience ________ the meat thermometer to tell when the turkey was done.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) rather than on\nB) rather than\nC) other than\nD) rather then on",
+        "options": ["A) rather than on", "B) rather than", "C) other than", "D) rather then on"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Idiomatic parallel: 'relied on...rather than on.'"
+      }
+    },
+    {
+      "id": "ps_19",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The hunting habits of killer whales, which hunt together in pods of up to ten whales, are even more advanced ________ white sharks.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) than great\nB) than the hunting habit's of great\nC) then great\nD) than those of great",
+        "options": ["A) than great", "B) than the hunting habit's of great", "C) then great", "D) than those of great"]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Parallel comparison: 'hunting habits...those (hunting habits) of.'"
+      }
+    },
+    {
+      "id": "ps_20",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The table, which was built entirely out of redwood, provides a space for my father to complete his puzzle and ________ .\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) my hobby of building model airplanes\nB) me building model airplanes\nC) for me to build model airplanes\nD) to allow me to build model airplanes",
+        "options": ["A) my hobby of building model airplanes", "B) me building model airplanes", "C) for me to build model airplanes", "D) to allow me to build model airplanes"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "Parallel prepositional phrases: 'for my father to...for me to.'"
+      }
+    },
+    {
+      "id": "ps_21",
+      "difficulty": "Hard",
+      "content": {
+        "question": "It has long been assumed that the domestic dog (Canis familiaris) has a better sense of smell than humans. A 2012 study from Auburn university has confirmed that the domestic dog has olfactory capabilities more acute than _______\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) the average human's.\nB) the average human.\nC) those of the average humans.\nD) that of the average human.",
+        "options": ["A) the average human's.", "B) the average human.", "C) those of the average humans.", "D) that of the average human."]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Parallel possession: 'olfactory capabilities...the average human's (olfactory capabilities).'"
+      }
+    },
+    {
+      "id": "ps_22",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The goal of observing the dietary habits of the Galapagos tortoises was not only to identify the primary items the tortoises preferred to ________ if there is any correlation between food intake and behavior.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) eat but it was also to examine\nB) eat but also to examine\nC) eat, and to examine\nD) eat but also examining",
+        "options": ["A) eat but it was also to examine", "B) eat but also to examine", "C) eat, and to examine", "D) eat but also examining"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "'Not only to...but also to' parallel infinitives."
+      }
+    },
+    {
+      "id": "ps_23",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Many of the skills required for hockey – hand-eye coordination, strength, and agility – are similar to ________ .\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) basketball and lacrosse\nB) basketball and lacrosse players\nC) the games of basketball and lacrosse\nD) those for basketball and lacrosse",
+        "options": ["A) basketball and lacrosse", "B) basketball and lacrosse players", "C) the games of basketball and lacrosse", "D) those for basketball and lacrosse"]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "Parallel: 'skills...those (skills) for.'"
+      }
+    },
+    {
+      "id": "ps_24",
+      "difficulty": "Medium",
+      "content": {
+        "question": "By the end of the week, the team ________ ten new computers that came with two-year protection plans to cover any accidental damage and had ordered a new industrial printer capable of printing 10,000 pages per day.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) had purchased\nB) purchasing\nC) will purchase\nD) purchased",
+        "options": ["A) had purchased", "B) purchasing", "C) will purchase", "D) purchased"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Parallel past perfect: 'had purchased...had ordered.'"
+      }
+    },
+    {
+      "id": "ps_25",
+      "difficulty": "Hard",
+      "content": {
+        "question": "One way to increase the output of wind farms in the Anzo Borrego desert is to create new turbines that have longer rotor blades. In 2023, the rotor diameter of newly installed turbines in the Anzo Borrego desert reached 140 meters, several times ________ .\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) that of turbines installed in 2012\nB) turbines installed in 2012\nC) those of turbines installed in 2012\nD) the number of installed turbines in 2012",
+        "options": ["A) that of turbines installed in 2012", "B) turbines installed in 2012", "C) those of turbines installed in 2012", "D) the number of installed turbines in 2012"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Parallel singular: 'rotor diameter...that (rotor diameter) of.'"
+      }
+    }
+  ]
+}

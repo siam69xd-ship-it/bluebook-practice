@@ -1,0 +1,201 @@
+{
+  "test_metadata": {
+    "subject": "English Reading & Writing",
+    "category": "Standard English Conventions",
+    "skill": "Modifiers"
+  },
+  "questions": [
+    {
+      "id": "mod_1",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Johannes Kepler (1571-1630) was a mathematician and physicist who not only observed but also sought to explain the celestial dance above. Observing that the planets move in elliptical paths around the sun, ________\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) Kepler's first law (the law of ellipses) was formulated in 1609.\nB) 1609 was when Kepler formulated his first law (the law of ellipses).\nC) Kepler formulated his first law (the law of ellipses).\nD) a formulation came to Kepler that resulted in his first law (the law of ellipses).",
+        "options": ["A) Kepler's first law (the law of ellipses) was formulated in 1609.", "B) 1609 was when Kepler formulated his first law (the law of ellipses).", "C) Kepler formulated his first law (the law of ellipses).", "D) a formulation came to Kepler that resulted in his first law (the law of ellipses)."]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "This is a dangling modifier question. The introductory phrase 'Observing that the planets move in elliptical paths around the sun' must logically modify the subject that follows, which should be Kepler. Only C correctly places 'Kepler' as the subject performing the observation."
+      }
+    },
+    {
+      "id": "mod_2",
+      "difficulty": "Medium",
+      "content": {
+        "question": "________ , many American historians regard Christopher John Boye as one of the biggest traitors in history.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) Since they betrayed the country and sold secrets to the Soviet Union\nB) Since he betrayed his country and sold secrets to the Soviet Union,\nC) Betraying the country and selling secrets to the Soviet Union,\nD) Known for the famous betrayal,",
+        "options": ["A) Since they betrayed the country and sold secrets to the Soviet Union", "B) Since he betrayed his country and sold secrets to the Soviet Union,", "C) Betraying the country and selling secrets to the Soviet Union,", "D) Known for the famous betrayal,"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "This tests modifier agreement and pronoun reference. The modifier needs to describe Christopher John Boye, who is singular ('he'), not plural ('they' in A). C lacks a clear subject connection, and D is vague."
+      }
+    },
+    {
+      "id": "mod_3",
+      "difficulty": "Medium",
+      "content": {
+        "question": "In 1920, the Innez laboratory was studying an animal that was not yet known to migrate: the monarch butterfly. ________ south for their winter migration, the researchers determined that the butterflies had an innate sense of direction.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) Flying\nB) When the butterflies flew\nC) When they flew\nD) By flying",
+        "options": ["A) Flying", "B) When the butterflies flew", "C) When they flew", "D) By flying"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "This is a modifier question where the blank needs to introduce a clause that logically modifies 'the researchers determined.' B provides a clear temporal clause with 'the butterflies' as the subject. A and D are participial phrases that dangle."
+      }
+    },
+    {
+      "id": "mod_4",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The truck transporting animals to the Michigan Zoo was accidentally left unlocked, so all the animals escaped into the city and chaos ensued. The red-tailed monkeys climbed up the nearest tree, the tortoise almost got hit by a car, and the lemurs took off down the street. In hot pursuit on a bicycle, ________\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) the escaped lemurs were chased by animal control.\nB) the escaped lemurs were running away from animal control.\nC) animal control chased the escaped lemurs.\nD) chasing the lemurs was animal control.",
+        "options": ["A) the escaped lemurs were chased by animal control.", "B) the escaped lemurs were running away from animal control.", "C) animal control chased the escaped lemurs.", "D) chasing the lemurs was animal control."]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The introductory phrase 'In hot pursuit on a bicycle' must modify the subject that follows, which should be 'animal control' as the pursuer. A and B incorrectly make the lemurs the subject."
+      }
+    },
+    {
+      "id": "mod_5",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Mrs. Tamara James – the founder of the all-female fashion company Pretty Her that specializes in dresses for women over fifty – will make ________ if the request is made at least three weeks ahead of time.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) evening gowns for special customers with sequins\nB) evening gowns with sequins for special customers\nC) sequins with evening gowns for special customers\nD) special customers with sequins evening gowns",
+        "options": ["A) evening gowns for special customers with sequins", "B) evening gowns with sequins for special customers", "C) sequins with evening gowns for special customers", "D) special customers with sequins evening gowns"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "This tests logical modifier placement. The phrase should logically describe what Mrs. James will make: 'evening gowns with sequins' for customers."
+      }
+    },
+    {
+      "id": "mod_6",
+      "difficulty": "Medium",
+      "content": {
+        "question": "England's transition from a monarchy to a Democratic Republic vastly shifted the power structure of the government. The ________ decisions for the nation.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) greatly decreased Queen and King had an amount of power in making\nB) Queen and King had a greatly decreased amount of power in making\nC) Queen and King had an amount of greatly decreased power in making\nD) Queen and King had an amount of power in making greatly decreased",
+        "options": ["A) greatly decreased Queen and King had an amount of power in making", "B) Queen and King had a greatly decreased amount of power in making", "C) Queen and King had an amount of greatly decreased power in making", "D) Queen and King had an amount of power in making greatly decreased"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The modifier 'greatly decreased' should be placed before 'amount' for clarity and logic."
+      }
+    },
+    {
+      "id": "mod_7",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Since the old pipes of Mexico City were leaching heavy metals and contaminating the water supply, the city tasked its best engineers with designing a way to make the water potable. In designing a new water filtration system, ________ .\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) common strategies were combined with revolutionary, new ideas.\nB) revolutionary, new ideas were combined with common strategies.\nC) engineers' borrowing of common strategies were combined with revolutionary, new ideas.\nD) engineers combined common strategies with new, revolutionary ideas.",
+        "options": ["A) common strategies were combined with revolutionary, new ideas.", "B) revolutionary, new ideas were combined with common strategies.", "C) engineers' borrowing of common strategies were combined with revolutionary, new ideas.", "D) engineers combined common strategies with new, revolutionary ideas."]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The introductory phrase 'In designing a new water filtration system' must modify 'engineers' as the subject."
+      }
+    },
+    {
+      "id": "mod_8",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Alaskan Huskies are one of the most popular dog breeds for sled dogs thanks to their demeanor and physical abilities. Highly energetic and intelligent, ________ .\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) they are friendly to everyone\nB) Alaskan Huskies are friendly to everyone\nC) many owners know that Alaskan Huskies are friendly to everyone\nD) everyone is treated as a friend by Alaskan Huskies",
+        "options": ["A) they are friendly to everyone", "B) Alaskan Huskies are friendly to everyone", "C) many owners know that Alaskan Huskies are friendly to everyone", "D) everyone is treated as a friend by Alaskan Huskies"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The introductory modifier 'Highly energetic and intelligent' must describe the subject 'Alaskan Huskies.' A uses a pronoun without a clear antecedent."
+      }
+    },
+    {
+      "id": "mod_9",
+      "difficulty": "Medium",
+      "content": {
+        "question": "When visiting Bermuda, Bub's Burgers is a can't miss lunch spot. Covered with license plates from around the world, ________ , and the ceiling is covered with bills in over sixty different currencies.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) the walls at Bub's Burgers are always a popular photo op for tourists\nB) tourists love to take pictures of the walls at Bub's Burgers.\nC) photos in front of the walls at Bub's Burgers are very popular for tourists.\nD) Bub's Burgers is a popular photo op for tourists.",
+        "options": ["A) the walls at Bub's Burgers are always a popular photo op for tourists", "B) tourists love to take pictures of the walls at Bub's Burgers.", "C) photos in front of the walls at Bub's Burgers are very popular for tourists.", "D) Bub's Burgers is a popular photo op for tourists."]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The modifier 'Covered with license plates from around the world' should describe 'the walls.' Only A correctly places 'the walls' as the subject."
+      }
+    },
+    {
+      "id": "mod_10",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Former professional surfer Enzo Rivas now lives a quiet life in a small town by the ocean. Working in his shop in Encinitas, ________ . On occasion, locals see Enzo surfing, but he is now more commonly seen on his road bike.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) surfboards are carefully handcrafted by shaper Enzo Rivas\nB) shaper Enzo Rivas carefully handcrafts surfboards\nC) there are surfboards being carefully handcrafted by shaper Enzo Rivas\nD) Enzo Riva's surfboards are carefully handcrafted",
+        "options": ["A) surfboards are carefully handcrafted by shaper Enzo Rivas", "B) shaper Enzo Rivas carefully handcrafts surfboards", "C) there are surfboards being carefully handcrafted by shaper Enzo Rivas", "D) Enzo Riva's surfboards are carefully handcrafted"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The introductory phrase 'Working in his shop in Encinitas' modifies Enzo Rivas, so the subject should be him as the shaper."
+      }
+    },
+    {
+      "id": "mod_11",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Using a piping hot pan with oil glistening, ________ . This technique is a simple and effective way to prevent oil splatter.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) the steak must be carefully laid away from the cook to prevent getting burned\nB) the cook must carefully lay the steak away from himself to prevent getting burned\nC) the cook's steak must carefully be laid away from the cook to prevent getting burned\nD) prevent getting burned by carefully laying the steak away",
+        "options": ["A) the steak must be carefully laid away from the cook to prevent getting burned", "B) the cook must carefully lay the steak away from himself to prevent getting burned", "C) the cook's steak must carefully be laid away from the cook to prevent getting burned", "D) prevent getting burned by carefully laying the steak away"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The introductory phrase 'Using a piping hot pan with oil glistening' modifies 'the cook' as the actor."
+      }
+    },
+    {
+      "id": "mod_12",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Different types of ants have defined roles that help the colony survive. ________ , the worker ants (mostly females) are responsible for building and maintaining the nest while the bigger queen ant is responsible for the future generations of the colony.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) Spending her entire life laying eggs,\nB) Carrying up to fifty times their body weights,\nC) Since it can carry up to fifty times its body weight,\nD) Monitoring how her nest functions on a day-to-day basis,",
+        "options": ["A) Spending her entire life laying eggs,", "B) Carrying up to fifty times their body weights,", "C) Since it can carry up to fifty times its body weight,", "D) Monitoring how her nest functions on a day-to-day basis,"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The modifier 'Carrying up to fifty times their body weights' describes the worker ants, who are the subject of the clause."
+      }
+    },
+    {
+      "id": "mod_13",
+      "difficulty": "Hard",
+      "content": {
+        "question": "The legend of Old Tom, the killer whale that helped sailors catch fish, is likely just that – a legend. The story says that in the 1920s, while swimming in the freezing cold waters off Australia, ________ ; however, with no proof of this beyond the stories of old sailors, it is impossible to determine if it ever really happened.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) Old Tom, the orca whale, successfully hunted large schools of fish with sailors\nB) sailors successfully hunted large schools of fish with Old Tom, the orca whale\nC) it was large schools of fish that were successfully hunted by Old Tom, the orca whale, and sailors\nD) sailors with the help of Old Tom, the orca whale, successfully hunted large schools of fish.",
+        "options": ["A) Old Tom, the orca whale, successfully hunted large schools of fish with sailors", "B) sailors successfully hunted large schools of fish with Old Tom, the orca whale", "C) it was large schools of fish that were successfully hunted by Old Tom, the orca whale, and sailors", "D) sailors with the help of Old Tom, the orca whale, successfully hunted large schools of fish."]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The introductory phrase 'while swimming in the freezing cold waters off Australia' modifies 'Old Tom,' the whale."
+      }
+    },
+    {
+      "id": "mod_14",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The four members of the panel were each asked who they thought was the best men's soccer play of all time. ________ (who was chosen as the athlete of the century by the International Olympic Committee in 1999).\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) The Brazilian soccer analyst decided that the best player of all time was Pele\nB) Pele was chosen by the Brazilian soccer analyst as the best player of all time\nC) Pele was named the best player of all time by the Brazilian soccer analyst\nD) The best player of all time was Pele, the Brazilian soccer analyst decided",
+        "options": ["A) The Brazilian soccer analyst decided that the best player of all time was Pele", "B) Pele was chosen by the Brazilian soccer analyst as the best player of all time", "C) Pele was named the best player of all time by the Brazilian soccer analyst", "D) The best player of all time was Pele, the Brazilian soccer analyst decided"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "This tests logical subject placement. The parenthetical '(who was chosen...)' modifies Pele, so the sentence should end with 'Pele' as the object."
+      }
+    },
+    {
+      "id": "mod_15",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The first-generation Roomba, a mobile robot for vacuuming floors, was initially sold in 2002. Now in widespread use across many homes, and a top-10 selling infomercial product of the 2010s, ________ .\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) a 60 Minutes segment featured the Roomba\nB) the Roomba was featured on 60 Minutes.\nC) the Roomba's segment was featured on 60 Minutes.\nD) 60 Minutes featured the Roomba.",
+        "options": ["A) a 60 Minutes segment featured the Roomba", "B) the Roomba was featured on 60 Minutes.", "C) the Roomba's segment was featured on 60 Minutes.", "D) 60 Minutes featured the Roomba."]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The modifier 'Now in widespread use...2010s' describes the Roomba, so it should be the subject."
+      }
+    },
+    {
+      "id": "mod_16",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Graywolf Books, a publisher in Canada, focuses on bringing historical stories of the indigenous communities of the country to mainstream audiences. Commenting on Graywolf's mission, _______ her publishing house was 'born with the intention of telling untold histories the Canadian people need to know.'\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) cofounder Eden Whitehead says\nB) cofounder Eden Whitehead says,\nC) which cofounder Eden Whitehead says,\nD) when cofounder Eden Whitehead says,",
+        "options": ["A) cofounder Eden Whitehead says", "B) cofounder Eden Whitehead says,", "C) which cofounder Eden Whitehead says,", "D) when cofounder Eden Whitehead says,"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The introductory phrase 'Commenting on Graywolf's mission' modifies 'cofounder Eden Whitehead.' A correctly places her as the subject."
+      }
+    }
+  ]
+}
