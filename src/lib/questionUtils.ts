@@ -574,8 +574,9 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
   
   try {
     // Define all JSON file paths - now using standardized format files
+    // Note: boundaries_full, transitions_full, inference_full use nested format
     const filePaths = [
-      '/data/boundaries.json',
+      '/data/boundaries_full.json',       // Nested format: 250 questions
       '/data/subject_verb_agreement.json',
       '/data/verb_tenses.json',
       '/data/verb_forms.json',
@@ -583,8 +584,8 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
       '/data/modifiers_questions.json',
       '/data/parallel_structure.json',
       '/data/miscellaneous_topics.json',
-      '/data/transitions.json',
-      '/data/inference.json',
+      '/data/transitions_full.json',      // Nested format: 202 questions
+      '/data/inference_full.json',        // Nested format: 149 questions
       '/data/cross_text_connections.json',
       '/data/main_purpose.json',
       '/data/overall_structure.json',
@@ -667,39 +668,29 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
       });
     };
     
-    // Process Boundaries - load from boundaries_full.json which has 125 questions
-    try {
-      const fullBoundariesData = await loadJsonFile('/data/boundaries_full.json').catch(() => null);
-      const fullBoundariesQuestions = fullBoundariesData?.["English Reading & Writing"]?.["Standard English Conventions"]?.["Boundaries"] || [];
-      if (fullBoundariesQuestions.length > 0) {
-        fullBoundariesQuestions.forEach((q: RawQuestion, index: number) => {
-          const { questionText, options } = parseQuestion(q.question);
-          const prompt = extractQuestionPrompt(questionText);
-          const passage = questionText.replace(prompt, '').trim();
-          addQuestion(createQuestion(
-            globalId++,
-            `BND_${String(index + 1).padStart(3, '0')}`,
-            "English",
-            "Standard English Conventions",
-            "Boundaries",
-            undefined,
-            passage,
-            prompt,
-            options,
-            q.answer,
-            q.explanation,
-            getQuestionDifficulty("Boundaries", undefined, index),
-          ));
-        });
-      } else if (boundariesData?.questions && boundariesData.questions.length > 0) {
-        // Fallback to standardized format if full file not available
-        processStandardizedQuestions(boundariesData, "Boundaries", undefined, "BND");
-      }
-    } catch (e) {
-      // Fallback to standardized format
-      if (boundariesData?.questions) {
-        processStandardizedQuestions(boundariesData, "Boundaries", undefined, "BND");
-      }
+    // Process Boundaries - load from boundaries_full.json which has 250 questions (nested format)
+    const fullBoundariesQuestions = boundariesData?.["English Reading & Writing"]?.["Standard English Conventions"]?.["Boundaries"] || [];
+    if (fullBoundariesQuestions.length > 0) {
+      console.log(`Loading ${fullBoundariesQuestions.length} Boundaries questions from nested format`);
+      fullBoundariesQuestions.forEach((q: RawQuestion, index: number) => {
+        const { questionText, options } = parseQuestion(q.question);
+        const prompt = extractQuestionPrompt(questionText);
+        const passage = questionText.replace(prompt, '').trim();
+        addQuestion(createQuestion(
+          globalId++,
+          `BND_${String(index + 1).padStart(3, '0')}`,
+          "English",
+          "Standard English Conventions",
+          "Boundaries",
+          undefined,
+          passage,
+          prompt,
+          options,
+          q.answer,
+          q.explanation,
+          getQuestionDifficulty("Boundaries", undefined, index),
+        ));
+      });
     }
     
     // Process Subject-Verb Agreement (new standardized format)
@@ -753,166 +744,70 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
     let inferencesIndex = 0;
     let rhetoricalSynthesisIndex = 0;
     
-    // Process Transitions questions (check for standardized format first)
-    if (transitionsData?.questions) {
-      transitionsData.questions.forEach((q: any, index: number) => {
-        const questionText = q.content?.question || '';
-        const prompt = extractQuestionPrompt(questionText);
-        const passage = q.content?.passage || questionText.replace(prompt, '').trim();
-        
-        let options: { [key: string]: string } = {};
-        if (Array.isArray(q.content?.options)) {
-          q.content.options.forEach((opt: string) => {
-            const match = opt.match(/^([A-D])\)\s*(.*)$/);
-            if (match) {
-              options[match[1]] = match[2];
-            }
-          });
-        }
-        
-        const difficulty = (q.difficulty?.toLowerCase() || 'medium') as Difficulty;
-        
+    // Process Transitions questions from transitions_full.json (nested format: 202 questions)
+    const transitionsNestedArray = transitionsData?.["English Reading & Writing"]?.["Expression of Ideas"]?.["Transitions"] || [];
+    if (transitionsNestedArray.length > 0) {
+      console.log(`Loading ${transitionsNestedArray.length} Transitions questions from nested format`);
+      transitionsNestedArray.forEach((q: CentralIdeaQuestion) => {
+        const options = parseNewFormatOptions(q.options);
         addQuestion(createQuestion(
           globalId++,
-          `TRN_${String(index + 1).padStart(3, '0')}`,
+          `TRN_${String(transitionsIndex + 1).padStart(3, '0')}`,
           "English",
           "Expression of Ideas",
           "Transitions",
           undefined,
-          passage,
-          prompt,
+          q.passage || '',
+          q.question,
           options,
-          q.solution?.answer || '',
-          q.solution?.explanation || '',
-          difficulty,
+          q.answer,
+          q.explanation,
+          getQuestionDifficulty("Transitions", undefined, transitionsIndex++),
         ));
-        transitionsIndex++;
       });
-    } else {
-      // Old nested format
-      const expressionOfIdeas = transitionsData?.["English Reading & Writing"]?.["Expression of Ideas"];
-      if (expressionOfIdeas) {
-        const transitionsArray = expressionOfIdeas["Transitions"] || [];
-        
-        transitionsArray.forEach((q: CentralIdeaQuestion) => {
-          const options = parseNewFormatOptions(q.options);
-          addQuestion(createQuestion(
-            globalId++,
-            `TRN_${String(transitionsIndex + 1).padStart(3, '0')}`,
-            "English",
-            "Expression of Ideas",
-            "Transitions",
-            undefined,
-            q.passage || '',
-            q.question,
-            options,
-            q.answer,
-            q.explanation,
-            getQuestionDifficulty("Transitions", undefined, transitionsIndex++),
-          ));
-        });
-        
-        // Rhetorical Synthesis
-        (expressionOfIdeas["Rhetorical Synthesis"] || []).forEach((q: CentralIdeaQuestion) => {
-          const options = parseNewFormatOptions(q.options);
-          addQuestion(createQuestion(
-            globalId++,
-            `RS_${String(rhetoricalSynthesisIndex + 1).padStart(3, '0')}`,
-            "English",
-            "Expression of Ideas",
-            "Rhetorical Synthesis",
-            undefined,
-            q.passage || '',
-            q.question,
-            options,
-            q.answer,
-            q.explanation,
-            getQuestionDifficulty("Rhetorical Synthesis", undefined, rhetoricalSynthesisIndex++),
-          ));
-        });
-      }
-    }
-    
-    // Process inference.json (check for standardized format first)
-    if (inferenceData?.questions) {
-      inferenceData.questions.forEach((q: any, index: number) => {
-        const questionText = q.content?.question || '';
-        const prompt = extractQuestionPrompt(questionText);
-        const passage = q.content?.passage || questionText.replace(prompt, '').trim();
-        
-        let options: { [key: string]: string } = {};
-        if (Array.isArray(q.content?.options)) {
-          q.content.options.forEach((opt: string) => {
-            const match = opt.match(/^([A-D])\)\s*(.*)$/);
-            if (match) {
-              options[match[1]] = match[2];
-            }
-          });
-        }
-        
-        const difficulty = (q.difficulty?.toLowerCase() || 'medium') as Difficulty;
-        
+      
+      // Also check for Rhetorical Synthesis in transitions file
+      const rhetoricalArray = transitionsData?.["English Reading & Writing"]?.["Expression of Ideas"]?.["Rhetorical Synthesis"] || [];
+      rhetoricalArray.forEach((q: CentralIdeaQuestion) => {
+        const options = parseNewFormatOptions(q.options);
         addQuestion(createQuestion(
           globalId++,
-          `INF_${String(index + 1).padStart(3, '0')}`,
+          `RS_${String(rhetoricalSynthesisIndex + 1).padStart(3, '0')}`,
+          "English",
+          "Expression of Ideas",
+          "Rhetorical Synthesis",
+          undefined,
+          q.passage || '',
+          q.question,
+          options,
+          q.answer,
+          q.explanation,
+          getQuestionDifficulty("Rhetorical Synthesis", undefined, rhetoricalSynthesisIndex++),
+        ));
+      });
+    }
+    
+    // Process Inferences from inference_full.json (nested format: 149 questions)
+    const inferencesNestedArray = inferenceData?.["English Reading & Writing"]?.["Information and Ideas"]?.["Inferences"] || [];
+    if (inferencesNestedArray.length > 0) {
+      console.log(`Loading ${inferencesNestedArray.length} Inferences questions from nested format`);
+      inferencesNestedArray.forEach((q: CentralIdeaQuestion) => {
+        const options = parseNewFormatOptions(q.options);
+        addQuestion(createQuestion(
+          globalId++,
+          `INF_${String(inferencesIndex + 1).padStart(3, '0')}`,
           "English",
           "Information and Ideas",
           "Inferences",
           undefined,
-          passage,
-          prompt,
+          q.passage || '',
+          q.question,
           options,
-          q.solution?.answer || '',
-          q.solution?.explanation || '',
-          difficulty,
+          q.answer,
+          q.explanation,
+          getQuestionDifficulty("Inferences", undefined, inferencesIndex++),
         ));
-        inferencesIndex++;
       });
-    } else {
-      // Old nested format
-      // Transitions from inference.json
-      const inferenceExpressionOfIdeas = inferenceData?.["English Reading & Writing"]?.["Expression of Ideas"];
-      if (inferenceExpressionOfIdeas) {
-        (inferenceExpressionOfIdeas["Transitions"] || []).forEach((q: CentralIdeaQuestion) => {
-          const options = parseNewFormatOptions(q.options);
-          addQuestion(createQuestion(
-            globalId++,
-            `TRNI_${String(transitionsIndex + 1).padStart(3, '0')}`,
-            "English",
-            "Expression of Ideas",
-            "Transitions",
-            undefined,
-            q.passage || '',
-            q.question,
-            options,
-            q.answer,
-            q.explanation,
-            getQuestionDifficulty("Transitions", undefined, transitionsIndex++),
-          ));
-        });
-      }
-      
-      // Inferences from inference.json
-      const inferenceInfoAndIdeas = inferenceData?.["English Reading & Writing"]?.["Information and Ideas"];
-      if (inferenceInfoAndIdeas) {
-        (inferenceInfoAndIdeas["Inferences"] || []).forEach((q: CentralIdeaQuestion) => {
-          const options = parseNewFormatOptions(q.options);
-          addQuestion(createQuestion(
-            globalId++,
-            `INF_${String(inferencesIndex + 1).padStart(3, '0')}`,
-            "English",
-            "Information and Ideas",
-            "Inferences",
-            undefined,
-            q.passage || '',
-            q.question,
-            options,
-            q.answer,
-            q.explanation,
-            getQuestionDifficulty("Inferences", undefined, inferencesIndex++),
-          ));
-        });
-      }
     }
     
     // ==================== NEW JSON FILES ====================
