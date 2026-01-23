@@ -1,337 +1,623 @@
 {
-  "English Reading & Writing": {
-    "Craft and Structure": {
-      "Cross-Text Connections": [],
-      "Text Structure and Purpose": [],
-      "Words in Context": []
+  "test_metadata": {
+    "test_name": "Digital SAT Practice",
+    "domain": "Standard English Conventions",
+    "skill": "Pronouns",
+    "total_questions": 51,
+    "version": "1.0"
+  },
+  "questions": [
+    {
+      "id": "PRO_001",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Both Heinrich Boll and Camilo Jose Cela have been commended for ______ contributions to literature, perhaps most notably when the Swedish Academy awarded Ball the Nobel Prize in Literature in 1972 and Cela in 1989.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) it's", "B) their", "C) its", "D) they're"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The plural antecedent 'Both Heinrich Boll and Camilo Jose Cela' requires the plural possessive pronoun 'their.'"
+      }
     },
-    "Expression of Ideas": {
-      "Rhetorical Synthesis": [],
-      "Transitions": []
+    {
+      "id": "PRO_002",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Lily Everett and Mary Foote were among the 300 artists who exhibited at the 1913 Armory Show, a groundbreaking New York City art exhibition that introduced modernism to the American audience. Marcel Duchamp's abstract cubist aesthetic received the most skepticism from critics, as ______ represented a radical departure from the more realistic painting style that was popular at the time.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) these", "B) they", "C) we", "D) it"]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The singular antecedent 'Marcel Duchamp's abstract cubist aesthetic' requires the singular pronoun 'it.'"
+      }
     },
-    "Information and Ideas": {
-      "Central Ideas and Details": [],
-      "Command of Evidence": [],
-      "Inferences": []
+    {
+      "id": "PRO_003",
+      "difficulty": "Medium",
+      "content": {
+        "question": "When ______ debuted in January 1983 as part of the exhibit Women of Clay, the artworks brought vibrant visual texture to the bustling terminals of San Francisco International Airport.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) they", "B) that", "C) it", "D) this"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The plural antecedent 'artworks' requires the plural pronoun 'they.'"
+      }
     },
-    "Standard English Conventions": {
-      "Boundaries": [],
-      "Form, Structure, and Sense": {
-        "Subject-Verb Agreement": [],
-        "Verb Tenses": [],
-        "Verb Forms": [],
-        "Pronouns": [
-          {
-            "id": 1,
-            "question": "Both Heinrich Boll and Camilo Jose Cela have been commended for ______ contributions to literature, perhaps most notably when the Swedish Academy awarded Ball the Nobel Prize in Literature in 1972 and Cela in 1989.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) it’s\nB) their\nC) its\nD) they’re",
-            "answer": "B",
-            "explanation": "The plural antecedent 'Both Heinrich Boll and Camilo Jose Cela' requires the plural possessive pronoun 'their.'"
-          },
-          {
-            "id": 2,
-            "question": "Lily Everett and Mary Foote were among the 300 artists who exhibited at the 1913 Armory Show, a groundbreaking New York City art exhibition that introduced modernism to the American audience. Marcel Duchamp’s abstract cubist aesthetic received the most skepticism from critics, as ______ represented a radical departure from the more realistic painting style that was popular at the time.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) these\nB) they\nC) we\nD) it",
-            "answer": "D",
-            "explanation": "The singular antecedent 'Marcel Duchamp’s abstract cubist aesthetic' requires the singular pronoun 'it.'"
-          },
-          {
-            "id": 3,
-            "question": "When ______ debuted in January 1983 as part of the exhibit Women of Clay, the artworks brought vibrant visual texture to the bustling terminals of San Francisco International Airport.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) they\nB) that\nC) it\nD) this",
-            "answer": "A",
-            "explanation": "The plural antecedent 'artworks' requires the plural pronoun 'they.'"
-          },
-          {
-            "id": 4,
-            "question": "In 2014, actor Keith David voiced the character Old Buzzard in the film Birds of Paradise. David has acted in everything from commercials to Broadway musicals, but his voice acting work is why______\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) has he become such a celebrated talent?\nB) has he become such a celebrated talent.\nC) he has become such a celebrated talent?\nD) he has become such a celebrated talent.",
-            "answer": "D",
-            "explanation": "The indirect question requires standard word order ('he has become') and ends with a period because it's part of a statement, not a direct question."
-          },
-          {
-            "id": 5,
-            "question": "Home to roughly 710,000 people,______\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) the city of Riga contains an impressive 35 percent of Latvia’s total population.\nB) contained within the city of Riga is an impressive 35 percent of Latvia’s total population.\nC) of Latvia’s total population, an impressive 35 percent is contained in the city of Riga.\nD) an impressive 35 percent of Latvia’s total population is contained within the city of Riga.",
-            "answer": "A",
-            "explanation": "The introductory phrase 'Home to roughly 710,000 people' must be followed by the noun it modifies—'the city of Riga.' This avoids a dangling modifier."
-          },
-          {
-            "id": 6,
-            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?\n\nForming extensive networks via mycorrhizal association, ______\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) hemlock trees and the fungus Cantharellus cibarius can transport nutrients through their entangled tree roots and fungal hyphae.\nB) nutrients can be transported through the entanglement of hemlock trees’ roots and the fungus Cantharellus cibarius’s fungal hyphae.\nC) the transport of nutrients is possible through the entanglement of hemlock trees’ roots and the fungus Cantharellus cibarius’s fungal hyphae.\nD) it is the entanglement of hemlock trees’ roots and the fungus Cantharellus cibarius’s fungal hyphae that makes nutrient transport possible.",
-            "answer": "A",
-            "explanation": "The introductory phrase 'Forming extensive networks via mycorrhizal association' must be followed by the subject that is doing the forming—'hemlock trees and the fungus.' This correctly attaches the modifier."
-          },
-          {
-            "id": 7,
-            "question": "Technologies such as microphones and inkjet printers are made using piezoelectric materials, which generate an internal electric field when pressure is applied to them. The toxic nature of some of these materials recently led a team from the University of Sheffield to investigate how\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) could their use be better regulated?\nB) their use could be better regulated.\nC) their use could be better regulated?\nD) could their use be better regulated.",
-            "answer": "B",
-            "explanation": "The clause beginning with 'how' is an indirect question and should be in statement word order ('their use could be better regulated') and end with a period."
-          },
-          {
-            "id": 8,
-            "question": "The present-day city of Nakhchivan, Azerbaijan, was for years the capital of the Nakhchivan Autonomous Soviet Socialist Republic, one of many nominally autonomous republics within the Soviet Union. Like ______ peer autonomous Soviet socialist republics, the Nakhchivan Republic was established along ethnolinguistic lines: most of the republic’s residents spoke Azerbaijani.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) their\nB) they’re\nC) its\nD) it’s",
-            "answer": "C",
-            "explanation": "The singular possessive pronoun 'its' is needed to refer to 'the Nakhchivan Republic.'"
-          },
-          {
-            "id": 9,
-            "question": "Both Arteaga, in the state of Coahuila, and Lagos de Moreno, in the state of Jalisco, have been designated by Mexico as pueblos mágicos (magical villages) to celebrate these ______ natural beauty and unique cultural traditions.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) town\nB) town’s\nC) towns\nD) towns’",
-            "answer": "D",
-            "explanation": "The plural possessive 'towns’' is needed because it refers to both Arteaga and Lagos de Moreno."
-          },
-          {
-            "id": 10,
-            "question": "The algaita is a double reed wind instrument from West Africa. The reed of a wind instrument is the mouthpiece ______ A double reed contains two pieces of cane that vibrate and produce sound as air passes between them.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) where is sound made.\nB) where sound is made?\nC) where sound is made.\nD) where is sound made?",
-            "answer": "C",
-            "explanation": "The relative clause 'where sound is made' correctly modifies 'mouthpiece' and ends with a period because it's part of a statement."
-          },
-          {
-            "id": 11,
-            "question": "In her large-scale sculpture Casa-Isla, artist Edra Soto included references to her childhood in Puerto Rico. For example, the sculpture’s steel panels have a crisscrossing pattern inspired by the iron gates ______\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) Soto would see in her neighborhood?\nB) would Soto see in her neighborhood?\nC) would Soto see in her neighborhood.\nD) Soto would see in her neighborhood.",
-            "answer": "D",
-            "explanation": "The relative clause 'Soto would see in her neighborhood' modifies 'iron gates' and should be in statement word order, ending with a period."
-          },
-          {
-            "id": 12,
-            "question": "A painting by 19th-century artist Katsushika Hokusai, ______\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) deeper thematic meaning is conveyed to viewers of The Great Wave off Kanagawa through visual allegory.\nB) The Great Wave off Kanagawa’s deeper thematic meaning is conveyed to viewers through visual allegory.\nC) visual allegory allows The Great Wave off Kanagawa to convey its deeper thematic meaning to viewers.\nD) The Great Wave off Kanagawa employs visual allegory to convey its deeper thematic meaning to viewers.",
-            "answer": "D",
-            "explanation": "The introductory phrase 'A painting by 19th-century artist Katsushika Hokusai' must be followed by the painting's name—'The Great Wave off Kanagawa'—to avoid a dangling modifier."
-          },
-          {
-            "id": 13,
-            "question": "Often anthologized alongside the ______ associated with the Black Arts movement—such as Henry Dumas and Ntozake Shange—Haki Madhubuti's poem 'Quality: Gwendolyn Brooks at 73' stands out for its memorable first lines: 'breath, / life after seven decades plus three years / is a lot of breathing.'\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) works of other writer's\nB) work's of other writer's\nC) works of other writers\nD) work's of other writers",
-            "answer": "C",
-            "explanation": "The plural noun 'works' and the plural possessive 'writers' are correct: 'works of other writers.'"
-          },
-          {
-            "id": 14,
-            "question": "When a given industry—water and electricity are two well-known examples—carries high infrastructural start-up costs and other barriers that discourage competition, ______ of just one or two suppliers per municipality. Such industries are known as natural monopolies.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) they often consist\nB) this often consists\nC) these often consist\nD) it often consists",
-            "answer": "D",
-            "explanation": "The singular pronoun 'it' refers to 'a given industry.'"
-          },
-          {
-            "id": 15,
-            "question": "The fact that many even-toed ungulates, including the Bavean deer (Axis kuhlii) and the south Andean deer (Hippocamelus bisulcus), meet the population criteria for endangered status validates the need for interventions that can prevent ______ from joining the ranks of the extinct.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) the animal\nB) these animals\nC) this animal’s\nD) these animals’",
-            "answer": "B",
-            "explanation": "The plural demonstrative 'these animals' refers to the multiple deer species mentioned."
-          },
-          {
-            "id": 16,
-            "question": "In her work, Bay of Quinte Mohawk artist Hannah Claus uses suspended sculptural installations to explore themes such as time, place, and nature. The Eiteljorg Museum counts pieces by Claus in ______ impressive collection of Native artworks.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) her\nB) it’s\nC) its\nD) their",
-            "answer": "C",
-            "explanation": "The singular possessive pronoun 'its' refers to 'The Eiteljorg Museum.'"
-          },
-          {
-            "id": 17,
-            "question": "The Akhundov National Library in Baku houses many historical newspapers, but it isn’t necessary to travel to Baku to access them. Because these rare items are digitized, people around the world can access ______ regardless of where they live.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) it\nB) them\nC) this\nD) that",
-            "answer": "B",
-            "explanation": "The plural pronoun 'them' refers to 'these rare items' (the newspapers)."
-          },
-          {
-            "id": 18,
-            "question": "The constitution of Spain, enacted in 1978, enshrines 60 total rights across 17,608 words of text. According to constitutional scholar George Tsebelis, who examines the implications of constitutional length on civil rights, ______ 105th in a global ranking of the shortest constitutions.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) its\nB) it’s\nC) they’re\nD) their",
-            "answer": "B",
-            "explanation": "The contraction 'it’s' (it is) is needed to refer to 'The constitution of Spain.'"
-          },
-          {
-            "id": 19,
-            "question": "The length of bird eggs varies widely across species, and an ecological ______ compared the lengths of eggs produced by different bird species found Holiastur indus eggs to be longer, on average, than Calidris alpina eggs.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) study, that\nB) study\nC) study that\nD) study which,",
-            "answer": "C",
-            "explanation": "The relative pronoun 'that' introduces the clause 'compared the lengths...' without unnecessary punctuation."
-          },
-          {
-            "id": 20,
-            "question": "In the 1960s, Sweden, Bulgaria, and dozens of other countries were allocated unique country dialing codes to route international calls. Most of the original two- or three- digit codes ______ by the International Telegraph and Telephone Consultative Committee later changed in response to geopolitical circumstances or telecommunications needs.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) assigned\nB) would be assigned\nC) had been assigned\nD) were assigned",
-            "answer": "A",
-            "explanation": "The past participle 'assigned' correctly modifies 'codes' in a reduced relative clause: 'codes assigned... later changed.'"
-          },
-          {
-            "id": 21,
-            "question": "Alabama resident Benjamin S. Turner, sworn in as a member of the US House of Representatives in 1871, was one of the nearly two thousand African ______ during the decade following the Civil War.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) Americans’ who won elections’\nB) Americans who won election’s\nC) American’s who won elections\nD) Americans who won elections",
-            "answer": "D",
-            "explanation": "The plural noun 'Americans' and the relative clause 'who won elections' are correct without possessive apostrophes."
-          },
-          {
-            "id": 22,
-            "question": "Proto-Kru is a protolanguage, or a hypothesized ancestral language, of all the Kru languages (thirty-eight languages that, because ______ descendants of Proto-Kru, can provide information about the protolanguage’s structure).\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) its\nB) they’re\nC) their\nD) it’s",
-            "answer": "B",
-            "explanation": "The contraction 'they’re' (they are) is needed to refer to the plural 'thirty-eight languages.'"
-          },
-          {
-            "id": 23,
-            "question": "Although the epic poem The Aeneid dates back to the 1st century BCE, ______ compelling narrative still captivates readers today.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) their\nB) they’re\nC) its\nD) it’s",
-            "answer": "C",
-            "explanation": "The singular possessive pronoun 'its' refers to 'The Aeneid.'"
-          },
-          {
-            "id": 24,
-            "question": "The constitution of Australia, enacted in 1901, enshrines 11 total rights across 17,318 words of text. According to constitutional scholar George Tsebelis, who examines the implications of constitutional length on civil rights, ______ 102nd in a global ranking of the shortest constitutions.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) they’re\nB) their\nC) it’s\nD) its",
-            "answer": "C",
-            "explanation": "The contraction 'it’s' (it is) is needed to refer to 'The constitution of Australia.'"
-          },
-          {
-            "id": 25,
-            "question": "Creek Council Tree (1967) and Cimarron Iron Bridge (1972) are two oil landscape paintings by renowned Pawnee Nation artist Brummett Echohawk. In 2023, ______ displayed alongside other works by Echohawk at the student-curated exhibition Brummett Echohawk: An Artist’s Journeyat the Oklahoma State University Museum of Art.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) they were\nB) this was\nC) it was\nD) some were",
-            "answer": "A",
-            "explanation": "The plural pronoun 'they' refers to the two paintings, and 'were' is the plural past tense verb."
-          },
-          {
-            "id": 26,
-            "question": "The Grootbos florilegium in South Africa contains a collection of botanical paintings, with each painting depicting a local plant species in exquisite detail. The florilegium includes a vignette painting by contributing artist Sibonelo Chiliza. Unlike most paintings in the florilegium, ______\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) Chiliza contextualizes a plant within an ecosystem in his vignette.\nB) the contextualization of a plant within an ecosystem occurs in Chiliza’s vignette.\nC) a plant’s ecosystem is contextualized in Chiliza’s vignette.\nD) Chiliza’s vignette contextualizes a plant within an ecosystem.",
-            "answer": "D",
-            "explanation": "The introductory phrase 'Unlike most paintings in the florilegium' must be followed by what is being compared—'Chiliza’s vignette.'"
-          },
-          {
-            "id": 27,
-            "question": "Although the epic poem The Poem of the Cid dates back to the 12th century, ______ compelling narrative still captivates readers today.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) they’re\nB) its\nC) their\nD) it’s",
-            "answer": "B",
-            "explanation": "The singular possessive pronoun 'its' refers to 'The Poem of the Cid.'"
-          },
-          {
-            "id": 28,
-            "question": "The words 'utopia' and 'nerd' both trace ______ origins to books. 'Utopia' first appears in Utopia by Sir Thomas More, and 'nerd' first appears in If I Ran the Zoo by Dr. Seuss.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) there\nB) it’s\nC) their\nD) they’re",
-            "answer": "C",
-            "explanation": "The plural possessive pronoun 'their' refers to the two words 'utopia' and 'nerd.'"
-          },
-          {
-            "id": 29,
-            "question": "With an average summer temperature of 61 degrees Fahrenheit, Moscow is one European ______ many travelers recommend, especially from June to September.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) city, that\nB) city, which\nC) city in which,\nD) city that",
-            "answer": "D",
-            "explanation": "The relative pronoun 'that' correctly introduces the restrictive clause 'many travelers recommend' without unnecessary commas."
-          },
-          {
-            "id": 30,
-            "question": "Both Pontianak, Indonesia, and Manta, Ecuador, are located at less than one degree latitude. In other words, ______ cities basically sit right on the equator!\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) these\nB) each\nC) that\nD) this",
-            "answer": "A",
-            "explanation": "The plural demonstrative 'these' refers to the two cities mentioned."
-          },
-          {
-            "id": 31,
-            "question": "In May of 1959, the song 'Danny Boy' was a top-ten hit. Having climbed the charts for ten weeks, ______ ranked No. 1 on the Billboard Hot 100 list of most popular songs.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) those\nB) they\nC) each\nD) it",
-            "answer": "D",
-            "explanation": "The singular pronoun 'it' refers to 'the song 'Danny Boy'.'"
-          },
-          {
-            "id": 32,
-            "question": "After much debate, ______ finally made a decision: the judges for the 1912 Nobel Prize in Literature would award Gerhart Johann Robert Hauptmann of Germany with that year's prize 'for his fruitful, varied and outstanding production in the realm of dramatic art'.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) it\nB) they\nC) you\nD) anyone",
-            "answer": "B",
-            "explanation": "The plural pronoun 'they' refers to 'the judges.'"
-          },
-          {
-            "id": 33,
-            "question": "In June of 2005, the song 'Pon de Replay' was a top-ten hit. Having climbed the charts for twenty-six weeks, ______ ranked No. 2 on the Billboard Hot 100 list of most popular songs.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) they\nB) it\nC) each\nD) those",
-            "answer": "B",
-            "explanation": "The singular pronoun 'it' refers to 'the song 'Pon de Replay'.'"
-          },
-          {
-            "id": 34,
-            "question": "In June of 1966, the song 'I Need Love' was a top-ten hit. Having climbed the charts for six weeks, ______ ranked No. 4 on the Billboard Hot 100 list of most popular songs.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) those\nB) they\nC) each\nD) it",
-            "answer": "D",
-            "explanation": "The singular pronoun 'it' refers to 'the song 'I Need Love'.'"
-          },
-          {
-            "id": 35,
-            "question": "Categorized as a dactyl, the word 'gradient' consists of one stressed syllable followed by two unstressed syllables. The word 'harpist,' by comparison, consists of one stressed syllable followed by one unstressed syllable, a metrical foot ______ to in English metrical verse as a trochee.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) referred\nB) is referred\nC) referring\nD) refers",
-            "answer": "A",
-            "explanation": "The past participle 'referred' modifies 'metrical foot' in a reduced relative clause: 'a metrical foot referred to as a trochee.'"
-          },
-          {
-            "id": 36,
-            "question": "In the Persian language, people commonly begin a folktale with a phrase that roughly translates to 'there was and there was not.' In English, beginning with the phrase 'once uponatime' is common. Indeed, how a folktale begins depends largely on the language in which ______ being told\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) they were\nB) these are\nC) they are\nD) it is",
-            "answer": "D",
-            "explanation": "The singular pronoun 'it' refers to 'a folktale,' and 'is' is the singular present tense verb."
-          },
-          {
-            "id": 37,
-            "question": "Disyllabic words ______ as trochees in English metrical verse, such as 'eyebrow' and 'mascot,' consist of one stressed syllable followed by one unstressed syllable.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) have been classified\nB) can be classified\nC) are classified\nD) classified",
-            "answer": "D",
-            "explanation": "The past participle 'classified' modifies 'words' in a reduced relative clause: 'words classified as trochees.'"
-          },
-          {
-            "id": 38,
-            "question": "On February 1, 2018, a Florida—based research team—Martha A. Scholl, Maoya Bassiouni, and Angel J. Torres-Sánchez—compiled climate data from several sites in Puerto Rico’s Luquillo Mountains. At site CC1, the site with the highest elevation, the air temperature fluctuated slightly throughout the day, registering ______ and 16^° C at 5:00 p.m.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) 15.4^° C at 1:00 a.m., 18.6^° C at 11:30 a.m.\nB) 15.4^° C at 1:00 a.m.; 18.6^° C at 11:30 a.m.,\nC) 15.4^° C, at 1:00 a.m. 18.6^° C, at 11:30 a.m.\nD) 15.4^° C at 1:00 a.m., 18.6^° C at 11:30 a.m.,",
-            "answer": "A",
-            "explanation": "Two temperature-time pairs are listed in a series, separated by a comma. No extra punctuation is needed within each pair."
-          },
-          {
-            "id": 39,
-            "question": "Among the world’s largest deserts are the Syrian Desert, ranked ______ and the Chalbi Desert, ranked twenty-ninth.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) ninth in size; the Kyzylkum Desert; ranked sixteenth;\nB) ninth in size; the Kyzylkum Desert, ranked sixteenth;\nC) ninth in size the Kyzylkum Desert, ranked sixteenth\nD) ninth in size; the Kyzylkum Desert; ranked sixteenth;",
-            "answer": "B",
-            "explanation": "Semicolons separate items in a list that already contain commas. Here, 'the Kyzylkum Desert, ranked sixteenth' is one item with an internal comma, so it is separated from the others by a semicolon."
-          },
-          {
-            "id": 40,
-            "question": "In 19th-century Bengal, cowry shells were used as a commodity currency. By using specific goods like cowry shells as common units of exchange, commodity currency economies streamline trade, which is why they often replaced barter economies. Barter economies eschew ______ that requires what economist W.S. Jevons deems a 'double coincidence of wants'—in other words, each trading party must want precisely what the other has.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) currency, in favor of a direct trade system\nB) currency—in favor of a direct trade system\nC) currency in favor of a direct trade system\nD) currency, in favor of a direct trade system,",
-            "answer": "C",
-            "explanation": "No punctuation is needed; 'currency in favor of a direct trade system' is a direct object followed by a prepositional phrase."
-          },
-          {
-            "id": 41,
-            "question": "In her work as a sociocultural anthropologist, Livia Barbosa studies food and sociability in contemporary Brazil—namely, how common Brazilian foods like tareco (a disk-shaped biscuit) and coxinha (a stuffed fried dough) ______ as central mechanisms in building social relationships, values, and identities.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) having eventually become\nB) eventually became\nC) to eventually become\nD) eventually becoming",
-            "answer": "B",
-            "explanation": "The past tense verb 'eventually became' is needed to complete the main clause."
-          },
-          {
-            "id": 42,
-            "question": "The African baobab (Adansonia digitata) known as Panke Baobab, in Zimbabwe, was one of the oldest known trees in the world, at 2,419 years old. With over two millennia of climate data in its tree ______ single tree like this, claims dendrochronologist Valerie Trouet, can tell the history of the world.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) rings. A\nB) rings and a\nC) rings, a\nD) rings; a",
-            "answer": "C",
-            "explanation": "A comma is needed to separate the introductory phrase 'With over two millennia of climate data in its tree rings' from the main clause 'a single tree like this...'"
-          },
-          {
-            "id": 43,
-            "question": "Topographical prominence is a measure of a mountain’s independence from other mountains. Having 9,721 feet of prominence,\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) Pico do Ramelau, a peak located in Timor-Leste, is ranked by geographers as the world’s 98th most prominent mountain.\nB) the list of mountains geographers rank as the world’s most prominent includes Pico do Ramelau, a peak located in Timor-Leste, at number 98.\nC) geographers have ranked Pico do Ramelau, a peak in Timor-Leste, as the world’s 98th most prominent mountain.\nD) the ranking given by geographers to Pico do Ramelau, a peak located in Timor-Leste, is 98th most prominent mountain in the world.",
-            "answer": "A",
-            "explanation": "The introductory phrase 'Having 9,721 feet of prominence' must be followed by what has that prominence—'Pico do Ramelau.'"
-          },
-          {
-            "id": 44,
-            "question": "The star known as HR 8799, ______ is one of the few known stars to host multiple planets.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) Earth, at 204 light-years away,\nB) Earth at 204 light-years away,\nC) Earth at 204 light-years away:\nD) Earth: at 204 light-years away,",
-            "answer": "D",
-            "explanation": "A colon introduces an explanatory appositive: 'Earth: at 204 light-years away, ...'"
-          },
-          {
-            "id": 45,
-            "question": "L. Leann Kanda, a researcher and sewing enthusiast, experimented with several techniques in her attempt to replicate the famous pleating of the Fortuny Delphos gown. The specific method, which the fashion developed in the early twentieth century, is considered lost.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) designers Henriette Nigrin and Mariano Fortuny y Madrazo,\nB) designers Henriette Nigrin and Mariano Fortuny y Madrazo\nC) designers, Henriette Nigrin and Mariano Fortuny y Madrazo\nD) designers, Henriette Nigrin and Mariano Fortuny y Madrazo,",
-            "answer": "B",
-            "explanation": "No commas are needed; 'designers Henriette Nigrin and Mariano Fortuny y Madrazo' is an appositive that identifies 'the fashion' and should not be set off by commas because it is essential."
-          },
-          {
-            "id": 46,
-            "question": "On February 1, 2018, a Florida-based research team—Martha A. Scholl, Maoya Bassiouni, and Angel J. Torres-Sánchez—compiled climate data from several sites in Puerto Rico’s Luquillo Mountains. At site CC1, the site with the highest elevation, the air temperature fluctuated slightly throughout the day, registering and 16.2°C at 8:30 p.m.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) 17.9°C, at 3:00 p.m. 16°C, at 5:00 p.m.\nB) 17.9°C at 3:00 p.m., 16°C at 5:00 p.m.,\nC) 17.9°C at 3:00 p.m. 16°C at 5:00 p.m.\nD) 17.9°C at 3:00 p.m., 16°C at 5:00 p.m.;",
-            "answer": "B",
-            "explanation": "Two temperature-time pairs are listed in a series, separated by a comma, and a comma is needed after the second pair before 'and.'"
-          },
-          {
-            "id": 47,
-            "question": "Released in 1987, the Acorn ARM2 microchip contained a single CPU, or core, to execute commands. As processing speeds of single-core chips increased over time, so too did the heat the chips generated. ______ a 'power wall' in which more heat was produced than could be efficiently dissipated led developers to invent the dual-core chip in the early 2000s.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) items. The\nB) items the\nC) items; the\nD) items, the",
-            "answer": "D",
-            "explanation": "A comma is needed to separate the introductory phrase 'Released in 1987' from the main clause 'the Acorn ARM2 microchip contained...'"
-          },
-          {
-            "id": 48,
-            "question": "Which choice completes the text so that it conforms to the conventions of Standard English?\n\nHitting a 'power wall' in which more heat was produced than could be efficiently dissipated led developers to invent the dual-core chip in the early 2000s.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) Hitting\nB) When they hit\nC) They hit\nD) Upon hitting",
-            "answer": "A",
-            "explanation": "The gerund 'Hitting' introduces a gerund phrase that acts as the subject of the sentence: 'Hitting a 'power wall'... led developers to invent...'"
-          },
-          {
-            "id": 49,
-            "question": "Conceiving of a communal gathering space in the style of European town centers, recalled those he saw in his native Vienna.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) architect Victor Gruen’s designs for Pennsylvania’s South Hills Village, an indoor shopping mall completed in 1965, contained promenades, fountains, and greenery that\nB) South Hills Village, an indoor shopping mall in Pennsylvania completed in 1965, was designed by architect Victor Gruen with promenades, fountains, and greenery that\nC) the promenades, fountains, and greenery of Pennsylvania’s South Hills Village, an indoor shopping mall designed by architect Victor Gruen and completed in 1965,\nD) architect Victor Gruen designed Pennsylvania’s South Hills Village, an indoor shopping mall completed in 1965, with promenades, fountains, and greenery that",
-            "answer": "D",
-            "explanation": "The introductory phrase 'Conceiving of a communal gathering space...' must be followed by the person who did the conceiving—'architect Victor Gruen.'"
-          },
-          {
-            "id": 50,
-            "question": "The Greek philosopher Aristotle had ideas that would have substantial influence thousands of years after he taught ______. American Framers would use his philosophies like government moderation, the rule of law, and citizen rights when writing the United States Constitution.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) it.\nB) that.\nC) this.\nD) them.",
-            "answer": "D",
-            "explanation": "The plural pronoun 'them' refers to 'ideas.'"
-          },
-          {
-            "id": 51,
-            "question": "Having devised an optical spectroscopy technique that allowed researchers to study ultrafast chemical reactions within molecules, ______ known as femtochemistry. For this groundbreaking work, he won the Othmer Gold Medal and the Davy Medal from the Royal Society.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) chemist Ahmed Zewail introduced a new scientific discipline\nB) a new scientific discipline was introduced by Ahmed Zewail, a chemist\nC) the introduction of a new scientific discipline was initiated by chemist Ahmed Zewail\nD) chemist Ahmed Zewail’s introduction of a new scientific discipline would be",
-            "answer": "A",
-            "explanation": "The introductory phrase 'Having devised...' must be followed by the person who did the devising—'chemist Ahmed Zewail.'"
-          }
-        ],
-        "Modifiers": [],
-        "Parallel Structure": [],
-        "Miscellaneous Topics": []
+    {
+      "id": "PRO_004",
+      "difficulty": "Medium",
+      "content": {
+        "question": "In 2014, actor Keith David voiced the character Old Buzzard in the film Birds of Paradise. David has acted in everything from commercials to Broadway musicals, but his voice acting work is why______\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) has he become such a celebrated talent?", "B) has he become such a celebrated talent.", "C) he has become such a celebrated talent?", "D) he has become such a celebrated talent."]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The indirect question requires standard word order ('he has become') and ends with a period because it's part of a statement, not a direct question."
+      }
+    },
+    {
+      "id": "PRO_005",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Home to roughly 710,000 people,______\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) the city of Riga contains an impressive 35 percent of Latvia's total population.", "B) contained within the city of Riga is an impressive 35 percent of Latvia's total population.", "C) of Latvia's total population, an impressive 35 percent is contained in the city of Riga.", "D) an impressive 35 percent of Latvia's total population is contained within the city of Riga."]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The introductory phrase 'Home to roughly 710,000 people' must be followed by the noun it modifies—'the city of Riga.' This avoids a dangling modifier."
+      }
+    },
+    {
+      "id": "PRO_006",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Which choice completes the text so that it conforms to the conventions of Standard English?\n\nForming extensive networks via mycorrhizal association, ______\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) hemlock trees and the fungus Cantharellus cibarius can transport nutrients through their entangled tree roots and fungal hyphae.", "B) nutrients can be transported through the entanglement of hemlock trees' roots and the fungus Cantharellus cibarius's fungal hyphae.", "C) the transport of nutrients is possible through the entanglement of hemlock trees' roots and the fungus Cantharellus cibarius's fungal hyphae.", "D) it is the entanglement of hemlock trees' roots and the fungus Cantharellus cibarius's fungal hyphae that makes nutrient transport possible."]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The introductory phrase 'Forming extensive networks via mycorrhizal association' must be followed by the subject that is doing the forming—'hemlock trees and the fungus.' This correctly attaches the modifier."
+      }
+    },
+    {
+      "id": "PRO_007",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Technologies such as microphones and inkjet printers are made using piezoelectric materials, which generate an internal electric field when pressure is applied to them. The toxic nature of some of these materials recently led a team from the University of Sheffield to investigate how\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) could their use be better regulated?", "B) their use could be better regulated.", "C) their use could be better regulated?", "D) could their use be better regulated."]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The clause beginning with 'how' is an indirect question and should be in statement word order ('their use could be better regulated') and end with a period."
+      }
+    },
+    {
+      "id": "PRO_008",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The present-day city of Nakhchivan, Azerbaijan, was for years the capital of the Nakhchivan Autonomous Soviet Socialist Republic, one of many nominally autonomous republics within the Soviet Union. Like ______ peer autonomous Soviet socialist republics, the Nakhchivan Republic was established along ethnolinguistic lines: most of the republic's residents spoke Azerbaijani.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) their", "B) they're", "C) its", "D) it's"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The singular possessive pronoun 'its' is needed to refer to 'the Nakhchivan Republic.'"
+      }
+    },
+    {
+      "id": "PRO_009",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Both Arteaga, in the state of Coahuila, and Lagos de Moreno, in the state of Jalisco, have been designated by Mexico as pueblos mágicos (magical villages) to celebrate these ______ natural beauty and unique cultural traditions.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) town", "B) town's", "C) towns", "D) towns'"]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The plural possessive 'towns'' is needed because it refers to both Arteaga and Lagos de Moreno."
+      }
+    },
+    {
+      "id": "PRO_010",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The algaita is a double reed wind instrument from West Africa. The reed of a wind instrument is the mouthpiece ______ A double reed contains two pieces of cane that vibrate and produce sound as air passes between them.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) where is sound made.", "B) where sound is made?", "C) where sound is made.", "D) where is sound made?"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The relative clause 'where sound is made' correctly modifies 'mouthpiece' and ends with a period because it's part of a statement."
+      }
+    },
+    {
+      "id": "PRO_011",
+      "difficulty": "Medium",
+      "content": {
+        "question": "In her large-scale sculpture Casa-Isla, artist Edra Soto included references to her childhood in Puerto Rico. For example, the sculpture's steel panels have a crisscrossing pattern inspired by the iron gates ______\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) Soto would see in her neighborhood?", "B) would Soto see in her neighborhood?", "C) would Soto see in her neighborhood.", "D) Soto would see in her neighborhood."]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The relative clause 'Soto would see in her neighborhood' modifies 'iron gates' and should be in statement word order, ending with a period."
+      }
+    },
+    {
+      "id": "PRO_012",
+      "difficulty": "Medium",
+      "content": {
+        "question": "A painting by 19th-century artist Katsushika Hokusai, ______\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) deeper thematic meaning is conveyed to viewers of The Great Wave off Kanagawa through visual allegory.", "B) The Great Wave off Kanagawa's deeper thematic meaning is conveyed to viewers through visual allegory.", "C) visual allegory allows The Great Wave off Kanagawa to convey its deeper thematic meaning to viewers.", "D) The Great Wave off Kanagawa employs visual allegory to convey its deeper thematic meaning to viewers."]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The introductory phrase 'A painting by 19th-century artist Katsushika Hokusai' must be followed by the painting's name—'The Great Wave off Kanagawa'—to avoid a dangling modifier."
+      }
+    },
+    {
+      "id": "PRO_013",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Often anthologized alongside the ______ associated with the Black Arts movement—such as Henry Dumas and Ntozake Shange—Haki Madhubuti's poem 'Quality: Gwendolyn Brooks at 73' stands out for its memorable first lines: 'breath, / life after seven decades plus three years / is a lot of breathing.'\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) works of other writer's", "B) work's of other writer's", "C) works of other writers", "D) work's of other writers"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The plural noun 'works' and the plural possessive 'writers' are correct: 'works of other writers.'"
+      }
+    },
+    {
+      "id": "PRO_014",
+      "difficulty": "Medium",
+      "content": {
+        "question": "When a given industry—water and electricity are two well-known examples—carries high infrastructural start-up costs and other barriers that discourage competition, ______ of just one or two suppliers per municipality. Such industries are known as natural monopolies.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) they often consist", "B) this often consists", "C) these often consist", "D) it often consists"]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The singular pronoun 'it' refers to 'a given industry.'"
+      }
+    },
+    {
+      "id": "PRO_015",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The fact that many even-toed ungulates, including the Bavean deer (Axis kuhlii) and the south Andean deer (Hippocamelus bisulcus), meet the population criteria for endangered status validates the need for interventions that can prevent ______ from joining the ranks of the extinct.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) the animal", "B) these animals", "C) this animal's", "D) these animals'"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The plural demonstrative 'these animals' refers to the multiple deer species mentioned."
+      }
+    },
+    {
+      "id": "PRO_016",
+      "difficulty": "Medium",
+      "content": {
+        "question": "In her work, Bay of Quinte Mohawk artist Hannah Claus uses suspended sculptural installations to explore themes such as time, place, and nature. The Eiteljorg Museum counts pieces by Claus in ______ impressive collection of Native artworks.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) her", "B) it's", "C) its", "D) their"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The singular possessive pronoun 'its' refers to 'The Eiteljorg Museum.'"
+      }
+    },
+    {
+      "id": "PRO_017",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The Akhundov National Library in Baku houses many historical newspapers, but it isn't necessary to travel to Baku to access them. Because these rare items are digitized, people around the world can access ______ regardless of where they live.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) it", "B) them", "C) this", "D) that"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The plural pronoun 'them' refers to 'these rare items' (the newspapers)."
+      }
+    },
+    {
+      "id": "PRO_018",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The constitution of Spain, enacted in 1978, enshrines 60 total rights across 17,608 words of text. According to constitutional scholar George Tsebelis, who examines the implications of constitutional length on civil rights, ______ 105th in a global ranking of the shortest constitutions.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) its", "B) it's", "C) they're", "D) their"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The contraction 'it's' (it is) is needed to refer to 'The constitution of Spain.'"
+      }
+    },
+    {
+      "id": "PRO_019",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The length of bird eggs varies widely across species, and an ecological ______ compared the lengths of eggs produced by different bird species found Holiastur indus eggs to be longer, on average, than Calidris alpina eggs.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) study, that", "B) study", "C) study that", "D) study which,"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The relative pronoun 'that' introduces the clause 'compared the lengths...' without unnecessary punctuation."
+      }
+    },
+    {
+      "id": "PRO_020",
+      "difficulty": "Medium",
+      "content": {
+        "question": "In the 1960s, Sweden, Bulgaria, and dozens of other countries were allocated unique country dialing codes to route international calls. Most of the original two- or three- digit codes ______ by the International Telegraph and Telephone Consultative Committee later changed in response to geopolitical circumstances or telecommunications needs.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) assigned", "B) would be assigned", "C) had been assigned", "D) were assigned"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The past participle 'assigned' correctly modifies 'codes' in a reduced relative clause: 'codes assigned... later changed.'"
+      }
+    },
+    {
+      "id": "PRO_021",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Alabama resident Benjamin S. Turner, sworn in as a member of the US House of Representatives in 1871, was one of the nearly two thousand African ______ during the decade following the Civil War.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) Americans' who won elections'", "B) Americans who won election's", "C) American's who won elections", "D) Americans who won elections"]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The plural noun 'Americans' and the relative clause 'who won elections' are correct without possessive apostrophes."
+      }
+    },
+    {
+      "id": "PRO_022",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Proto-Kru is a protolanguage, or a hypothesized ancestral language, of all the Kru languages (thirty-eight languages that, because ______ descendants of Proto-Kru, can provide information about the protolanguage's structure).\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) its", "B) they're", "C) their", "D) it's"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The contraction 'they're' (they are) is needed to refer to the plural 'thirty-eight languages.'"
+      }
+    },
+    {
+      "id": "PRO_023",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Although the epic poem The Aeneid dates back to the 1st century BCE, ______ compelling narrative still captivates readers today.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) their", "B) they're", "C) its", "D) it's"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The singular possessive pronoun 'its' refers to 'The Aeneid.'"
+      }
+    },
+    {
+      "id": "PRO_024",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The constitution of Australia, enacted in 1901, enshrines 11 total rights across 17,318 words of text. According to constitutional scholar George Tsebelis, who examines the implications of constitutional length on civil rights, ______ 102nd in a global ranking of the shortest constitutions.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) they're", "B) their", "C) it's", "D) its"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The contraction 'it's' (it is) is needed to refer to 'The constitution of Australia.'"
+      }
+    },
+    {
+      "id": "PRO_025",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Creek Council Tree (1967) and Cimarron Iron Bridge (1972) are two oil landscape paintings by renowned Pawnee Nation artist Brummett Echohawk. In 2023, ______ displayed alongside other works by Echohawk at the student-curated exhibition Brummett Echohawk: An Artist's Journeyat the Oklahoma State University Museum of Art.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) they were", "B) this was", "C) it was", "D) some were"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The plural pronoun 'they' refers to the two paintings, and 'were' is the plural past tense verb."
+      }
+    },
+    {
+      "id": "PRO_026",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The Grootbos florilegium in South Africa contains a collection of botanical paintings, with each painting depicting a local plant species in exquisite detail. The florilegium includes a vignette painting by contributing artist Sibonelo Chiliza. Unlike most paintings in the florilegium, ______\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) Chiliza contextualizes a plant within an ecosystem in his vignette.", "B) the contextualization of a plant within an ecosystem occurs in Chiliza's vignette.", "C) a plant's ecosystem is contextualized in Chiliza's vignette.", "D) Chiliza's vignette contextualizes a plant within an ecosystem."]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The introductory phrase 'Unlike most paintings in the florilegium' must be followed by what is being compared—'Chiliza's vignette.'"
+      }
+    },
+    {
+      "id": "PRO_027",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Although the epic poem The Poem of the Cid dates back to the 12th century, ______ compelling narrative still captivates readers today.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) they're", "B) its", "C) their", "D) it's"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The singular possessive pronoun 'its' refers to 'The Poem of the Cid.'"
+      }
+    },
+    {
+      "id": "PRO_028",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The words 'utopia' and 'nerd' both trace ______ origins to books. 'Utopia' first appears in Utopia by Sir Thomas More, and 'nerd' first appears in If I Ran the Zoo by Dr. Seuss.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) there", "B) it's", "C) their", "D) they're"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "The plural possessive pronoun 'their' refers to the two words 'utopia' and 'nerd.'"
+      }
+    },
+    {
+      "id": "PRO_029",
+      "difficulty": "Medium",
+      "content": {
+        "question": "With an average summer temperature of 61 degrees Fahrenheit, Moscow is one European ______ many travelers recommend, especially from June to September.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) city, that", "B) city, which", "C) city in which,", "D) city that"]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The relative pronoun 'that' correctly introduces the restrictive clause 'many travelers recommend' without unnecessary commas."
+      }
+    },
+    {
+      "id": "PRO_030",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Both Pontianak, Indonesia, and Manta, Ecuador, are located at less than one degree latitude. In other words, ______ cities basically sit right on the equator!\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) these", "B) each", "C) that", "D) this"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The plural demonstrative 'these' refers to the two cities mentioned."
+      }
+    },
+    {
+      "id": "PRO_031",
+      "difficulty": "Medium",
+      "content": {
+        "question": "In May of 1959, the song 'Danny Boy' was a top-ten hit. Having climbed the charts for ten weeks, ______ ranked No. 1 on the Billboard Hot 100 list of most popular songs.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) those", "B) they", "C) each", "D) it"]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The singular pronoun 'it' refers to 'the song 'Danny Boy'.'"
+      }
+    },
+    {
+      "id": "PRO_032",
+      "difficulty": "Medium",
+      "content": {
+        "question": "After much debate, ______ finally made a decision: the judges for the 1912 Nobel Prize in Literature would award Gerhart Johann Robert Hauptmann of Germany with that year's prize 'for his fruitful, varied and outstanding production in the realm of dramatic art'.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) it", "B) they", "C) you", "D) anyone"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The plural pronoun 'they' refers to 'the judges.'"
+      }
+    },
+    {
+      "id": "PRO_033",
+      "difficulty": "Medium",
+      "content": {
+        "question": "In June of 2005, the song 'Pon de Replay' was a top-ten hit. Having climbed the charts for twenty-six weeks, ______ ranked No. 2 on the Billboard Hot 100 list of most popular songs.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) they", "B) it", "C) each", "D) those"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The singular pronoun 'it' refers to 'the song 'Pon de Replay'.'"
+      }
+    },
+    {
+      "id": "PRO_034",
+      "difficulty": "Medium",
+      "content": {
+        "question": "In June of 1966, the song 'I Need Love' was a top-ten hit. Having climbed the charts for six weeks, ______ ranked No. 4 on the Billboard Hot 100 list of most popular songs.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) those", "B) they", "C) each", "D) it"]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The singular pronoun 'it' refers to 'the song 'I Need Love'.'"
+      }
+    },
+    {
+      "id": "PRO_035",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Categorized as a dactyl, the word 'gradient' consists of one stressed syllable followed by two unstressed syllables. The word 'harpist,' by comparison, consists of one stressed syllable followed by one unstressed syllable, a metrical foot ______ to in English metrical verse as a trochee.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) referred", "B) is referred", "C) referring", "D) refers"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The past participle 'referred' modifies 'metrical foot' in a reduced relative clause: 'a metrical foot referred to as a trochee.'"
+      }
+    },
+    {
+      "id": "PRO_036",
+      "difficulty": "Medium",
+      "content": {
+        "question": "In the Persian language, people commonly begin a folktale with a phrase that roughly translates to 'there was and there was not.' In English, beginning with the phrase 'once uponatime' is common. Indeed, how a folktale begins depends largely on the language in which ______ being told\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) they were", "B) these are", "C) they are", "D) it is"]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The singular pronoun 'it' refers to 'a folktale,' and 'is' is the singular present tense verb."
+      }
+    },
+    {
+      "id": "PRO_037",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Disyllabic words ______ as trochees in English metrical verse, such as 'eyebrow' and 'mascot,' consist of one stressed syllable followed by one unstressed syllable.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) have been classified", "B) can be classified", "C) are classified", "D) classified"]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The past participle 'classified' modifies 'words' in a reduced relative clause: 'words classified as trochees.'"
+      }
+    },
+    {
+      "id": "PRO_038",
+      "difficulty": "Medium",
+      "content": {
+        "question": "On February 1, 2018, a Florida—based research team—Martha A. Scholl, Maoya Bassiouni, and Angel J. Torres-Sánchez—compiled climate data from several sites in Puerto Rico's Luquillo Mountains. At site CC1, the site with the highest elevation, the air temperature fluctuated slightly throughout the day, registering ______ and 16^° C at 5:00 p.m.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) 15.4^° C at 1:00 a.m., 18.6^° C at 11:30 a.m.", "B) 15.4^° C at 1:00 a.m.; 18.6^° C at 11:30 a.m.,", "C) 15.4^° C, at 1:00 a.m. 18.6^° C, at 11:30 a.m.", "D) 15.4^° C at 1:00 a.m., 18.6^° C at 11:30 a.m.,"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "Two temperature-time pairs are listed in a series, separated by a comma. No extra punctuation is needed within each pair."
+      }
+    },
+    {
+      "id": "PRO_039",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Among the world's largest deserts are the Syrian Desert, ranked ______ and the Chalbi Desert, ranked twenty-ninth.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) ninth in size; the Kyzylkum Desert; ranked sixteenth;", "B) ninth in size; the Kyzylkum Desert, ranked sixteenth;", "C) ninth in size the Kyzylkum Desert, ranked sixteenth", "D) ninth in size; the Kyzylkum Desert; ranked sixteenth;"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Semicolons separate items in a list that already contain commas. Here, 'the Kyzylkum Desert, ranked sixteenth' is one item with an internal comma, so it is separated from the others by a semicolon."
+      }
+    },
+    {
+      "id": "PRO_040",
+      "difficulty": "Medium",
+      "content": {
+        "question": "In 19th-century Bengal, cowry shells were used as a commodity currency. By using specific goods like cowry shells as common units of exchange, commodity currency economies streamline trade, which is why they often replaced barter economies. Barter economies eschew ______ that requires what economist W.S. Jevons deems a 'double coincidence of wants'—in other words, each trading party must want precisely what the other has.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) currency, in favor of a direct trade system", "B) currency—in favor of a direct trade system", "C) currency in favor of a direct trade system", "D) currency, in favor of a direct trade system,"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "No punctuation is needed; 'currency in favor of a direct trade system' is a direct object followed by a prepositional phrase."
+      }
+    },
+    {
+      "id": "PRO_041",
+      "difficulty": "Medium",
+      "content": {
+        "question": "In her work as a sociocultural anthropologist, Livia Barbosa studies food and sociability in contemporary Brazil—namely, how common Brazilian foods like tareco (a disk-shaped biscuit) and coxinha (a stuffed fried dough) ______ as central mechanisms in building social relationships, values, and identities.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) having eventually become", "B) eventually became", "C) to eventually become", "D) eventually becoming"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "The past tense verb 'eventually became' is needed to complete the main clause."
+      }
+    },
+    {
+      "id": "PRO_042",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The African baobab (Adansonia digitata) known as Panke Baobab, in Zimbabwe, was one of the oldest known trees in the world, at 2,419 years old. With over two millennia of climate data in its tree ______ single tree like this, claims dendrochronologist Valerie Trouet, can tell the history of the world.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) rings. A", "B) rings and a", "C) rings, a", "D) rings; a"]
+      },
+      "solution": {
+        "answer": "C",
+        "explanation": "A comma is needed to separate the introductory phrase 'With over two millennia of climate data in its tree rings' from the main clause 'a single tree like this...'"
+      }
+    },
+    {
+      "id": "PRO_043",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Topographical prominence is a measure of a mountain's independence from other mountains. Having 9,721 feet of prominence,\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) Pico do Ramelau, a peak located in Timor-Leste, is ranked by geographers as the world's 98th most prominent mountain.", "B) the list of mountains geographers rank as the world's most prominent includes Pico do Ramelau, a peak located in Timor-Leste, at number 98.", "C) geographers have ranked Pico do Ramelau, a peak in Timor-Leste, as the world's 98th most prominent mountain.", "D) the ranking given by geographers to Pico do Ramelau, a peak located in Timor-Leste, is 98th most prominent mountain in the world."]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The introductory phrase 'Having 9,721 feet of prominence' must be followed by what has that prominence—'Pico do Ramelau.'"
+      }
+    },
+    {
+      "id": "PRO_044",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The star known as HR 8799, ______ is one of the few known stars to host multiple planets.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) Earth, at 204 light-years away,", "B) Earth at 204 light-years away,", "C) Earth at 204 light-years away:", "D) Earth: at 204 light-years away,"]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "A colon introduces an explanatory appositive: 'Earth: at 204 light-years away, ...'"
+      }
+    },
+    {
+      "id": "PRO_045",
+      "difficulty": "Medium",
+      "content": {
+        "question": "L. Leann Kanda, a researcher and sewing enthusiast, experimented with several techniques in her attempt to replicate the famous pleating of the Fortuny Delphos gown. The specific method, which the fashion developed in the early twentieth century, is considered lost.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) designers Henriette Nigrin and Mariano Fortuny y Madrazo,", "B) designers Henriette Nigrin and Mariano Fortuny y Madrazo", "C) designers, Henriette Nigrin and Mariano Fortuny y Madrazo", "D) designers, Henriette Nigrin and Mariano Fortuny y Madrazo,"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "No commas are needed; 'designers Henriette Nigrin and Mariano Fortuny y Madrazo' is an appositive that identifies 'the fashion' and should not be set off by commas because it is essential."
+      }
+    },
+    {
+      "id": "PRO_046",
+      "difficulty": "Medium",
+      "content": {
+        "question": "On February 1, 2018, a Florida-based research team—Martha A. Scholl, Maoya Bassiouni, and Angel J. Torres-Sánchez—compiled climate data from several sites in Puerto Rico's Luquillo Mountains. At site CC1, the site with the highest elevation, the air temperature fluctuated slightly throughout the day, registering and 16.2°C at 8:30 p.m.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) 17.9°C, at 3:00 p.m. 16°C, at 5:00 p.m.", "B) 17.9°C at 3:00 p.m., 16°C at 5:00 p.m.,", "C) 17.9°C at 3:00 p.m. 16°C at 5:00 p.m.", "D) 17.9°C at 3:00 p.m., 16°C at 5:00 p.m.;"]
+      },
+      "solution": {
+        "answer": "B",
+        "explanation": "Two temperature-time pairs are listed in a series, separated by a comma, and a comma is needed after the second pair before 'and.'"
+      }
+    },
+    {
+      "id": "PRO_047",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Released in 1987, the Acorn ARM2 microchip contained a single CPU, or core, to execute commands. As processing speeds of single-core chips increased over time, so too did the heat the chips generated. ______ a 'power wall' in which more heat was produced than could be efficiently dissipated led developers to invent the dual-core chip in the early 2000s.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) items. The", "B) items the", "C) items; the", "D) items, the"]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "A comma is needed to separate the introductory phrase 'Released in 1987' from the main clause 'the Acorn ARM2 microchip contained...'"
+      }
+    },
+    {
+      "id": "PRO_048",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Which choice completes the text so that it conforms to the conventions of Standard English?\n\nHitting a 'power wall' in which more heat was produced than could be efficiently dissipated led developers to invent the dual-core chip in the early 2000s.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) Hitting", "B) When they hit", "C) They hit", "D) Upon hitting"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The gerund 'Hitting' introduces a gerund phrase that acts as the subject of the sentence: 'Hitting a 'power wall'... led developers to invent...'"
+      }
+    },
+    {
+      "id": "PRO_049",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Conceiving of a communal gathering space in the style of European town centers, recalled those he saw in his native Vienna.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) architect Victor Gruen's designs for Pennsylvania's South Hills Village, an indoor shopping mall completed in 1965, contained promenades, fountains, and greenery that", "B) South Hills Village, an indoor shopping mall in Pennsylvania completed in 1965, was designed by architect Victor Gruen with promenades, fountains, and greenery that", "C) the promenades, fountains, and greenery of Pennsylvania's South Hills Village, an indoor shopping mall designed by architect Victor Gruen and completed in 1965,", "D) architect Victor Gruen designed Pennsylvania's South Hills Village, an indoor shopping mall completed in 1965, with promenades, fountains, and greenery that"]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The introductory phrase 'Conceiving of a communal gathering space...' must be followed by the person who did the conceiving—'architect Victor Gruen.'"
+      }
+    },
+    {
+      "id": "PRO_050",
+      "difficulty": "Medium",
+      "content": {
+        "question": "The Greek philosopher Aristotle had ideas that would have substantial influence thousands of years after he taught ______. American Framers would use his philosophies like government moderation, the rule of law, and citizen rights when writing the United States Constitution.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) it.", "B) that.", "C) this.", "D) them."]
+      },
+      "solution": {
+        "answer": "D",
+        "explanation": "The plural pronoun 'them' refers to 'ideas.'"
+      }
+    },
+    {
+      "id": "PRO_051",
+      "difficulty": "Medium",
+      "content": {
+        "question": "Having devised an optical spectroscopy technique that allowed researchers to study ultrafast chemical reactions within molecules, ______ known as femtochemistry. For this groundbreaking work, he won the Othmer Gold Medal and the Davy Medal from the Royal Society.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?",
+        "options": ["A) chemist Ahmed Zewail introduced a new scientific discipline", "B) a new scientific discipline was introduced by Ahmed Zewail, a chemist", "C) the introduction of a new scientific discipline was initiated by chemist Ahmed Zewail", "D) chemist Ahmed Zewail's introduction of a new scientific discipline would be"]
+      },
+      "solution": {
+        "answer": "A",
+        "explanation": "The introductory phrase 'Having devised...' must be followed by the person who did the devising—'chemist Ahmed Zewail.'"
       }
     }
-  }
+  ]
 }
