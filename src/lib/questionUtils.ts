@@ -573,10 +573,9 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
   };
   
   try {
-    // Define all JSON file paths - now using standardized format files
-    // Note: boundaries_full, transitions_full, inference_full use nested format
+    // Define all JSON file paths - using nested format files for Boundaries/Transitions/Inferences
     const filePaths = [
-      '/data/boundaries_full.json',       // Nested format: 250 questions
+      '/data/boundaries.json',            // Nested format: 250 questions
       '/data/subject_verb_agreement.json',
       '/data/verb_tenses.json',
       '/data/verb_forms.json',
@@ -584,8 +583,8 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
       '/data/modifiers_questions.json',
       '/data/parallel_structure.json',
       '/data/miscellaneous_topics.json',
-      '/data/transitions_full.json',      // Nested format: 202 questions
-      '/data/inference_full.json',        // Nested format: 149 questions
+      '/data/transitions.json',           // Nested format: 202 questions
+      '/data/inference.json',             // Nested format: 149 questions
       '/data/cross_text_connections.json',
       '/data/main_purpose.json',
       '/data/overall_structure.json',
