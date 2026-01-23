@@ -765,9 +765,458 @@
           "question": "The human shoulder contains the infraspinatus,a skeletal muscle that is attached to the ______ this muscle plays a role in rotating the upper arm.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA)scapula,\nB)scapula;\nC)scapula\nD)scapula that",
           "answer": "B",
           "explanation": "A semicolon is needed to connect two closely related independent clauses. The first clause ends with 'attached to the scapula;' the second begins with 'this muscle plays...' Therefore, 'scapula;' is correct."
+        },
+        {
+          "id": 126,
+          "question": "In 1936, mathematician Alonzo Church published a paper introducing ______ a formal system for expressing computation. Lambda calculus has since become fundamental to computer science and programming language theory.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) lambda calculus;\nB) lambda calculus:\nC) lambda calculus,\nD) lambda calculus",
+          "answer": "C",
+          "explanation": "A comma is needed after 'lambda calculus' because what follows is an appositive phrase that provides additional information about lambda calculus."
+        },
+        {
+          "id": 127,
+          "question": "The aurora borealis, commonly known as the northern ______ occurs when charged particles from the sun interact with gases in Earth's atmosphere.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) lights:\nB) lights;\nC) lights,\nD) lights",
+          "answer": "C",
+          "explanation": "A comma is needed to set off the nonessential appositive 'commonly known as the northern lights' from the rest of the sentence."
+        },
+        {
+          "id": 128,
+          "question": "The Rosetta Stone, discovered in 1799, contains the same text written in three different ______ hieroglyphics, Demotic script, and ancient Greek.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) scripts;\nB) scripts:\nC) scripts,\nD) scripts",
+          "answer": "B",
+          "explanation": "A colon is used to introduce a list. The phrase 'hieroglyphics, Demotic script, and ancient Greek' is a list of the three scripts mentioned."
+        },
+        {
+          "id": 129,
+          "question": "Despite being one of the most visited museums in the ______ the Louvre in Paris houses over 380,000 objects and displays 35,000 works of art.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) world;\nB) world:\nC) world,\nD) world",
+          "answer": "C",
+          "explanation": "A comma is needed after 'world' because the introductory phrase 'Despite being one of the most visited museums in the world' needs to be separated from the main clause."
+        },
+        {
+          "id": 130,
+          "question": "The periodic table organizes chemical elements by their atomic ______ which determines their chemical properties and behavior.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) number;\nB) number:\nC) number,\nD) number",
+          "answer": "C",
+          "explanation": "A comma is needed before 'which' to introduce the nonrestrictive clause that provides additional information about atomic number."
+        },
+        {
+          "id": 131,
+          "question": "Charline Effah is a novelist from Minvoul, Gabon, who has earned international acclaim in recent years. Writers of other literary forms, such as poetry and drama, are less likely to be recognized beyond their nations’ borders, but many are still well ______ Malika Ouattara, for example, is a celebrated slam poet from Burkina Faso.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) known\nB) known,\nC) known:\nD) known and",
+          "answer": "C",
+          "explanation": "A colon is used to introduce an example or explanation. Here, the colon introduces the example of Malika Ouattara. Therefore, 'known:' is correct."
+        },
+        {
+          "id": 132,
+          "question": "When Fiji joined Interpol—the International Criminal Police______ in 1971, the Fiji National Police Intelligence Bureau gained access to the combined resources of law enforcement agencies from around the globe.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) Organization,\nB) Organization—\nC) Organization\nD) Organization:",
+          "answer": "B",
+          "explanation": "The em dash is used to set off the appositive that defines 'Interpol.' Therefore, an em dash is needed after 'Organization' to close the appositive. 'Organization—' is correct."
+        },
+        {
+          "id": 133,
+          "question": "The length of bird eggs varies widely across species, and an ecological ______ compared the lengths of eggs produced by different bird species found Milvus migrans eggs to be longer, on average, than Gallinula chloropus eggs.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) study, that\nB) study, which\nC) study\nD) study that",
+          "answer": "D",
+          "explanation": "The relative clause 'that compared the lengths...' is essential to define the ecological study; it should not be set off by commas. Therefore, 'study that' is correct."
+        },
+        {
+          "id": 134,
+          "question": "The Suzuki method is an approach to music instruction______ to teach music in the same natural way children learn language, emphasizes retaining and reviewing previously learned pieces of music. In Suzuki piano instruction, students begin their musical education with simple folk songs like “The Honeybee.\"\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) that, is aiming\nB) that, aiming\nC) that aims\nD) that has aimed",
+          "answer": "B",
+          "explanation": "The participle phrase 'aiming to teach music...' modifies the Suzuki method. It should be set off by a comma after 'that' because it is an interrupting phrase. Therefore, 'that, aiming' is correct."
+        },
+        {
+          "id": 135,
+          "question": "The Organisation for Economic Co-operation and Development (OECD) tracks comparative price list data for its thirty-eight member countries. According to this data, in July 2021, a 'basket' of goods and services priced at 100 US dollars (USD) in the United States would have cost 80 USD in fellow OECD member ______\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) nation Spain.\nB) nation, Spain.\nC) nation—Spain.\nD) nation: Spain.",
+          "answer": "A",
+          "explanation": "No punctuation is needed. The phrase 'fellow OECD member nation Spain' flows directly, with 'Spain' as an appositive. Therefore, 'nation Spain.' is correct."
+        },
+        {
+          "id": 136,
+          "question": "Two of the most celebrated examples of visual allegory in painting, The Four Elements: Air by Joachim Beuckelaer and Ceres (Summer) by Antoine Watteau, were completed in 1570 and ______ such allegorical artwork was particularly popular from the 15th through the late 18th centuries.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) 1712, respectively;\nB) 1712, respectively;\nC) 1712 respectively;\nD) 1712; respectively,",
+          "answer": "A",
+          "explanation": "The word 'respectively' indicates the correspondence between the paintings and their dates. It should be set off by commas. A semicolon is needed to connect the two independent clauses. Therefore, '1712, respectively;' is correct."
+        },
+        {
+          "id": 137,
+          "question": "Fatoumata Keïta is a novelist from Bamako, Mali, who has earned international acclaim in recent years. Writers of other literary forms, such as poetry and drama, are less likely to be recognized beyond their nations’ borders, but many are still well ______ Fama Diagne Sène, for example, is a celebrated playwright from Senegal.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) known:\nB) known and\nC) known,\nD) known",
+          "answer": "A",
+          "explanation": "A colon is used to introduce an example or explanation. Here, the colon introduces the example of Fama Diagne Sène. Therefore, 'known:' is correct."
+        },
+        {
+          "id": 138,
+          "question": "When Fiji joined Interpol—the International Criminal Police______ in 1971, the Fiji National Police Intelligence Bureau gained access to the combined resources of law enforcement agencies from around the globe.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) Organization—\nB) Organization:\nC) Organization\nD) Organization,",
+          "answer": "A",
+          "explanation": "The em dash is used to set off the appositive that defines 'Interpol.' Therefore, an em dash is needed after 'Organization' to close the appositive. 'Organization—' is correct."
+        },
+        {
+          "id": 139,
+          "question": "The Organisation for Economic Co-operation and Development (OECD) tracks comparative price list data for its thirty-eight member countries. According to this data, in July 2021, a 'basket' of goods and services priced at 100 US dollars (USD) in the United States would have cost 55 USD in fellow OECD member ______\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) nation: Costa Rica.\nB) nation—Costa Rica.\nC) nation Costa Rica.\nD) nation, Costa Rica.",
+          "answer": "C",
+          "explanation": "No punctuation is needed. The phrase 'fellow OECD member nation Costa Rica' flows directly, with 'Costa Rica' as an appositive. Therefore, 'nation Costa Rica.' is correct."
+        },
+        {
+          "id": 140,
+          "question": "On February 1, 2018, a Florida-based research team—Martha A. Scholl, Maoya Bassiouni, and Angel J. Torres-Sánchez—compiled climate data from several sites in Puerto Rico’s Luquillo Mountains. At 8:30 a.m., the air temperature was 16°C at site CCI, the site with the highest ______ it had shifted to 16.8°C by 11:00 p.m.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) elevation and\nB) elevation\nC) elevation,\nD) elevation, and",
+          "answer": "D",
+          "explanation": "The conjunction 'and' is needed to connect the two independent clauses. A comma is required before 'and' when it joins two independent clauses. Therefore, 'elevation, and' is correct."
+        },
+        {
+          "id": 141,
+          "question": "Two of the most celebrated examples of visual allegory in painting, The Four Elements: Air by Joachim Beuckelaer and Ceres (Summer) by Antoine Watteau, were completed in 1570 and ______ such allegorical artwork was particularly popular from the 15th through the late 18th centuries.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) 1712 respectively,\nB) 1712, respectively;\nC) 1712, respectively,\nD) 1712; respectively,",
+          "answer": "B",
+          "explanation": "The word 'respectively' indicates the correspondence between the paintings and their dates. It should be set off by commas. A semicolon is needed to connect the two independent clauses. Therefore, '1712, respectively;' is correct."
+        },
+        {
+          "id": 142,
+          "question": "When Malaysia joined Interpol—the International Criminal Police______ in 1961, the Royal Malaysian Police gained access to the combined resources of law enforcement agencies from around the globe.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) Organization—\nB) Organization:\nC) Organization,\nD) Organization",
+          "answer": "A",
+          "explanation": "The em dash is used to set off the appositive that defines 'Interpol.' Therefore, an em dash is needed after 'Organization' to close the appositive. 'Organization—' is correct."
+        },
+        {
+          "id": 143,
+          "question": "The length of bird eggs varies widely across species, and an ecological ______ compared the lengths of eggs produced by different bird species found Calidris alpina eggs to be longer, on average, than Oriolus xanthornus eggs.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) study that\nB) study\nC) study, which\nD) study, that",
+          "answer": "A",
+          "explanation": "The relative clause 'that compared the lengths...' is essential to define the ecological study; it should not be set off by commas. Therefore, 'study that' is correct."
+        },
+        {
+          "id": 144,
+          "question": "The Suzuki method is an approach to music instruction______ to teach music in the same natural way children learn language, emphasizes immersion in a musical community. In Suzuki violin instruction, students begin their musical education with simple classical pieces like Johann Sebastian Bach’s “Minnet No. 2.”\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) that, is aiming\nB) that, aiming\nC) that aims\nD) that has aimed",
+          "answer": "B",
+          "explanation": "The participle phrase 'aiming to teach music...' modifies the Suzuki method. It should be set off by a comma after 'that' because it is an interrupting phrase. Therefore, 'that, aiming' is correct."
+        },
+        {
+          "id": 145,
+          "question": "The Organisation for Economic Co-operation and Development (OECD) tracks comparative price list data for its thirty-eight member countries. According to this data, in July 2021, a “basket” of goods and services priced at 100 US dollars (USD) in the United States would have cost 113 USD in fellow OECD member ______.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) nation Australia.\nB) nation: Australia.\nC) nation—Australia.\nD) nation, Australia.",
+          "answer": "A",
+          "explanation": "No punctuation is needed. The phrase 'fellow OECD member nation Australia' flows directly, with 'Australia' as an appositive. Therefore, 'nation Australia.' is correct."
+        },
+        {
+          "id": 146,
+          "question": "Inspired by her Ottawa/Pottawotami/Ojibwe heritage, artist Kelly Church typically uses black ash—a durable and flexible ______ craft baskets that are both beautiful and whimsical.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) material: to\nB) material; to\nC) material—to\nD) material. To",
+          "answer": "C",
+          "explanation": "The em dash is used to set off the appositive 'a durable and flexible material' and then the infinitive 'to craft baskets' indicates the purpose. Therefore, 'material—to' is correct."
+        },
+        {
+          "id": 147,
+          "question": "New Mexican governor______ the first woman to serve in that role in the state’s history—took office on January 1, 2011.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) Susana Martinez,\nB) Susana Martinez:\nC) Susana Martinez\nD) Susana Martinez—",
+          "answer": "D",
+          "explanation": "The phrase 'the first woman to serve in that role in the state’s history' is an appositive that renames the governor. It is set off by em dashes. Therefore, an em dash is needed after 'Martinez' to introduce the appositive. 'Susana Martinez—' is correct."
+        },
+        {
+          "id": 148,
+          "question": "Featured among the more than 120 photographs in 2021 exhibition The New Woman Behind the Camera, Lola Alvarez Bravo’s ______ 'The Freeloaders' offers a glimpse back in time to 1955.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) photograph,\nB) photograph\nC) photograph;\nD) photograph:",
+          "answer": "B",
+          "explanation": "No punctuation is needed. The phrase 'Lola Alvarez Bravo’s photograph 'The Freeloaders'' flows directly without interruption. Therefore, 'photograph' is correct."
+        },
+        {
+          "id": 149,
+          "question": "Since 1948, Us News an & World Report has been publishing data-driven reports on various aspects of culture and society, including an annual ranking of the best jobs in US. In 2021, the publication determined that statistics had the sixth best job in US. A calculation arrived at by considering such ______ median salary and work-life balance.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) metrics as the profession’s\nB) metric as the profession’s\nC) metrics as the professions’\nD) metric as the professions",
+          "answer": "A",
+          "explanation": "The word 'metrics' is plural because it refers to multiple factors (median salary, work-life balance). The possessive 'profession’s' is correct because it refers to the job of statistics. Therefore, 'metrics as the profession’s' is correct."
+        },
+        {
+          "id": 150,
+          "question": "In his Naturalis historia, Pliny the Elder praised Hipparchus’s star catalog, a second-century BCE list of roughly 850 different stars’ celestial positions. For centuries, scholars dreamed about locating a copy of this legendary lost ______ fantasy (partially) became reality in 2022, when researchers uncovered the traces of the star catalog on a palimpsest, a reused parchment.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) work, that\nB) work and that\nC) work that\nD) work. That",
+          "answer": "D",
+          "explanation": "A period is needed to end the sentence. The next sentence begins with 'That fantasy (partially) became reality...' Therefore, 'work. That' is correct."
+        },
+        {
+          "id": 201,
+          "question": "In Norway, the Longyearbyen observatory site monitors activity in the upper atmosphere of the northern ______ in Australia, another observatory site, Buckland Park, monitors the sky of the southern hemisphere. Together, they are part of the Super Dual Auroral Radar Network—or SuperDARN, as space physicists like Tadahiko Ogawa call it.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) hemisphere and\nB) hemisphere\nC) hemisphere,\nD) hemisphere;",
+          "answer": "D",
+          "explanation": "A semicolon is needed to connect two closely related independent clauses. The first clause ends with 'the northern hemisphere;' the second begins with 'in Australia... monitors the sky...' Therefore, 'hemisphere;' is correct."
+        },
+        {
+          "id": 202,
+          "question": "Long attributed to Jacques-Louis David, the preeminent Neoclassical painter of his day, the 1801 painting Marie Joséphine Charlotte du Val d’Ognes gained fresh attention in the 1990s when art historians discovered that the painting—which depicts a solitary young woman sketching—was actually the work of little-known French portrait ______ Marie-Denise Villers (1774-1821).\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) artist—\nB) artist\nC) artist:\nD) artist,",
+          "answer": "B",
+          "explanation": "No punctuation is needed. The noun 'portrait artist' is directly followed by the specific name 'Marie-Denise Villers,' which acts as an essential appositive. Therefore, 'artist' is correct."
+        },
+        {
+          "id": 203,
+          "question": "Along the hallowed walls of New York City’s Museum of Modern Art hangs 24.5-by-34.5-inch oil______ which was created in 1964 by American artist Vija Celmins.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) painting Gun with Hand #1\nB) painting, Gun with Hand #1,\nC) painting Gun with Hand #1,\nD) painting, Gun with Hand #1",
+          "answer": "C",
+          "explanation": "The title of the painting, 'Gun with Hand #1,' is an essential appositive and should not be set off by a comma at the beginning. However, a comma is needed after the title to separate it from the non-essential relative clause 'which was created...' Therefore, 'painting Gun with Hand #1,' is correct."
+        },
+        {
+          "id": 204,
+          "question": "For Spain, a member of the North Atlantic Treaty Organization (NATO) since 1982, NATO’s principle of collective defense confers both benefits and ______ organization’s many members, nations as disparate as the US and Slovenia, are all bound to defend Spain, the reverse is also true.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) obligations; the\nB) obligations. The\nC) obligations, while the\nD) obligations: while the",
+          "answer": "D",
+          "explanation": "A colon is used to introduce an explanation. Here, the clause after the colon explains the 'both benefits and obligations' by contrasting them. The word 'while' sets up the contrast within that explanation. Therefore, 'obligations: while the' is correct."
+        },
+        {
+          "id": 205,
+          "question": "As of 2017, Italy’s top tax rate of 55% was lower than the country’s Laffer curve peak (70%). To some economists, whether a tax cut will ultimately increase Italy’s tax revenue is dependent on the country’s position on the Laffer ______ a theoretical relationship between tax rates and revenues, the curve was famously sketched on a napkin by economist Arthur Laffer in 1974.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) curve\nB) curve;\nC) curve, which is\nD) curve,",
+          "answer": "B",
+          "explanation": "A semicolon is needed to connect the two independent clauses: '...position on the Laffer curve;' and 'a theoretical relationship... was famously sketched...' The second clause explains the first. Therefore, 'curve;' is correct."
+        },
+        {
+          "id": 206,
+          "question": "Epic poetry is a literary genre characterized by lengthy narratives that emphasize the heroic or divine. The Argonautica, an epic poem of Greek origin, dates back to the ______ the poem’s heroic narrative still captivates modern readers.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) 3rd century BCE,\nB) 3rd century BCE yet,\nC) 3rd century BCE, yet\nD) 3rd century BCE",
+          "answer": "C",
+          "explanation": "The word 'yet' is a coordinating conjunction showing contrast. When it joins two independent clauses, a comma is needed before it. Therefore, '3rd century BCE, yet' is correct."
+        },
+        {
+          "id": 207,
+          "question": "In addition to being a celebrated writer, musician, and educator, Zitkála-Sá (Yankton Dakota) was the cofounder of the National Council of American ______ advocating for Native American civil rights throughout the 1920s and 1930s.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) Indians. Which\nB) Indians,\nC) Indians\nD) Indians, which",
+          "answer": "B",
+          "explanation": "A comma is needed to separate the independent clause from the participial phrase that follows. The participial phrase 'advocating for Native American civil rights...' modifies the main clause. Therefore, 'Indians,' is correct."
+        },
+        {
+          "id": 208,
+          "question": "Cy Twombly, a US painter and sculptor, created many large-scale abstract works, such as his 10-painting series Fifty Days at Ilion. In these works, Twombly’s artistic style is exemplified by his use of graffiti-like ______ often incorporate words or phrases from poetry and mythology.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) scribbles that\nB) scribbles: that\nC) scribbles; that\nD) scribbles. That",
+          "answer": "A",
+          "explanation": "The relative clause 'that often incorporate words...' is essential to define the scribbles; it should not be set off by punctuation. Therefore, 'scribbles that' is correct."
+        },
+        {
+          "id": 209,
+          "question": "For the past 20 million years, Earth’s magnetic poles in the far north and far south have remained roughly where they are today. This has not always been the ______ throughout geologic history, Earth’s magnetic poles have swapped places several times through a process called polar wandering.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) case, though,\nB) case, though;\nC) case; though,\nD) case, though",
+          "answer": "B",
+          "explanation": "The word 'though' is a conjunctive adverb showing contrast. When it joins two independent clauses, proper punctuation is a semicolon before and a comma after. The option 'case, though;' is the correct format."
+        },
+        {
+          "id": 210,
+          "question": "New Zealand and Greece have two of the longest constitutions in the world. At 48,438 and 26,989 words, respectively, these ______ according to research by constitutional scholars George Tsebelis and Dominic J. Nardi, correlate with GDPs (gross domestic products) that are lower than those of countries with shorter constitutions.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) constitutions lengths,\nB) constitution’s lengths,\nC) constitutions’ lengths,\nD) constitutions’ length,",
+          "answer": "C",
+          "explanation": "The possessive plural 'constitutions'' is needed because the lengths belong to multiple constitutions. The plural 'lengths' is correct because it refers to the two different word counts. Therefore, 'constitutions’ lengths,' is correct."
+        },
+        {
+          "id": 211,
+          "question": "Included in Second Sight: the Paradox of Vision in Contemporary Art, a 2018 group exhibition at the Bowdoin College Museum of Art in Brunswick, Maine, was the work of artist Lorna Simpson, who is best known for her multimedia artworks that juxtapose images of African American women with text fragments. Her work challenges conventional notions of race, gender, history, and ______ she is credited with expanding the horizons of conceptual photographic art.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) memory,\nB) memory\nC) memory, and\nD) memory and",
+          "answer": "C",
+          "explanation": "The word 'and' is needed to connect the last item in the list ('memory') to the following clause. However, because the list is part of a larger sentence, a comma is needed after 'and' to separate the list from the independent clause that follows. Therefore, 'memory, and' is correct."
+        },
+        {
+          "id": 212,
+          "question": "Recent analysis of 54598 Bienor—an outer solar system object orbiting the Sun between Saturn and Uranus—has determined its color to be gray, suggesting an icy composition. Such interpretations are ultimately ______ the object’s gray coloration may be an incidental effect of radiation, solar wind, or collisions with other objects rather than evidence of its physical makeup.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) speculative, though,\nB) speculative, though;\nC) speculative; though\nD) speculative, though",
+          "answer": "B",
+          "explanation": "The word 'though' is a conjunctive adverb showing contrast. When it joins two independent clauses, proper punctuation is a semicolon before and a comma after. The option 'speculative, though;' is the correct format."
+        },
+        {
+          "id": 213,
+          "question": "When attempting to determine a fault’s seismic history, geophysicists like Dr. Estella Atekwana at the University of Delaware rely in part on data about the fault’s physical dimensions and geological features. For the Ione Valley fault in Lander County, Nevada, the US Geological Survey complies such data in several ______ exchanging information with state geological surveys, by linking maps of the fault with sources that offer detailed descriptions of it, and by maintaining a database of quantitative data such as the fault’s length (76 km).\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) ways. By\nB) ways: by\nC) ways; by\nD) ways by:",
+          "answer": "B",
+          "explanation": "A colon is used to introduce a list or series. Here, the colon introduces the list of ways the USGS complies data. Therefore, 'ways: by' is correct."
+        },
+        {
+          "id": 214,
+          "question": "A pet rabbit is held by its owner on a beach in 'Boo and His Rabbit', a photograph by British ______ Chris Killip.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) artist:\nB) artist—\nC) artist\nD) artist,",
+          "answer": "C",
+          "explanation": "No punctuation is needed. The name 'Chris Killip' is an essential appositive identifying the British artist; it should not be set off by punctuation. Therefore, 'artist' is correct."
+        },
+        {
+          "id": 215,
+          "question": "The 2020 documentary Without a Whisper—Konnon: Kwe was directed by Katsitsionni Fox. It explores how Indigenous Haudenosaunee culture shaped the woman suffrage movement in the early nineteenth ______ how the personal and political authority Haudenosaunee women had in their communities influenced the first suffragists in the US.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) Century. Revealing\nB) century; revealing\nC) century, revealing\nD) century revealing",
+          "answer": "C",
+          "explanation": "A comma is needed to separate the introductory phrase 'in the early nineteenth century' from the participial phrase 'revealing how...' that modifies the main clause. Therefore, 'century, revealing' is correct."
+        },
+        {
+          "id": 216,
+          "question": "Although 39P/Oterma and 83982 Crantor are both classified as centaur objects—outer solar system bodies in unstable orbits—they exhibit striking differences in______ object 39P/Oterma is considered an active centaur, showing sporadic comet-like activity (such as clouds of dust and gas on its surface), 83982 Crantor, showing no such activity, is considered dormant.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) behavior: while the\nB) behavior; the\nC) behavior, while the\nD) behavior. The",
+          "answer": "A",
+          "explanation": "A colon is used to introduce an explanation or elaboration. Here, the colon introduces the explanation of the differences in behavior. The word 'while' sets up the contrast within that explanation. Therefore, 'behavior: while the' is correct."
+        },
+        {
+          "id": 217,
+          "question": "Kizomba, a genre of dance that originated in Angola, has become an international ______ 2022, the Indian dance duo known as Elvis and Namrata defeated performers from around the world to win the annual Olympiads of Kizomba competition held in Paris, France, becoming the first-ever Asian winners.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) phenomenon in\nB) phenomenon, in\nC) phenomenon and in\nD) phenomenon. In",
+          "answer": "D",
+          "explanation": "A period is needed to end the sentence. The next sentence begins with 'In 2022...' Therefore, 'phenomenon. In' is correct."
+        },
+        {
+          "id": 218,
+          "question": "Round Rock Chapter, which covers 201,000 acres, is one of the 110 chapters of the Navajo ______ Dine bizaad (the Navajo language), the chapter is called Tsé Nikáni.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) Nation and in\nB) Nation in\nC) Nation, in\nD) Nation. In",
+          "answer": "D",
+          "explanation": "A period is needed to end the sentence. The next sentence begins with 'In Dine bizaad...' Therefore, 'Nation. In' is correct."
+        },
+        {
+          "id": 219,
+          "question": "Included in What Absence Is Made Of, a 2017 group exhibition at the Hirshhorn Museum and Sculpture Garden in Washington. DC, was the work of artist Lorna Simpson, who is best known for her multimedia artworks that juxtapose images of African American women with text fragments. Her work challenges conventional notions of race, gender, history, and ______ she is credited with expanding the horizons of conceptual photographic art.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) memory and\nB) memory,\nC) memory, and\nD) memory",
+          "answer": "C",
+          "explanation": "The word 'and' is needed to connect the last item in the list ('memory') to the following clause. However, because the list is part of a larger sentence, a comma is needed after 'and' to separate the list from the independent clause that follows. Therefore, 'memory, and' is correct."
+        },
+        {
+          "id": 220,
+          "question": "The editors of Home Ground: A Guide to the American Landscape turned to D. J. Waldie, a nonfiction writer, to craft the entry for 'thalweg,' a term referring to a line connecting the lowest points of a valley. For 'cape,' however, the editors chose the ______ author of inheritance.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) novelist Lan Samantha Chang,\nB) novelist Lan Samantha Chang\nC) novelist, Lan Samantha Chang,\nD) novelist, Lan Samantha Chang",
+          "answer": "B",
+          "explanation": "The name 'Lan Samantha Chang' is an essential appositive identifying the novelist; it should not be set off by commas. Therefore, 'novelist Lan Samantha Chang' is correct."
+        },
+        {
+          "id": 221,
+          "question": "The Austronesian language family comprises some 1,200 languages—including the______ Gilbertese and Tongan, which are spoken by 120,000 and 108,000 speakers, respectively—and accounts for one-fifth of the world’s languages, making it of keen interest to linguists like Marian Klamer.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) languages,\nB) languages:\nC) languages\nD) languages—",
+          "answer": "C",
+          "explanation": "No punctuation is needed. The phrase 'including the languages Gilbertese and Tongan' flows directly without interruption. Therefore, 'languages' is correct."
+        },
+        {
+          "id": 222,
+          "question": "If you had turned on the radio in the summer of 1961, chances are you would have heard the hit ______ 'A Tear' by Gene McDaniels. The song spent four straight weeks on the Billboard Hot 100 chart that year.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) song:\nB) song;\nC) song,\nD) song",
+          "answer": "D",
+          "explanation": "No punctuation is needed. The phrase 'the hit song 'A Tear'' flows directly without interruption. Therefore, 'song' is correct."
+        },
+        {
+          "id": 223,
+          "question": "Recent analysis of 1999 OX3—an outer solar system object orbiting the Sun between Jupiter and Neptune—has determined its color to be red, suggesting a rocky composition. Such interpretations are ultimately ______ the object’s red coloration may be an incidental effect of radiation, solar wind, or collisions with other objects rather than evidence of its physical makeup.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) speculative; though\nB) speculative, though,\nC) speculative, though\nD) speculative, though:",
+          "answer": "D",
+          "explanation": "The word 'though' is a conjunctive adverb showing contrast. When it joins two independent clauses, proper punctuation is a semicolon before and a comma after. The option 'speculative, though:' is the correct format."
+        },
+        {
+          "id": 224,
+          "question": "The first modern public zoo opened at the height of the French Revolution in 1793. Located in downtown Paris, the zoo was called the Menagerie du Jardin des Plantes. It was filled with living animals that had been confiscated ______ the private collections of French aristocrats.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) from;\nB) from\nC) from:\nD) from,",
+          "answer": "B",
+          "explanation": "No punctuation is needed. The prepositional phrase 'confiscated from the private collections' flows directly into the sentence. Therefore, 'from' is correct."
+        },
+        {
+          "id": 225,
+          "question": "Although 2060 Chiron and 2008 FC76 are both classified as centaur objects outer solar system bodies in unstable orbits, they exhibit striking differences in ______ object 2060 Chiron is considered an active centaur, showing sporadic comet-like activity (such as clouds of dust and gas on its surface), 2008 FC76, showing no such activity, is considered dormant.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) behavior; the\nB) behavior. The\nC) behavior: while the\nD) behavior, while the",
+          "answer": "C",
+          "explanation": "A colon is used to introduce an explanation or elaboration. Here, the colon introduces the explanation of the differences in behavior. The word 'while' sets up the contrast within that explanation. Therefore, 'behavior: while the' is correct."
+        },
+        {
+          "id": 226,
+          "question": "In 1990, the fantasy novel The Eye of the World was published under the pen name Robert Jordan. Now, we know that ______\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) was the author’s real name James Oliver Rigney Jr.?\nB) the author’s real name was James Oliver Rigney Jr.\nC) the author’s real name was James Oliver Rigney Jr.?\nD) was the author’s real name James Oliver Rigney Jr",
+          "answer": "B",
+          "explanation": "The sentence is a declarative statement, not a question. It reports a fact that is now known. Therefore, 'the author’s real name was James Oliver Rigney Jr.' is correct."
+        },
+        {
+          "id": 227,
+          "question": "While the greater adjutant (Leptoptilos dubius) can be found in places like the Nawalparasi forests in Nepal and Ang Tropeang Thmor in ______ than 80 percent of this endangered stork species is found in Assam, India. There, wildlife biologist Dr. Purnima Devi Barman is on the front lines of conservation efforts to bring adjutants back from near extinction.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) Cambodia more\nB) Cambodia. More\nC) Cambodia; more\nD) Cambodia, more",
+          "answer": "D",
+          "explanation": "A comma is needed to separate the introductory list of places from the main clause that begins with 'more than 80 percent...' Therefore, 'Cambodia, more' is correct."
+        },
+        {
+          "id": 228,
+          "question": "The Komi Autonomous Soviet Socialist Republic, whose residents mainly spoke Komi, was one of many nominally autonomous Soviet ______ by giving these restive republics the right to assert their prerogatives, President Mikhail Gorbachev likely hastened the Soviet Union’s breakup.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) republics established along ethnolinguistic lines;\nB) republics established along ethnolinguistic lines,\nC) republics. Established, along ethnolinguistic lines,\nD) republics; established along ethnolinguistic lines;",
+          "answer": "A",
+          "explanation": "A semicolon is needed to connect two closely related independent clauses. The first clause ends with 'Soviet republics established along ethnolinguistic lines;' the second begins with 'by giving these restive republics...' Therefore, 'republics established along ethnolinguistic lines;' is correct."
+        },
+        {
+          "id": 229,
+          "question": "Despite being one of the North Atlantic Treaty Organization’s (NATO’s) newer members, Latvia, which joined the alliance in 2004, is just as protected—and just as bound—by NATO’s principle of collective defense as is founding\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) member—Norway.\nB) member: Norway.\nC) member, Norway.\nD) member Norway.",
+          "answer": "D",
+          "explanation": "No punctuation is needed. The phrase 'founding member Norway' flows directly, with 'Norway' as an appositive. Therefore, 'member Norway.' is correct."
+        },
+        {
+          "id": 230,
+          "question": "In ancient Mesoamerica, cotton was used as a commodity currency. By using specific goods like cotton as common units of exchange, commodity currency economies streamline trade, which is why they often replaced barter economies. Barter economies eschew ______ that requires what economist W.S. Jevons deems a 'double coincidence of wants'—in other words, each trading party must want precisely what the other has.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) currency in favor of a direct trade system\nB) currency, in favor of a direct trade system,\nC) currency, in favor of a direct trade system\nD) currency—in favor of a direct trade system",
+          "answer": "A",
+          "explanation": "No punctuation is needed. The phrase 'eschew currency in favor of a direct trade system' flows directly, and the relative clause 'that requires...' modifies 'a direct trade system.' Therefore, 'currency in favor of a direct trade system' is correct."
+        },
+        {
+          "id": 231,
+          "question": "Not all plants benefit equally or from the same kind of______ sweet gum and carrot, for example, benefit from endomycorrhizal associations; many tree species, such as pine and oak, benefit from ectomycorrhizal associations; and plants in the Ericaceae family, such as cranberry, don’t benefit from mycorrhizae at all.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) mycorrhizae,\nB) mycorrhizae;\nC) mycorrhizae:\nD) mycorrhizae",
+          "answer": "C",
+          "explanation": "A colon is used to introduce a list or series. Here, the list of examples (sweet gum and carrot, many tree species, plants in the Ericaceae family) follows the colon. Therefore, 'mycorrhizae:' is correct."
+        },
+        {
+          "id": 232,
+          "question": "In 1847, the novel Agnes Grey was published under the pen name Acton Bell. Now, we know that ______\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) was the author’s real name Anne Brontë?\nB) the author’s real name was Anne Brontë.\nC) was the author’s real name Anne Brontë.\nD) the author’s real name was Anne Brontë?",
+          "answer": "B",
+          "explanation": "The sentence is a declarative statement, not a question. It reports a fact that is now known. Therefore, 'the author’s real name was Anne Brontë.' is correct."
+        },
+        {
+          "id": 233,
+          "question": "While the greater adjutant (Leptoptilos dubius) can be found in places like the Inner Gulf of Thailand and Manchar Lake in ______ than 80 percent of this endangered stork species is found in Assam, India. There, wildlife biologist Dr. Purnima Devi Barman is on the front lines of conservation efforts to bring adjutants back from near extinction.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) Pakistan, more\nB) Pakistan; more\nC) Pakistan. More\nD) Pakistan more",
+          "answer": "A",
+          "explanation": "A comma is needed to separate the introductory list of places from the main clause that begins with 'more than 80 percent...' Therefore, 'Pakistan, more' is correct."
+        },
+        {
+          "id": 234,
+          "question": "Citing the example of Zeus, a mythological god whose tomb was reportedly located on the island of Crete, the writer Euhemerus (fourth century BCE) theorized that all the deities in the Greek pantheon—including the god of knowledge and the arts, Apollo; the god of wine and the theater, Dionysus; and the god of constellations, ______ may have been historical figures who, through the power of myth, underwent apotheosis.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) Crius;\nB) Crius—\nC) Crius,\nD) Crius",
+          "answer": "B",
+          "explanation": "The em dash is used to set off the list of deities within the larger sentence. The list ends with 'the god of constellations, Crius—' and then the sentence continues. Therefore, a closing em dash is needed after 'Crius.' 'Crius—' is correct."
+        },
+        {
+          "id": 235,
+          "question": "The parks of Chicago, Illinois, seem to be making people happier. In a 2022 study, researchers studying connections between the physical location in which a social media post was ______ analyzed geotagged social media posts from various locations in Chicago. They found that posts from the city’s parks contained more words associated with happiness than other posts did.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) created and the post’s content\nB) created, and the post’s content\nC) created and the post’s content,\nD) created, and the post’s content,",
+          "answer": "A",
+          "explanation": "No punctuation is needed. The phrase 'the physical location in which a social media post was created and the post’s content' is a compound object of the preposition 'between.' Therefore, 'created and the post’s content' is correct."
+        },
+        {
+          "id": 236,
+          "question": "With an installed capacity of 35 megawatts, the Platanares geothermal power plant in Honduras offers a dependable source of renewable energy. Power plants like Platanares supply only a small fraction of Honduras’s ______ the scarcity of sites with the necessary combination of high-temperature geothermal reservoirs and fractured rock limiting the widespread development of such systems.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) electricity; though,\nB) electricity, though:\nC) electricity, though\nD) electricity, though,",
+          "answer": "D",
+          "explanation": "The word 'though' is a conjunctive adverb showing contrast. When it appears in the middle of a clause, it should be set off by commas. Therefore, 'electricity, though,' is correct."
+        },
+        {
+          "id": 237,
+          "question": "The towns Entebbe and Jamame are both located almost directly on the______ they are in different countries. Entebbe is in Uganda, while Jamame is in Somalia.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) equator\nB) equator, but\nC) equator,\nD) equator that",
+          "answer": "B",
+          "explanation": "The conjunction 'but' shows contrast between the two independent clauses. A comma is needed before 'but' when it joins two independent clauses. Therefore, 'equator, but' is correct."
+        },
+        {
+          "id": 238,
+          "question": "In 1991, New Jersey ______ official fossil: the Hadrosaurus foulkii, which is a Cretaceous period dinosaur.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) lawmakers designated the state’s\nB) lawmakers designated the states\nC) lawmaker’s designated the states\nD) lawmaker’s designated the state’s",
+          "answer": "A",
+          "explanation": "The possessive 'state’s' is needed to indicate that the fossil belongs to the state of New Jersey. The plural 'lawmakers' is correct as the subject. Therefore, 'lawmakers designated the state’s' is correct."
+        },
+        {
+          "id": 239,
+          "question": "Nicosia is home to roughly 27 percent of Cyprus’s total population, This means that about 1 in 4 ______ live in Cyprus live in Nicosia!\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) people\nB) people who\nC) people,\nD) people, who",
+          "answer": "B",
+          "explanation": "The relative pronoun 'who' is needed to introduce the relative clause 'who live in Cyprus,' which defines which people. Therefore, 'people who' is correct."
+        },
+        {
+          "id": 240,
+          "question": "All member nations of the North Atlantic Treaty Organization, or NATO, including Belgium, which joined in 1949; Hungary, which joined in 1999; and Slovenia, which joined in ______ are committed to NATO’s principle of collective defense, each member pledging to defend all others.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) 2004;\nB) 2004\nC) 2004—\nD) 2004,",
+          "answer": "D",
+          "explanation": "A comma is needed to separate items in a list. The list items are countries with the years they joined, separated by semicolons because the items contain commas. The last item is 'Slovenia, which joined in 2004,' and a comma is needed after this item before the concluding clause. Therefore, '2004,' is correct."
+        },
+        {
+          "id": 241,
+          "question": "A loose confederation of cities from eleven modern-day countries, the Hanseatic League was a powerful mercantile alliance that dominated northern European trade between the 13th and 17th centuries. Hanseatic League member ______ was serendipitously located on the Rhine River in Germany, giving Cologne’s merchants access to key maritime trade routes.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) city Cologne,\nB) city, Cologne,\nC) city, Cologne\nD) city Cologne",
+          "answer": "D",
+          "explanation": "The name 'Cologne' is an essential appositive identifying which city; it should not be set off by commas. Therefore, 'city Cologne' is correct."
+        },
+        {
+          "id": 242,
+          "question": "Branching in Jurisprudential Schools is one of the hundreds of thousands of manuscripts that have survived from roughly the sixteenth century to the present______ being passed down through private libraries in the city of Timbuktu, Mali. Many of these manuscripts can be found at the Al-Wangari Manuscript Library.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) day by\nB) day; by\nC) day. By\nD) day by,",
+          "answer": "C",
+          "explanation": "A period is needed to end the sentence. The next sentence begins with 'By being passed down...' Therefore, 'day. By' is correct."
+        },
+        {
+          "id": 243,
+          "question": "The terms, included in Barry Lopez and Debra Gwartney’s Home Ground: A Guide to the American ______ such as 'karst,' which refers to limestone terrain riddled with caves or sinkholes, illustrate the rich vocabulary used to describe the landforms of North America.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) Landscape,\nB) Landscape:\nC) Landscape —\nD) Landscape",
+          "answer": "A",
+          "explanation": "A comma is needed to separate the title of the book from the phrase that follows. The phrase 'such as 'karst'...' provides examples of the terms. Therefore, 'Landscape,' is correct."
+        },
+        {
+          "id": 244,
+          "question": "Following the formation of the European Union (EU) that same year, the organizers of the 1992 Tour de France wanted the bike race to reflect the cross-national flow of people and trade that the EU had made possible. The resulting course was 2,500 miles long ______ separate borders of neighboring countries, modeled a vision of the EU’s unifying aims.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) and, crossed\nB) and had crossed\nC) and crossed\nD) and, crossing",
+          "answer": "D",
+          "explanation": "The participle 'crossing' is needed to modify the subject 'course' and introduce the participial phrase 'crossing separate borders...' Therefore, 'and, crossing' is correct. The comma after 'and' sets off the participial phrase."
+        },
+        {
+          "id": 245,
+          "question": "As part of his I GOT UP series, Japanese conceptual artist On Kawara spent over a decade—with near daily consistency—mailing postcards to friends declaring what time he got up each day, resulting in pieces such as I Got Up at 7.19 A.M., Jun 6 1977. Such meticulous documentation of mundane ______ artworks that 'resonate with existential, psychological and scientific implications about the time-space continuum,' according to the New York Times, became Kawara’s life’s work.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) information, has generated\nB) information generates\nC) information, generating\nD) information generated",
+          "answer": "C",
+          "explanation": "The participle 'generating' is needed to introduce the participial phrase 'generating artworks that...' which modifies 'documentation.' A comma is needed after 'information' to separate it from the participial phrase. Therefore, 'information, generating' is correct."
+        },
+        {
+          "id": 246,
+          "question": "For her film 'I Am Somebody (1970)', a documentary about a successful months-long strike held by Black female hospital workers in Charleston, South Carolina, director Madeline Anderson chose a narrator who had participated in the ______ by allowing the narrative to be shaped by one of their own, amplified the agency and power the workers possessed.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) protest a decision that\nB) protest. A decision that\nC) protest; a decision that,\nD) protest, a decision that,",
+          "answer": "D",
+          "explanation": "The phrase 'a decision that...' is an appositive that renames the act of choosing a narrator. Non-essential appositives must be set off by commas. Therefore, 'protest, a decision that,' is correct."
+        },
+        {
+          "id": 247,
+          "question": "Mountain goats were made to climb. In addition to having hard hooves that can dig into nearly any groove or ______ mountain goats have slender bodies ideal for scaling nearly ninety-degree cliffs.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) crack, or\nB) crack or\nC) crack\nD) crack,",
+          "answer": "D",
+          "explanation": "A comma is needed to separate the two items in the series 'groove or crack' from the rest of the sentence. The series is part of the prepositional phrase 'into nearly any groove or crack,' and a comma is needed after this phrase before the main clause begins. Therefore, 'crack,' is correct."
+        },
+        {
+          "id": 248,
+          "question": "Among the small magazines animating Boston's vibrant literary scene in the early twentieth century was______ by William Stanley Braithwaite and featuring poetry by John Gould Fletcher, Louis Untermeyer, and Richard Aldington; essays by Amy Lovell and Jeanette Marks; and reviews of recent books, this magazine publicized the work of influential avant-garde writers and artists of the day.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) the Poetry Review of America. Edited\nB) the Poetry Review of America: edited\nC) the Poetry Review of America, edited\nD) the Poetry Review of America edited",
+          "answer": "A",
+          "explanation": "A period is needed to end the sentence introducing the magazine. The next sentence begins with 'Edited by William Stanley Braithwaite...' Therefore, 'the Poetry Review of America. Edited' is correct."
+        },
+        {
+          "id": 249,
+          "question": "Writer Silvia Moreno-Garcia's love of short fiction began when she read a collection of Edgar Allan Poe stories as a child, and she later would become a prolific short story writer herself, publishing pieces like 'Jackals' (2015) and 'Year of the Monkey' (2008). Yet she's best ______ ever since her 2020 novel Mexican Gothic saw widespread critical and commercial success, as a novelist.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) known,\nB) known\nC) known;\nD) known:",
+          "answer": "A",
+          "explanation": "A comma is needed to separate the main clause from the subordinate clause that begins with 'ever since...' Therefore, 'known,' is correct."
+        },
+        {
+          "id": 250,
+          "question": "In a chemical equation, converting between the mass of the reactants and the mass of the product requires knowing each component’s molar mass, a quantification of the average mass of the atoms in a compound. The liquid has a molar mass of 170.33 g/mol.\n\nWhich choice completes the text so that it conforms to the conventions of Standard English?\nA) compound, dodecane (C_1 2H_2 6),\nB) compound, dodecane (C_1 2H_2 6)\nC) compound dodecane (C_1 2H_2 6),\nD) compound dodecane (C_1 2H_2 6)",
+          "answer": "D",
+          "explanation": "No punctuation is needed. The phrase 'The liquid compound dodecane (C12H26)' flows directly, with 'dodecane' as an essential appositive. Therefore, 'compound dodecane (C12H26)' is correct."
         }
-      ],
-      "Form, Structure, and Sense": {}
+      ]
     }
   }
 }
