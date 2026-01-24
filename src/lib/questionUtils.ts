@@ -624,18 +624,29 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
       mainIdeasData, detailedQuestionsData, rhetoricalSynthesisData
     ] = await Promise.all(filePaths.map(loadWithProgress));
     
-    // Helper to process standardized format questions
+    // Helper to process standardized format questions (flat format with test_metadata + questions)
     const processStandardizedQuestions = (
       data: any,
+      section: string,
       topic: string,
       subTopic: string | undefined,
       idPrefix: string
     ) => {
       if (!data?.questions) return;
       data.questions.forEach((q: any, index: number) => {
+        // Handle content structure - can have passage + question or just question
+        const passageText = q.content?.passage || '';
         const questionText = q.content?.question || '';
-        const prompt = extractQuestionPrompt(questionText);
-        const passage = questionText.replace(prompt, '').trim();
+        
+        // Extract prompt and passage from question text if needed
+        let prompt = questionText;
+        let passage = passageText;
+        
+        // If no separate passage field, try to extract from question
+        if (!passage && questionText) {
+          prompt = extractQuestionPrompt(questionText);
+          passage = questionText.replace(prompt, '').trim();
+        }
         
         // Parse options from array format ["A) text", "B) text", ...] to object format
         let options: { [key: string]: string } = {};
@@ -654,7 +665,7 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
           globalId++,
           `${idPrefix}_${String(index + 1).padStart(3, '0')}`,
           "English",
-          "Standard English Conventions",
+          section,
           topic,
           subTopic,
           passage,
@@ -667,43 +678,102 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
       });
     };
     
-    // Process Boundaries - load from boundaries_full.json which has 250 questions (nested format)
-    const fullBoundariesQuestions = boundariesData?.["English Reading & Writing"]?.["Standard English Conventions"]?.["Boundaries"] || [];
-    if (fullBoundariesQuestions.length > 0) {
-      console.log(`Loading ${fullBoundariesQuestions.length} Boundaries questions from nested format`);
-      fullBoundariesQuestions.forEach((q: RawQuestion, index: number) => {
-        const { questionText, options } = parseQuestion(q.question);
-        const prompt = extractQuestionPrompt(questionText);
-        const passage = questionText.replace(prompt, '').trim();
+    // Helper to process nested format questions (for Boundaries, Transitions, Inferences)
+    const processNestedQuestions = (
+      questionsArray: any[],
+      section: string,
+      topic: string,
+      idPrefix: string,
+      hasPassageField: boolean // true for Transitions/Inferences, false for Boundaries
+    ) => {
+      if (!questionsArray?.length) return;
+      console.log(`Loading ${questionsArray.length} ${topic} questions from nested format`);
+      
+      questionsArray.forEach((q: any, index: number) => {
+        let passage = '';
+        let prompt = '';
+        let options: { [key: string]: string } = {};
+        
+        if (hasPassageField) {
+          // Transitions/Inferences format: separate passage, question, options array
+          passage = q.passage || '';
+          prompt = q.question || '';
+          options = parseNewFormatOptions(q.options || []);
+        } else {
+          // Boundaries format: combined question text with options
+          const parsed = parseQuestion(q.question || '');
+          prompt = extractQuestionPrompt(parsed.questionText);
+          passage = parsed.questionText.replace(prompt, '').trim();
+          options = parsed.options;
+        }
+        
         addQuestion(createQuestion(
           globalId++,
-          `BND_${String(index + 1).padStart(3, '0')}`,
+          `${idPrefix}_${String(index + 1).padStart(3, '0')}`,
           "English",
-          "Standard English Conventions",
-          "Boundaries",
+          section,
+          topic,
           undefined,
           passage,
           prompt,
           options,
           q.answer,
           q.explanation,
-          getQuestionDifficulty("Boundaries", undefined, index),
+          getQuestionDifficulty(topic, undefined, index),
         ));
       });
-    }
+    };
+    
+    // Helper to process data that could be either flat or nested format
+    const processFlexibleFormat = (
+      data: any,
+      section: string,
+      topic: string,
+      subTopic: string | undefined,
+      idPrefix: string,
+      nestedPath: string[], // Path to nested array, e.g., ["English Reading & Writing", "Standard English Conventions", "Boundaries"]
+      hasPassageField: boolean = false
+    ) => {
+      // Check for flat standardized format first
+      if (data?.questions && data?.test_metadata) {
+        processStandardizedQuestions(data, section, topic, subTopic, idPrefix);
+        return;
+      }
+      
+      // Try nested format
+      let nestedArray = data;
+      for (const key of nestedPath) {
+        nestedArray = nestedArray?.[key];
+      }
+      
+      if (Array.isArray(nestedArray) && nestedArray.length > 0) {
+        processNestedQuestions(nestedArray, section, topic, idPrefix, hasPassageField);
+      }
+    };
+    
+    // Process Boundaries - supports both flat and nested formats (250 questions)
+    processFlexibleFormat(
+      boundariesData,
+      "Standard English Conventions",
+      "Boundaries",
+      undefined,
+      "BND",
+      ["English Reading & Writing", "Standard English Conventions", "Boundaries"],
+      false // Boundaries has combined question text, not separate passage field
+    );
     
     // Process Subject-Verb Agreement (new standardized format)
-    processStandardizedQuestions(svaData, "Form, Structure, and Sense", "Subject-Verb Agreement", "SVA");
+    processStandardizedQuestions(svaData, "Standard English Conventions", "Form, Structure, and Sense", "Subject-Verb Agreement", "SVA");
     
     // Process Verb Tenses (new standardized format)
-    processStandardizedQuestions(verbTensesData, "Form, Structure, and Sense", "Verb Tenses", "VT");
+    processStandardizedQuestions(verbTensesData, "Standard English Conventions", "Form, Structure, and Sense", "Verb Tenses", "VT");
     
     // Process Verb Forms (new standardized format)
-    processStandardizedQuestions(verbFormsData, "Form, Structure, and Sense", "Verb Forms", "VF");
+    processStandardizedQuestions(verbFormsData, "Standard English Conventions", "Form, Structure, and Sense", "Verb Forms", "VF");
     
     // Process Pronouns (check for both old nested and new standardized format)
     if (pronounData?.questions) {
-      processStandardizedQuestions(pronounData, "Form, Structure, and Sense", "Pronouns", "PRO");
+      processStandardizedQuestions(pronounData, "Standard English Conventions", "Form, Structure, and Sense", "Pronouns", "PRO");
     } else {
       const pronounFormStructure = pronounData?.["English Reading & Writing"]?.["Standard English Conventions"]?.["Form, Structure, and Sense"];
       if (pronounFormStructure) {
@@ -730,84 +800,56 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
     }
     
     // Process Modifiers (new standardized format)
-    processStandardizedQuestions(modifiersData, "Form, Structure, and Sense", "Modifiers", "MOD");
+    processStandardizedQuestions(modifiersData, "Standard English Conventions", "Form, Structure, and Sense", "Modifiers", "MOD");
     
     // Process Parallel Structure (new standardized format)
-    processStandardizedQuestions(parallelStructureData, "Form, Structure, and Sense", "Parallel Structure", "PS");
+    processStandardizedQuestions(parallelStructureData, "Standard English Conventions", "Form, Structure, and Sense", "Parallel Structure", "PS");
     
     // Process Miscellaneous Topics (new standardized format)
-    processStandardizedQuestions(miscTopicsData, "Form, Structure, and Sense", "Miscellaneous Topics", "MISC");
+    processStandardizedQuestions(miscTopicsData, "Standard English Conventions", "Form, Structure, and Sense", "Miscellaneous Topics", "MISC");
     
-    // Track indices for difficulty assignment
-    let transitionsIndex = 0;
-    let inferencesIndex = 0;
+    // Process Transitions - supports both flat and nested formats (202 questions)
+    processFlexibleFormat(
+      transitionsData,
+      "Expression of Ideas",
+      "Transitions",
+      undefined,
+      "TRN",
+      ["English Reading & Writing", "Expression of Ideas", "Transitions"],
+      true // Transitions has separate passage field
+    );
+    
+    // Also check for Rhetorical Synthesis in transitions file (nested format only)
+    const rhetoricalArray = transitionsData?.["English Reading & Writing"]?.["Expression of Ideas"]?.["Rhetorical Synthesis"] || [];
     let rhetoricalSynthesisIndex = 0;
+    rhetoricalArray.forEach((q: CentralIdeaQuestion) => {
+      const options = parseNewFormatOptions(q.options);
+      addQuestion(createQuestion(
+        globalId++,
+        `RS_${String(rhetoricalSynthesisIndex + 1).padStart(3, '0')}`,
+        "English",
+        "Expression of Ideas",
+        "Rhetorical Synthesis",
+        undefined,
+        q.passage || '',
+        q.question,
+        options,
+        q.answer,
+        q.explanation,
+        getQuestionDifficulty("Rhetorical Synthesis", undefined, rhetoricalSynthesisIndex++),
+      ));
+    });
     
-    // Process Transitions questions from transitions_full.json (nested format: 202 questions)
-    const transitionsNestedArray = transitionsData?.["English Reading & Writing"]?.["Expression of Ideas"]?.["Transitions"] || [];
-    if (transitionsNestedArray.length > 0) {
-      console.log(`Loading ${transitionsNestedArray.length} Transitions questions from nested format`);
-      transitionsNestedArray.forEach((q: CentralIdeaQuestion) => {
-        const options = parseNewFormatOptions(q.options);
-        addQuestion(createQuestion(
-          globalId++,
-          `TRN_${String(transitionsIndex + 1).padStart(3, '0')}`,
-          "English",
-          "Expression of Ideas",
-          "Transitions",
-          undefined,
-          q.passage || '',
-          q.question,
-          options,
-          q.answer,
-          q.explanation,
-          getQuestionDifficulty("Transitions", undefined, transitionsIndex++),
-        ));
-      });
-      
-      // Also check for Rhetorical Synthesis in transitions file
-      const rhetoricalArray = transitionsData?.["English Reading & Writing"]?.["Expression of Ideas"]?.["Rhetorical Synthesis"] || [];
-      rhetoricalArray.forEach((q: CentralIdeaQuestion) => {
-        const options = parseNewFormatOptions(q.options);
-        addQuestion(createQuestion(
-          globalId++,
-          `RS_${String(rhetoricalSynthesisIndex + 1).padStart(3, '0')}`,
-          "English",
-          "Expression of Ideas",
-          "Rhetorical Synthesis",
-          undefined,
-          q.passage || '',
-          q.question,
-          options,
-          q.answer,
-          q.explanation,
-          getQuestionDifficulty("Rhetorical Synthesis", undefined, rhetoricalSynthesisIndex++),
-        ));
-      });
-    }
-    
-    // Process Inferences from inference_full.json (nested format: 149 questions)
-    const inferencesNestedArray = inferenceData?.["English Reading & Writing"]?.["Information and Ideas"]?.["Inferences"] || [];
-    if (inferencesNestedArray.length > 0) {
-      console.log(`Loading ${inferencesNestedArray.length} Inferences questions from nested format`);
-      inferencesNestedArray.forEach((q: CentralIdeaQuestion) => {
-        const options = parseNewFormatOptions(q.options);
-        addQuestion(createQuestion(
-          globalId++,
-          `INF_${String(inferencesIndex + 1).padStart(3, '0')}`,
-          "English",
-          "Information and Ideas",
-          "Inferences",
-          undefined,
-          q.passage || '',
-          q.question,
-          options,
-          q.answer,
-          q.explanation,
-          getQuestionDifficulty("Inferences", undefined, inferencesIndex++),
-        ));
-      });
-    }
+    // Process Inferences - supports both flat and nested formats (149 questions)
+    processFlexibleFormat(
+      inferenceData,
+      "Information and Ideas",
+      "Inferences",
+      undefined,
+      "INF",
+      ["English Reading & Writing", "Information and Ideas", "Inferences"],
+      true // Inferences has separate passage field
+    );
     
     // ==================== NEW JSON FILES ====================
     
