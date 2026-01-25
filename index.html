@@ -4,30 +4,40 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/jpeg" href="/sat-icon.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NextPrep - Practice Real SAT (DSAT) Past Questions</title>
-    <meta name="description" content="Practice real SAT past exam questions with NextPrep. Experience the Bluebook-style interface with topic filters, timers, and detailed explanations." />
-    <meta name="author" content="NextPrep" />
-    <meta name="keywords" content="SAT, DSAT, SAT practice, SAT prep, SAT questions, college prep, test prep, Bluebook" />
-    <link rel="canonical" href="https://nextprep.app" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Acely | Free Digital SAT Practice Platform</title>
+    <meta name="description" content="Acely is a free Digital SAT practice platform offering structured question banks, realistic practice tests, and performance analytics to help students prepare effectively." />
+    <meta name="author" content="Acely" />
+    <meta name="keywords" content="Free SAT practice, Digital SAT preparation, SAT question bank, SAT practice tests, SAT math practice, SAT reading and writing practice, Online SAT prep platform, SAT performance analytics" />
+    <link rel="canonical" href="https://www.acely.org" />
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
 
-    <meta property="og:title" content="NextPrep - Practice Real SAT Questions" />
-    <meta property="og:description" content="Experience the real Bluebook feel with authentic SAT past exam questions. Smooth, fast, and organized." />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:site_name" content="Acely" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://nextprep.app/og-image.png" />
+    <meta property="og:title" content="Acely | Free Digital SAT Practice Platform" />
+    <meta property="og:description" content="Acely is a free Digital SAT practice platform offering structured question banks, realistic practice tests, and performance analytics for effective SAT preparation." />
+    <meta property="og:url" content="https://www.acely.org" />
+    <meta property="og:image" content="https://www.acely.org/og-image.png" />
+    <meta property="og:image:alt" content="Acely free Digital SAT practice platform interface preview" />
 
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="NextPrep - SAT Practice Platform" />
-    <meta name="twitter:description" content="Practice real SAT questions with Bluebook-style interface" />
-    <meta name="twitter:image" content="https://nextprep.app/og-image.png" />
+    <meta name="twitter:title" content="Acely | Free Digital SAT Practice Platform" />
+    <meta name="twitter:description" content="A free Digital SAT practice platform with topic-based questions, realistic practice tests, and performance tracking for serious students." />
+    <meta name="twitter:image" content="https://www.acely.org/og-image.png" />
+    <meta name="twitter:image:alt" content="Acely Digital SAT practice platform interface" />
 
     <style>
       /* Critical CSS - above-the-fold styles inlined for instant render */
       *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-      html{line-height:1.5;-webkit-text-size-adjust:100%;font-family:system-ui,-apple-system,sans-serif}
-      body{min-height:100vh;background:#fff;color:#0f172a}
+      html{line-height:1.6;-webkit-text-size-adjust:100%;font-family:'Inter',system-ui,-apple-system,sans-serif;scroll-behavior:smooth}
+      body{min-height:100vh;background:#fff;color:#0f0f0f}
       #root{min-height:100vh;display:flex;flex-direction:column}
       
       /* Layout primitives */
@@ -40,34 +50,26 @@
       .w-full{width:100%}
       .max-w-7xl{max-width:80rem}
       .mx-auto{margin-left:auto;margin-right:auto}
-      .px-4{padding-left:1rem;padding-right:1rem}
+      .px-6{padding-left:1.5rem;padding-right:1.5rem}
       .py-8{padding-top:2rem;padding-bottom:2rem}
       .gap-4{gap:1rem}
       .gap-6{gap:1.5rem}
       
       /* Typography */
-      .text-4xl{font-size:2.25rem;line-height:2.5rem}
+      .text-4xl{font-size:2.25rem;line-height:1.1}
       .text-xl{font-size:1.25rem;line-height:1.75rem}
-      .font-bold{font-weight:700}
       .font-semibold{font-weight:600}
-      .text-slate-900{color:#0f172a}
-      .text-slate-600{color:#475569}
-      .bg-white{background:#fff}
+      .tracking-tight{letter-spacing:-0.02em}
       
       /* Button base */
-      button{font:inherit;cursor:pointer;border:none;border-radius:.5rem;padding:.75rem 1.5rem;font-weight:600;transition:all .15s}
-      .bg-blue-600{background:#2563eb;color:#fff}
-      .bg-blue-600:hover{background:#1d4ed8}
-      
-      /* Card base */
-      .rounded-xl{border-radius:.75rem}
-      .shadow-sm{box-shadow:0 1px 2px 0 rgb(0 0 0/.05)}
-      .border{border:1px solid #e2e8f0}
+      button{font:inherit;cursor:pointer;border:none;border-radius:0.5rem;padding:0.75rem 2rem;font-weight:500;transition:all 0.2s}
+      .bg-foreground{background:#0f0f0f;color:#fff}
+      .bg-foreground:hover{background:#1a1a1a}
       
       /* Preloader */
       #app-preloader{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#fff;z-index:9999;transition:opacity 50ms}
       #app-preloader.fade-out{opacity:0;pointer-events:none}
-      .preloader-spinner{width:18px;height:18px;border:2px solid #e2e8f0;border-top-color:#2563eb;border-radius:50%;animation:spin .3s linear infinite}
+      .preloader-spinner{width:18px;height:18px;border:2px solid #e5e7eb;border-top-color:#0f0f0f;border-radius:50%;animation:spin .4s linear infinite}
       @keyframes spin{to{transform:rotate(360deg)}}
     </style>
   </head>

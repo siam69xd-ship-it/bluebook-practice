@@ -15,6 +15,12 @@ const Quiz = lazy(() => import("./pages/Quiz"));
 const TimedQuiz = lazy(() => import("./pages/TimedQuiz"));
 const Math = lazy(() => import("./pages/Math"));
 const Auth = lazy(() => import("./pages/Auth"));
+const About = lazy(() => import("./pages/About"));
+const Mission = lazy(() => import("./pages/Mission"));
+const FAQ = lazy(() => import("./pages/FAQ"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Privacy = lazy(() => import("./pages/Privacy"));
+const Terms = lazy(() => import("./pages/Terms"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient({
@@ -29,7 +35,7 @@ const queryClient = new QueryClient({
 // Minimal loading fallback for lazy routes
 const PageLoader = () => (
   <div className="min-h-screen flex items-center justify-center">
-    <div className="w-6 h-6 border-2 border-muted border-t-primary rounded-full animate-spin" />
+    <div className="w-5 h-5 border-2 border-muted border-t-foreground rounded-full animate-spin" />
   </div>
 );
 
@@ -79,6 +85,36 @@ const App = () => {
               <Route path="/auth" element={
                 <Suspense fallback={<PageLoader />}>
                   <Auth />
+                </Suspense>
+              } />
+              <Route path="/about" element={
+                <Suspense fallback={<PageLoader />}>
+                  <About />
+                </Suspense>
+              } />
+              <Route path="/mission" element={
+                <Suspense fallback={<PageLoader />}>
+                  <Mission />
+                </Suspense>
+              } />
+              <Route path="/faq" element={
+                <Suspense fallback={<PageLoader />}>
+                  <FAQ />
+                </Suspense>
+              } />
+              <Route path="/contact" element={
+                <Suspense fallback={<PageLoader />}>
+                  <Contact />
+                </Suspense>
+              } />
+              <Route path="/privacy" element={
+                <Suspense fallback={<PageLoader />}>
+                  <Privacy />
+                </Suspense>
+              } />
+              <Route path="/terms" element={
+                <Suspense fallback={<PageLoader />}>
+                  <Terms />
                 </Suspense>
               } />
               <Route path="*" element={
