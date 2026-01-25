@@ -118,13 +118,6 @@ export default function Index() {
               >
                 Practice
               </Link>
-              <Link 
-                to="/math" 
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                onMouseEnter={handleMathHover}
-              >
-                Math
-              </Link>
               {!authLoading && (
                 isAuthenticated && user ? (
                   <div className="flex items-center gap-3">
