@@ -21,6 +21,8 @@ const FAQ = lazy(() => import("./pages/FAQ"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Privacy = lazy(() => import("./pages/Privacy"));
 const Terms = lazy(() => import("./pages/Terms"));
+const Dashboard = lazy(() => import("./pages/Dashboard"));
+const Analytics = lazy(() => import("./pages/Analytics"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient({
@@ -115,6 +117,16 @@ const App = () => {
               <Route path="/terms" element={
                 <Suspense fallback={<PageLoader />}>
                   <Terms />
+                </Suspense>
+              } />
+              <Route path="/dashboard" element={
+                <Suspense fallback={<PageLoader />}>
+                  <Dashboard />
+                </Suspense>
+              } />
+              <Route path="/analytics" element={
+                <Suspense fallback={<PageLoader />}>
+                  <Analytics />
                 </Suspense>
               } />
               <Route path="*" element={
