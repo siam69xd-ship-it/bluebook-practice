@@ -263,10 +263,20 @@ function LatexRendererComponent({ content, className = '', displayMode = false }
     );
     processedContent = processedContent.replace(/<tr([^>]*)>/gi, '<tr>');
 
-    // Handle line breaks
-    processedContent = processedContent
-      .replace(/<br\s*\/?>/gi, '<br/>')
-      .replace(/\n/g, '<br/>');
+    // Handle line breaks - normalize HTML br tags
+    processedContent = processedContent.replace(/<br\s*\/?>/gi, '<br/>');
+    
+    // Replace \n with <br/> only OUTSIDE of HTML tags (to avoid corrupting
+    // KaTeX SVG <path d="..."> attributes that contain newlines)
+    processedContent = processedContent.replace(/\n/g, (match, offset) => {
+      // Check if this newline is inside an HTML tag by scanning backwards
+      const before = processedContent.slice(0, offset);
+      const lastOpen = before.lastIndexOf('<');
+      const lastClose = before.lastIndexOf('>');
+      // If the last '<' is after the last '>', we're inside a tag — don't replace
+      if (lastOpen > lastClose) return '\n';
+      return '<br/>';
+    });
 
     containerRef.current.innerHTML = processedContent;
   }, [content]);
