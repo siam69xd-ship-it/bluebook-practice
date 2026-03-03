@@ -1,44 +1,51 @@
 
 
-## Plan: Restore Reading & Writing JSON Files (Batch 1 of N)
+## Plan: Restore All Question Data Files
 
-You've uploaded 10 JSON files. I'll copy them into `public/data/` where the app expects them.
+### Current State
+- `public/data/` has 10 English JSON files (batch 1)
+- `public/data/math/` is **empty** — all math files are missing
+- 13 English files are still missing (batch 2 uploaded previously + 3 new ones)
 
-### Uploaded files → Target mapping
+### Files to Copy
 
-| Upload | Target Path | Topic |
-|--------|------------|-------|
-| boundaries-5.json | public/data/boundaries.json | Boundaries |
-| cross_text_connections-2.json | public/data/cross_text_connections.json | Cross-Text Connections |
-| detailed_questions-2.json | public/data/detailed_questions.json | Detail Questions |
-| gap_fillings-2.json | public/data/gap_fillings.json | Gap Fillings |
-| graphs-2.json | public/data/graphs.json | Graphs |
-| inference-2.json | public/data/inference.json | Inferences |
-| main_ideas-2.json | public/data/main_ideas.json | Main Ideas |
-| main_purpose-2.json | public/data/main_purpose.json | Main Purpose |
-| miscellaneous_topics.json | public/data/miscellaneous_topics.json | Miscellaneous Topics |
-| modifiers_questions.json | public/data/modifiers_questions.json | Modifiers |
+**Batch 2 English files (uploaded previously):**
 
-### Still missing (for next batches)
+| Upload | Target |
+|--------|--------|
+| overall_structure-2.json | public/data/overall_structure.json |
+| parallel_structure.json | public/data/parallel_structure.json |
+| pronoun-4.json | public/data/pronoun.json |
+| quotation-2.json | public/data/quotation.json |
+| rhetorical_synthesis-2.json | public/data/rhetorical_synthesis.json |
+| subject_verb_agreement.json | public/data/subject_verb_agreement.json |
+| support-2.json | public/data/support.json |
+| synonyms-2.json | public/data/synonyms.json |
+| transitions-2.json | public/data/transitions.json |
+| underlined_purpose-2.json | public/data/underlined_purpose.json |
 
-The loader in `questionUtils.ts` expects these additional files:
-1. `subject_verb_agreement.json`
-2. `verb_tenses.json`
-3. `verb_forms.json`
-4. `pronoun.json`
-5. `parallel_structure.json`
-6. `transitions.json`
-7. `overall_structure.json`
-8. `underlined_purpose.json`
-9. `synonyms.json`
-10. `support.json`
-11. `weaken.json`
-12. `quotation.json`
-13. `rhetorical_synthesis.json`
+**Batch 3 English files (just uploaded):**
 
-### Implementation
+| Upload | Target |
+|--------|--------|
+| weaken-2.json | public/data/weaken.json |
+| verb_forms.json | public/data/verb_forms.json |
+| verb_tenses.json | public/data/verb_tenses.json |
 
-Single step: Copy all 10 uploaded files to `public/data/` with the correct names (stripping the `-2`, `-5` suffixes).
+**Math + Diagram (zip files):**
+- `math.zip` — needs to be extracted into `public/data/math/` (21 expected files: expressions, linear_equations, etc.)
+- `diagram.zip` — likely contains diagram images referenced by questions
 
-No code changes needed — the existing `questionUtils.ts` loader already handles all these formats.
+### Implementation Steps
+
+1. **Copy all 13 remaining English JSON files** to `public/data/` with correct names
+2. **Extract `math.zip`** contents into `public/data/math/` directory
+3. **Extract `diagram.zip`** contents to appropriate location (likely `public/data/` or `public/images/`)
+4. **Verify** the app loads all questions correctly
+
+### Technical Notes
+- No code changes needed — `questionUtils.ts` already has loaders for all 22 English topics
+- `mathQuestionUtils.ts` already expects 21 math files in `/data/math/`
+- The zip files cannot be directly extracted in Lovable, so I'll need to read them to understand their contents and copy individual files
+- All JSON formats are already supported by the existing loader logic
 
