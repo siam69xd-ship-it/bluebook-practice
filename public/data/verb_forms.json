@@ -1,0 +1,865 @@
+{
+    "dataset_info": null,
+    "test_metadata": {
+        "subject": "English Reading & Writing",
+        "category": "Standard English Conventions",
+        "skill": "Verb Forms"
+    },
+    "questions": [
+        {
+            "id": "vf_1",
+            "difficulty": "Medium",
+            "content": {
+                "passage": "Rising 11,371 feet above sea level, Mount Leuser ______ among the world's tallest mountains.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) is ranked",
+                    "B) to rank",
+                    "C) ranking",
+                    "D) having ranked"
+                ]
+            },
+            "solution": {
+                "answer": "A",
+                "explanation": "Passive verb form 'is ranked' functions as the main verb."
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_2",
+            "difficulty": "Medium",
+            "content": {
+                "passage": "In economics, soybeans are considered a commodity because they are essentially interchangeable, 'essentially' ______ a word that admits a degree of latitude.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) is",
+                    "B) being",
+                    "C) having been",
+                    "D) was"
+                ]
+            },
+            "solution": {
+                "answer": "B",
+                "explanation": "Present participle 'being' introduces an appositive phrase."
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_3",
+            "difficulty": "Medium",
+            "content": {
+                "passage": "The photographer Dawoud Bey is best known for his large-scale street portraits and photographs of historically significant sites. Bey gained wide recognition for his series of photographs of high school students throughout the US, ______ individual students while engaging important ideas around identity and representation.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) has featured",
+                    "B) features",
+                    "C) would feature",
+                    "D) featuring"
+                ]
+            },
+            "solution": {
+                "answer": "D",
+                "explanation": "Present participle 'featuring' introduces a participial phrase modifying 'series.'"
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_4",
+            "difficulty": "Medium",
+            "content": {
+                "passage": "The theory of plate tectonics was not developed until the twentieth century. Since then, scientists ______ to study the history and movements of Earth's tectonic plates.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) continued",
+                    "B) had continued",
+                    "C) have continued",
+                    "D) will have continued"
+                ]
+            },
+            "solution": {
+                "answer": "C",
+                "explanation": "Present perfect 'have continued' is used for an action that started in the past and continues to the present."
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_5",
+            "difficulty": "Medium",
+            "content": {
+                "passage": "Featuring jagged peaks of black ink surrounded by hazy swirls of blue and green paint, Zhang Daqian's 1983 painting Panorama of Mount Lu ______ by the tradition of qinglü shanshui, a type of Chinese landscape painting characterized by the use of blue and green hues to depict ethereal, otherworldly landscapes.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) is inspired",
+                    "B) inspiring",
+                    "C) having inspired",
+                    "D) to inspire"
+                ]
+            },
+            "solution": {
+                "answer": "A",
+                "explanation": "Passive verb 'is inspired' functions as the main verb."
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_6",
+            "difficulty": "Medium",
+            "content": {
+                "passage": "In 1887, a large lump of ambergris, a substance made in the digestive tracts of sperm whales, ______ ashore along the coast of New Zealand.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) washes",
+                    "B) has washed",
+                    "C) would wash",
+                    "D) washed"
+                ]
+            },
+            "solution": {
+                "answer": "D",
+                "explanation": "Simple past 'washed' is used for a past event."
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_7",
+            "difficulty": "Medium",
+            "content": {
+                "passage": "The Phanerozoic eon ______ roughly 538.8 million years ago and continuing to the present, is distinguished by the appearance of abundant, complex life-forms.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) had begun",
+                    "B) beginning",
+                    "C) begins",
+                    "D) would begin"
+                ]
+            },
+            "solution": {
+                "answer": "B",
+                "explanation": "Present participle 'beginning' introduces a participial phrase modifying 'eon.'"
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_8",
+            "difficulty": "Medium",
+            "content": {
+                "passage": "One of the most popular tourist destinations in the world, the French Riviera has attracted many European aristocrats, artists, and celebrities. For example, in the early 1900s, Belgian King Leopold II ______ a villa and gardens in the resort town of Villefranche-sur-Mer.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) built",
+                    "B) is building",
+                    "C) would build",
+                    "D) building"
+                ]
+            },
+            "solution": {
+                "answer": "A",
+                "explanation": "Simple past 'built' is used for a completed past action."
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_9",
+            "difficulty": "Medium",
+            "content": {
+                "passage": "This is one of the key ideas undergirding Romanticism, an intellectual movement that originated in Western Europe in the late 18th century, ______ through the early 19th century.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) it lasted",
+                    "B) lasting",
+                    "C) having lasted",
+                    "D) and it lasted"
+                ]
+            },
+            "solution": {
+                "answer": "B",
+                "explanation": "Present participle 'lasting' introduces a participial phrase modifying 'movement.'"
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_10",
+            "difficulty": "Medium",
+            "content": {
+                "passage": "The Comoros, an island nation off the east coast of Africa, has declared coelacanths, a prehistoric species of fish, to be ______ valuable and in need of protection.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) nationally",
+                    "B) national",
+                    "C) a nation's",
+                    "D) a nationally"
+                ]
+            },
+            "solution": {
+                "answer": "A",
+                "explanation": "Adverb 'nationally' modifies the adjective 'valuable.'"
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_11",
+            "difficulty": "Medium",
+            "content": {
+                "passage": "In 1971, NASA's Mariner 9 became the first spacecraft to successfully orbit another planet when ______ Mars.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) having reached",
+                    "B) it reached",
+                    "C) to reach",
+                    "D) reaching"
+                ]
+            },
+            "solution": {
+                "answer": "B",
+                "explanation": "A full clause 'it reached' is needed after 'when.'"
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_12",
+            "difficulty": "Medium",
+            "content": {
+                "passage": "Consisting of over 1,100 islands across the Pacific Ocean, the Republic of Fiji ______ home to around 950,000 people.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) are",
+                    "B) being",
+                    "C) is",
+                    "D) to be"
+                ]
+            },
+            "solution": {
+                "answer": "C",
+                "explanation": "Singular verb 'is' is used with 'Republic.'"
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_13",
+            "difficulty": "Medium",
+            "content": {
+                "passage": "The Hereford map is a mappa mundi from the fourteenth century. It is one of over 1,000 such world maps from the European Middle Ages ______ today.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) still remaining",
+                    "B) which it is still remaining",
+                    "C) to still remain",
+                    "D) and still remain"
+                ]
+            },
+            "solution": {
+                "answer": "A",
+                "explanation": "Present participle 'remaining' introduces a participial phrase modifying 'maps.'"
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_14",
+            "difficulty": "Medium",
+            "content": {
+                "passage": "Mitochondrial genomes reproduce asexually, which should over time result in an accumulation of harmful mutations and a decline in mitochondrial functionality. Nuclear genes are hypothesized to coevolve with the rate of mitochondrial decline, however, ______ mutational erosion.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) eliminating",
+                    "B) eliminated",
+                    "C) had eliminated",
+                    "D) would eliminate"
+                ]
+            },
+            "solution": {
+                "answer": "A",
+                "explanation": "Present participle 'eliminating' introduces a participial phrase."
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_15",
+            "difficulty": "Medium",
+            "content": {
+                "passage": "Albania, Hungary, and the other member nations of the North Atlantic Treaty Organization, or NATO, share a commitment to the principle of collective defense, each NATO member ______ to defend the others if necessary.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) has pledged",
+                    "B) pledges",
+                    "C) is pledging",
+                    "D) pledging"
+                ]
+            },
+            "solution": {
+                "answer": "D",
+                "explanation": "Participle 'pledging' is part of an absolute construction."
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_16",
+            "difficulty": "Medium",
+            "content": {
+                "passage": "Robert Morris's image was printed on $1,000 US banknotes in 1862, making the former US superintendent of finance one of many nonpresidents ______ on US currency.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) to appear",
+                    "B) appears",
+                    "C) did appear",
+                    "D) had appeared"
+                ]
+            },
+            "solution": {
+                "answer": "A",
+                "explanation": "Infinitive 'to appear' modifies 'nonpresidents.'"
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_17",
+            "difficulty": "Medium",
+            "content": {
+                "passage": "Wisconsin, ______ 1,372 feet in elevation, reaches its highest point at Timms Hill.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) spans",
+                    "B) spanning",
+                    "C) span",
+                    "D) spanned"
+                ]
+            },
+            "solution": {
+                "answer": "B",
+                "explanation": "Present participle 'spanning' introduces a participial phrase modifying 'Wisconsin.'"
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_18",
+            "difficulty": "Medium",
+            "content": {
+                "passage": "Latyia, Greece, and the other member nations of the North Atlantic Treaty Organization, or NATO, share a commitment to the principle of collective defense, each NATO member ______ to defend the others if necessary.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) has pledged",
+                    "B) pledging",
+                    "C) pledges",
+                    "D) is pledging"
+                ]
+            },
+            "solution": {
+                "answer": "B",
+                "explanation": "Same as VF 15; participle 'pledging' in an absolute construction."
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_19",
+            "difficulty": "Medium",
+            "content": {
+                "passage": "Featuring jagged peaks of black ink surrounded by hazy swirls of blue and green paint, Zhang Daqian's 1983 painting Panorama of Mount Lu is inspired by the tradition of qinglu shanshui, a type of Chinese landscape painting ______ by the use of blue and green hues to depict ethereal, otherworldly landscapes.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) characterized",
+                    "B) is characterized",
+                    "C) has been characterized",
+                    "D) will be characterized"
+                ]
+            },
+            "solution": {
+                "answer": "A",
+                "explanation": "Past participle 'characterized' creates a reduced relative clause."
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_20",
+            "difficulty": "Hard",
+            "content": {
+                "passage": "Recent pollen analyses of the Aran Islands have led some researchers to propose that the now treeless islands were once wooded. This hypothesis ______ that certain trees, such as P. sylvestris, survived without interruption or human intervention throughout the Holocene cannot stand, researchers Michael O'Connell and Karen Molloy counter, unless other explanations can first be ruled out.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) suggested",
+                    "B) has suggested",
+                    "C) suggesting",
+                    "D) suggests"
+                ]
+            },
+            "solution": {
+                "answer": "C",
+                "explanation": "Present participle 'suggesting' introduces a participial phrase modifying 'hypothesis.'"
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_21",
+            "difficulty": "Medium",
+            "content": {
+                "passage": "In the 1960s, Sweden, Bulgaria, and dozens of other countries were allocated unique country dialing codes to route international calls. Most of the original two- or three- digit codes ______ by the International Telegraph and Telephone Consultative Committee later changed in response to geopolitical circumstances or telecommunications needs.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) assigned",
+                    "B) would be assigned",
+                    "C) had been assigned",
+                    "D) were assigned"
+                ]
+            },
+            "solution": {
+                "answer": "A",
+                "explanation": "Past participle 'assigned' modifies 'codes' in a reduced relative clause."
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_22",
+            "difficulty": "Medium",
+            "content": {
+                "passage": "The parks of Chicago, Illinois, seem to be making people happier. In a 2022 study, researchers ______ for a relationship between the physical location in which a social media post was created and the content of that post analyzed geotagged social media posts from Chicago. The team found that posts from the city's parks contained more words associated with happiness than other posts did.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) looking",
+                    "B) were looking",
+                    "C) looked",
+                    "D) had looked"
+                ]
+            },
+            "solution": {
+                "answer": "A",
+                "explanation": "Present participle 'looking' modifies 'researchers' in a participial phrase."
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_23",
+            "difficulty": "Medium",
+            "content": {
+                "passage": "Many works of the Roman historian Suetonius (1st century CE), including his book on miscellaneous topics, Pratum, have been lost to time. Antiquarians ______ to read one of Suetonius's extant works—not one known only through references to it by other authors, that is—might instead procure a copy of his De vita caesarum, a biography of the Roman Empire's first leaders.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) hope",
+                    "B) hoped",
+                    "C) hoping",
+                    "D) have hoped"
+                ]
+            },
+            "solution": {
+                "answer": "C",
+                "explanation": "Present participle 'hoping' modifies 'Antiquarians.'"
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_24",
+            "difficulty": "Medium",
+            "content": {
+                "passage": "Directed by the Mohawk filmmaker Tracey Deer, the feature-length drama Beans is one of many films by Indigenous women ______ featured in film festivals in recent years.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) to have been",
+                    "B) were being",
+                    "C) had been",
+                    "D) are being"
+                ]
+            },
+            "solution": {
+                "answer": "A",
+                "explanation": "Infinitive perfect 'to have been' is used to indicate films that have been featured."
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_25",
+            "difficulty": "Hard",
+            "content": {
+                "passage": "The Suzuki method is an approach to music instruction ______ to teach music in the same natural way children learn language, emphasizes playing instruments from a very young age. In Suzuki cello instruction, students begin their musical education with simple classical pieces like Robert Schumann's 'The Two Grenadiers.'",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) that is aiming",
+                    "B) that has aimed",
+                    "C) that, aiming",
+                    "D) that aims"
+                ]
+            },
+            "solution": {
+                "answer": "C",
+                "explanation": "The participle 'aiming' is part of a participial phrase within the relative clause."
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_26",
+            "difficulty": "Medium",
+            "content": {
+                "passage": "The parks of San Jose, California, seem to be making people happier. In a 2022 study, researchers ______ for a relationship between the physical location in which a social media post was created and the content of that post analyzed geotagged social media posts from San Jose. The team found that posts from the city's parks contained more words associated with happiness than other posts did.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) looking",
+                    "B) were looking",
+                    "C) looked",
+                    "D) had looked"
+                ]
+            },
+            "solution": {
+                "answer": "A",
+                "explanation": "Present participle 'looking' modifies 'researchers' in a participial phrase."
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_27",
+            "difficulty": "Medium",
+            "content": {
+                "passage": "In the 1960s, Greece, Malta, and dozens of other countries were allocated unique country dialing codes to route international calls. Most of the original two- or three-digit codes ______ by International Telegraphs and Telephone Consultative Committee later changed in response to geopolitical circumstances or telecommunication needs.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) were assigned",
+                    "B) had been assigned",
+                    "C) assigned",
+                    "D) would be assigned"
+                ]
+            },
+            "solution": {
+                "answer": "C",
+                "explanation": "Past participle 'assigned' modifies 'codes' in a reduced relative clause."
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_28",
+            "difficulty": "Medium",
+            "content": {
+                "passage": "Navajo artist Sally Black's mastery of traditional weaving techniques is apparent in her expertly crafted baskets, which typically are woven from sumac (a textured and flexible material) and ______ bold colors.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) feature",
+                    "B) had featured",
+                    "C) were featuring",
+                    "D) featured"
+                ]
+            },
+            "solution": {
+                "answer": "A",
+                "explanation": "The plural verb 'feature' is needed to parallel 'are woven' in describing the baskets."
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_29",
+            "difficulty": "Medium",
+            "content": {
+                "passage": "Many Farms Chapter is one of the 110 chapters of the Navajo Nation (Naabeehó Binahasdzo). The chapter, known as Da'ak'eh Halani in the Navajo language (Diné bizaad), was the subject of a profile______ in the Navajo Times on August 22, 2013.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) appearing",
+                    "B) has appeared",
+                    "C) appeared",
+                    "D) appears"
+                ]
+            },
+            "solution": {
+                "answer": "A",
+                "explanation": "Present participle 'appearing' modifies 'profile.'"
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_30",
+            "difficulty": "Medium",
+            "content": {
+                "passage": "Working with equipment designed for a billionths of a meter scale, ______",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) nanoengineers have synthesized silica nanoparticles that are used to administer medicines to specific cells in the body.",
+                    "B) nanoengineers synthesized silica nanoparticles are used to administer medicines to specific cells in the body.",
+                    "C) silica nanoparticles that have been synthesized by nanoengineers are used to administer medicines to specific cells in the body",
+                    "D) synthesized silica nanoparticles used to administer medicines to specific cells in the body have been created by nanoengineers."
+                ]
+            },
+            "solution": {
+                "answer": "A",
+                "explanation": "The main clause correctly begins with 'nanoengineers' as the subject, matching the participial phrase 'Working with equipment...'"
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_31",
+            "difficulty": "Medium",
+            "content": {
+                "passage": "The parks of Austin, Texas, seem to be making people happier. In 2022, a team of researchers ______ to find connections between the physical location in which a social media post was created and the content of that post analyzed geotagged social media posts from various sites in Austin. The team found that posts from the city's parks contained more words associated with happiness than did the other posts.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) were hoping",
+                    "B) hoped",
+                    "C) was hoping",
+                    "D) hoping"
+                ]
+            },
+            "solution": {
+                "answer": "D",
+                "explanation": "Present participle 'hoping' modifies 'a team of researchers.'"
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_32",
+            "difficulty": "Medium",
+            "content": {
+                "passage": "If an animal can recognize itself in a reflective surface ('the mirror test'), it is considered to have self-awareness. In a recent study, scientists ______ for evidence of self-awareness in snakes, species that rely primarily on olfactory rather than visual processing, adapted the test to foreground smell, modifying the scent trails of North American eastern garter snakes and African ball pythons.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) searched",
+                    "B) were searching",
+                    "C) have searched",
+                    "D) searching"
+                ]
+            },
+            "solution": {
+                "answer": "D",
+                "explanation": "Present participle 'searching' modifies 'scientists.'"
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_33",
+            "difficulty": "Medium",
+            "content": {
+                "passage": "The parks of Columbus, Ohio, seem to be making people happier. In 2022, a team of researchers ______ to find connections between the physical location in which a social media post was created and the content of that post analyzed geotagged social media posts from various sites in Columbus. The team found that posts from the city's parks contained more words associated with happiness than did the other posts.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) were hoping",
+                    "B) was hoping",
+                    "C) hoped",
+                    "D) hoping"
+                ]
+            },
+            "solution": {
+                "answer": "D",
+                "explanation": "Present participle 'hoping' modifies 'a team of researchers.'"
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_34",
+            "difficulty": "Medium",
+            "content": {
+                "passage": "On the 2021 '100 Best Jobs' list published by U.S. News & World Report, lawyers, ranked thirty-eighth, were projected ______ an impressive 32,300 new jobs between 2019 and 2029. In contrast, the projection for optometrists was 1,900.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) are gaining",
+                    "B) to gain",
+                    "C) had gained",
+                    "D) gains"
+                ]
+            },
+            "solution": {
+                "answer": "B",
+                "explanation": "Infinitive 'to gain' follows 'were projected.'"
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_35",
+            "difficulty": "Medium",
+            "content": {
+                "passage": "As an object-oriented computer programming language, Java is used by coders like Black Girls Code founder Kimberly Bryant ______ programs by manipulating 'objects' (that is, specifically defined variables or combinations of variables) into interacting with each other. Conversely, S-Lang, used in software development and scripting, is not an object-oriented language.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) created",
+                    "B) create",
+                    "C) is creating",
+                    "D) to create"
+                ]
+            },
+            "solution": {
+                "answer": "D",
+                "explanation": "Infinitive 'to create' expresses purpose after 'is used.'"
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_36",
+            "difficulty": "Medium",
+            "content": {
+                "passage": "Miniature Self-Portrait (1556) is one of dozens of remaining works by Sofonisba Anguissola. Currently, her painting ______ at the Museum of Fine Arts in Boston, where visitors can view the Italian Renaissance artist's work on display.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) have hung",
+                    "B) hangs",
+                    "C) hung",
+                    "D) was hanging"
+                ]
+            },
+            "solution": {
+                "answer": "B",
+                "explanation": "Present tense 'hangs' is used for a current state."
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_37",
+            "difficulty": "Medium",
+            "content": {
+                "passage": "The human foot contains a variety of skeletal muscles, each playing an important role in the foot's healthy movement. The extensor digitorum brevis, which is attached to the calcaneus, ______ responsibility for extending the middle toes.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) bearing",
+                    "B) to bear",
+                    "C) bears",
+                    "D) having borne"
+                ]
+            },
+            "solution": {
+                "answer": "C",
+                "explanation": "Present tense 'bears' is used for a general fact."
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_38",
+            "difficulty": "Hard",
+            "content": {
+                "passage": "Mitochondrial genomes reproduce asexually, which should over time result in an accumulation of harmful mutations and a decline in mitochondrial functionality. However, nuclear genes are hypothesized to coevolve with the rate of mitochondrial decline, eliminating mutational erosion. Such a compensatory measure ______ the organelle's decline, unlike enzyme-stabilizing accessory proteins, offers an evolutionary explanation of mitochondrial reproduction.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) counteracts",
+                    "B) had counteracted",
+                    "C) counteracted",
+                    "D) counteracting"
+                ]
+            },
+            "solution": {
+                "answer": "D",
+                "explanation": "Present participle 'counteracting' introduces a participial phrase modifying 'measure.'"
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_39",
+            "difficulty": "Medium",
+            "content": {
+                "passage": "In his 2011 book, historian Sebouh David Aslanian quantifies the reading patterns of early modern Armenian merchants from New Julfa. Aslanian's macroanalysis ______ nearly 1,000 book titles published between 1512 and 1800 shows not only the steady popularity of religious texts but also a broadening interest in secular books, especially those on history and geography.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) had examined",
+                    "B) examining",
+                    "C) examined",
+                    "D) examines"
+                ]
+            },
+            "solution": {
+                "answer": "B",
+                "explanation": "Present participle 'examining' modifies 'macroanalysis.'"
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_40",
+            "difficulty": "Medium",
+            "content": {
+                "passage": "In May of 1959, the song 'Danny Boy' was a top-ten hit. Having climbed the charts for ten weeks, ______ ranked No. 1 on the Billboard Hot 100 list of most popular songs.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) those",
+                    "B) they",
+                    "C) each",
+                    "D) it"
+                ]
+            },
+            "solution": {
+                "answer": "D",
+                "explanation": "Singular pronoun 'it' refers to the song."
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_41",
+            "difficulty": "Hard",
+            "content": {
+                "passage": "In recent years, the English writer Ann Yearsley (1753-1806), whose poetry was widely read during her lifetime, has been rediscovered by contemporary audiences—a resurgence of interest that is largely due to literary scholars such as Stacey McDowell, whose work ______ the richness of Yearsley's poems and the poet's historical importance to the Romantic literary movement encourages a broader rethinking of British Romanticism itself.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) highlights",
+                    "B) highlighting",
+                    "C) has highlighted",
+                    "D) is highlighting"
+                ]
+            },
+            "solution": {
+                "answer": "B",
+                "explanation": "Present participle 'highlighting' introduces a participial phrase modifying 'work.'"
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_42",
+            "difficulty": "Medium",
+            "content": {
+                "passage": "Categorized as a dactyl, the word 'gradient' consists of one stressed syllable followed by two unstressed syllables. The word 'harpist,' by comparison, consists of one stressed syllable followed by one unstressed syllable, a metrical foot ______ to in English metrical verse as a trochee.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) referred",
+                    "B) is referred",
+                    "C) referring",
+                    "D) refers"
+                ]
+            },
+            "solution": {
+                "answer": "A",
+                "explanation": "Past participle 'referred' modifies 'metrical foot' in a reduced relative clause."
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_43",
+            "difficulty": "Hard",
+            "content": {
+                "passage": "As the exoplanet 81 Ceti b orbits a star 330 light-years from Earth, the exoplanet's gravity causes the star to wobble. In 2008, astronomers this wobble through shifts in the color of the star's spectral light—blueshifts indicating longer wavelengths and movement toward the observer, redshifts shorter wavelengths and movement away— deduced that the fluctuation was caused by the gravitational force of a previously undetected exoplanet.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) perceived",
+                    "B) had perceived",
+                    "C) were perceiving",
+                    "D) perceiving"
+                ]
+            },
+            "solution": {
+                "answer": "D",
+                "explanation": "Present participle 'perceiving' modifies 'astronomers.'"
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_44",
+            "difficulty": "Hard",
+            "content": {
+                "passage": "In recent years, the English writer Mary Ann Browne (1812-1845), whose poetry was widely read during her lifetime, has been rediscovered by contemporary audiences—a resurgence of interest that is largely due to literary scholars such as Adriana Craciun, whose work ______ the richness of Browne's poems and the poet's historical importance to the Romantic literary movement encourages a broader rethinking of British Romanticism itself.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) highlights",
+                    "B) highlighting",
+                    "C) has highlighted",
+                    "D) is highlighting"
+                ]
+            },
+            "solution": {
+                "answer": "B",
+                "explanation": "Present participle 'highlighting' introduces a participial phrase modifying 'work.'"
+            },
+            "explanation": ""
+        },
+        {
+            "id": "vf_45",
+            "difficulty": "Medium",
+            "content": {
+                "passage": "The extensive impact that polymeric nanoparticles (PNPs) have had on medicine belies their minuscule size, the nanoparticles typically ______ from only 100 to 300 billionths of a meter.",
+                "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+                "options": [
+                    "A) range",
+                    "B) can range",
+                    "C) ranging",
+                    "D) will range"
+                ]
+            },
+            "solution": {
+                "answer": "C",
+                "explanation": "Present participle 'ranging' is part of an absolute construction."
+            },
+            "explanation": ""
+        }
+    ]
+}
