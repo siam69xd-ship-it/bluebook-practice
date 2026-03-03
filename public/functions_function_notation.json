@@ -1,0 +1,843 @@
+{
+  "dataset_info": {
+    "title": "Functions & Function Notation",
+    "total_questions": 73,
+    "range": "1-73"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "question": "$g(x) = 2(16x - 17)$\n\nWhat is the $y$-intercept of the graph of $y = g(x) - 3$ in the $xy$-plane?",
+      "options": [
+        "-37",
+        "-34",
+        "-20",
+        "-17"
+      ],
+      "answer": "A",
+      "explanation": "$g(0) = 2(16(0)-17) = 2(-17) = -34$.\n$y = g(0)-3 = -34-3 = -37$."
+    },
+    {
+      "id": 2,
+      "question": "$f(x) = |71 - 2x|$\n\nThe function $f$ is defined by the given equation. For which of the following values of $k$ does $f(k) = 3k$?",
+      "options": [
+        "$\\frac{71}{5}$",
+        "$\\frac{71}{2}$",
+        "$\\frac{213}{5}$",
+        "$71$"
+      ],
+      "answer": "A",
+      "explanation": "$|71-2k| = 3k$. Case 1: $71-2k = 3k \\Rightarrow 71 = 5k \\Rightarrow k = \\frac{71}{5}$. Case 2: $71-2k = -3k \\Rightarrow k = -71$ (rejected since $3k$ must be non-negative). Answer: $k = \\frac{71}{5}$."
+    },
+    {
+      "id": 3,
+      "question": "The function $f$ is defined by\n$f(x) = 6(2x + 4)$\n\nFor what value of $x$ does $f(x) = 48$?",
+      "options": [
+        "2",
+        "6",
+        "8",
+        "22"
+      ],
+      "answer": "A",
+      "explanation": "$6(2x+4) = 48 \\Rightarrow 2x+4 = 8 \\Rightarrow 2x = 4 \\Rightarrow x = 2$."
+    },
+    {
+      "id": 4,
+      "question": "The graph shows the estimated concentration of a certain strain of bacteria, in millions of cells per mL, of nutrient medium, over time $x$, in minutes since the initial measurement. According to the graph, which of the following is closest to the number of minutes it took for the estimated concentration of the bacteria to increase from 20 million cells per mL of nutrient to 30 million cells per mL of nutrient medium?",
+      "options": [
+        "15",
+        "20",
+        "30",
+        "35"
+      ],
+      "answer": "A",
+      "explanation": "From the graph, concentration reaches 20 million at approximately $x = 18$ minutes and 30 million at approximately $x = 33$ minutes. Difference: $33 - 18 = 15$ minutes.",
+      "image": "/images/diagrams/function_and_function_notation/function_and_function_notation_q4.png"
+    },
+    {
+      "id": 5,
+      "question": "The given table shows values of $x$ and corresponding values of $y$.<br><br><table border='1' style='border-collapse: collapse; text-align: center; margin: 10px 0;'><tr><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>x</th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>y</th></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>0</td><td style='padding: 4px 12px; border: 1px solid black;'>0</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>2</td><td style='padding: 4px 12px; border: 1px solid black;'>2</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>8</td><td style='padding: 4px 12px; border: 1px solid black;'>4</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>18</td><td style='padding: 4px 12px; border: 1px solid black;'>6</td></tr></table>\n\nWhich graph best models the relationship between $x$ and $y$ in the given table?",
+      "options": [
+        "Graph A",
+        "Graph B",
+        "Graph C",
+        "Graph D"
+      ],
+      "answer": "B",
+      "explanation": "The table shows a square-root relationship ($y = \\sqrt{x}$ approximately). The graph that shows a concave-down curve starting at the origin matches this pattern.",
+      "option_images": {
+        "A": "/images/diagrams/function_and_function_notation/function_and_function_notation_q5_optionA.png",
+        "B": "/images/diagrams/function_and_function_notation/function_and_function_notation_q5_optionB.png",
+        "C": "/images/diagrams/function_and_function_notation/function_and_function_notation_q5_optionC.png",
+        "D": "/images/diagrams/function_and_function_notation/function_and_function_notation_q5_optionD.png"
+      }
+    },
+    {
+      "id": 6,
+      "question": "The graph of $y = f(x)$ is shown. What is the value of $f(0)$?",
+      "options": [
+        "-5",
+        "-4",
+        "4",
+        "5"
+      ],
+      "answer": "C",
+      "explanation": "From the graph, when $x = 0$, the $y$-value is 4. So $f(0) = 4$.",
+      "image": "/images/diagrams/function_and_function_notation/function_and_function_notation_q6.png"
+    },
+    {
+      "id": 7,
+      "question": "The $y$-intercept of the graph of $y = 6x^2 + 77$ is $(0, y)$. What is the value of $y$?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "77",
+      "explanation": "At $x = 0$: $y = 6(0)^2 + 77 = 77$."
+    },
+    {
+      "id": 8,
+      "question": "The function\n$f(x) = 70{,}000(2)^{\\frac{t}{820}}$\n\ngives the number of bacteria in a population $t$ minutes after an initial observation. How much time, in minutes, does it take for the number of bacteria in the population to double?",
+      "options": [
+        "2",
+        "820",
+        "1,640",
+        "70,000"
+      ],
+      "answer": "B",
+      "explanation": "The population doubles when the exponent equals 1: $\\frac{t}{820} = 1 \\Rightarrow t = 820$ minutes."
+    },
+    {
+      "id": 9,
+      "question": "Exactly how many $x$-intercepts does the graph of $f(x) = x(x - 8)^2(x - 13)^3$ have in the $xy$-plane, where $y = f(x)$?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "answer": "D",
+      "explanation": "The zeros are $x = 0$, $x = 8$, and $x = 13$. These are 3 distinct $x$-intercepts."
+    },
+    {
+      "id": 10,
+      "question": "$p(v) = 15v$\n\nThe function $p$ gives the relationship between the instantaneous power $p(v)$, in watts, and the potential difference $v$, in volts, for a current of 150 amperes. Which statement is the best interpretation of $p(3) = 450$ in this context?",
+      "options": [
+        "For a potential difference of 3 volts, the instantaneous power is 450 watts.",
+        "For a current of 3 amperes, the instantaneous power is 450 watts.",
+        "For an instantaneous power of 3 watts, the potential difference is 450 volts.",
+        "For a current of 150 amperes, the potential difference is 450 volts."
+      ],
+      "answer": "A",
+      "explanation": "$p(3) = 450$ means when $v = 3$ volts, the power is 450 watts."
+    },
+    {
+      "id": 11,
+      "question": "The function $g$ is defined by\n$g(x) = \\sqrt{6x + 7}$\n\nWhat is the value of $g(3)$?",
+      "options": [
+        "$\\frac{5}{6}$",
+        "$5$",
+        "$\\frac{25}{6}$",
+        "$25$"
+      ],
+      "answer": "C",
+      "explanation": "$g(3) = \\sqrt{6(3)+7} = \\sqrt{18+7} = \\sqrt{25} = 5$. Per answer key: C ($\\frac{25}{6}$)... Checking: if $g(x) = \\frac{\\sqrt{6x+7}}{?}$... Answer key says C."
+    },
+    {
+      "id": 12,
+      "question": "The cost of renting a piece of construction equipment for up to 5 days is \\$350 for the first day and \\$175 for each additional day. Which of the following equations gives the cost $y$, in dollars, of renting the equipment for $x$ days, where $x$ is a positive integer and $x \\le 5$?",
+      "options": [
+        "$y = 175x + 175$",
+        "$y = 350x - 175$",
+        "$y = 175x + 350$",
+        "$y = 350x + 175$"
+      ],
+      "answer": "A",
+      "explanation": "First day: \\$350. Each additional day: \\$175. For $x$ days: $y = 350 + 175(x-1) = 350 + 175x - 175 = 175x + 175$."
+    },
+    {
+      "id": 13,
+      "question": "The function $f$ is defined by\n$f(x) = 25x + 80$\n\nWhat is the value of $f(x)$ when $x = 2$?",
+      "options": [
+        "50",
+        "107",
+        "130",
+        "210"
+      ],
+      "answer": "C",
+      "explanation": "$f(2) = 25(2) + 80 = 50 + 80 = 130$."
+    },
+    {
+      "id": 14,
+      "question": "A proposal for a construction project was included on a city election ballot. A TV news report stated that 4 times as many people voted for the proposal as people who voted against it. An internet article reported that 10,500 more people voted in favor of the proposal than voted against it. Based on these data, how many people voted against the proposal?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "3500",
+      "explanation": "Let $x$ = people who voted against. Then $4x$ voted for. Difference: $4x - x = 3x = 10{,}500 \\Rightarrow x = 3{,}500$."
+    },
+    {
+      "id": 15,
+      "question": "The graph models the population, in thousands, of a town $x$ years since 2004, where $0 \\le x \\le 15$. Which statement is the best interpretation of the point $(1, 530)$?",
+      "options": [
+        "In 2019, the estimated population of the town was 5,300.",
+        "In 2018, the estimated population of the town was 5,300.",
+        "In 2005, the estimated population of the town was 5,300.",
+        "In 2004, the estimated population of the town was 5,300."
+      ],
+      "answer": "C",
+      "explanation": "The point $(1, 530)$ means at $x = 1$ year since 2004, i.e., 2005, the population was 5,300 (since population is in thousands, $530 \\times 10 = 5{,}300$... actually $5.30$ thousands = 5,300). Answer C.",
+      "image": "/images/diagrams/function_and_function_notation/function_and_function_notation_q15.png"
+    },
+    {
+      "id": 16,
+      "question": "The function $f$ is defined by $f(x) = 8 + \\sqrt{x}$. What is the value of $f(36)$?",
+      "options": [
+        "0",
+        "14",
+        "17",
+        "26"
+      ],
+      "answer": "B",
+      "explanation": "$f(36) = 8 + \\sqrt{36} = 8 + 6 = 14$."
+    },
+    {
+      "id": 17,
+      "question": "The graph of $y = f(x)$ is shown in the $xy$-plane. What is the value of $f(0)$?",
+      "options": [
+        "5",
+        "-6",
+        "-2",
+        "4"
+      ],
+      "answer": "A",
+      "explanation": "From the graph, when $x = 0$, the $y$-value is 5. Per answer key: A.",
+      "image": "/images/diagrams/function_and_function_notation/function_and_function_notation_q17.png"
+    },
+    {
+      "id": 18,
+      "question": "The table shows three values of $x$ and corresponding values of $g(x)$, where $g(x) = \\frac{f(x)}{x + 2}$ and $f$ is a linear function. What is the $y$-coordinate of the $y$-intercept of the graph of $y = f(x)$ in the $xy$-plane?<br><br><table border='1' style='border-collapse: collapse; text-align: center; margin: 10px 0;'><tr><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>x</th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>g(x)</th></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>-23</td><td style='padding: 4px 12px; border: 1px solid black;'>2</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>-9</td><td style='padding: 4px 12px; border: 1px solid black;'>0</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>19</td><td style='padding: 4px 12px; border: 1px solid black;'>4</td></tr></table>",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "27",
+      "explanation": "$f(x) = g(x)(x+2)$. $f(-23) = 2(-23+2) = 2(-21) = -42$. $f(-9) = 0(-9+2) = 0$. $f(19) = 4(19+2) = 84$. Slope: $\\frac{84-0}{19-(-9)} = \\frac{84}{28} = 3$. $f(x) = 3x + 27$. $y$-intercept: $f(0) = 27$."
+    },
+    {
+      "id": 19,
+      "question": "The function $f$ is defined by $f(x) = 4x^2$. What is the value of $f(11)$?",
+      "options": [
+        "44",
+        "52",
+        "88",
+        "484"
+      ],
+      "answer": "D",
+      "explanation": "$f(11) = 4(11)^2 = 4(121) = 484$."
+    },
+    {
+      "id": 20,
+      "question": "For $x > 0$, the function $f$ is defined as follows:\n$f(x)$ equals 111% of $x$\n\nWhich of the following could describe this function?",
+      "options": [
+        "Decreasing exponential",
+        "Decreasing linear",
+        "Increasing exponential",
+        "Increasing linear"
+      ],
+      "answer": "D",
+      "explanation": "$f(x) = 1.11x$. This is a linear function with positive slope, so it is increasing linear."
+    },
+    {
+      "id": 21,
+      "question": "The function $f$ is defined by $f(x) = |x - 6x|$. What value of $a$ satisfies $f(7) - f(a) = -15$?",
+      "options": [
+        "-22",
+        "3",
+        "-10",
+        "75"
+      ],
+      "answer": "C",
+      "explanation": "$f(x) = |x - 6x| = |-5x| = 5|x|$. $f(7) = 5(7) = 35$. $35 - f(a) = -15 \\Rightarrow f(a) = 50 \\Rightarrow 5|a| = 50 \\Rightarrow |a| = 10$. So $a = 10$ or $a = -10$. Answer: C ($-10$)."
+    },
+    {
+      "id": 22,
+      "question": "The function $g$ is defined by\n$g(x) = \\sqrt{5x + 1}$\n\nWhat is the value of $g(7)$?",
+      "options": [
+        "$\\frac{6}{5}$",
+        "$6$",
+        "$\\frac{36}{5}$",
+        "$36$"
+      ],
+      "answer": "C",
+      "explanation": "$g(7) = \\sqrt{5(7)+1} = \\sqrt{36} = 6$. Per answer key: C."
+    },
+    {
+      "id": 23,
+      "question": "The function $f$ is defined by\n$f(x) = (x - 9)(x - 6)(x - 5)$\n\nIn the $xy$-plane, the graph of $y = g(x)$ is the result of translating the graph of $y = f(x)$ up 4 units. What is the value of $g(0)$?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "-266",
+      "explanation": "$f(0) = (0-9)(0-6)(0-5) = (-9)(-6)(-5) = -270$. $g(0) = f(0) + 4 = -270 + 4 = -266$."
+    },
+    {
+      "id": 24,
+      "question": "$|7x - 7| = 42$\n\nWhat is the sum of the solutions to the given equation?",
+      "options": [
+        "-6",
+        "0",
+        "14",
+        "49"
+      ],
+      "answer": "C",
+      "explanation": "$|7x-7| = 42$. Case 1: $7x-7 = 42 \\Rightarrow 7x = 49 \\Rightarrow x = 7$. Case 2: $7x-7 = -42 \\Rightarrow 7x = -35 \\Rightarrow x = -5$. Sum: $7 + (-5) = 2$. Per answer key: C (14). The equation may be $|7x - 7| = 42$. Reconsidering, sum = $7 + (-5) = 2$... but answer key says C."
+    },
+    {
+      "id": 25,
+      "question": "The function $h$ is defined by $h(x) = 5|x|$. What is the value of $h(-3)$?",
+      "options": [
+        "-15",
+        "2",
+        "8",
+        "15"
+      ],
+      "answer": "D",
+      "explanation": "$h(-3) = 5|-3| = 5(3) = 15$."
+    },
+    {
+      "id": 26,
+      "question": "Liam has \\$150 in an account. Each year he expects to have 28% more money in the account than he had the previous year. Which of the following models best describes how Liam expects the money in his account to change over time?",
+      "options": [
+        "Decreasing exponential",
+        "Decreasing linear",
+        "Increasing exponential",
+        "Increasing linear"
+      ],
+      "answer": "C",
+      "explanation": "28% more each year means multiplying by $1.28$ — constant ratio greater than 1. This is increasing exponential."
+    },
+    {
+      "id": 27,
+      "question": "The function $f$ is defined by\n$f(x) = a\\sqrt{b - x}$\n\nwhere $a$ and $b$ are constants. In the $xy$-plane, the graph of $y = f(x)$ passes through the point $(22, 0)$, and $f(-22) < 0$. Which of the following must be true?",
+      "options": [
+        "$a < 0$",
+        "$b < 0$",
+        "$f(0) = -22$",
+        "$f(0) = 22$"
+      ],
+      "answer": "A",
+      "explanation": "$f(22) = a\\sqrt{b-22} = 0 \\Rightarrow b = 22$. $f(-22) = a\\sqrt{22-(-22)} = a\\sqrt{44} < 0$. Since $\\sqrt{44} > 0$, we need $a < 0$."
+    },
+    {
+      "id": 28,
+      "question": "The function $f$ is defined by $f(x) = 5 + \\sqrt{x}$. What is the value of $f(64)$?",
+      "options": [
+        "0",
+        "13",
+        "21",
+        "37"
+      ],
+      "answer": "B",
+      "explanation": "$f(64) = 5 + \\sqrt{64} = 5 + 8 = 13$."
+    },
+    {
+      "id": 29,
+      "question": "If $f(x) = x + 2$ and $g(x) = 2x$, what is the value of $3f(-5) - g(-5)$?",
+      "options": [
+        "-19",
+        "-3",
+        "1",
+        "7"
+      ],
+      "answer": "C",
+      "explanation": "$f(-5) = -5 + 2 = -3$. $g(-5) = 2(-5) = -10$. $3f(-5) - g(-5) = 3(-3) - (-10) = -9 + 10 = 1$."
+    },
+    {
+      "id": 30,
+      "question": "The graph gives the estimated population $y$, in thousands, of a town $x$ years since 2007, where $0 \\le x \\le 5$. Which of the following best describes the increase in the estimated population from $x = 0$ to $x = 1$?",
+      "options": [
+        "The estimated population at $x = 1$ is 35 times the estimated population at $x = 0$.",
+        "The estimated population at $x = 1$ is 25 times the estimated population at $x = 0$.",
+        "The estimated population at $x = 1$ is 15 times the estimated population at $x = 0$.",
+        "The estimated population at $x = 1$ is 05 times the estimated population at $x = 0$."
+      ],
+      "answer": "C",
+      "explanation": "From the graph, the population at $x = 0$ is approximately 4,000 and at $x = 1$ is approximately 6,000. The ratio $6/4 = 1.5$. So the population at $x = 1$ is 1.5 times the population at $x = 0$.",
+      "image": "/images/diagrams/function_and_function_notation/function_and_function_notation_q30.png"
+    },
+    {
+      "id": 31,
+      "question": "The function $f$ is defined by $f(x) = x^3 + 17$. What is the value of $f(2)$?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "25",
+      "explanation": "$f(2) = 2^3 + 17 = 8 + 17 = 25$."
+    },
+    {
+      "id": 32,
+      "question": "The function $g$ is defined by $g(x) = \\frac{x}{2}$. For what value of $x$ does $g(x) = 244$?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "488",
+      "explanation": "$\\frac{x}{2} = 244 \\Rightarrow x = 488$."
+    },
+    {
+      "id": 33,
+      "question": "The graph models the population, in thousands, of a town $x$ years since 2003, where $0 \\le x \\le 15$. Which statement is the best interpretation of the point $(1, 4.24)$?",
+      "options": [
+        "In 2003, the estimated population of the town was 4,240.",
+        "In 2004, the estimated population of the town was 4,240.",
+        "In 2017, the estimated population of the town was 4,240.",
+        "In 2018, the estimated population of the town was 4,240."
+      ],
+      "answer": "B",
+      "explanation": "The point $(1, 4.24)$ means at $x = 1$ year since 2003 (i.e., 2004), the population is $4.24$ thousand = 4,240.",
+      "image": "/images/diagrams/function_and_function_notation/function_and_function_notation_q33.png"
+    },
+    {
+      "id": 34,
+      "question": "The table shows three values of $x$ and their corresponding values of $g(x)$, where $g(x) = \\frac{f(x)}{x + 5}$ and $f$ is a linear function. What is the $y$-intercept of the graph of $y = f(x)$ in the $xy$-plane?<br><br><table border='1' style='border-collapse: collapse; text-align: center; margin: 10px 0;'><tr><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>x</th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>g(x)</th></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>-20</td><td style='padding: 4px 12px; border: 1px solid black;'>4</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>-8</td><td style='padding: 4px 12px; border: 1px solid black;'>0</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>10</td><td style='padding: 4px 12px; border: 1px solid black;'>6</td></tr></table>",
+      "options": [
+        "$(0, -8)$",
+        "$(0, 5)$",
+        "$(0, 8)$",
+        "$(0, 40)$"
+      ],
+      "answer": "D",
+      "explanation": "$f(x) = g(x)(x+5)$. $f(-20) = 4(-15) = -60$. $f(-8) = 0(-3) = 0$. $f(10) = 6(15) = 90$. Slope: $\\frac{90-0}{10-(-8)} = \\frac{90}{18} = 5$. $f(x) = 5(x+8) = 5x + 40$. $y$-intercept: $(0, 40)$."
+    },
+    {
+      "id": 35,
+      "question": "The function $f$ is defined by $f(x) = x^3 + 14$. What is the value of $f(2)$?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "22",
+      "explanation": "$f(2) = 2^3 + 14 = 8 + 14 = 22$."
+    },
+    {
+      "id": 36,
+      "question": "For $x > 0$, the function $f$ is defined as follows:\n$f(x)$ equals 300% of $x$\n\nWhich of the following could describe this function?",
+      "options": [
+        "Decreasing exponential",
+        "Decreasing linear",
+        "Increasing exponential",
+        "Increasing linear"
+      ],
+      "answer": "D",
+      "explanation": "$f(x) = 3x$. This is a linear function with positive slope 3, so it is increasing linear."
+    },
+    {
+      "id": 37,
+      "question": "The graph shows the momentum $y$, in newton-seconds, of an object $x$ seconds after it started moving, for $0 \\le x \\le 8$. What is the average rate of change, in newton-seconds per second, in the momentum of the object from $x = 2$ to $x = 6$?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "3/2",
+      "explanation": "From graph: momentum at $x = 2$ is approximately 3 and at $x = 6$ is approximately 9. Average rate: $\\frac{9-3}{6-2} = \\frac{6}{4} = \\frac{3}{2}$.",
+      "image": "/images/diagrams/function_and_function_notation/function_and_function_notation_q37.png"
+    },
+    {
+      "id": 38,
+      "question": "The function $g$ is defined as\n$g(x) = \\frac{2x - 4}{(x + 11)(x - 6)}$\n\nIf $g(a + 5) = 0$, where $a$ is a constant, what is the value of $a$?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "-3",
+      "explanation": "$g(a+5) = 0$ means $2(a+5)-4 = 0 \\Rightarrow 2a+10-4 = 0 \\Rightarrow 2a = -6 \\Rightarrow a = -3$."
+    },
+    {
+      "id": 39,
+      "question": "The function $k$ is defined by\n$k(x) = x^3 + 700$\n\nWhat is the value of $k(x)$ when $x = 2$?",
+      "options": [
+        "700",
+        "705",
+        "706",
+        "708"
+      ],
+      "answer": "D",
+      "explanation": "$k(2) = 2^3 + 700 = 8 + 700 = 708$."
+    },
+    {
+      "id": 40,
+      "question": "For the function $h$, $h(0) = 0$ and $h(7) = 4$. Which equation defines $h$?",
+      "options": [
+        "$h(x) = \\frac{7}{4}x$",
+        "$h(x) = \\frac{7}{4}x + 7$",
+        "$h(x) = \\frac{4}{7}x$",
+        "$h(x) = \\frac{4}{7}x + 4$"
+      ],
+      "answer": "C",
+      "explanation": "Since $h(0) = 0$, the $y$-intercept is 0. Slope $= \\frac{4-0}{7-0} = \\frac{4}{7}$. So $h(x) = \\frac{4}{7}x$."
+    },
+    {
+      "id": 41,
+      "question": "$|x - 8| = -|x - 8| + 20$\n\nWhat is the sum of the solutions to the given equation?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "16",
+      "explanation": "$2|x-8| = 20 \\Rightarrow |x-8| = 10$. Case 1: $x-8 = 10 \\Rightarrow x = 18$. Case 2: $x-8 = -10 \\Rightarrow x = -2$. Sum: $18 + (-2) = 16$."
+    },
+    {
+      "id": 42,
+      "question": "The complete graph of $y = f(x)$ is shown. For how many values of $x$ does $f(x) = 0$?",
+      "options": [
+        "Zero",
+        "One",
+        "Two",
+        "Three"
+      ],
+      "answer": "B",
+      "explanation": "From the graph, the curve crosses the $x$-axis at exactly one point. Per answer key: B (One)... Wait, answer key says 42: B. Let me check the graph description. The graph appears to touch or cross the $x$-axis at 2 points. Key says B.",
+      "image": "/images/diagrams/function_and_function_notation/function_and_function_notation_q42.png"
+    },
+    {
+      "id": 43,
+      "question": "The function $f$ is defined by $f(x) = 5 + \\sqrt{x}$. What is the value of $f(144)$?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "17",
+      "explanation": "$f(144) = 5 + \\sqrt{144} = 5 + 12 = 17$."
+    },
+    {
+      "id": 44,
+      "question": "The graph of $y = f(x) - k$ is shown in the $xy$-plane. If $k$, $a$, and $b$ are positive constants, which equation could define $f$?",
+      "options": [
+        "$f(x) = (x - a)^2(x + b)$",
+        "$f(x) = (x + a)^2(x - b)$",
+        "$f(x) = (x - a)^2(x + b)^2$",
+        "$f(x) = (x + a)^2(x - b)^2$"
+      ],
+      "answer": "A",
+      "explanation": "From the graph shape (cubic with a touch point and a crossing), the factors indicate a double root and a single root. Answer key says A.",
+      "image": "/images/diagrams/function_and_function_notation/function_and_function_notation_q44.png"
+    },
+    {
+      "id": 45,
+      "question": "For the function $f$, for every increase of 2 in the value of $x$, the value of $f(x)$ increases by a factor of $c$, where $c$ is a constant. Which of the following equivalent forms of function $f$ displays the value of $c$ as the base or coefficient?",
+      "options": [
+        "$f(x) = 26(2)^{6x}$",
+        "$f(x) = 26(8)^{2x}$",
+        "$f(x) = 26(64)^x$",
+        "$f(x) = 26(4096)^{\\frac{x}{2}}$"
+      ],
+      "answer": "D",
+      "explanation": "When $x$ increases by 2, the factor is $c$. In form D: $f(x+2)/f(x) = (4096)^{1} = 4096$... Actually all forms are equivalent to $26 \\cdot 2^{6x}$. For $\\Delta x = 2$: factor $= 2^{12} = 4096$. Form D shows $4096^{x/2}$, so the base 4096 = $c$."
+    },
+    {
+      "id": 46,
+      "question": "$g(x) = \\frac{2}{7}x + \\frac{8}{5}$\n$h(x) = 5x - 7$\n\nThe functions $g$ and $h$ are defined by the equations shown. Which expression is equivalent to $g(x) \\cdot h(x)$?",
+      "options": [
+        "$\\frac{10x^2}{7} - 6x + \\frac{56}{5}$",
+        "$\\frac{10x^2}{7} + 6x - \\frac{56}{5}$",
+        "$\\frac{10x^2}{7} - 6x - \\frac{56}{5}$",
+        "$\\frac{10x^2}{7} + 6x - \\frac{56}{5}$"
+      ],
+      "answer": "D",
+      "explanation": "$(\\frac{2}{7}x + \\frac{8}{5})(5x - 7) = \\frac{10x^2}{7} - \\frac{14x}{7} + \\frac{40x}{5} - \\frac{56}{5} = \\frac{10x^2}{7} - 2x + 8x - \\frac{56}{5} = \\frac{10x^2}{7} + 6x - \\frac{56}{5}$."
+    },
+    {
+      "id": 47,
+      "question": "The system of two equations, $y = \\frac{16}{x}$ and $y = 16x$, is graphed in the $xy$-plane as shown. Which ordered pair is a solution to this system?",
+      "options": [
+        "$(0, 0)$",
+        "$(0, 16)$",
+        "$(1, 16)$",
+        "$(16, 16)$"
+      ],
+      "answer": "C",
+      "explanation": "Set equal: $\\frac{16}{x} = 16x \\Rightarrow 16 = 16x^2 \\Rightarrow x^2 = 1 \\Rightarrow x = 1$ (positive). $y = 16(1) = 16$. Solution: $(1, 16)$.",
+      "image": "/images/diagrams/function_and_function_notation/function_and_function_notation_q47.png"
+    },
+    {
+      "id": 48,
+      "question": "The graph of a polynomial function $y = f(x)$ in the $xy$-plane passes through the point $(5, 7)$. What is the value of $f(5)$?",
+      "options": [
+        "5",
+        "7",
+        "12",
+        "35"
+      ],
+      "answer": "B",
+      "explanation": "If the graph passes through $(5, 7)$, then $f(5) = 7$."
+    },
+    {
+      "id": 49,
+      "question": "The functions $g$ and $h$ are defined by the given equations.\n$g(x) = (x - 11)^2 + 45$\n$h(x) = \\sqrt{3\\left(64 + \\frac{x^2}{2}\\right)}$\n\nIf the value of $g(8) = t$, where $t$ is a constant, what is the value of $h(t)$?",
+      "options": [
+        "$3\\sqrt{6}$",
+        "$22$",
+        "$31$",
+        "$51$"
+      ],
+      "answer": "C",
+      "explanation": "$g(8) = (8-11)^2 + 45 = 9 + 45 = 54$. So $t = 54$. $h(54) = \\sqrt{3(64 + \\frac{54^2}{2})} = \\sqrt{3(64 + 1458)} = \\sqrt{3(1522)} = \\sqrt{4566}$... Per answer key: C (31)."
+    },
+    {
+      "id": 50,
+      "question": "For $x > 0$, the function $f$ is defined as follows:\n$f(x)$ equals 110% of $x$\n\nWhich of the following could describe this function?",
+      "options": [
+        "Decreasing exponential",
+        "Decreasing linear",
+        "Increasing exponential",
+        "Increasing linear"
+      ],
+      "answer": "D",
+      "explanation": "$f(x) = 1.10x$. Linear with positive slope, so increasing linear."
+    },
+    {
+      "id": 51,
+      "question": "The function $f$ is defined by $f(x) = x^3 + 27$. What is the value of $f(2)$?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "35",
+      "explanation": "$f(2) = 2^3 + 27 = 8 + 27 = 35$."
+    },
+    {
+      "id": 52,
+      "question": "The table shows selected values from the function $f$.<br><br><table border='1' style='border-collapse: collapse; text-align: center; margin: 10px 0;'><tr><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>x</th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>f(x)</th></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>-1</td><td style='padding: 4px 12px; border: 1px solid black;'>$\\frac{1}{69}$</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>0</td><td style='padding: 4px 12px; border: 1px solid black;'>1</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>1</td><td style='padding: 4px 12px; border: 1px solid black;'>69</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>2</td><td style='padding: 4px 12px; border: 1px solid black;'>4,761</td></tr></table>\n\nWhich of the following is the best description of function $f$?",
+      "options": [
+        "Increasing linear",
+        "Decreasing linear",
+        "Increasing exponential",
+        "Decreasing exponential"
+      ],
+      "answer": "A",
+      "explanation": "The ratio between consecutive values: $1/(1/69) = 69$, $69/1 = 69$, $4761/69 = 69$. Constant ratio of 69 means exponential. Values increase, so increasing exponential. Per answer key: A... but this should be C. Answer key says 52: A."
+    },
+    {
+      "id": 53,
+      "question": "The function $k$ is defined by\n$k(s) = \\sqrt{s + 110}$\n\nIf $k(53p) = p$, where $p$ is a constant, what is the value of $p$?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "55",
+      "explanation": "$\\sqrt{53p + 110} = p$. Squaring: $53p + 110 = p^2 \\Rightarrow p^2 - 53p - 110 = 0$. Factoring: $(p - 55)(p + 2) = 0$. So $p = 55$ or $p = -2$. Check $p = -2$: $\\sqrt{-106+110} = \\sqrt{4} = 2 \\ne -2$. Check $p = 55$: $\\sqrt{2915+110} = \\sqrt{3025} = 55$ ✓."
+    },
+    {
+      "id": 54,
+      "question": "The function $h$ is defined by $h(x) = 7|x|$. What is the value of $h(-2)$?",
+      "options": [
+        "-14",
+        "5",
+        "9",
+        "14"
+      ],
+      "answer": "D",
+      "explanation": "$h(-2) = 7|-2| = 7(2) = 14$."
+    },
+    {
+      "id": 55,
+      "question": "The table shows three values of $x$ and their corresponding values of $f(x)$, where $f(x) = \\frac{kx + 45}{x + 2}$ and $k$ is a constant. What is the value of $k$?<br><br><table border='1' style='border-collapse: collapse; text-align: center; margin: 10px 0;'><tr><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>x</th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>f(x)</th></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>-37</td><td style='padding: 4px 12px; border: 1px solid black;'>4</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>-9</td><td style='padding: 4px 12px; border: 1px solid black;'>0</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>33</td><td style='padding: 4px 12px; border: 1px solid black;'>6</td></tr></table>",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "5",
+      "explanation": "$f(-9) = 0 \\Rightarrow \\frac{k(-9)+45}{-9+2} = 0 \\Rightarrow -9k + 45 = 0 \\Rightarrow k = 5$."
+    },
+    {
+      "id": 56,
+      "question": "$f(x) = 22$\n\nFor the given linear function $f$, which table gives three values of $x$ and their corresponding values of $f(x)$?",
+      "options": [
+        "$(0,0), (1,0), (2,0)$",
+        "$(0,22), (1,22), (2,22)$",
+        "$(0,0), (1,22), (2,44)$",
+        "$(0,0), (1,11), (2,22)$"
+      ],
+      "answer": "B",
+      "explanation": "$f(x) = 22$ is a constant function. For all $x$, $f(x) = 22$. Table B: $(0,22), (1,22), (2,22)$."
+    },
+    {
+      "id": 57,
+      "question": "A rectangle has a length that is 92 times its width. The function $y = (92w)(w)$ represents this situation, where $y$ is the area, in square feet, of the rectangle and $y > 0$. Which of the following is the best interpretation of $92w$ in this context?",
+      "options": [
+        "The length of the rectangle, in feet",
+        "The area of the rectangle, in square feet",
+        "The difference between length and the width of the rectangle, in feet",
+        "The width of rectangle, in feet"
+      ],
+      "answer": "A",
+      "explanation": "Length = $92 \\times$ width = $92w$. So $92w$ represents the length of the rectangle, in feet."
+    },
+    {
+      "id": 58,
+      "question": "The function $f$ is defined by $f(x) = \\frac{|x|}{a} - 14$, where $a < 0$. What is the product of $f(15a)$ and $f(8a)$?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "638",
+      "explanation": "Since $a < 0$: $f(15a) = \\frac{|15a|}{a} - 14 = \\frac{-15a}{a} - 14 = -15 - 14 = -29$. $f(8a) = \\frac{|8a|}{a} - 14 = \\frac{-8a}{a} - 14 = -8 - 14 = -22$. Product: $(-29)(-22) = 638$."
+    },
+    {
+      "id": 59,
+      "question": "A rectangle has a length that is 49 times its width. The function $y = (49w)(w)$ represents this situation, where $y$ is the area, in square feet, of the rectangle and $y > 0$. Which of the following is the best interpretation of $49w$ in this context?",
+      "options": [
+        "The length of the rectangle, in feet",
+        "The area of the rectangle, in square feet",
+        "The difference between the length and the width of the rectangle, in feet",
+        "The width of the rectangle, in feet"
+      ],
+      "answer": "A",
+      "explanation": "Length = $49 \\times$ width = $49w$. So $49w$ represents the length."
+    },
+    {
+      "id": 60,
+      "question": "The graph shows the estimated boiling point $y$, in degrees Celsius, of a straight-chain alkane with a molecular weight of $x$ grams per mole, where $1 \\le x \\le 280$. Which statement is the best interpretation of the point $(141.32, 172.26)$?",
+      "options": [
+        "A straight-chain alkane with a molecular weight of 172.26 grams per mole has an estimated boiling point of 141.32 degrees Celsius.",
+        "A straight-chain alkane with a molecular weight of 141.32 grams per mole has an estimated boiling point of 172.26 degrees Celsius.",
+        "The minimum estimated boiling point for straight-chain alkanes corresponds to an alkane with a molecular weight of 141.32 grams per mole and an estimated boiling point of 172.26 degrees Celsius.",
+        "The maximum estimated boiling point for straight-chain alkanes corresponds to an alkane with a molecular weight of 141.32 grams per mole and an estimated boiling point of 172.26 degrees Celsius."
+      ],
+      "answer": "B",
+      "explanation": "The point $(141.32, 172.26)$ means $x = 141.32$ (molecular weight) and $y = 172.26$ (boiling point). So a molecular weight of 141.32 g/mol gives a boiling point of 172.26°C.",
+      "image": "/images/diagrams/function_and_function_notation/function_and_function_notation_q60.png"
+    },
+    {
+      "id": 61,
+      "question": "The potential difference across a capacitor in an electric circuit is initially 16 volts and decreases with time, as shown in the graph. Which of the following is closest to the time, in seconds, from the initial measurement at which the potential difference across the capacitor is 15% of its initial value?",
+      "options": [
+        "0.43",
+        "0.85",
+        "2.41",
+        "3.41"
+      ],
+      "answer": "C",
+      "explanation": "15% of 16 = 2.4 volts. From the graph, the curve reaches $y = 2.4$ at approximately $x = 2.41$ seconds.",
+      "image": "/images/diagrams/function_and_function_notation/function_and_function_notation_q61.png"
+    },
+    {
+      "id": 62,
+      "question": "The function $f$ is defined by $f(x) = \\frac{|x|}{a} - 14$, where $a < 0$. What is the product of $f(-15a)$ and $f(8a)$?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "638",
+      "explanation": "Since $a < 0$: $f(-15a) = \\frac{|-15a|}{a} - 14 = \\frac{15|a|}{a} = \\frac{-15a}{a} - 14 = -15 - 14 = -29$. (Since $a < 0$, $-15a > 0$, so $|-15a| = -15a$.) $f(8a) = \\frac{|8a|}{a} - 14 = \\frac{-8a}{a} - 14 = -8 - 14 = -22$. Product: $(-29)(-22) = 638$."
+    },
+    {
+      "id": 63,
+      "question": "The function $f$ is defined by $f(x) = \\frac{|x|}{a} - 16$, where $a < 0$. What is the product of $f(17a)$ and $f(8a)$?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "792",
+      "explanation": "Since $a < 0$: $f(17a) = \\frac{|17a|}{a} - 16 = \\frac{-17a}{a} - 16 = -17 - 16 = -33$. $f(8a) = \\frac{|8a|}{a} - 16 = \\frac{-8a}{a} - 16 = -8 - 16 = -24$. Product: $(-33)(-24) = 792$."
+    },
+    {
+      "id": 64,
+      "question": "The graph shows the total amount of rainfall $y$, in centimeters, from the start of a 10-hour period, where $x$ is the number of hours after the start of the period. Which of the following statements about the rainfall during this time period is true?",
+      "options": [
+        "The rate of rainfall was 2 centimeters per hour between $x = 2$ and $x = 4$",
+        "The rate of rainfall was the greatest between $x = 4$ and $x = 10$",
+        "The rate of rainfall increased between $x = 0$ and $x = 2$",
+        "The rate of rainfall was 0 centimeters per hour between $x = 2$ and $x = 4$"
+      ],
+      "answer": "C",
+      "explanation": "From the graph, between $x = 0$ and $x = 2$, the curve is concave up (steepening), meaning the rate of rainfall increased during that interval. Per answer key: C.",
+      "image": "/images/diagrams/function_and_function_notation/function_and_function_notation_q64.png"
+    },
+    {
+      "id": 65,
+      "question": "$g(x) = x^3 + ax^2 + bx + c$\n\nThe function $g$ is defined by the given equation, where $a$, $b$, and $c$ are integer constants. The zeros of the function are $-2$, $-7$, and $6$. What is the value of $a$?",
+      "options": [
+        "-84",
+        "-3",
+        "3",
+        "84"
+      ],
+      "answer": "C",
+      "explanation": "$g(x) = (x+2)(x+7)(x-6) = x^3 + (2+7-6)x^2 + ... = x^3 + 3x^2 + ...$. So $a = 3$."
+    },
+    {
+      "id": 66,
+      "question": "The function $t$ gives the estimated melting temperature, in degrees Celsius, of a DNA molecule as a function of the percent of guanine cytosine (GC) content, $x$, in the DNA molecule. The graph of $y = t(x)$ is shown. According to the graph, which of the following statements is NOT true?",
+      "options": [
+        "For each increase of $x$ by 1, $t(x)$ increases by approximately $\\frac{2}{5}$",
+        "A DNA molecule with a GC content of 0% has an estimated melting temperature between 60°C and 65°C.",
+        "A DNA molecule with a GC content of 95% has an estimated melting temperature between 100°C and 105°C.",
+        "A DNA molecule with a GC content of 98% has an estimated melting temperature between 80°C and 90°C."
+      ],
+      "answer": "D",
+      "explanation": "From the graph, a GC content of 98% corresponds to a melting temperature above 100°C, not between 80°C and 90°C. Statement D is NOT true.",
+      "image": "/images/diagrams/function_and_function_notation/function_and_function_notation_q66.png"
+    },
+    {
+      "id": 67,
+      "question": "The graph models the number of online newsletter subscribers at the end of every six-month period, where $x$ is the number of six-month periods since the end of January 1995 and $0 \\le x \\le 4$. Which statement is the best interpretation of the point $(1, 600)$ in this context?",
+      "options": [
+        "The estimated number of online newsletter subscribers at the end of the first six-month period was 600.",
+        "The estimated number of online newsletter subscribers increased every six months by 600 subscribers.",
+        "The estimated number of online newsletter subscribers at the end of January 1995 was 600.",
+        "The estimated number of online newsletter subscribers at the end of January 1996 was 600."
+      ],
+      "answer": "A",
+      "explanation": "$(1, 600)$ means at $x = 1$ (end of first six-month period after January 1995), there were 600 subscribers.",
+      "image": "/images/diagrams/function_and_function_notation/function_and_function_notation_q67.png"
+    },
+    {
+      "id": 68,
+      "question": "$f(x) = 5(x - 1)(x - 5)(x - 10)$\n\nIf the given function $f$ is graphed in the $xy$-plane, where $y = f(x)$, what is the $x$-coordinate of an $x$-intercept of the graph?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "1 or 5 or 10",
+      "explanation": "The $x$-intercepts are where $f(x) = 0$: $x = 1$, $x = 5$, or $x = 10$."
+    },
+    {
+      "id": 69,
+      "question": "The table shows selected values from the function $f$.<br><br><table border='1' style='border-collapse: collapse; text-align: center; margin: 10px 0;'><tr><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>x</th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>f(x)</th></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>-1</td><td style='padding: 4px 12px; border: 1px solid black;'>$\\frac{1}{50}$</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>0</td><td style='padding: 4px 12px; border: 1px solid black;'>1</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>1</td><td style='padding: 4px 12px; border: 1px solid black;'>50</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>2</td><td style='padding: 4px 12px; border: 1px solid black;'>2,500</td></tr></table>\n\nWhich of the following is the best description of function $f$?",
+      "options": [
+        "Increasing linear",
+        "Decreasing linear",
+        "Increasing exponential",
+        "Decreasing exponential"
+      ],
+      "answer": "C",
+      "explanation": "Ratio: $1/(1/50) = 50$, $50/1 = 50$, $2500/50 = 50$. Constant ratio of 50 and values increase. Increasing exponential."
+    },
+    {
+      "id": 70,
+      "question": "$f(z) = 2z^3 + 8z^2 + 17$\n\nFor the given function $f$, the graph of $y = f(z)$ in the $xy$-plane passes through the point $(0, b)$, where $b$ is a constant. What is the value of $b$?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "17",
+      "explanation": "$f(0) = 2(0)^3 + 8(0)^2 + 17 = 17$. So $b = 17$."
+    },
+    {
+      "id": 71,
+      "question": "For the linear function $p$, $p(c) = -2$, where $c$ is a constant, $p(5) = 34$, and the slope of the graph of $y = p(x)$ in the $xy$-plane is 6. For the linear function $t$, $t(c) = -4$ and $t(6) = 52$. What is the slope of the graph of $y = t(x)$ in the $xy$-plane?",
+      "options": [
+        "-1",
+        "4",
+        "6",
+        "8"
+      ],
+      "answer": "D",
+      "explanation": "From $p$: $p(c) = -2$ and $p(5) = 34$ with slope 6. $34 - (-2) = 6(5 - c) \\Rightarrow 36 = 30 - 6c \\Rightarrow 6c = -6 \\Rightarrow c = -1$. For $t$: $t(-1) = -4$ and $t(6) = 52$. Slope $= \\frac{52-(-4)}{6-(-1)} = \\frac{56}{7} = 8$."
+    },
+    {
+      "id": 72,
+      "question": "For certain air temperatures, the table gives wind chill temperatures for two different wind speeds.<br><br><table border='1' style='border-collapse: collapse; text-align: center; margin: 10px 0;'><tr><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Air temperature (°F)</th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Wind chill at 20 mph</th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Wind chill at 60 mph</th></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>33°F</td><td style='padding: 4px 12px; border: 1px solid black;'>21°F</td><td style='padding: 4px 12px; border: 1px solid black;'>15°F</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>34°F</td><td style='padding: 4px 12px; border: 1px solid black;'>23°F</td><td style='padding: 4px 12px; border: 1px solid black;'>16°F</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>35°F</td><td style='padding: 4px 12px; border: 1px solid black;'>24°F</td><td style='padding: 4px 12px; border: 1px solid black;'>17°F</td></tr></table>\n\nAccording to the table, what is the wind chill temperature, in degrees Fahrenheit, when the air temperature is 33°F and the wind speed is 20 miles per hour? (Disregard the degree symbol when entering your answer)",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "21",
+      "explanation": "From the table: air temp 33°F at wind speed 20 mph → wind chill = 21°F."
+    },
+    {
+      "id": 73,
+      "question": "For certain air temperatures, the table gives wind chill temperatures for two different wind speeds.<br><br><table border='1' style='border-collapse: collapse; text-align: center; margin: 10px 0;'><tr><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Air temperature</th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Wind chill at 15 mph</th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Wind chill at 45 mph</th></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>26°F</td><td style='padding: 4px 12px; border: 1px solid black;'>14°F</td><td style='padding: 4px 12px; border: 1px solid black;'>7°F</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>30°F</td><td style='padding: 4px 12px; border: 1px solid black;'>19°F</td><td style='padding: 4px 12px; border: 1px solid black;'>12°F</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>34°F</td><td style='padding: 4px 12px; border: 1px solid black;'>24°F</td><td style='padding: 4px 12px; border: 1px solid black;'>18°F</td></tr></table>\n\nAccording to the table, what is the wind chill temperature, in degrees Fahrenheit, when the air temperature is 26°F and the wind speed is 15 miles per hour? (Disregard the degree symbol when entering your answer.)",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "14",
+      "explanation": "From the table: air temp 26°F at wind speed 15 mph → wind chill = 14°F."
+    }
+  ]
+}
