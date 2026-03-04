@@ -579,8 +579,8 @@ export default function TimedQuiz() {
     
     if (reviewQuestion) {
       return (
-        <div className="min-h-screen bg-bluebook-bg flex flex-col">
-          <header className="sticky top-0 z-30 bg-white border-b border-gray-200">
+        <div className={cn("bg-bluebook-bg flex flex-col", isFullscreen ? "h-screen overflow-hidden" : "min-h-screen")}>
+          <header className="shrink-0 z-30 bg-white border-b border-gray-200">
             <div className="flex items-center justify-between px-4 h-14">
               <div className="flex items-center gap-2">
                 <button
@@ -615,7 +615,7 @@ export default function TimedQuiz() {
             </div>
           </header>
           
-          <main className="flex-1 flex flex-col lg:flex-row">
+          <main className="flex-1 flex flex-col lg:flex-row min-h-0 overflow-hidden">
             <div className="flex-1 p-6 overflow-y-auto border-r border-gray-200 bg-white">
               <HighlightableText
                 text={(() => {
@@ -715,7 +715,7 @@ export default function TimedQuiz() {
     }
     
     return (
-      <div className="min-h-screen bg-bluebook-bg">
+      <div className={cn("bg-bluebook-bg", isFullscreen ? "h-screen overflow-y-auto" : "min-h-screen")}>
         <header className="sticky top-0 z-30 bg-white border-b border-gray-200">
           <div className="flex items-center justify-between px-4 h-14">
             <div className="flex items-center gap-2">
@@ -839,7 +839,7 @@ export default function TimedQuiz() {
 
   // English quiz - use original split-pane layout
   return (
-    <div className="min-h-screen bg-bluebook-bg flex flex-col">
+    <div className={cn("bg-bluebook-bg flex flex-col", isFullscreen ? "h-screen overflow-hidden" : "min-h-screen")}>
       <QuestionNavigator
         totalQuestions={quizQuestions.length}
         questionIds={quizQuestions.map(q => q.id)}
@@ -850,7 +850,7 @@ export default function TimedQuiz() {
         onClose={() => setShowNavigator(false)}
       />
       
-      <header className="sticky top-0 z-30 bg-card border-b border-border">
+      <header className="shrink-0 z-30 bg-card border-b border-border">
         <div className="flex items-center justify-between px-4 h-14">
           <div className="flex items-center gap-2">
             <button
@@ -914,7 +914,7 @@ export default function TimedQuiz() {
         )}
       </header>
 
-      <main className="flex-1 flex flex-col lg:flex-row">
+      <main className="flex-1 flex flex-col lg:flex-row min-h-0 overflow-hidden">
         <div className="flex-1 p-6 overflow-y-auto border-r border-border bg-card">
           <AnimatePresence mode="wait">
             <motion.div
@@ -1031,7 +1031,7 @@ export default function TimedQuiz() {
         </div>
       </main>
 
-      <footer className="sticky bottom-0 bg-card border-t border-border">
+      <footer className="shrink-0 bg-card border-t border-border">
         <div className="flex items-center justify-between px-4 py-3">
           <div className="flex items-center gap-3">
             <button 
