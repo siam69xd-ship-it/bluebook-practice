@@ -1,0 +1,219 @@
+{
+  "dataset_info": {
+    "title": "Probability",
+    "total_questions": 19,
+    "range": "1-19"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "question": "A certain book has 250 pages, and 21 of these pages have an illustration. If one of the book's pages is selected at random, what is the probability of selecting a page with an illustration? (Express your answer as a decimal or fraction, not as a percent.)",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "21/250",
+      "explanation": "Probability = favorable outcomes / total outcomes = $\\frac{21}{250}$."
+    },
+    {
+      "id": 2,
+      "question": "At a convention center, there are a total of 325 visitors. Each visitor is located in either room A, room B, or room C. If one of these visitors is selected at random, the probability of selecting a visitor who is located in room A is 0.48, and the probability of selecting a visitor who is located in room B is 0.16. How many visitors are located in room C?",
+      "options": [
+        "25",
+        "36",
+        "104",
+        "117"
+      ],
+      "answer": "D",
+      "explanation": "P(C) = $1 - 0.48 - 0.16 = 0.36$. Number in room C: $325 \\times 0.36 = 117$."
+    },
+    {
+      "id": 3,
+      "question": "There are 20 marbles in the bag: 8 red marbles, 10 green marbles, and 2 blue marbles. If one of these marbles is selected at random, what is the probability of selecting a red marble?",
+      "options": [
+        "$\\frac{2}{20}$",
+        "$\\frac{8}{20}$",
+        "$\\frac{10}{20}$",
+        "$\\frac{12}{20}$"
+      ],
+      "answer": "B",
+      "explanation": "P(red) = $\\frac{8}{20}$."
+    },
+    {
+      "id": 4,
+      "question": "A choir of 48 singers has 12 members who sing bass. If one singer from the choir is selected at random, what is the probability of selecting a singer who sings bass?",
+      "options": [
+        "$\\frac{1}{48}$",
+        "$\\frac{12}{48}$",
+        "$\\frac{36}{48}$",
+        "$\\frac{48}{48}$"
+      ],
+      "answer": "B",
+      "explanation": "P(bass) = $\\frac{12}{48} = \\frac{1}{4}$."
+    },
+    {
+      "id": 5,
+      "question": "The table shows the distribution of people in a certain city by age group.<br><br><table border='1' style='border-collapse: collapse; text-align: center; margin: 10px 0;'><tr><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Age group</th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Proportion</th></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>Less than 18 years old</td><td style='padding: 4px 12px; border: 1px solid black;'>27%</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>18–40 years old</td><td style='padding: 4px 12px; border: 1px solid black;'>24%</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>41–65 years old</td><td style='padding: 4px 12px; border: 1px solid black;'>28%</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>Greater than 65 years old</td><td style='padding: 4px 12px; border: 1px solid black;'>21%</td></tr></table>\n\nIf a person in this city is selected at random, which of the following is closest to the probability of selecting a person who is greater than 65 years old, given that the person is at least 18 years old?",
+      "options": [
+        "0.21",
+        "0.29",
+        "0.35",
+        "0.41"
+      ],
+      "answer": "B",
+      "explanation": "P(at least 18) = $24 + 28 + 21 = 73\\%$. P(>65 | ≥18) = $\\frac{21}{73} \\approx 0.288 \\approx 0.29$."
+    },
+    {
+      "id": 6,
+      "question": "At a convention center, there are a total of 375 visitors. Each visitor is located in either room A, room B, or room C. If one of these visitors is selected at random, the probability of selecting a visitor who is located in room A is 0.48, and the probability of selecting a visitor who is located in room B is 0.32. How many visitors are located in room C?",
+      "options": [
+        "20",
+        "58",
+        "60",
+        "75"
+      ],
+      "answer": "D",
+      "explanation": "P(C) = $1 - 0.48 - 0.32 = 0.20$. Number in C: $375 \\times 0.20 = 75$."
+    },
+    {
+      "id": 7,
+      "question": "A sleep study consisted of 59 participants, of which 53 participants each had an average of more than 120 minutes of rapid eye movement (REM) sleep per night. If a participant from this study is selected at random, what is the probability of selecting a participant that had an average of more than 120 minutes of REM sleep per night?",
+      "options": [
+        "$\\frac{53}{100}$",
+        "$\\frac{59}{100}$",
+        "$\\frac{53}{59}$",
+        "$\\frac{59}{53}$"
+      ],
+      "answer": "C",
+      "explanation": "P = $\\frac{53}{59}$."
+    },
+    {
+      "id": 8,
+      "question": "At a convention center, there are a total of 275 visitors. Each visitor is located in either room A, room B, or room C. If one of these visitors is selected at random, the probability of selecting a visitor who is located in room A is 0.68, and the probability of selecting a visitor who is located in room B is 0.24. How many visitors are located in room C?",
+      "options": [
+        "8",
+        "22",
+        "45",
+        "121"
+      ],
+      "answer": "B",
+      "explanation": "P(C) = $1 - 0.68 - 0.24 = 0.08$. Number in C: $275 \\times 0.08 = 22$."
+    },
+    {
+      "id": 9,
+      "question": "At a convention center, there are a total of 375 visitors. Each visitor is located in either room A, room B, or room C. If one of these visitors is selected at random, the probability of selecting a visitor who is located in room A is 0.48, and the probability of selecting a visitor who is located in room B is 0.24. How many visitors are located in room C?",
+      "options": [
+        "28",
+        "43",
+        "90",
+        "105"
+      ],
+      "answer": "D",
+      "explanation": "P(C) = $1 - 0.48 - 0.24 = 0.28$. Number in C: $375 \\times 0.28 = 105$."
+    },
+    {
+      "id": 10,
+      "question": "Hakim has a bag of 50 tiles, where 45 are labeled with a letter and 5 are black. If Hakim selects a tile from the bag at random, what is the probability of selecting a black tile? (Express your answer as a decimal or fraction, not as a percent.)",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "1/10",
+      "explanation": "P(black) = $\\frac{5}{50} = \\frac{1}{10}$."
+    },
+    {
+      "id": 11,
+      "question": "Each rock in a collection of 70 rocks was classified as either igneous, metamorphic, or sedimentary, as shown in the frequency table.<br><br><table border='1' style='border-collapse: collapse; text-align: center; margin: 10px 0;'><tr><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Classification</th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Frequency</th></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>Igneous</td><td style='padding: 4px 12px; border: 1px solid black;'>10</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>Metamorphic</td><td style='padding: 4px 12px; border: 1px solid black;'>38</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>Sedimentary</td><td style='padding: 4px 12px; border: 1px solid black;'>22</td></tr></table>\n\nIf one of these rocks is selected at random, what is the probability of selecting a rock that is igneous?",
+      "options": [
+        "$\\frac{10}{70}$",
+        "$\\frac{10}{60}$",
+        "$\\frac{10}{38}$",
+        "$\\frac{10}{22}$"
+      ],
+      "answer": "A",
+      "explanation": "P(igneous) = $\\frac{10}{70} = \\frac{1}{7}$."
+    },
+    {
+      "id": 12,
+      "question": "At a convention center, there are a total of 375 visitors. Each visitor is located in either room A, room B, or room C. If one of these visitors is selected at random, the probability of selecting a visitor who is located in room A is 0.68, and the probability of selecting a visitor who is located in room B is 0.24. How many visitors are located in room C?",
+      "options": [
+        "8",
+        "30",
+        "61",
+        "165"
+      ],
+      "answer": "B",
+      "explanation": "P(C) = $1 - 0.68 - 0.24 = 0.08$. Number in C: $375 \\times 0.08 = 30$."
+    },
+    {
+      "id": 13,
+      "question": "The table summarizes the distribution of age and assigned group for participants in a study.<br><br><table border='1' style='border-collapse: collapse; text-align: center; margin: 10px 0;'><tr><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'></th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>0–9 years</th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>10–19 years</th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>20+ years</th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Total</th></tr><tr><td style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Group A</td><td style='padding: 4px 12px; border: 1px solid black;'>14</td><td style='padding: 4px 12px; border: 1px solid black;'>19</td><td style='padding: 4px 12px; border: 1px solid black;'>27</td><td style='padding: 4px 12px; border: 1px solid black;'>60</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Group B</td><td style='padding: 4px 12px; border: 1px solid black;'>27</td><td style='padding: 4px 12px; border: 1px solid black;'>7</td><td style='padding: 4px 12px; border: 1px solid black;'>26</td><td style='padding: 4px 12px; border: 1px solid black;'>60</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Group C</td><td style='padding: 4px 12px; border: 1px solid black;'>19</td><td style='padding: 4px 12px; border: 1px solid black;'>34</td><td style='padding: 4px 12px; border: 1px solid black;'>7</td><td style='padding: 4px 12px; border: 1px solid black;'>60</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Total</td><td style='padding: 4px 12px; border: 1px solid black;'>60</td><td style='padding: 4px 12px; border: 1px solid black;'>60</td><td style='padding: 4px 12px; border: 1px solid black;'>60</td><td style='padding: 4px 12px; border: 1px solid black;'>180</td></tr></table>\n\nOne of these participants will be selected at random. What is the probability of selecting a participant from group A, given that the participant is at least 10 years of age? (Express your answer as a decimal or fraction, not as a percent.)",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "23/60",
+      "explanation": "At least 10 years: $60 + 60 = 120$ participants. Group A and at least 10: $19 + 27 = 46$. P = $\\frac{46}{120} = \\frac{23}{60}$."
+    },
+    {
+      "id": 14,
+      "question": "A bin contains a mixture of T-shirts for two sports teams. The table shows the number of T-shirts in the bin, classified by size and sports team.<br><br><table border='1' style='border-collapse: collapse; text-align: center; margin: 10px 0;'><tr><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'></th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Flames</th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Panthers</th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Total</th></tr><tr><td style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Small</td><td style='padding: 4px 12px; border: 1px solid black;'>6</td><td style='padding: 4px 12px; border: 1px solid black;'>9</td><td style='padding: 4px 12px; border: 1px solid black;'>15</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Medium</td><td style='padding: 4px 12px; border: 1px solid black;'>24</td><td style='padding: 4px 12px; border: 1px solid black;'>33</td><td style='padding: 4px 12px; border: 1px solid black;'>57</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Large</td><td style='padding: 4px 12px; border: 1px solid black;'>18</td><td style='padding: 4px 12px; border: 1px solid black;'>24</td><td style='padding: 4px 12px; border: 1px solid black;'>42</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Total</td><td style='padding: 4px 12px; border: 1px solid black;'>48</td><td style='padding: 4px 12px; border: 1px solid black;'>66</td><td style='padding: 4px 12px; border: 1px solid black;'>114</td></tr></table>\n\nOne T-shirt from the bin will be selected at random. What is the probability of selecting a T-shirt that is medium, given that the T-shirt is a Flames T-shirt? (Express your answer as a decimal or fraction, not as a percent.)",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "1/2",
+      "explanation": "P(medium | Flames) = $\\frac{24}{48} = \\frac{1}{2}$."
+    },
+    {
+      "id": 15,
+      "question": "The table summarizes the distribution of age and assigned group for 105 participants in a study.<br><br><table border='1' style='border-collapse: collapse; text-align: center; margin: 10px 0;'><tr><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'></th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>0–9 years</th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>10–19 years</th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>20+ years</th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Total</th></tr><tr><td style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Group A</td><td style='padding: 4px 12px; border: 1px solid black;'>5</td><td style='padding: 4px 12px; border: 1px solid black;'>19</td><td style='padding: 4px 12px; border: 1px solid black;'>11</td><td style='padding: 4px 12px; border: 1px solid black;'>35</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Group B</td><td style='padding: 4px 12px; border: 1px solid black;'>4</td><td style='padding: 4px 12px; border: 1px solid black;'>8</td><td style='padding: 4px 12px; border: 1px solid black;'>23</td><td style='padding: 4px 12px; border: 1px solid black;'>35</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Group C</td><td style='padding: 4px 12px; border: 1px solid black;'>26</td><td style='padding: 4px 12px; border: 1px solid black;'>8</td><td style='padding: 4px 12px; border: 1px solid black;'>1</td><td style='padding: 4px 12px; border: 1px solid black;'>35</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Total</td><td style='padding: 4px 12px; border: 1px solid black;'>35</td><td style='padding: 4px 12px; border: 1px solid black;'>35</td><td style='padding: 4px 12px; border: 1px solid black;'>35</td><td style='padding: 4px 12px; border: 1px solid black;'>105</td></tr></table>\n\nOne of these participants will be selected at random. What is the probability of selecting a participant from group A, given that the participant is at least 10 years of age?",
+      "options": [
+        "$\\frac{2}{7}$",
+        "$\\frac{3}{7}$",
+        "$\\frac{19}{35}$",
+        "$\\frac{6}{7}$"
+      ],
+      "answer": "B",
+      "explanation": "At least 10: $35 + 35 = 70$. Group A and at least 10: $19 + 11 = 30$. P = $\\frac{30}{70} = \\frac{3}{7}$."
+    },
+    {
+      "id": 16,
+      "question": "The table summarizes members of a local organization by age and whether they live north or south of Center St.<br><br><table border='1' style='border-collapse: collapse; text-align: center; margin: 10px 0;'><tr><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'></th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Live north of Center St.</th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Live south of Center St.</th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Total</th></tr><tr><td style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Less than 45 years old</td><td style='padding: 4px 12px; border: 1px solid black;'>13</td><td style='padding: 4px 12px; border: 1px solid black;'>12</td><td style='padding: 4px 12px; border: 1px solid black;'>25</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>At least 45 years old</td><td style='padding: 4px 12px; border: 1px solid black;'>22</td><td style='padding: 4px 12px; border: 1px solid black;'>88</td><td style='padding: 4px 12px; border: 1px solid black;'>110</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Total</td><td style='padding: 4px 12px; border: 1px solid black;'>35</td><td style='padding: 4px 12px; border: 1px solid black;'>100</td><td style='padding: 4px 12px; border: 1px solid black;'>135</td></tr></table>\n\nIf a member of the organization is selected at random, what is the probability that the selected member is at least 45 years old?",
+      "options": [
+        "$\\frac{25}{135}$",
+        "$\\frac{35}{135}$",
+        "$\\frac{100}{135}$",
+        "$\\frac{110}{135}$"
+      ],
+      "answer": "D",
+      "explanation": "P(at least 45) = $\\frac{110}{135}$."
+    },
+    {
+      "id": 17,
+      "question": "A researcher calculated the mitochondrial genome sizes $g$, in kilobase pairs (kbp), and the number of mitochondrial genes for 34 different species. The table summarizes these data.<br><br><table border='1' style='border-collapse: collapse; text-align: center; margin: 10px 0;'><tr><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Number of genes</th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>$g < 16$</th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>$16 \\le g < 18$</th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>$18 \\le g < 20$</th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>$g \\ge 20$</th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Total</th></tr><tr><td style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>36 or less</td><td style='padding: 4px 12px; border: 1px solid black;'>3</td><td style='padding: 4px 12px; border: 1px solid black;'>0</td><td style='padding: 4px 12px; border: 1px solid black;'>0</td><td style='padding: 4px 12px; border: 1px solid black;'>0</td><td style='padding: 4px 12px; border: 1px solid black;'>3</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>37</td><td style='padding: 4px 12px; border: 1px solid black;'>1</td><td style='padding: 4px 12px; border: 1px solid black;'>19</td><td style='padding: 4px 12px; border: 1px solid black;'>0</td><td style='padding: 4px 12px; border: 1px solid black;'>0</td><td style='padding: 4px 12px; border: 1px solid black;'>20</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>38 or more</td><td style='padding: 4px 12px; border: 1px solid black;'>2</td><td style='padding: 4px 12px; border: 1px solid black;'>0</td><td style='padding: 4px 12px; border: 1px solid black;'>4</td><td style='padding: 4px 12px; border: 1px solid black;'>0</td><td style='padding: 4px 12px; border: 1px solid black;'>6</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Total</td><td style='padding: 4px 12px; border: 1px solid black;'>6</td><td style='padding: 4px 12px; border: 1px solid black;'>19</td><td style='padding: 4px 12px; border: 1px solid black;'>4</td><td style='padding: 4px 12px; border: 1px solid black;'>0</td><td style='padding: 4px 12px; border: 1px solid black;'>29</td></tr></table>\n\nOne of these species is selected at random. What is the probability of selecting a species with a mitochondrial genome size greater than or equal to 18 kbp, given that it has 37 or more mitochondrial genes? (Express your answer as a decimal or fraction, not as a percent.)",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "2/13",
+      "explanation": "37 or more genes: $20 + 6 = 26$ species. Genome $\\ge 18$ and 37+ genes: $0 + 4 = 4$. P = $\\frac{4}{26} = \\frac{2}{13}$."
+    },
+    {
+      "id": 18,
+      "question": "For 100 neurons, the table summarizes the distribution of classification and cell body diameter:<br><br><table border='1' style='border-collapse: collapse; text-align: center; margin: 10px 0;'><tr><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Classification</th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Less than 20</th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>20 to 30</th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Greater than 30</th></tr><tr><td style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Sensory neuron</td><td style='padding: 4px 12px; border: 1px solid black;'>13</td><td style='padding: 4px 12px; border: 1px solid black;'>7</td><td style='padding: 4px 12px; border: 1px solid black;'>3</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Motor neuron</td><td style='padding: 4px 12px; border: 1px solid black;'>0</td><td style='padding: 4px 12px; border: 1px solid black;'>15</td><td style='padding: 4px 12px; border: 1px solid black;'>18</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Interneuron</td><td style='padding: 4px 12px; border: 1px solid black;'>10</td><td style='padding: 4px 12px; border: 1px solid black;'>34</td><td style='padding: 4px 12px; border: 1px solid black;'>0</td></tr></table>\n\nOne of these neurons will be selected at random. What is the probability of selecting a neuron with a cell body diameter that is less than or equal to 30 micrometers, given that it is not classified as a motor neuron? (Express your answer as a decimal or fraction, not as a percent.)",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "64/67",
+      "explanation": "Not motor: $23 + 44 = 67$ neurons. Diameter $\\le 30$ and not motor: $13 + 7 + 10 + 34 = 64$. P = $\\frac{64}{67}$."
+    },
+    {
+      "id": 19,
+      "question": "The given table shows the number of even and odd integers contained in list A and list B. No integer is contained in both lists.<br><br><table border='1' style='border-collapse: collapse; text-align: center; margin: 10px 0;'><tr><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'></th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Even integers</th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Odd integers</th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Total</th></tr><tr><td style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>List A</td><td style='padding: 4px 12px; border: 1px solid black;'>12</td><td style='padding: 4px 12px; border: 1px solid black;'>44</td><td style='padding: 4px 12px; border: 1px solid black;'>56</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>List B</td><td style='padding: 4px 12px; border: 1px solid black;'>40</td><td style='padding: 4px 12px; border: 1px solid black;'>4</td><td style='padding: 4px 12px; border: 1px solid black;'>44</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Total</td><td style='padding: 4px 12px; border: 1px solid black;'>52</td><td style='padding: 4px 12px; border: 1px solid black;'>48</td><td style='padding: 4px 12px; border: 1px solid black;'>100</td></tr></table>\n\nWhat fraction of even integers represented in the table are in list A?",
+      "options": [
+        "$\\frac{12}{52}$",
+        "$\\frac{12}{56}$",
+        "$\\frac{52}{100}$",
+        "$\\frac{52}{56}$"
+      ],
+      "answer": "A",
+      "explanation": "Even integers in list A: 12. Total even: 52. Fraction = $\\frac{12}{52} = \\frac{3}{13}$."
+    }
+  ]
+}

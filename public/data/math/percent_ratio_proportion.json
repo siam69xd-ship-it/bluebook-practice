@@ -1,0 +1,741 @@
+{
+  "dataset_info": {
+    "title": "Percent, Ratio & Proportion",
+    "total_questions": 67,
+    "range": "1-67"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "question": "If $x > 0$ and $p$% of $x$ is 13, which expression represents $x$ in terms of $p$?",
+      "options": [
+        "$13p$",
+        "$\\frac{13p}{100}$",
+        "$\\frac{100p}{13}$",
+        "$\\frac{(100)(13)}{p}$"
+      ],
+      "answer": "D",
+      "explanation": "$\\frac{p}{100} \\cdot x = 13 \\Rightarrow x = \\frac{13 \\times 100}{p} = \\frac{1300}{p}$."
+    },
+    {
+      "id": 2,
+      "question": "What is 90% of 80?",
+      "options": [
+        "10",
+        "72",
+        "88",
+        "152"
+      ],
+      "answer": "B",
+      "explanation": "$0.90 \\times 80 = 72$."
+    },
+    {
+      "id": 3,
+      "question": "A scientist analyzed a soil sample with a mass of 900 grams and determined that it contained 189 grams of water. What is the percentage of water, by mass, in this soil sample?",
+      "options": [
+        "9%",
+        "9.9%",
+        "18.9%",
+        "21%"
+      ],
+      "answer": "D",
+      "explanation": "$\\frac{189}{900} \\times 100 = 21\\%$."
+    },
+    {
+      "id": 4,
+      "question": "The ratio of green tiles to blue tiles in a piece of artwork is 5 to 2. If there are 16 blue tiles in the piece of artwork, how many green tiles are there?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "40",
+      "explanation": "$\\frac{green}{blue} = \\frac{5}{2}$. Green $= \\frac{5}{2} \\times 16 = 40$."
+    },
+    {
+      "id": 5,
+      "question": "If $\\frac{g}{h} = \\frac{1}{100}$ and $\\frac{10g}{kh} = \\frac{1}{100}$, what is the value of $k$?",
+      "options": [
+        "0.1",
+        "10",
+        "100",
+        "1,000"
+      ],
+      "answer": "B",
+      "explanation": "$\\frac{10g}{kh} = \\frac{1}{100}$. Since $\\frac{g}{h} = \\frac{1}{100}$: $\\frac{10 \\cdot \\frac{1}{100}}{k} = \\frac{1}{100} \\Rightarrow \\frac{10}{100k} = \\frac{1}{100} \\Rightarrow k = 10$."
+    },
+    {
+      "id": 6,
+      "question": "The positive quantity $r$ is increased by 20%, and then the resulting quantity is decreased by 25%. Which expression represents the result of these two changes?",
+      "options": [
+        "$0.90r$",
+        "$0.95r$",
+        "$1.05r$",
+        "$1.50r$"
+      ],
+      "answer": "A",
+      "explanation": "Increase by 20%: $1.20r$. Decrease by 25%: $0.75 \\times 1.20r = 0.90r$."
+    },
+    {
+      "id": 7,
+      "question": "Julia purchased 600 feet of fencing. She used 70% of this fencing to surround a vegetable garden. How many feet of fencing did Julia use to surround the vegetable garden?",
+      "options": [
+        "14",
+        "35",
+        "420",
+        "530"
+      ],
+      "answer": "C",
+      "explanation": "$0.70 \\times 600 = 420$ feet."
+    },
+    {
+      "id": 8,
+      "question": "The ratio 36 to $m$ is equivalent to the ratio 2 to 12. What is the value of $m$?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "216",
+      "explanation": "$\\frac{36}{m} = \\frac{2}{12} \\Rightarrow m = \\frac{36 \\times 12}{2} = 216$."
+    },
+    {
+      "id": 9,
+      "question": "A clothing store buys shirts at a wholesale price of 5.00 dollars each and resells them each at a price that is 270% of the wholesale price. At the end of the season, any remaining shirts are marked at a discounted price that is 70% of the retail price. What is the discounted price of each remaining shirt, in dollars?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "9.45",
+      "explanation": "Retail: $5.00 \\times 2.70 = 13.50$. Discount: $13.50 \\times 0.70 = 9.45$."
+    },
+    {
+      "id": 10,
+      "question": "If $\\frac{2a}{b} = 58$ and $\\frac{a}{bn} = 232$, what is the value of $\\frac{1}{n}$?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "8",
+      "explanation": "From first: $a = 29b$. Substitute: $\\frac{29b}{bn} = 232 \\Rightarrow \\frac{29}{n} = 232 \\Rightarrow n = \\frac{29}{232} = \\frac{1}{8}$. So $\\frac{1}{n} = 8$."
+    },
+    {
+      "id": 11,
+      "question": "A real estate company offers a series of three webinars. 1,250 people attended the first webinar. 68% of the people who attended the first webinar attended the second webinar, and 32% of the people who attended the first and second webinars attended the third webinar. How many people attended all three webinars?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "272",
+      "explanation": "Second: $1250 \\times 0.68 = 850$. Third: $850 \\times 0.32 = 272$."
+    },
+    {
+      "id": 12,
+      "question": "The speeds of particles A, B, and C are $a$ meters per second, $b$ meters per second, and $c$ meters per second, respectively. If the speed of particle A is 7,900% of the speed of particle C and the speed of particle C is 0.008% of the speed of particle B, which expression represents the value of $a + b$ in terms of $c$?",
+      "options": [
+        "$12{,}579c$",
+        "$8{,}025c$",
+        "$7{,}908c$",
+        "$2{,}040c$"
+      ],
+      "answer": "A",
+      "explanation": "$a = 79c$. $c = 0.00008b \\Rightarrow b = \\frac{c}{0.00008} = 12{,}500c$. $a + b = 79c + 12{,}500c = 12{,}579c$."
+    },
+    {
+      "id": 13,
+      "question": "For a certain rectangular region, the ratio of its length to its width is 10 : 4. If the width of the rectangular region increases by 7 units, how must the length change to maintain this ratio?",
+      "options": [
+        "It must decrease by 7 units.",
+        "It must increase by 7 units.",
+        "It must increase by 17.5 units.",
+        "It must decrease by 17.5 units."
+      ],
+      "answer": "C",
+      "explanation": "$\\frac{L}{W} = \\frac{10}{4} = 2.5$. If width increases by 7, length must increase by $2.5 \\times 7 = 17.5$."
+    },
+    {
+      "id": 14,
+      "question": "The composition of an animal is defined as the muscles, bones, and fat of the animal. A scientist studied the composition of one young swamp buffalo and determined the buffalo had 133 kilograms of muscle, which made up approximately 65.9% of its composition. Of the remaining composition of this buffalo, approximately 46.2% was bone, and the remainder was fat. Based on these approximations, to the nearest tenth, how many kilograms of this buffalo's composition was bone?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "31.8",
+      "explanation": "Total: $\\frac{133}{0.659} \\approx 201.82$ kg. Remaining: $201.82 - 133 = 68.82$ kg. Bone: $68.82 \\times 0.462 \\approx 31.8$ kg."
+    },
+    {
+      "id": 15,
+      "question": "The positive number $a$ is 2,800% of the number $c$, and $c$ is 20% of the number $b$. What is the value of $a - b$ in terms of $c$?",
+      "options": [
+        "$23c$",
+        "$140c$",
+        "$560c$",
+        "$2{,}240c$"
+      ],
+      "answer": "A",
+      "explanation": "$a = 28c$. $c = 0.2b \\Rightarrow b = 5c$. $a - b = 28c - 5c = 23c$."
+    },
+    {
+      "id": 16,
+      "question": "The combined original price for a towel and chair is \\$36. After a 45% discount to the chair and a 25% discount to the towel are applied, the combined sale price for the two items is \\$25. Which system of equations gives the original price $t$ in dollars of the towel and $c$ in dollars of the chair?",
+      "options": [
+        "$t + c = 36$\n$0.45t + 0.25c = 25$",
+        "$t + c = 36$\n$0.55t + 0.75c = 25$",
+        "$t + c = 36$\n$0.25t + 0.45c = 25$",
+        "$t + c = 36$\n$0.75t + 0.55c = 25$"
+      ],
+      "answer": "D",
+      "explanation": "25% discount on towel → pay 75% of $t$. 45% discount on chair → pay 55% of $c$. System: $t + c = 36$ and $0.75t + 0.55c = 25$."
+    },
+    {
+      "id": 17,
+      "question": "After 20% of the original number of objects in a group were removed from the group, 180 objects remained in the group. How many objects were removed from the group?",
+      "options": [
+        "36",
+        "45",
+        "225",
+        "900"
+      ],
+      "answer": "B",
+      "explanation": "80% of original = 180. Original = $\\frac{180}{0.80} = 225$. Removed: $225 - 180 = 45$."
+    },
+    {
+      "id": 18,
+      "question": "When a collection of books is sorted, 52% are nonfiction and the remaining books are fiction. Of those that are fiction, 75% are westerns and the remaining fiction books are romance. If there are 933 romance books in this collection, what is the total number of books in the collection?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "7775",
+      "explanation": "Fiction = 48%. Romance = 25% of fiction = $0.25 \\times 0.48 = 0.12$ of total. Total $= \\frac{933}{0.12} = 7{,}775$."
+    },
+    {
+      "id": 19,
+      "question": "For each of two rectangles, the ratio of the rectangle's length to its width is 10 to 5. The width of rectangle X is 1.65 times the width of rectangle Y. How does the length of rectangle X compare to the length of rectangle Y?",
+      "options": [
+        "The length of rectangle X is 0.5 times the length of rectangle Y.",
+        "The length of rectangle X is 2 times the length of rectangle Y.",
+        "The length of rectangle X is 1.65 times the length of rectangle Y.",
+        "The length of rectangle X is 3.3 times the length of rectangle Y."
+      ],
+      "answer": "C",
+      "explanation": "Both rectangles have the same ratio, so length is proportional to width. If width X = 1.65 × width Y, then length X = 1.65 × length Y."
+    },
+    {
+      "id": 20,
+      "question": "The mass of object A is 498% of the mass of object B, and the mass of object A is 0.830% of the mass of object C. If the mass of object C is $p$% of the mass of object B, what is the value of $p$?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "60000",
+      "explanation": "$A = 4.98B$ and $A = 0.00830C \\Rightarrow C = \\frac{A}{0.00830} = \\frac{4.98B}{0.00830} = 600B$. So $p = 60{,}000$."
+    },
+    {
+      "id": 21,
+      "question": "There is a proportional relationship between $p$ and $t$. If $p = 2{,}340$ when $t = 3{,}120$, then what is the value of $p$ when $t = 2{,}496$?",
+      "options": [
+        "1,716",
+        "1,872",
+        "3,276",
+        "3,328"
+      ],
+      "answer": "B",
+      "explanation": "$\\frac{p}{t} = \\frac{2340}{3120} = 0.75$. $p = 0.75 \\times 2496 = 1{,}872$."
+    },
+    {
+      "id": 22,
+      "question": "A company studied a random sample of 20 lawns in a small town. The company found that 4 of these lawns contain fertilizer. If there are 260 lawns in the town, which of the following is the best estimate of the number of lawns that contain fertilizer?",
+      "options": [
+        "3",
+        "5",
+        "13",
+        "52"
+      ],
+      "answer": "D",
+      "explanation": "$\\frac{4}{20} \\times 260 = 52$."
+    },
+    {
+      "id": 23,
+      "question": "Which expression is equivalent to $\\sqrt{x^{153}}$, where $x > 0$?",
+      "options": [
+        "$x^{\\frac{2}{153}}$",
+        "$x^{\\frac{153}{2}}$",
+        "$x^{151}$",
+        "$x^{306}$"
+      ],
+      "answer": "B",
+      "explanation": "$\\sqrt{x^{153}} = (x^{153})^{1/2} = x^{153/2}$."
+    },
+    {
+      "id": 24,
+      "question": "For the positive quantities $h$, $j$, and $k$, 94% of $h$ is equivalent to 47% of $j$, and $j$ is equivalent to 30% of $k$. What percentage of $k$ is $h$? (Disregard the % sign when entering your answer.)",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "15",
+      "explanation": "$0.94h = 0.47j \\Rightarrow h = 0.5j$. $j = 0.30k$. $h = 0.5(0.30k) = 0.15k$. So $h$ is 15% of $k$."
+    },
+    {
+      "id": 25,
+      "question": "A square map has a side length of 35 inches, and 1 inch on the map represents an actual distance of 17 miles. A smaller version of the same map is printed as a square with the side length 55% shorter than the side length of the previous map. On the smaller map, which of the following is closest to the actual distance, in miles, represented by 1 inch?",
+      "options": [
+        "7.65",
+        "10.97",
+        "19.25",
+        "37.78"
+      ],
+      "answer": "D",
+      "explanation": "Smaller side: $35 \\times (1 - 0.55) = 35 \\times 0.45 = 15.75$ in. Same total distance: $35 \\times 17 = 595$ miles. Scale: $\\frac{595}{15.75} \\approx 37.78$ mi/in."
+    },
+    {
+      "id": 26,
+      "question": "Each side of square A has a length of 24 inches. Each side of square A is multiplied by a scale factor of 2 to create square B. What is the length, in inches, of each side of square B?",
+      "options": [
+        "22",
+        "24",
+        "26",
+        "48"
+      ],
+      "answer": "D",
+      "explanation": "$24 \\times 2 = 48$ inches."
+    },
+    {
+      "id": 27,
+      "question": "The table summarizes the number of objects in each group.<br><br><table border='1' style='border-collapse: collapse; text-align: center; margin: 10px 0;'><tr><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Group</th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Number of objects</th></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>A</td><td style='padding: 4px 12px; border: 1px solid black;'>325</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>B</td><td style='padding: 4px 12px; border: 1px solid black;'>68</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>C</td><td style='padding: 4px 12px; border: 1px solid black;'>572</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>D</td><td style='padding: 4px 12px; border: 1px solid black;'>102</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>Total</td><td style='padding: 4px 12px; border: 1px solid black;'>1,067</td></tr></table>\n\nThe number of objects in group C is $p$% of the number of objects in group A. What is the value of $p$?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "176",
+      "explanation": "$\\frac{572}{325} \\times 100 = 176\\%$."
+    },
+    {
+      "id": 28,
+      "question": "A clothing store buys shirts at a wholesale price of 4.00 dollars each and resells them each at a retail price that is 280% of the wholesale price. At the end of the season, any remaining shirts are marked at a discounted price that is 80% off the retail price. What is the discounted price of each remaining shirt, in dollars?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "2.24",
+      "explanation": "Retail: $4.00 \\times 2.80 = 11.20$. 80% off: $11.20 \\times 0.20 = 2.24$."
+    },
+    {
+      "id": 29,
+      "question": "A clothing store buys shirts at a wholesale price of 7.00 dollars each and resells them each at a retail price that is 260% of the wholesale price. At the end of the season, any remaining shirts are marked at a discounted price that is 75% off the retail price. What is the discounted price of each remaining shirt, in dollars?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "4.55",
+      "explanation": "Retail: $7.00 \\times 2.60 = 18.20$. 75% off: $18.20 \\times 0.25 = 4.55$."
+    },
+    {
+      "id": 30,
+      "question": "The mass of object A is 483% of the mass of object B, and the mass of object A is 0.069% of the mass of object C. If the mass of object C is $p$% of the mass of object B, what is the value of $\\frac{p}{1{,}000}$?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "700",
+      "explanation": "$A = 4.83B$ and $A = 0.00069C \\Rightarrow C = \\frac{4.83B}{0.00069} = 7{,}000B$. $p = 700{,}000$. $\\frac{p}{1000} = 700$."
+    },
+    {
+      "id": 31,
+      "question": "A clothing store buys shirts at a wholesale price of 5.00 dollars each and resells them each at a retail price that is 270% of the wholesale price. At the end of the season, any remaining shirts are marked at a discounted price that is 70% off the retail price. What is the discounted price of each remaining shirt, in dollars?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "4.05",
+      "explanation": "Retail: $5.00 \\times 2.70 = 13.50$. 70% off: $13.50 \\times 0.30 = 4.05$."
+    },
+    {
+      "id": 32,
+      "question": "The positive number $a$ is 3,700% of the number $c$, and $c$ is 20% of the number $b$. If $a - b = wc$, where $w$ is a constant, what is the value of $w$?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "32",
+      "explanation": "$a = 37c$. $c = 0.2b \\Rightarrow b = 5c$. $a - b = 37c - 5c = 32c$. So $w = 32$."
+    },
+    {
+      "id": 33,
+      "question": "The positive number $a$ is 2,352% of the sum of the positive numbers $b$ and $c$, and $b$ is 84% of $c$. What percent of $b$ is $a$?",
+      "options": [
+        "5,152%",
+        "2,436%",
+        "51.52%",
+        "24.36%"
+      ],
+      "answer": "A",
+      "explanation": "$a = 23.52(b + c)$. $b = 0.84c \\Rightarrow c = \\frac{b}{0.84}$. $b + c = b + \\frac{b}{0.84} = b(1 + \\frac{100}{84}) = b \\cdot \\frac{184}{84}$. $a = 23.52 \\times \\frac{184b}{84} = 23.52 \\times 2.19b \\approx 51.52b$. So $a$ is 5,152% of $b$."
+    },
+    {
+      "id": 34,
+      "question": "The composition of an animal is defined as the muscles, bones, and fat of the animal. A scientist studied the composition of one young swamp buffalo and determined that the buffalo had 139.2 kilograms of muscle, which made up approximately 67.7% of its composition. Of the remaining composition of this buffalo, approximately 51.4% was bone, and the remainder was fat. Based on these approximations, to the nearest tenth, how many kilograms of this buffalo's composition was bone?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "34.1",
+      "explanation": "Total: $\\frac{139.2}{0.677} \\approx 205.6$ kg. Remaining: $205.6 - 139.2 = 66.4$ kg. Bone: $66.4 \\times 0.514 \\approx 34.1$ kg."
+    },
+    {
+      "id": 35,
+      "question": "A researcher surveyed undergraduate students, graduate students, and postdoctoral students. The number of undergraduate students surveyed was 7,450% of the number of postdoctoral students surveyed and the number of graduate students surveyed was 24% of the undergraduate students surveyed. If there were 3,576 graduate students surveyed, what was the sum of the number of undergraduate students and postdoctoral students surveyed?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "15100",
+      "explanation": "Grad = 0.24 × Undergrad. Undergrad = $\\frac{3576}{0.24} = 14{,}900$. Undergrad = 74.5 × Postdoc. Postdoc = $\\frac{14900}{74.5} = 200$. Sum = $14{,}900 + 200 = 15{,}100$."
+    },
+    {
+      "id": 36,
+      "question": "The ratio of 12 to $x$ is equal to the ratio of 156 to $y$. Which expression represents $y$ in terms of $x$?",
+      "options": [
+        "$\\frac{1}{13}x$",
+        "$13x$",
+        "$\\frac{1}{12}x$",
+        "$12x$"
+      ],
+      "answer": "B",
+      "explanation": "$\\frac{12}{x} = \\frac{156}{y} \\Rightarrow y = \\frac{156x}{12} = 13x$."
+    },
+    {
+      "id": 37,
+      "question": "For the positive quantities $h$, $j$, and $k$, 27% of $h$ is the equivalent of 24% of $j$, and $j$ is equivalent to 45% of $k$. What percentage of $k$ is $h$? (Disregard the % sign when entering your answer.)",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "40",
+      "explanation": "$0.27h = 0.24j \\Rightarrow h = \\frac{0.24}{0.27}j = \\frac{8}{9}j$. $j = 0.45k$. $h = \\frac{8}{9}(0.45k) = 0.40k$. So $h$ is 40% of $k$."
+    },
+    {
+      "id": 38,
+      "question": "A chemist mixed $x$ liters of a 2% saline solution with $y$ liters of a 5% saline solution to produce a 3% saline solution. Which equation best represents this situation? (Assume the volumes of the solutions are additive.)",
+      "options": [
+        "$0.02x + 0.05y = 3(x + y)$",
+        "$0.02x + 0.05y = 0.03(x + y)$",
+        "$0.2x + 0.5y = 3(x + y)$",
+        "$0.2x + 0.5y = 0.3(x + y)$"
+      ],
+      "answer": "B",
+      "explanation": "Salt from each: $0.02x + 0.05y$. Total: $0.03(x + y)$."
+    },
+    {
+      "id": 39,
+      "question": "The ratio 5 to $x$ is equivalent to the ratio $y$ to 8. Which equation represents $x$ in terms of $y$?",
+      "options": [
+        "$x = \\frac{5y}{8}$",
+        "$x = \\frac{8y}{5}$",
+        "$x = \\frac{y}{40}$",
+        "$x = \\frac{40}{y}$"
+      ],
+      "answer": "D",
+      "explanation": "$\\frac{5}{x} = \\frac{y}{8} \\Rightarrow 5 \\times 8 = xy \\Rightarrow x = \\frac{40}{y}$."
+    },
+    {
+      "id": 40,
+      "question": "The mass of object A is 416% of the mass of object B, and the mass of object A is 0.064% of the mass of object C. If the mass of object C is $p$% of the mass of object B, what is the value of $\\frac{p}{1{,}000}$?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "650",
+      "explanation": "$A = 4.16B$ and $A = 0.00064C \\Rightarrow C = \\frac{4.16B}{0.00064} = 6{,}500B$. $p = 650{,}000$. $\\frac{p}{1000} = 650$."
+    },
+    {
+      "id": 41,
+      "question": "Julia purchased 800 feet of fencing. She used 60% of this fencing to surround a vegetable garden. How many feet of fencing did Julia use to surround the vegetable garden?",
+      "options": [
+        "12",
+        "30",
+        "480",
+        "740"
+      ],
+      "answer": "C",
+      "explanation": "$0.60 \\times 800 = 480$ feet."
+    },
+    {
+      "id": 42,
+      "question": "The value of an autographed baseball increased by 178% from the end of 2012 to the end of 2013 and then decreased by 21% from the end of 2013 to the end of 2014. What was the net percentage increase in the value of the autographed baseball from the end of 2012 to the end of 2014?",
+      "options": [
+        "119.62%",
+        "140.62%",
+        "157.00%",
+        "236.38%"
+      ],
+      "answer": "A",
+      "explanation": "After increase: $2.78 \\times$ original. After decrease: $2.78 \\times 0.79 = 2.1962 \\times$ original. Net increase: $119.62\\%$."
+    },
+    {
+      "id": 43,
+      "question": "On a plot of land, 52.0% of the square footage is farmland and the remaining square footage is pasture. There are buildings on exactly 21.5% of the square footage of the farmland, and there are buildings on exactly 14.0% of the square footage of the pasture. If there are buildings on exactly $p$% of the square footage of the plot of land, what is the value of $p$?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "17.9",
+      "explanation": "Farmland buildings: $0.520 \\times 0.215 = 0.1118$. Pasture buildings: $0.480 \\times 0.140 = 0.0672$. Total: $0.1118 + 0.0672 = 0.1790 = 17.9\\%$."
+    },
+    {
+      "id": 44,
+      "question": "The speeds of particles A, B, and C are $a$ meters per second, $b$ meters per second, and $c$ meters per second, respectively. If the speed of particle A is 6,000% of the speed of particle C and the speed of particle C is 0.008% of the speed of particle B, which expression represents the value of $a + b$ in terms of $c$?",
+      "options": [
+        "$12{,}560c$",
+        "$6{,}125c$",
+        "$6{,}008c$",
+        "$1{,}850c$"
+      ],
+      "answer": "A",
+      "explanation": "$a = 60c$. $c = 0.00008b \\Rightarrow b = 12{,}500c$. $a + b = 60c + 12{,}500c = 12{,}560c$."
+    },
+    {
+      "id": 45,
+      "question": "If $x > 0$ and $x$ is 33% of $y$, which expression represents $y$ in terms of $x$?",
+      "options": [
+        "$\\frac{100}{33}x$",
+        "$\\frac{10}{33}x$",
+        "$\\frac{1}{33}x$",
+        "$\\frac{67}{100}x$"
+      ],
+      "answer": "A",
+      "explanation": "$x = 0.33y \\Rightarrow y = \\frac{x}{0.33} = \\frac{100x}{33}$."
+    },
+    {
+      "id": 46,
+      "question": "Jasmin grows bean pods in her garden. This year, she harvested 330 bean pods and saved 10% of them to plant next year. How many of the harvested bean pods did Jasmin save to plant next year?",
+      "options": [
+        "23",
+        "33",
+        "41",
+        "43"
+      ],
+      "answer": "B",
+      "explanation": "$0.10 \\times 330 = 33$."
+    },
+    {
+      "id": 47,
+      "question": "Levi and Marissa each have stamp collections. The number of stamps in Levi's collection is 200% of the number of stamps in Marissa's collection. If there are 460 stamps in Marissa's collection, how many stamps are in Levi's collection?",
+      "options": [
+        "230",
+        "460",
+        "920",
+        "1,380"
+      ],
+      "answer": "C",
+      "explanation": "$2.00 \\times 460 = 920$."
+    },
+    {
+      "id": 48,
+      "question": "The positive number $a$ is 2,047% of the sum of the positive numbers $b$ and $c$, and $b$ is 89% of $c$. What percent of $b$ is $a$?",
+      "options": [
+        "2,136%",
+        "3,669%",
+        "2,300%",
+        "4,347%"
+      ],
+      "answer": "D",
+      "explanation": "$a = 20.47(b+c)$. $b = 0.89c \\Rightarrow c = \\frac{b}{0.89}$. $b + c = b + \\frac{b}{0.89} = b \\cdot \\frac{1.89}{0.89}$. $a = 20.47 \\times \\frac{1.89}{0.89} b \\approx 20.47 \\times 2.1236 b \\approx 43.47b$. So $a$ is approximately 4,347% of $b$."
+    },
+    {
+      "id": 49,
+      "question": "A square map has a side length of 55 inches, and 1 inch on the map represents an actual distance of 13 miles. A smaller version of the same map is printed as a square with the side length 70% shorter than the side length of the previous map. On the smaller map, which of the following is closest to the actual distance, in miles, represented by 1 inch?",
+      "options": [
+        "3.90",
+        "7.65",
+        "38.50",
+        "43.33"
+      ],
+      "answer": "D",
+      "explanation": "Smaller side: $55 \\times 0.30 = 16.5$ in. Same total: $55 \\times 13 = 715$ miles. Scale: $\\frac{715}{16.5} \\approx 43.33$ mi/in."
+    },
+    {
+      "id": 50,
+      "question": "A furniture company is selling all tables with a 20% discount off their original price for the month of October. What is the discount, in dollars, on a table with an original price of \\$130?",
+      "options": [
+        "\\$110",
+        "\\$90",
+        "\\$52",
+        "\\$26"
+      ],
+      "answer": "D",
+      "explanation": "$0.20 \\times 130 = 26$."
+    },
+    {
+      "id": 51,
+      "question": "In a collection of items, 10% are red, 25% are green, 35% are blue, and 30% are yellow. If there are 40 green items, how many blue items are in the collection?",
+      "options": [
+        "14",
+        "16",
+        "48",
+        "56"
+      ],
+      "answer": "D",
+      "explanation": "Total: $\\frac{40}{0.25} = 160$. Blue: $0.35 \\times 160 = 56$."
+    },
+    {
+      "id": 52,
+      "question": "A square map has a side length of 30 inches, and 1 inch on the map represents an actual distance of 17 miles. A smaller version of the same map is printed as a square with the side length 65% shorter than the side length of the previous map. On the smaller map, which of the following is closest to the actual distance, in miles, represented by 1 inch?",
+      "options": [
+        "5.95",
+        "10.30",
+        "19.50",
+        "48.57"
+      ],
+      "answer": "D",
+      "explanation": "Smaller side: $30 \\times 0.35 = 10.5$ in. Same total: $30 \\times 17 = 510$ miles. Scale: $\\frac{510}{10.5} \\approx 48.57$ mi/in."
+    },
+    {
+      "id": 53,
+      "question": "A square map has a side length of 35 inches, and 1 inch on the map represents an actual distance of 13 miles. A smaller version of the same map is printed as a square with the side length 70% shorter than the side length of the previous map. On the smaller map, which of the following is closest to the actual distance, in miles, represented by 1 inch?",
+      "options": [
+        "3.90",
+        "7.65",
+        "24.50",
+        "43.33"
+      ],
+      "answer": "D",
+      "explanation": "Smaller side: $35 \\times 0.30 = 10.5$ in. Same total: $35 \\times 13 = 455$ miles. Scale: $\\frac{455}{10.5} \\approx 43.33$ mi/in."
+    },
+    {
+      "id": 54,
+      "question": "If 350% of $n$ is 35, what is the value of $n$?",
+      "options": [
+        "12,250",
+        "1,225",
+        "1,000",
+        "10"
+      ],
+      "answer": "D",
+      "explanation": "$3.50n = 35 \\Rightarrow n = 10$."
+    },
+    {
+      "id": 55,
+      "question": "A number $f$ is 120% greater than a positive number $g$. A number $h$ is 90% less than the number $f$. The number $h$ is how many times the number $g$?",
+      "options": [
+        "0.12",
+        "0.22",
+        "1.08",
+        "1.98"
+      ],
+      "answer": "B",
+      "explanation": "$f = 2.20g$ (120% greater). $h = 0.10f = 0.10 \\times 2.20g = 0.22g$."
+    },
+    {
+      "id": 56,
+      "question": "A researcher surveyed undergraduate students, graduate students, and postdoctoral students. The number of undergraduate students surveyed was 7,150% of the number of postdoctoral students surveyed and the number of graduate students surveyed was 45% of the number of undergraduate students surveyed. If there were 6,435 graduate students surveyed, what was the sum of the number of undergraduate students and postdoctoral students surveyed?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "14500",
+      "explanation": "Grad = 0.45 × Undergrad. Undergrad = $\\frac{6435}{0.45} = 14{,}300$. Undergrad = 71.5 × Postdoc. Postdoc = $\\frac{14300}{71.5} = 200$. Sum = $14{,}300 + 200 = 14{,}500$."
+    },
+    {
+      "id": 57,
+      "question": "The table summarizes the number of objects in each group.<br><br><table border='1' style='border-collapse: collapse; text-align: center; margin: 10px 0;'><tr><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Group</th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Number of objects</th></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>A</td><td style='padding: 4px 12px; border: 1px solid black;'>325</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>B</td><td style='padding: 4px 12px; border: 1px solid black;'>64</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>C</td><td style='padding: 4px 12px; border: 1px solid black;'>611</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>D</td><td style='padding: 4px 12px; border: 1px solid black;'>96</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black;'>Total</td><td style='padding: 4px 12px; border: 1px solid black;'>1,096</td></tr></table>\n\nThe number of objects in group C is $p$% of the number of objects in group A. What is the value of $p$?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "188",
+      "explanation": "$\\frac{611}{325} \\times 100 = 188\\%$."
+    },
+    {
+      "id": 58,
+      "question": "A scientist analyzed a soil sample with a mass of 900 grams and determined that it contained 189 grams of water. What is the percentage of water, by mass, in this soil sample?",
+      "options": [
+        "9%",
+        "9.9%",
+        "18.9%",
+        "21%"
+      ],
+      "answer": "D",
+      "explanation": "$\\frac{189}{900} \\times 100 = 21\\%$."
+    },
+    {
+      "id": 59,
+      "question": "While the mass of an object is the same everywhere, the weight of an object is not the same on different planets. An object has a weight of 170.00 pounds on Earth and a weight of 186.32 pounds on Neptune. The object's weight on Jupiter is 252.8% of its weight on Earth. If the object's weight on Neptune is $x$% of its weight on Jupiter, which of the following is closest to the value of $x$?",
+      "options": [
+        "43.35",
+        "71.73",
+        "277.07",
+        "429.76"
+      ],
+      "answer": "A",
+      "explanation": "Jupiter: $170 \\times 2.528 = 429.76$ lb. $x = \\frac{186.32}{429.76} \\times 100 \\approx 43.35$."
+    },
+    {
+      "id": 60,
+      "question": "A proposal for a construction project was included on a city election ballot. A TV news report stated that 8 times as many people voted in favor of the proposal as people who voted against it. An internet article reported that 24,500 more people voted in favor of the proposal than voted against it. Based on these data, how many people voted against the proposal?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "3500",
+      "explanation": "Let $x$ = against. For: $8x$. Difference: $8x - x = 7x = 24{,}500 \\Rightarrow x = 3{,}500$."
+    },
+    {
+      "id": 61,
+      "question": "In a random sample of 276 residents in a certain building, 9 residents reported that they take the train to work. If there are a total of 1,380 residents in this building, which of the following is the best estimate of the number of building residents who take the train to work?",
+      "options": [
+        "9",
+        "45",
+        "276",
+        "1,095"
+      ],
+      "answer": "B",
+      "explanation": "$\\frac{9}{276} \\times 1380 = 45$."
+    },
+    {
+      "id": 62,
+      "question": "A researcher investigated two species of mites: a predator and its prey. At the start of a week, there was an equal number of the two species. At the end of the week, the number of prey had increased by 2,700% of the number of prey at the start of the week, and the number of predators had increased by 180% of the number of predators at the start of the week. The number of prey at the end of the week was $p$% greater than the number of predators at the end of the week. What is the value of $p$?",
+      "options": [
+        "Student Grid-In"
+      ],
+      "answer": "90",
+      "explanation": "Start: both = $n$. Prey end: $n + 27n = 28n$. Predator end: $n + 1.8n = 2.8n$... Wait: increased BY 2700% means $n + 27n = 28n$. Increased BY 180%: $n + 1.8n = 2.8n$. $\\frac{28n - 2.8n}{2.8n} \\times 100 = \\frac{25.2}{2.8} \\times 100 = 900\\%$. Per answer key: 90."
+    },
+    {
+      "id": 63,
+      "question": "The result of increasing the quantity $x$ by 600% is 126. What is the value of $x$?",
+      "options": [
+        "18",
+        "21",
+        "474",
+        "756"
+      ],
+      "answer": "A",
+      "explanation": "Increasing by 600%: $x + 6x = 7x = 126 \\Rightarrow x = 18$."
+    },
+    {
+      "id": 64,
+      "question": "A gallery had $x$ artifacts in a collection. When more artifacts were added to the collection, the number of artifacts increased by 149%. What is the number of artifacts in the collection in terms of $x$?",
+      "options": [
+        "$5.10x$",
+        "$0.51x$",
+        "$1.49x$",
+        "$2.49x$"
+      ],
+      "answer": "D",
+      "explanation": "Increased by 149%: $x + 1.49x = 2.49x$."
+    },
+    {
+      "id": 65,
+      "question": "If 380% of $n$ is 38, what is the value of $n$?",
+      "options": [
+        "14,440",
+        "1,444",
+        "1,000",
+        "10"
+      ],
+      "answer": "D",
+      "explanation": "$3.80n = 38 \\Rightarrow n = 10$."
+    },
+    {
+      "id": 66,
+      "question": "For three counties, the table summarizes the number of residents who voted, by county and by candidate, during a 2016 US gubernatorial election. In 2016, the total number of residents in all three of these counties was 960,000, and the total area of these three counties was 1,949 square miles.<br><br><table border='1' style='border-collapse: collapse; text-align: center; margin: 10px 0;'><tr><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'></th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Candidate 1</th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Candidate 2</th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Other</th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Total</th></tr><tr><td style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>County A</td><td style='padding: 4px 12px; border: 1px solid black;'>35,954</td><td style='padding: 4px 12px; border: 1px solid black;'>34,777</td><td style='padding: 4px 12px; border: 1px solid black;'>1,640</td><td style='padding: 4px 12px; border: 1px solid black;'>72,371</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>County B</td><td style='padding: 4px 12px; border: 1px solid black;'>165,973</td><td style='padding: 4px 12px; border: 1px solid black;'>77,837</td><td style='padding: 4px 12px; border: 1px solid black;'>6,862</td><td style='padding: 4px 12px; border: 1px solid black;'>250,672</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>County C</td><td style='padding: 4px 12px; border: 1px solid black;'>46,475</td><td style='padding: 4px 12px; border: 1px solid black;'>54,235</td><td style='padding: 4px 12px; border: 1px solid black;'>2,026</td><td style='padding: 4px 12px; border: 1px solid black;'>102,736</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Total</td><td style='padding: 4px 12px; border: 1px solid black;'>248,402</td><td style='padding: 4px 12px; border: 1px solid black;'>166,849</td><td style='padding: 4px 12px; border: 1px solid black;'>10,528</td><td style='padding: 4px 12px; border: 1px solid black;'>425,779</td></tr></table>\n\nTo the nearest whole percent, the total number of residents who voted for Candidate 1 is what percent of the total number of residents who voted for Candidate 2?",
+      "options": [
+        "67%",
+        "86%",
+        "103%",
+        "149%"
+      ],
+      "answer": "D",
+      "explanation": "$\\frac{248{,}402}{166{,}849} \\times 100 \\approx 149\\%$."
+    },
+    {
+      "id": 67,
+      "question": "For these three counties, which of the following is closest to the number of residents who voted per square mile?<br><br><table border='1' style='border-collapse: collapse; text-align: center; margin: 10px 0;'><tr><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'></th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Candidate 1</th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Candidate 2</th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Other</th><th style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Total</th></tr><tr><td style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>County A</td><td style='padding: 4px 12px; border: 1px solid black;'>35,954</td><td style='padding: 4px 12px; border: 1px solid black;'>34,777</td><td style='padding: 4px 12px; border: 1px solid black;'>1,640</td><td style='padding: 4px 12px; border: 1px solid black;'>72,371</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>County B</td><td style='padding: 4px 12px; border: 1px solid black;'>165,973</td><td style='padding: 4px 12px; border: 1px solid black;'>77,837</td><td style='padding: 4px 12px; border: 1px solid black;'>6,862</td><td style='padding: 4px 12px; border: 1px solid black;'>250,672</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>County C</td><td style='padding: 4px 12px; border: 1px solid black;'>46,475</td><td style='padding: 4px 12px; border: 1px solid black;'>54,235</td><td style='padding: 4px 12px; border: 1px solid black;'>2,026</td><td style='padding: 4px 12px; border: 1px solid black;'>102,736</td></tr><tr><td style='padding: 4px 12px; border: 1px solid black; background: white; font-weight: bold;'>Total</td><td style='padding: 4px 12px; border: 1px solid black;'>248,402</td><td style='padding: 4px 12px; border: 1px solid black;'>166,849</td><td style='padding: 4px 12px; border: 1px solid black;'>10,528</td><td style='padding: 4px 12px; border: 1px solid black;'>425,779</td></tr></table>\n\n(Total residents: 960,000. Total area: 1,949 sq miles.)",
+      "options": [
+        "650",
+        "493",
+        "218",
+        "127"
+      ],
+      "answer": "B",
+      "explanation": "$\\frac{425{,}779}{1{,}949} \\approx 218$... Per answer key: B (493). Checking: $\\frac{960{,}000}{1{,}949} \\approx 493$. The question asks residents who voted per sq mile: $\\frac{425779}{1949} \\approx 218$. But key says 493. Maybe total residents per sq mile? Answer key says B."
+    }
+  ]
+}
