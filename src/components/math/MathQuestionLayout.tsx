@@ -276,6 +276,20 @@ export default function MathQuestionLayout({
                   content={currentQuestion.questionPrompt || ''} 
                   className="text-[17px] leading-relaxed text-gray-900"
                 />
+                
+                {/* Question Image Support */}
+                {(currentQuestion as any).image && (
+                  <div className="mt-6 flex justify-center">
+                    <img 
+                      src={(currentQuestion as any).image} 
+                      alt="Question Diagram" 
+                      className="max-w-full h-auto border border-gray-200 rounded-lg shadow-sm"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).style.display = 'none';
+                      }}
+                    />
+                  </div>
+                )}
               </div>
 
               {/* Grid-In Input OR Multiple Choice Options */}

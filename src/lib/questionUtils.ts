@@ -675,6 +675,11 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
           q.solution?.explanation || '',
           difficulty,
         ));
+        
+        // Add image if present in the last added question
+        if (q.image) {
+          (questions[questions.length - 1] as any).image = q.image;
+        }
       });
     };
     

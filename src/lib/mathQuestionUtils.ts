@@ -126,6 +126,7 @@ export async function loadAllMathQuestions(): Promise<MathQuestion[]> {
           topic,
           isGridIn,
           options: isGridIn ? [] : q.options,
+          image: q.image || null,
         };
       });
     } catch (error) {
