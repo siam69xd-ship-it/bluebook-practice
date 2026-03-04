@@ -1,24 +1,12 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
-import {
-  ChevronDown, 
-  ChevronRight, 
-  Play, 
-  ArrowLeft,
-  Sparkles,
-  Zap,
-  Target,
-  BookOpen,
-  Filter,
-  Check,
-  Loader2
-} from 'lucide-react';
+import { motion } from 'framer-motion';
+import { ChevronDown, ChevronRight, ArrowRight, ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { LoadingProgressBar } from '@/components/LoadingProgressBar';
 import { PracticeSkeleton } from '@/components/LoadingSkeleton';
 import { cn } from '@/lib/utils';
 import { Question, FilterOption, getAllQuestionsAsync } from '@/lib/questionUtils';
-import { Difficulty } from '@/lib/difficultyData';
 
 const FILTER_STRUCTURE = {
   'English Reading & Writing': {
@@ -97,42 +85,6 @@ const FILTER_STRUCTURE = {
   },
 };
 
-type DifficultyFilter = {
-  easy: boolean;
-  medium: boolean;
-  hard: boolean;
-};
-
-const difficultyConfig = {
-  easy: {
-    label: 'Easy',
-    icon: Sparkles,
-    color: 'from-emerald-500 to-teal-500',
-    bgColor: 'bg-emerald-500/10',
-    borderColor: 'border-emerald-500/30',
-    textColor: 'text-emerald-600',
-    description: 'Great for building confidence'
-  },
-  medium: {
-    label: 'Medium',
-    icon: Target,
-    color: 'from-amber-500 to-orange-500',
-    bgColor: 'bg-amber-500/10',
-    borderColor: 'border-amber-500/30',
-    textColor: 'text-amber-600',
-    description: 'Perfect for steady progress'
-  },
-  hard: {
-    label: 'Hard',
-    icon: Zap,
-    color: 'from-rose-500 to-red-500',
-    bgColor: 'bg-rose-500/10',
-    borderColor: 'border-rose-500/30',
-    textColor: 'text-rose-600',
-    description: 'Challenge yourself'
-  }
-};
-
 export default function Practice() {
   const navigate = useNavigate();
   const [questions, setQuestions] = useState<Question[]>([]);
@@ -150,14 +102,8 @@ export default function Practice() {
     'Standard English Conventions',
     'Form, Structure, and Sense',
   ]);
-  const [selectedDifficulties, setSelectedDifficulties] = useState<DifficultyFilter>({
-    easy: true,
-    medium: true,
-    hard: true,
-  });
 
   useEffect(() => {
-    // Load questions without clearing cache for faster subsequent visits
     getAllQuestionsAsync()
       .then(q => {
         setQuestions(q);
@@ -169,29 +115,8 @@ export default function Practice() {
       });
   }, []);
 
-  const filteredQuestions = useMemo(() => {
-    const activeDifficulties = Object.entries(selectedDifficulties)
-      .filter(([_, selected]) => selected)
-      .map(([diff]) => diff as Difficulty);
-    
-    if (activeDifficulties.length === 0) return [];
-    if (activeDifficulties.length === 3) return questions;
-    
-    return questions.filter(q => 
-      q.difficulty && activeDifficulties.includes(q.difficulty)
-    );
-  }, [questions, selectedDifficulties]);
-
-  const getDifficultyCounts = useMemo(() => {
-    return {
-      easy: questions.filter(q => q.difficulty === 'easy').length,
-      medium: questions.filter(q => q.difficulty === 'medium').length,
-      hard: questions.filter(q => q.difficulty === 'hard').length,
-    };
-  }, [questions]);
-
   const getCount = (subSection?: string, topic?: string, subTopic?: string): number => {
-    return filteredQuestions.filter((q) => {
+    return questions.filter((q) => {
       if (subSection && q.subSection !== subSection) return false;
       if (topic && q.topic !== topic) return false;
       if (subTopic && q.subTopic !== subTopic) return false;
@@ -207,130 +132,41 @@ export default function Practice() {
     );
   };
 
-  const toggleDifficulty = (difficulty: keyof DifficultyFilter) => {
-    setSelectedDifficulties(prev => ({
-      ...prev,
-      [difficulty]: !prev[difficulty],
-    }));
-  };
-
   const startPractice = (filter: Partial<FilterOption>) => {
     const practiceConfig = {
       filter,
-      difficulties: selectedDifficulties,
+      difficulties: { easy: true, medium: true, hard: true },
     };
     sessionStorage.setItem('practiceConfig', JSON.stringify(practiceConfig));
     navigate('/quiz');
   };
 
-  const DifficultyCard = ({ difficulty }: { difficulty: keyof DifficultyFilter }) => {
-    const config = difficultyConfig[difficulty];
-    const count = getDifficultyCounts[difficulty];
-    const isSelected = selectedDifficulties[difficulty];
-    const Icon = config.icon;
-
-    return (
-      <button
-        onClick={() => toggleDifficulty(difficulty)}
-        className={cn(
-          'relative flex flex-col items-center p-6 rounded-2xl border-2 transition-all duration-150 overflow-hidden group hover:scale-[1.02] hover:-translate-y-0.5 active:scale-[0.98]',
-          isSelected 
-            ? `${config.bgColor} ${config.borderColor}` 
-            : 'bg-muted/30 border-transparent opacity-50 hover:opacity-70'
-        )}
-      >
-        {isSelected && (
-          <div className="absolute top-3 right-3 animate-scale-in">
-            <div className={cn('w-5 h-5 rounded-full flex items-center justify-center', config.bgColor, config.borderColor, 'border')}>
-              <Check className="w-3 h-3 text-current" />
-            </div>
-          </div>
-        )}
-        <div className={cn(
-          'w-14 h-14 rounded-xl flex items-center justify-center mb-3 bg-gradient-to-br',
-          config.color
-        )}>
-          <Icon className="w-7 h-7 text-white" />
-        </div>
-        <span className={cn('font-semibold text-lg', isSelected ? config.textColor : 'text-muted-foreground')}>
-          {config.label}
-        </span>
-        <span className={cn('text-2xl font-bold mt-1', isSelected ? 'text-foreground' : 'text-muted-foreground')}>
-          {count}
-        </span>
-        <span className="text-xs text-muted-foreground mt-1">{config.description}</span>
-      </button>
-    );
-  };
-
-  const CategoryCard = ({ 
-    title, 
-    count, 
-    icon: Icon,
-    onClick,
-    gradient = 'from-primary to-accent'
-  }: { 
-    title: string; 
-    count: number; 
-    icon: React.ElementType;
-    onClick: () => void;
-    gradient?: string;
-  }) => (
-    <button
-      onClick={onClick}
-      disabled={count === 0}
-      className={cn(
-        'relative w-full flex items-center justify-between p-5 rounded-2xl transition-all duration-150 group overflow-hidden hover:scale-[1.01] hover:-translate-y-0.5 active:scale-[0.99]',
-        count > 0 
-          ? 'bg-card border border-border hover:border-primary/30 hover:shadow-lg cursor-pointer' 
-          : 'bg-muted/30 border border-transparent cursor-not-allowed opacity-50'
-      )}
-    >
-      <div className="flex items-center gap-4 z-10">
-        <div className={cn(
-          'w-12 h-12 rounded-xl flex items-center justify-center bg-gradient-to-br',
-          gradient
-        )}>
-          <Icon className="w-6 h-6 text-white" />
-        </div>
-        <div className="text-left">
-          <span className="font-semibold text-foreground block">{title}</span>
-          <span className="text-sm text-muted-foreground">{count} questions</span>
-        </div>
-      </div>
-      {count > 0 && (
-        <div className="flex items-center gap-2 text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-150">
-          <span className="text-sm font-medium">Start</span>
-          <Play className="w-5 h-5 fill-primary" />
-        </div>
-      )}
-    </button>
-  );
-
-  const renderTopicItem = (
+  const renderTopicRow = (
     label: string,
     count: number,
     onClick: () => void,
     depth: number = 0
   ) => {
     const disabled = count === 0;
-
     return (
       <button
+        key={label}
         onClick={disabled ? undefined : onClick}
-        style={{ paddingLeft: `${(depth + 1) * 16}px` }}
-        className={cn(
-          "w-full flex items-center justify-between pr-4 py-3 rounded-xl transition-all duration-100 group",
-          disabled ? "opacity-50 cursor-not-allowed" : "hover:bg-primary/5 hover:translate-x-1"
-        )}
         disabled={disabled}
+        className={cn(
+          'w-full flex items-center justify-between py-3 px-4 rounded-lg transition-all duration-150 group',
+          disabled 
+            ? 'opacity-40 cursor-not-allowed' 
+            : 'hover:bg-muted/60'
+        )}
+        style={{ paddingLeft: `${(depth + 1) * 16 + 16}px` }}
       >
         <span className="text-sm text-foreground">{label}</span>
         <div className="flex items-center gap-3">
-          <span className="text-xs px-2 py-1 rounded-full bg-muted text-muted-foreground">
-            {count}
-          </span>
-          <Play className="w-4 h-4 text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-100 fill-primary" />
+          <span className="text-xs text-muted-foreground">{count}</span>
+          {!disabled && (
+            <ArrowRight className="w-3.5 h-3.5 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-150" />
+          )}
         </div>
       </button>
     );
@@ -339,20 +175,16 @@ export default function Practice() {
   const renderSubTopics = (parentTopic: string, subTopics: Record<string, null>, subSection: string, mainSection: string) => {
     return Object.keys(subTopics).map(subTopic => {
       const count = getCount(subSection, parentTopic, subTopic);
-      return (
-        <div key={subTopic}>
-          {renderTopicItem(
-            subTopic,
-            count,
-            () => startPractice({
-              section: mainSection === 'English Reading & Writing' ? 'English' : 'Math',
-              subSection,
-              topic: parentTopic,
-              subTopic,
-            }),
-            2
-          )}
-        </div>
+      return renderTopicRow(
+        subTopic,
+        count,
+        () => startPractice({
+          section: mainSection === 'English Reading & Writing' ? 'English' : 'Math',
+          subSection,
+          topic: parentTopic,
+          subTopic,
+        }),
+        2
       );
     });
   };
@@ -364,16 +196,15 @@ export default function Practice() {
 
       if (hasSubTopics) {
         return (
-          <div key={topic} className="space-y-1">
+          <div key={topic}>
             <button
               onClick={() => toggleSection(topic)}
-              className="w-full flex items-center justify-between px-4 py-3 hover:bg-muted/50 rounded-xl transition-all duration-200"
+              className="w-full flex items-center justify-between px-4 py-3 hover:bg-muted/50 rounded-lg transition-all duration-150"
+              style={{ paddingLeft: '32px' }}
             >
               <span className="text-sm font-medium text-foreground">{topic}</span>
               <div className="flex items-center gap-3">
-                <span className="text-xs px-2 py-1 rounded-full bg-muted text-muted-foreground">
-                  {count}
-                </span>
+                <span className="text-xs text-muted-foreground">{count}</span>
                 {expandedSections.includes(topic) ? (
                   <ChevronDown className="w-4 h-4 text-muted-foreground" />
                 ) : (
@@ -381,90 +212,53 @@ export default function Practice() {
                 )}
               </div>
             </button>
-
             {expandedSections.includes(topic) && (
-              <div className="overflow-hidden animate-accordion-down">
-                <div className="space-y-0.5">
-                  {renderSubTopics(topic, subTopics, subSection, mainSection)}
-                </div>
+              <div className="space-y-0.5">
+                {renderSubTopics(topic, subTopics, subSection, mainSection)}
               </div>
             )}
           </div>
         );
       }
 
-      return (
-        <div key={topic}>
-          {renderTopicItem(
-            topic,
-            count,
-            () => startPractice({
-              section: mainSection === 'English Reading & Writing' ? 'English' : 'Math',
-              subSection,
-              topic,
-            }),
-            1
-          )}
-        </div>
+      return renderTopicRow(
+        topic,
+        count,
+        () => startPractice({
+          section: mainSection === 'English Reading & Writing' ? 'English' : 'Math',
+          subSection,
+          topic,
+        }),
+        1
       );
     });
   };
 
   const renderSubSections = (subSections: Record<string, any>, mainSection: string) => {
-    const subSectionIcons: Record<string, React.ElementType> = {
-      'Craft and Structure': BookOpen,
-      'Expression of Ideas': Sparkles,
-      'Information and Ideas': Target,
-      'Standard English Conventions': Filter,
-      'Algebra': Target,
-      'Advanced Math': Zap,
-    };
-
-    const subSectionGradients: Record<string, string> = {
-      'Craft and Structure': 'from-violet-500 to-purple-600',
-      'Expression of Ideas': 'from-blue-500 to-cyan-500',
-      'Information and Ideas': 'from-emerald-500 to-teal-500',
-      'Standard English Conventions': 'from-amber-500 to-orange-500',
-      'Algebra': 'from-indigo-500 to-blue-600',
-      'Advanced Math': 'from-purple-500 to-pink-600',
-    };
-
     return Object.entries(subSections).map(([subSection, topics]) => {
       const count = getCount(subSection);
       const hasTopics = topics !== null && typeof topics === 'object';
-      const Icon = subSectionIcons[subSection] || BookOpen;
-      const gradient = subSectionGradients[subSection] || 'from-primary to-accent';
 
       return (
-        <div 
-          key={subSection} 
-          className="space-y-2 animate-fade-in"
-        >
+        <div key={subSection} className="border border-border rounded-lg bg-background overflow-hidden">
           <button
             onClick={() => toggleSection(subSection)}
-            className="w-full flex items-center justify-between p-4 bg-card border border-border hover:border-primary/20 rounded-2xl transition-all duration-150 group"
+            className="w-full flex items-center justify-between p-5 hover:bg-muted/30 transition-all duration-150"
           >
+            <span className="font-medium text-foreground">{subSection}</span>
             <div className="flex items-center gap-3">
-              <div className={cn('w-10 h-10 rounded-xl flex items-center justify-center bg-gradient-to-br', gradient)}>
-                <Icon className="w-5 h-5 text-white" />
-              </div>
-              <span className="font-semibold text-foreground">{subSection}</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <span className="text-sm font-medium px-3 py-1 rounded-full bg-primary/10 text-primary">
-                {count} questions
-              </span>
+              <span className="text-sm text-muted-foreground">{count} questions</span>
               {expandedSections.includes(subSection) ? (
-                <ChevronDown className="w-5 h-5 text-muted-foreground transition-transform duration-150" />
+                <ChevronDown className="w-4 h-4 text-muted-foreground" />
               ) : (
-                <ChevronRight className="w-5 h-5 text-muted-foreground transition-transform duration-150" />
+                <ChevronRight className="w-4 h-4 text-muted-foreground" />
               )}
             </div>
           </button>
 
           {expandedSections.includes(subSection) && hasTopics && (
-            <div className="overflow-hidden animate-accordion-down">
-              <div className="space-y-1 pl-4 pt-2 pb-2 ml-5 border-l-2 border-border">
+            <div className="border-t border-border">
+              <div className="py-1">
                 {renderTopics(subSection, topics, mainSection)}
               </div>
             </div>
@@ -474,20 +268,10 @@ export default function Practice() {
     });
   };
 
-  // Show skeleton UI while loading instead of blocking spinner
-  const LoadingSkeleton = () => (
-    <div className="animate-pulse space-y-3">
-      {[1, 2, 3, 4].map(i => (
-        <div key={i} className="h-16 bg-muted/50 rounded-2xl" />
-      ))}
-    </div>
-  );
-
   const handleLoadingComplete = () => {
     setShowContent(true);
   };
 
-  // Show progress bar with skeleton until loading complete
   if (!showContent) {
     return (
       <>
@@ -501,73 +285,55 @@ export default function Practice() {
   }
 
   return (
-    <div className="min-h-screen gradient-hero">
-      <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border animate-stagger-fade stagger-1">
-        <div className="container mx-auto px-4 py-4">
+    <div className="min-h-screen bg-background">
+      {/* Header */}
+      <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+        <div className="max-w-[1200px] mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <Button
               variant="ghost"
               size="sm"
               onClick={() => navigate('/')}
-              className="gap-2"
+              className="gap-2 text-muted-foreground hover:text-foreground"
             >
               <ArrowLeft className="w-4 h-4" />
               Back
             </Button>
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg gradient-bg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">N</span>
-              </div>
-              <span className="font-bold text-foreground">NextPrep</span>
-            </div>
+            <span className="font-semibold text-foreground">NextPrep</span>
             <div className="w-[60px]" />
           </div>
         </div>
       </header>
 
-      <main className="container mx-auto px-4 py-8 max-w-5xl">
-        <div className="text-center mb-10 animate-stagger-fade stagger-2">
-          <h1 className="text-3xl sm:text-4xl font-bold mb-3">
-            <span className="gradient-text">Choose Your Practice</span>
+      <main className="max-w-[800px] mx-auto px-6 py-12 lg:py-16">
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+        >
+          <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight text-foreground mb-3">
+            Choose a Practice Topic
           </h1>
-          <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-            Select difficulty level and topic to begin your focused practice session
+          <p className="text-muted-foreground mb-10">
+            Select a topic to begin practicing. The hierarchy is organized by subject and skill.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="mb-10 animate-stagger-fade stagger-3">
-          <div className="flex items-center gap-2 mb-4">
-            <Filter className="w-5 h-5 text-primary" />
-            <h2 className="font-semibold text-foreground">Filter by Difficulty</h2>
-          </div>
-          <div className="grid grid-cols-3 gap-4">
-            <DifficultyCard difficulty="easy" />
-            <DifficultyCard difficulty="medium" />
-            <DifficultyCard difficulty="hard" />
-          </div>
-        </div>
-
-        <div className="mb-8 animate-stagger-fade stagger-4">
-          <CategoryCard
-            title="Practice All Questions"
-            count={filteredQuestions.length}
-            icon={Play}
-            onClick={() => startPractice({})}
-            gradient="from-primary to-accent"
-          />
-        </div>
-
-        <div className="space-y-4 animate-stagger-fade stagger-5">
-          <div className="flex items-center gap-2 mb-2">
-            <BookOpen className="w-5 h-5 text-primary" />
-            <h2 className="font-semibold text-foreground">Topics</h2>
-          </div>
-          
-          {Object.entries(FILTER_STRUCTURE).map(([section, subSections]) => (
-            <div key={section} className="space-y-3">
-              <h3 className="text-sm font-bold text-primary uppercase tracking-wide px-4 pt-4">{section}</h3>
-              {renderSubSections(subSections, section)}
-            </div>
+        <div className="space-y-10">
+          {Object.entries(FILTER_STRUCTURE).map(([section, subSections], sectionIdx) => (
+            <motion.div
+              key={section}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: sectionIdx * 0.08 }}
+            >
+              <h2 className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-4 px-1">
+                {section}
+              </h2>
+              <div className="space-y-3">
+                {renderSubSections(subSections, section)}
+              </div>
+            </motion.div>
           ))}
         </div>
 
