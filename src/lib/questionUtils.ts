@@ -16,6 +16,7 @@ export interface Question {
   difficulty?: Difficulty;
   isGridIn?: boolean; // For math grid-in questions
   hasLatex?: boolean; // For math questions with LaTeX
+  image?: string | null; // For questions with diagrams
 }
 
 export interface TextHighlight {
@@ -197,10 +198,6 @@ function cleanMalformedJson(raw: string): string {
   cleaned = cleaned.replace(/,\s*\]/g, ']');
   cleaned = cleaned.replace(/,\s*\}/g, '}');
   
-  // Fix unescaped backslashes that aren't LaTeX commands
-  // Keep common LaTeX sequences: \frac, \sqrt, \implies, \le, \ge, \times, \div, etc.
-  // cleaned = cleaned.replace(/\\(?![frac|sqrt|implies|le|ge|times|div|ne|pm|mp|approx|cdot|ldots|Rightarrow|rightarrow|Leftarrow|leftarrow|infty|pi|alpha|beta|gamma|theta|lambda|mu|sigma|delta|epsilon|phi|omega|neq|leq|geq|n"])/g, '\\\\');
-  
   return cleaned;
 }
 
@@ -271,9 +268,6 @@ function extractMathQuestionsFromRaw(raw: string): any[] {
 // Extract all question-like objects from raw JSON text using regex
 function extractQuestionsFromRaw(raw: string): any[] {
   const questions: any[] = [];
-  
-  // Match question objects with id, content, and solution
-  const questionPattern = /\{\s*"id"\s*:\s*"([^"]+)"[^}]*"content"\s*:\s*\{[^}]*"passage"\s*:\s*"([^"]*(?:\\.[^"]*)*)"[^}]*"question"\s*:\s*"([^"]*(?:\\.[^"]*)*)"[^}]*"options"\s*:\s*\[([\s\S]*?)\][^}]*\}[^}]*"solution"\s*:\s*\{[^}]*"answer"\s*:\s*"([^"]+)"[^}]*"explanation"\s*:\s*"([^"]*(?:\\.[^"]*)*)"[^}]*\}/g;
   
   // Simpler approach: split by question id pattern and reconstruct
   const idMatches = raw.matchAll(/"id"\s*:\s*"([A-Z]+_\d+)"/g);
@@ -1191,10 +1185,14 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
               
               if (!isPlaceholderGridIn) {
                 isGridIn = false;
-                q.options.forEach((opt: string) => {
+                q.options.forEach((opt: string, optIndex: number) => {
                   const match = opt.match(/^([A-D])\)\s*(.+)$/s);
                   if (match) {
                     options[match[1]] = match[2].trim();
+                  } else {
+                    // Fallback if option string doesn't explicitly start with "A) "
+                    const letter = String.fromCharCode(65 + optIndex);
+                    options[letter] = opt.trim();
                   }
                 });
               }
@@ -1202,6 +1200,12 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
             
             // Check for LaTeX in question - include \( \) and \[ \] formats
             const hasLatex = /\$.*?\$|\\frac|\\sqrt|\\times|\\div|\^|\\\(|\\\[/.test(q.question || '');
+
+            // Automatically correct image paths to include the nested 'diagram' folder
+            let fixedImage = q.image || null;
+            if (fixedImage && fixedImage.includes('/images/diagrams/') && !fixedImage.includes('/images/diagrams/diagram/')) {
+              fixedImage = fixedImage.replace('/images/diagrams/', '/images/diagrams/diagram/');
+            }
             
             addQuestion({
               id: globalId++,
@@ -1219,6 +1223,7 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
               difficulty: 'medium' as Difficulty, // Will be updated later
               isGridIn,
               hasLatex,
+              image: fixedImage, // Include the fixed image path!
             });
           });
         }
