@@ -1,0 +1,91 @@
+Improve navigation feedback and loading experience for a React application built with Vite.
+
+The goal is to make page navigation feel smooth, fast, and professional so users never feel that the application is hanging.
+
+1. Add a Top Loading Bar
+
+Show a loading progress bar at the top of the browser whenever the route changes.
+
+This gives instant visual feedback that a new page is loading.
+
+Implementation idea:
+Use a library such as nprogress.
+
+Behavior:
+Start the progress bar when navigation begins.
+Complete the progress bar when the new page finishes rendering.
+
+The loading bar should be thin, minimal, and match the black and white design system.
+
+2. Create Route Loading States
+
+Since Vite does not have built in loading.js like Next.js, implement route level loading components manually.
+
+Use React lazy loading with Suspense.
+
+Example concept:
+
+Lazy load page components.
+Wrap the router outlet with a Suspense fallback.
+
+The fallback UI should show a clean loading state such as:
+
+Simple centered spinner
+Skeleton layout
+Minimal loading indicator
+
+This prevents blank screens while pages load.
+
+3. Use React Suspense for Heavy Components
+
+If certain parts of the page load data slowly such as:
+
+Large question lists
+Practice content
+Leaderboards
+
+Wrap those components inside Suspense boundaries.
+
+Result:
+
+The main layout loads immediately.
+Only the data heavy section shows a loading indicator.
+
+This makes the application feel much faster.
+
+4. Add Page Transition Animations
+
+To avoid abrupt page switching, add subtle transition animations between routes.
+
+Use a library such as framer motion.
+
+Recommended animation:
+
+Small fade in when the page appears.
+Very subtle upward motion.
+Fast smooth transition.
+
+The animation should feel minimal and professional.
+
+5. Add Button Loading Feedback
+
+When users click buttons that trigger navigation or data loading, show an immediate loading state.
+
+Example behavior:
+
+Button shows spinner after click.
+Button becomes temporarily disabled.
+Navigation starts immediately after.
+
+This ensures users always know their action was registered.
+
+6. Maintain Consistent Loading UI
+
+All loading states should follow the same visual design:
+
+Black white minimal style
+Clean spinner or skeleton
+No bright colors
+Professional subtle animations
+
+The loading experience should feel smooth, fast, and premium across the entire application.
