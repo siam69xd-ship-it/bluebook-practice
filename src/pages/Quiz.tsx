@@ -416,11 +416,11 @@ export default function Quiz() {
   }
 
   return (
-    <div className="min-h-screen bg-bluebook-bg flex">
+    <div className={cn("bg-bluebook-bg flex", isFullscreen ? "h-screen overflow-hidden" : "min-h-screen")}>
       {/* Main Content */}
-      <div className="flex-1 flex flex-col min-h-screen">
+      <div className="flex-1 flex flex-col min-h-0 h-full">
         {/* Top Bar - Bluebook Style */}
-        <header className="sticky top-0 z-30 bg-white border-b border-gray-200 animate-stagger-fade stagger-1">
+        <header className="shrink-0 z-30 bg-white border-b border-gray-200 animate-stagger-fade stagger-1">
           <div className="flex items-center justify-between px-4 h-14">
             {/* Left: Back arrow, Title with Directions dropdown */}
             <div className="flex items-center gap-2">
@@ -532,7 +532,7 @@ export default function Quiz() {
         </header>
 
         {/* Question Content - Two Panel Layout */}
-        <main className="flex-1 flex flex-col lg:flex-row">
+        <main className="flex-1 flex flex-col lg:flex-row min-h-0 overflow-hidden">
           {/* Left Panel - Passage */}
           <div className="flex-1 p-6 overflow-y-auto border-r border-gray-200 bg-white">
             <AnimatePresence mode="wait">
@@ -697,7 +697,7 @@ export default function Quiz() {
         </main>
 
         {/* Bottom Navigation - Bluebook Style */}
-        <footer className="sticky bottom-0 bg-white border-t border-gray-200">
+        <footer className="shrink-0 bg-white border-t border-gray-200">
           <div className="flex items-center justify-between px-4 py-3">
             {/* Left: Question Count */}
             <div className="flex items-center gap-3">
