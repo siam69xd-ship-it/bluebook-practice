@@ -90,8 +90,12 @@ export default function Math() {
     setSelectedAnswer(answer);
   };
 
+  const isGridQuestion = () => {
+    return currentQuestion?.isGridIn || !Array.isArray(currentQuestion?.options) || currentQuestion?.options.length === 0;
+  };
+
   const handleSubmit = () => {
-    if (currentQuestion?.isGridIn) {
+    if (isGridQuestion()) {
       if (gridInValue.trim()) {
         setShowResult(true);
       }
@@ -310,6 +314,20 @@ export default function Math() {
               {/* Question Text */}
               <div className="font-serif text-lg leading-relaxed text-[#1a1a1a]">
                 <LatexRenderer content={currentQuestion.question} />
+                
+                {/* Question Image Support */}
+                {currentQuestion.image && (
+                  <div className="mt-6 flex justify-center">
+                    <img 
+                      src={currentQuestion.image} 
+                      alt="Question Diagram" 
+                      className="max-w-full h-auto border border-gray-200 rounded-lg shadow-sm"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).style.display = 'none';
+                      }}
+                    />
+                  </div>
+                )}
               </div>
             </div>
           </ScrollArea>
@@ -331,7 +349,17 @@ export default function Math() {
                   transition={{ duration: 0.3 }}
                   className="space-y-4"
                 >
-                  {currentQuestion.options.length > 0 ? (
+                  {isGridQuestion() ? (
+                    // Grid-in question
+                    <GridInInput
+                      value={gridInValue}
+                      onChange={setGridInValue}
+                      isChecked={showResult}
+                      isCorrect={isGridInCorrect()}
+                      correctAnswer={currentQuestion.answer}
+                      disabled={showResult}
+                    />
+                  ) : (
                     currentQuestion.options.map((option, idx) => {
                       const { label, text } = parseOptionLabel(option);
                       const optionLabel = label || String.fromCharCode(65 + idx);
@@ -355,23 +383,13 @@ export default function Math() {
                         />
                       );
                     })
-                  ) : (
-                    // Grid-in question
-                    <GridInInput
-                      value={gridInValue}
-                      onChange={setGridInValue}
-                      isChecked={showResult}
-                      isCorrect={isGridInCorrect()}
-                      correctAnswer={currentQuestion.answer}
-                      disabled={showResult}
-                    />
                   )}
 
                   {/* Submit Button */}
                   {!showResult && (
                     <Button
                       onClick={handleSubmit}
-                      disabled={currentQuestion.isGridIn ? !gridInValue.trim() : !selectedAnswer}
+                      disabled={isGridQuestion() ? !gridInValue.trim() : !selectedAnswer}
                       className="w-full mt-6 bg-[#0077c8] hover:bg-[#005fa3] text-white"
                     >
                       Submit Answer
