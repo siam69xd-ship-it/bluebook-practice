@@ -111,6 +111,12 @@
     @apply bg-background text-foreground antialiased;
     font-family: 'Inter', system-ui, sans-serif;
     line-height: 1.6;
+    height: 100%;
+  }
+
+  /* Ensure fullscreen element can scroll if needed, but usually we handle it in components */
+  :fullscreen {
+    background-color: white;
   }
   
   h1, h2, h3, h4, h5, h6 {

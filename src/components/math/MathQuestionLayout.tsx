@@ -147,8 +147,8 @@ export default function MathQuestionLayout({
         </div>
       </header>
 
-      <main className={cn("flex-1 flex justify-center", isFullscreen ? "overflow-hidden" : "overflow-y-auto")}>
-        <div className={cn("w-full max-w-4xl px-8 py-6", isFullscreen && "overflow-hidden")}>
+      <main className="flex-1 flex justify-center overflow-y-auto">
+        <div className="w-full max-w-4xl px-8 py-6">
           <AnimatePresence mode="wait">
             <motion.div key={currentQuestion.id} initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} transition={{ duration: 0.2 }}>
               <div className="flex items-center justify-between mb-6 pb-4 border-b border-gray-100">
