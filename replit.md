@@ -192,7 +192,9 @@ Preferred communication style: Simple, everyday language.
 
 ### Deployment Configuration
 
-**Vercel Deployment**
-- `vercel.json` configured with rewrites to handle SPA client-side routing
-- All routes are redirected to `/index.html` for proper React Router navigation
-- This ensures page refresh on deep links (e.g., `/quiz/21`) works correctly
+**Replit Environment**
+- Runs via `npm run dev` using `concurrently` to start both Express API (port 3000) and Vite dev server (port 5000)
+- Vite proxies all `/api` requests to the Express backend on port 3000
+- The workflow is configured as a webview on port 5000
+- `DATABASE_URL` is stored as a Replit secret connecting to the Neon PostgreSQL database
+- `SESSION_SECRET` is stored as a Replit secret for session management
