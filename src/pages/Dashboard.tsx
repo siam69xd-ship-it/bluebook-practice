@@ -105,7 +105,7 @@ export default function Dashboard() {
         <div className="max-w-[1200px] mx-auto px-6 py-4">
           <nav className="flex items-center justify-between">
             <Link to="/" className="text-xl font-semibold tracking-tight text-foreground">
-              Acely
+              NextPrep
             </Link>
             <div className="flex items-center gap-4">
               <Link to="/analytics" className="text-sm text-muted-foreground hover:text-foreground transition-colors">

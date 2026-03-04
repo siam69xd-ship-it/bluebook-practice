@@ -4,7 +4,7 @@ const skeletonPulse = "animate-[pulse_1.5s_cubic-bezier(0.4,0,0.6,1)_infinite] o
 
 export function PracticeSkeleton({ className }: { className?: string }) {
   return (
-    <div className={cn("min-h-screen gradient-hero", className)}>
+    <div className={cn("min-h-screen bg-background", className)}>
       {/* Header skeleton */}
       <div className="sticky top-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
         <div className="container mx-auto px-4 py-4">

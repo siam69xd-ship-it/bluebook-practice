@@ -14,6 +14,7 @@ interface RawMathQuestion {
   options: string[];
   answer: string;
   explanation: string;
+  image?: string;
 }
 
 interface MathDataFile {
