@@ -6,6 +6,7 @@ export interface MathQuestion {
   answer: string;
   explanation: string;
   isGridIn: boolean;
+  image?: string | null;
 }
 
 interface RawMathQuestion {
@@ -121,13 +122,20 @@ export async function loadAllMathQuestions(): Promise<MathQuestion[]> {
       return rawQuestions.map((q, index) => {
         const isGridIn = q.options.length === 0 || 
           (q.options.length === 1 && q.options[0].toLowerCase().includes('grid-in'));
+        
+        // FIX: Automatically correct image paths to include the nested 'diagram' folder
+        let fixedImage = q.image || null;
+        if (fixedImage && fixedImage.includes('/images/diagrams/') && !fixedImage.includes('/images/diagrams/diagram/')) {
+          fixedImage = fixedImage.replace('/images/diagrams/', '/images/diagrams/diagram/');
+        }
+
         return {
           ...q,
           id: index + 1,
           topic,
           isGridIn,
           options: isGridIn ? [] : q.options,
-          image: q.image || null,
+          image: fixedImage,
         };
       });
     } catch (error) {
@@ -143,7 +151,7 @@ export async function loadAllMathQuestions(): Promise<MathQuestion[]> {
   for (const questions of results) {
     for (const q of questions) {
       q.id = idCounter++;
-      allQuestions.push(q);
+      allQuestions.push(q as MathQuestion);
     }
   }
   
