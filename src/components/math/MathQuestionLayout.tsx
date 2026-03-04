@@ -303,7 +303,10 @@ export default function MathQuestionLayout({
                 />
               ) : (
                 <div className="space-y-3">
-                  {Object.entries(currentQuestion.options).map(([letter, text]) => {
+                  {currentQuestion.options.map((text, index) => {
+                    // FIX: Convert array index to letters (0 -> 'A', 1 -> 'B', etc.)
+                    const letter = String.fromCharCode(65 + index);
+                    
                     const isThisCheckedWrong = currentState?.checkedOptions?.includes(letter) && letter !== currentQuestion.correctAnswer;
                     const isThisSelected = currentState?.userAnswer === letter;
                     const showAsCorrect = currentState?.checked && isCorrect && letter === currentQuestion.correctAnswer;
