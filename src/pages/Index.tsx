@@ -78,7 +78,7 @@ export default function Index() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -24 }}
                     transition={{ duration: 0.4, ease: 'easeInOut' }}
-                    className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-foreground leading-[1.1]"
+                    className="text-3xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-foreground leading-[1.1]"
                   >
                     {HERO_PHRASES[phraseIndex]}
                   </motion.h1>
