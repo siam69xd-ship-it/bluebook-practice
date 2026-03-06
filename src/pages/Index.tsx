@@ -90,7 +90,7 @@ export default function Index() {
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.15 }}
-                className="text-lg text-muted-foreground max-w-lg mx-auto mb-10 leading-relaxed"
+                className="text-base sm:text-lg text-muted-foreground max-w-lg mx-auto mb-8 sm:mb-10 leading-relaxed px-2 sm:px-0"
               >
                 A focused SAT question bank designed for efficient practice.
               </motion.p>
