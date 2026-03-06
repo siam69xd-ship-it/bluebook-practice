@@ -243,11 +243,11 @@ export default function Practice() {
         <div key={subSection} className="border border-border rounded-lg bg-background overflow-hidden">
           <button
             onClick={() => toggleSection(subSection)}
-            className="w-full flex items-center justify-between p-5 hover:bg-muted/30 transition-all duration-150"
+            className="w-full flex items-center justify-between p-3 sm:p-5 hover:bg-muted/30 transition-all duration-150"
           >
-            <span className="font-medium text-foreground">{subSection}</span>
-            <div className="flex items-center gap-3">
-              <span className="text-sm text-muted-foreground">{count} questions</span>
+            <span className="font-medium text-foreground text-sm sm:text-base">{subSection}</span>
+            <div className="flex items-center gap-2 sm:gap-3">
+              <span className="text-xs sm:text-sm text-muted-foreground">{count}</span>
               {expandedSections.includes(subSection) ? (
                 <ChevronDown className="w-4 h-4 text-muted-foreground" />
               ) : (
