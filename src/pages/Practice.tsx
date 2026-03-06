@@ -319,7 +319,7 @@ export default function Practice() {
           </p>
         </motion.div>
 
-        <div className="space-y-10">
+        <div className="space-y-6 sm:space-y-10">
           {Object.entries(FILTER_STRUCTURE).map(([section, subSections], sectionIdx) => (
             <motion.div
               key={section}
