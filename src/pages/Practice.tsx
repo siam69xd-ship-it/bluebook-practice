@@ -305,16 +305,16 @@ export default function Practice() {
         </div>
       </header>
 
-      <main className="max-w-[800px] mx-auto px-6 py-12 lg:py-16">
+      <main className="max-w-[800px] mx-auto px-4 sm:px-6 py-8 sm:py-12 lg:py-16">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
         >
-          <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight text-foreground mb-3">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-foreground mb-2 sm:mb-3">
             Choose a Practice Topic
           </h1>
-          <p className="text-muted-foreground mb-10">
+          <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-10">
             Select a topic to begin practicing. The hierarchy is organized by subject and skill.
           </p>
         </motion.div>
