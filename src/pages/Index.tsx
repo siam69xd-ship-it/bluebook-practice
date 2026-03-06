@@ -62,7 +62,7 @@ export default function Index() {
       <main className="relative z-10">
         {/* Hero Section - vertically centered */}
         <section className="min-h-[calc(100vh-65px)] flex items-center justify-center">
-          <div className="max-w-[1200px] mx-auto px-6 w-full">
+          <div className="max-w-[1200px] mx-auto px-4 sm:px-6 w-full">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
