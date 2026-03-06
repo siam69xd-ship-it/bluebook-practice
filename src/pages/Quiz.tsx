@@ -696,8 +696,79 @@ export default function Quiz() {
 
         {/* Bottom Navigation - Bluebook Style */}
         <footer className="shrink-0 bg-white border-t border-gray-200">
-          <div className="flex items-center justify-between px-4 py-3">
-            {/* Left: Question Count */}
+          {/* Mobile: two-row layout */}
+          <div className="sm:hidden px-3 py-2 space-y-2">
+            <div className="flex items-center justify-between">
+              <button 
+                onClick={() => setShowNavigator(true)}
+                className="flex items-center gap-1.5 px-3 py-1.5 bg-gray-900 text-white rounded-full text-xs font-medium hover:bg-gray-800 transition-colors"
+                data-testid="button-question-navigator"
+              >
+                {currentIndex + 1}/{filteredQuestions.length}
+                <ChevronLeft className="w-3.5 h-3.5 rotate-[-90deg]" />
+              </button>
+              <div className="flex items-center gap-1.5">
+                <button
+                  onClick={() => setShowExplanation(true)}
+                  className="flex items-center gap-1 px-3 py-1.5 bg-amber-500 text-white rounded-full text-xs font-medium hover:bg-amber-600 transition-colors"
+                  data-testid="button-explanation"
+                >
+                  <Lightbulb className="w-3.5 h-3.5" />
+                  Explain
+                </button>
+                {!currentState?.checked ? (
+                  <button
+                    onClick={handleCheckAnswer}
+                    disabled={!currentState?.userAnswer}
+                    className={cn(
+                      "flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-medium transition-colors",
+                      currentState?.userAnswer
+                        ? "bg-green-500 text-white hover:bg-green-600"
+                        : "bg-gray-200 text-gray-400 cursor-not-allowed"
+                    )}
+                    data-testid="button-check-answer"
+                  >
+                    <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    Check
+                  </button>
+                ) : (
+                  <span className={cn(
+                    "flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-medium",
+                    isCorrect ? "bg-green-500 text-white" : "bg-red-500 text-white"
+                  )} data-testid="text-result">
+                    {isCorrect ? "Correct!" : "Incorrect"}
+                  </span>
+                )}
+              </div>
+            </div>
+            <div className="flex items-center justify-between">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => handleNavigate('prev')}
+                disabled={currentIndex === 0}
+                className="gap-1 px-3 h-8 text-xs border-gray-300"
+                data-testid="button-previous"
+              >
+                <ChevronLeft className="w-3.5 h-3.5" /> Prev
+              </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => handleNavigate('next')}
+                disabled={currentIndex === filteredQuestions.length - 1}
+                className="gap-1 px-3 h-8 text-xs border-gray-300"
+                data-testid="button-next"
+              >
+                Next <ChevronRight className="w-3.5 h-3.5" />
+              </Button>
+            </div>
+          </div>
+
+          {/* Desktop: single-row layout */}
+          <div className="hidden sm:flex items-center justify-between px-4 py-3">
             <div className="flex items-center gap-3">
               <button 
                 onClick={() => setShowNavigator(true)}
@@ -713,8 +784,6 @@ export default function Quiz() {
                 </span>
               )}
             </div>
-
-            {/* Center: Action Buttons */}
             <div className="flex items-center gap-2">
               <button
                 onClick={() => setShowExplanation(true)}
@@ -750,8 +819,6 @@ export default function Quiz() {
                 </span>
               )}
             </div>
-
-            {/* Right: Navigation */}
             <div className="flex items-center gap-2">
               <Button
                 variant="outline"
@@ -777,7 +844,7 @@ export default function Quiz() {
           </div>
           
           {/* SAT Disclaimer */}
-          <div className="text-center py-2 text-xs text-gray-400 border-t border-gray-100">
+          <div className="text-center py-1.5 sm:py-2 text-[10px] sm:text-xs text-gray-400 border-t border-gray-100">
             SAT is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this product.
           </div>
         </footer>
