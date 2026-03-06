@@ -531,10 +531,10 @@ export default function Quiz() {
           )}
         </header>
 
-        {/* Question Content - Two Panel Layout */}
-        <main className="flex-1 flex flex-col lg:flex-row min-h-0 overflow-hidden">
+        {/* Question Content - Two Panel Layout (stacked on mobile) */}
+        <main className="flex-1 flex flex-col lg:flex-row min-h-0 overflow-auto lg:overflow-hidden">
           {/* Left Panel - Passage */}
-          <div className="flex-1 p-6 overflow-y-auto border-r border-gray-200 bg-white">
+          <div className="lg:flex-1 p-4 sm:p-6 overflow-visible lg:overflow-y-auto border-b lg:border-b-0 lg:border-r border-gray-200 bg-white">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentQuestion.id}
@@ -556,7 +556,7 @@ export default function Quiz() {
           </div>
 
           {/* Right Panel - Question and Options */}
-          <div className="flex-1 p-6 overflow-y-auto bg-bluebook-panel">
+          <div className="lg:flex-1 p-4 sm:p-6 overflow-visible lg:overflow-y-auto bg-bluebook-panel">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentQuestion.id}
@@ -566,15 +566,15 @@ export default function Quiz() {
                 transition={{ duration: 0.2, delay: 0.1 }}
               >
                 {/* Question Header */}
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-3">
-                    <span className="flex items-center justify-center w-8 h-8 bg-gray-900 text-white text-sm font-bold rounded" data-testid="text-question-number">
+                <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
+                  <div className="flex items-center gap-2 sm:gap-3">
+                    <span className="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 bg-gray-900 text-white text-xs sm:text-sm font-bold rounded" data-testid="text-question-number">
                       {currentIndex + 1}
                     </span>
                     <button
                       onClick={handleToggleMark}
                       className={cn(
-                        "flex items-center gap-2 px-3 py-1.5 rounded-md text-sm transition-colors",
+                        "flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 rounded-md text-xs sm:text-sm transition-colors",
                         currentState?.markedForReview
                           ? "bg-amber-50 text-amber-700 border border-amber-200"
                           : "bg-gray-100 text-gray-600 hover:bg-gray-200"
@@ -582,25 +582,26 @@ export default function Quiz() {
                       data-testid="button-mark-review"
                     >
                       <Bookmark className={cn(
-                        "w-4 h-4",
+                        "w-3.5 h-3.5 sm:w-4 sm:h-4",
                         currentState?.markedForReview && "fill-amber-500"
                       )} />
-                      Mark for Review
+                      <span className="hidden sm:inline">Mark for Review</span>
+                      <span className="sm:hidden">Mark</span>
                     </button>
                   </div>
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-2 sm:gap-3">
                     <button 
-                      className="flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700"
+                      className="flex items-center gap-1 text-xs sm:text-sm text-gray-500 hover:text-gray-700"
                       data-testid="button-report"
                     >
-                      <Flag className="w-4 h-4" />
-                      Report
+                      <Flag className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                      <span className="hidden sm:inline">Report</span>
                     </button>
                     {/* Elimination Tool Toggle */}
                     <button
                       onClick={() => setIsEliminationMode(!isEliminationMode)}
                       className={cn(
-                        "flex items-center justify-center w-8 h-8 rounded transition-colors",
+                        "flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded transition-colors",
                         isEliminationMode 
                           ? "bg-gray-900 text-white" 
                           : "text-gray-500 hover:bg-gray-100"
@@ -608,30 +609,28 @@ export default function Quiz() {
                       title={isEliminationMode ? "Exit elimination mode" : "Enter elimination mode"}
                       data-testid="button-elimination-toggle"
                     >
-                      {/* Custom strikethrough S icon */}
-                      <span className="relative text-sm font-bold">
+                      <span className="relative text-xs sm:text-sm font-bold">
                         S
                         <span className="absolute inset-0 flex items-center justify-center">
                           <span className="w-full h-[1.5px] bg-current rotate-[-20deg]" />
                         </span>
                       </span>
                     </button>
-                    {/* Undo Eliminations - shows when there are eliminations */}
                     {hasEliminations && (
                       <button
                         onClick={handleUndoEliminations}
-                        className="flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700"
+                        className="flex items-center gap-1 text-xs sm:text-sm text-gray-500 hover:text-gray-700"
                         title="Undo all eliminations"
                         data-testid="button-undo-eliminations"
                       >
-                        <Undo2 className="w-4 h-4" />
-                        Undo
+                        <Undo2 className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                        <span className="hidden sm:inline">Undo</span>
                       </button>
                     )}
                   </div>
                 </div>
 
-                {/* Section Badge - Show topic only in Practice mode */}
+                {/* Section Badge */}
                 {isPracticeMode && practiceTopicInfo && (
                   <div className="flex items-center gap-2 mb-4">
                     <span className="px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary" data-testid="badge-section">
@@ -648,20 +647,20 @@ export default function Quiz() {
                   </div>
                 )}
 
-                {/* Question Text - Use LaTeX for Math questions */}
+                {/* Question Text */}
                 {isMathQuestion ? (
                   <LatexRenderer 
                     content={currentQuestion.questionPrompt || ''} 
-                    className="quiz-question mb-6 text-gray-900"
+                    className="quiz-question mb-4 sm:mb-6 text-gray-900"
                   />
                 ) : (
                   <PassageRenderer 
                     content={currentQuestion.questionPrompt || 'Based on the text, select the best answer to the question.'}
-                    className="quiz-question mb-6"
+                    className="quiz-question mb-4 sm:mb-6"
                   />
                 )}
 
-                {/* Grid-In Input for Math questions without options */}
+                {/* Grid-In or Multiple Choice */}
                 {isGridInQuestion ? (
                   <GridInInput
                     value={currentState?.userAnswer || ''}
@@ -671,13 +670,12 @@ export default function Quiz() {
                     correctAnswer={currentQuestion.correctAnswer}
                   />
                 ) : (
-                  /* Multiple Choice Options */
-                  <div className="space-y-3">
+                  <div className="space-y-2 sm:space-y-3">
                     {Object.entries(currentQuestion.options).map(([letter, text]) => (
                       <QuestionOption
                         key={letter}
                         letter={letter}
-                        text={isMathQuestion ? text : text}
+                        text={text}
                         isSelected={currentState?.userAnswer === letter}
                         isEliminated={currentState?.eliminatedOptions?.includes(letter) || false}
                         isChecked={currentState?.checked || false}
