@@ -70,7 +70,7 @@ export default function Index() {
               className="text-center max-w-2xl mx-auto"
             >
               {/* Animated headline */}
-              <div className="h-[72px] sm:h-[84px] lg:h-[96px] flex items-center justify-center mb-6 overflow-hidden">
+              <div className="h-[56px] sm:h-[84px] lg:h-[96px] flex items-center justify-center mb-4 sm:mb-6 overflow-hidden">
                 <AnimatePresence mode="wait">
                   <motion.h1
                     key={phraseIndex}
