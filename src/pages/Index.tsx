@@ -49,9 +49,9 @@ export default function Index() {
 
       {/* Header */}
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-        <div className="max-w-[1200px] mx-auto px-6 py-4">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 py-3 sm:py-4">
           <nav className="flex items-center justify-between">
-            <span className="text-xl font-semibold tracking-tight text-foreground">
+            <span className="text-lg sm:text-xl font-semibold tracking-tight text-foreground">
               NextPrep
             </span>
             <div />
@@ -62,7 +62,7 @@ export default function Index() {
       <main className="relative z-10">
         {/* Hero Section - vertically centered */}
         <section className="min-h-[calc(100vh-65px)] flex items-center justify-center">
-          <div className="max-w-[1200px] mx-auto px-6 w-full">
+          <div className="max-w-[1200px] mx-auto px-4 sm:px-6 w-full">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -70,7 +70,7 @@ export default function Index() {
               className="text-center max-w-2xl mx-auto"
             >
               {/* Animated headline */}
-              <div className="h-[72px] sm:h-[84px] lg:h-[96px] flex items-center justify-center mb-6 overflow-hidden">
+              <div className="h-[56px] sm:h-[84px] lg:h-[96px] flex items-center justify-center mb-4 sm:mb-6 overflow-hidden">
                 <AnimatePresence mode="wait">
                   <motion.h1
                     key={phraseIndex}
@@ -78,7 +78,7 @@ export default function Index() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -24 }}
                     transition={{ duration: 0.4, ease: 'easeInOut' }}
-                    className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-foreground leading-[1.1]"
+                    className="text-3xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-foreground leading-[1.1]"
                   >
                     {HERO_PHRASES[phraseIndex]}
                   </motion.h1>
@@ -90,7 +90,7 @@ export default function Index() {
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.15 }}
-                className="text-lg text-muted-foreground max-w-lg mx-auto mb-10 leading-relaxed"
+                className="text-base sm:text-lg text-muted-foreground max-w-lg mx-auto mb-8 sm:mb-10 leading-relaxed px-2 sm:px-0"
               >
                 A focused SAT question bank designed for efficient practice.
               </motion.p>
@@ -124,12 +124,12 @@ export default function Index() {
 
       {/* Minimal footer */}
       <footer className="absolute bottom-0 w-full border-t border-border bg-background/80 backdrop-blur-sm">
-        <div className="max-w-[1200px] mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 py-3 sm:py-4">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-1 sm:gap-0">
             <p className="text-xs text-muted-foreground">
               &copy; 2026 NextPrep. All rights reserved.
             </p>
-            <p className="text-xs text-muted-foreground">
+            <p className="text-xs text-muted-foreground text-center">
               NextPrep is not affiliated with College Board or the SAT.
             </p>
           </div>

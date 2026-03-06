@@ -243,11 +243,11 @@ export default function Practice() {
         <div key={subSection} className="border border-border rounded-lg bg-background overflow-hidden">
           <button
             onClick={() => toggleSection(subSection)}
-            className="w-full flex items-center justify-between p-5 hover:bg-muted/30 transition-all duration-150"
+            className="w-full flex items-center justify-between p-3 sm:p-5 hover:bg-muted/30 transition-all duration-150"
           >
-            <span className="font-medium text-foreground">{subSection}</span>
-            <div className="flex items-center gap-3">
-              <span className="text-sm text-muted-foreground">{count} questions</span>
+            <span className="font-medium text-foreground text-sm sm:text-base">{subSection}</span>
+            <div className="flex items-center gap-2 sm:gap-3">
+              <span className="text-xs sm:text-sm text-muted-foreground">{count}</span>
               {expandedSections.includes(subSection) ? (
                 <ChevronDown className="w-4 h-4 text-muted-foreground" />
               ) : (
@@ -288,7 +288,7 @@ export default function Practice() {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-        <div className="max-w-[1200px] mx-auto px-6 py-4">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 py-3 sm:py-4">
           <div className="flex items-center justify-between">
             <Button
               variant="ghost"
@@ -305,21 +305,21 @@ export default function Practice() {
         </div>
       </header>
 
-      <main className="max-w-[800px] mx-auto px-6 py-12 lg:py-16">
+      <main className="max-w-[800px] mx-auto px-4 sm:px-6 py-8 sm:py-12 lg:py-16">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
         >
-          <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight text-foreground mb-3">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-foreground mb-2 sm:mb-3">
             Choose a Practice Topic
           </h1>
-          <p className="text-muted-foreground mb-10">
+          <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-10">
             Select a topic to begin practicing. The hierarchy is organized by subject and skill.
           </p>
         </motion.div>
 
-        <div className="space-y-10">
+        <div className="space-y-6 sm:space-y-10">
           {Object.entries(FILTER_STRUCTURE).map(([section, subSections], sectionIdx) => (
             <motion.div
               key={section}

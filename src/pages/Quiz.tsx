@@ -421,26 +421,26 @@ export default function Quiz() {
       <div className="flex-1 flex flex-col min-h-0 h-full overflow-hidden">
         {/* Top Bar - Bluebook Style */}
         <header className="shrink-0 z-30 bg-white border-b border-gray-200 animate-stagger-fade stagger-1">
-          <div className="flex items-center justify-between px-4 h-14">
-            {/* Left: Back arrow, Title with Directions dropdown */}
-            <div className="flex items-center gap-2">
+          <div className="flex items-center justify-between px-2 sm:px-4 h-12 sm:h-14">
+            {/* Left: Back arrow, Title */}
+            <div className="flex items-center gap-1 sm:gap-2 min-w-0">
               <button
                 onClick={() => navigate('/practice')}
-                className="p-2 rounded-md hover:bg-gray-100 transition-colors"
+                className="p-1.5 sm:p-2 rounded-md hover:bg-gray-100 transition-colors shrink-0"
                 data-testid="button-back-home"
               >
                 <ChevronLeft className="w-5 h-5 text-gray-600" />
               </button>
-              <div className="flex flex-col">
-                <span className="text-base font-medium text-gray-900">SAT® Suite Question Bank</span>
-                <button className="flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700">
+              <div className="flex flex-col min-w-0">
+                <span className="text-sm sm:text-base font-medium text-gray-900 truncate">Question Bank</span>
+                <button className="hidden sm:flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700">
                   Directions <ChevronDown className="w-3 h-3" />
                 </button>
               </div>
             </div>
 
-            {/* Center: Timer with Hide toggle */}
-            <div className="flex items-center gap-2">
+            {/* Center: Timer with Hide toggle - hidden on very small screens */}
+            <div className="hidden sm:flex items-center gap-2">
               <Timer 
                 questionId={currentQuestion.id} 
                 isHidden={isTimerHidden}
@@ -458,20 +458,20 @@ export default function Quiz() {
               </button>
             </div>
 
-            {/* Right: Calculator (Math), Reference (Math), Highlight (English), Fullscreen */}
-            <div className="flex items-center gap-1">
+            {/* Right: Tools */}
+            <div className="flex items-center gap-0.5 sm:gap-1">
               {/* Calculator - Math only */}
               {isMathQuestion && (
                 <button
                   onClick={() => setShowCalculator(!showCalculator)}
                   className={cn(
-                    "flex flex-col items-center gap-0.5 px-3 py-1 rounded-md transition-colors",
+                    "flex flex-col items-center gap-0.5 px-2 sm:px-3 py-1 rounded-md transition-colors",
                     showCalculator ? "bg-gray-100" : "hover:bg-gray-100"
                   )}
                   data-testid="button-calculator"
                 >
-                  <Calculator className="w-5 h-5 text-gray-600" />
-                  <span className="text-xs text-gray-600">Calculator</span>
+                  <Calculator className="w-4 sm:w-5 h-4 sm:h-5 text-gray-600" />
+                  <span className="text-[10px] sm:text-xs text-gray-600 hidden sm:block">Calculator</span>
                 </button>
               )}
               
@@ -480,13 +480,13 @@ export default function Quiz() {
                 <button
                   onClick={() => setShowReference(!showReference)}
                   className={cn(
-                    "flex flex-col items-center gap-0.5 px-3 py-1 rounded-md transition-colors",
+                    "flex flex-col items-center gap-0.5 px-2 sm:px-3 py-1 rounded-md transition-colors",
                     showReference ? "bg-gray-100" : "hover:bg-gray-100"
                   )}
                   data-testid="button-reference"
                 >
-                  <BookOpen className="w-5 h-5 text-gray-600" />
-                  <span className="text-xs text-gray-600">Reference</span>
+                  <BookOpen className="w-4 sm:w-5 h-4 sm:h-5 text-gray-600" />
+                  <span className="text-[10px] sm:text-xs text-gray-600 hidden sm:block">Reference</span>
                 </button>
               )}
               
@@ -495,19 +495,19 @@ export default function Quiz() {
                 <button
                   onClick={() => setShowHighlightTool(!showHighlightTool)}
                   className={cn(
-                    "flex flex-col items-center gap-0.5 px-3 py-1 rounded-md transition-colors",
+                    "flex flex-col items-center gap-0.5 px-2 sm:px-3 py-1 rounded-md transition-colors",
                     showHighlightTool ? "bg-gray-100" : "hover:bg-gray-100"
                   )}
                   data-testid="button-highlight-toggle"
                 >
                   <Pencil className="w-4 h-4 text-gray-600" />
-                  <span className="text-xs text-gray-600">Highlight</span>
+                  <span className="text-[10px] sm:text-xs text-gray-600 hidden sm:block">Highlight</span>
                 </button>
               )}
               
               <button
                 onClick={toggleFullscreen}
-                className="flex flex-col items-center gap-0.5 px-3 py-1 rounded-md hover:bg-gray-100 transition-colors"
+                className="hidden sm:flex flex-col items-center gap-0.5 px-2 sm:px-3 py-1 rounded-md hover:bg-gray-100 transition-colors"
                 data-testid="button-fullscreen"
               >
                 {isFullscreen ? (
@@ -515,14 +515,14 @@ export default function Quiz() {
                 ) : (
                   <Maximize className="w-4 h-4 text-gray-600" />
                 )}
-                <span className="text-xs text-gray-600">Fullscreen</span>
+                <span className="text-[10px] sm:text-xs text-gray-600">Fullscreen</span>
               </button>
             </div>
           </div>
 
           {/* Highlight Tool Bar - English only */}
           {showHighlightTool && !isMathQuestion && (
-            <div className="px-4 py-2 border-t border-gray-200 bg-gray-50">
+            <div className="px-3 sm:px-4 py-2 border-t border-gray-200 bg-gray-50">
               <HighlightTool
                 selectedColor={selectedHighlightColor}
                 onColorSelect={setSelectedHighlightColor}
@@ -531,10 +531,10 @@ export default function Quiz() {
           )}
         </header>
 
-        {/* Question Content - Two Panel Layout */}
-        <main className="flex-1 flex flex-col lg:flex-row min-h-0 overflow-hidden">
+        {/* Question Content - Two Panel Layout (stacked on mobile) */}
+        <main className="flex-1 flex flex-col lg:flex-row min-h-0 overflow-auto lg:overflow-hidden">
           {/* Left Panel - Passage */}
-          <div className="flex-1 p-6 overflow-y-auto border-r border-gray-200 bg-white">
+          <div className="lg:flex-1 p-4 sm:p-6 overflow-visible lg:overflow-y-auto border-b lg:border-b-0 lg:border-r border-gray-200 bg-white">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentQuestion.id}
@@ -556,7 +556,7 @@ export default function Quiz() {
           </div>
 
           {/* Right Panel - Question and Options */}
-          <div className="flex-1 p-6 overflow-y-auto bg-bluebook-panel">
+          <div className="lg:flex-1 p-4 sm:p-6 overflow-visible lg:overflow-y-auto bg-bluebook-panel">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentQuestion.id}
@@ -566,15 +566,15 @@ export default function Quiz() {
                 transition={{ duration: 0.2, delay: 0.1 }}
               >
                 {/* Question Header */}
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-3">
-                    <span className="flex items-center justify-center w-8 h-8 bg-gray-900 text-white text-sm font-bold rounded" data-testid="text-question-number">
+                <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
+                  <div className="flex items-center gap-2 sm:gap-3">
+                    <span className="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 bg-gray-900 text-white text-xs sm:text-sm font-bold rounded" data-testid="text-question-number">
                       {currentIndex + 1}
                     </span>
                     <button
                       onClick={handleToggleMark}
                       className={cn(
-                        "flex items-center gap-2 px-3 py-1.5 rounded-md text-sm transition-colors",
+                        "flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 rounded-md text-xs sm:text-sm transition-colors",
                         currentState?.markedForReview
                           ? "bg-amber-50 text-amber-700 border border-amber-200"
                           : "bg-gray-100 text-gray-600 hover:bg-gray-200"
@@ -582,25 +582,26 @@ export default function Quiz() {
                       data-testid="button-mark-review"
                     >
                       <Bookmark className={cn(
-                        "w-4 h-4",
+                        "w-3.5 h-3.5 sm:w-4 sm:h-4",
                         currentState?.markedForReview && "fill-amber-500"
                       )} />
-                      Mark for Review
+                      <span className="hidden sm:inline">Mark for Review</span>
+                      <span className="sm:hidden">Mark</span>
                     </button>
                   </div>
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-2 sm:gap-3">
                     <button 
-                      className="flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700"
+                      className="flex items-center gap-1 text-xs sm:text-sm text-gray-500 hover:text-gray-700"
                       data-testid="button-report"
                     >
-                      <Flag className="w-4 h-4" />
-                      Report
+                      <Flag className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                      <span className="hidden sm:inline">Report</span>
                     </button>
                     {/* Elimination Tool Toggle */}
                     <button
                       onClick={() => setIsEliminationMode(!isEliminationMode)}
                       className={cn(
-                        "flex items-center justify-center w-8 h-8 rounded transition-colors",
+                        "flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded transition-colors",
                         isEliminationMode 
                           ? "bg-gray-900 text-white" 
                           : "text-gray-500 hover:bg-gray-100"
@@ -608,30 +609,28 @@ export default function Quiz() {
                       title={isEliminationMode ? "Exit elimination mode" : "Enter elimination mode"}
                       data-testid="button-elimination-toggle"
                     >
-                      {/* Custom strikethrough S icon */}
-                      <span className="relative text-sm font-bold">
+                      <span className="relative text-xs sm:text-sm font-bold">
                         S
                         <span className="absolute inset-0 flex items-center justify-center">
                           <span className="w-full h-[1.5px] bg-current rotate-[-20deg]" />
                         </span>
                       </span>
                     </button>
-                    {/* Undo Eliminations - shows when there are eliminations */}
                     {hasEliminations && (
                       <button
                         onClick={handleUndoEliminations}
-                        className="flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700"
+                        className="flex items-center gap-1 text-xs sm:text-sm text-gray-500 hover:text-gray-700"
                         title="Undo all eliminations"
                         data-testid="button-undo-eliminations"
                       >
-                        <Undo2 className="w-4 h-4" />
-                        Undo
+                        <Undo2 className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                        <span className="hidden sm:inline">Undo</span>
                       </button>
                     )}
                   </div>
                 </div>
 
-                {/* Section Badge - Show topic only in Practice mode */}
+                {/* Section Badge */}
                 {isPracticeMode && practiceTopicInfo && (
                   <div className="flex items-center gap-2 mb-4">
                     <span className="px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary" data-testid="badge-section">
@@ -648,20 +647,20 @@ export default function Quiz() {
                   </div>
                 )}
 
-                {/* Question Text - Use LaTeX for Math questions */}
+                {/* Question Text */}
                 {isMathQuestion ? (
                   <LatexRenderer 
                     content={currentQuestion.questionPrompt || ''} 
-                    className="quiz-question mb-6 text-gray-900"
+                    className="quiz-question mb-4 sm:mb-6 text-gray-900"
                   />
                 ) : (
                   <PassageRenderer 
                     content={currentQuestion.questionPrompt || 'Based on the text, select the best answer to the question.'}
-                    className="quiz-question mb-6"
+                    className="quiz-question mb-4 sm:mb-6"
                   />
                 )}
 
-                {/* Grid-In Input for Math questions without options */}
+                {/* Grid-In or Multiple Choice */}
                 {isGridInQuestion ? (
                   <GridInInput
                     value={currentState?.userAnswer || ''}
@@ -671,13 +670,12 @@ export default function Quiz() {
                     correctAnswer={currentQuestion.correctAnswer}
                   />
                 ) : (
-                  /* Multiple Choice Options */
-                  <div className="space-y-3">
+                  <div className="space-y-2 sm:space-y-3">
                     {Object.entries(currentQuestion.options).map(([letter, text]) => (
                       <QuestionOption
                         key={letter}
                         letter={letter}
-                        text={isMathQuestion ? text : text}
+                        text={text}
                         isSelected={currentState?.userAnswer === letter}
                         isEliminated={currentState?.eliminatedOptions?.includes(letter) || false}
                         isChecked={currentState?.checked || false}
@@ -698,8 +696,79 @@ export default function Quiz() {
 
         {/* Bottom Navigation - Bluebook Style */}
         <footer className="shrink-0 bg-white border-t border-gray-200">
-          <div className="flex items-center justify-between px-4 py-3">
-            {/* Left: Question Count */}
+          {/* Mobile: two-row layout */}
+          <div className="sm:hidden px-3 py-2 space-y-2">
+            <div className="flex items-center justify-between">
+              <button 
+                onClick={() => setShowNavigator(true)}
+                className="flex items-center gap-1.5 px-3 py-1.5 bg-gray-900 text-white rounded-full text-xs font-medium hover:bg-gray-800 transition-colors"
+                data-testid="button-question-navigator"
+              >
+                {currentIndex + 1}/{filteredQuestions.length}
+                <ChevronLeft className="w-3.5 h-3.5 rotate-[-90deg]" />
+              </button>
+              <div className="flex items-center gap-1.5">
+                <button
+                  onClick={() => setShowExplanation(true)}
+                  className="flex items-center gap-1 px-3 py-1.5 bg-amber-500 text-white rounded-full text-xs font-medium hover:bg-amber-600 transition-colors"
+                  data-testid="button-explanation"
+                >
+                  <Lightbulb className="w-3.5 h-3.5" />
+                  Explain
+                </button>
+                {!currentState?.checked ? (
+                  <button
+                    onClick={handleCheckAnswer}
+                    disabled={!currentState?.userAnswer}
+                    className={cn(
+                      "flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-medium transition-colors",
+                      currentState?.userAnswer
+                        ? "bg-green-500 text-white hover:bg-green-600"
+                        : "bg-gray-200 text-gray-400 cursor-not-allowed"
+                    )}
+                    data-testid="button-check-answer"
+                  >
+                    <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    Check
+                  </button>
+                ) : (
+                  <span className={cn(
+                    "flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-medium",
+                    isCorrect ? "bg-green-500 text-white" : "bg-red-500 text-white"
+                  )} data-testid="text-result">
+                    {isCorrect ? "Correct!" : "Incorrect"}
+                  </span>
+                )}
+              </div>
+            </div>
+            <div className="flex items-center justify-between">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => handleNavigate('prev')}
+                disabled={currentIndex === 0}
+                className="gap-1 px-3 h-8 text-xs border-gray-300"
+                data-testid="button-previous"
+              >
+                <ChevronLeft className="w-3.5 h-3.5" /> Prev
+              </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => handleNavigate('next')}
+                disabled={currentIndex === filteredQuestions.length - 1}
+                className="gap-1 px-3 h-8 text-xs border-gray-300"
+                data-testid="button-next"
+              >
+                Next <ChevronRight className="w-3.5 h-3.5" />
+              </Button>
+            </div>
+          </div>
+
+          {/* Desktop: single-row layout */}
+          <div className="hidden sm:flex items-center justify-between px-4 py-3">
             <div className="flex items-center gap-3">
               <button 
                 onClick={() => setShowNavigator(true)}
@@ -715,8 +784,6 @@ export default function Quiz() {
                 </span>
               )}
             </div>
-
-            {/* Center: Action Buttons */}
             <div className="flex items-center gap-2">
               <button
                 onClick={() => setShowExplanation(true)}
@@ -752,8 +819,6 @@ export default function Quiz() {
                 </span>
               )}
             </div>
-
-            {/* Right: Navigation */}
             <div className="flex items-center gap-2">
               <Button
                 variant="outline"
@@ -779,7 +844,7 @@ export default function Quiz() {
           </div>
           
           {/* SAT Disclaimer */}
-          <div className="text-center py-2 text-xs text-gray-400 border-t border-gray-100">
+          <div className="text-center py-1.5 sm:py-2 text-[10px] sm:text-xs text-gray-400 border-t border-gray-100">
             SAT is a trademark registered by the College Board, which is not affiliated with, and does not endorse, this product.
           </div>
         </footer>
