@@ -421,26 +421,26 @@ export default function Quiz() {
       <div className="flex-1 flex flex-col min-h-0 h-full overflow-hidden">
         {/* Top Bar - Bluebook Style */}
         <header className="shrink-0 z-30 bg-white border-b border-gray-200 animate-stagger-fade stagger-1">
-          <div className="flex items-center justify-between px-4 h-14">
-            {/* Left: Back arrow, Title with Directions dropdown */}
-            <div className="flex items-center gap-2">
+          <div className="flex items-center justify-between px-2 sm:px-4 h-12 sm:h-14">
+            {/* Left: Back arrow, Title */}
+            <div className="flex items-center gap-1 sm:gap-2 min-w-0">
               <button
                 onClick={() => navigate('/practice')}
-                className="p-2 rounded-md hover:bg-gray-100 transition-colors"
+                className="p-1.5 sm:p-2 rounded-md hover:bg-gray-100 transition-colors shrink-0"
                 data-testid="button-back-home"
               >
                 <ChevronLeft className="w-5 h-5 text-gray-600" />
               </button>
-              <div className="flex flex-col">
-                <span className="text-base font-medium text-gray-900">SAT® Suite Question Bank</span>
-                <button className="flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700">
+              <div className="flex flex-col min-w-0">
+                <span className="text-sm sm:text-base font-medium text-gray-900 truncate">Question Bank</span>
+                <button className="hidden sm:flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700">
                   Directions <ChevronDown className="w-3 h-3" />
                 </button>
               </div>
             </div>
 
-            {/* Center: Timer with Hide toggle */}
-            <div className="flex items-center gap-2">
+            {/* Center: Timer with Hide toggle - hidden on very small screens */}
+            <div className="hidden sm:flex items-center gap-2">
               <Timer 
                 questionId={currentQuestion.id} 
                 isHidden={isTimerHidden}
@@ -458,20 +458,20 @@ export default function Quiz() {
               </button>
             </div>
 
-            {/* Right: Calculator (Math), Reference (Math), Highlight (English), Fullscreen */}
-            <div className="flex items-center gap-1">
+            {/* Right: Tools */}
+            <div className="flex items-center gap-0.5 sm:gap-1">
               {/* Calculator - Math only */}
               {isMathQuestion && (
                 <button
                   onClick={() => setShowCalculator(!showCalculator)}
                   className={cn(
-                    "flex flex-col items-center gap-0.5 px-3 py-1 rounded-md transition-colors",
+                    "flex flex-col items-center gap-0.5 px-2 sm:px-3 py-1 rounded-md transition-colors",
                     showCalculator ? "bg-gray-100" : "hover:bg-gray-100"
                   )}
                   data-testid="button-calculator"
                 >
-                  <Calculator className="w-5 h-5 text-gray-600" />
-                  <span className="text-xs text-gray-600">Calculator</span>
+                  <Calculator className="w-4 sm:w-5 h-4 sm:h-5 text-gray-600" />
+                  <span className="text-[10px] sm:text-xs text-gray-600 hidden sm:block">Calculator</span>
                 </button>
               )}
               
@@ -480,13 +480,13 @@ export default function Quiz() {
                 <button
                   onClick={() => setShowReference(!showReference)}
                   className={cn(
-                    "flex flex-col items-center gap-0.5 px-3 py-1 rounded-md transition-colors",
+                    "flex flex-col items-center gap-0.5 px-2 sm:px-3 py-1 rounded-md transition-colors",
                     showReference ? "bg-gray-100" : "hover:bg-gray-100"
                   )}
                   data-testid="button-reference"
                 >
-                  <BookOpen className="w-5 h-5 text-gray-600" />
-                  <span className="text-xs text-gray-600">Reference</span>
+                  <BookOpen className="w-4 sm:w-5 h-4 sm:h-5 text-gray-600" />
+                  <span className="text-[10px] sm:text-xs text-gray-600 hidden sm:block">Reference</span>
                 </button>
               )}
               
@@ -495,19 +495,19 @@ export default function Quiz() {
                 <button
                   onClick={() => setShowHighlightTool(!showHighlightTool)}
                   className={cn(
-                    "flex flex-col items-center gap-0.5 px-3 py-1 rounded-md transition-colors",
+                    "flex flex-col items-center gap-0.5 px-2 sm:px-3 py-1 rounded-md transition-colors",
                     showHighlightTool ? "bg-gray-100" : "hover:bg-gray-100"
                   )}
                   data-testid="button-highlight-toggle"
                 >
                   <Pencil className="w-4 h-4 text-gray-600" />
-                  <span className="text-xs text-gray-600">Highlight</span>
+                  <span className="text-[10px] sm:text-xs text-gray-600 hidden sm:block">Highlight</span>
                 </button>
               )}
               
               <button
                 onClick={toggleFullscreen}
-                className="flex flex-col items-center gap-0.5 px-3 py-1 rounded-md hover:bg-gray-100 transition-colors"
+                className="hidden sm:flex flex-col items-center gap-0.5 px-2 sm:px-3 py-1 rounded-md hover:bg-gray-100 transition-colors"
                 data-testid="button-fullscreen"
               >
                 {isFullscreen ? (
@@ -515,14 +515,14 @@ export default function Quiz() {
                 ) : (
                   <Maximize className="w-4 h-4 text-gray-600" />
                 )}
-                <span className="text-xs text-gray-600">Fullscreen</span>
+                <span className="text-[10px] sm:text-xs text-gray-600">Fullscreen</span>
               </button>
             </div>
           </div>
 
           {/* Highlight Tool Bar - English only */}
           {showHighlightTool && !isMathQuestion && (
-            <div className="px-4 py-2 border-t border-gray-200 bg-gray-50">
+            <div className="px-3 sm:px-4 py-2 border-t border-gray-200 bg-gray-50">
               <HighlightTool
                 selectedColor={selectedHighlightColor}
                 onColorSelect={setSelectedHighlightColor}
