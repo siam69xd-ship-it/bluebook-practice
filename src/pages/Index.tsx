@@ -124,12 +124,12 @@ export default function Index() {
 
       {/* Minimal footer */}
       <footer className="absolute bottom-0 w-full border-t border-border bg-background/80 backdrop-blur-sm">
-        <div className="max-w-[1200px] mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 py-3 sm:py-4">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-1 sm:gap-0">
             <p className="text-xs text-muted-foreground">
               &copy; 2026 NextPrep. All rights reserved.
             </p>
-            <p className="text-xs text-muted-foreground">
+            <p className="text-xs text-muted-foreground text-center">
               NextPrep is not affiliated with College Board or the SAT.
             </p>
           </div>
