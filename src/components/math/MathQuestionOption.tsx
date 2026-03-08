@@ -39,7 +39,7 @@ export default function MathQuestionOption({
     if (showResult && isCorrect) return 'border-green-500';
     if (showResult && isIncorrect) return 'border-red-400';
     if (isSelected && !showResult) return 'border-foreground';
-    return 'border-foreground/30 hover:border-foreground/50';
+    return 'border-foreground/30 hover:border-foreground/60';
   };
 
   const getBackgroundColor = () => {
