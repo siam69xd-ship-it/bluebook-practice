@@ -16,6 +16,24 @@ function LatexRendererComponent({ content, className = '', displayMode = false }
     if (!containerRef.current || !content) return;
 
     let processedContent = content;
+
+    // Fix broken image paths: /images/diagrams/graphs/ -> /images/diagrams/diagram/graphs/
+    processedContent = processedContent.replace(
+      /src='\/images\/diagrams\/(?!diagram\/)/g,
+      "src='/images/diagrams/diagram/"
+    ).replace(
+      /src="\/images\/diagrams\/(?!diagram\/)/g,
+      'src="/images/diagrams/diagram/'
+    );
+
+    // Style any <img> tags for proper display (no cropping)
+    processedContent = processedContent.replace(
+      /<img([^>]*)>/gi,
+      (match, attrs) => {
+        if (attrs.includes('style=')) return match;
+        return `<img${attrs} style="max-width:100%;height:auto;display:block;margin:8px auto;background:#fff;padding:4px;">`;
+      }
+    );
     
     // CRITICAL: Normalize double-escaped backslashes from JSON (\\frac → \frac, \\circ → \circ)
     // JSON files often have escaped backslashes that need to be converted for KaTeX
