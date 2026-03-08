@@ -75,7 +75,8 @@ export default function Quiz() {
   const [showCalculator, setShowCalculator] = useState(false);
   const [showReference, setShowReference] = useState(false);
   const [gridInAnswer, setGridInAnswer] = useState('');
-  const [isInitialLoad, setIsInitialLoad] = useState(true); // Track initial load to avoid resetting index
+  const [isInitialLoad, setIsInitialLoad] = useState(true);
+  const [prevFilter, setPrevFilter] = useState<string>('');
 
   // Fetch attempt counts for logged-in users
   const { data: attemptCounts = {} } = useQuery<Record<string, number>>({
