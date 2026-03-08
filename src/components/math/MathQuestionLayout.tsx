@@ -185,7 +185,7 @@ export default function MathQuestionLayout({
                       src={(currentQuestion as any).image} 
                       alt="Question Diagram" 
                       className="max-w-[280px] sm:max-w-[360px] w-auto h-auto bg-white p-2"
-                      style={{ mixBlendMode: 'multiply', filter: 'contrast(1.5) brightness(1.15) saturate(0)' }}
+                      style={{ mixBlendMode: 'multiply', filter: 'contrast(3) brightness(1.6) saturate(0)' }}
                       onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
                     />
                   </div>
