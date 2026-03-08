@@ -183,7 +183,7 @@ export default function MathQuestionLayout({
               )}
 
               {/* Question text */}
-              <div className="mb-6 sm:mb-8">
+              <div className="mb-3 sm:mb-4">
                 <LatexRenderer content={currentQuestion.questionPrompt || ''} className="text-[15px] sm:text-[17px] leading-relaxed text-foreground" />
                 {(currentQuestion as any).image && (
                   <div className="mt-4 sm:mt-6 flex justify-center">
