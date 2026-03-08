@@ -137,15 +137,20 @@ export default function Practice() {
     navigate('/quiz');
   };
 
-  const TopicLeaf = ({ label, count, onClick, depth }: { label: string; count: number; onClick: () => void; depth: number }) => {
+  const TopicLeaf = ({ label, count, onClick, depth, index = 0 }: { label: string; count: number; onClick: () => void; depth: number; index?: number }) => {
     const disabled = count === 0;
     return (
-      <button
+      <motion.button
+        initial={{ opacity: 0, y: 4, filter: 'blur(4px)', scale: 0.95 }}
+        animate={{ opacity: 1, y: 0, filter: 'blur(0px)', scale: 1 }}
+        transition={{ duration: 0.18, delay: index * 0.025, ease: [0.4, 0, 0.2, 1] }}
         onClick={disabled ? undefined : onClick}
         disabled={disabled}
+        whileHover={disabled ? {} : { x: 3, backgroundColor: 'hsl(var(--muted) / 0.5)' }}
+        whileTap={disabled ? {} : { scale: 0.995 }}
         className={cn(
           'w-full flex items-center justify-between py-3.5 transition-colors duration-150 group border-b border-border/60 last:border-b-0',
-          disabled ? 'opacity-30 cursor-not-allowed' : 'hover:bg-muted/40'
+          disabled ? 'opacity-30 cursor-not-allowed' : ''
         )}
         style={{ paddingLeft: `${depth * 20 + 20}px`, paddingRight: '20px' }}
       >
@@ -153,24 +158,29 @@ export default function Practice() {
           {label}
         </span>
         <div className="flex items-center gap-3">
-          <span className="text-[13px] text-muted-foreground tabular-nums">{count}</span>
+          <span className="text-[13px] text-muted-foreground tabular-nums group-hover:text-foreground/60 transition-colors duration-150">{count}</span>
           {!disabled && (
             <ArrowRight className="w-3.5 h-3.5 text-muted-foreground/0 group-hover:text-muted-foreground group-hover:translate-x-0.5 transition-all duration-200" />
           )}
         </div>
-      </button>
+      </motion.button>
     );
   };
 
-  const ExpandableRow = ({ label, count, depth, children }: { label: string; count: number; depth: number; children: React.ReactNode }) => {
+  const ExpandableRow = ({ label, count, depth, children, index = 0 }: { label: string; count: number; depth: number; children: React.ReactNode; index?: number }) => {
     const isOpen = expandedSections.includes(label);
     return (
-      <div>
-        <button
+      <motion.div
+        initial={{ opacity: 0, y: 4, filter: 'blur(4px)', scale: 0.95 }}
+        animate={{ opacity: 1, y: 0, filter: 'blur(0px)', scale: 1 }}
+        transition={{ duration: 0.18, delay: index * 0.025, ease: [0.4, 0, 0.2, 1] }}
+      >
+        <motion.button
           onClick={() => toggleSection(label)}
+          whileHover={{ x: 2, backgroundColor: 'hsl(var(--muted) / 0.4)' }}
+          whileTap={{ scale: 0.998 }}
           className={cn(
-            'w-full flex items-center justify-between py-3.5 transition-colors duration-150 border-b border-border/60',
-            'hover:bg-muted/40'
+            'w-full flex items-center justify-between py-3.5 transition-colors duration-150 border-b border-border/60'
           )}
           style={{ paddingLeft: `${depth * 20 + 20}px`, paddingRight: '20px' }}
         >
@@ -189,7 +199,7 @@ export default function Practice() {
               <ChevronDown className="w-4 h-4 text-muted-foreground" />
             </motion.div>
           </div>
-        </button>
+        </motion.button>
         <AnimatePresence initial={false}>
           {isOpen && (
             <motion.div
@@ -203,17 +213,18 @@ export default function Practice() {
             </motion.div>
           )}
         </AnimatePresence>
-      </div>
+      </motion.div>
     );
   };
 
   const renderSubTopics = (parentTopic: string, subTopics: Record<string, null>, subSection: string, mainSection: string) => {
-    return Object.keys(subTopics).map(subTopic => (
+    return Object.keys(subTopics).map((subTopic, i) => (
       <TopicLeaf
         key={subTopic}
         label={subTopic}
         count={getCount(subSection, parentTopic, subTopic)}
         depth={3}
+        index={i}
         onClick={() => startPractice({
           section: mainSection === 'English Reading & Writing' ? 'English' : 'Math',
           subSection, topic: parentTopic, subTopic,
@@ -223,13 +234,13 @@ export default function Practice() {
   };
 
   const renderTopics = (subSection: string, topics: Record<string, any>, mainSection: string) => {
-    return Object.entries(topics).map(([topic, subTopics]) => {
+    return Object.entries(topics).map(([topic, subTopics], i) => {
       const count = getCount(subSection, topic);
       const hasSubTopics = subTopics !== null && typeof subTopics === 'object';
 
       if (hasSubTopics) {
         return (
-          <ExpandableRow key={topic} label={topic} count={count} depth={2}>
+          <ExpandableRow key={topic} label={topic} count={count} depth={2} index={i}>
             {renderSubTopics(topic, subTopics, subSection, mainSection)}
           </ExpandableRow>
         );
@@ -241,6 +252,7 @@ export default function Practice() {
           label={topic}
           count={count}
           depth={2}
+          index={i}
           onClick={() => startPractice({
             section: mainSection === 'English Reading & Writing' ? 'English' : 'Math',
             subSection, topic,
@@ -251,16 +263,22 @@ export default function Practice() {
   };
 
   const renderSubSections = (subSections: Record<string, any>, mainSection: string) => {
-    return Object.entries(subSections).map(([subSection, topics]) => {
+    return Object.entries(subSections).map(([subSection, topics], i) => {
       const count = getCount(subSection);
       const hasTopics = topics !== null && typeof topics === 'object';
 
       return (
-        <div key={subSection} className="border border-border rounded-lg overflow-hidden bg-background">
+        <motion.div
+          key={subSection}
+          initial={{ opacity: 0, y: 4, filter: 'blur(4px)', scale: 0.95 }}
+          animate={{ opacity: 1, y: 0, filter: 'blur(0px)', scale: 1 }}
+          transition={{ duration: 0.18, delay: i * 0.025, ease: [0.4, 0, 0.2, 1] }}
+          className="border border-border rounded-lg overflow-hidden bg-background"
+        >
           <ExpandableRow label={subSection} count={count} depth={0}>
             {hasTopics && renderTopics(subSection, topics, mainSection)}
           </ExpandableRow>
-        </div>
+        </motion.div>
       );
     });
   };
