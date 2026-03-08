@@ -224,27 +224,115 @@ function LatexRendererComponent({ content, className = '', displayMode = false }
     // Restore escaped dollar signs as regular dollar signs (currency)
     processedContent = processedContent.replace(/__ESCAPED_DOLLAR__/g, '$');
     
+    // Helper: match balanced braces starting at position
+    const matchBalancedBraces = (text: string, startIdx: number): string | null => {
+      if (text[startIdx] !== '{') return null;
+      let depth = 0;
+      for (let j = startIdx; j < text.length; j++) {
+        if (text[j] === '{') depth++;
+        else if (text[j] === '}') depth--;
+        if (depth === 0) return text.slice(startIdx + 1, j);
+      }
+      return null;
+    };
+
     // Handle standalone \frac{num}{den} not wrapped in $
-    processedContent = processedContent.replace(/(?<![\\$])\\frac\{([^}]*)\}\{([^}]*)\}/g, (match, num, den) => {
-      return renderKatex(`\\frac{${num}}{${den}}`, false);
-    });
+    {
+      let changed = true;
+      while (changed) {
+        changed = false;
+        const m = processedContent.match(/(?<![\\$])\\frac\{/);
+        if (m && m.index !== undefined) {
+          const idx = m.index;
+          const numStart = idx + 5; // \frac length
+          const num = matchBalancedBraces(processedContent, numStart);
+          if (num !== null) {
+            const denStart = numStart + num.length + 2;
+            const den = matchBalancedBraces(processedContent, denStart);
+            if (den !== null) {
+              const fullLen = 5 + num.length + 2 + den.length + 2;
+              const rendered = renderKatex(`\\frac{${num}}{${den}}`, false);
+              processedContent = processedContent.slice(0, idx) + rendered + processedContent.slice(idx + fullLen);
+              changed = true;
+            }
+          }
+        }
+      }
+    }
     
-    // Handle standalone \sqrt{content} or \sqrt[n]{content}
-    processedContent = processedContent.replace(/(?<![\\$])\\sqrt(?:\[([^\]]*)\])?\{([^}]*)\}/g, (match, index, content) => {
-      const latex = index ? `\\sqrt[${index}]{${content}}` : `\\sqrt{${content}}`;
-      return renderKatex(latex, false);
-    });
+    // Handle standalone \sqrt{content} or \sqrt[n]{content} with nested braces
+    {
+      let changed = true;
+      while (changed) {
+        changed = false;
+        const sqrtMatch = processedContent.match(/(?<![\\$])\\sqrt(\[[^\]]*\])?\{/);
+        if (sqrtMatch && sqrtMatch.index !== undefined) {
+          const idx = sqrtMatch.index;
+          const bracketPart = sqrtMatch[1] || '';
+          const braceStart = idx + 5 + bracketPart.length; // \sqrt + bracket + {
+          const inner = matchBalancedBraces(processedContent, braceStart);
+          if (inner !== null) {
+            const fullLen = 5 + bracketPart.length + inner.length + 2;
+            const latex = bracketPart ? `\\sqrt${bracketPart}{${inner}}` : `\\sqrt{${inner}}`;
+            const rendered = renderKatex(latex, false);
+            processedContent = processedContent.slice(0, idx) + rendered + processedContent.slice(idx + fullLen);
+            changed = true;
+          }
+        }
+      }
+    }
     
-    // Handle standalone \text{content}
-    processedContent = processedContent.replace(/(?<![\\$])\\text\{([^}]*)\}/g, (match, content) => {
-      return renderKatex(`\\text{${content}}`, false);
-    });
+    // Handle standalone \text{content} with nested braces
+    {
+      let changed = true;
+      while (changed) {
+        changed = false;
+        const m = processedContent.match(/(?<![\\$])\\text\{/);
+        if (m && m.index !== undefined) {
+          const idx = m.index;
+          const braceStart = idx + 5;
+          const inner = matchBalancedBraces(processedContent, braceStart);
+          if (inner !== null) {
+            const fullLen = 5 + inner.length + 2;
+            const rendered = renderKatex(`\\text{${inner}}`, false);
+            processedContent = processedContent.slice(0, idx) + rendered + processedContent.slice(idx + fullLen);
+            changed = true;
+          }
+        }
+      }
+    }
     
-    // Handle standalone \overline{content}
-    processedContent = processedContent.replace(/(?<![\\$])\\overline\{([^}]*)\}/g, (match, content) => {
-      return renderKatex(`\\overline{${content}}`, false);
-    });
+    // Handle standalone \overline{content} with nested braces
+    {
+      let changed = true;
+      while (changed) {
+        changed = false;
+        const m = processedContent.match(/(?<![\\$])\\overline\{/);
+        if (m && m.index !== undefined) {
+          const idx = m.index;
+          const braceStart = idx + 9;
+          const inner = matchBalancedBraces(processedContent, braceStart);
+          if (inner !== null) {
+            const fullLen = 9 + inner.length + 2;
+            const rendered = renderKatex(`\\overline{${inner}}`, false);
+            processedContent = processedContent.slice(0, idx) + rendered + processedContent.slice(idx + fullLen);
+            changed = true;
+          }
+        }
+      }
+    }
     
+    // Handle standalone \left...\right expressions (unmatched from broken LaTeX)
+    // Clean up raw \left( \right) that leaked outside math mode
+    processedContent = processedContent.replace(/\\left[(\[{|.]/g, (match) => {
+      const delim = match.slice(5);
+      return delim === '(' ? '(' : delim === '[' ? '[' : delim === '{' ? '{' : delim === '|' ? '|' : delim;
+    });
+    processedContent = processedContent.replace(/\\right[)\]}|.]/g, (match) => {
+      const delim = match.slice(6);
+      return delim === ')' ? ')' : delim === ']' ? ']' : delim === '}' ? '}' : delim === '|' ? '|' : delim;
+    });
+
     // Handle standalone \pi, \theta, \cos, \sin, \tan (common trig)
     processedContent = processedContent.replace(/(?<![\\$a-zA-Z])\\(pi|theta|cos|sin|tan|alpha|beta|gamma|delta|epsilon|sigma|omega|infty|pm|times|div|cdot|leq|geq|neq|approx|equiv|implies|Rightarrow|ge|le)(?![a-zA-Z{])/g, (match, symbol) => {
       return renderKatex(`\\${symbol}`, false);
