@@ -18,6 +18,7 @@ interface MathQuestionOptionProps {
   correctAnswer?: string;
   onCheckOption?: () => void;
   hideCheckButton?: boolean;
+  optionImage?: string | null;
 }
 
 export default function MathQuestionOption({
