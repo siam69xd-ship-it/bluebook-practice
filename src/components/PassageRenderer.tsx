@@ -13,7 +13,16 @@ function containsHtml(text: string): boolean {
 export function PassageRenderer({ content, className }: PassageRendererProps) {
   if (!content) return null;
 
-  const hasHtml = containsHtml(content);
+  // Fix broken image paths: /images/diagrams/graphs/ -> /images/diagrams/diagram/graphs/
+  const fixedContent = content.replace(
+    /src='\/images\/diagrams\/(?!diagram\/)/g,
+    "src='/images/diagrams/diagram/"
+  ).replace(
+    /src="\/images\/diagrams\/(?!diagram\/)/g,
+    'src="/images/diagrams/diagram/'
+  );
+
+  const hasHtml = containsHtml(fixedContent);
 
   if (hasHtml) {
     return (
@@ -36,7 +45,7 @@ export function PassageRenderer({ content, className }: PassageRendererProps) {
           "[&_br]:block [&_br]:content-[''] [&_br]:mt-2",
           className
         )}
-        dangerouslySetInnerHTML={{ __html: content }}
+        dangerouslySetInnerHTML={{ __html: fixedContent }}
       />
     );
   }
