@@ -17,6 +17,7 @@ export interface Question {
   isGridIn?: boolean; // For math grid-in questions
   hasLatex?: boolean; // For math questions with LaTeX
   image?: string | null; // For questions with diagrams
+  optionImages?: { [key: string]: string } | null; // For options with diagram images
 }
 
 export interface TextHighlight {
