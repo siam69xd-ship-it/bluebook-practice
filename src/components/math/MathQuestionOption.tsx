@@ -35,19 +35,19 @@ export default function MathQuestionOption({
   // Selected but not checked: blue highlight
   // After check: green for correct, red for incorrect (stays red for previously checked wrong)
   const getBorderColor = () => {
-    if (isEliminated) return 'border-gray-200';
+    if (isEliminated) return 'border-border';
     if (showResult && isCorrect) return 'border-green-500';
     if (showResult && isIncorrect) return 'border-red-400';
-    if (isSelected && !showResult) return 'border-[#0077cc]'; // Blue selection like reference
-    return 'border-gray-200 hover:border-gray-400';
+    if (isSelected && !showResult) return 'border-foreground';
+    return 'border-foreground/30 hover:border-foreground/50';
   };
 
   const getBackgroundColor = () => {
-    if (isEliminated) return 'bg-gray-50';
+    if (isEliminated) return 'bg-muted';
     if (showResult && isCorrect) return 'bg-green-50';
     if (showResult && isIncorrect) return 'bg-red-50';
-    if (isSelected && !showResult) return 'bg-[#e6f3ff]'; // Light blue selection
-    return 'bg-white';
+    if (isSelected && !showResult) return 'bg-muted';
+    return 'bg-background';
   };
 
   return (
