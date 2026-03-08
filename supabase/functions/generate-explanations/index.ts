@@ -12,21 +12,44 @@ serve(async (req) => {
   }
 
   try {
-    const { questions } = await req.json();
+    const { questions, mode } = await req.json();
     const apiKey = Deno.env.get("LOVABLE_API_KEY");
     if (!apiKey) throw new Error("LOVABLE_API_KEY not configured");
 
-    // Process all questions in batch via single AI call
-    const questionsText = questions.map((q: any) => 
-      `Q${q.id}: Passage: ${q.p}\nQuestion: ${q.q}\nOptions: ${q.o.join(' | ')}\nAnswer: ${q.a}`
-    ).join('\n\n---\n\n');
+    let prompt: string;
 
-    const prompt = `You are an expert SAT tutor. For each question below, write a detailed explanation (3-5 sentences). 
+    if (mode === "math") {
+      const questionsText = questions.map((q: any) =>
+        `Q${q.id}: ${q.question}\nOptions: ${q.options.join(' | ')}\nCorrect Answer: ${q.answer}`
+      ).join('\n\n---\n\n');
+
+      prompt = `You are an expert SAT Math tutor. For each question below, write a DETAILED step-by-step explanation (5-8 sentences). Your explanation MUST include:
+
+1. **Formula Used**: State the exact formula needed (e.g., V = πr²h, A = πr², SA = 2πrh + 2πr²). Write it clearly.
+2. **Variable Definitions**: Define what each variable represents in context (e.g., "where r = 5 inches is the radius, h = 6 inches is the height").
+3. **Step-by-step Substitution**: Show plugging values into the formula step by step.
+4. **Simplification**: Show the arithmetic/algebraic simplification clearly.
+5. **Why other options are wrong**: Briefly explain common mistakes that lead to wrong answers (e.g., "Option A uses diameter instead of radius", "Option B forgot to square the radius").
+
+Use LaTeX notation with $...$ for inline math and $$...$$ for display equations. Use \\frac{}{}, \\pi, \\sqrt{}, etc.
+
+Format your response as JSON array: [{"id":1,"explanation":"..."},{"id":2,"explanation":"..."}]
+IMPORTANT: Return ONLY the JSON array, no markdown code blocks.
+
+${questionsText}`;
+    } else {
+      // Original inference mode
+      const questionsText = questions.map((q: any) =>
+        `Q${q.id}: Passage: ${q.p}\nQuestion: ${q.q}\nOptions: ${q.o.join(' | ')}\nAnswer: ${q.a}`
+      ).join('\n\n---\n\n');
+
+      prompt = `You are an expert SAT tutor. For each question below, write a detailed explanation (3-5 sentences). 
 Explain: 1) Key passage info 2) Why the answer is correct 3) Why others fail.
 
 Format your response as JSON array: [{"id":"1","explanation":"..."},{"id":"2","explanation":"..."}]
 
 ${questionsText}`;
+    }
 
     const response = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
       method: "POST",
@@ -38,19 +61,23 @@ ${questionsText}`;
         model: "google/gemini-2.5-flash",
         messages: [{ role: "user", content: prompt }],
         temperature: 0.3,
-        max_tokens: 8000,
+        max_tokens: 12000,
       }),
     });
 
     if (!response.ok) {
       const errText = await response.text();
+      if (response.status === 429) {
+        return new Response(JSON.stringify({ error: "Rate limited, please wait and retry." }), {
+          status: 429, headers: { ...corsHeaders, "Content-Type": "application/json" },
+        });
+      }
       throw new Error(`AI API error: ${response.status} - ${errText}`);
     }
 
     const data = await response.json();
     let content = data.choices?.[0]?.message?.content?.trim() || "[]";
     
-    // Extract JSON from markdown code blocks if present
     const jsonMatch = content.match(/```(?:json)?\s*([\s\S]*?)```/);
     if (jsonMatch) content = jsonMatch[1].trim();
     
