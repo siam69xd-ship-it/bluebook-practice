@@ -137,15 +137,20 @@ export default function Practice() {
     navigate('/quiz');
   };
 
-  const TopicLeaf = ({ label, count, onClick, depth }: { label: string; count: number; onClick: () => void; depth: number }) => {
+  const TopicLeaf = ({ label, count, onClick, depth, index = 0 }: { label: string; count: number; onClick: () => void; depth: number; index?: number }) => {
     const disabled = count === 0;
     return (
-      <button
+      <motion.button
+        initial={{ opacity: 0, y: 4, filter: 'blur(4px)', scale: 0.95 }}
+        animate={{ opacity: 1, y: 0, filter: 'blur(0px)', scale: 1 }}
+        transition={{ duration: 0.18, delay: index * 0.025, ease: [0.4, 0, 0.2, 1] }}
         onClick={disabled ? undefined : onClick}
         disabled={disabled}
+        whileHover={disabled ? {} : { x: 3, backgroundColor: 'hsl(var(--muted) / 0.5)' }}
+        whileTap={disabled ? {} : { scale: 0.995 }}
         className={cn(
           'w-full flex items-center justify-between py-3.5 transition-colors duration-150 group border-b border-border/60 last:border-b-0',
-          disabled ? 'opacity-30 cursor-not-allowed' : 'hover:bg-muted/40'
+          disabled ? 'opacity-30 cursor-not-allowed' : ''
         )}
         style={{ paddingLeft: `${depth * 20 + 20}px`, paddingRight: '20px' }}
       >
@@ -153,12 +158,12 @@ export default function Practice() {
           {label}
         </span>
         <div className="flex items-center gap-3">
-          <span className="text-[13px] text-muted-foreground tabular-nums">{count}</span>
+          <span className="text-[13px] text-muted-foreground tabular-nums group-hover:text-foreground/60 transition-colors duration-150">{count}</span>
           {!disabled && (
             <ArrowRight className="w-3.5 h-3.5 text-muted-foreground/0 group-hover:text-muted-foreground group-hover:translate-x-0.5 transition-all duration-200" />
           )}
         </div>
-      </button>
+      </motion.button>
     );
   };
 
