@@ -236,7 +236,6 @@ export default function MathQuestionLayout({
                 </div>
               )}
             </motion.div>
-          </AnimatePresence>
         </div>
       </main>
 
