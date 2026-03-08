@@ -75,7 +75,8 @@ export default function Quiz() {
   const [showCalculator, setShowCalculator] = useState(false);
   const [showReference, setShowReference] = useState(false);
   const [gridInAnswer, setGridInAnswer] = useState('');
-  const [isInitialLoad, setIsInitialLoad] = useState(true); // Track initial load to avoid resetting index
+  const [isInitialLoad, setIsInitialLoad] = useState(true);
+  const [prevFilter, setPrevFilter] = useState<string>('');
 
   // Fetch attempt counts for logged-in users
   const { data: attemptCounts = {} } = useQuery<Record<string, number>>({
@@ -113,7 +114,6 @@ export default function Quiz() {
   const loadQuestions = useCallback(async () => {
     setLoadError(false);
     setIsLoaded(false);
-    clearQuestionCache(); // Clear cache to ensure fresh data
     
     let retryCount = 0;
     const maxRetries = 3;
@@ -173,8 +173,7 @@ export default function Quiz() {
           setCurrentIndex(saved.currentIndex);
         }
         setIsLoaded(true);
-        // Mark initial load complete after a short delay to prevent filter change effect from resetting index
-        setTimeout(() => setIsInitialLoad(false), 100);
+        setIsInitialLoad(false);
       } else if (retryCount < maxRetries) {
         retryCount++;
         await new Promise(resolve => setTimeout(resolve, 500));
@@ -216,10 +215,12 @@ export default function Quiz() {
 
   // Reset current index when filter changes (but not on initial load)
   useEffect(() => {
-    if (!isInitialLoad) {
+    const filterStr = JSON.stringify(activeFilter);
+    if (prevFilter && prevFilter !== filterStr) {
       setCurrentIndex(0);
     }
-  }, [activeFilter, isInitialLoad]);
+    setPrevFilter(filterStr);
+  }, [activeFilter]);
 
   // Update question state
   const updateQuestionState = useCallback((questionId: number, updates: Partial<QuestionState>) => {
@@ -339,6 +340,14 @@ export default function Quiz() {
   const handleLoadingComplete = useCallback(() => {
     setShowContent(true);
   }, []);
+
+  // Safety: if data loaded but showContent never triggered, force it
+  useEffect(() => {
+    if (isLoaded && !showContent) {
+      const timer = setTimeout(() => setShowContent(true), 300);
+      return () => clearTimeout(timer);
+    }
+  }, [isLoaded, showContent]);
 
   if (!showContent) {
     return (
