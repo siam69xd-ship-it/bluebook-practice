@@ -214,11 +214,14 @@ export default function Quiz() {
   }, [questionStates, currentIndex, activeFilter, isLoaded, allQuestions.length]);
 
   // Reset current index when filter changes (but not on initial load)
+  const [prevFilter, setPrevFilter] = useState<string>('');
   useEffect(() => {
-    if (!isInitialLoad) {
+    const filterStr = JSON.stringify(activeFilter);
+    if (prevFilter && prevFilter !== filterStr) {
       setCurrentIndex(0);
     }
-  }, [activeFilter, isInitialLoad]);
+    setPrevFilter(filterStr);
+  }, [activeFilter]);
 
   // Update question state
   const updateQuestionState = useCallback((questionId: number, updates: Partial<QuestionState>) => {
