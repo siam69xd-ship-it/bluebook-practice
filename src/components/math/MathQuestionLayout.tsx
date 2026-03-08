@@ -188,16 +188,37 @@ export default function MathQuestionLayout({
                   {Object.entries(currentQuestion.options || {}).map(([letter, text]) => {
                     const isThisCheckedWrong = currentState?.checkedOptions?.includes(letter) && letter !== currentQuestion.correctAnswer;
                     const isThisSelected = currentState?.userAnswer === letter;
-                    const showAsCorrect = currentState?.checked && isCorrect && letter === currentQuestion.correctAnswer;
-                    const showAsWrong = currentState?.checked && isThisSelected && !isCorrect;
+                    const isOptionChecked = currentState?.checkedOptions?.includes(letter) || false;
                     
                     return (
                       <MathQuestionOption
-                        key={letter} label={letter} text={text as string} isSelected={isThisSelected} isCorrect={showAsCorrect}
-                        isIncorrect={showAsWrong || isThisCheckedWrong} showResult={currentState?.checked || isThisCheckedWrong}
-                        onClick={() => handleSelectAnswer(letter)} isEliminated={currentState?.eliminatedOptions?.includes(letter) || false}
+                        key={letter}
+                        label={letter}
+                        text={text as string}
+                        isSelected={isThisSelected}
+                        onClick={() => handleSelectAnswer(letter)}
+                        isEliminated={currentState?.eliminatedOptions?.includes(letter) || false}
                         showEliminationButtons={isEliminationMode || (currentState?.eliminatedOptions?.includes(letter) || false)}
-                        onEliminate={() => handleToggleElimination(letter)} disabled={(currentState?.checked && isCorrect) || isThisCheckedWrong}
+                        onEliminate={() => handleToggleElimination(letter)}
+                        isChecked={currentState?.checked || false}
+                        isOptionChecked={isOptionChecked}
+                        correctAnswer={currentQuestion.correctAnswer}
+                        showResult={currentState?.checked || isThisCheckedWrong}
+                        isCorrect={currentState?.checked && isCorrect && letter === currentQuestion.correctAnswer}
+                        isIncorrect={(currentState?.checked && isThisSelected && !isCorrect) || isThisCheckedWrong}
+                        disabled={(currentState?.checked && isCorrect) || isThisCheckedWrong}
+                        onCheckOption={() => {
+                          const checkedOptions = currentState?.checkedOptions || [];
+                          if (!checkedOptions.includes(letter)) {
+                            onUpdateState(currentQuestion.id, {
+                              checkedOptions: [...checkedOptions, letter],
+                              checked: letter === currentQuestion.correctAnswer,
+                            });
+                            if (letter === currentQuestion.correctAnswer) {
+                              onCheckAnswer();
+                            }
+                          }
+                        }}
                       />
                     );
                   })}
