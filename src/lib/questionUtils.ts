@@ -1211,6 +1211,19 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
             if (fixedImage && fixedImage.includes('/images/diagrams/') && !fixedImage.includes('/images/diagrams/diagram/')) {
               fixedImage = fixedImage.replace('/images/diagrams/', '/images/diagrams/diagram/');
             }
+
+            // Fix option_images paths
+            let fixedOptionImages: { [key: string]: string } | null = null;
+            if (q.option_images) {
+              fixedOptionImages = {};
+              for (const [key, val] of Object.entries(q.option_images)) {
+                let fixedVal = val as string;
+                if (fixedVal.includes('/images/diagrams/') && !fixedVal.includes('/images/diagrams/diagram/')) {
+                  fixedVal = fixedVal.replace('/images/diagrams/', '/images/diagrams/diagram/');
+                }
+                fixedOptionImages[key] = fixedVal;
+              }
+            }
             
             addQuestion({
               id: globalId++,
@@ -1228,7 +1241,8 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
               difficulty: 'medium' as Difficulty, // Will be updated later
               isGridIn,
               hasLatex,
-              image: fixedImage, // Include the fixed image path!
+              image: fixedImage,
+              optionImages: fixedOptionImages,
             });
           });
         }
