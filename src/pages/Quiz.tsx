@@ -677,7 +677,7 @@ export default function Quiz() {
                     correctAnswer={currentQuestion.correctAnswer}
                   />
                 ) : (
-                  <div className="space-y-2 sm:space-y-3">
+                  <div className="space-y-3 sm:space-y-4">
                     {Object.entries(currentQuestion.options).map(([letter, text]) => (
                       <QuestionOption
                         key={letter}

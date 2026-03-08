@@ -41,12 +41,12 @@ export function QuestionOption({
   return (
     <div
       className={cn(
-        'group relative flex items-center gap-3 px-4 py-3 rounded-lg border transition-all duration-200 cursor-pointer',
+        'group relative flex items-start gap-4 px-5 py-4 rounded-xl border transition-all duration-200 cursor-pointer',
         isEliminated && 'opacity-40',
         !isEliminated && !showOptionWrong && !showOptionCorrect && !showCorrectIndicator && !isSelected && 
-          'border-border bg-card hover:border-muted-foreground/50 hover:shadow-sm',
+          'border-border bg-card hover:border-foreground/30 hover:shadow-sm',
         isSelected && !isOptionChecked && !isChecked && 
-          'border-foreground/30 bg-card shadow-sm',
+          'border-foreground bg-card shadow-sm',
         showOptionWrong && 'border-red-400 bg-red-50',
         showOptionCorrect && 'border-green-400 bg-green-50',
         showCorrectIndicator && 'border-green-300 bg-green-50/50'
