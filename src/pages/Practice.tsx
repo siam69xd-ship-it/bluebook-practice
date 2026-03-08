@@ -167,15 +167,20 @@ export default function Practice() {
     );
   };
 
-  const ExpandableRow = ({ label, count, depth, children }: { label: string; count: number; depth: number; children: React.ReactNode }) => {
+  const ExpandableRow = ({ label, count, depth, children, index = 0 }: { label: string; count: number; depth: number; children: React.ReactNode; index?: number }) => {
     const isOpen = expandedSections.includes(label);
     return (
-      <div>
-        <button
+      <motion.div
+        initial={{ opacity: 0, y: 4, filter: 'blur(4px)', scale: 0.95 }}
+        animate={{ opacity: 1, y: 0, filter: 'blur(0px)', scale: 1 }}
+        transition={{ duration: 0.18, delay: index * 0.025, ease: [0.4, 0, 0.2, 1] }}
+      >
+        <motion.button
           onClick={() => toggleSection(label)}
+          whileHover={{ x: 2, backgroundColor: 'hsl(var(--muted) / 0.4)' }}
+          whileTap={{ scale: 0.998 }}
           className={cn(
-            'w-full flex items-center justify-between py-3.5 transition-colors duration-150 border-b border-border/60',
-            'hover:bg-muted/40'
+            'w-full flex items-center justify-between py-3.5 transition-colors duration-150 border-b border-border/60'
           )}
           style={{ paddingLeft: `${depth * 20 + 20}px`, paddingRight: '20px' }}
         >
@@ -194,7 +199,7 @@ export default function Practice() {
               <ChevronDown className="w-4 h-4 text-muted-foreground" />
             </motion.div>
           </div>
-        </button>
+        </motion.button>
         <AnimatePresence initial={false}>
           {isOpen && (
             <motion.div
@@ -208,17 +213,18 @@ export default function Practice() {
             </motion.div>
           )}
         </AnimatePresence>
-      </div>
+      </motion.div>
     );
   };
 
   const renderSubTopics = (parentTopic: string, subTopics: Record<string, null>, subSection: string, mainSection: string) => {
-    return Object.keys(subTopics).map(subTopic => (
+    return Object.keys(subTopics).map((subTopic, i) => (
       <TopicLeaf
         key={subTopic}
         label={subTopic}
         count={getCount(subSection, parentTopic, subTopic)}
         depth={3}
+        index={i}
         onClick={() => startPractice({
           section: mainSection === 'English Reading & Writing' ? 'English' : 'Math',
           subSection, topic: parentTopic, subTopic,
@@ -228,13 +234,13 @@ export default function Practice() {
   };
 
   const renderTopics = (subSection: string, topics: Record<string, any>, mainSection: string) => {
-    return Object.entries(topics).map(([topic, subTopics]) => {
+    return Object.entries(topics).map(([topic, subTopics], i) => {
       const count = getCount(subSection, topic);
       const hasSubTopics = subTopics !== null && typeof subTopics === 'object';
 
       if (hasSubTopics) {
         return (
-          <ExpandableRow key={topic} label={topic} count={count} depth={2}>
+          <ExpandableRow key={topic} label={topic} count={count} depth={2} index={i}>
             {renderSubTopics(topic, subTopics, subSection, mainSection)}
           </ExpandableRow>
         );
@@ -246,6 +252,7 @@ export default function Practice() {
           label={topic}
           count={count}
           depth={2}
+          index={i}
           onClick={() => startPractice({
             section: mainSection === 'English Reading & Writing' ? 'English' : 'Math',
             subSection, topic,
