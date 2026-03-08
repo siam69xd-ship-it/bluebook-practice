@@ -98,21 +98,19 @@ export default function MathQuestionOption({
             onEliminate?.();
           }}
           className={cn(
-            'flex-shrink-0 w-8 h-8 rounded-full border-2 flex items-center justify-center transition-all relative',
+            'flex-shrink-0 w-8 h-8 rounded-full border flex items-center justify-center transition-all relative',
             isEliminated
-              ? 'border-gray-400 bg-transparent'
-              : 'border-gray-300 bg-transparent hover:border-gray-500'
+              ? 'border-muted-foreground/40 bg-transparent'
+              : 'border-border bg-transparent hover:border-muted-foreground'
           )}
           title={isEliminated ? 'Restore option' : 'Eliminate option'}
         >
-          {/* Letter */}
-          <span className="text-xs font-semibold text-gray-600">
+          <span className="text-xs font-semibold text-muted-foreground">
             {label}
           </span>
-          {/* Diagonal strikethrough when eliminated */}
           {isEliminated && (
             <span className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <span className="w-[calc(100%+4px)] h-[2px] bg-gray-500 rotate-[-45deg] absolute" />
+              <span className="w-[calc(100%+4px)] h-[2px] bg-muted-foreground rotate-[-45deg] absolute" />
             </span>
           )}
         </button>
