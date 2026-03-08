@@ -35,19 +35,19 @@ export default function MathQuestionOption({
   // Selected but not checked: blue highlight
   // After check: green for correct, red for incorrect (stays red for previously checked wrong)
   const getBorderColor = () => {
-    if (isEliminated) return 'border-gray-200';
+    if (isEliminated) return 'border-border';
     if (showResult && isCorrect) return 'border-green-500';
     if (showResult && isIncorrect) return 'border-red-400';
-    if (isSelected && !showResult) return 'border-[#0077cc]'; // Blue selection like reference
-    return 'border-gray-200 hover:border-gray-400';
+    if (isSelected && !showResult) return 'border-foreground';
+    return 'border-foreground/30 hover:border-foreground/50';
   };
 
   const getBackgroundColor = () => {
-    if (isEliminated) return 'bg-gray-50';
+    if (isEliminated) return 'bg-muted';
     if (showResult && isCorrect) return 'bg-green-50';
     if (showResult && isIncorrect) return 'bg-red-50';
-    if (isSelected && !showResult) return 'bg-[#e6f3ff]'; // Light blue selection
-    return 'bg-white';
+    if (isSelected && !showResult) return 'bg-muted';
+    return 'bg-background';
   };
 
   return (
@@ -57,37 +57,32 @@ export default function MathQuestionOption({
         onClick={onClick}
         disabled={disabled || isEliminated}
         className={cn(
-          'flex-1 flex items-center gap-4 px-5 py-4 rounded-lg border-2 transition-all text-left',
+          'flex-1 flex items-center gap-4 px-5 py-4 rounded-full border transition-all text-left',
           getBorderColor(),
           getBackgroundColor(),
           isEliminated && 'opacity-40'
         )}
       >
-        {/* Circle Letter Badge - SAT Bluebook Style */}
+        {/* Circle Letter Badge */}
         <div className={cn(
-          'flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center font-semibold text-base border-2 transition-all',
-          // Default state
+          'flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center font-semibold text-base border transition-all',
           !isSelected && !showResult && 
-            'border-gray-400 bg-white text-gray-900',
-          // Selected state (blue like reference)
+            'border-foreground/40 bg-background text-foreground',
           isSelected && !showResult && 
-            'border-[#0077cc] bg-[#0077cc] text-white',
-          // Correct state
+            'border-foreground bg-foreground text-background',
           showResult && isCorrect && 'border-green-500 bg-green-500 text-white',
-          // Incorrect state
           showResult && isIncorrect && 'border-red-500 bg-red-500 text-white',
-          // Default when showing result but not this option
           showResult && !isCorrect && !isIncorrect && 
-            'border-gray-400 bg-white text-gray-900'
+            'border-foreground/40 bg-background text-foreground'
         )}>
           {label}
         </div>
 
-        {/* Option Text with LaTeX support - always use LatexRenderer */}
+        {/* Option Text */}
         <span className={cn(
           'flex-1 text-[17px] leading-relaxed',
-          isEliminated && 'line-through text-gray-400',
-          !isEliminated && 'text-gray-900',
+          isEliminated && 'line-through text-muted-foreground',
+          !isEliminated && 'text-foreground',
           showResult && isIncorrect && 'text-red-700',
           showResult && isCorrect && 'text-green-700'
         )}>
@@ -103,21 +98,19 @@ export default function MathQuestionOption({
             onEliminate?.();
           }}
           className={cn(
-            'flex-shrink-0 w-8 h-8 rounded-full border-2 flex items-center justify-center transition-all relative',
+            'flex-shrink-0 w-8 h-8 rounded-full border flex items-center justify-center transition-all relative',
             isEliminated
-              ? 'border-gray-400 bg-transparent'
-              : 'border-gray-300 bg-transparent hover:border-gray-500'
+              ? 'border-muted-foreground/40 bg-transparent'
+              : 'border-border bg-transparent hover:border-muted-foreground'
           )}
           title={isEliminated ? 'Restore option' : 'Eliminate option'}
         >
-          {/* Letter */}
-          <span className="text-xs font-semibold text-gray-600">
+          <span className="text-xs font-semibold text-muted-foreground">
             {label}
           </span>
-          {/* Diagonal strikethrough when eliminated */}
           {isEliminated && (
             <span className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <span className="w-[calc(100%+4px)] h-[2px] bg-gray-500 rotate-[-45deg] absolute" />
+              <span className="w-[calc(100%+4px)] h-[2px] bg-muted-foreground rotate-[-45deg] absolute" />
             </span>
           )}
         </button>
