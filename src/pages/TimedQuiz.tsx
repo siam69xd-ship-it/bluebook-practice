@@ -1007,7 +1007,7 @@ export default function TimedQuiz() {
                 className="text-foreground mb-6 text-base leading-relaxed"
               />
 
-              <div className="space-y-3">
+              <div className="space-y-3 sm:space-y-4">
                 {Object.entries(currentQuestion.options).map(([letter, text]) => (
                   <QuestionOption
                     key={letter}
