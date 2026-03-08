@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { LoadingProgressBar } from '@/components/LoadingProgressBar';
 import { PracticeSkeleton } from '@/components/LoadingSkeleton';
 import { cn } from '@/lib/utils';
-import { Question, FilterOption, getAllQuestionsAsync } from '@/lib/questionUtils';
+import { Question, FilterOption, getAllQuestionsAsync, clearProgress } from '@/lib/questionUtils';
 
 const FILTER_STRUCTURE = {
   'English Reading & Writing': {
@@ -138,6 +138,8 @@ export default function Practice() {
       difficulties: { easy: true, medium: true, hard: true },
     };
     sessionStorage.setItem('practiceConfig', JSON.stringify(practiceConfig));
+    // Clear saved progress so new session starts at question 1
+    clearProgress();
     navigate('/quiz');
   };
 
