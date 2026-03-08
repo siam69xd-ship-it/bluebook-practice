@@ -1,7 +1,7 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { ChevronDown, ChevronRight, ArrowRight, ArrowLeft } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronDown, ArrowRight, ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { LoadingProgressBar } from '@/components/LoadingProgressBar';
 import { PracticeSkeleton } from '@/components/LoadingSkeleton';
@@ -126,69 +126,100 @@ export default function Practice() {
 
   const toggleSection = (section: string) => {
     setExpandedSections(prev =>
-      prev.includes(section)
-        ? prev.filter(s => s !== section)
-        : [...prev, section]
+      prev.includes(section) ? prev.filter(s => s !== section) : [...prev, section]
     );
   };
 
   const startPractice = (filter: Partial<FilterOption>) => {
-    const practiceConfig = {
-      filter,
-      difficulties: { easy: true, medium: true, hard: true },
-    };
+    const practiceConfig = { filter, difficulties: { easy: true, medium: true, hard: true } };
     sessionStorage.setItem('practiceConfig', JSON.stringify(practiceConfig));
-    // Clear saved progress so new session starts at question 1
     clearProgress();
     navigate('/quiz');
   };
 
-  const renderTopicRow = (
-    label: string,
-    count: number,
-    onClick: () => void,
-    depth: number = 0
-  ) => {
+  const TopicLeaf = ({ label, count, onClick, depth }: { label: string; count: number; onClick: () => void; depth: number }) => {
     const disabled = count === 0;
     return (
       <button
-        key={label}
         onClick={disabled ? undefined : onClick}
         disabled={disabled}
         className={cn(
-          'w-full flex items-center justify-between py-3 px-4 rounded-lg transition-all duration-150 group',
-          disabled 
-            ? 'opacity-40 cursor-not-allowed' 
-            : 'hover:bg-muted/60'
+          'w-full flex items-center justify-between py-3.5 transition-colors duration-150 group border-b border-border/60 last:border-b-0',
+          disabled ? 'opacity-30 cursor-not-allowed' : 'hover:bg-muted/40'
         )}
-        style={{ paddingLeft: `${(depth + 1) * 16 + 16}px` }}
+        style={{ paddingLeft: `${depth * 20 + 20}px`, paddingRight: '20px' }}
       >
-        <span className="text-sm text-foreground">{label}</span>
+        <span className="text-[14px] text-foreground/80 group-hover:text-foreground transition-colors duration-150">
+          {label}
+        </span>
         <div className="flex items-center gap-3">
-          <span className="text-xs text-muted-foreground">{count}</span>
+          <span className="text-[13px] text-muted-foreground tabular-nums">{count}</span>
           {!disabled && (
-            <ArrowRight className="w-3.5 h-3.5 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-150" />
+            <ArrowRight className="w-3.5 h-3.5 text-muted-foreground/0 group-hover:text-muted-foreground group-hover:translate-x-0.5 transition-all duration-200" />
           )}
         </div>
       </button>
     );
   };
 
+  const ExpandableRow = ({ label, count, depth, children }: { label: string; count: number; depth: number; children: React.ReactNode }) => {
+    const isOpen = expandedSections.includes(label);
+    return (
+      <div>
+        <button
+          onClick={() => toggleSection(label)}
+          className={cn(
+            'w-full flex items-center justify-between py-3.5 transition-colors duration-150 border-b border-border/60',
+            'hover:bg-muted/40'
+          )}
+          style={{ paddingLeft: `${depth * 20 + 20}px`, paddingRight: '20px' }}
+        >
+          <span className={cn(
+            'text-[14px] font-medium text-foreground',
+            depth === 0 && 'font-semibold'
+          )}>
+            {label}
+          </span>
+          <div className="flex items-center gap-3">
+            <span className="text-[13px] text-muted-foreground tabular-nums">{count}</span>
+            <motion.div
+              animate={{ rotate: isOpen ? 180 : 0 }}
+              transition={{ duration: 0.2, ease: [0.4, 0, 0.2, 1] }}
+            >
+              <ChevronDown className="w-4 h-4 text-muted-foreground" />
+            </motion.div>
+          </div>
+        </button>
+        <AnimatePresence initial={false}>
+          {isOpen && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: 'auto', opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
+              className="overflow-hidden"
+            >
+              {children}
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    );
+  };
+
   const renderSubTopics = (parentTopic: string, subTopics: Record<string, null>, subSection: string, mainSection: string) => {
-    return Object.keys(subTopics).map(subTopic => {
-      const count = getCount(subSection, parentTopic, subTopic);
-      return renderTopicRow(
-        subTopic,
-        count,
-        () => startPractice({
+    return Object.keys(subTopics).map(subTopic => (
+      <TopicLeaf
+        key={subTopic}
+        label={subTopic}
+        count={getCount(subSection, parentTopic, subTopic)}
+        depth={3}
+        onClick={() => startPractice({
           section: mainSection === 'English Reading & Writing' ? 'English' : 'Math',
-          subSection,
-          topic: parentTopic,
-          subTopic,
-        }),
-        2
-      );
-    });
+          subSection, topic: parentTopic, subTopic,
+        })}
+      />
+    ));
   };
 
   const renderTopics = (subSection: string, topics: Record<string, any>, mainSection: string) => {
@@ -198,40 +229,23 @@ export default function Practice() {
 
       if (hasSubTopics) {
         return (
-          <div key={topic}>
-            <button
-              onClick={() => toggleSection(topic)}
-              className="w-full flex items-center justify-between px-4 py-3 hover:bg-muted/50 rounded-lg transition-all duration-150"
-              style={{ paddingLeft: '32px' }}
-            >
-              <span className="text-sm font-medium text-foreground">{topic}</span>
-              <div className="flex items-center gap-3">
-                <span className="text-xs text-muted-foreground">{count}</span>
-                {expandedSections.includes(topic) ? (
-                  <ChevronDown className="w-4 h-4 text-muted-foreground" />
-                ) : (
-                  <ChevronRight className="w-4 h-4 text-muted-foreground" />
-                )}
-              </div>
-            </button>
-            {expandedSections.includes(topic) && (
-              <div className="space-y-0.5">
-                {renderSubTopics(topic, subTopics, subSection, mainSection)}
-              </div>
-            )}
-          </div>
+          <ExpandableRow key={topic} label={topic} count={count} depth={2}>
+            {renderSubTopics(topic, subTopics, subSection, mainSection)}
+          </ExpandableRow>
         );
       }
 
-      return renderTopicRow(
-        topic,
-        count,
-        () => startPractice({
-          section: mainSection === 'English Reading & Writing' ? 'English' : 'Math',
-          subSection,
-          topic,
-        }),
-        1
+      return (
+        <TopicLeaf
+          key={topic}
+          label={topic}
+          count={count}
+          depth={2}
+          onClick={() => startPractice({
+            section: mainSection === 'English Reading & Writing' ? 'English' : 'Math',
+            subSection, topic,
+          })}
+        />
       );
     });
   };
@@ -242,45 +256,21 @@ export default function Practice() {
       const hasTopics = topics !== null && typeof topics === 'object';
 
       return (
-        <div key={subSection} className="border border-border rounded-lg bg-background overflow-hidden">
-          <button
-            onClick={() => toggleSection(subSection)}
-            className="w-full flex items-center justify-between p-3 sm:p-5 hover:bg-muted/30 transition-all duration-150"
-          >
-            <span className="font-medium text-foreground text-sm sm:text-base">{subSection}</span>
-            <div className="flex items-center gap-2 sm:gap-3">
-              <span className="text-xs sm:text-sm text-muted-foreground">{count}</span>
-              {expandedSections.includes(subSection) ? (
-                <ChevronDown className="w-4 h-4 text-muted-foreground" />
-              ) : (
-                <ChevronRight className="w-4 h-4 text-muted-foreground" />
-              )}
-            </div>
-          </button>
-
-          {expandedSections.includes(subSection) && hasTopics && (
-            <div className="border-t border-border">
-              <div className="py-1">
-                {renderTopics(subSection, topics, mainSection)}
-              </div>
-            </div>
-          )}
+        <div key={subSection} className="border border-border rounded-lg overflow-hidden bg-background">
+          <ExpandableRow label={subSection} count={count} depth={0}>
+            {hasTopics && renderTopics(subSection, topics, mainSection)}
+          </ExpandableRow>
         </div>
       );
     });
   };
 
-  const handleLoadingComplete = () => {
-    setShowContent(true);
-  };
+  const handleLoadingComplete = () => setShowContent(true);
 
   if (!showContent) {
     return (
       <>
-        <LoadingProgressBar 
-          isLoading={isLoading} 
-          onLoadingComplete={handleLoadingComplete}
-        />
+        <LoadingProgressBar isLoading={isLoading} onLoadingComplete={handleLoadingComplete} />
         <PracticeSkeleton />
       </>
     );
@@ -296,50 +286,53 @@ export default function Practice() {
               variant="ghost"
               size="sm"
               onClick={() => navigate('/')}
-              className="gap-2 text-muted-foreground hover:text-foreground"
+              className="gap-2 text-muted-foreground hover:text-foreground -ml-2"
             >
               <ArrowLeft className="w-4 h-4" />
-              Back
+              <span className="text-sm">Back</span>
             </Button>
-            <span className="font-semibold text-foreground">NextPrep</span>
-            <div className="w-[60px]" />
+            <span className="text-sm font-semibold tracking-tight text-foreground">NextPrep</span>
+            <div className="w-[72px]" />
           </div>
         </div>
       </header>
 
-      <main className="max-w-[800px] mx-auto px-4 sm:px-6 py-8 sm:py-12 lg:py-16">
+      <main className="max-w-[800px] mx-auto px-4 sm:px-6 py-10 sm:py-14 lg:py-20">
+        {/* Title */}
         <motion.div
-          initial={{ opacity: 0, y: 12 }}
+          initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
+          className="mb-10 sm:mb-14"
         >
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-foreground mb-2 sm:mb-3">
+          <h1 className="text-3xl sm:text-4xl md:text-[42px] font-bold tracking-tight text-foreground leading-tight mb-3">
             Choose a Practice Topic
           </h1>
-          <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-10">
+          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-[540px]">
             Select a topic to begin practicing. The hierarchy is organized by subject and skill.
           </p>
         </motion.div>
 
-        <div className="space-y-6 sm:space-y-10">
-          {Object.entries(FILTER_STRUCTURE).map(([section, subSections], sectionIdx) => (
-            <motion.div
+        {/* Sections */}
+        <div className="space-y-10 sm:space-y-14">
+          {Object.entries(FILTER_STRUCTURE).map(([section, subSections], idx) => (
+            <motion.section
               key={section}
-              initial={{ opacity: 0, y: 12 }}
+              initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: sectionIdx * 0.08 }}
+              transition={{ duration: 0.3, delay: idx * 0.06, ease: [0.4, 0, 0.2, 1] }}
             >
-              <h2 className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-4 px-1">
+              <h2 className="text-[11px] sm:text-xs font-semibold text-muted-foreground uppercase tracking-[0.2em] mb-4 sm:mb-5">
                 {section}
               </h2>
               <div className="space-y-3">
                 {renderSubSections(subSections, section)}
               </div>
-            </motion.div>
+            </motion.section>
           ))}
         </div>
 
-        <div className="h-20" />
+        <div className="h-24" />
       </main>
     </div>
   );
