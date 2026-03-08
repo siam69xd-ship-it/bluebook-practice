@@ -237,18 +237,28 @@ function LatexRendererComponent({ content, className = '', displayMode = false }
     };
 
     // Handle standalone \frac{num}{den} not wrapped in $
-    processedContent = processedContent.replace(/(?<![\\$])\\frac\{/g, (match, offset) => {
-      const num = matchBalancedBraces(processedContent, offset + 5);
-      if (num === null) return match;
-      const afterNum = offset + 5 + num.length + 2; // skip {num}
-      const den = matchBalancedBraces(processedContent, afterNum);
-      if (den === null) return match;
-      const fullLen = 5 + num.length + 2 + den.length + 2; // \frac{num}{den}
-      const rendered = renderKatex(`\\frac{${num}}{${den}}`, false);
-      // Replace the full match in processedContent
-      processedContent = processedContent.slice(0, offset) + rendered + processedContent.slice(offset + fullLen);
-      return ''; // Already replaced directly
-    });
+    {
+      let changed = true;
+      while (changed) {
+        changed = false;
+        const m = processedContent.match(/(?<![\\$])\\frac\{/);
+        if (m && m.index !== undefined) {
+          const idx = m.index;
+          const numStart = idx + 5; // \frac length
+          const num = matchBalancedBraces(processedContent, numStart);
+          if (num !== null) {
+            const denStart = numStart + num.length + 2;
+            const den = matchBalancedBraces(processedContent, denStart);
+            if (den !== null) {
+              const fullLen = 5 + num.length + 2 + den.length + 2;
+              const rendered = renderKatex(`\\frac{${num}}{${den}}`, false);
+              processedContent = processedContent.slice(0, idx) + rendered + processedContent.slice(idx + fullLen);
+              changed = true;
+            }
+          }
+        }
+      }
+    }
     
     // Handle standalone \sqrt{content} or \sqrt[n]{content} with nested braces
     {
