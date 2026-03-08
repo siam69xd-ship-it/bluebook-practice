@@ -322,6 +322,17 @@ function LatexRendererComponent({ content, className = '', displayMode = false }
       }
     }
     
+    // Handle standalone \left...\right expressions (unmatched from broken LaTeX)
+    // Clean up raw \left( \right) that leaked outside math mode
+    processedContent = processedContent.replace(/\\left[(\[{|.]/g, (match) => {
+      const delim = match.slice(5);
+      return delim === '(' ? '(' : delim === '[' ? '[' : delim === '{' ? '{' : delim === '|' ? '|' : delim;
+    });
+    processedContent = processedContent.replace(/\\right[)\]}|.]/g, (match) => {
+      const delim = match.slice(6);
+      return delim === ')' ? ')' : delim === ']' ? ']' : delim === '}' ? '}' : delim === '|' ? '|' : delim;
+    });
+
     // Handle standalone \pi, \theta, \cos, \sin, \tan (common trig)
     processedContent = processedContent.replace(/(?<![\\$a-zA-Z])\\(pi|theta|cos|sin|tan|alpha|beta|gamma|delta|epsilon|sigma|omega|infty|pm|times|div|cdot|leq|geq|neq|approx|equiv|implies|Rightarrow|ge|le)(?![a-zA-Z{])/g, (match, symbol) => {
       return renderKatex(`\\${symbol}`, false);
