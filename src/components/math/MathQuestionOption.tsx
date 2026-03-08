@@ -39,7 +39,7 @@ export default function MathQuestionOption({
     if (showResult && isCorrect) return 'border-green-500';
     if (showResult && isIncorrect) return 'border-red-400';
     if (isSelected && !showResult) return 'border-foreground';
-    return 'border-foreground/30 hover:border-foreground/50';
+    return 'border-foreground/30 hover:border-foreground/60';
   };
 
   const getBackgroundColor = () => {
@@ -57,7 +57,7 @@ export default function MathQuestionOption({
         onClick={onClick}
         disabled={disabled || isEliminated}
         className={cn(
-          'flex-1 flex items-center gap-4 px-5 py-4 rounded-full border transition-all text-left',
+          'flex-1 flex items-center gap-4 px-6 py-4 rounded-2xl border transition-all text-left',
           getBorderColor(),
           getBackgroundColor(),
           isEliminated && 'opacity-40'
