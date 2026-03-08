@@ -236,91 +236,60 @@ function LatexRendererComponent({ content, className = '', displayMode = false }
       return null;
     };
 
-    // Handle standalone \frac{num}{den} not wrapped in $
-    {
-      let changed = true;
-      while (changed) {
-        changed = false;
-        const m = processedContent.match(/(?<![\\$])\\frac\{/);
-        if (m && m.index !== undefined) {
-          const idx = m.index;
-          const numStart = idx + 5; // \frac length
-          const num = matchBalancedBraces(processedContent, numStart);
-          if (num !== null) {
-            const denStart = numStart + num.length + 2;
-            const den = matchBalancedBraces(processedContent, denStart);
-            if (den !== null) {
-              const fullLen = 5 + num.length + 2 + den.length + 2;
-              const rendered = renderKatex(`\\frac{${num}}{${den}}`, false);
-              processedContent = processedContent.slice(0, idx) + rendered + processedContent.slice(idx + fullLen);
-              changed = true;
-            }
-          }
-        }
-      }
-    }
+    // Safe loop-based replacer with max iterations to prevent infinite loops
+    const PLACEHOLDER = '\x00'; // Null char as marker for processed content
     
-    // Handle standalone \sqrt{content} or \sqrt[n]{content} with nested braces
-    {
-      let changed = true;
-      while (changed) {
-        changed = false;
-        const sqrtMatch = processedContent.match(/(?<![\\$])\\sqrt(\[[^\]]*\])?\{/);
-        if (sqrtMatch && sqrtMatch.index !== undefined) {
-          const idx = sqrtMatch.index;
-          const bracketPart = sqrtMatch[1] || '';
-          const braceStart = idx + 5 + bracketPart.length; // \sqrt + bracket + {
-          const inner = matchBalancedBraces(processedContent, braceStart);
-          if (inner !== null) {
-            const fullLen = 5 + bracketPart.length + inner.length + 2;
-            const latex = bracketPart ? `\\sqrt${bracketPart}{${inner}}` : `\\sqrt{${inner}}`;
-            const rendered = renderKatex(latex, false);
-            processedContent = processedContent.slice(0, idx) + rendered + processedContent.slice(idx + fullLen);
-            changed = true;
-          }
+    const safeReplaceCommand = (
+      cmdRegex: RegExp,
+      cmdLen: number,
+      builder: (inner: string, bracketPart?: string) => string,
+      hasTwoArgs?: boolean
+    ) => {
+      let iterations = 0;
+      const MAX = 50;
+      let match: RegExpExecArray | null;
+      while (iterations < MAX && (match = cmdRegex.exec(processedContent)) !== null) {
+        iterations++;
+        const idx = match.index;
+        const bracketPart = match[1] || '';
+        const braceStart = idx + cmdLen + bracketPart.length;
+        const inner = matchBalancedBraces(processedContent, braceStart);
+        if (inner === null) break;
+        
+        let fullLen = cmdLen + bracketPart.length + inner.length + 2;
+        let latex: string;
+        
+        if (hasTwoArgs) {
+          const secondStart = braceStart + inner.length + 2;
+          const second = matchBalancedBraces(processedContent, secondStart);
+          if (second === null) break;
+          fullLen = cmdLen + inner.length + 2 + second.length + 2;
+          latex = builder(inner, second);
+        } else {
+          latex = builder(inner, bracketPart);
         }
+        
+        const rendered = PLACEHOLDER + renderKatex(latex, false) + PLACEHOLDER;
+        processedContent = processedContent.slice(0, idx) + rendered + processedContent.slice(idx + fullLen);
       }
-    }
+    };
+
+    // Handle standalone \frac{num}{den}
+    safeReplaceCommand(/(?<![a-zA-Z])\\frac\{/, 5, (num, den) => `\\frac{${num}}{${den}}`, true);
     
-    // Handle standalone \text{content} with nested braces
-    {
-      let changed = true;
-      while (changed) {
-        changed = false;
-        const m = processedContent.match(/(?<![\\$])\\text\{/);
-        if (m && m.index !== undefined) {
-          const idx = m.index;
-          const braceStart = idx + 5;
-          const inner = matchBalancedBraces(processedContent, braceStart);
-          if (inner !== null) {
-            const fullLen = 5 + inner.length + 2;
-            const rendered = renderKatex(`\\text{${inner}}`, false);
-            processedContent = processedContent.slice(0, idx) + rendered + processedContent.slice(idx + fullLen);
-            changed = true;
-          }
-        }
-      }
-    }
+    // Handle standalone \sqrt{content} or \sqrt[n]{content}
+    safeReplaceCommand(/(?<![a-zA-Z])\\sqrt(\[[^\]]*\])?\{/, 5, (inner, bracket) => 
+      bracket ? `\\sqrt${bracket}{${inner}}` : `\\sqrt{${inner}}`
+    );
     
-    // Handle standalone \overline{content} with nested braces
-    {
-      let changed = true;
-      while (changed) {
-        changed = false;
-        const m = processedContent.match(/(?<![\\$])\\overline\{/);
-        if (m && m.index !== undefined) {
-          const idx = m.index;
-          const braceStart = idx + 9;
-          const inner = matchBalancedBraces(processedContent, braceStart);
-          if (inner !== null) {
-            const fullLen = 9 + inner.length + 2;
-            const rendered = renderKatex(`\\overline{${inner}}`, false);
-            processedContent = processedContent.slice(0, idx) + rendered + processedContent.slice(idx + fullLen);
-            changed = true;
-          }
-        }
-      }
-    }
+    // Handle standalone \text{content}
+    safeReplaceCommand(/(?<![a-zA-Z])\\text\{/, 5, (inner) => `\\text{${inner}}`);
+    
+    // Handle standalone \overline{content}
+    safeReplaceCommand(/(?<![a-zA-Z])\\overline\{/, 9, (inner) => `\\overline{${inner}}`);
+    
+    // Remove placeholders
+    processedContent = processedContent.replace(/\x00/g, '');
     
     // Handle standalone \left...\right expressions (unmatched from broken LaTeX)
     // Clean up raw \left( \right) that leaked outside math mode
