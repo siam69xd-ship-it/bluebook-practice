@@ -60,7 +60,11 @@ export default function Quiz() {
   const [allQuestions, setAllQuestions] = useState<Question[]>([]);
   const [activeFilter, setActiveFilter] = useState<Partial<FilterOption>>({});
   const [questionStates, setQuestionStates] = useState<{ [key: number]: QuestionState }>({});
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(() => {
+    // Initialize from saved progress to survive refresh
+    const saved = loadProgress();
+    return saved ? saved.currentIndex : 0;
+  });
   const [selectedHighlightColor, setSelectedHighlightColor] = useState<string | null>(null);
   const [showNavigator, setShowNavigator] = useState(false);
   const [showExplanation, setShowExplanation] = useState(false);
