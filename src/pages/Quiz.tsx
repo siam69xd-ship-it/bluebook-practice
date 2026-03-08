@@ -204,10 +204,13 @@ export default function Quiz() {
   const isMathQuestion = currentQuestion?.section === 'Math';
   const isGridInQuestion = isMathQuestion && currentQuestion?.isGridIn;
 
-  // Save progress on changes
+  // Save progress on changes — debounced to avoid rapid writes
   useEffect(() => {
     if (isLoaded && allQuestions.length > 0) {
-      saveProgress(questionStates, currentIndex, activeFilter);
+      const timer = setTimeout(() => {
+        saveProgress(questionStates, currentIndex, activeFilter);
+      }, 500);
+      return () => clearTimeout(timer);
     }
   }, [questionStates, currentIndex, activeFilter, isLoaded, allQuestions.length]);
 
@@ -293,8 +296,8 @@ export default function Quiz() {
     }
   };
 
-  // Handler: Navigate
-  const handleNavigate = (direction: 'prev' | 'next' | number) => {
+  // Handler: Navigate — no state reset, no animation queue
+  const handleNavigate = useCallback((direction: 'prev' | 'next' | number) => {
     let targetIndex: number;
     
     if (typeof direction === 'number') {
@@ -307,17 +310,8 @@ export default function Quiz() {
       return;
     }
 
-    const targetQuestion = filteredQuestions[targetIndex];
-    if (targetQuestion) {
-      updateQuestionState(targetQuestion.id, { 
-        userAnswer: null, 
-        checked: false,
-        checkedOptions: [],
-      });
-    }
-
     setCurrentIndex(targetIndex);
-  };
+  }, [currentIndex, filteredQuestions.length]);
 
   // Handler: Filter change
   const handleFilterChange = (filter: Partial<FilterOption>) => {
@@ -535,13 +529,11 @@ export default function Quiz() {
         <main className="flex-1 flex flex-col lg:flex-row min-h-0 overflow-auto lg:overflow-hidden">
           {/* Left Panel - Passage */}
           <div className="lg:flex-1 p-4 sm:p-6 overflow-visible lg:overflow-y-auto border-b lg:border-b-0 lg:border-r border-gray-200 bg-white">
-            <AnimatePresence mode="wait">
               <motion.div
                 key={currentQuestion.id}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.2 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.15 }}
               >
                 <HighlightableText
                   text={currentQuestion.passage || ''}
@@ -552,18 +544,15 @@ export default function Quiz() {
                   className="quiz-passage whitespace-pre-wrap"
                 />
               </motion.div>
-            </AnimatePresence>
           </div>
 
           {/* Right Panel - Question and Options */}
           <div className="lg:flex-1 p-4 sm:p-6 overflow-visible lg:overflow-y-auto bg-bluebook-panel">
-            <AnimatePresence mode="wait">
               <motion.div
                 key={currentQuestion.id}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.2, delay: 0.1 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.15 }}
               >
                 {/* Question Header */}
                 <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
@@ -690,7 +679,6 @@ export default function Quiz() {
                   </div>
                 )}
               </motion.div>
-            </AnimatePresence>
           </div>
         </main>
 

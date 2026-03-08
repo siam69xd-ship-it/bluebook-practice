@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import {
   ChevronLeft,
   ChevronDown,
@@ -155,8 +155,7 @@ export default function MathQuestionLayout({
       {/* MAIN CONTENT */}
       <main className="flex-1 flex justify-center overflow-y-auto">
         <div className="w-full max-w-4xl px-4 sm:px-8 py-4 sm:py-6">
-          <AnimatePresence mode="wait">
-            <motion.div key={currentQuestion.id} initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} transition={{ duration: 0.2 }}>
+            <motion.div key={currentQuestion.id} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.15 }}>
               {/* Question toolbar */}
               <div className="flex items-center justify-between mb-4 sm:mb-6 pb-3 sm:pb-4 border-b border-border">
                 <div className="flex items-center gap-2 sm:gap-4">
@@ -237,7 +236,6 @@ export default function MathQuestionLayout({
                 </div>
               )}
             </motion.div>
-          </AnimatePresence>
         </div>
       </main>
 
