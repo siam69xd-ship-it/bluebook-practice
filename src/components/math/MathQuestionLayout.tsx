@@ -184,7 +184,7 @@ export default function MathQuestionLayout({
                     <img 
                       src={(currentQuestion as any).image} 
                       alt="Question Diagram" 
-                      className="max-w-full h-auto border border-border rounded-lg shadow-sm"
+                      className="max-w-[280px] sm:max-w-[360px] w-auto h-auto"
                       onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
                     />
                   </div>
