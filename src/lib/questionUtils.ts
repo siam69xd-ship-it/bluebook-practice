@@ -670,9 +670,13 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
           difficulty,
         ));
         
-        // Add image if present in the last added question
+        // Add image if present in the last added question (fix path)
         if (q.image) {
-          (questions[questions.length - 1] as any).image = q.image;
+          let fixedImage = q.image;
+          if (fixedImage.includes('/images/diagrams/') && !fixedImage.includes('/images/diagrams/diagram/')) {
+            fixedImage = fixedImage.replace('/images/diagrams/', '/images/diagrams/diagram/');
+          }
+          (questions[questions.length - 1] as any).image = fixedImage;
         }
       });
     };
