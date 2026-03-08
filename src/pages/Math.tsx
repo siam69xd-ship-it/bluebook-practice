@@ -322,6 +322,7 @@ export default function Math() {
                       src={currentQuestion.image} 
                       alt="Question Diagram" 
                       className="max-w-[280px] sm:max-w-[360px] w-auto h-auto bg-white p-2"
+                      style={{ filter: 'contrast(1.3) brightness(1.05)' }}
                       onError={(e) => {
                         (e.target as HTMLImageElement).style.display = 'none';
                       }}

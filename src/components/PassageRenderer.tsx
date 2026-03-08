@@ -37,7 +37,7 @@ export function PassageRenderer({ content, className }: PassageRendererProps) {
           "[&_thead]:bg-slate-50",
           "[&_tr]:border-b [&_tr]:border-slate-200",
           // Image styling - clean white background, no filters
-          "[&_img]:bg-white [&_img]:p-2 [&_img]:max-w-full [&_img]:h-auto [&_img]:mx-auto [&_img]:block",
+          "[&_img]:bg-white [&_img]:p-2 [&_img]:max-w-full [&_img]:h-auto [&_img]:mx-auto [&_img]:block [&_img]:contrast-[1.3] [&_img]:brightness-[1.05]",
           // Text formatting
           "[&_u]:underline [&_u]:decoration-2 [&_u]:underline-offset-2",
           "[&_b]:font-bold [&_strong]:font-bold",
