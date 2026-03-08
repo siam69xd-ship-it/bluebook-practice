@@ -138,6 +138,8 @@ export default function Practice() {
       difficulties: { easy: true, medium: true, hard: true },
     };
     sessionStorage.setItem('practiceConfig', JSON.stringify(practiceConfig));
+    // Clear saved progress so new session starts at question 1
+    clearProgress();
     navigate('/quiz');
   };
 
