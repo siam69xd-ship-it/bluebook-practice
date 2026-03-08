@@ -338,16 +338,15 @@ function LatexRendererComponent({ content, className = '', displayMode = false }
       return renderKatex(`\\${symbol}`, false);
     });
 
-    // Handle HTML tables - add styling classes
-    processedContent = processedContent.replace(/<table([^>]*)>/gi, (match, attrs) => {
-      // Remove old attributes and add proper styling
-      return `<table class="my-4 border-collapse border border-slate-300 w-auto inline-table">`;
+    // Handle HTML tables - Bluebook style: clean black & white
+    processedContent = processedContent.replace(/<table([^>]*)>/gi, () => {
+      return `<table style="margin:16px 0;border-collapse:collapse;border:2px solid #000;display:inline-table;">`;
     });
     processedContent = processedContent.replace(/<th([^>]*)>/gi, 
-      `<th class="border border-slate-300 px-4 py-2 bg-slate-100 font-semibold text-left">`
+      `<th style="border:1px solid #000;padding:8px 16px;background:#000;color:#fff;font-weight:600;text-align:center;">`
     );
     processedContent = processedContent.replace(/<td([^>]*)>/gi, 
-      `<td class="border border-slate-300 px-4 py-2 text-center">`
+      `<td style="border:1px solid #000;padding:8px 16px;text-align:center;background:#fff;color:#000;">`
     );
     processedContent = processedContent.replace(/<tr([^>]*)>/gi, '<tr>');
 
