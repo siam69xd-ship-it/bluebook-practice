@@ -218,6 +218,7 @@ export default function MathQuestionLayout({
                         isCorrect={currentState?.checked && isCorrect && letter === currentQuestion.correctAnswer}
                         isIncorrect={(currentState?.checked && isThisSelected && !isCorrect) || isThisCheckedWrong}
                         disabled={(currentState?.checked && isCorrect) || isThisCheckedWrong}
+                        optionImage={currentQuestion.optionImages?.[letter] || null}
                         onCheckOption={() => {
                           const checkedOptions = currentState?.checkedOptions || [];
                           if (!checkedOptions.includes(letter)) {
