@@ -141,26 +141,31 @@ export default function Practice() {
     const disabled = count === 0;
     return (
       <motion.button
-        initial={{ opacity: 0, y: 4, filter: 'blur(4px)', scale: 0.95 }}
-        animate={{ opacity: 1, y: 0, filter: 'blur(0px)', scale: 1 }}
-        transition={{ duration: 0.18, delay: index * 0.025, ease: [0.4, 0, 0.2, 1] }}
+        initial={{ opacity: 0, y: 3 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.2, delay: index * 0.02, ease: [0.22, 1, 0.36, 1] }}
         onClick={disabled ? undefined : onClick}
         disabled={disabled}
-        whileHover={disabled ? {} : { x: 3, backgroundColor: 'hsl(var(--muted) / 0.5)' }}
-        whileTap={disabled ? {} : { scale: 0.995 }}
         className={cn(
-          'w-full flex items-center justify-between py-3.5 transition-colors duration-150 group border-b border-border/60 last:border-b-0',
-          disabled ? 'opacity-30 cursor-not-allowed' : ''
+          'w-full flex items-center justify-between py-3 transition-all duration-150 group border-b border-border/40 last:border-b-0',
+          disabled
+            ? 'opacity-25 cursor-not-allowed'
+            : 'hover:bg-muted/40'
         )}
-        style={{ paddingLeft: `${depth * 20 + 20}px`, paddingRight: '20px' }}
+        style={{ paddingLeft: `${depth * 24 + 24}px`, paddingRight: '24px' }}
       >
-        <span className="text-[14px] text-foreground/80 group-hover:text-foreground transition-colors duration-150">
+        <span className={cn(
+          'text-[13px] text-foreground/75 transition-colors duration-150',
+          !disabled && 'group-hover:text-foreground'
+        )}>
           {label}
         </span>
         <div className="flex items-center gap-3">
-          <span className="text-[13px] text-muted-foreground tabular-nums group-hover:text-foreground/60 transition-colors duration-150">{count}</span>
+          <span className="text-[12px] text-muted-foreground/60 tabular-nums font-mono tracking-tight">
+            {count}
+          </span>
           {!disabled && (
-            <ArrowRight className="w-3.5 h-3.5 text-muted-foreground/0 group-hover:text-muted-foreground group-hover:translate-x-0.5 transition-all duration-200" />
+            <ArrowRight className="w-3 h-3 text-transparent group-hover:text-muted-foreground transition-all duration-200 group-hover:translate-x-0.5" />
           )}
         </div>
       </motion.button>
@@ -171,42 +176,42 @@ export default function Practice() {
     const isOpen = expandedSections.includes(label);
     return (
       <motion.div
-        initial={{ opacity: 0, y: 4, filter: 'blur(4px)', scale: 0.95 }}
-        animate={{ opacity: 1, y: 0, filter: 'blur(0px)', scale: 1 }}
-        transition={{ duration: 0.18, delay: index * 0.025, ease: [0.4, 0, 0.2, 1] }}
+        initial={{ opacity: 0, y: 3 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.2, delay: index * 0.02, ease: [0.22, 1, 0.36, 1] }}
       >
-        <motion.button
+        <button
           onClick={() => toggleSection(label)}
-          whileHover={{ x: 2, backgroundColor: 'hsl(var(--muted) / 0.4)' }}
-          whileTap={{ scale: 0.998 }}
           className={cn(
-            'w-full flex items-center justify-between py-3.5 transition-colors duration-150 border-b border-border/60'
+            'w-full flex items-center justify-between py-3 transition-all duration-150 border-b border-border/40 hover:bg-muted/30',
           )}
-          style={{ paddingLeft: `${depth * 20 + 20}px`, paddingRight: '20px' }}
+          style={{ paddingLeft: `${depth * 24 + 24}px`, paddingRight: '24px' }}
         >
           <span className={cn(
-            'text-[14px] font-medium text-foreground',
-            depth === 0 && 'font-semibold'
+            'text-[13px] font-medium text-foreground transition-colors',
+            depth === 0 && 'text-[14px] font-semibold tracking-[-0.01em]'
           )}>
             {label}
           </span>
           <div className="flex items-center gap-3">
-            <span className="text-[13px] text-muted-foreground tabular-nums">{count}</span>
+            <span className="text-[12px] text-muted-foreground/60 tabular-nums font-mono tracking-tight">
+              {count}
+            </span>
             <motion.div
               animate={{ rotate: isOpen ? 180 : 0 }}
-              transition={{ duration: 0.2, ease: [0.4, 0, 0.2, 1] }}
+              transition={{ duration: 0.15, ease: [0.22, 1, 0.36, 1] }}
             >
-              <ChevronDown className="w-4 h-4 text-muted-foreground" />
+              <ChevronDown className="w-3.5 h-3.5 text-muted-foreground/50" />
             </motion.div>
           </div>
-        </motion.button>
+        </button>
         <AnimatePresence initial={false}>
           {isOpen && (
             <motion.div
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: 'auto', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
+              transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
               className="overflow-hidden"
             >
               {children}
@@ -270,10 +275,10 @@ export default function Practice() {
       return (
         <motion.div
           key={subSection}
-          initial={{ opacity: 0, y: 4, filter: 'blur(4px)', scale: 0.95 }}
-          animate={{ opacity: 1, y: 0, filter: 'blur(0px)', scale: 1 }}
-          transition={{ duration: 0.18, delay: i * 0.025, ease: [0.4, 0, 0.2, 1] }}
-          className="border border-border rounded-lg overflow-hidden bg-background"
+          initial={{ opacity: 0, y: 4 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.25, delay: i * 0.04, ease: [0.22, 1, 0.36, 1] }}
+          className="border border-border overflow-hidden bg-background"
         >
           <ExpandableRow label={subSection} count={count} depth={0}>
             {hasTopics && renderTopics(subSection, topics, mainSection)}
@@ -297,60 +302,73 @@ export default function Practice() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 py-3 sm:py-4">
-          <div className="flex items-center justify-between">
+      <header className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border">
+        <div className="max-w-[1120px] mx-auto px-6 sm:px-8">
+          <nav className="flex items-center justify-between h-14">
             <Button
               variant="ghost"
               size="sm"
               onClick={() => navigate('/')}
-              className="gap-2 text-muted-foreground hover:text-foreground -ml-2"
+              className="gap-1.5 text-muted-foreground hover:text-foreground -ml-3 h-8 px-3 text-[13px]"
             >
-              <ArrowLeft className="w-4 h-4" />
-              <span className="text-sm">Back</span>
+              <ArrowLeft className="w-3.5 h-3.5" />
+              Back
             </Button>
-            <span className="text-sm font-semibold tracking-tight text-foreground">NextPrep</span>
+            <span className="text-[15px] font-semibold tracking-tight text-foreground">
+              NextPrep
+            </span>
             <div className="w-[72px]" />
-          </div>
+          </nav>
         </div>
       </header>
 
-      <main className="max-w-[800px] mx-auto px-4 sm:px-6 py-10 sm:py-14 lg:py-20">
-        {/* Title */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
-          className="mb-10 sm:mb-14"
-        >
-          <h1 className="text-3xl sm:text-4xl md:text-[42px] font-bold tracking-tight text-foreground leading-tight mb-3">
-            Choose a Practice Topic
-          </h1>
-          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-[540px]">
-            Select a topic to begin practicing. The hierarchy is organized by subject and skill.
-          </p>
-        </motion.div>
-
-        {/* Sections */}
-        <div className="space-y-10 sm:space-y-14">
-          {Object.entries(FILTER_STRUCTURE).map(([section, subSections], idx) => (
-            <motion.section
-              key={section}
-              initial={{ opacity: 0, y: 10 }}
+      <main className="pt-14">
+        {/* Hero area */}
+        <div className="border-b border-border">
+          <div className="max-w-[760px] mx-auto px-6 sm:px-8 py-16 sm:py-20">
+            <motion.div
+              initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: idx * 0.06, ease: [0.4, 0, 0.2, 1] }}
+              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
             >
-              <h2 className="text-[11px] sm:text-xs font-semibold text-muted-foreground uppercase tracking-[0.2em] mb-4 sm:mb-5">
-                {section}
-              </h2>
-              <div className="space-y-3">
-                {renderSubSections(subSections, section)}
-              </div>
-            </motion.section>
-          ))}
+              <span className="inline-block text-[11px] font-medium tracking-[0.15em] uppercase text-muted-foreground border border-border px-4 py-1.5 mb-6">
+                Topic Selection
+              </span>
+              <h1 className="text-[26px] sm:text-[34px] font-semibold tracking-[-0.03em] text-foreground leading-[1.15] mb-3">
+                Choose a Practice Topic
+              </h1>
+              <p className="text-[15px] text-muted-foreground leading-[1.6] max-w-[480px]">
+                Select a subject area and topic to begin a focused practice session.
+              </p>
+            </motion.div>
+          </div>
         </div>
 
-        <div className="h-24" />
+        {/* Content */}
+        <div className="max-w-[760px] mx-auto px-6 sm:px-8 py-12 sm:py-16">
+          <div className="space-y-14 sm:space-y-18">
+            {Object.entries(FILTER_STRUCTURE).map(([section, subSections], idx) => (
+              <motion.section
+                key={section}
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: idx * 0.06, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <div className="flex items-center gap-4 mb-5">
+                  <h2 className="text-[11px] font-medium text-muted-foreground uppercase tracking-[0.15em] whitespace-nowrap">
+                    {section}
+                  </h2>
+                  <div className="h-px flex-1 bg-border" />
+                </div>
+                <div className="space-y-2">
+                  {renderSubSections(subSections, section)}
+                </div>
+              </motion.section>
+            ))}
+          </div>
+
+          <div className="h-20" />
+        </div>
       </main>
     </div>
   );
