@@ -181,6 +181,11 @@ const App = () => {
                   </div>
                 </Suspense>
               } />
+              <Route path="/admin/generate-explanations" element={
+                <Suspense fallback={<PageLoader />}>
+                  <GenerateExplanations />
+                </Suspense>
+              } />
               <Route path="*" element={
                 <Suspense fallback={<PageLoader />}>
                   <div className="animate-in">
