@@ -80,8 +80,8 @@ export default function MathQuestionOption({
         {label}
       </div>
 
-      {/* Option Text */}
-      <span
+      {/* Option Content */}
+      <div
         className={cn(
           'flex-1 text-[0.9375rem] leading-relaxed font-normal',
           isEliminated && 'line-through text-muted-foreground',
@@ -91,8 +91,16 @@ export default function MathQuestionOption({
           showCorrectIndicator && 'text-green-700'
         )}
       >
-        <LatexRenderer content={cleanText} className="inline" />
-      </span>
+        {optionImage ? (
+          <img
+            src={optionImage}
+            alt={`Option ${label}`}
+            className="max-w-[200px] h-auto bg-white"
+          />
+        ) : (
+          <LatexRenderer content={cleanText} className="inline" />
+        )}
+      </div>
 
       {/* Action buttons */}
       <div className="flex items-center gap-2 ml-auto">
