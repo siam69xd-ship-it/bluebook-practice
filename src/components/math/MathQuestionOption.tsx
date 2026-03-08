@@ -37,7 +37,8 @@ export default function MathQuestionOption({
   isOptionChecked,
   correctAnswer,
   onCheckOption,
-  hideCheckButton = false
+  hideCheckButton = false,
+  optionImage
 }: MathQuestionOptionProps) {
   const cleanText = text.replace(/^[A-D]\)\s*/, '');
 
