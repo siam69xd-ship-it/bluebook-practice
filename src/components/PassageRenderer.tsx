@@ -36,8 +36,8 @@ export function PassageRenderer({ content, className }: PassageRendererProps) {
           "[&_td]:border [&_td]:border-slate-300 [&_td]:px-4 [&_td]:py-2 [&_td]:text-center",
           "[&_thead]:bg-slate-50",
           "[&_tr]:border-b [&_tr]:border-slate-200",
-          // Image styling - white background, remove watermarks while keeping text readable
-          "[&_img]:bg-white [&_img]:p-2 [&_img]:max-w-[280px] sm:[&_img]:max-w-[360px] [&_img]:h-auto [&_img]:mx-auto [&_img]:block [&_img]:[mix-blend-mode:multiply] [&_img]:[filter:contrast(1.8)_brightness(1.3)_saturate(0)]",
+          // Image styling - white background, subtle watermark reduction
+          "[&_img]:bg-white [&_img]:p-2 [&_img]:max-w-full [&_img]:h-auto [&_img]:mx-auto [&_img]:block [&_img]:[mix-blend-mode:multiply]",
           // Text formatting
           "[&_u]:underline [&_u]:decoration-2 [&_u]:underline-offset-2",
           "[&_b]:font-bold [&_strong]:font-bold",
