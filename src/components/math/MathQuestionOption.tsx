@@ -13,6 +13,11 @@ interface MathQuestionOptionProps {
   showEliminationButtons?: boolean;
   onEliminate?: () => void;
   disabled?: boolean;
+  isChecked?: boolean;
+  isOptionChecked?: boolean;
+  correctAnswer?: string;
+  onCheckOption?: () => void;
+  hideCheckButton?: boolean;
 }
 
 export default function MathQuestionOption({
@@ -26,95 +31,109 @@ export default function MathQuestionOption({
   isEliminated,
   showEliminationButtons,
   onEliminate,
-  disabled
+  disabled,
+  isChecked,
+  isOptionChecked,
+  correctAnswer,
+  onCheckOption,
+  hideCheckButton = false
 }: MathQuestionOptionProps) {
-  // Clean option text - remove A), B), etc. prefix if present
   const cleanText = text.replace(/^[A-D]\)\s*/, '');
 
-  // Determine border/background states
-  // Selected but not checked: blue highlight
-  // After check: green for correct, red for incorrect (stays red for previously checked wrong)
-  const getBorderColor = () => {
-    if (isEliminated) return 'border-border';
-    if (showResult && isCorrect) return 'border-green-500';
-    if (showResult && isIncorrect) return 'border-red-400';
-    if (isSelected && !showResult) return 'border-foreground';
-    return 'border-foreground/30 hover:border-foreground/60';
-  };
+  const isCorrectAnswer = label === correctAnswer;
+  const showOptionWrong = isOptionChecked && !isCorrectAnswer;
+  const showOptionCorrect = isOptionChecked && isCorrectAnswer;
+  const showCorrectIndicator = isChecked && isCorrectAnswer && !isSelected && !isOptionChecked;
 
-  const getBackgroundColor = () => {
-    if (isEliminated) return 'bg-muted';
-    if (showResult && isCorrect) return 'bg-green-50';
-    if (showResult && isIncorrect) return 'bg-red-50';
-    if (isSelected && !showResult) return 'bg-muted';
-    return 'bg-background';
-  };
+  const shouldShowEliminationButton = showEliminationButtons || isEliminated;
 
   return (
-    <div className="relative flex items-center gap-3">
-      {/* Main Option Button - Bluebook Style */}
-      <button
-        onClick={onClick}
-        disabled={disabled || isEliminated}
+    <div
+      className={cn(
+        'group relative flex items-center gap-3 px-4 py-3 rounded-lg border transition-all duration-200 cursor-pointer',
+        isEliminated && 'opacity-40',
+        !isEliminated && !showOptionWrong && !showOptionCorrect && !showCorrectIndicator && !isSelected &&
+          'border-border bg-card hover:border-muted-foreground/50 hover:shadow-sm',
+        isSelected && !isOptionChecked && !isChecked &&
+          'border-foreground/30 bg-card shadow-sm',
+        showOptionWrong && 'border-red-400 bg-red-50',
+        showOptionCorrect && 'border-green-400 bg-green-50',
+        showCorrectIndicator && 'border-green-300 bg-green-50/50'
+      )}
+      onClick={() => !isEliminated && !isOptionChecked && onClick()}
+    >
+      {/* Circle Letter Badge */}
+      <div
         className={cn(
-          'flex-1 flex items-center gap-4 px-6 py-4 rounded-2xl border transition-all text-left',
-          getBorderColor(),
-          getBackgroundColor(),
-          isEliminated && 'opacity-40'
+          'flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-semibold text-sm border-2 transition-all duration-200',
+          !isSelected && !isOptionChecked && !showCorrectIndicator &&
+            'border-foreground/40 bg-card text-foreground',
+          isSelected && !isOptionChecked && !isChecked &&
+            'border-foreground bg-foreground text-background',
+          showOptionWrong && 'border-red-500 bg-red-500 text-white',
+          showOptionCorrect && 'border-green-500 bg-green-500 text-white',
+          showCorrectIndicator && 'border-green-500 bg-green-100 text-green-700'
         )}
       >
-        {/* Circle Letter Badge */}
-        <div className={cn(
-          'flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center font-semibold text-base border transition-all',
-          !isSelected && !showResult && 
-            'border-foreground/40 bg-background text-foreground',
-          isSelected && !showResult && 
-            'border-foreground bg-foreground text-background',
-          showResult && isCorrect && 'border-green-500 bg-green-500 text-white',
-          showResult && isIncorrect && 'border-red-500 bg-red-500 text-white',
-          showResult && !isCorrect && !isIncorrect && 
-            'border-foreground/40 bg-background text-foreground'
-        )}>
-          {label}
-        </div>
+        {label}
+      </div>
 
-        {/* Option Text */}
-        <span className={cn(
-          'flex-1 text-[17px] leading-relaxed',
+      {/* Option Text */}
+      <span
+        className={cn(
+          'flex-1 text-[0.9375rem] leading-relaxed font-normal',
           isEliminated && 'line-through text-muted-foreground',
-          !isEliminated && 'text-foreground',
-          showResult && isIncorrect && 'text-red-700',
-          showResult && isCorrect && 'text-green-700'
-        )}>
-          <LatexRenderer content={cleanText} className="inline" />
-        </span>
-      </button>
+          !isEliminated && !showOptionWrong && !showOptionCorrect && !showCorrectIndicator && 'text-foreground',
+          showOptionWrong && 'text-red-700',
+          showOptionCorrect && 'text-green-700',
+          showCorrectIndicator && 'text-green-700'
+        )}
+      >
+        <LatexRenderer content={cleanText} className="inline" />
+      </span>
 
-      {/* Elimination Button - SAT style circle with diagonal strikethrough */}
-      {showEliminationButtons && (
-        <button
-          onClick={(e) => {
-            e.stopPropagation();
-            onEliminate?.();
-          }}
-          className={cn(
-            'flex-shrink-0 w-8 h-8 rounded-full border flex items-center justify-center transition-all relative',
-            isEliminated
-              ? 'border-muted-foreground/40 bg-transparent'
-              : 'border-border bg-transparent hover:border-muted-foreground'
-          )}
-          title={isEliminated ? 'Restore option' : 'Eliminate option'}
-        >
-          <span className="text-xs font-semibold text-muted-foreground">
-            {label}
-          </span>
-          {isEliminated && (
-            <span className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <span className="w-[calc(100%+4px)] h-[2px] bg-muted-foreground rotate-[-45deg] absolute" />
+      {/* Action buttons */}
+      <div className="flex items-center gap-2 ml-auto">
+        {/* Check button for selected option */}
+        {isSelected && !isOptionChecked && !isChecked && !hideCheckButton && (
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              onCheckOption?.();
+            }}
+            className="flex-shrink-0 px-3 py-1 bg-foreground text-background text-xs font-medium rounded-full hover:bg-foreground/90 transition-colors"
+            title="Check this option"
+          >
+            Check
+          </button>
+        )}
+
+        {/* Elimination button */}
+        {shouldShowEliminationButton && (
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              onEliminate?.();
+            }}
+            className={cn(
+              'flex-shrink-0 w-7 h-7 rounded-full border flex items-center justify-center transition-all duration-200 relative',
+              isEliminated
+                ? 'border-gray-400 bg-transparent'
+                : 'border-gray-300 bg-transparent hover:border-gray-500'
+            )}
+            title={isEliminated ? 'Restore option' : 'Eliminate option'}
+          >
+            <span className="text-xs font-medium text-gray-600">
+              {label}
             </span>
-          )}
-        </button>
-      )}
+            {isEliminated && (
+              <span className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <span className="w-[calc(100%+4px)] h-[1.5px] bg-gray-500 rotate-[-45deg] absolute" />
+              </span>
+            )}
+          </button>
+        )}
+      </div>
     </div>
   );
 }
