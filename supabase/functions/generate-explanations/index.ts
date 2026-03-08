@@ -6,77 +6,57 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
-async function generateExplanation(apiKey: string, q: any): Promise<string> {
-  const prompt = `You are an expert SAT tutor. Write a detailed explanation (3-5 sentences) for this SAT inference question.
-
-Passage: ${q.content.passage}
-Question: ${q.content.question}
-Options: ${q.content.options.join(' | ')}
-Correct Answer: ${q.solution.answer}
-
-Explain: 1) Key passage info leading to the answer 2) Why correct answer follows logically 3) Why other options fail. Use clear student-friendly language. Return ONLY the explanation.`;
-
-  const response = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      "Authorization": `Bearer ${apiKey}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      model: "google/gemini-2.5-flash-lite",
-      messages: [{ role: "user", content: prompt }],
-      temperature: 0.3,
-      max_tokens: 350,
-    }),
-  });
-
-  if (!response.ok) {
-    console.error(`Failed for question ${q.id}: ${response.status}`);
-    return q.solution.explanation;
-  }
-
-  const data = await response.json();
-  return data.choices?.[0]?.message?.content?.trim() || q.solution.explanation;
-}
-
 serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
 
   try {
-    const { batchStart = 0, batchSize = 15, dataUrl } = await req.json();
+    const { questions } = await req.json();
     const apiKey = Deno.env.get("LOVABLE_API_KEY");
     if (!apiKey) throw new Error("LOVABLE_API_KEY not configured");
 
-    // Fetch the questions from the provided URL or use inline questions
-    let questions: any[];
-    if (dataUrl) {
-      const resp = await fetch(dataUrl);
-      const data = await resp.json();
-      questions = data.questions;
-    } else {
-      throw new Error("dataUrl is required");
+    // Process all questions in batch via single AI call
+    const questionsText = questions.map((q: any) => 
+      `Q${q.id}: Passage: ${q.p}\nQuestion: ${q.q}\nOptions: ${q.o.join(' | ')}\nAnswer: ${q.a}`
+    ).join('\n\n---\n\n');
+
+    const prompt = `You are an expert SAT tutor. For each question below, write a detailed explanation (3-5 sentences). 
+Explain: 1) Key passage info 2) Why the answer is correct 3) Why others fail.
+
+Format your response as JSON array: [{"id":"1","explanation":"..."},{"id":"2","explanation":"..."}]
+
+${questionsText}`;
+
+    const response = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${apiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model: "google/gemini-2.5-flash",
+        messages: [{ role: "user", content: prompt }],
+        temperature: 0.3,
+        max_tokens: 8000,
+      }),
+    });
+
+    if (!response.ok) {
+      const errText = await response.text();
+      throw new Error(`AI API error: ${response.status} - ${errText}`);
     }
 
-    const batch = questions.slice(batchStart, batchStart + batchSize);
-    const results = [];
+    const data = await response.json();
+    let content = data.choices?.[0]?.message?.content?.trim() || "[]";
+    
+    // Extract JSON from markdown code blocks if present
+    const jsonMatch = content.match(/```(?:json)?\s*([\s\S]*?)```/);
+    if (jsonMatch) content = jsonMatch[1].trim();
+    
+    const results = JSON.parse(content);
 
-    // Process 5 at a time
-    for (let i = 0; i < batch.length; i += 5) {
-      const chunk = batch.slice(i, i + 5);
-      const chunkResults = await Promise.all(
-        chunk.map(async (q: any) => {
-          const explanation = await generateExplanation(apiKey, q);
-          return { id: q.id, explanation };
-        })
-      );
-      results.push(...chunkResults);
-    }
-
-    console.log(`Processed questions ${batchStart + 1}-${batchStart + batch.length} of ${questions.length}`);
-
-    return new Response(JSON.stringify({ results, total: questions.length }), {
+    return new Response(JSON.stringify({ results }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   } catch (error) {
