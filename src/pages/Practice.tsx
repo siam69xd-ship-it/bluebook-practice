@@ -263,16 +263,22 @@ export default function Practice() {
   };
 
   const renderSubSections = (subSections: Record<string, any>, mainSection: string) => {
-    return Object.entries(subSections).map(([subSection, topics]) => {
+    return Object.entries(subSections).map(([subSection, topics], i) => {
       const count = getCount(subSection);
       const hasTopics = topics !== null && typeof topics === 'object';
 
       return (
-        <div key={subSection} className="border border-border rounded-lg overflow-hidden bg-background">
+        <motion.div
+          key={subSection}
+          initial={{ opacity: 0, y: 4, filter: 'blur(4px)', scale: 0.95 }}
+          animate={{ opacity: 1, y: 0, filter: 'blur(0px)', scale: 1 }}
+          transition={{ duration: 0.18, delay: i * 0.025, ease: [0.4, 0, 0.2, 1] }}
+          className="border border-border rounded-lg overflow-hidden bg-background"
+        >
           <ExpandableRow label={subSection} count={count} depth={0}>
             {hasTopics && renderTopics(subSection, topics, mainSection)}
           </ExpandableRow>
-        </div>
+        </motion.div>
       );
     });
   };
