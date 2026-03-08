@@ -380,6 +380,7 @@ export default function Math() {
                           showEliminationButtons={isEliminationMode}
                           onEliminate={() => toggleElimination(optionLabel)}
                           disabled={showResult}
+                          optionImage={currentQuestion.option_images?.[optionLabel] || null}
                         />
                       );
                     })

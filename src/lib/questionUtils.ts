@@ -17,6 +17,7 @@ export interface Question {
   isGridIn?: boolean; // For math grid-in questions
   hasLatex?: boolean; // For math questions with LaTeX
   image?: string | null; // For questions with diagrams
+  optionImages?: { [key: string]: string } | null; // For options with diagram images
 }
 
 export interface TextHighlight {
@@ -670,9 +671,13 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
           difficulty,
         ));
         
-        // Add image if present in the last added question
+        // Add image if present in the last added question (fix path)
         if (q.image) {
-          (questions[questions.length - 1] as any).image = q.image;
+          let fixedImage = q.image;
+          if (fixedImage.includes('/images/diagrams/') && !fixedImage.includes('/images/diagrams/diagram/')) {
+            fixedImage = fixedImage.replace('/images/diagrams/', '/images/diagrams/diagram/');
+          }
+          (questions[questions.length - 1] as any).image = fixedImage;
         }
       });
     };
@@ -1206,6 +1211,19 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
             if (fixedImage && fixedImage.includes('/images/diagrams/') && !fixedImage.includes('/images/diagrams/diagram/')) {
               fixedImage = fixedImage.replace('/images/diagrams/', '/images/diagrams/diagram/');
             }
+
+            // Fix option_images paths
+            let fixedOptionImages: { [key: string]: string } | null = null;
+            if (q.option_images) {
+              fixedOptionImages = {};
+              for (const [key, val] of Object.entries(q.option_images)) {
+                let fixedVal = val as string;
+                if (fixedVal.includes('/images/diagrams/') && !fixedVal.includes('/images/diagrams/diagram/')) {
+                  fixedVal = fixedVal.replace('/images/diagrams/', '/images/diagrams/diagram/');
+                }
+                fixedOptionImages[key] = fixedVal;
+              }
+            }
             
             addQuestion({
               id: globalId++,
@@ -1223,7 +1241,8 @@ export async function getAllQuestionsAsync(): Promise<Question[]> {
               difficulty: 'medium' as Difficulty, // Will be updated later
               isGridIn,
               hasLatex,
-              image: fixedImage, // Include the fixed image path!
+              image: fixedImage,
+              optionImages: fixedOptionImages,
             });
           });
         }

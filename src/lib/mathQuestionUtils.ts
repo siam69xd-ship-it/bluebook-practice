@@ -7,6 +7,7 @@ export interface MathQuestion {
   explanation: string;
   isGridIn: boolean;
   image?: string | null;
+  option_images?: { [key: string]: string } | null;
 }
 
 interface RawMathQuestion {
@@ -16,6 +17,7 @@ interface RawMathQuestion {
   answer: string;
   explanation: string;
   image?: string;
+  option_images?: { [key: string]: string };
 }
 
 interface MathDataFile {
@@ -129,6 +131,19 @@ export async function loadAllMathQuestions(): Promise<MathQuestion[]> {
           fixedImage = fixedImage.replace('/images/diagrams/', '/images/diagrams/diagram/');
         }
 
+        // Fix option_images paths too
+        let fixedOptionImages: { [key: string]: string } | null = null;
+        if (q.option_images) {
+          fixedOptionImages = {};
+          for (const [key, val] of Object.entries(q.option_images)) {
+            let fixedVal = val;
+            if (fixedVal.includes('/images/diagrams/') && !fixedVal.includes('/images/diagrams/diagram/')) {
+              fixedVal = fixedVal.replace('/images/diagrams/', '/images/diagrams/diagram/');
+            }
+            fixedOptionImages[key] = fixedVal;
+          }
+        }
+
         return {
           ...q,
           id: index + 1,
@@ -136,6 +151,7 @@ export async function loadAllMathQuestions(): Promise<MathQuestion[]> {
           isGridIn,
           options: isGridIn ? [] : q.options,
           image: fixedImage,
+          option_images: fixedOptionImages,
         };
       });
     } catch (error) {
