@@ -351,20 +351,19 @@ export default function Quiz() {
     setShowContent(true);
   }, []);
 
-  // Safety: if data loaded but showContent never triggered, force it
+  // Show content immediately once loaded — no waiting for animation
   useEffect(() => {
     if (isLoaded && !showContent) {
-      const timer = setTimeout(() => setShowContent(true), 300);
-      return () => clearTimeout(timer);
+      setShowContent(true);
     }
   }, [isLoaded, showContent]);
 
-  if (!showContent) {
+  if (!isLoaded) {
     return (
       <>
         <LoadingProgressBar 
-          isLoading={!isLoaded} 
-          onLoadingComplete={handleLoadingComplete}
+          isLoading={true} 
+          onLoadingComplete={() => {}}
         />
         <QuizSkeleton />
       </>
