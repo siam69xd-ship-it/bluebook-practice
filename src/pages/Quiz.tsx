@@ -341,19 +341,13 @@ export default function Quiz() {
     setShowContent(true);
   }, []);
 
-  // Bypass loading animation on refresh — show content immediately if loaded
-  if (!showContent && isLoaded) {
-    // Data loaded before animation finished — skip animation
-    return (
-      <>
-        <LoadingProgressBar 
-          isLoading={false} 
-          onLoadingComplete={handleLoadingComplete}
-        />
-        <QuizSkeleton />
-      </>
-    );
-  }
+  // Safety: if data loaded but showContent never triggered, force it
+  useEffect(() => {
+    if (isLoaded && !showContent) {
+      const timer = setTimeout(() => setShowContent(true), 300);
+      return () => clearTimeout(timer);
+    }
+  }, [isLoaded, showContent]);
 
   if (!showContent) {
     return (
