@@ -6,7 +6,7 @@ import { PassageRenderer } from './PassageRenderer';
 
 // Check if content contains HTML tags that need rendering
 function containsHtml(text: string): boolean {
-  return /<(table|u|b|i|em|strong|br|p|div|span|thead|tbody|tr|td|th)[^>]*>/i.test(text);
+  return /<(table|u|b|i|em|strong|br|p|div|span|thead|tbody|tr|td|th|img)[^>]*>/i.test(text);
 }
 
 interface HighlightableTextProps {
