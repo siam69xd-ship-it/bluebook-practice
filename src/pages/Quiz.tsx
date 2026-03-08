@@ -80,7 +80,10 @@ export default function Quiz() {
   const [showReference, setShowReference] = useState(false);
   const [gridInAnswer, setGridInAnswer] = useState('');
   const [isInitialLoad, setIsInitialLoad] = useState(true);
-  const [prevFilter, setPrevFilter] = useState<string>('');
+  const [prevFilter, setPrevFilter] = useState<string>(() => {
+    const saved = loadProgress();
+    return saved ? JSON.stringify(saved.filter) : '';
+  });
 
   // Fetch attempt counts for logged-in users
   const { data: attemptCounts = {} } = useQuery<Record<string, number>>({
