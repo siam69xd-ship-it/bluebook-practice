@@ -293,8 +293,8 @@ export default function Quiz() {
     }
   };
 
-  // Handler: Navigate
-  const handleNavigate = (direction: 'prev' | 'next' | number) => {
+  // Handler: Navigate — no state reset, no animation queue
+  const handleNavigate = useCallback((direction: 'prev' | 'next' | number) => {
     let targetIndex: number;
     
     if (typeof direction === 'number') {
@@ -307,17 +307,8 @@ export default function Quiz() {
       return;
     }
 
-    const targetQuestion = filteredQuestions[targetIndex];
-    if (targetQuestion) {
-      updateQuestionState(targetQuestion.id, { 
-        userAnswer: null, 
-        checked: false,
-        checkedOptions: [],
-      });
-    }
-
     setCurrentIndex(targetIndex);
-  };
+  }, [currentIndex, filteredQuestions.length]);
 
   // Handler: Filter change
   const handleFilterChange = (filter: Partial<FilterOption>) => {
