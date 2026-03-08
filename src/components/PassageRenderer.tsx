@@ -31,11 +31,11 @@ export function PassageRenderer({ content, className }: PassageRendererProps) {
           "passage-html",
           // Table styling
           "[&_table]:w-auto [&_table]:border-collapse [&_table]:my-4 [&_table]:inline-table",
-          "[&_table]:border-2 [&_table]:border-black",
-          "[&_th]:border [&_th]:border-black [&_th]:px-4 [&_th]:py-2 [&_th]:bg-black [&_th]:text-white [&_th]:text-center [&_th]:font-semibold",
-          "[&_td]:border [&_td]:border-black [&_td]:px-4 [&_td]:py-2 [&_td]:text-center [&_td]:bg-white [&_td]:text-black",
-          "[&_thead]:bg-black",
-          "[&_tr]:border-b [&_tr]:border-black",
+          "[&_table]:border [&_table]:border-foreground/30",
+          "[&_th]:border [&_th]:border-foreground/30 [&_th]:px-6 [&_th]:py-2.5 [&_th]:bg-background [&_th]:text-foreground [&_th]:text-center [&_th]:font-medium",
+          "[&_td]:border [&_td]:border-foreground/30 [&_td]:px-6 [&_td]:py-2.5 [&_td]:text-center [&_td]:bg-background [&_td]:text-foreground",
+          "[&_thead]:bg-background",
+          "[&_tr]:border-b [&_tr]:border-foreground/30",
           // Image styling - clean white background, no filters
           "[&_img]:bg-white [&_img]:p-2 [&_img]:max-w-full [&_img]:h-auto [&_img]:mx-auto [&_img]:block [&_img]:contrast-[1.3] [&_img]:brightness-[1.05]",
           // Text formatting
