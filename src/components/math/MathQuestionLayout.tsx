@@ -186,11 +186,11 @@ export default function MathQuestionLayout({
               <div className="mb-3 sm:mb-4">
                 <LatexRenderer content={currentQuestion.questionPrompt || ''} className="text-[15px] sm:text-[17px] leading-relaxed text-foreground" />
                 {(currentQuestion as any).image && (
-                  <div className="mt-4 sm:mt-6 flex justify-center">
+                  <div className="mt-3 sm:mt-4 flex justify-center">
                     <img 
                       src={(currentQuestion as any).image} 
                       alt="Question Diagram" 
-                      className="max-w-[280px] sm:max-w-[360px] w-auto h-auto bg-white p-2"
+                      className="max-w-full sm:max-w-[520px] w-auto h-auto bg-white p-2"
                       style={{ filter: 'contrast(1.3) brightness(1.05)' }}
                       onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
                     />
