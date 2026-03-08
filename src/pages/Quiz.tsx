@@ -215,7 +215,6 @@ export default function Quiz() {
   }, [questionStates, currentIndex, activeFilter, isLoaded, allQuestions.length]);
 
   // Reset current index when filter changes (but not on initial load)
-  const [prevFilter, setPrevFilter] = useState<string>('');
   useEffect(() => {
     const filterStr = JSON.stringify(activeFilter);
     if (prevFilter && prevFilter !== filterStr) {
