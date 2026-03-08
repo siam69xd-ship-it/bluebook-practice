@@ -41,8 +41,8 @@
     --radius: 0.5rem;
 
     /* Bluebook theme colors (preserved for quiz interface) */
-    --bluebook-bg: 210 20% 98%;
-    --bluebook-panel: 210 20% 97%;
+    --bluebook-bg: 0 0% 100%;
+    --bluebook-panel: 0 0% 97%;
     --bluebook-cyan: 186 100% 94%;
     --bluebook-cyan-border: 186 60% 70%;
     --bluebook-text: 0 0% 0%;
