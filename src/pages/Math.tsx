@@ -321,7 +321,7 @@ export default function Math() {
                     <img 
                       src={currentQuestion.image} 
                       alt="Question Diagram" 
-                      className="max-w-full h-auto border border-gray-200 rounded-lg shadow-sm"
+                      className="max-w-[280px] sm:max-w-[360px] w-auto h-auto"
                       onError={(e) => {
                         (e.target as HTMLImageElement).style.display = 'none';
                       }}
