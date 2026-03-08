@@ -58,7 +58,10 @@ export default function Quiz() {
   
   // State
   const [allQuestions, setAllQuestions] = useState<Question[]>([]);
-  const [activeFilter, setActiveFilter] = useState<Partial<FilterOption>>({});
+  const [activeFilter, setActiveFilter] = useState<Partial<FilterOption>>(() => {
+    const saved = loadProgress();
+    return saved ? saved.filter : {};
+  });
   const [questionStates, setQuestionStates] = useState<{ [key: number]: QuestionState }>({});
   const [currentIndex, setCurrentIndex] = useState(() => {
     // Initialize from saved progress to survive refresh
