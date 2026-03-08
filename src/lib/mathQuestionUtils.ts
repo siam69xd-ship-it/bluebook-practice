@@ -7,6 +7,7 @@ export interface MathQuestion {
   explanation: string;
   isGridIn: boolean;
   image?: string | null;
+  option_images?: { [key: string]: string } | null;
 }
 
 interface RawMathQuestion {
@@ -16,6 +17,7 @@ interface RawMathQuestion {
   answer: string;
   explanation: string;
   image?: string;
+  option_images?: { [key: string]: string };
 }
 
 interface MathDataFile {
