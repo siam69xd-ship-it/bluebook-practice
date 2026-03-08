@@ -175,6 +175,13 @@ export default function MathQuestionLayout({
                 </div>
               </div>
 
+              {/* Passage (tables, context text) */}
+              {currentQuestion.passage && (
+                <div className="mb-4 sm:mb-6">
+                  <LatexRenderer content={currentQuestion.passage} className="text-[15px] sm:text-[17px] leading-relaxed text-foreground" />
+                </div>
+              )}
+
               {/* Question text */}
               <div className="mb-6 sm:mb-8">
                 <LatexRenderer content={currentQuestion.questionPrompt || ''} className="text-[15px] sm:text-[17px] leading-relaxed text-foreground" />
