@@ -204,10 +204,13 @@ export default function Quiz() {
   const isMathQuestion = currentQuestion?.section === 'Math';
   const isGridInQuestion = isMathQuestion && currentQuestion?.isGridIn;
 
-  // Save progress on changes
+  // Save progress on changes — debounced to avoid rapid writes
   useEffect(() => {
     if (isLoaded && allQuestions.length > 0) {
-      saveProgress(questionStates, currentIndex, activeFilter);
+      const timer = setTimeout(() => {
+        saveProgress(questionStates, currentIndex, activeFilter);
+      }, 500);
+      return () => clearTimeout(timer);
     }
   }, [questionStates, currentIndex, activeFilter, isLoaded, allQuestions.length]);
 
