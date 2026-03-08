@@ -342,6 +342,20 @@ export default function Quiz() {
     setShowContent(true);
   }, []);
 
+  // Bypass loading animation on refresh — show content immediately if loaded
+  if (!showContent && isLoaded) {
+    // Data loaded before animation finished — skip animation
+    return (
+      <>
+        <LoadingProgressBar 
+          isLoading={false} 
+          onLoadingComplete={handleLoadingComplete}
+        />
+        <QuizSkeleton />
+      </>
+    );
+  }
+
   if (!showContent) {
     return (
       <>
