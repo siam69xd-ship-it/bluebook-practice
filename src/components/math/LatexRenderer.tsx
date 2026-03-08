@@ -307,15 +307,15 @@ function LatexRendererComponent({ content, className = '', displayMode = false }
       return renderKatex(`\\${symbol}`, false);
     });
 
-    // Handle HTML tables - Bluebook style: clean black & white
+    // Handle HTML tables - clean minimal style matching reference design
     processedContent = processedContent.replace(/<table([^>]*)>/gi, () => {
-      return `<table style="margin:16px 0;border-collapse:collapse;border:2px solid #000;display:inline-table;">`;
+      return `<table style="margin:16px 0;border-collapse:collapse;border:1px solid #333;display:inline-table;width:auto;">`;
     });
     processedContent = processedContent.replace(/<th([^>]*)>/gi, 
-      `<th style="border:1px solid #000;padding:8px 16px;background:#000;color:#fff;font-weight:600;text-align:center;">`
+      `<th style="border:1px solid #333;padding:10px 24px;background:#fff;color:#000;font-weight:500;text-align:center;">`
     );
     processedContent = processedContent.replace(/<td([^>]*)>/gi, 
-      `<td style="border:1px solid #000;padding:8px 16px;text-align:center;background:#fff;color:#000;">`
+      `<td style="border:1px solid #333;padding:10px 24px;text-align:center;background:#fff;color:#000;">`
     );
     processedContent = processedContent.replace(/<tr([^>]*)>/gi, '<tr>');
 
