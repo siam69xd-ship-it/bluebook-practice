@@ -319,6 +319,20 @@ function LatexRendererComponent({ content, className = '', displayMode = false }
     );
     processedContent = processedContent.replace(/<tr([^>]*)>/gi, '<tr>');
 
+    // Render table cell contents as math (so x, y, f(x) appear as italic variables)
+    processedContent = processedContent.replace(
+      /(<t[hd][^>]*>)([\s\S]*?)(<\/t[hd]>)/gi,
+      (_, open, cellContent, close) => {
+        const trimmed = cellContent.trim();
+        if (!trimmed) return `${open}${cellContent}${close}`;
+        // If it already contains rendered KaTeX or HTML spans, skip
+        if (trimmed.includes('katex') || trimmed.includes('<span')) return `${open}${cellContent}${close}`;
+        // Render as inline math for variable-like content
+        const rendered = renderKatex(trimmed, false);
+        return `${open}${rendered}${close}`;
+      }
+    );
+
     // Handle line breaks - normalize HTML br tags
     processedContent = processedContent.replace(/<br\s*\/?>/gi, '<br/>');
     
