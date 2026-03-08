@@ -173,8 +173,7 @@ export default function Quiz() {
           setCurrentIndex(saved.currentIndex);
         }
         setIsLoaded(true);
-        // Mark initial load complete after a short delay to prevent filter change effect from resetting index
-        setTimeout(() => setIsInitialLoad(false), 100);
+        setIsInitialLoad(false);
       } else if (retryCount < maxRetries) {
         retryCount++;
         await new Promise(resolve => setTimeout(resolve, 500));
