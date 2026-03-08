@@ -57,7 +57,7 @@ export default function MathQuestionOption({
         onClick={onClick}
         disabled={disabled || isEliminated}
         className={cn(
-          'flex-1 flex items-center gap-4 px-5 py-4 rounded-full border transition-all text-left',
+          'flex-1 flex items-center gap-4 px-6 py-4 rounded-2xl border transition-all text-left',
           getBorderColor(),
           getBackgroundColor(),
           isEliminated && 'opacity-40'
