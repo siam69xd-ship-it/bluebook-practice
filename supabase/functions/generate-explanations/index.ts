@@ -7,21 +7,14 @@ const corsHeaders = {
 };
 
 async function generateExplanation(apiKey: string, q: any): Promise<string> {
-  const prompt = `You are an expert SAT tutor. Generate a detailed explanation for this SAT inference question.
+  const prompt = `You are an expert SAT tutor. Write a detailed explanation (3-5 sentences) for this SAT inference question.
 
 Passage: ${q.content.passage}
 Question: ${q.content.question}
-Options:
-${q.content.options.join('\n')}
+Options: ${q.content.options.join(' | ')}
 Correct Answer: ${q.solution.answer}
 
-Write a detailed explanation (3-5 sentences) that:
-1. Identifies key passage information leading to the answer
-2. Explains WHY the correct answer logically follows
-3. Briefly notes why other options fail
-4. Uses clear, student-friendly language
-
-Return ONLY the explanation text.`;
+Explain: 1) Key passage info leading to the answer 2) Why correct answer follows logically 3) Why other options fail. Use clear student-friendly language. Return ONLY the explanation.`;
 
   const response = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
     method: "POST",
@@ -33,7 +26,7 @@ Return ONLY the explanation text.`;
       model: "google/gemini-2.5-flash-lite",
       messages: [{ role: "user", content: prompt }],
       temperature: 0.3,
-      max_tokens: 400,
+      max_tokens: 350,
     }),
   });
 
@@ -52,15 +45,24 @@ serve(async (req) => {
   }
 
   try {
-    const { questions, batchStart = 0, batchSize = 15 } = await req.json();
+    const { batchStart = 0, batchSize = 15, dataUrl } = await req.json();
     const apiKey = Deno.env.get("LOVABLE_API_KEY");
-    
     if (!apiKey) throw new Error("LOVABLE_API_KEY not configured");
+
+    // Fetch the questions from the provided URL or use inline questions
+    let questions: any[];
+    if (dataUrl) {
+      const resp = await fetch(dataUrl);
+      const data = await resp.json();
+      questions = data.questions;
+    } else {
+      throw new Error("dataUrl is required");
+    }
 
     const batch = questions.slice(batchStart, batchStart + batchSize);
     const results = [];
 
-    // Process 5 at a time within the batch
+    // Process 5 at a time
     for (let i = 0; i < batch.length; i += 5) {
       const chunk = batch.slice(i, i + 5);
       const chunkResults = await Promise.all(
@@ -72,9 +74,9 @@ serve(async (req) => {
       results.push(...chunkResults);
     }
 
-    console.log(`Processed batch ${batchStart}-${batchStart + batch.length}`);
+    console.log(`Processed questions ${batchStart + 1}-${batchStart + batch.length} of ${questions.length}`);
 
-    return new Response(JSON.stringify({ results, processedCount: batch.length }), {
+    return new Response(JSON.stringify({ results, total: questions.length }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   } catch (error) {
