@@ -26,6 +26,7 @@ const Terms = lazy(() => import("./pages/Terms"));
 const Dashboard = lazy(() => import("./pages/Dashboard"));
 const Analytics = lazy(() => import("./pages/Analytics"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+const GenerateExplanations = lazy(() => import("./pages/GenerateExplanations"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -179,6 +180,11 @@ const App = () => {
                   <div className="animate-in">
                     <Analytics />
                   </div>
+                </Suspense>
+              } />
+              <Route path="/admin/generate-explanations" element={
+                <Suspense fallback={<PageLoader />}>
+                  <GenerateExplanations />
                 </Suspense>
               } />
               <Route path="*" element={
