@@ -58,9 +58,9 @@ export function ExplanationPanel({
                 {/* Correct Answer */}
                 <div className="mb-6 p-4 rounded-xl bg-success/10 border border-success/30">
                   <p className="text-sm font-medium text-success mb-1">Correct Answer</p>
-                  <p className="text-2xl font-bold text-success">
-                    <LatexRenderer content={correctAnswer} className="inline" />
-                  </p>
+                  <div className="text-2xl font-bold text-success [&_.katex]:text-success">
+                    <LatexRenderer content={correctAnswer} className="" />
+                  </div>
                 </div>
 
                 {/* Explanation - always use LatexRenderer */}
@@ -68,10 +68,12 @@ export function ExplanationPanel({
                   <h4 className="text-sm font-semibold text-foreground uppercase tracking-wide">
                     Why this is correct
                   </h4>
-                  <LatexRenderer 
-                    content={explanation} 
-                    className="text-foreground/80 leading-relaxed"
-                  />
+                  <div className="text-foreground/80 leading-relaxed [&_.katex]:text-foreground/90 [&_.katex-display]:overflow-x-auto [&_.katex-display]:overflow-y-hidden [&_.katex-display]:py-2">
+                    <LatexRenderer 
+                      content={explanation} 
+                      className=""
+                    />
+                  </div>
                 </div>
               </div>
 
