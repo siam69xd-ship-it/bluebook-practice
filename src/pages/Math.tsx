@@ -321,8 +321,8 @@ export default function Math() {
                     <img 
                       src={currentQuestion.image} 
                       alt="Question Diagram" 
-                      className="max-w-[280px] sm:max-w-[360px] w-auto h-auto"
-                      onError={(e) => {
+                      className="max-w-[280px] sm:max-w-[360px] w-auto h-auto bg-white p-2"
+                      style={{ mixBlendMode: 'multiply' }}
                         (e.target as HTMLImageElement).style.display = 'none';
                       }}
                     />
