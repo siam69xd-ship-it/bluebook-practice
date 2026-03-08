@@ -57,37 +57,32 @@ export default function MathQuestionOption({
         onClick={onClick}
         disabled={disabled || isEliminated}
         className={cn(
-          'flex-1 flex items-center gap-4 px-5 py-4 rounded-lg border-2 transition-all text-left',
+          'flex-1 flex items-center gap-4 px-5 py-4 rounded-full border transition-all text-left',
           getBorderColor(),
           getBackgroundColor(),
           isEliminated && 'opacity-40'
         )}
       >
-        {/* Circle Letter Badge - SAT Bluebook Style */}
+        {/* Circle Letter Badge */}
         <div className={cn(
-          'flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center font-semibold text-base border-2 transition-all',
-          // Default state
+          'flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center font-semibold text-base border transition-all',
           !isSelected && !showResult && 
-            'border-gray-400 bg-white text-gray-900',
-          // Selected state (blue like reference)
+            'border-foreground/40 bg-background text-foreground',
           isSelected && !showResult && 
-            'border-[#0077cc] bg-[#0077cc] text-white',
-          // Correct state
+            'border-foreground bg-foreground text-background',
           showResult && isCorrect && 'border-green-500 bg-green-500 text-white',
-          // Incorrect state
           showResult && isIncorrect && 'border-red-500 bg-red-500 text-white',
-          // Default when showing result but not this option
           showResult && !isCorrect && !isIncorrect && 
-            'border-gray-400 bg-white text-gray-900'
+            'border-foreground/40 bg-background text-foreground'
         )}>
           {label}
         </div>
 
-        {/* Option Text with LaTeX support - always use LatexRenderer */}
+        {/* Option Text */}
         <span className={cn(
           'flex-1 text-[17px] leading-relaxed',
-          isEliminated && 'line-through text-gray-400',
-          !isEliminated && 'text-gray-900',
+          isEliminated && 'line-through text-muted-foreground',
+          !isEliminated && 'text-foreground',
           showResult && isIncorrect && 'text-red-700',
           showResult && isCorrect && 'text-green-700'
         )}>
