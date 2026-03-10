@@ -288,19 +288,13 @@ export default function Practice() {
     });
   };
 
-  const handleLoadingComplete = () => setShowContent(true);
-
-  if (!showContent) {
-    return (
-      <>
-        <LoadingProgressBar isLoading={isLoading} onLoadingComplete={handleLoadingComplete} />
-        <PracticeSkeleton />
-      </>
-    );
-  }
-
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <LoadingProgressBar isLoading={isLoading} onLoadingComplete={() => setShowContent(true)} />
+      {!showContent ? (
+        <PracticeSkeleton />
+      ) : (
+    <div className="min-h-screen bg-background animate-[skeleton-reveal_0.3s_ease-out_forwards]">
       {/* Header */}
       <header className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="max-w-[1120px] mx-auto px-6 sm:px-8">
