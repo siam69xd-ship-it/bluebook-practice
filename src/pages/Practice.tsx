@@ -365,5 +365,7 @@ export default function Practice() {
         </div>
       </main>
     </div>
+      )}
+    </>
   );
 }
