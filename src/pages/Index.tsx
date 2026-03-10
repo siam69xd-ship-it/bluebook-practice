@@ -120,9 +120,9 @@ export default function Index() {
 
               {/* Subtitle */}
               <motion.p
-                initial={{ opacity: 0, y: 8 }}
+                initial={{ opacity: 0, y: 6 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.2 }}
+                transition={{ duration: 0.25, delay: 0.1 }}
                 className="text-[15px] sm:text-[17px] text-muted-foreground max-w-[440px] mx-auto mb-10 leading-[1.6]"
               >
                 A focused, distraction-free question bank built for efficient SAT preparation.
