@@ -428,7 +428,7 @@ export default function Quiz() {
   }
 
   return (
-    <div className={cn("bg-bluebook-bg flex", isFullscreen ? "h-screen overflow-hidden" : "min-h-screen")}>
+    <div className={cn("bg-bluebook-bg flex animate-[skeleton-reveal_0.3s_ease-out_forwards]", isFullscreen ? "h-screen overflow-hidden" : "min-h-screen")}>
       {/* Main Content */}
       <div className="flex-1 flex flex-col min-h-0 h-full overflow-hidden">
         {/* Top Bar - Bluebook Style */}
