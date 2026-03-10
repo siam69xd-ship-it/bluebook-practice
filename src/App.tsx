@@ -8,6 +8,15 @@ import { AuthProvider } from "@/contexts/AuthContext";
 import nprogress from "nprogress";
 import "./loading.css";
 
+// Configure nprogress for speed
+nprogress.configure({
+  minimum: 0.15,
+  speed: 250,
+  trickleSpeed: 100,
+  showSpinner: false,
+  easing: 'ease',
+});
+
 // Eagerly load Index for fastest initial render
 import Index from "./pages/Index";
 
