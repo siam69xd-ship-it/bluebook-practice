@@ -87,7 +87,7 @@ export default function Index() {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.3 }}
               className="text-center max-w-[640px] mx-auto"
             >
               {/* Eyebrow */}
