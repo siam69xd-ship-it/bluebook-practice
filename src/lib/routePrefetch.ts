@@ -10,6 +10,10 @@ const routeImports: Record<string, () => Promise<unknown>> = {
   '/timed-quiz': () => import('@/pages/TimedQuiz'),
   '/math': () => import('@/pages/Math'),
   '/auth': () => import('@/pages/Auth'),
+  '/dashboard': () => import('@/pages/Dashboard'),
+  '/analytics': () => import('@/pages/Analytics'),
+  '/about': () => import('@/pages/About'),
+  '/faq': () => import('@/pages/FAQ'),
 };
 
 /**

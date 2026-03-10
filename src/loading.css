@@ -1,17 +1,18 @@
 @import "nprogress/nprogress.css";
 
+/* NProgress - ultra-thin, fast, no spinner */
 #nprogress .bar {
-  background: #000 !important;
-  height: 2px !important;
+  background: hsl(var(--foreground)) !important;
+  height: 1.5px !important;
+  box-shadow: none !important;
 }
 
 #nprogress .peg {
-  box-shadow: 0 0 10px #000, 0 0 5px #000 !important;
+  box-shadow: 0 0 6px hsl(var(--foreground)), 0 0 2px hsl(var(--foreground)) !important;
 }
 
-#nprogress .spinner-icon {
-  border-top-color: #000 !important;
-  border-left-color: #000 !important;
+#nprogress .spinner {
+  display: none !important;
 }
 
 .quiz-passage {
@@ -26,14 +27,16 @@
   overflow-y: hidden;
 }
 
+/* Instant fade-in for route transitions */
 .animate-in {
-  animation: fade-in 0.3s ease-out forwards;
+  animation: fade-in 0.15s ease-out forwards;
+  will-change: opacity, transform;
 }
 
 @keyframes fade-in {
   from {
     opacity: 0;
-    transform: translateY(4px);
+    transform: translateY(2px);
   }
   to {
     opacity: 1;
