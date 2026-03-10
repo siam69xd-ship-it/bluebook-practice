@@ -193,7 +193,7 @@ export default function Math() {
   }
 
   return (
-    <div className="h-screen w-screen overflow-hidden flex flex-col bg-white">
+    <div className="h-screen w-screen overflow-hidden flex flex-col bg-white animate-[skeleton-reveal_0.3s_ease-out_forwards]">
       {/* Calculator */}
       <DraggableCalculator isOpen={showCalculator} onClose={() => setShowCalculator(false)} />
       
