@@ -8,6 +8,15 @@ import { AuthProvider } from "@/contexts/AuthContext";
 import nprogress from "nprogress";
 import "./loading.css";
 
+// Configure nprogress for speed
+nprogress.configure({
+  minimum: 0.15,
+  speed: 250,
+  trickleSpeed: 100,
+  showSpinner: false,
+  easing: 'ease',
+});
+
 // Eagerly load Index for fastest initial render
 import Index from "./pages/Index";
 
@@ -37,21 +46,16 @@ const queryClient = new QueryClient({
   },
 });
 
-// Minimal loading fallback for lazy routes
+// Minimal loading fallback — just the progress bar, no jarring spinner
 const PageLoader = () => {
   useEffect(() => {
     nprogress.start();
-    return () => {
-      nprogress.done();
-    };
+    return () => { nprogress.done(); };
   }, []);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white">
-      <div className="flex flex-col items-center gap-4">
-        <div className="w-8 h-8 border-2 border-black/10 border-t-black rounded-full animate-spin" />
-        <p className="text-sm font-medium text-black/60 animate-pulse">Loading NextPrep...</p>
-      </div>
+    <div className="min-h-screen flex items-center justify-center bg-background">
+      <div className="w-5 h-5 border-[1.5px] border-muted-foreground/20 border-t-foreground rounded-full animate-spin" />
     </div>
   );
 };

@@ -87,14 +87,14 @@ export default function Index() {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.3 }}
               className="text-center max-w-[640px] mx-auto"
             >
               {/* Eyebrow */}
               <motion.div
-                initial={{ opacity: 0, y: 8 }}
+                initial={{ opacity: 0, y: 6 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.1 }}
+                transition={{ duration: 0.25, delay: 0.05 }}
                 className="mb-6"
               >
                 <span className="inline-block text-[11px] font-medium tracking-[0.15em] uppercase text-muted-foreground border border-border px-4 py-1.5">
@@ -120,9 +120,9 @@ export default function Index() {
 
               {/* Subtitle */}
               <motion.p
-                initial={{ opacity: 0, y: 8 }}
+                initial={{ opacity: 0, y: 6 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.2 }}
+                transition={{ duration: 0.25, delay: 0.1 }}
                 className="text-[15px] sm:text-[17px] text-muted-foreground max-w-[440px] mx-auto mb-10 leading-[1.6]"
               >
                 A focused, distraction-free question bank built for efficient SAT preparation.
@@ -130,9 +130,9 @@ export default function Index() {
 
               {/* CTA */}
               <motion.div
-                initial={{ opacity: 0, y: 8 }}
+                initial={{ opacity: 0, y: 6 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.3 }}
+                transition={{ duration: 0.25, delay: 0.15 }}
                 className="flex flex-col items-center gap-3"
               >
                 <Button
