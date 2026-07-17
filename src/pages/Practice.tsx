@@ -334,6 +334,13 @@ export default function Practice() {
               <p className="text-[15px] text-muted-foreground leading-[1.6] max-w-[480px]">
                 Select a subject area and topic to begin a focused practice session.
               </p>
+              <button
+                onClick={() => navigate('/reading-practice')}
+                className="mt-6 inline-flex items-center gap-2 text-[12px] font-medium tracking-[0.1em] uppercase text-foreground border-b border-foreground/40 hover:border-foreground pb-0.5 transition-colors"
+              >
+                Try Reading Practice
+                <ArrowRight className="w-3 h-3" />
+              </button>
             </motion.div>
           </div>
         </div>
