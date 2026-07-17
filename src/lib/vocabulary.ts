@@ -15,7 +15,7 @@ export interface VocabEntry {
 export interface ReadingQuestion {
   question: string;
   options: string[];
-  correct_answer: string; // "A" | "B" | "C" | "D"
+  correct_answer: string;
   explanation?: string;
 }
 
@@ -28,7 +28,9 @@ export interface ReadingSet {
 
 let vocabCache: VocabEntry[] | null = null;
 let vocabMapCache: Map<string, VocabEntry> | null = null;
+let vocabMapPromise: Promise<Map<string, VocabEntry>> | null = null;
 let readingCache: ReadingSet[] | null = null;
+let readingPromise: Promise<ReadingSet[]> | null = null;
 
 export async function loadVocabulary(): Promise<VocabEntry[]> {
   if (vocabCache) return vocabCache;
@@ -38,54 +40,75 @@ export async function loadVocabulary(): Promise<VocabEntry[]> {
   return vocabCache!;
 }
 
-export async function loadVocabMap(): Promise<Map<string, VocabEntry>> {
-  if (vocabMapCache) return vocabMapCache;
-  const words = await loadVocabulary();
-  const map = new Map<string, VocabEntry>();
-  for (const entry of words) {
-    if (!entry.word) continue;
-    map.set(entry.word.toLowerCase().trim(), entry);
-  }
-  vocabMapCache = map;
-  return map;
-}
-
-export async function loadReadingSets(): Promise<ReadingSet[]> {
-  if (readingCache) return readingCache;
-  const res = await fetch('/data/reading/reading_practices.json');
-  const data = await res.json();
-  readingCache = Array.isArray(data) ? data : data.sets || [];
-  return readingCache!;
-}
-
 /**
- * Tokenize a passage into an array of segments where each segment is
- * either a plain-text run or a vocabulary match.
- * Uses a Unicode-aware word boundary split.
+ * Cached, promise-deduped vocab map (lowercase word -> entry).
+ * Repeated callers share the same Map instance.
  */
+export function loadVocabMap(): Promise<Map<string, VocabEntry>> {
+  if (vocabMapCache) return Promise.resolve(vocabMapCache);
+  if (vocabMapPromise) return vocabMapPromise;
+  vocabMapPromise = loadVocabulary().then((words) => {
+    const map = new Map<string, VocabEntry>();
+    for (let i = 0; i < words.length; i++) {
+      const w = words[i].word;
+      if (!w) continue;
+      map.set(w.toLowerCase().trim(), words[i]);
+    }
+    vocabMapCache = map;
+    return map;
+  });
+  return vocabMapPromise;
+}
+
+export function loadReadingSets(): Promise<ReadingSet[]> {
+  if (readingCache) return Promise.resolve(readingCache);
+  if (readingPromise) return readingPromise;
+  readingPromise = fetch('/data/reading/reading_practices.json')
+    .then((r) => r.json())
+    .then((data) => {
+      readingCache = Array.isArray(data) ? data : data.sets || [];
+      return readingCache!;
+    });
+  return readingPromise;
+}
+
 export type PassageToken =
   | { type: 'text'; value: string }
-  | { type: 'vocab'; value: string; entry: VocabEntry };
+  | { type: 'vocab'; value: string; key: string; entry: VocabEntry };
 
+// Precompiled once — reused across all calls.
+const WORD_RE = /[A-Za-z\u00C0-\u024F']+/g;
+const HTML_RE = /<[^>]+>/g;
+
+/**
+ * Single-pass tokenizer: O(n) over the passage with O(1) Map lookups.
+ * Avoids the split-array-then-classify overhead by walking regex matches
+ * and emitting only three token types: literal text spans, vocab matches,
+ * and interstitial non-word runs.
+ */
 export function tokenizePassage(passage: string, vocabMap: Map<string, VocabEntry>): PassageToken[] {
-  // Strip stray HTML tags that appear as formatting noise in the source JSON
-  // (e.g. <b>h</b> mid-word). Preserve line breaks.
-  const cleaned = passage.replace(/<[^>]+>/g, '');
-
-  // Split preserving separators. \p{L} matches any Unicode letter.
-  const parts = cleaned.split(/([A-Za-z\u00C0-\u024F']+)/g);
+  const cleaned = passage.replace(HTML_RE, '');
   const tokens: PassageToken[] = [];
-  for (const part of parts) {
-    if (!part) continue;
-    const isWord = /^[A-Za-z\u00C0-\u024F']+$/.test(part);
-    if (isWord) {
-      const entry = vocabMap.get(part.toLowerCase());
-      if (entry) {
-        tokens.push({ type: 'vocab', value: part, entry });
-        continue;
-      }
+  let last = 0;
+  WORD_RE.lastIndex = 0;
+  let m: RegExpExecArray | null;
+  while ((m = WORD_RE.exec(cleaned)) !== null) {
+    const word = m[0];
+    const start = m.index;
+    if (start > last) {
+      tokens.push({ type: 'text', value: cleaned.slice(last, start) });
     }
-    tokens.push({ type: 'text', value: part });
+    const key = word.toLowerCase();
+    const entry = vocabMap.get(key);
+    if (entry) {
+      tokens.push({ type: 'vocab', value: word, key, entry });
+    } else {
+      tokens.push({ type: 'text', value: word });
+    }
+    last = start + word.length;
+  }
+  if (last < cleaned.length) {
+    tokens.push({ type: 'text', value: cleaned.slice(last) });
   }
   return tokens;
 }
