@@ -112,7 +112,7 @@ export default function TimedQuiz() {
   const { isAuthenticated } = useAuth();
   const { isFullscreen, toggleFullscreen } = useFullscreen();
   const queryClient = useQueryClient();
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   
   const [allQuestions, setAllQuestions] = useState<Question[]>([]);
   const [quizQuestions, setQuizQuestions] = useState<Question[]>([]);

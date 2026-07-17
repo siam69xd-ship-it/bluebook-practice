@@ -8,7 +8,7 @@ interface TimerProps {
 
 export function Timer({ questionId, isPaused = false, isHidden = false }: TimerProps) {
   const [seconds, setSeconds] = useState(0);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const lastQuestionRef = useRef<number>(questionId);
 
   // Reset timer when question changes
