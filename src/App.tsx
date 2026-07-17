@@ -36,6 +36,8 @@ const Dashboard = lazy(() => import("./pages/Dashboard"));
 const Analytics = lazy(() => import("./pages/Analytics"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const GenerateExplanations = lazy(() => import("./pages/GenerateExplanations"));
+const ReadingPractice = lazy(() => import("./pages/ReadingPractice"));
+const ReadingPracticeQuiz = lazy(() => import("./pages/ReadingPracticeQuiz"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -189,6 +191,20 @@ const App = () => {
               <Route path="/admin/generate-explanations" element={
                 <Suspense fallback={<PageLoader />}>
                   <GenerateExplanations />
+                </Suspense>
+              } />
+              <Route path="/reading-practice" element={
+                <Suspense fallback={<PageLoader />}>
+                  <div className="animate-in">
+                    <ReadingPractice />
+                  </div>
+                </Suspense>
+              } />
+              <Route path="/reading-practice/:setId" element={
+                <Suspense fallback={<PageLoader />}>
+                  <div className="animate-in">
+                    <ReadingPracticeQuiz />
+                  </div>
                 </Suspense>
               } />
               <Route path="*" element={
