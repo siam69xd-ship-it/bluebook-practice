@@ -57,6 +57,8 @@ export default function Quiz() {
   const { user, isAuthenticated } = useAuth();
   const { isFullscreen, toggleFullscreen } = useFullscreen();
   const queryClient = useQueryClient();
+  const isSatSuite = typeof window !== 'undefined' && window.location.pathname.startsWith('/sat-suite');
+
   
   // State
   const [allQuestions, setAllQuestions] = useState<Question[]>([]);
