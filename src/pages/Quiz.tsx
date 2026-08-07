@@ -129,8 +129,41 @@ export default function Quiz() {
     const maxRetries = 3;
     
     const attemptLoad = async (): Promise<void> => {
+      // SAT Suite Question Bank — separate data source
+      const satConfigStr = sessionStorage.getItem('satSuiteConfig') || localStorage.getItem('satSuiteConfig');
+      if (isSatSuite && satConfigStr) {
+        try {
+          const cfg = JSON.parse(satConfigStr);
+          localStorage.setItem('satSuiteConfig', satConfigStr);
+          sessionStorage.removeItem('satSuiteConfig');
+          const satQuestions = await getSatSuiteQuestions({
+            slugs: cfg.slugs || [],
+            difficulties: cfg.difficulties || [],
+          });
+          if (satQuestions.length > 0) {
+            setIsPracticeMode(true);
+            setActiveFilter({});
+            setAllQuestions(satQuestions);
+            const savedSat = loadProgress();
+            if (savedSat) {
+              setQuestionStates(savedSat.questionStates);
+              setCurrentIndex(savedSat.currentIndex);
+            }
+            setIsLoaded(true);
+            setIsInitialLoad(false);
+            return;
+          }
+        } catch (e) {
+          console.error('Error loading SAT Suite config:', e);
+        }
+        setLoadError(true);
+        setIsLoaded(true);
+        return;
+      }
+
       const questions = await getAllQuestionsAsync();
       if (questions.length > 0) {
+
         // Check for practice config from sessionStorage
         const practiceConfigStr = sessionStorage.getItem('practiceConfig');
         let filteredByDifficulty = questions;

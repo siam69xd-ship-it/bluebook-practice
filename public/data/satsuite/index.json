@@ -1,0 +1,102 @@
+[
+  {
+    "slug": "boundaries",
+    "topic": "Boundaries",
+    "count": 190,
+    "counts": {
+      "easy": 59,
+      "medium": 53,
+      "hard": 78
+    }
+  },
+  {
+    "slug": "central_ideas_and_details",
+    "topic": "Central Ideas and Details",
+    "count": 125,
+    "counts": {
+      "easy": 37,
+      "medium": 47,
+      "hard": 41
+    }
+  },
+  {
+    "slug": "command_of_evidence",
+    "topic": "Command of Evidence",
+    "count": 258,
+    "counts": {
+      "easy": 77,
+      "medium": 79,
+      "hard": 102
+    }
+  },
+  {
+    "slug": "cross_text_connections",
+    "topic": "Cross-Text Connections",
+    "count": 56,
+    "counts": {
+      "easy": 16,
+      "medium": 19,
+      "hard": 21
+    }
+  },
+  {
+    "slug": "form_structure_and_sense",
+    "topic": "Form, Structure, and Sense",
+    "count": 189,
+    "counts": {
+      "easy": 90,
+      "medium": 46,
+      "hard": 53
+    }
+  },
+  {
+    "slug": "inferences",
+    "topic": "Inferences",
+    "count": 124,
+    "counts": {
+      "easy": 22,
+      "medium": 41,
+      "hard": 61
+    }
+  },
+  {
+    "slug": "rhetorical_synthesis",
+    "topic": "Rhetorical Synthesis",
+    "count": 192,
+    "counts": {
+      "easy": 42,
+      "medium": 106,
+      "hard": 44
+    }
+  },
+  {
+    "slug": "text_structure_and_purpose",
+    "topic": "Text Structure and Purpose",
+    "count": 138,
+    "counts": {
+      "easy": 46,
+      "medium": 53,
+      "hard": 39
+    }
+  },
+  {
+    "slug": "transitions",
+    "topic": "Transitions",
+    "count": 173,
+    "counts": {
+      "easy": 73,
+      "medium": 61,
+      "hard": 39
+    }
+  },
+  {
+    "slug": "words_in_context",
+    "topic": "Words in Context",
+    "count": 241,
+    "counts": {
+      "easy": 131,
+      "medium": 56,
+      "hard": 54
+    }
+  }
+]
