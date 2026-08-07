@@ -49,6 +49,8 @@ import { useAuth } from '@/hooks/useAuth';
 import { useFullscreen } from '@/hooks/useFullscreen';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { Difficulty } from '@/lib/difficultyData';
+import { getSatSuiteQuestions } from '@/lib/satSuiteQuestions';
+
 
 export default function Quiz() {
   const navigate = useNavigate();
