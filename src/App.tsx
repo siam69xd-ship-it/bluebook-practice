@@ -38,6 +38,8 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 const GenerateExplanations = lazy(() => import("./pages/GenerateExplanations"));
 const ReadingPractice = lazy(() => import("./pages/ReadingPractice"));
 const ReadingPracticeQuiz = lazy(() => import("./pages/ReadingPracticeQuiz"));
+const SatSuite = lazy(() => import("./pages/SatSuite"));
+
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -207,6 +209,21 @@ const App = () => {
                   </div>
                 </Suspense>
               } />
+              <Route path="/sat-suite" element={
+                <Suspense fallback={<PageLoader />}>
+                  <div className="animate-in">
+                    <SatSuite />
+                  </div>
+                </Suspense>
+              } />
+              <Route path="/sat-suite/quiz" element={
+                <Suspense fallback={<PageLoader />}>
+                  <div className="animate-in">
+                    <Quiz />
+                  </div>
+                </Suspense>
+              } />
+
               <Route path="*" element={
                 <Suspense fallback={<PageLoader />}>
                   <div className="animate-in">
