@@ -38,6 +38,8 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 const GenerateExplanations = lazy(() => import("./pages/GenerateExplanations"));
 const ReadingPractice = lazy(() => import("./pages/ReadingPractice"));
 const ReadingPracticeQuiz = lazy(() => import("./pages/ReadingPracticeQuiz"));
+const BookReading = lazy(() => import("./pages/BookReading"));
+const BookReadingQuiz = lazy(() => import("./pages/BookReadingQuiz"));
 const SatSuite = lazy(() => import("./pages/SatSuite"));
 
 
@@ -206,6 +208,27 @@ const App = () => {
                 <Suspense fallback={<PageLoader />}>
                   <div className="animate-in">
                     <ReadingPracticeQuiz />
+                  </div>
+                </Suspense>
+              } />
+              <Route path="/book-reading" element={
+                <Suspense fallback={<PageLoader />}>
+                  <div className="animate-in">
+                    <BookReading />
+                  </div>
+                </Suspense>
+              } />
+              <Route path="/book-reading/:level" element={
+                <Suspense fallback={<PageLoader />}>
+                  <div className="animate-in">
+                    <BookReading />
+                  </div>
+                </Suspense>
+              } />
+              <Route path="/book-reading/:level/:bookId/:chapterId" element={
+                <Suspense fallback={<PageLoader />}>
+                  <div className="animate-in">
+                    <BookReadingQuiz />
                   </div>
                 </Suspense>
               } />
