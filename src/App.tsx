@@ -38,6 +38,8 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 const GenerateExplanations = lazy(() => import("./pages/GenerateExplanations"));
 const ReadingPractice = lazy(() => import("./pages/ReadingPractice"));
 const ReadingPracticeQuiz = lazy(() => import("./pages/ReadingPracticeQuiz"));
+const BookReading = lazy(() => import("./pages/BookReading"));
+const BookReadingQuiz = lazy(() => import("./pages/BookReadingQuiz"));
 const SatSuite = lazy(() => import("./pages/SatSuite"));
 
 
