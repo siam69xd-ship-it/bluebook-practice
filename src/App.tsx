@@ -211,6 +211,27 @@ const App = () => {
                   </div>
                 </Suspense>
               } />
+              <Route path="/book-reading" element={
+                <Suspense fallback={<PageLoader />}>
+                  <div className="animate-in">
+                    <BookReading />
+                  </div>
+                </Suspense>
+              } />
+              <Route path="/book-reading/:level" element={
+                <Suspense fallback={<PageLoader />}>
+                  <div className="animate-in">
+                    <BookReading />
+                  </div>
+                </Suspense>
+              } />
+              <Route path="/book-reading/:level/:bookId/:chapterId" element={
+                <Suspense fallback={<PageLoader />}>
+                  <div className="animate-in">
+                    <BookReadingQuiz />
+                  </div>
+                </Suspense>
+              } />
               <Route path="/sat-suite" element={
                 <Suspense fallback={<PageLoader />}>
                   <div className="animate-in">
