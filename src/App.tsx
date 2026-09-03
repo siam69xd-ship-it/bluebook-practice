@@ -41,6 +41,9 @@ const ReadingPracticeQuiz = lazy(() => import("./pages/ReadingPracticeQuiz"));
 const BookReading = lazy(() => import("./pages/BookReading"));
 const BookReadingQuiz = lazy(() => import("./pages/BookReadingQuiz"));
 const SatSuite = lazy(() => import("./pages/SatSuite"));
+const RepetitiveQuestions = lazy(() => import("./pages/RepetitiveQuestions"));
+const RepetitiveQuestionsQuiz = lazy(() => import("./pages/RepetitiveQuestionsQuiz"));
+
 
 
 const queryClient = new QueryClient({
@@ -243,6 +246,20 @@ const App = () => {
                 <Suspense fallback={<PageLoader />}>
                   <div className="animate-in">
                     <Quiz />
+                  </div>
+                </Suspense>
+              } />
+              <Route path="/repetitive-questions" element={
+                <Suspense fallback={<PageLoader />}>
+                  <div className="animate-in">
+                    <RepetitiveQuestions />
+                  </div>
+                </Suspense>
+              } />
+              <Route path="/repetitive-questions/:templateId" element={
+                <Suspense fallback={<PageLoader />}>
+                  <div className="animate-in">
+                    <RepetitiveQuestionsQuiz />
                   </div>
                 </Suspense>
               } />
