@@ -356,6 +356,13 @@ export default function Practice() {
                   Book Reading Practice
                   <ArrowRight className="w-3 h-3" />
                 </button>
+                <button
+                  onClick={() => navigate('/repetitive-questions')}
+                  className="inline-flex items-center gap-2 text-[12px] font-medium tracking-[0.1em] uppercase text-foreground border-b border-foreground/40 hover:border-foreground pb-0.5 transition-colors"
+                >
+                  Most Repetitive Questions
+                  <ArrowRight className="w-3 h-3" />
+                </button>
               </div>
 
             </motion.div>
